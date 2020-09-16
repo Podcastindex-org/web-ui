@@ -1,0 +1,14 @@
+@import "~bootstrap/scss/bootstrap";
+
+div.carousel-item img:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  height: 600px;
+  width: 600px;
+  background-color: #333;
+}
+
+audio {
+  outline: none;
+}

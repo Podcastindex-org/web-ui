@@ -1,0 +1,21 @@
+{
+  "name": "@podcastindex-org/web-ui",
+  "description": "The web UI of Podcastindex.org",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "css-loader": "^4.3.0",
+    "jquery": "^3.5.1",
+    "mini-css-extract-plugin": "^0.11.2",
+    "popper.js": "^1.16.1",
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode development",
+    "watch": "webpack --watch --mode development",
+    "prod": "webpack --mode production"
+  }
+}

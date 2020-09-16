@@ -9,83 +9,7 @@
     <link rel="alternate icon" href="favicon.ico">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#ff8a01">
 
-    <link href="style/bootstrap.min.css" rel="stylesheet">
-    <style>
-        div.carousel-item img:before {
-            content: ' ';
-            display: block;
-            position: absolute;
-            height: 600px;
-            width: 600px;
-            background-color: #333;
-        }
-
-        audio {
-            outline: none;
-        }
-    </style>
-
-    <script src="script/jquery-3.5.1.min.js"></script>
-    <script src="script/bootstrap.bundle.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            jQuery.createEventCapturing = (function () {
-                var special = jQuery.event.special;
-                return function (names) {
-                    if (!document.addEventListener) {
-                        return;
-                    }
-                    if (typeof names == 'string') {
-                        names = [names];
-                    }
-                    jQuery.each(names, function (i, name) {
-                        var handler = function (e) {
-                            e = jQuery.event.fix(e);
-
-                            return jQuery.event.dispatch.call(this, e);
-                        };
-                        special[name] = special[name] || {};
-                        if (special[name].setup || special[name].teardown) {
-                            return;
-                        }
-                        jQuery.extend(special[name], {
-                            setup: function () {
-                                this.addEventListener(name, handler, true);
-                            },
-                            teardown: function () {
-                                this.removeEventListener(name, handler, true);
-                            }
-                        });
-                    });
-                };
-            })();
-
-
-            $.createEventCapturing(['play', 'pause', 'playing']);
-
-            $(document).on('play', 'audio.recentEpisodesPlayer', function () {
-                $('#recentEpisodesCarousel').carousel('pause');
-            });
-
-            $(document).on('pause', 'audio.recentEpisodesPlayer', function () {
-                $('#recentEpisodesCarousel').carousel('cycle');
-            });
-
-            $(document).on('click', 'a.ccwedge', function () {
-                $('audio.recentEpisodesPlayer').pause;
-            })
-
-            document.addEventListener('play', function (e) {
-                var audios = document.getElementsByTagName('audio');
-                for (var i = 0, len = audios.length; i < len; i++) {
-                    if (audios[i] != e.target) {
-                        audios[i].pause();
-                    }
-                }
-            }, true);
-        });
-
-    </script>
+    <link href="build/app.css" rel="stylesheet">
 </head>
 <body class="text-center">
 <header>
@@ -487,6 +411,8 @@
             </div>
         </div>
     </div>
+
+    <script src="build/app.js"></script>
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 </div>
 </body>
