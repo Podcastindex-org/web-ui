@@ -1,419 +1,165 @@
 <!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>Podcastindex.org</title>
 
     <link rel="shortcut icon" href="favicon.ico"/>
     <link rel="alternate icon" href="favicon.ico">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#ff8a01">
 
-    <link href="build/app.css" rel="stylesheet">
-</head>
-<body class="text-center">
-<header>
-    <div class="navbar navbar-light" style="background-color: #f5f5f5">
+    <link href="/build/app.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="navbar navbar-dark">
         <div class="container d-flex justify-content-between">
-            <a href="https://podcastindex.org" class="navbar-brand d-flex align-items-center">
-                <img src="https://podcastindex.org/images/pci_avatar.jpg" width="48" height="48">
-                <span class="ml-2"><strong>Podcastindex.org</strong></span>
+          <a href="https://podcastindex.org" class="navbar-brand d-flex align-items-center">
+            <img src="https://podcastindex.org/images/pci_avatar.jpg" width="48" height="48" alt="Podcast Index logo">
+            Podcastindex.org
+          </a>
+          <div>
+            <a href="https://github.com/Podcastindex-org" title="Podcast Index on GitHub">
+              <span class="fab fa-github fa-lg" aria-hidden="true"></span>
+              <span class="sr-only">Podcast Index on GitHub</span>
             </a>
-            <a href="#developer" class="loginForm">Developer?</a>
+            <a href="https://twitter.com/PodcastindexOrg" title="Podcast Index on Twitter">
+              <span class="fab fa-twitter fa-lg" aria-hidden="true"></span>
+              <span class="sr-only">Podcast Index on Twitter</span>
+            </a>
+            <a href="https://noagendasocial.com/@podcastindex" title="Podcast Index on Mastodon">
+              <span class="fab fa-mastodon fa-lg" aria-hidden="true"></span>
+              <span class="sr-only">Podcast Index on Mastodon</span>
+            </a>
+          </div>
         </div>
-    </div>
-</header>
-<div class="container">
-    <div class="row" style="margin-top:40px;">
-        <div class="col-sm">
-            <h4>The Podcast Index is an open project to preserve podcasting as a platform for free speech.</h4>
+      </div>
+    </header>
+    <div class="container">
+      <div class="lead text-center mb-5">The Podcast Index is an open project to preserve podcasting as a platform for free speech.</div>
+
+      <div class="row">
+        <div class="col-md">
+          <a href="#" class="feature-button">
+            <span class="fas fa-microphone fa-5x" aria-hidden="true"></span>
+            <div class="h3">Podcasters</div>
+          </a>
         </div>
-    </div>
-    <div class="row" style="margin-top:40px;">
-        <div class="col-sm">
-            <div id="recentEpisodesCarousel" class="carousel slide carousel-fade" data-ride="carousel"
-                 data-pause="hover" style="max-width:500px;margin-left:auto;margin-right:auto;">
-                <ol class="carousel-indicators">
-                    <li data-target="#recentEpisodesCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#recentEpisodesCarousel" data-slide-to="1"></li>
-                    <li data-target="#recentEpisodesCarousel" data-slide-to="2"></li>
-                    <li data-target="#recentEpisodesCarousel" data-slide-to="3"></li>
-                    <li data-target="#recentEpisodesCarousel" data-slide-to="4"></li>
-                    <li data-target="#recentEpisodesCarousel" data-slide-to="5"></li>
-                    <li data-target="#recentEpisodesCarousel" data-slide-to="6"></li>
-                    <li data-target="#recentEpisodesCarousel" data-slide-to="7"></li>
-                    <li data-target="#recentEpisodesCarousel" data-slide-to="8"></li>
-                    <li data-target="#recentEpisodesCarousel" data-slide-to="9"></li>
-                    <li data-target="#recentEpisodesCarousel" data-slide-to="10"></li>
-                    <li data-target="#recentEpisodesCarousel" data-slide-to="11"></li>
-                    <li data-target="#recentEpisodesCarousel" data-slide-to="12"></li>
-                    <li data-target="#recentEpisodesCarousel" data-slide-to="13"></li>
-                    <li data-target="#recentEpisodesCarousel" data-slide-to="14"></li>
-                    <li data-target="#recentEpisodesCarousel" data-slide-to="15"></li>
-                    <li data-target="#recentEpisodesCarousel" data-slide-to="16"></li>
-                    <li data-target="#recentEpisodesCarousel" data-slide-to="17"></li>
-                    <li data-target="#recentEpisodesCarousel" data-slide-to="18"></li>
-                    <li data-target="#recentEpisodesCarousel" data-slide-to="19"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active" style="background-color:#333; padding:10px">
-                        <audio class="recentEpisodesPlayer" controls preload="none"
-                               style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" onplay="">
-                            <source src="https://anchor.fm/s/28a606f8/podcast/play/19660743/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-09-15%2F50d8f04ae67130a4796d121d055131f0.m4a"
-                                    type="audio/x-m4a">
-                        </audio>
-                        <img src="https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/6719694/6719694-1598396246011-64884b1f4dd91.jpg"
-                             style="max-height:480px; max-width:100%;min-height:480px;" alt=" ">
-                        <div style="color:white;margin-bottom:30px;margin-top:10px;position:relative;z-index:99;">
-                            <h5 style="">Rompekoko</h5>
-                            <p><small>(September 15, 2020 3:51pm)</small></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="background-color:#333; padding:10px">
-                        <audio class="recentEpisodesPlayer" controls preload="none"
-                               style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" onplay="">
-                            <source src="https://anchor.fm/s/aaba590/podcast/play/19660722/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-15%2F107680835-44100-2-09c370e5fd056.m4a"
-                                    type="audio/x-m4a">
-                        </audio>
-                        <img src="https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/1690212/1690212-1566035945381-5187308bea0a7.jpg"
-                             style="max-height:480px; max-width:100%;min-height:480px;" alt=" ">
-                        <div style="color:white;margin-bottom:30px;margin-top:10px;position:relative;z-index:99;">
-                            <h5 style="">BohemianSoul</h5>
-                            <p><small>(September 15, 2020 3:51pm)</small></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="background-color:#333; padding:10px">
-                        <audio class="recentEpisodesPlayer" controls preload="none"
-                               style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" onplay="">
-                            <source src="https://traffic.megaphone.fm/GLT2136054043.mp3" type="audio/mpeg">
-                        </audio>
-                        <img src="https://images.megaphone.fm/s3zqE85iGac6_Enuv1pS-U7qLy99gP_Gdu73QQ0RySs/plain/s3://megaphone-prod/podcasts/8af0c2f6-7078-11ea-9dd8-af79e6634354/image/uploads_2F1585347345374-gyr992d751u-285e2c821c22f2b5478b8505098be037_2FTheLPNShow.png"
-                             style="max-height:480px; max-width:100%;min-height:480px;" alt=" ">
-                        <div style="color:white;margin-bottom:30px;margin-top:10px;position:relative;z-index:99;">
-                            <h5 style="">The LPN Show</h5>
-                            <p><small>(September 15, 2020 3:50pm)</small></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="background-color:#333; padding:10px">
-                        <audio class="recentEpisodesPlayer" controls preload="none"
-                               style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" onplay="">
-                            <source src="https://mcdn.podbean.com/mf/web/hz7csx/Podcast_A_import_ncia_da_fisiologia_nos_treinos_de_corridaac0kp.mp3"
-                                    type="audio/mpeg">
-                        </audio>
-                        <img src="https://pbcdn1.podbean.com/imglogo/image-logo/5610562/capa.png"
-                             style="max-height:480px; max-width:100%;min-height:480px;" alt=" ">
-                        <div style="color:white;margin-bottom:30px;margin-top:10px;position:relative;z-index:99;">
-                            <h5 style="">Podcast Corrida Perfeita ®</h5>
-                            <p><small>(September 15, 2020 3:47pm)</small></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="background-color:#333; padding:10px">
-                        <audio class="recentEpisodesPlayer" controls preload="none"
-                               style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" onplay="">
-                            <source src="https://cdn.accessradio.org/StationFolder/kidnappers/Move%20Better%20Feel%20Better%20-%20Sarah%20chats%20about%20Healthy%20Movement.mp3"
-                                    type="audio/mpeg">
-                        </audio>
-                        <img src="https://cdn.accessradio.org/StationFolder/kidnappers/Images/Sarah.jpg"
-                             style="max-height:480px; max-width:100%;min-height:480px;" alt=" ">
-                        <div style="color:white;margin-bottom:30px;margin-top:10px;position:relative;z-index:99;">
-                            <h5 style="">Move Better, Feel Better - with Sarah McAllum</h5>
-                            <p><small>(September 15, 2020 3:46pm)</small></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="background-color:#333; padding:10px">
-                        <audio class="recentEpisodesPlayer" controls preload="none"
-                               style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" onplay="">
-                            <source src="https://aajtak-pdelivery.akamaized.net/aajtak/podcast/2020_09/15_sep_20_15_sept_corona_coverage_128.mp3"
-                                    type="audio/mpeg">
-                        </audio>
-                        <img src="https://akm-img-a-in.tosshub.com/aajtak/images/category/Coroan_coverage_1400x1400.jpg?size=1400:1400"
-                             style="max-height:480px; max-width:100%;min-height:480px;" alt=" ">
-                        <div style="color:white;margin-bottom:30px;margin-top:10px;position:relative;z-index:99;">
-                            <h5 style="">कोरोना कवरेज</h5>
-                            <p><small>(September 15, 2020 3:45pm)</small></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="background-color:#333; padding:10px">
-                        <audio class="recentEpisodesPlayer" controls preload="none"
-                               style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" onplay="">
-                            <source src="https://mcdn.podbean.com/mf/web/vzz39a/Pandemic.mp3" type="audio/mpeg">
-                        </audio>
-                        <img src="https://pbcdn1.podbean.com/imglogo/image-logo/1280590/2_copy.png"
-                             style="max-height:480px; max-width:100%;min-height:480px;" alt=" ">
-                        <div style="color:white;margin-bottom:30px;margin-top:10px;position:relative;z-index:99;">
-                            <h5 style="">2Dumb2Quit w/ Jeremy McComb</h5>
-                            <p><small>(September 15, 2020 3:45pm)</small></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="background-color:#333; padding:10px">
-                        <audio class="recentEpisodesPlayer" controls preload="none"
-                               style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" onplay="">
-                            <source src="https://stream.redcircle.com/episodes/5de909e1-33aa-4661-8fbe-ec22e1c4aaaa/stream.mp3"
-                                    type="audio/mpeg">
-                        </audio>
-                        <img src="https://media.redcircle.com/images/2020/7/31/23/9886c4df-9f4c-406c-bc2e-3e9063d1d9eb_c1dd0b_0f75a8f5-7348-4fa2-b810-6782d53ccdaa_58d9ff68-b9e8-47f9-acce-67e98f404f78_90a20dee-e90a-477e-ad47-9a2fd2e33944_f70fd357-5b4e-465f-b0cc-1ad8c2a6dd10_47ef94be-4904-41b4-804f-93c445c6aaf8_blob.jpg"
-                             style="max-height:480px; max-width:100%;min-height:480px;" alt=" ">
-                        <div style="color:white;margin-bottom:30px;margin-top:10px;position:relative;z-index:99;">
-                            <h5 style="">PanKnick 🏀🗽🍎🚖🍕For NY Knicks Knickerbockers Everywhere</h5>
-                            <p><small>(September 15, 2020 3:44pm)</small></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="background-color:#333; padding:10px">
-                        <audio class="recentEpisodesPlayer" controls preload="none"
-                               style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" onplay="">
-                            <source src="https://mcdn.podbean.com/mf/web/kikfa7/61520ONELINKEP3_68p7uq.mp3"
-                                    type="audio/mpeg">
-                        </audio>
-                        <img src="https://pbcdn1.podbean.com/imglogo/image-logo/5771507/One_Link_Podcast.png"
-                             style="max-height:480px; max-width:100%;min-height:480px;" alt=" ">
-                        <div style="color:white;margin-bottom:30px;margin-top:10px;position:relative;z-index:99;">
-                            <h5 style="">One Link Podcast</h5>
-                            <p><small>(September 15, 2020 3:44pm)</small></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="background-color:#333; padding:10px">
-                        <audio class="recentEpisodesPlayer" controls preload="none"
-                               style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" onplay="">
-                            <source src="https://mcdn.podbean.com/mf/web/9dx2qq/DI_September_14th_Final_Video9o3zd.mp4"
-                                    type="video/mp4">
-                        </audio>
-                        <img src="https://pbcdn1.podbean.com/imglogo/image-logo/654500/InvertedLogo_300dpi_twitter.jpg"
-                             style="max-height:480px; max-width:100%;min-height:480px;" alt=" ">
-                        <div style="color:white;margin-bottom:30px;margin-top:10px;position:relative;z-index:99;">
-                            <h5 style="">Immunotec Podcast</h5>
-                            <p><small>(September 15, 2020 3:39pm)</small></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="background-color:#333; padding:10px">
-                        <audio class="recentEpisodesPlayer" controls preload="none"
-                               style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" onplay="">
-                            <source src="https://traffic.libsyn.com/secure/indieandretro/ET_podcast.mp3?dest-id=1020278"
-                                    type="audio/mpeg">
-                        </audio>
-                        <img src="https://ssl-static.libsyn.com/p/assets/7/6/0/f/760f928e9490695b/IndieRetroLargeJPG807.jpg"
-                             style="max-height:480px; max-width:100%;min-height:480px;" alt=" ">
-                        <div style="color:white;margin-bottom:30px;margin-top:10px;position:relative;z-index:99;">
-                            <h5 style="">Indie and Retro</h5>
-                            <p><small>(September 15, 2020 3:38pm)</small></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="background-color:#333; padding:10px">
-                        <audio class="recentEpisodesPlayer" controls preload="none"
-                               style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" onplay="">
-                            <source src="http://feeds.soundcloud.com/stream/893861548-gremlinsstrikeback-gsb118-tenet-the-man-from-snowy-river-9-queens-this-is-spinal-tap.mp3"
-                                    type="audio/mpeg">
-                        </audio>
-                        <img src="http://i1.sndcdn.com/avatars-000445960236-8y4snx-original.jpg"
-                             style="max-height:480px; max-width:100%;min-height:480px;" alt=" ">
-                        <div style="color:white;margin-bottom:30px;margin-top:10px;position:relative;z-index:99;">
-                            <h5 style="">Gremlins Strike Back</h5>
-                            <p><small>(September 15, 2020 3:38pm)</small></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="background-color:#333; padding:10px">
-                        <audio class="recentEpisodesPlayer" controls preload="none"
-                               style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" onplay="">
-                            <source src="https://anchor.fm/s/223c914c/podcast/play/19659338/sponsor/a2d8vfp/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-09-15%2Fc187bdd94229f91511f191704bd89235.m4a"
-                                    type="audio/x-m4a">
-                        </audio>
-                        <img src="https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/5643947/5643947-1590086002465-be2af06d1986e.jpg"
-                             style="max-height:480px; max-width:100%;min-height:480px;" alt=" ">
-                        <div style="color:white;margin-bottom:30px;margin-top:10px;position:relative;z-index:99;">
-                            <h5 style="">HIS PINK DIARY - Malayalam podcast</h5>
-                            <p><small>(September 15, 2020 3:36pm)</small></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="background-color:#333; padding:10px">
-                        <audio class="recentEpisodesPlayer" controls preload="none"
-                               style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" onplay="">
-                            <source src="http://awscdn.podcasts.com/The-Return-of-Don-Bluth-The-H2O-Podcast-239-0bf6.mp3"
-                                    type="audio/mpeg">
-                        </audio>
-                        <img src="https://s3.amazonaws.com/podcasts-image-uploads/H2O_iTunesCard_Jun2019.jpg"
-                             style="max-height:480px; max-width:100%;min-height:480px;" alt=" ">
-                        <div style="color:white;margin-bottom:30px;margin-top:10px;position:relative;z-index:99;">
-                            <h5 style="">SciFi4Me: The H2O Podcast</h5>
-                            <p><small>(September 15, 2020 3:34pm)</small></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="background-color:#333; padding:10px">
-                        <audio class="recentEpisodesPlayer" controls preload="none"
-                               style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" onplay="">
-                            <source src="https://anchor.fm/s/e912fe0/podcast/play/19659945/sponsor/a1dtcsn/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-09-15%2Fe67e27efbaecf65f68381a398f453297.m4a"
-                                    type="audio/x-m4a">
-                        </audio>
-                        <img src="https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded/2343960/2343960-1569177349933-41410cc7453ea.jpg"
-                             style="max-height:480px; max-width:100%;min-height:480px;" alt=" ">
-                        <div style="color:white;margin-bottom:30px;margin-top:10px;position:relative;z-index:99;">
-                            <h5 style="">Sports Enthusiast</h5>
-                            <p><small>(September 15, 2020 3:32pm)</small></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="background-color:#333; padding:10px">
-                        <audio class="recentEpisodesPlayer" controls preload="none"
-                               style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" onplay="">
-                            <source src="https://cdn.simplecast.com/audio/ac9d20/ac9d205f-b4f3-4c24-8ea0-60e8249f4f88/d44012a4-8c34-448e-9202-a1d5c80610b9/sept15-american-samoa-fc_tc.mp3?aid=rss_feed"
-                                    type="audio/mpeg">
-                        </audio>
-                        <img src="https://image.simplecastcdn.com/images/5fb1f3ed-417a-4e48-8ac3-759e68816574/cfa23c93-fa29-48b4-8546-2b751b7c8807/3000x3000/wt2020logo.jpg?aid=rss_feed"
-                             style="max-height:480px; max-width:100%;min-height:480px;" alt=" ">
-                        <div style="color:white;margin-bottom:30px;margin-top:10px;position:relative;z-index:99;">
-                            <h5 style="">Womxn Travel</h5>
-                            <p><small>(September 15, 2020 3:31pm)</small></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="background-color:#333; padding:10px">
-                        <audio class="recentEpisodesPlayer" controls preload="none"
-                               style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" onplay="">
-                            <source src="https://static1.squarespace.com/static/504e4446c4aacfd8191d4410/t/5f6124141a46ba600932024a/1600201769310/13+September+2020+Forgive+from+your+Heart.mp3"
-                                    type="audio/mpeg">
-                        </audio>
-                        <img src="https://images.squarespace-cdn.com/content/504e4446c4aacfd8191d4410/1356554633029-16W14E77VFA8TZVZIDDJ/Christmas+Eve+Mass.jpg?content-type=image%2Fjpeg"
-                             style="max-height:480px; max-width:100%;min-height:480px;" alt=" ">
-                        <div style="color:white;margin-bottom:30px;margin-top:10px;position:relative;z-index:99;">
-                            <h5 style="">Recent Sermons - Church of the Redeemer CEC</h5>
-                            <p><small>(September 15, 2020 3:29pm)</small></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="background-color:#333; padding:10px">
-                        <audio class="recentEpisodesPlayer" controls preload="none"
-                               style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" onplay="">
-                            <source src="https://anchor.fm/s/14d56d6c/podcast/play/19659785/sponsor/a2jiahc/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-09-15%2F4e0201b6c4420405e2e904100cd741f4.m4a"
-                                    type="audio/x-m4a">
-                        </audio>
-                        <img src="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/3395315/3bb071bf6a855fb0.jpeg"
-                             style="max-height:480px; max-width:100%;min-height:480px;" alt=" ">
-                        <div style="color:white;margin-bottom:30px;margin-top:10px;position:relative;z-index:99;">
-                            <h5 style="">Not Your Fathers Sports Pod</h5>
-                            <p><small>(September 15, 2020 3:28pm)</small></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="background-color:#333; padding:10px">
-                        <audio class="recentEpisodesPlayer" controls preload="none"
-                               style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" onplay="">
-                            <source src="https://chtbl.com/track/283184/https://downloads.pod.co/859eb6c8-258f-4c8e-8256-d9b0fdbc0c8d/1b29e692-ec7f-41a8-98d1-c6793ff7900e.mp3"
-                                    type="audio/mpeg">
-                        </audio>
-                        <img src="https://images.pod.co/g-9aSRUIcJjk-Yq-4thXXC4Z8GCnDGpvAcmT5H256So/resize:fill:1500:1500/plain/artwork/d334c440-fbde-447f-a520-c0bb63f66909/couple-of-shankers-golf-podcast.jpg"
-                             style="max-height:480px; max-width:100%;min-height:480px;" alt=" ">
-                        <div style="color:white;margin-bottom:30px;margin-top:10px;position:relative;z-index:99;">
-                            <h5 style="">Couple of Shankers Golf Podcast</h5>
-                            <p><small>(September 15, 2020 3:27pm)</small></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="background-color:#333; padding:10px">
-                        <audio class="recentEpisodesPlayer" controls preload="none"
-                               style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" onplay="">
-                            <source src="https://traffic.libsyn.com/secure/dearhunterpodcast/EP32_NatlWildlifeCoOp.mp3?dest-id=1636982"
-                                    type="audio/mpeg">
-                        </audio>
-                        <img src="https://ssl-static.libsyn.com/p/assets/c/4/5/c/c45cd6b098800b45/Logo.jpg"
-                             style="max-height:480px; max-width:100%;min-height:480px;" alt=" ">
-                        <div style="color:white;margin-bottom:30px;margin-top:10px;position:relative;z-index:99;">
-                            <h5 style="">Dear Hunter Podcast</h5>
-                            <p><small>(September 15, 2020 3:24pm)</small></p>
-                        </div>
-                    </div>
-                </div>
-                <a class="ccwedge carousel-control-prev" href="#recentEpisodesCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="ccwedge carousel-control-next" href="#recentEpisodesCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
+        <div class="col-md">
+          <a href="#podcast" class="feature-button">
+            <span class="fas fa-headphones fa-5x" aria-hidden="true"></span>
+            <div class="h3">Listeners</div>
+          </a>
         </div>
-    </div>
-    <div class="row" style="margin-top:30px;">
-        <div class="col-sm">
-            <h5>Listen to the first episode of "Podcasting 2.0", where we discuss the project, and it's goals.</h5>
-            <div style="text-align: center;margin-left:auto;margin-right:auto;margin-bottom:10px;">
-                <audio class="recentEpisodesPlayer" controls preload="none"
-                       style="display:inline-block;vertical-align: middle" onplay="">
-                    <source src="https://mp3s.nashownotes.com/PC20-01-2020-08-28-Final.mp3" type="audio/mpeg">
+        <div class="col-md">
+          <a href="#developer" class="feature-button">
+            <span class="fas fa-code fa-5x" aria-hidden="true"></span>
+            <div class="h3">Developers</div>
+          </a>
+        </div>
+      </div>
+
+      <hr>
+
+      <div>
+        <div id="recentEpisodesCarousel" class="podcast-carousel carousel slide carousel-fade" data-ride="carousel" data-pause="hover">
+          <ol class="carousel-indicators">
+            <li data-target="#recentEpisodesCarousel" data-slide-to="0" class="active"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="text-center">
+                <audio class="recentEpisodesPlayer" controls preload="none" onplay="">
+                  <source src="https://anchor.fm/s/28a606f8/podcast/play/19660743/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-09-15%2F50d8f04ae67130a4796d121d055131f0.m4a" type="audio/x-m4a">
                 </audio>
-                <a class="subscribeBadge" title="Subscribe" target="_blank"
-                   href="http://mp3s.nashownotes.com/pc20rss.xml" style="display: inline-block;vertical-align: middle;">
-                    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-rss-fill" fill="currentColor"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                              d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5a1 1 0 0 0 0 2 8 8 0 0 1 8 8 1 1 0 1 0 2 0c0-5.523-4.477-10-10-10zm0 4a1 1 0 0 0 0 2 4 4 0 0 1 4 4 1 1 0 1 0 2 0 6 6 0 0 0-6-6zm.5 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
-                    </svg>
-                </a>
+              </div>
+              <img src="https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/6719694/6719694-1598396246011-64884b1f4dd91.jpg" alt="">
+              <div class="carousel-content">
+                <h5 style="">Rompekoko</h5>
+                <p><small>(September 15, 2020 3:51pm)</small></p>
+              </div>
             </div>
+          </div>
+          <a class="ccwedge carousel-control-prev" href="#recentEpisodesCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="ccwedge carousel-control-next" href="#recentEpisodesCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-    </div>
-    <div class="row" style="margin-top:40px;">
-        <div class="col-sm">
-            <h3>Promise</h3>
-            <p>The core, categorized index will always be available for free, for any use</p>
-            <h3>Operations</h3>
-            <p>Podcast Index LLC is a software developer focused partnership that provides tools and data to anyone who
-                aspires to create new and exciting Podcast experiences without the heavy lifting of indexing,
-                aggregation and data management</p>
-            <h3>Financing</h3>
-            <p>The core Podcast Index is financed by its founders and stakeholders: Podcasters, Developers and
-                Listeners</p>
-            <p>Corporate interests and advertising are antithetical to our business</p>
-            <p>Podcast Index LLC strives to grow by providing enhanced API services of value to developers and
-                organizations</p>
-            <h3>Mission and Goal</h3>
-            <p>Preserve podcasting as a platform for free speech</p>
-            <p>Re-tool podcasting to a platform of value exchange that includes developers with podcasters and
-                listeners</p>
+
+        <h3>Promise</h3>
+        <p>The core, categorized index will always be available for free, for any use</p>
+        <h3>Operations</h3>
+        <p>Podcast Index LLC is a software developer focused partnership that provides tools and data to anyone who
+          aspires to create new and exciting Podcast experiences without the heavy lifting of indexing,
+          aggregation and data management</p>
+        <h3>Financing</h3>
+        <p>The core Podcast Index is financed by its founders and stakeholders: Podcasters, Developers and
+          Listeners</p>
+        <p>Corporate interests and advertising are antithetical to our business</p>
+        <p>Podcast Index LLC strives to grow by providing enhanced API services of value to developers and
+          organizations</p>
+        <h3>Mission and Goal</h3>
+        <p>Preserve podcasting as a platform for free speech</p>
+        <p>Re-tool podcasting to a platform of value exchange that includes developers with podcasters and
+          listeners</p>
+      </div>
+
+      <section id="podcast">
+        <h3>Our podcast</h3>
+        <p>Listen to the first episode of "Podcasting 2.0", where we discuss the project, and it's goals.</p>
+        <div class="d-flex align-items-center">
+          <audio class="recentEpisodesPlayer" controls preload="none" onplay="">
+            <source src="https://mp3s.nashownotes.com/PC20-01-2020-08-28-Final.mp3" type="audio/mpeg">
+          </audio>
+          <a class="ml-3 text-rss" title="Podcasting 2.0 RSS Feed" target="_blank" href="http://mp3s.nashownotes.com/pc20rss.xml">
+            <span class="fas fa-rss-square fa-2x" aria-hidden="true"></span>
+            <span class="sr-only">Podcasting 2.0 RSS Feed</span>
+          </a>
         </div>
-    </div>
-    <div id="developer" class="row" style="margin-top:40px;">
-        <div class="col-sm">
+      </section>
+
+      <div class="row my-5">
+        <div class="col-md">
+          <section id="developer" class="m-0">
             <h3>Developer? Join the fun!</h3>
-            <div class="justify-content-center">Sign up for an account and get API keys at: <a
-                    href="https://api.podcastindex.org/signup">https://api.podcastindex.org</a></div>
-            <div class="justify-content-center">API Documentation is <a target="_blank"
-                                                                        href="https://podcastindex-org.github.io/docs-api/">here</a>.
-            </div>
-            <div class="justify-content-center">We build in the open. Get active in the <a
-                    href="https://github.com/Podcastindex-org">Github repos</a>.
-            </div>
-            <div class="justify-content-center">
-                We have a Mastodon server for collaboration. Join it here: <a
-                    href="https://podcastindex.social/invite/hfcQYbjq" class="text-black-50">Podcastindex.social</a>
-            </div>
-            <div class="justify-content-center">Follow us on the blog: <a href="https://blog.podcastindex.org/">blog.podcastindex.org</a>
-                or on <a href="https://twitter.com/PodcastindexOrg">Twitter</a>, or <a
-                        href="https://noagendasocial.com/@podcastindex">Mastodon</a>.
-                <div class="justify-content-center">Shoot us an email at: <a
-                        href="/cdn-cgi/l/email-protection#f59c9b939ab5859a91969486819c9b91908ddb9a8792"><span
-                        class="__cf_email__" data-cfemail="335a5d555c73435c57505240475a5d57564b1d5c4154">[email&#160;protected]</span></a>
-                </div>
-            </div>
+
+            <ul class="list-unstyled">
+              <li>Sign up for an account and get API keys at: <a href="https://api.podcastindex.org/signup">https://api.podcastindex.org</a></li>
+              <li>API Documentation is <a target="_blank" href="https://podcastindex-org.github.io/docs-api/">here</a></li>
+              <li>We build in the open. Get active in the <a href="https://github.com/Podcastindex-org">Github repos</a></li>
+              <li>We have a Mastodon server for collaboration. Join it here: <a href="https://podcastindex.social/invite/hfcQYbjq" class="text-black-50">Podcastindex.social</a></li>
+              <li>Follow us on the blog: <a href="https://blog.podcastindex.org/">blog.podcastindex.org</a> or on <a href="https://twitter.com/PodcastindexOrg">Twitter</a>, or <a href="https://noagendasocial.com/@podcastindex">Mastodon</a>.</li>
+              <li>Shoot us an email at: <a href="/cdn-cgi/l/email-protection#f59c9b939ab5859a91969486819c9b91908ddb9a8792"><span class="__cf_email__" data-cfemail="335a5d555c73435c57505240475a5d57564b1d5c4154">[email&#160;protected]</span></a></li>
+            </ul>
+          </section>
         </div>
-        <div id="donate" class="row" style="margin-top:40px;">
-            <div class="col-sm">
-                <h3>Help us out...</h3>
-                <p>None of this is free. If you get any value from this project, or if you just believe in it and want
-                    to help us out with hosting fees and paying
-                    the bills, a donation of any amount would be great.</p>
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_s-xclick"/>
-                    <input type="hidden" name="hosted_button_id" value="9GEMYSYB7G2DW"/>
-                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0"
-                           name="submit" title="PayPal - The safer, easier way to pay online!"
-                           alt="Donate with PayPal button"/>
-                    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
-                </form>
-            </div>
+        <div class="col-md">
+          <section id="donate" class="m-0">
+            <h3>Help us out...</h3>
+            <p>None of this is free. If you get any value from this project, or if you just believe in it and want to help
+              us out with hosting fees and paying the bills, a donation of any amount would be great.</p>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_s-xclick"/>
+              <input type="hidden" name="hosted_button_id" value="9GEMYSYB7G2DW"/>
+              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button"/>
+              <img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
+            </form>
+          </section>
         </div>
-        <div class="row">
-            <div class="col-sm">
-                <p>&nbsp</p>
-            </div>
-        </div>
+      </div>
     </div>
 
-    <script src="build/app.js"></script>
+    <footer>
+      Copyright &copy; Podcast Index LLC
+    </footer>
+
+    <script src="/build/app.js"></script>
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-</div>
-</body>
+  </body>
 </html>

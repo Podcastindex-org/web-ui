@@ -1,14 +1,115 @@
-@import "~bootstrap/scss/bootstrap";
+@import "stylesheets/bootstrap";
+@import "stylesheets/fontawesome";
 
-div.carousel-item img:before {
-  content: ' ';
-  display: block;
-  position: absolute;
-  height: 600px;
-  width: 600px;
-  background-color: #333;
+$brand: #aa0000;
+$brand-secondary: #dd0000;
+
+.text-rss { color: #f26522 !important; }
+
+header {
+  margin-bottom: map-get($spacers, 5);
+
+  .navbar {
+    background-color: $brand;
+    border-bottom: 15px solid $brand-secondary;
+
+    .navbar-brand {
+      font-weight: bold;
+
+      img {
+        margin-right: map-get($spacers, 2);
+      }
+    }
+
+    a {
+      color: $light;
+      text-decoration: none;
+      margin-right: map-get($spacers, 2);
+    }
+  }
+}
+
+footer {
+  padding-top: map-get($spacers, 5);
+  padding-bottom: map-get($spacers, 5);
+  background: $gray-800;
+  color: $light;
+  text-align: center;
+}
+
+section {
+  margin-top: map-get($spacers, 5);
+  margin-bottom: map-get($spacers, 5);
 }
 
 audio {
   outline: none;
+}
+
+.feature-button {
+  display: block;
+  padding: $spacer 0;
+  background: $gray-200;
+  color: $text-muted;
+  text-align: center;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: $spacer;
+  }
+
+  &:hover, &:active {
+    text-decoration: none;
+    color: $brand;
+  }
+
+  .h3 {
+    margin: 0;
+  }
+
+  .fas {
+    margin-bottom: $spacer;
+  }
+}
+
+.podcast-carousel {
+  max-width: 500px;
+  margin: 0 auto $spacer;
+
+  @include media-breakpoint-up(lg) {
+    width: 500px;
+    float: right;
+    margin: 0 0 0 $spacer;
+  }
+
+  .carousel-item {
+    padding: 10px;
+    background-color: #333;
+
+    .carousel-content {
+      position: relative;
+      margin-bottom: 30px;
+      margin-top: 10px;
+      color: white;
+      z-index: 99;
+    }
+
+    audio {
+      margin-bottom: 10px;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 480px;
+      min-height: 480px;
+    }
+
+    img:before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      height: 600px;
+      width: 600px;
+      background-color: #333;
+    }
+  }
 }

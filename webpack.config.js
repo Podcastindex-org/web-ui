@@ -17,6 +17,14 @@ module.exports = {
           'sass-loader',
         ],
       },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
   plugins: [
