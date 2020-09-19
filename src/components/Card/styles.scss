@@ -1,0 +1,28 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.15);
+    border-radius: 3px;
+}
+
+.card-header {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.card-title {
+    // font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #708693;
+    text-align: left;
+}
+
+.card-body {
+    margin-top: 10px;
+    height: calc(100% - 10px);
+    // height: calc();
+}

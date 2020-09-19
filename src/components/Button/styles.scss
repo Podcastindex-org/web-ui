@@ -1,0 +1,20 @@
+.button {
+    border-radius: 17px;
+    transition: var(--transition-secs);
+    font-family: var(--font-alt);
+    font-size: 16px;
+    color: #2d2d2d;
+    padding: 8px 20px;
+    text-align: center;
+    &:hover {
+        transition: var(--transition-secs);
+        background: #f2f2f2;
+        cursor: pointer;
+    }
+}
+
+a,
+.button {
+    text-decoration: none !important;
+    text-decoration-color: none !important;
+}
