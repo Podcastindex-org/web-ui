@@ -48,10 +48,9 @@ audio {
 
 .feature-button {
   display: block;
-  padding: $spacer 0;
+  padding: $spacer;
   background: $gray-200;
   color: $text-muted;
-  text-align: center;
 
   @include media-breakpoint-down(sm) {
     margin-bottom: $spacer;
@@ -62,12 +61,15 @@ audio {
     color: $brand;
   }
 
-  .h3 {
-    margin: 0;
+  > .fas {
+    margin-bottom: map-get($spacers, 4);
   }
 
-  .fas {
-    margin-bottom: $spacer;
+  .h4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
   }
 }
 
