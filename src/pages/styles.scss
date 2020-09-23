@@ -1,6 +1,5 @@
 .page {
     background: #ffffff;
-    overflow-y: scroll;
 }
 
 .landing-graphic {
@@ -15,7 +14,7 @@
     position: relative;
     z-index: 1;
     width: 1024px;
-    padding: 0 20px;
+    padding: 0 0 20px 0;
     margin: 0 auto;
 }
 
@@ -61,17 +60,48 @@
     display: inline-flex;
     flex-direction: row;
     justify-content: center;
-    height: 585px;
-    width: 1074px;
+    align-items: center;
+
     .card {
         display: inline-flex;
         flex-direction: column;
-        height: inherit;
-        width: inherit;
-        padding: 20px;
+        height: 515px;
+        width: 1034px;
+        padding: 40px;
         // box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.15);
-        opacity: 0.72;
         background: #f3f3f3;
         border-radius: 12px;
+    }
+    .kpi-massive-title {
+        font-family: D-DINExp-Bold;
+        font-size: 32px;
+        color: #2d2d2d;
+        text-align: left;
+    }
+    .kpi-massive-value {
+        font-family: DINAlternate-Bold;
+        font-size: 186px;
+        color: #ff1c41;
+        text-align: left;
+    }
+    .kpi-title-2 {
+        margin-top: 70px;
+    }
+}
+
+.kpi-row {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.info-section {
+    margin-top: 50px;
+    p {
+        font-family: D-DINExp;
+        font-size: 18px;
+        color: #868686;
     }
 }

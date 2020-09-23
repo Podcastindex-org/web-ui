@@ -9,19 +9,20 @@
         }
         .kpi-title {
             flex: 1;
-            // font-family: DINAlternate-Bold;
+            opacity: 0.64;
+            font-family: DINAlternate-Bold;
             font-size: 20px;
-            color: #708693;
+            color: #494949;
             text-align: left;
-            border-bottom: 2px solid #d8e1e8;
             margin-right: 50px;
         }
 
         .kpi-value {
             // font-weight: bold;
-            font-size: 64px;
-            line-height: 64px;
-            color: #4580e6;
+            font-family: DINAlternate-Bold;
+            line-height: 81px;
+            font-size: 81px;
+            color: #ff1c41;
             text-align: left;
         }
         .kpi-unit {

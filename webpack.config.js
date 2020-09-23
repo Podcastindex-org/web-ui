@@ -1,5 +1,8 @@
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const dotenv = require('dotenv')
+dotenv.config()
 
 module.exports = {
     watch: true,
@@ -16,15 +19,12 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
     },
+    node: {
+        fs: 'empty',
+    },
     resolve: {
         // Add `.ts` and `.tsx` as a resolvable extension.
         extensions: ['.ts', '.tsx', '.js'],
-        // alias: {
-        //     react: 'preact/compat',
-        //     'react-dom/test-utils': 'preact/test-utils',
-        //     'react-dom': 'preact/compat',
-        //     // Must be below test-utils
-        // },
     },
     module: {
         rules: [
@@ -69,6 +69,13 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'public', 'index.html'),
+        }),
+        new webpack.DefinePlugin({
+            'process.env': {
+                API_KEY: JSON.stringify(process.env.API_KEY),
+                API_SECRET: JSON.stringify(process.env.API_SECRET),
+                API_URL: JSON.stringify(process.env.API_URL),
+            },
         }),
     ],
 }

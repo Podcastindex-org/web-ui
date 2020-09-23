@@ -12,5 +12,23 @@ body {
     font-family: var(--font-family);
     margin: 0;
     color: #2d2d2d;
-    overflow: hidden; // Disable scrolling on body
+    overflow-y: scroll; // Disable scrolling on body
+}
+
+h1 {
+    font-family: var(--font-alt);
+    font-weight: bold;
+    font-size: 55px;
+}
+
+h2 {
+    font-family: var(--font-alt);
+    font-weight: bold;
+    font-size: 44px;
+}
+
+h3 {
+    font-family: var(--font-alt);
+    font-weight: bold;
+    font-size: 33px;
 }
