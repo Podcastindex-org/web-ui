@@ -21,6 +21,41 @@
     width: inherit;
 }
 
+.player-nav-arrows {
+    position: absolute;
+    z-index: 0;
+    width: inherit;
+    height: 470px;
+    button {
+        outline: 0;
+        border: 0;
+        background: none;
+        border-radius: 4px;
+        &:hover {
+            background: rgba(#d6d6d6, 0.4);
+        }
+    }
+    .player-nav-arrows-left {
+        top: 245px;
+        position: absolute;
+        left: 5px;
+        cursor: pointer;
+        img {
+            margin-top: 3px;
+        }
+    }
+
+    .player-nav-arrows-right {
+        top: 245px;
+        position: absolute;
+        right: 5px;
+        cursor: pointer;
+        img {
+            margin-top: 3px;
+        }
+    }
+}
+
 .player-carousel {
     display: inline-flex;
     flex-direction: row;

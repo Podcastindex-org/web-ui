@@ -1,8 +1,9 @@
 import * as React from 'react'
 import AudioPlayer from 'react-h5-audio-player'
 
-import FeedIcon from '../../../images/feed.svg'
-
+// import FeedIcon from '../../../images/feed.svg'
+import BackIcon from '../../../images/chevron-back-outline.svg'
+import ForwardIcon from '../../../images/chevron-forward-outline.svg'
 import 'react-h5-audio-player/src/styles.scss'
 import './styles.scss'
 
@@ -34,6 +35,30 @@ export default class Card extends React.Component<IProps, IState> {
         this.setState({ index })
     }
 
+    onBack() {
+        const { index } = this.state
+        const { podcasts } = this.props
+        let backIndex = index - 1
+        if (backIndex < 0) {
+            backIndex = podcasts.length - 1
+        }
+        this.setState({
+            index: backIndex,
+        })
+    }
+
+    onForward() {
+        const { index } = this.state
+        const { podcasts } = this.props
+        let nextIndex = index + 1
+        if (nextIndex >= podcasts.length) {
+            nextIndex = 0
+        }
+        this.setState({
+            index: nextIndex,
+        })
+    }
+
     render() {
         const { loading, podcasts } = this.props
         const { index } = this.state
@@ -44,6 +69,21 @@ export default class Card extends React.Component<IProps, IState> {
         return (
             <div className="player-card">
                 <div className="player">
+                    <div className="player-nav-arrows">
+                        <button
+                            className="player-nav-arrows-left"
+                            onClick={this.onBack.bind(this)}
+                        >
+                            <img src={BackIcon} height={20} />
+                        </button>
+                        <button className="player-nav-arrows-right">
+                            <img
+                                src={ForwardIcon}
+                                height={20}
+                                onClick={this.onForward.bind(this)}
+                            />
+                        </button>
+                    </div>
                     <div className="player-cover-art">
                         <img
                             draggable={false}
