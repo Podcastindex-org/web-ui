@@ -1,0 +1,40 @@
+.kpi-card {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+        display: inline-flex;
+        flex-direction: column;
+        height: 515px;
+        width: 1034px;
+        padding: 40px;
+        // box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.15);
+        background: #f3f3f3;
+        border-radius: 12px;
+    }
+    .kpi-massive-title {
+        font-family: D-DINExp-Bold;
+        font-size: 32px;
+        color: #2d2d2d;
+        text-align: left;
+    }
+    .kpi-massive-value {
+        font-family: DINAlternate-Bold;
+        font-size: 186px;
+        color: #ff1c41;
+        text-align: left;
+    }
+    .kpi-title-2 {
+        margin-top: 70px;
+    }
+}
+
+.kpi-row {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+}

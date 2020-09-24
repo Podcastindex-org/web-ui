@@ -1,31 +1,46 @@
 import * as React from 'react'
 import AudioPlayer from 'react-h5-audio-player'
-// import 'react-h5-audio-player/lib/styles.css';
-// import 'react-h5-audio-player/lib/styles.less' Use LESS
-import 'react-h5-audio-player/src/styles.scss'
 
+import FeedIcon from '../../../images/feed.svg'
+
+import 'react-h5-audio-player/src/styles.scss'
 import './styles.scss'
 
 interface IProps {
-    title?: string
-    children?: any
+    podcasts?: Array<any>
+    loading?: boolean
 }
 
-export default class Card extends React.Component<IProps> {
+interface IState {
+    index: number
+}
+
+export default class Card extends React.Component<IProps, IState> {
     static defaultProps = {}
     state = {
-        open: false,
+        index: 0,
     }
+
+    player = React.createRef()
 
     constructor(props: IProps) {
         super(props)
     }
 
+    selectPodcast(index: number, evt) {
+        console.log(evt)
+        evt.stopPropagation()
+        evt.preventDefault()
+        this.setState({ index })
+    }
+
     render() {
-        const { title, children } = this.props
-        let image =
-            'https://www.noagendashow.net/media/cache/cover_large/1278.png'
-        // const { open } = this.state
+        const { loading, podcasts } = this.props
+        const { index } = this.state
+        const selectedPodcast = podcasts[index]
+        if (loading) {
+            return []
+        }
         return (
             <div className="player-card">
                 <div className="player">
@@ -34,21 +49,49 @@ export default class Card extends React.Component<IProps> {
                             draggable={false}
                             height={450}
                             width={450}
-                            src={image}
+                            src={selectedPodcast.image}
                         />
                     </div>
                     <div className="player-bottom">
+                        <div className="player-carousel">
+                            {podcasts.map((podcast, i) => (
+                                <button
+                                    aria-label={podcast.title}
+                                    key={`${i}`}
+                                    className={`player-carousel-item ${
+                                        i === index ? 'selected' : ''
+                                    }`}
+                                    onClick={this.selectPodcast.bind(this, i)}
+                                ></button>
+                            ))}
+                        </div>
                         <div className="player-media-controls">
                             <AudioPlayer
                                 header={
-                                    <div className="player-show-title">
-                                        <b>The No Agenda Show</b>
+                                    <div className="player-info">
+                                        <div className="player-show-title">
+                                            <b>{selectedPodcast.title}</b>
+                                        </div>
+                                        <p>
+                                            {
+                                                selectedPodcast.datePublishedPretty
+                                            }
+                                        </p>
                                     </div>
                                 }
-                                src="https://mp3s.nashownotes.com/NA-1278-2020-09-17-Final.mp3"
+                                autoPlay={false}
+                                src={selectedPodcast.enclosureUrl}
                                 onPlay={(e) => console.log('onPlay')}
+                                showJumpControls={false}
+                                customIcons={{ forward: null, rewind: null }}
                                 customAdditionalControls={[
-                                    <div style={{ width: 30 }}></div>,
+                                    <a
+                                        className="player-feed-button"
+                                        // href={}
+                                        style={{ width: 30 }}
+                                    >
+                                        {/* <img src={FeedIcon} /> */}
+                                    </a>,
                                 ]}
                             />
                         </div>

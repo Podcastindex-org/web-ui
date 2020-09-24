@@ -1,12 +1,12 @@
 import * as React from 'react'
 import moment from 'moment'
-import Chart from 'react-apexcharts'
 
+// Components
 import Topbar from '../components/TopBar'
 import PodcastPlayer from '../components/PodcastPlayer'
-import Card from '../components/Card'
-import KPI from '../components/KPI'
+import StatsCard from './Stats/StatsCard'
 
+// APIs
 import RecentApi from '../api/recent'
 
 import LandingBG from '../../images/landing-bg.svg'
@@ -42,6 +42,8 @@ interface IProps {
 }
 
 interface IState {
+    loading?: boolean
+    recentPodcasts?: Array<any>
     series: any
     options: any
 }
@@ -49,7 +51,8 @@ interface IState {
 export default class Landing extends React.Component<IProps, IState> {
     static defaultProps = {}
     state = {
-        open: false,
+        loading: true,
+        recentPodcasts: [],
         series: [],
         options: {
             ...sharedChartOptions,
@@ -77,8 +80,8 @@ export default class Landing extends React.Component<IProps, IState> {
     }
 
     async componentDidMount(): Promise<void> {
-        // const recentPodcasts = await RecentApi.recent_episodes(7)
-        // console.log(recentPodcasts)
+        const recentPodcasts = await RecentApi.recent_episodes(7)
+        console.log(recentPodcasts)
         let report_create_time = moment(new Date())
         const dateFrom = report_create_time.subtract(8, 'days')
         var last_seven_days = []
@@ -89,6 +92,8 @@ export default class Landing extends React.Component<IProps, IState> {
         }
         let newPodcasts = [28752, 29431, 33124, 36420, 32321, 32539, 33234]
         this.setState({
+            loading: false,
+            recentPodcasts,
             series: [
                 {
                     name: 'New Podcasts',
@@ -112,7 +117,7 @@ export default class Landing extends React.Component<IProps, IState> {
     }
 
     render() {
-        const { open } = this.state
+        const { loading, recentPodcasts } = this.state
         return (
             <div className="page">
                 <Topbar />
@@ -139,36 +144,18 @@ export default class Landing extends React.Component<IProps, IState> {
                             </div>
                         </div>
                         <div className="hero-pitch-right">
-                            <PodcastPlayer />
+                            <PodcastPlayer
+                                loading={loading}
+                                podcasts={recentPodcasts}
+                            />
                         </div>
                     </div>
-                    <div className="kpi-card">
-                        <Card>
-                            {/* <Chart
-                                series={this.state.series}
-                                options={this.state.options}
-                                type="line"
-                                height={5 * 80}
-                            /> */}
-                            <div className="kpi-massive-title">
-                                Total podcasts in the index
-                            </div>
-                            <div className="kpi-massive-value">1,064,141</div>
-                            <div className="kpi-massive-title kpi-title-2">
-                                Show published in the ...
-                            </div>
-                            <div className="kpi-row">
-                                <KPI big title="Last Week" value="133,434" />
-                                <KPI big title="Last Month" value="249,311" />
-                                <KPI big title="Last 90 days" value="249,311" />
-                            </div>
-                        </Card>
-                    </div>
+                    <StatsCard />
                     <div className="info-section">
                         <h3>Promise</h3>
                         <p>
                             The core, categorized index will always be available
-                            for free, for any use
+                            for free, for any use.
                         </p>
                         <h3>Operations</h3>
                         <p>
@@ -176,32 +163,34 @@ export default class Landing extends React.Component<IProps, IState> {
                             partnership that provides tools and data to anyone
                             who aspires to create new and exciting Podcast
                             experiences without the heavy lifting of indexing,
-                            aggregation and data management
+                            aggregation and data management.
                         </p>
                         <h3>Financing</h3>
                         <p>
                             The core Podcast Index is financed by its founders
                             and stakeholders: Podcasters, Developers and
-                            Listeners
+                            Listeners.
                         </p>
                         <p>
                             Corporate interests and advertising are antithetical
-                            to our business
+                            to our business.
                         </p>
                         <p>
                             Podcast Index LLC strives to grow by providing
                             enhanced API services of value to developers and
-                            organizations
+                            organizations.
                         </p>
                         <h3>Mission and Goal</h3>
-                        <p>Preserve podcasting as a platform for free speech</p>
+                        <p>
+                            Preserve podcasting as a platform for free speech.
+                        </p>
                         <p>
                             Re-tool podcasting to a platform of value exchange
                             that includes developers with podcasters and
-                            listeners
+                            listeners.
                         </p>
                     </div>
-                    <div id="donate">
+                    <div id="donate" className="info-section">
                         <h3>Help us out...</h3>
                         <p>
                             None of this is free. If you get any value from this

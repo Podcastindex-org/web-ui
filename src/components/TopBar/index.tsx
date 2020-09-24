@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import Button from '../Button'
+import Searchbar from '../SearchBar'
 import Icon from '../../../images/icon.svg'
 import SearchIcon from '../../../images/search.svg'
 
@@ -22,10 +23,10 @@ export default class Topbar extends React.Component<IProps> {
     constructor(props: IProps) {
         super(props)
 
-        this.handleChange = this.handleChange.bind(this)
+        this.onSearchChange = this.onSearchChange.bind(this)
     }
 
-    handleChange(evt: AnyAction) {
+    onSearchChange(evt: React.ChangeEvent<HTMLInputElement>) {
         this.setState({ search: evt.target.value })
     }
 
@@ -39,15 +40,19 @@ export default class Topbar extends React.Component<IProps> {
                     <div className="topbar-title">Podcast Index</div>
                 </a>
                 <div className="topbar-span">
-                    <div className="topbar-search">
+                    {/* <div className="topbar-search">
                         <img height={18} width={18} src={SearchIcon} />
                         <input
                             type="text"
                             value={search}
                             placeholder="Search for podcasts"
-                            onChange={this.handleChange}
+                            onChange={this.onSearchChange}
                         />
-                    </div>
+                    </div> */}
+                    <Searchbar
+                        search={search}
+                        onSearchChange={this.onSearchChange}
+                    />
                     <Button href="https://podcastindex.org/stats">Stats</Button>
                     <Button href="https://podcastindex.org/blog">Blog</Button>
                 </div>

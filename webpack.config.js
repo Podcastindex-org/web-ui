@@ -21,6 +21,8 @@ module.exports = {
     },
     node: {
         fs: 'empty',
+        net: 'empty',
+        tls: 'empty',
     },
     resolve: {
         // Add `.ts` and `.tsx` as a resolvable extension.
