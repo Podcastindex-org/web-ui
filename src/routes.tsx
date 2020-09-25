@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
 import Landing from './pages/landing'
+import Results from './pages/results'
 
 type RouteType = {
     path: string
@@ -15,12 +16,24 @@ type RouteType = {
 
 export const routes: Array<RouteType> = [
     // {
-    //     path: '/stats',
-    //     name: 'Dashboards',
-    //     icon: 'TIMELINE_AREA_CHART',
-    //     topbar: () => <div>Other links</div>,
-    //     component: Dashboards,
-    //     routes: [],
+    //     path: '/',
+    //     exact: false,
+    //     name: 'Home',
+    //     component: Main,
+    //     routes: [
+    //         {
+    //             path: '/',
+    //             exact: true,
+    //             name: 'Home',
+    //             component: Landing,
+    //         },
+    //         {
+    //             path: '/search',
+    //             exact: true,
+    //             name: 'Search',
+    //             component: Results,
+    //         },
+    //     ],
     // },
 ]
 
@@ -37,7 +50,9 @@ export function RouteWithSubRoutes(route: RouteType) {
 
 const Routes: React.SFC = () => (
     <Switch>
-        <Route path="/" component={Landing} />
+        {/* <Route path="/" component={Main} /> */}
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/search" component={Results} />
         <Route component={() => <div>Not Found</div>} />
     </Switch>
 )

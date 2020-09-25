@@ -1,18 +1,16 @@
 import * as React from 'react'
 
+import { history } from '../../state/store'
+
 import Button from '../Button'
 import Searchbar from '../SearchBar'
 import Icon from '../../../images/icon.svg'
 import SearchIcon from '../../../images/search.svg'
 
 import './styles.scss'
-import { AnyAction } from 'redux'
 
 // Separate state props + dispatch props to their own interfaces.
-interface IProps {
-    title?: string
-    children?: any
-}
+interface IProps {}
 
 export default class Topbar extends React.Component<IProps> {
     static defaultProps = {}
@@ -24,14 +22,20 @@ export default class Topbar extends React.Component<IProps> {
         super(props)
 
         this.onSearchChange = this.onSearchChange.bind(this)
+        this.onSearchSubmit = this.onSearchSubmit.bind(this)
     }
 
     onSearchChange(evt: React.ChangeEvent<HTMLInputElement>) {
+        evt.preventDefault()
         this.setState({ search: evt.target.value })
     }
 
+    onSearchSubmit(evt: React.ChangeEvent<HTMLFormElement>) {
+        history.push(`/search?q=${this.state.search}`)
+        evt.preventDefault()
+    }
+
     render() {
-        const { title, children } = this.props
         const { search } = this.state
         return (
             <div className="topbar">
@@ -40,19 +44,12 @@ export default class Topbar extends React.Component<IProps> {
                     <div className="topbar-title">Podcast Index</div>
                 </a>
                 <div className="topbar-span">
-                    {/* <div className="topbar-search">
-                        <img height={18} width={18} src={SearchIcon} />
-                        <input
-                            type="text"
-                            value={search}
-                            placeholder="Search for podcasts"
-                            onChange={this.onSearchChange}
-                        />
-                    </div> */}
                     <Searchbar
                         search={search}
                         onSearchChange={this.onSearchChange}
+                        onSearchSubmit={this.onSearchSubmit}
                     />
+
                     <Button href="https://podcastindex.org/stats">Stats</Button>
                     <Button href="https://podcastindex.org/blog">Blog</Button>
                 </div>

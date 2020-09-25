@@ -6,7 +6,10 @@ import { ConnectedRouter } from 'connected-react-router'
 import { Store } from 'redux'
 import { History } from 'history'
 
+import Topbar from './components/TopBar'
 import Routes from './routes'
+
+import LandingBG from '../images/landing-bg.svg'
 import './styles.scss'
 
 import { ApplicationState } from './state/store'
@@ -20,7 +23,18 @@ const Index: React.FC<MainProps> = ({ store, history }) => {
     return (
         <Provider store={store}>
             <ConnectedRouter history={history}>
-                <Routes />
+                <div className="page">
+                    <Topbar />
+                    <img
+                        draggable="false"
+                        className="landing-graphic"
+                        height={1017}
+                        width={1017}
+                        src={LandingBG}
+                        alt="Sidebar logo"
+                    />
+                    <Routes />
+                </div>
             </ConnectedRouter>
         </Provider>
     )

@@ -6,6 +6,7 @@ import './styles.scss'
 interface IProps {
     search?: string
     onSearchChange: (evt: React.ChangeEvent<HTMLInputElement>) => void
+    onSearchSubmit?: (evt: React.ChangeEvent<HTMLFormElement>) => void
     filterFunction?: any
 }
 
@@ -17,18 +18,20 @@ export default class Card extends React.Component<IProps> {
     }
 
     render() {
-        const { search, onSearchChange } = this.props
+        const { search, onSearchChange, onSearchSubmit } = this.props
         // const { open } = this.state
         return (
-            <div className="topbar-search">
+            <form className="topbar-search" onSubmit={onSearchSubmit}>
                 <img height={18} width={18} src={SearchIcon} />
                 <input
+                    id="search"
                     type="text"
                     value={search}
                     placeholder="Search for podcasts"
                     onChange={onSearchChange}
+                    autoComplete="off"
                 />
-            </div>
+            </form>
         )
     }
 }
