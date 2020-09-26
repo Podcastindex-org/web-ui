@@ -1,14 +1,45 @@
+@font-face {
+    font-family: 'D-DIN';
+    src: url('../fonts/D-DIN.otf') format('otf');
+    font-weight: normal;
+}
+
+// @font-face {
+//     font-family: 'D-DIN';
+//     src: url('../fonts/D-DIN-Bold.otf') format('otf');
+//     font-weight: bold;
+// }
+
+@font-face {
+    font-family: 'D-DIN Exp';
+    src: url('../fonts/D-DINExp.otf') format('otf');
+    font-weight: normal;
+}
+
+// @font-face {
+//     font-family: 'D-DIN Exp';
+//     src: url('../fonts/D-DINExp-Bold.otf') format('otf');
+//     font-weight: bold;
+// }
+
+@font-face {
+    font-family: 'D-DIN Alt';
+    src: url('../fonts/DIN-Alternate-Bold.ttf') format('ttf');
+    font-weight: bold;
+}
+
 :root {
     --transition-secs: 0.2s;
     --bg-main: #ffffff;
     --color-primary: #e90000;
     --font-family: 'D-DIN', sans-serif;
-    --font-alt: 'D-DIN Exp', sans-serif;
+    --font-family-exp: 'D-DIN Exp', sans-serif;
+    --font-alt: 'D-DIN Alt', sans-serif;
 }
 
 body {
     min-height: 100vh;
-    max-width: 100vw;
+    // max-width: 100vw;
     font-family: var(--font-family);
     margin: 0;
     color: #2d2d2d;
@@ -16,25 +47,21 @@ body {
 }
 
 h1 {
-    font-family: var(--font-alt);
+    font-family: var(--font-family-exp);
     font-weight: bold;
     font-size: 55px;
 }
 
 h2 {
-    font-family: var(--font-alt);
+    font-family: var(--font-family-exp);
     font-weight: bold;
     font-size: 44px;
 }
 
 h3 {
-    font-family: var(--font-alt);
+    font-family: var(--font-family-exp);
     font-weight: bold;
     font-size: 33px;
-}
-
-.page {
-    background: #ffffff;
 }
 
 .landing-graphic {

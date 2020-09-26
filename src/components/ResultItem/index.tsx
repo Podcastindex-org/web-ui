@@ -1,5 +1,7 @@
 import * as React from 'react'
 
+import NoImage from '../../../images/no-cover-art.png'
+
 import './styles.scss'
 
 interface IProps {
@@ -34,8 +36,10 @@ export default class ResultItem extends React.PureComponent<IProps> {
                 <div className="result-category no-category">No Categories</div>
             )
         }
-        return categoryArray.map((cat) => (
-            <div className="result-category">{cat}</div>
+        return categoryArray.map((cat, i) => (
+            <div key={`cat-${i}`} className="result-category">
+                {cat}
+            </div>
         ))
     }
 
@@ -50,6 +54,9 @@ export default class ResultItem extends React.PureComponent<IProps> {
                         height={140}
                         width={140}
                         src={image}
+                        onError={(ev: any) => {
+                            ev.target.src = NoImage
+                        }}
                     />
                 </div>
                 <div className="result-info">

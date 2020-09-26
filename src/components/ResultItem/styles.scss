@@ -1,6 +1,6 @@
 .result {
     background: #ffffff;
-    border: 1px solid #bebebe;
+    border: 1px solid #d6d6d6;
     border-radius: 6px;
     height: 170px;
     display: flex;
@@ -34,22 +34,33 @@
 }
 
 .result-title {
-    font-family: D-DINExp-Bold;
+    font-family: var(--font-family-exp);
+    font-weight: bold;
+    width: 800px;
     font-size: 22px;
     color: #2d2d2d;
     text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .result-categories {
     display: inline-flex;
+    width: 840px;
+    overflow-x: auto;
     flex-direction: row;
     margin: 5px 0;
+    &::-webkit-scrollbar {
+        visibility: hidden;
+    }
 }
 .result-category {
     background: #f3f3f3;
     border: 1px solid #cecece;
     border-radius: 5px;
     margin: 0 3px;
+    white-space: nowrap;
     &:first-child {
         margin-left: 0px;
     }

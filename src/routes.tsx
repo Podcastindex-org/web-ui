@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Route, Switch } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
 
 import Landing from './pages/landing'
 import Results from './pages/results'
@@ -13,7 +14,7 @@ type RouteType = {
     component?: any
     routes: Array<any>
 }
-
+export const history = createBrowserHistory()
 export const routes: Array<RouteType> = [
     // {
     //     path: '/',
@@ -50,9 +51,8 @@ export function RouteWithSubRoutes(route: RouteType) {
 
 const Routes: React.SFC = () => (
     <Switch>
-        {/* <Route path="/" component={Main} /> */}
         <Route exact path="/" component={Landing} />
-        <Route exact path="/search" component={Results} />
+        <Route path="/search" component={Results} />
         <Route component={() => <div>Not Found</div>} />
     </Switch>
 )

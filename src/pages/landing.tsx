@@ -4,7 +4,7 @@ import * as React from 'react'
 import PodcastPlayer from '../components/PodcastPlayer'
 import StatsCard from './Stats/StatsCard'
 // APIs
-import RecentApi from '../api/recent'
+import API from '../api'
 
 import './styles.scss'
 
@@ -19,17 +19,25 @@ export default class Landing extends React.Component<IProps, IState> {
         loading: true,
         recentPodcasts: [],
     }
+    _isMounted = false
+
     constructor(props: IProps) {
         super(props)
     }
 
     async componentDidMount(): Promise<void> {
-        const recentPodcasts = await RecentApi.recent_episodes(7)
-        console.log(recentPodcasts)
-        this.setState({
-            loading: false,
-            recentPodcasts,
-        })
+        this._isMounted = true
+        const recentPodcasts = (await API.recent_episodes(7)).items
+        if (this._isMounted) {
+            this.setState({
+                loading: false,
+                recentPodcasts,
+            })
+        }
+    }
+
+    componentWillUnmount() {
+        this._isMounted = false
     }
 
     render() {

@@ -3,25 +3,26 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
+    width: inherit;
     .card {
         display: inline-flex;
         flex-direction: column;
         height: 515px;
-        width: 1034px;
+        width: inherit;
         padding: 40px;
         // box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.15);
         background: #f3f3f3;
         border-radius: 12px;
     }
     .kpi-massive-title {
-        font-family: D-DINExp-Bold;
+        font-family: var(--font-family-exp);
         font-size: 32px;
         color: #2d2d2d;
         text-align: left;
     }
     .kpi-massive-value {
-        font-family: DINAlternate-Bold;
+        font-family: var(--font-family-exp);
+        font-weight: bold;
         font-size: 186px;
         color: #ff1c41;
         text-align: left;

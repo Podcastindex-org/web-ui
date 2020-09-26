@@ -10,7 +10,7 @@
         .kpi-title {
             flex: 1;
             opacity: 0.64;
-            font-family: DINAlternate-Bold;
+            font-family: var(--font-alt);
             font-size: 20px;
             color: #494949;
             text-align: left;
@@ -19,7 +19,7 @@
 
         .kpi-value {
             // font-weight: bold;
-            font-family: DINAlternate-Bold;
+            font-family: var(--font-alt);
             line-height: 81px;
             font-size: 81px;
             color: #ff1c41;

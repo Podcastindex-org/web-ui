@@ -9,6 +9,8 @@ import { History } from 'history'
 import Topbar from './components/TopBar'
 import Routes from './routes'
 
+import '../public/favicon.ico'
+
 import LandingBG from '../images/landing-bg.svg'
 import './styles.scss'
 
@@ -24,7 +26,7 @@ const Index: React.FC<MainProps> = ({ store, history }) => {
         <Provider store={store}>
             <ConnectedRouter history={history}>
                 <div className="page">
-                    <Topbar />
+                    <Topbar history={history} />
                     <img
                         draggable="false"
                         className="landing-graphic"

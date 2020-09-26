@@ -1,6 +1,5 @@
 import * as React from 'react'
 import SearchIcon from '../../../images/search.svg'
-
 import './styles.scss'
 
 interface IProps {
@@ -19,7 +18,7 @@ export default class Card extends React.Component<IProps> {
 
     render() {
         const { search, onSearchChange, onSearchSubmit } = this.props
-        // const { open } = this.state
+
         return (
             <form className="topbar-search" onSubmit={onSearchSubmit}>
                 <img height={18} width={18} src={SearchIcon} />

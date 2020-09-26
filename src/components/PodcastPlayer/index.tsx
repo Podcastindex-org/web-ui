@@ -3,6 +3,7 @@ import AudioPlayer from 'react-h5-audio-player'
 
 // import FeedIcon from '../../../images/feed.svg'
 import BackIcon from '../../../images/chevron-back-outline.svg'
+import NoImage from '../../../images/no-cover-art.png'
 import ForwardIcon from '../../../images/chevron-forward-outline.svg'
 import 'react-h5-audio-player/src/styles.scss'
 import './styles.scss'
@@ -11,7 +12,6 @@ interface IProps {
     podcasts?: Array<any>
     loading?: boolean
 }
-
 interface IState {
     index: number
 }
@@ -29,7 +29,6 @@ export default class Card extends React.Component<IProps, IState> {
     }
 
     selectPodcast(index: number, evt) {
-        console.log(evt)
         evt.stopPropagation()
         evt.preventDefault()
         this.setState({ index })
@@ -76,12 +75,11 @@ export default class Card extends React.Component<IProps, IState> {
                         >
                             <img src={BackIcon} height={20} />
                         </button>
-                        <button className="player-nav-arrows-right">
-                            <img
-                                src={ForwardIcon}
-                                height={20}
-                                onClick={this.onForward.bind(this)}
-                            />
+                        <button
+                            className="player-nav-arrows-right"
+                            onClick={this.onForward.bind(this)}
+                        >
+                            <img src={ForwardIcon} height={20} />
                         </button>
                     </div>
                     <div className="player-cover-art">
@@ -89,7 +87,10 @@ export default class Card extends React.Component<IProps, IState> {
                             draggable={false}
                             height={450}
                             width={450}
-                            src={selectedPodcast.image}
+                            src={selectedPodcast.image || NoImage}
+                            onError={(ev: any) => {
+                                ev.target.src = NoImage
+                            }}
                         />
                     </div>
                     <div className="player-bottom">
@@ -119,9 +120,9 @@ export default class Card extends React.Component<IProps, IState> {
                                         </p>
                                     </div>
                                 }
+                                autoPlayAfterSrcChange={false}
                                 autoPlay={false}
                                 src={selectedPodcast.enclosureUrl}
-                                onPlay={(e) => console.log('onPlay')}
                                 showJumpControls={false}
                                 customIcons={{ forward: null, rewind: null }}
                                 customAdditionalControls={[
