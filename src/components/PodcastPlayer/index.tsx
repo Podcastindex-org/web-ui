@@ -123,8 +123,7 @@ export default class Card extends React.Component<IProps, IState> {
                                 autoPlayAfterSrcChange={false}
                                 autoPlay={false}
                                 src={selectedPodcast.enclosureUrl}
-                                showJumpControls={false}
-                                customIcons={{ forward: null, rewind: null }}
+                                // showJumpControls={false}
                                 customAdditionalControls={[
                                     <a
                                         className="player-feed-button"

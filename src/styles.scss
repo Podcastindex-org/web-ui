@@ -71,3 +71,10 @@ h3 {
     position: absolute;
     z-index: 0;
 }
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+    .landing-graphic {
+        display: none;
+    }
+}

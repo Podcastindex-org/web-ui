@@ -20,4 +20,11 @@ yarn start
 
 ## Building for production
 
-Working on it
+TODO
+
+## TODO
+
+-   Font should load through webpack properly
+-   Better image loading handling in the search results page.
+-   reverse proxy server built for API_KEY and what not... this should not happen in the react code.
+-   Mobile responsive search results

@@ -25,18 +25,16 @@ const Index: React.FC<MainProps> = ({ store, history }) => {
     return (
         <Provider store={store}>
             <ConnectedRouter history={history}>
-                <div className="page">
-                    <Topbar history={history} />
-                    <img
-                        draggable="false"
-                        className="landing-graphic"
-                        height={1017}
-                        width={1017}
-                        src={LandingBG}
-                        alt="Sidebar logo"
-                    />
-                    <Routes />
-                </div>
+                <Topbar history={history} />
+                <img
+                    draggable="false"
+                    className="landing-graphic"
+                    height={1017}
+                    width={1017}
+                    src={LandingBG}
+                    alt="Sidebar logo"
+                />
+                <Routes />
             </ConnectedRouter>
         </Provider>
     )

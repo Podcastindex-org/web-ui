@@ -43,3 +43,17 @@ a,
     align-items: center;
     justify-content: flex-end;
 }
+
+@media only screen and (max-width: 860px) {
+    /* phones */
+    .topbar-brand {
+        width: 60px;
+    }
+    .topbar-title {
+        display: none;
+    }
+    .landing-content {
+        min-width: 600px;
+        width: 600px;
+    }
+}

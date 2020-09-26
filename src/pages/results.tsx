@@ -11,11 +11,13 @@ import './styles.scss'
 interface IProps {
     results?: Array<{}>
     location: any
+    history?: any
 }
 
-export default class Results extends React.Component<IProps> {
+export default class Results extends React.PureComponent<IProps> {
     state = {
         results: [],
+        loading: true,
     }
     _isMounted = false
 
@@ -26,7 +28,6 @@ export default class Results extends React.Component<IProps> {
         if (query) {
             const results = (await API.search_feeds(query)).feeds
             if (this._isMounted) {
-                console.log(results)
                 this.setState({
                     loading: false,
                     results,
@@ -39,18 +40,17 @@ export default class Results extends React.Component<IProps> {
         this._isMounted = false
     }
 
-    // async componentDidUpdate() {
-    //     console.log('UPDATED')
-    //     let query = cleanSearchQuery(this.props.location.search)
-    //     if (query) {
-    //         const results = (await API.search_feeds(query)).feeds
-    //         console.log(results)
-    //         this.setState({
-    //             loading: false,
-    //             results,
-    //         })
-    //     }
-    // }
+    async componentDidUpdate(prevProps) {
+        let query = cleanSearchQuery(this.props.location.search)
+        if (query && query !== cleanSearchQuery(prevProps.location.search)) {
+            const results = (await API.search_feeds(query)).feeds
+            console.log(results)
+            this.setState({
+                loading: false,
+                results,
+            })
+        }
+    }
 
     renderItem(index: number, key: number) {
         let title = this.state.results[index].title
@@ -73,9 +73,8 @@ export default class Results extends React.Component<IProps> {
     }
 
     render() {
-        const { location } = this.props
-        const { results } = this.state
-        if (results.length === 0) {
+        const { loading, results } = this.state
+        if (results.length === 0 && !loading) {
             return (
                 <div className="results-list">No results for your search</div>
             )
@@ -83,10 +82,11 @@ export default class Results extends React.Component<IProps> {
         return (
             <div className="results-list">
                 <ReactList
+                    minSize={10}
                     pageSize={10}
                     itemRenderer={this.renderItem.bind(this)}
                     length={results.length}
-                    type="uniform"
+                    type="simple"
                 />
             </div>
         )

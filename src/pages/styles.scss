@@ -1,3 +1,66 @@
+.landing-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 0 20px 0;
+    margin: 0 auto;
+}
+
+.hero-pitch {
+    display: flex;
+    font-family: var(--font-family-exp);
+    width: inherit;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.hero-pitch-left {
+    display: inline-flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-pitch-text {
+    // font-family: var(--font-family-exp);
+    font-size: 55px;
+    color: #2d2d2d;
+}
+
+.hero-pitch-subtitle {
+    margin-top: 25px;
+    font-size: 22px;
+    max-width: 400px;
+    color: #868686;
+}
+
+.hero-pitch-right {
+    display: inline-flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    height: 640px;
+}
+
+.info-section {
+    margin-top: 50px;
+    p {
+        font-family: var(--font-family-exp);
+        font-size: 18px;
+        line-height: 20px;
+        color: #868686;
+    }
+}
+
+#donate {
+    margin-bottom: 20px;
+}
+
+.results-list {
+    margin: 0 auto;
+    width: 1024px;
+}
+
 @media only screen and (min-width: 1168px) {
     /* tablets and desktop */
     .landing-content {
@@ -41,70 +104,10 @@
 @media only screen and (max-width: 767px) and (orientation: portrait) {
     /* portrait phones */
     .landing-content {
-        min-width: 450px;
-        width: 450px;
+        min-width: 500px;
+        width: 500px;
     }
-}
-
-.landing-content {
-    position: relative;
-    z-index: 1;
-    padding: 0 0 20px 0;
-    margin: 0 auto;
-}
-
-.hero-pitch {
-    display: flex;
-    font-family: var(--font-family-exp);
-    // height: 690px;
-    width: inherit;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 80px;
-}
-
-.hero-pitch-left {
-    display: inline-flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.hero-pitch-text {
-    // font-family: var(--font-family-exp);
-    font-size: 55px;
-    color: #2d2d2d;
-}
-
-.hero-pitch-subtitle {
-    margin-top: 25px;
-    font-size: 22px;
-    max-width: 400px;
-    color: #868686;
-}
-
-.hero-pitch-right {
-    display: inline-flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.info-section {
-    margin-top: 50px;
-    p {
-        font-family: var(--font-family-exp);
-        font-size: 18px;
-        line-height: 20px;
-        color: #868686;
+    .hero-pitch-left {
+        padding: 0 10px;
     }
-}
-
-#donate {
-    margin-bottom: 20px;
-}
-
-.results-list {
-    margin: 0 auto;
-    width: 1024px;
 }
