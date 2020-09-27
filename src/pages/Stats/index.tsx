@@ -1,4 +1,7 @@
 import * as React from 'react'
+import { Stats } from 'webpack'
+
+import StatsCard from './StatsCard'
 
 import './styles.scss'
 
@@ -14,8 +17,9 @@ export default class Card extends React.Component<IProps> {
     render() {
         const {} = this.props
         return (
-            <div className="page">
-                <div></div>
+            <div className="landing-content" style={{ marginTop: 20 }}>
+                {/* TODO more stats soon */}
+                <StatsCard />
             </div>
         )
     }

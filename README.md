@@ -20,11 +20,16 @@ yarn start
 
 ## Building for production
 
-TODO
+To build the app for production use the following script.
+
+```zsh
+yarn build
+```
+
+This will compile the React code into static files in the `www` folder
 
 ## TODO
 
 -   Font should load through webpack properly
 -   Better image loading handling in the search results page.
--   reverse proxy server built for API_KEY and what not... this should not happen in the react code.
 -   Mobile responsive search results

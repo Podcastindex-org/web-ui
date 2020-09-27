@@ -4,7 +4,7 @@ import * as React from 'react'
 import PodcastPlayer from '../components/PodcastPlayer'
 import StatsCard from './Stats/StatsCard'
 // APIs
-import API from '../api'
+// import API from '../api'
 
 import './styles.scss'
 
@@ -27,7 +27,7 @@ export default class Landing extends React.Component<IProps, IState> {
 
     async componentDidMount(): Promise<void> {
         this._isMounted = true
-        const recentPodcasts = (await API.recent_episodes(7)).items
+        const recentPodcasts = (await this.getRecentEpisodes()).items
         if (this._isMounted) {
             this.setState({
                 loading: false,
@@ -38,6 +38,14 @@ export default class Landing extends React.Component<IProps, IState> {
 
     componentWillUnmount() {
         this._isMounted = false
+    }
+
+    async getRecentEpisodes() {
+        let response = await fetch(`/api/recent/episodes?max=7`, {
+            credentials: 'same-origin',
+            method: 'GET',
+        })
+        return await response.json()
     }
 
     render() {
@@ -55,6 +63,38 @@ export default class Landing extends React.Component<IProps, IState> {
                             We do this by enabling developers to have access to
                             an open, categorized index that will always be
                             available for free, for any use.
+                        </div>
+                        <h5>
+                            Listen to the first episode of "Podcasting 2.0",
+                            where we discuss the project, and it's goals.
+                        </h5>
+                        <div className="listen-row">
+                            <audio controls preload="none">
+                                <source
+                                    src="https://mp3s.nashownotes.com/PC20-01-2020-08-28-Final.mp3"
+                                    type="audio/mpeg"
+                                />
+                            </audio>
+                            <a
+                                className="subscribe-badge"
+                                title="Subscribe"
+                                target="_blank"
+                                href="http://mp3s.nashownotes.com/pc20rss.xml"
+                            >
+                                <svg
+                                    width="2em"
+                                    height="2em"
+                                    viewBox="0 0 16 16"
+                                    className="bi bi-rss-fill"
+                                    fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        fillRule="evenodd"
+                                        d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5a1 1 0 0 0 0 2 8 8 0 0 1 8 8 1 1 0 1 0 2 0c0-5.523-4.477-10-10-10zm0 4a1 1 0 0 0 0 2 4 4 0 0 1 4 4 1 1 0 1 0 2 0 6 6 0 0 0-6-6zm.5 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
+                                    ></path>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div className="hero-pitch-right">

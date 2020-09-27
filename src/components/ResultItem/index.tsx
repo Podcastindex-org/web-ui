@@ -36,37 +36,45 @@ export default class ResultItem extends React.PureComponent<IProps> {
                 <div className="result-category no-category">No Categories</div>
             )
         }
-        return categoryArray.map((cat, i) => (
+        // Only render a max of 5 categories
+        return categoryArray.slice(0, 5).map((cat, i) => (
             <div key={`cat-${i}`} className="result-category">
                 {cat}
             </div>
         ))
     }
 
+    truncate = (input: string) =>
+        input.length > 200 ? `${input.substring(0, 300)}...` : input
+
     render() {
         const { title, description, author, categories, image } = this.props
         // const { open } = this.state
         return (
             <div className="result">
-                <div className="result-cover-art">
-                    <img
-                        draggable={false}
-                        height={140}
-                        width={140}
-                        src={image}
-                        onError={(ev: any) => {
-                            ev.target.src = NoImage
-                        }}
-                    />
-                </div>
-                <div className="result-info">
-                    <div className="result-title">{title}</div>
-                    <p>by {author}</p>
-                    <div className="result-categories">
-                        {this.renderCategories(categories)}
+                <div className="result-row">
+                    <div className="result-cover-art">
+                        <img
+                            draggable={false}
+                            height={140}
+                            width={140}
+                            src={image}
+                            onError={(ev: any) => {
+                                ev.target.src = NoImage
+                            }}
+                        />
                     </div>
-                    <p className="result-description">{description}</p>
+                    <div className="result-info">
+                        <div className="result-title">{title}</div>
+                        <p>by {author}</p>
+                        <div className="result-categories">
+                            {this.renderCategories(categories)}
+                        </div>
+                    </div>
                 </div>
+                <p className="result-description">
+                    {this.truncate(description)}
+                </p>
             </div>
         )
     }

@@ -4,6 +4,7 @@ import { history } from './state/store'
 
 import Landing from './pages/landing'
 import Results from './pages/results'
+import Stats from './pages/Stats'
 
 type RouteType = {
     path: string
@@ -56,6 +57,8 @@ const Routes: React.SFC = () => (
             render={(props) => <Results {...props} history={history} />}
             component={Results}
         />
+        <Route exact path="/stats" render={() => <Stats />} />
+
         <Route component={() => <div>Not Found</div>} />
     </Switch>
 )

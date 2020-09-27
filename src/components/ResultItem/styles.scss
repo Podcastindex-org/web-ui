@@ -2,12 +2,18 @@
     background: #ffffff;
     border: 1px solid #d6d6d6;
     border-radius: 6px;
-    height: 170px;
+    margin: 10px 20px;
+    height: auto;
+    padding: 5px;
+}
+
+.result-row {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     flex-direction: row;
+    height: 170px;
     align-items: center;
-    margin: 5px 0;
-    // padding: 15px 15px 15px 15px;
 }
 
 .result-cover-art {
@@ -23,12 +29,9 @@
 }
 
 .result-info {
-    height: 140px;
-    display: inline-flex;
-    flex-direction: column;
     margin-left: 10px;
     p {
-        margin: 8px 0;
+        margin: 10px 0;
     }
     margin-right: 15px;
 }
@@ -36,21 +39,19 @@
 .result-title {
     font-family: var(--font-family-exp);
     font-weight: bold;
-    width: 800px;
-    font-size: 22px;
+    width: 100%;
+    font-size: 26px;
     color: #2d2d2d;
     text-align: left;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .result-categories {
     display: inline-flex;
-    width: 840px;
-    overflow-x: auto;
     flex-direction: row;
-    margin: 5px 0;
+    margin: -3px -3px; /* grid trick, has to match box margin */
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
     &::-webkit-scrollbar {
         visibility: hidden;
     }
@@ -59,11 +60,8 @@
     background: #f3f3f3;
     border: 1px solid #cecece;
     border-radius: 5px;
-    margin: 0 3px;
-    white-space: nowrap;
-    &:first-child {
-        margin-left: 0px;
-    }
+    margin: 3px;
+
     padding: 4px 12px;
 }
 .no-category {
@@ -71,10 +69,20 @@
 }
 .result-description {
     font-family: var(--font-family);
-    width: 800px;
-    margin-top: 10px !important;
-    // line-height: 14px;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 18px;
+    margin: 0 !important;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+    .result {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 10px;
+    }
 }

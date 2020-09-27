@@ -7,7 +7,7 @@
 }
 
 .topbar-brand {
-    width: 260px;
+    width: 270px;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
@@ -21,7 +21,7 @@ a,
 }
 
 .topbar-title {
-    font-family: var(--font-family);
+    font-family: var(--font-family-bold);
     font-weight: bold;
     font-size: 26px;
     text-transform: uppercase;

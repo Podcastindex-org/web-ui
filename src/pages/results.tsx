@@ -1,9 +1,10 @@
 import * as React from 'react'
 import ReactList from 'react-list'
+import ReactLoading from 'react-loading'
 
 import ResultItem from '../components/ResultItem'
 
-import API from '../api'
+// import API from '../api'
 import { cleanSearchQuery } from '../utils'
 
 import './styles.scss'
@@ -26,7 +27,7 @@ export default class Results extends React.PureComponent<IProps> {
 
         let query = cleanSearchQuery(this.props.location.search)
         if (query) {
-            const results = (await API.search_feeds(query)).feeds
+            const results = (await this.getSearchResults(query)).feeds
             if (this._isMounted) {
                 this.setState({
                     loading: false,
@@ -42,14 +43,27 @@ export default class Results extends React.PureComponent<IProps> {
 
     async componentDidUpdate(prevProps) {
         let query = cleanSearchQuery(this.props.location.search)
-        if (query && query !== cleanSearchQuery(prevProps.location.search)) {
-            const results = (await API.search_feeds(query)).feeds
-            console.log(results)
+        if (
+            query.length &&
+            query !== cleanSearchQuery(prevProps.location.search)
+        ) {
+            this.setState({
+                loading: true,
+            })
+            const results = (await this.getSearchResults(query)).feeds
             this.setState({
                 loading: false,
                 results,
             })
         }
+    }
+
+    async getSearchResults(query: string) {
+        let response = await fetch(`/api/search/byterm?q=${query}`, {
+            // credentials: 'same-origin',
+            method: 'GET',
+        })
+        return await response.json()
     }
 
     renderItem(index: number, key: number) {
@@ -77,6 +91,13 @@ export default class Results extends React.PureComponent<IProps> {
         if (results.length === 0 && !loading) {
             return (
                 <div className="results-list">No results for your search</div>
+            )
+        }
+        if (loading) {
+            return (
+                <div className="loader-wrapper" style={{ height: 300 }}>
+                    <ReactLoading type="cylon" color="#e90000" />
+                </div>
             )
         }
         return (

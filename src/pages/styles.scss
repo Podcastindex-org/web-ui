@@ -19,6 +19,23 @@
     flex: 1;
     flex-direction: column;
     justify-content: center;
+    audio {
+        outline: none;
+    }
+    h5 {
+        max-width: 400px;
+    }
+    .listen-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    svg {
+        fill: #868686;
+    }
+    .subscribe-badge {
+        margin-left: 10px;
+    }
 }
 
 .hero-pitch-text {
@@ -28,10 +45,10 @@
 }
 
 .hero-pitch-subtitle {
-    margin-top: 25px;
     font-size: 22px;
-    max-width: 400px;
+    max-width: 425px;
     color: #868686;
+    margin-bottom: 10px;
 }
 
 .hero-pitch-right {
@@ -39,6 +56,7 @@
     flex: 1;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 640px;
 }
 
@@ -58,13 +76,25 @@
 
 .results-list {
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
     width: 1024px;
+}
+.loader-wrapper {
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 @media only screen and (min-width: 1168px) {
     /* tablets and desktop */
     .landing-content {
-        width: 1024px;
+        width: 1108px;
     }
     .hero-pitch {
         flex-direction: row;
@@ -90,6 +120,12 @@
     }
     .info-section {
         padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 1010px) {
+    .results-list {
+        width: 100% !important;
     }
 }
 

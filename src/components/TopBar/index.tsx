@@ -31,26 +31,19 @@ export default class Topbar extends React.PureComponent<IProps> {
         this.onSearchSubmit = this.onSearchSubmit.bind(this)
     }
 
-    // componentDidUpdate() {
-    //     console.log('It updated')
-    // }
-
     onSearchChange(evt: React.ChangeEvent<HTMLInputElement>) {
         evt.preventDefault()
         this.setState({ search: evt.target.value })
     }
 
     onSearchSubmit(evt: React.ChangeEvent<HTMLFormElement>) {
-        history.push(`/search?q=${this.state.search}`)
+        if (!this.state.search) {
+            history.push(`/search`)
+        } else {
+            history.push(`/search?q=${this.state.search}`)
+        }
         evt.preventDefault()
     }
-
-    // static shouldComponentUpdate(nextProps, nextState) {
-    //     let newQuery = cleanSearchQuery(nextProps.history.location.search)
-    //     if (nextState.search !== newQuery) {
-    //         return true
-    //     }
-    // }
 
     render() {
         const { history } = this.props
@@ -69,7 +62,9 @@ export default class Topbar extends React.PureComponent<IProps> {
                         onSearchSubmit={this.onSearchSubmit}
                     />
 
-                    <Button href="https://podcastindex.org/stats">Stats</Button>
+                    <Button link href="/stats">
+                        Stats
+                    </Button>
                     <Button href="https://podcastindex.org/blog">Blog</Button>
                 </div>
                 <div className="topbar-right">

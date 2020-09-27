@@ -8,7 +8,7 @@
         display: inline-flex;
         flex-direction: column;
         width: inherit;
-        padding: 40px;
+        padding: 30px;
         // box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.15);
         background: #f3f3f3;
         border-radius: 12px;
@@ -27,7 +27,7 @@
         text-align: left;
     }
     .kpi-title-2 {
-        margin-top: 70px;
+        margin-top: 40px;
     }
 }
 
@@ -35,26 +35,19 @@
     width: 100%;
     display: inline-flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: -7px -20px;
     margin-top: 30px;
+
+    .kpi {
+        margin: 7px 20px;
+    }
 }
 
 @media only screen and (max-width: 1167px) {
     .kpi-massive-value {
         font-size: 100px !important;
-    }
-    .kpi-row {
-        .kpi-title {
-            font-size: 20px !important;
-        }
-
-        .kpi-value {
-            line-height: 50px !important;
-            font-size: 50px !important;
-        }
-        .kpi-unit {
-            font-size: 25px !important;
-        }
     }
 }
 

@@ -1,5 +1,4 @@
 const path = require('path')
-const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const dotenv = require('dotenv')
@@ -14,6 +13,13 @@ module.exports = {
         compress: true,
         port: 9001,
         historyApiFallback: true,
+        proxy: {
+            '/api': {
+                changeOrigin: true,
+                target: 'http://localhost:5001',
+                pathRewrite: { '^/api': '/api' },
+            },
+        },
     },
     entry: './src/index.tsx',
     output: {
@@ -50,7 +56,7 @@ module.exports = {
                 use: ['html-loader'],
             },
             {
-                test: /\.(svg|gif|png|jpg|ico)(\?v=\d+\.\d+\.\d+)?$/i,
+                test: /\.(svg|gif|png|jpg)(\?v=\d+\.\d+\.\d+)?$/i,
                 exclude: [/node_modules/],
                 use: [
                     {
@@ -63,64 +69,41 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(woff|woff2|otf|ttf)$/,
-                use: ['url-loader?limit=100000'],
+                test: /\.ico/,
+                exclude: [/node_modules/],
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: '/',
+                        },
+                    },
+                ],
             },
-
-            // {
-            //     // Match woff2 and patterns like .woff?v=1.1.1.
-            //     test: /\.(ttf|otf)$/,
-            //     use: {
-            //         loader: 'url-loader',
-            //         options: {
-            //             limit: 50000,
-            //             name: './fonts/[name].[ext]', // Output below ./fonts
-            //             // publicPath: '../', // Take the directory into account
-            //         },
-            //     },
-            // },
-            // {
-            //     test: /\.(woff|woff2|ttf|otf)$/,
-            //     use: [
-            //         {
-            //             loader: 'file-loader',
-            //             options: {
-            //                 name: '[name].[ext]',
-            //                 outputPath: 'fonts/',
-            //             },
-            //         },
-            //     ],
-            // },
-            // {
-            //     test: /\.(svg|png)(\?v=\d+\.\d+\.\d+)?$/,
-            //     use: [
-            //         {
-            //             loader: 'file-loader',
-            //             options: {
-            //                 name: '[name].[ext]',
-            //                 outputPath: 'images/',
-            //             },
-            //         },
-            //     ],
-            // },
+            {
+                test: /\.(ttf|otf)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        limit: 50000,
+                        name: './fonts/[name].[ext]', // Output below ./fonts
+                        publicPath: '../', // Take the directory into account
+                    },
+                },
+            },
         ],
     },
     plugins: [
-        new FaviconsWebpackPlugin('./public/favicon.ico'),
+        new FaviconsWebpackPlugin({
+            logo: './public/favicon.ico',
+            prefix: '/',
+        }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'public', 'index.html'),
             minify: {
-                collapseWhitespace: true,
-                collapseInlineTagWhitespace: true,
                 removeComments: true,
                 removeRedundantAttributes: true,
-            },
-        }),
-        new webpack.DefinePlugin({
-            'process.env': {
-                API_KEY: JSON.stringify(process.env.API_KEY),
-                API_SECRET: JSON.stringify(process.env.API_SECRET),
-                API_URL: JSON.stringify(process.env.API_URL),
             },
         }),
     ],
