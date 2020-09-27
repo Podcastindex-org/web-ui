@@ -28,8 +28,15 @@ yarn build
 
 This will compile the React code into static files in the `www` folder
 
+## Running production
+
+To start the server, simply run after setting the `.env` file
+
+```zsh
+node server.js
+```
+
 ## TODO
 
 -   Font should load through webpack properly
 -   Better image loading handling in the search results page.
--   Mobile responsive search results
