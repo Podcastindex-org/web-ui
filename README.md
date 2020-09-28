@@ -1,6 +1,42 @@
-# Website UI
+# PodcastIndex web and dev UI
 
-This repository contains the websites for the home page (in the www folder) and for the developer portal (in the dev folder).  These are PHP backed sites,
-but that has been removed to just leave the HTML output to make design easier.
+This is the UI for the public and dev portal
 
-Feel free to make this beautiful.
+## Getting Started
+
+### Set .env
+
+You should see a `.env-example` file. Copy this and remove the `-example`. The file `.env` is ignored by GIT and is needed to set the `API_KEY` and `API_SECRET` variables
+
+### Starting the dev server
+
+```zsh
+# Install dependencies
+yarn
+
+# Start app
+yarn start
+```
+
+## Building for production
+
+To build the app for production use the following script.
+
+```zsh
+yarn build
+```
+
+This will compile the React code into static files in the `www` folder
+
+## Running production
+
+To start the server, simply run after setting the `.env` file
+
+```zsh
+node server.js
+```
+
+## TODO
+
+-   Font should load through webpack properly
+-   Better image loading handling in the search results page.

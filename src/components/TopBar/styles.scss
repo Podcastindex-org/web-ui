@@ -1,0 +1,59 @@
+.topbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    padding: 23px 25px;
+}
+
+.topbar-brand {
+    width: 270px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+a,
+.topbar-brand {
+    text-decoration: none !important;
+    text-decoration-color: none !important;
+}
+
+.topbar-title {
+    font-family: var(--font-family-bold);
+    font-weight: bold;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-left: 15px;
+    color: var(--color-primary);
+}
+
+.topbar-span {
+    flex: 3;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.topbar-right {
+    flex: 1;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+@media only screen and (max-width: 860px) {
+    /* phones */
+    .topbar-brand {
+        width: 60px;
+    }
+    .topbar-title {
+        display: none;
+    }
+    .landing-content {
+        min-width: 600px;
+        width: 600px;
+    }
+}

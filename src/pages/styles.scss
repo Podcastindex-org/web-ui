@@ -1,0 +1,149 @@
+.landing-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 0 20px 0;
+    margin: 0 auto;
+}
+
+.hero-pitch {
+    display: flex;
+    font-family: var(--font-family-exp);
+    width: inherit;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.hero-pitch-left {
+    display: inline-flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    audio {
+        outline: none;
+    }
+    h5 {
+        max-width: 400px;
+    }
+    .listen-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    svg {
+        fill: #868686;
+    }
+    .subscribe-badge {
+        margin-left: 10px;
+    }
+}
+
+.hero-pitch-text {
+    // font-family: var(--font-family-exp);
+    font-size: 55px;
+    color: #2d2d2d;
+}
+
+.hero-pitch-subtitle {
+    font-size: 22px;
+    max-width: 425px;
+    color: #868686;
+    margin-bottom: 10px;
+}
+
+.hero-pitch-right {
+    display: inline-flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 640px;
+}
+
+.info-section {
+    margin-top: 50px;
+    p {
+        font-family: var(--font-family-exp);
+        font-size: 18px;
+        line-height: 20px;
+        color: #868686;
+    }
+}
+
+#donate {
+    margin-bottom: 20px;
+}
+
+.results-list {
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    width: 1024px;
+}
+.loader-wrapper {
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (min-width: 1168px) {
+    /* tablets and desktop */
+    .landing-content {
+        width: 1108px;
+    }
+    .hero-pitch {
+        flex-direction: row;
+    }
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (max-width: 1167px) {
+    /* tablets and desktop */
+    .landing-content {
+        min-width: 768px;
+        width: calc(100% - 40px);
+    }
+    .hero-pitch {
+        align-items: center;
+        flex-direction: column;
+        flex-flow: column-reverse;
+        text-align: center;
+    }
+    .hero-pitch-subtitle {
+        margin-top: 0 !important;
+        max-width: 100% !important;
+    }
+    .info-section {
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 1010px) {
+    .results-list {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+    .landing-content {
+        min-width: 600px;
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+    .landing-content {
+        min-width: 500px;
+        width: 500px;
+    }
+    .hero-pitch-left {
+        padding: 0 10px;
+    }
+}
