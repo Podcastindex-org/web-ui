@@ -99,6 +99,7 @@ export default class Landing extends React.Component<IProps, IState> {
                     </div>
                     <div className="hero-pitch-right">
                         <PodcastPlayer
+                            title="Recent Podcasts"
                             loading={loading}
                             podcasts={recentPodcasts}
                         />

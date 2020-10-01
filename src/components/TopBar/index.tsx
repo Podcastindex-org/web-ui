@@ -5,6 +5,7 @@ import { history } from '../../state/store'
 import Button from '../Button'
 import Searchbar from '../SearchBar'
 import Icon from '../../../images/icon.svg'
+import MenuIcon from '../../../images/menu.svg'
 import { cleanSearchQuery } from '../../utils'
 
 import './styles.scss'
@@ -14,17 +15,20 @@ interface IProps {
     history?: any
 }
 
-export default class Topbar extends React.PureComponent<IProps> {
+interface IState {
+    search: string
+    dropdownOpen: boolean
+}
+
+export default class Topbar extends React.PureComponent<IProps, IState> {
     static defaultProps = {}
-    state = {
-        search: '',
-    }
 
     constructor(props: IProps) {
         super(props)
 
         this.state = {
             search: cleanSearchQuery(props.history.location.search),
+            dropdownOpen: false,
         }
 
         this.onSearchChange = this.onSearchChange.bind(this)
@@ -47,30 +51,67 @@ export default class Topbar extends React.PureComponent<IProps> {
 
     render() {
         const { history } = this.props
-        const { search } = this.state
+        const { search, dropdownOpen } = this.state
         return (
-            <div className="topbar">
+            <nav className="topbar">
                 <Link className="topbar-brand" to="/">
                     <img height={30} width={28} src={Icon} alt="Sidebar logo" />
                     <div className="topbar-title">Podcast Index</div>{' '}
                 </Link>
-
                 <div className="topbar-span">
                     <Searchbar
                         search={search}
                         onSearchChange={this.onSearchChange}
                         onSearchSubmit={this.onSearchSubmit}
                     />
+                </div>
+                <div className="topbar-links">
+                    <div
+                        id="topbar-nav-links"
+                        className={`${
+                            dropdownOpen ? 'topbar-dropdown-open' : ''
+                        }`}
+                    >
+                        <Button link href="/stats">
+                            Stats
+                        </Button>
+                        <Button href="https://podcastindex.org/blog">
+                            Blog
+                        </Button>
+                        <Button href="https://api.podcastindex.org">
+                            Login
+                        </Button>
+                    </div>
+                    <a
+                        href={null}
+                        className="topbar-mobile-dropdown"
+                        onClick={() =>
+                            this.setState({
+                                dropdownOpen: !dropdownOpen,
+                            })
+                        }
+                    >
+                        <img
+                            height={30}
+                            width={25}
+                            src={MenuIcon}
+                            alt="Menu icon"
+                        />
+                    </a>
+                </div>
 
-                    <Button link href="/stats">
-                        Stats
-                    </Button>
-                    <Button href="https://podcastindex.org/blog">Blog</Button>
-                </div>
-                <div className="topbar-right">
-                    <Button href="https://api.podcastindex.org">Login</Button>
-                </div>
-            </div>
+                {/* <select>
+                    <option value="" selected={true}>
+                        Select
+                    </option>
+
+                    <option value="/">Home</option>
+                    <option value="/collections/all">Books</option>
+                    <option value="/blogs/five-simple-steps-blog">Blog</option>
+                    <option value="/pages/about-us">About Us</option>
+                    <option value="/pages/support">Support</option>
+                </select> */}
+            </nav>
         )
     }
 }

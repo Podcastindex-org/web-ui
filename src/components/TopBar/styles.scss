@@ -4,6 +4,7 @@
     justify-content: space-between;
     position: sticky;
     padding: 23px 25px;
+    z-index: 3;
 }
 
 .topbar-brand {
@@ -36,18 +37,68 @@ a,
     align-items: center;
 }
 
-.topbar-right {
+.topbar-links {
     flex: 1;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+    #topbar-nav-links {
+        display: inline-flex;
+        flex-direction: row;
+    }
+}
+
+.topbar-mobile-dropdown {
+    display: none;
+    width: 35px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    &:hover {
+        background: lighten(#d6d6d6, 0.2);
+    }
 }
 
 @media only screen and (max-width: 860px) {
+    .topbar-links {
+        flex: 0;
+    }
+    #topbar-nav-links {
+        .button-wrapper {
+            display: none;
+        }
+    }
+    #topbar-nav-links {
+        &.topbar-dropdown-open {
+            z-index: 4;
+            position: absolute;
+            right: 0px;
+            top: 60px;
+            width: calc(100% - 20px);
+            border: 1px solid lighten(#d6d6d6, 0.2);
+            margin: 10px 10px;
+            display: flex;
+            z-index: 3;
+            background: white;
+            flex-direction: column;
+            border-radius: 4px;
+            box-shadow: 0 0 9px 0 rgba(192, 192, 192, 0.5);
+            padding: 10px 0;
+            .button-wrapper {
+                width: 100%;
+                .button {
+                    width: inherit;
+                    border-radius: 0px !important;
+                }
+                display: flex !important;
+            }
+        }
+    }
     /* phones */
     .topbar-brand {
-        width: 60px;
+        width: 40px;
     }
     .topbar-title {
         display: none;
@@ -55,5 +106,8 @@ a,
     .landing-content {
         min-width: 600px;
         width: 600px;
+    }
+    .topbar-mobile-dropdown {
+        display: flex;
     }
 }

@@ -56,8 +56,6 @@ export default class ResultItem extends React.PureComponent<IProps> {
                     <div className="result-cover-art">
                         <img
                             draggable={false}
-                            height={140}
-                            width={140}
                             src={image}
                             onError={(ev: any) => {
                                 ev.target.src = NoImage

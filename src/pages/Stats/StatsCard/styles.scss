@@ -52,6 +52,19 @@
 }
 
 @media only screen and (max-width: 767px) {
+    .kpi-massive-title {
+        font-size: 26px !important;
+    }
+    .kpi-massive-value {
+        font-size: 72px !important;
+    }
+    .kpi-card {
+        margin: 0 10px;
+        width: calc(100% - 20px);
+        .card {
+            max-width: 500px;
+        }
+    }
     /* phones */
     .kpi-row {
         flex-direction: column !important;
