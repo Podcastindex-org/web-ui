@@ -12,7 +12,7 @@
     flex-direction: column;
     align-items: flex-start;
     flex-direction: row;
-    height: 170px;
+    // height: 170px;
     align-items: center;
 }
 
@@ -23,6 +23,8 @@
     justify-content: center;
     padding: 15px 15px 15px 15px;
     img {
+        height: 140px;
+        width: 140px;
         border-radius: 10px;
         border: 1px solid lighten(#d6d6d6, 0.2);
     }
@@ -78,11 +80,53 @@
 
 @media only screen and (max-width: 767px) {
     /* phones */
+    .result-row {
+        // height: 170px;
+    }
     .result {
         height: fit-content;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         padding: 10px 10px;
+    }
+    .result-cover-art {
+        img {
+            height: 90px;
+            width: 90px;
+        }
+    }
+
+    .result-title {
+        width: 100%;
+        font-size: 22px;
+    }
+    .result-description {
+        font-size: 15px;
+    }
+    .result-info {
+        p {
+            font-size: 15px;
+        }
+    }
+    .result-categories {
+        display: inline-flex;
+        flex-direction: row;
+        margin: -3px -3px; /* grid trick, has to match box margin */
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        &::-webkit-scrollbar {
+            visibility: hidden;
+        }
+    }
+    .result-category {
+        font-size: 14px;
+        background: #f3f3f3;
+        border: 1px solid #cecece;
+        border-radius: 5px;
+        margin: 3px;
+
+        padding: 4px 12px;
     }
 }

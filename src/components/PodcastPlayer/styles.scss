@@ -1,7 +1,8 @@
 .player-card {
     background: #ffffff;
     width: 500px;
-    height: 640px;
+    height: auto;
+    min-height: 500px;
     border: 1px solid #d6d6d6;
     box-shadow: 0 0 9px 0 rgba(192, 192, 192, 0.5);
     border-radius: 12px;
@@ -11,7 +12,6 @@
     //     box-shadow: 0 0 9px 0 rgba(192, 192, 192, 0.8);
     // }
 }
-
 .player {
     flex: 1;
     display: inline-flex;
@@ -21,22 +21,33 @@
     width: inherit;
 }
 
+.player-title {
+    font-family: var(--font-family);
+    font-size: 22px;
+    color: #e64545;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
 .player-nav-arrows {
     position: absolute;
     z-index: 0;
     width: inherit;
-    height: 470px;
+    height: 500px;
     button {
         outline: 0;
         border: 0;
         background: none;
-        border-radius: 4px;
+        border-radius: 12px;
+        padding: 5px;
         &:hover {
             background: rgba(#d6d6d6, 0.4);
         }
     }
     .player-nav-arrows-left {
-        top: 245px;
+        top: 50%;
         position: absolute;
         left: 5px;
         cursor: pointer;
@@ -46,7 +57,7 @@
     }
 
     .player-nav-arrows-right {
-        top: 245px;
+        top: 50%;
         position: absolute;
         right: 5px;
         cursor: pointer;
@@ -91,8 +102,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 25px 25px 0 25px;
+    // padding: 25px 25px 0 25px;
     img {
+        width: 450px;
+        height: 450px;
         border-radius: 10px;
         border: 1px solid lighten(#d6d6d6, 0.2);
     }
@@ -160,5 +173,34 @@
                 fill: var(--color-primary);
             }
         }
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    /* portrait phones */
+    .player-card {
+        width: calc(100% - 20px);
+        margin: 0 10px;
+        min-width: 350px;
+        height: auto;
+    }
+    .player-cover-art {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: calc(100% - 20px);
+        padding: 0 10px;
+        height: auto;
+        // padding: 25px 25px 0 25px;
+        img {
+            width: inherit;
+            height: inherit;
+            border-radius: 10px;
+            border: 1px solid lighten(#d6d6d6, 0.2);
+        }
+    }
+    .player-show-title {
+        max-width: 350px;
     }
 }

@@ -10,6 +10,7 @@ import 'react-h5-audio-player/src/styles.scss'
 import './styles.scss'
 
 interface IProps {
+    title?: string
     podcasts?: Array<any>
     loading?: boolean
 }
@@ -17,7 +18,7 @@ interface IState {
     index: number
 }
 
-export default class Card extends React.Component<IProps, IState> {
+export default class PodcastPlayer extends React.Component<IProps, IState> {
     static defaultProps = {}
     state = {
         index: 0,
@@ -60,7 +61,7 @@ export default class Card extends React.Component<IProps, IState> {
     }
 
     render() {
-        const { loading, podcasts } = this.props
+        const { loading, title, podcasts } = this.props
         const { index } = this.state
         const selectedPodcast = podcasts[index]
         return (
@@ -85,11 +86,14 @@ export default class Card extends React.Component<IProps, IState> {
                                 <img src={ForwardIcon} height={20} />
                             </button>
                         </div>
+                        {title && (
+                            <div className="player-title">
+                                <b>{title}</b>
+                            </div>
+                        )}
                         <div className="player-cover-art">
                             <img
                                 draggable={false}
-                                height={450}
-                                width={450}
                                 src={selectedPodcast.image || NoImage}
                                 onError={(ev: any) => {
                                     ev.target.src = NoImage

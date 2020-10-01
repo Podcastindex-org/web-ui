@@ -17,7 +17,7 @@ export default class Button extends React.PureComponent<IProps> {
     render() {
         const { children, href, onClick, link } = this.props
         return (
-            <>
+            <div className="button-wrapper">
                 {href && !link && (
                     <a href={href} className="button">
                         {children}
@@ -33,7 +33,7 @@ export default class Button extends React.PureComponent<IProps> {
                         {children}
                     </div>
                 )}
-            </>
+            </div>
         )
     }
 }
