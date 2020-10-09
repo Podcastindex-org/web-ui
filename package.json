@@ -1,6 +1,7 @@
 {
   "name": "podcastindex",
   "version": "0.1.0",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@types/history": "^4.7.5",
