@@ -54,7 +54,7 @@ export default class StatsCard extends React.Component<IProps> {
                         {this.numberWithCommas(total)}
                     </div>
                     <div className="kpi-massive-title kpi-title-2">
-                        Show published in the last ...
+                        Shows published in the last ...
                     </div>
                     <div className="kpi-row">
                         <KPI

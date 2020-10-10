@@ -50,13 +50,12 @@ export default class Topbar extends React.PureComponent<IProps, IState> {
     }
 
     render() {
-        const { history } = this.props
         const { search, dropdownOpen } = this.state
         return (
             <nav className="topbar">
                 <Link className="topbar-brand" to="/">
-                    <img height={30} width={28} src={Icon} alt="Sidebar logo" />
-                    <div className="topbar-title">Podcast Index</div>{' '}
+                    <img height={38} width={33} src={Icon} alt="Brand logo" />
+                    <div className="topbar-title">Podcast Index</div>
                 </Link>
                 <div className="topbar-span">
                     <Searchbar
@@ -72,14 +71,17 @@ export default class Topbar extends React.PureComponent<IProps, IState> {
                             dropdownOpen ? 'topbar-dropdown-open' : ''
                         }`}
                     >
-                        <Button link href="/stats">
+                        {/* <Button link href="/stats">
                             Stats
-                        </Button>
-                        <Button href="https://podcastindex.org/blog">
+                        </Button> */}
+                        <Button href="https://blog.podcastindex.org/">
                             Blog
                         </Button>
+                        <Button href="https://podcastindex-org.github.io/docs-api/">
+                            Documentation
+                        </Button>
                         <Button href="https://api.podcastindex.org">
-                            Login
+                            Developer Login
                         </Button>
                     </div>
                     <a

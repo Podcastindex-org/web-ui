@@ -63,6 +63,9 @@
 
 .info-section {
     margin-top: 50px;
+    h3 {
+        margin: 22px 0;
+    }
     p {
         font-family: var(--font-family-exp);
         font-size: 18px;
@@ -90,6 +93,12 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #dbdbdb;
 }
 
 @media only screen and (min-width: 1168px) {
