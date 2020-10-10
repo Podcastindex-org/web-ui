@@ -8,7 +8,7 @@
 }
 
 .topbar-brand {
-    width: 270px;
+    width: 290px;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
@@ -24,9 +24,10 @@ a,
 .topbar-title {
     font-family: var(--font-family-bold);
     font-weight: bold;
-    font-size: 26px;
+    font-size: 28px;
+    word-wrap: none;
     text-transform: uppercase;
-    margin-left: 15px;
+    margin-left: 18px;
     color: var(--color-primary);
 }
 
@@ -38,7 +39,6 @@ a,
 }
 
 .topbar-links {
-    flex: 1;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
@@ -60,7 +60,14 @@ a,
         background: lighten(#d6d6d6, 0.2);
     }
 }
-
+@media only screen and (max-width: 980px) {
+    .topbar-brand {
+        width: 40px;
+    }
+    .topbar-title {
+        display: none;
+    }
+}
 @media only screen and (max-width: 860px) {
     .topbar-links {
         flex: 0;
@@ -100,9 +107,9 @@ a,
     .topbar-brand {
         width: 40px;
     }
-    .topbar-title {
-        display: none;
-    }
+    // .topbar-title {
+    //     display: none;
+    // }
     .landing-content {
         min-width: 600px;
         width: 600px;

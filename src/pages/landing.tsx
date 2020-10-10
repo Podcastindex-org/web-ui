@@ -1,10 +1,9 @@
 import * as React from 'react'
 
 // Components
+import Button from '../components/Button'
 import PodcastPlayer from '../components/PodcastPlayer'
 import StatsCard from './Stats/StatsCard'
-// APIs
-// import API from '../api'
 
 import './styles.scss'
 
@@ -139,6 +138,58 @@ export default class Landing extends React.Component<IProps, IState> {
                         Re-tool podcasting to a platform of value exchange that
                         includes developers with podcasters and listeners.
                     </p>
+                    <h3>Developer? Join the fun!</h3>
+                    <p>
+                        Sign up for an account and get API keys at:{' '}
+                        <a href="https://api.podcastindex.org/signup">
+                            https://api.podcastindex.org
+                        </a>
+                    </p>
+                    <p>
+                        API Documentation is{' '}
+                        <a
+                            target="_blank"
+                            href="https://podcastindex-org.github.io/docs-api/"
+                        >
+                            here
+                        </a>
+                        .
+                    </p>
+                    <p>
+                        We build in the open. Get active in the{' '}
+                        <a href="https://github.com/Podcastindex-org">
+                            Github repos
+                        </a>
+                        .
+                    </p>
+                    <p>
+                        We have a Mastodon server for collaboration. Join it
+                        here:{' '}
+                        <a href="https://podcastindex.social/invite/hfcQYbjq">
+                            Podcastindex.social
+                        </a>
+                    </p>
+                    <p>
+                        Follow us on the blog:{' '}
+                        <a href="https://blog.podcastindex.org/">
+                            blog.podcastindex.org
+                        </a>
+                        or on{' '}
+                        <a href="https://twitter.com/PodcastindexOrg">
+                            Twitter
+                        </a>
+                        , or{' '}
+                        <a href="https://noagendasocial.com/@podcastindex">
+                            Mastodon
+                        </a>
+                        .
+                    </p>
+                    <p>
+                        Shoot us an email at:{' '}
+                        <a href="mailto:info@podcastindex.org">
+                            info@podcastindex.org
+                        </a>
+                    </p>
                 </div>
                 <div id="donate" className="info-section">
                     <h3>Help us out...</h3>
@@ -159,23 +210,32 @@ export default class Landing extends React.Component<IProps, IState> {
                             name="hosted_button_id"
                             value="9GEMYSYB7G2DW"
                         />
-                        <input
-                            type="image"
-                            src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"
-                            // border="0"
-                            name="submit"
-                            title="PayPal - The safer, easier way to pay online!"
+                        <Button
+                            big
+                            primary
+                            type="submit"
                             alt="Donate with PayPal button"
-                        />
-                        <img
-                            alt=""
-                            // border="0"
-                            src="https://www.paypal.com/en_US/i/scr/pixel.gif"
-                            width="1"
-                            height="1"
-                        />
+                        >
+                            Donate
+                        </Button>
                     </form>
                 </div>
+                {/* <div className="footer">
+                    <a className="social-link">
+                        <img
+                            height={25}
+                            width={25}
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Mastodon_Logotype_%28Simple%29.svg/223px-Mastodon_Logotype_%28Simple%29.svg.png"
+                        />
+                    </a>
+                    <a href="https://twitter.com/PodcastindexOrg">
+                        <img
+                            height={25}
+                            width={30}
+                            src="https://www.creativefreedom.co.uk/wp-content/uploads/2017/06/Twitter-featured.png"
+                        />
+                    </a>
+                </div> */}
             </div>
         )
     }
