@@ -1,4 +1,5 @@
 const path = require('path')
+const fs = require('fs');
 const express = require('express')
 const app = express() // create express app
 // Gets the .env variables
@@ -24,6 +25,16 @@ app.use('/api/recent/episodes', async (req, res) => {
     const response = await api.recentEpisodes(max)
     res.send(response)
 })
+
+app.use('/api/stats', async (req, res) => {
+    fs.readFile('./www/stats.json', 'utf8', (err, data) => {  
+        // You should always specify the content type header,
+        // when you don't use 'res.json' for sending JSON.  
+        res.set('Content-Type', 'application/json');
+        res.send(data)
+      })
+})
+
 
 app.get('*', (req, res) => res.sendFile(path.resolve('www', 'index.html')))
 
