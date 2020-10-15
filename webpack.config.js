@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const dotenv = require('dotenv')
 dotenv.config()
 
@@ -106,5 +107,11 @@ module.exports = {
                 removeRedundantAttributes: true,
             },
         }),
+        new CopyWebpackPlugin({
+            patterns:[
+            {
+               from: "./public/stats.json",
+               to:   "./stats.json",
+            }]})
     ],
 }

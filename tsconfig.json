@@ -8,7 +8,8 @@
         "moduleResolution": "node",
         "allowJs": true,
         "skipLibCheck": true,
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true
     },
     "exclude": ["node_modules"]
 }

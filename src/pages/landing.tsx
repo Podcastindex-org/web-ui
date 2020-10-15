@@ -11,12 +11,20 @@ interface IProps {}
 interface IState {
     loading?: boolean
     recentPodcasts?: Array<any>
+    stats?: {}
 }
 
 export default class Landing extends React.Component<IProps, IState> {
     state = {
         loading: true,
         recentPodcasts: [],
+        stats: {
+            feedCountTotal: '1,318,328',
+            feedCount3days: '81,919',
+            feedCount10days: '208,264',
+            feedCount30days: '303,007',
+            feedCount60days: '376,576',
+        },
     }
     _isMounted = false
 
@@ -27,16 +35,28 @@ export default class Landing extends React.Component<IProps, IState> {
     async componentDidMount(): Promise<void> {
         this._isMounted = true
         const recentPodcasts = (await this.getRecentEpisodes()).items
+        const stats = await this.getStats()
+
+        console.log(stats)
         if (this._isMounted) {
             this.setState({
                 loading: false,
                 recentPodcasts,
+                stats,
             })
         }
     }
 
     componentWillUnmount() {
         this._isMounted = false
+    }
+
+    async getStats() {
+        let response = await fetch('/api/stats', {
+            credentials: 'same-origin',
+            method: 'GET',
+        })
+        return await response.json()
     }
 
     async getRecentEpisodes() {
@@ -48,7 +68,7 @@ export default class Landing extends React.Component<IProps, IState> {
     }
 
     render() {
-        const { loading, recentPodcasts } = this.state
+        const { loading, recentPodcasts, stats } = this.state
         return (
             <div className="landing-content">
                 <div className="hero-pitch">
@@ -104,7 +124,13 @@ export default class Landing extends React.Component<IProps, IState> {
                         />
                     </div>
                 </div>
-                <StatsCard />
+                <StatsCard
+                    total={stats.feedCountTotal}
+                    threedays={stats.feedCount3days}
+                    tendays={stats.feedCount10days}
+                    lastMonth={stats.feedCount30days}
+                    last60={stats.feedCount60days}
+                />
                 <div className="info-section">
                     <h3>Promise</h3>
                     <p>
