@@ -1,12 +1,14 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const FileCopyOncePlugin = require('./file-copy-once-plugin.webpack')
 const dotenv = require('dotenv')
 dotenv.config()
 
+const isProduction = process.env.NODE_ENV === 'production'
+
 module.exports = {
-    watch: true,
+    watch: !isProduction,
     mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
@@ -107,11 +109,9 @@ module.exports = {
                 removeRedundantAttributes: true,
             },
         }),
-        new CopyWebpackPlugin({
-            patterns:[
-            {
-               from: "./public/stats.json",
-               to:   "./stats.json",
-            }]})
+        new FileCopyOncePlugin({
+            from: "./public/stats.json",
+            to:   "./www/stats.json",
+         })
     ],
 }

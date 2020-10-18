@@ -85,7 +85,7 @@ export default class Landing extends React.Component<IProps, IState> {
                         </div>
                         <h5>
                             Listen to the first episode of "Podcasting 2.0",
-                            where we discuss the project, and it's goals.
+                            where we discuss the project, and its goals.
                         </h5>
                         <div className="listen-row">
                             <audio controls preload="none">
