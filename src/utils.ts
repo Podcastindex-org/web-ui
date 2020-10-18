@@ -1,7 +1,11 @@
+import queryStringHelper from 'query-string'
+
+
 export const cleanSearchQuery = (queryString: string) => {
-    if (!queryString) {
+    let params = queryStringHelper.parse(queryString)
+    let queryAr = params.q
+    if (!queryAr) {
         return ''
     }
-    let queryAr = queryString.split('=')
-    return decodeURIComponent(queryAr[1])
+    return decodeURIComponent(<string>queryAr)
 }
