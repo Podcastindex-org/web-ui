@@ -1,4 +1,4 @@
-.landing-content {
+.landing-content, .page-content {
     position: relative;
     z-index: 1;
     padding: 0 0 20px 0;
@@ -103,7 +103,7 @@
 
 @media only screen and (min-width: 1168px) {
     /* tablets and desktop */
-    .landing-content {
+    .landing-content, .page-content {
         width: 1108px;
     }
     .hero-pitch {
@@ -114,7 +114,7 @@
 /* TABLETS PORTRAIT */
 @media only screen and (max-width: 1167px) {
     /* tablets and desktop */
-    .landing-content {
+    .landing-content, .page-content {
         min-width: 768px;
         width: calc(100% - 40px);
     }
@@ -181,7 +181,7 @@
         margin-bottom: 40px;
     }
     /* phones */
-    .landing-content {
+    .landing-content, .page-content {
         min-width: 350px;
         max-width: 600px;
         width: 100%;

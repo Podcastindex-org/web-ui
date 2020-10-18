@@ -18,22 +18,16 @@ yarn
 yarn start
 ```
 
-## Building for production
-
-To build the app for production use the following script.
-
-```zsh
-yarn build
-```
-
-This will compile the React code into static files in the `www` folder
-
 ## Running production
 
 To start the server, simply run after setting the `.env` file
 
+**Note**: Make sure to set `NODE_ENV=production` in the `.env` file
+
+The below script will compile the code and then start the node server.
+
 ```zsh
-node server.js
+npm run production
 ```
 
 ## TODO
