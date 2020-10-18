@@ -7,10 +7,9 @@
     box-shadow: 0 0 9px 0 rgba(192, 192, 192, 0.5);
     border-radius: 12px;
     transition: var(--transition-secs);
-    // &:hover {
-    //     transition: var(--transition-secs);
-    //     box-shadow: 0 0 9px 0 rgba(192, 192, 192, 0.8);
-    // }
+    .loader-wrapper {
+        height: 500px;
+    }
 }
 .player {
     flex: 1;

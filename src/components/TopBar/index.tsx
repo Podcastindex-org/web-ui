@@ -4,7 +4,8 @@ import { history } from '../../state/store'
 
 import Button from '../Button'
 import Searchbar from '../SearchBar'
-import Icon from '../../../images/icon.svg'
+import BrandIcon from '../../../images/brand-icon.svg'
+import BrandName from '../../../images/brand-text.svg'
 import MenuIcon from '../../../images/menu.svg'
 import { cleanSearchQuery } from '../../utils'
 
@@ -54,8 +55,15 @@ export default class Topbar extends React.PureComponent<IProps, IState> {
         return (
             <nav className="topbar">
                 <Link className="topbar-brand" to="/">
-                    <img height={38} width={33} src={Icon} alt="Brand logo" />
-                    <div className="topbar-title">Podcast Index</div>
+                    <img
+                        // height={38}
+                        width={36}
+                        src={BrandIcon}
+                        alt="Brand logo"
+                    />
+                    <div className="topbar-title">
+                        <img src={BrandName} width={230} alt="Brand name" />
+                    </div>
                 </Link>
                 <div className="topbar-span">
                     <Searchbar

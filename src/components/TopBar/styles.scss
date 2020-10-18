@@ -22,16 +22,15 @@ a,
 }
 
 .topbar-title {
-    font-family: var(--font-family-bold);
-    font-weight: bold;
-    font-size: 28px;
-    word-wrap: none;
-    text-transform: uppercase;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
     margin-left: 18px;
     color: var(--color-primary);
 }
 
 .topbar-span {
+    margin-top: 5px;
     flex: 3;
     display: inline-flex;
     flex-direction: row;
@@ -39,6 +38,7 @@ a,
 }
 
 .topbar-links {
+    margin-top: 5px;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
