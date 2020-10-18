@@ -56,13 +56,8 @@ const Routes: React.SFC = () => (
         <Route
             path="/search"
             render={(props) => <Results {...props} history={history} />}
-            component={Results}
         />
-		<Route
-            path="/thankyou"
-            render={(props) => <Results {...props} history={history} />}
-            component={DonationThankYou}
-        />
+        <Route path="/thankyou" component={DonationThankYou} />
         <Route exact path="/stats" render={() => <Stats />} />
 
         <Route component={() => <div>Not Found</div>} />
