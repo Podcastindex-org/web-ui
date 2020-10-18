@@ -2,7 +2,7 @@
     background: #ffffff;
     width: 500px;
     height: auto;
-    min-height: 500px;
+    min-height: 660px;
     border: 1px solid #d6d6d6;
     box-shadow: 0 0 9px 0 rgba(192, 192, 192, 0.5);
     border-radius: 12px;
@@ -34,7 +34,7 @@
     position: absolute;
     z-index: 0;
     width: inherit;
-    height: 500px;
+    height: 510px;
     button {
         outline: 0;
         border: 0;
@@ -105,7 +105,7 @@
     img {
         width: 450px;
         height: 450px;
-        border-radius: 10px;
+        border-radius: 14px;
         border: 1px solid lighten(#d6d6d6, 0.2);
     }
 }
