@@ -1,4 +1,4 @@
-var fs = require('fs');
+const fse = require('fs-extra');
 
 class FileCopyOncePlugin {
     constructor(pluginOptions) {
@@ -11,13 +11,13 @@ class FileCopyOncePlugin {
       compiler.hooks.emit.tap('FileCopyOncePlugin', (compilation, callback) => {
         // Create a header string for the generated file:
         try {
-            if (fs.existsSync(this.to)) {
+            if (fse.existsSync(this.to)) {
               //file exists
               console.log(this.to + ' already exists')
             }
             else {
                 console.log('creating ' + this.to)
-                fs.createReadStream(this.from).pipe(fs.createWriteStream(this.to));
+                fse.copy(this.from, this.to)                
             }
           } catch(err) {
             console.error(err)
