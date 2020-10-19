@@ -98,16 +98,30 @@ module.exports = {
         ],
     },
     plugins: [
-        new FaviconsWebpackPlugin({
-            logo: './public/favicon.ico',
-            prefix: '/',
-        }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'public', 'index.html'),
             minify: {
                 removeComments: true,
                 removeRedundantAttributes: true,
             },
+        }),
+        new FaviconsWebpackPlugin({
+            logo: path.resolve(__dirname, 'public', 'pci_avatar.svg'),
+            prefix: '.',
+            mode: 'webapp',
+            devMode: 'webapp',
+            favicons: {
+                appName: 'Podcastindex.org',
+                appDescription: 'Let’s preserve podcasting as a platform for free speech',
+                developerName: 'Podcastindex.org',
+                developerURL: null, // prevent retrieving from the nearest package.json
+                background: '#ffffff',
+                theme_color: '#e90000',
+                icons: {
+                    coast: false,
+                    yandex: false
+                }
+            }
         }),
         new FileCopyOncePlugin({
             from: "./public/stats.json",

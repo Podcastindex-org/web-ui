@@ -9,8 +9,6 @@ import { History } from 'history'
 import Topbar from './components/TopBar'
 import Routes from './routes'
 
-import '../public/favicon.ico'
-
 import LandingBG from '../images/landing-bg.svg'
 import './styles.scss'
 
