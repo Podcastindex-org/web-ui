@@ -14,10 +14,10 @@ In order to have the UI hot reload for development, we utilized `webpack-dev-ser
 
 ```zsh
 # Install dependencies
-yarn
+npn install
 
 # Start app
-yarn start
+npm start
 
 # Start the node server in another terminal window.
 node server.js
