@@ -14,7 +14,7 @@ In order to have the UI hot reload for development, we utilized `webpack-dev-ser
 
 ```zsh
 # Install dependencies
-npn install
+npm install
 
 # Start app
 npm start
