@@ -1,5 +1,7 @@
 import * as React from 'react'
 
+import {Link} from "react-router-dom";
+import {truncateString} from '../../utils'
 import NoImage from '../../../images/no-cover-art.png'
 
 import './styles.scss'
@@ -10,6 +12,7 @@ interface IProps {
     author?: string
     categories?: any
     image?: any
+    id?: string
 }
 
 export default class ResultItem extends React.PureComponent<IProps> {
@@ -44,26 +47,25 @@ export default class ResultItem extends React.PureComponent<IProps> {
         ))
     }
 
-    truncate = (input: string) =>
-        input.length > 200 ? `${input.substring(0, 300)}...` : input
-
     render() {
-        const { title, description, author, categories, image } = this.props
+        const {title, description, author, categories, image, id} = this.props
         // const { open } = this.state
         return (
             <div className="result">
                 <div className="result-row">
                     <div className="result-cover-art">
-                        <img
-                            draggable={false}
-                            src={image}
-                            onError={(ev: any) => {
-                                ev.target.src = NoImage
-                            }}
-                        />
+                        <Link to={`/podcast/${id}`}>
+                            <img
+                                draggable={false}
+                                src={image}
+                                onError={(ev: any) => {
+                                    ev.target.src = NoImage
+                                }}
+                            />
+                        </Link>
                     </div>
                     <div className="result-info">
-                        <div className="result-title">{title}</div>
+                        <div className="result-title"><Link to={`/podcast/${id}`}>{title}</Link></div>
                         <p>by {author}</p>
                         <div className="result-categories">
                             {this.renderCategories(categories)}
@@ -71,7 +73,7 @@ export default class ResultItem extends React.PureComponent<IProps> {
                     </div>
                 </div>
                 <p className="result-description">
-                    {this.truncate(description)}
+                    {truncateString(description)}
                 </p>
             </div>
         )

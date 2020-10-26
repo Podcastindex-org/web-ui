@@ -2,8 +2,10 @@ import * as React from 'react'
 
 // Components
 import Button from '../components/Button'
-import PodcastPlayer from '../components/PodcastPlayer'
+import RecentPodcasts from '../components/RecentPodcasts'
 import StatsCard from './Stats/StatsCard'
+import RSSLogo from '../../images/feed.svg'
+import {updateTitle} from "../utils";
 
 import './styles.scss'
 
@@ -37,7 +39,7 @@ export default class Landing extends React.Component<IProps, IState> {
         const recentPodcasts = (await this.getRecentEpisodes()).items
         const stats = await this.getStats()
 
-        console.log(stats)
+        // console.log(stats)
         if (this._isMounted) {
             this.setState({
                 loading: false,
@@ -69,6 +71,7 @@ export default class Landing extends React.Component<IProps, IState> {
 
     render() {
         const { loading, recentPodcasts, stats } = this.state
+        updateTitle("Home")
         return (
             <div className="landing-content">
                 <div className="hero-pitch">
@@ -100,24 +103,12 @@ export default class Landing extends React.Component<IProps, IState> {
                                 target="_blank"
                                 href="http://mp3s.nashownotes.com/pc20rss.xml"
                             >
-                                <svg
-                                    width="2em"
-                                    height="2em"
-                                    viewBox="0 0 16 16"
-                                    className="bi bi-rss-fill"
-                                    fill="currentColor"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        fillRule="evenodd"
-                                        d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5a1 1 0 0 0 0 2 8 8 0 0 1 8 8 1 1 0 1 0 2 0c0-5.523-4.477-10-10-10zm0 4a1 1 0 0 0 0 2 4 4 0 0 1 4 4 1 1 0 1 0 2 0 6 6 0 0 0-6-6zm.5 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
-                                    ></path>
-                                </svg>
+                                <img src={RSSLogo}/>
                             </a>
                         </div>
                     </div>
                     <div className="hero-pitch-right">
-                        <PodcastPlayer
+                        <RecentPodcasts
                             title="Recent Podcasts"
                             loading={loading}
                             podcasts={recentPodcasts}

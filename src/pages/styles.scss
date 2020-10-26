@@ -1,7 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
 .landing-content, .page-content {
     position: relative;
     z-index: 1;
-    padding: 0 0 20px 0;
+    padding: 0 10px 20px 10px;
     margin: 0 auto;
 }
 
@@ -30,11 +34,13 @@
         flex-direction: row;
         align-items: center;
     }
-    svg {
-        fill: #868686;
-    }
     .subscribe-badge {
         margin-left: 10px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
     }
 }
 

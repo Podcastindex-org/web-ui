@@ -1,11 +1,10 @@
 import * as React from 'react'
 import ReactList from 'react-list'
 import ReactLoading from 'react-loading'
-
 import ResultItem from '../components/ResultItem'
 
-// import API from '../api'
-import { cleanSearchQuery } from '../utils'
+import {cleanSearchQuery, updateTitle} from '../utils'
+
 
 import './styles.scss'
 
@@ -72,6 +71,7 @@ export default class Results extends React.PureComponent<IProps> {
         let author = this.state.results[index].author
         let description = this.state.results[index].description
         let categories = this.state.results[index].categories
+        let id = this.state.results[index].id
 
         return (
             <div key={key}>
@@ -81,6 +81,7 @@ export default class Results extends React.PureComponent<IProps> {
                     image={image}
                     description={description}
                     categories={categories}
+                    id={id}
                 />
             </div>
         )
@@ -88,18 +89,23 @@ export default class Results extends React.PureComponent<IProps> {
 
     render() {
         const { loading, results } = this.state
+        let query = cleanSearchQuery(this.props.location.search)
         if (results.length === 0 && !loading) {
+            const noResults = "No results for your search"
+            updateTitle(noResults)
             return (
-                <div className="results-list">No results for your search</div>
+                <div className="results-list">{noResults}</div>
             )
         }
         if (loading) {
+            updateTitle("Loading results ...")
             return (
                 <div className="loader-wrapper" style={{ height: 300 }}>
                     <ReactLoading type="cylon" color="#e90000" />
                 </div>
             )
         }
+        updateTitle(`Search results for "${query}"`)
         return (
             <div className="results-list">
                 <ReactList

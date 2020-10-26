@@ -70,7 +70,7 @@ h3 {
     top: 120px;
     left: -300px;
     position: absolute;
-    z-index: 0;
+    z-index: -1000;
 }
 
 @media only screen and (max-width: 767px) {

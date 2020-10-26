@@ -1,22 +1,20 @@
-.result {
+.episode {
     background: #ffffff;
     border: 1px solid #d6d6d6;
     border-radius: 6px;
-    margin: 10px 20px;
+    margin: 10px 0px;
     height: auto;
     padding: 5px;
+    box-sizing: border-box;
 }
 
-.result-row {
+.episode-row {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     flex-direction: row;
-    // height: 170px;
     align-items: center;
 }
 
-.result-cover-art {
+.episode-cover-art {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -30,15 +28,16 @@
     }
 }
 
-.result-info {
+.episode-info {
+    display: inline-flex;
+    flex-direction: column;
     margin-left: 10px;
     p {
         margin: 10px 0;
     }
-    margin-right: 15px;
 }
 
-.result-title, .result-title a {
+.episode-title {
     font-family: var(--font-family-exp);
     font-weight: bold;
     width: 100%;
@@ -47,29 +46,33 @@
     text-align: left;
 }
 
-.result-categories {
+.episode-date {
+    color: #868686;
+}
+
+.episode-links {
     display: inline-flex;
     flex-direction: row;
-    margin: -3px -3px; /* grid trick, has to match box margin */
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    &::-webkit-scrollbar {
-        visibility: hidden;
-    }
 }
-.result-category {
-    background: #f3f3f3;
-    border: 1px solid #cecece;
-    border-radius: 5px;
-    margin: 3px;
 
-    padding: 4px 12px;
+.episode-link img, .episode-play-pause-mobile {
+    width: 30px;
+    height: 30px;
 }
-.no-category {
-    opacity: 0.6;
+.episode-play-pause-mobile {
+    display: none;
+    margin-left: 20px;
 }
-.result-description {
+
+.episode-play-pause{
+    margin-left: auto;
+    margin-right: 10px;
+    min-width: 50px;
+    min-height: 50px;
+    cursor: pointer;
+}
+
+.episode-description {
     font-family: var(--font-family);
     overflow: hidden;
     text-overflow: ellipsis;
@@ -80,53 +83,39 @@
 
 @media only screen and (max-width: 767px) {
     /* phones */
-    .result-row {
+    .episode-row {
         // height: 170px;
     }
-    .result {
+    .episode {
         height: fit-content;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         padding: 10px 10px;
     }
-    .result-cover-art {
+    .episode-cover-art {
         img {
             height: 90px;
             width: 90px;
         }
     }
 
-    .result-title {
+    .episode-title {
         width: 100%;
         font-size: 22px;
     }
-    .result-description {
+    .episode-play-pause-mobile {
+        display: inherit;
+    }
+    .episode-play-pause{
+        display: none;
+    }
+    .episode-description {
         font-size: 15px;
     }
-    .result-info {
+    .episode-info {
         p {
             font-size: 15px;
         }
-    }
-    .result-categories {
-        display: inline-flex;
-        flex-direction: row;
-        margin: -3px -3px; /* grid trick, has to match box margin */
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        &::-webkit-scrollbar {
-            visibility: hidden;
-        }
-    }
-    .result-category {
-        font-size: 14px;
-        background: #f3f3f3;
-        border: 1px solid #cecece;
-        border-radius: 5px;
-        margin: 3px;
-
-        padding: 4px 12px;
     }
 }
