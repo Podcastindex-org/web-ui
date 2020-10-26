@@ -27,6 +27,7 @@ module.exports = {
     entry: './src/index.tsx',
     output: {
         path: path.resolve(__dirname, 'www'),
+        publicPath: '/',
         filename: 'bundle.js',
     },
     node: {

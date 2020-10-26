@@ -3,8 +3,10 @@
     flex-direction: row;
     justify-content: space-between;
     position: sticky;
-    padding: 23px 25px;
+    padding: 23px 0;
     z-index: 3;
+    width: 90%;
+    margin: 10px auto;
 }
 
 .topbar-brand {
@@ -61,6 +63,9 @@ a,
     }
 }
 @media only screen and (max-width: 980px) {
+    .topbar {
+        //padding: 23px 15px;
+    }
     .topbar-brand {
         width: 40px;
     }

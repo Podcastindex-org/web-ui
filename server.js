@@ -26,6 +26,18 @@ app.use('/api/recent/episodes', async (req, res) => {
     res.send(response)
 })
 
+app.use('/api/podcasts/byfeedid', async (req, res) => {
+    let feedId = req.query.id
+    const response = await api.podcastsByFeedId(feedId)
+    res.send(response)
+})
+
+app.use('/api/episodes/byfeedid', async (req, res) => {
+    let feedId = req.query.id
+    const response = await api.episodesByFeedId(feedId)
+    res.send(response)
+})
+
 app.use('/api/stats', async (req, res) => {
     fs.readFile('./www/stats.json', 'utf8', (err, data) => {  
         // You should always specify the content type header,

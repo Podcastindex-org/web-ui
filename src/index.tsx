@@ -20,6 +20,7 @@ interface MainProps {
 }
 
 const Index: React.FC<MainProps> = ({ store, history }) => {
+
     return (
         <Provider store={store}>
             <ConnectedRouter history={history}>
