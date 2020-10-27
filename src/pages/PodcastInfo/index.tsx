@@ -138,9 +138,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
 
     renderHeader() {
         let title = this.state.result.title
-        let image = this.state.result.image
-        if (image === undefined || image === null)
-            image = this.state.result.artwork
+        let image = this.state.result.image || this.state.result.artwork
         let author = this.state.result.author
         let description = this.state.result.description
         let categories = this.state.result.categories
@@ -194,9 +192,8 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
 
     renderEpisode(index: number, key: number) {
         let title = this.state.episodes[index].title
-        let image = this.state.episodes[index].image
-        if (image === undefined || image === null)
-            image = this.state.result.feedImage
+        // try to use episode image, fall back to feed images
+        let image = this.state.episodes[index].image || this.state.episodes[index].feedImage || this.state.result.image || this.state.result.artwork
         let link = this.state.episodes[index].link
         let description = this.state.episodes[index].description
         let datePublished = this.state.episodes[index].datePublished
@@ -230,7 +227,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
             updateTitle(errorMessage)
             return (
                 <div className="page-content">
-                    errorMessage
+                    {errorMessage}
                 </div>
             )
         }
