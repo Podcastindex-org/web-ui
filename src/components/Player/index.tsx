@@ -60,6 +60,50 @@ export default class Player extends React.Component<IProps> {
         })
     }
 
+    componentDidMount() {
+        this.setMediaSessionActionHandlers();
+    }
+
+    componentDidUpdate() {
+        this.setMediaSessionMetadata();
+    }
+
+    setMediaSessionActionHandlers() {
+        let navigator: any = window.navigator;
+        if('mediaSession' in window.navigator) {
+            navigator.mediaSession.setActionHandler('seekbackward', () => this.seekBackward());
+            navigator.mediaSession.setActionHandler('seekforward', () => this.seekForward());
+        }
+    }
+
+    seekBackward() {
+        let audio = this.player.current.audio.current;
+        audio.currentTime = Math.max(0, audio.currentTime - 5);
+    }
+
+    seekForward() {
+        let audio = this.player.current.audio.current;
+        audio.currentTime = Math.min(audio.duration, audio.currentTime + 5);
+    }
+
+    setMediaSessionMetadata() {
+        let navigator: any = window.navigator;
+        let episode = this.props.episode;
+        let image: string = episode.image || episode.feedImage;
+        if(episode && 'mediaSession' in window.navigator) {
+            // @ts-ignore
+            navigator.mediaSession.metadata = new MediaMetadata({
+                title: episode.title,
+                artist: episode.feedTitle,
+                ...(image && 
+                    {
+                        artwork: [{ src: image, sizes: '512x512'}]
+                    }
+                )
+            });
+        }
+    }
+
     render() {
         const {episode} = this.props
         const date = getPrettyDate(episode.datePublished)
