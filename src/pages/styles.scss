@@ -78,6 +78,15 @@
         line-height: 20px;
         color: #868686;
     }
+    .donation-providers {
+        width: 100%;
+        display: inline-flex;
+    }
+    .paypal, .sphinx-chat {
+        width: 50%;
+        text-align: center;
+        align-items: center;
+    }
 }
 
 #donate {
@@ -140,6 +149,15 @@
     }
     .info-section {
         padding: 0 20px;
+
+        .donation-providers {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .paypal, .sphinx-chat {
+            width: 100%;
+        }
     }
     .hero-pitch-right {
         margin-top: 40px;

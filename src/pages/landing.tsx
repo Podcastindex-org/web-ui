@@ -6,6 +6,7 @@ import RecentPodcasts from '../components/RecentPodcasts'
 import StatsCard from './Stats/StatsCard'
 import RSSLogo from '../../images/feed.svg'
 import {updateTitle} from "../utils";
+import SphinxChat from "../components/SphinxChat";
 
 import './styles.scss'
 
@@ -216,26 +217,35 @@ export default class Landing extends React.Component<IProps, IState> {
                         us out with hosting fees and paying the bills, a
                         donation of any amount would be great.
                     </p>
-                    <form
-                        action="https://www.paypal.com/cgi-bin/webscr"
-                        method="post"
-                        target="_top"
-                    >
-                        <input type="hidden" name="cmd" value="_s-xclick" />
-                        <input
-                            type="hidden"
-                            name="hosted_button_id"
-                            value="9GEMYSYB7G2DW"
-                        />
-                        <Button
-                            big
-                            primary
-                            type="submit"
-                            alt="Donate with PayPal button"
-                        >
-                            Donate
-                        </Button>
-                    </form>
+                    <div className="donation-providers">
+                        <div className="paypal">
+                            <h4>Paypal</h4>
+                            <form
+                                action="https://www.paypal.com/cgi-bin/webscr"
+                                method="post"
+                                target="_top"
+                            >
+                                <input type="hidden" name="cmd" value="_s-xclick"/>
+                                <input
+                                    type="hidden"
+                                    name="hosted_button_id"
+                                    value="9GEMYSYB7G2DW"
+                                />
+                                <Button
+                                    big
+                                    primary
+                                    type="submit"
+                                    alt="Donate with PayPal button"
+                                >
+                                    Donate
+                                </Button>
+                            </form>
+                        </div>
+                        <div className="sphinx-chat">
+                            <h4>Sphinx Chat</h4>
+                            <SphinxChat/>
+                        </div>
+                    </div>
                 </div>
                 {/* <div className="footer">
                     <a className="social-link">
