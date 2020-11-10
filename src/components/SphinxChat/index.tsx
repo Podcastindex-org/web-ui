@@ -40,7 +40,7 @@ export default class SphinxChat extends React.PureComponent<IProps> {
         return (
             <sphinx-widget
                 pubkey="036557ea56b3b86f08be31bcd2557cae8021b0e3a9413f0c0e52625c6696972e57"
-                title="Vale 4 Value Support"
+                title="Value 4 Value Support"
                 subtitle="Put in what you get out of this"
                 name="Podcast Index LLC"
                 amount="10000"
