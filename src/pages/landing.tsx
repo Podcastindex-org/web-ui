@@ -192,7 +192,7 @@ export default class Landing extends React.Component<IProps, IState> {
                         <a href="https://blog.podcastindex.org/">
                             blog.podcastindex.org
                         </a>
-                        or on{' '}
+                        {' '}or on{' '}
                         <a href="https://twitter.com/PodcastindexOrg">
                             Twitter
                         </a>
