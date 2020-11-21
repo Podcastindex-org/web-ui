@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Podcast from '../../Podcast';
+
 
 
 import './styles.scss'
@@ -9,7 +9,13 @@ interface AppsWebPartProps {
 }
 
 interface AppsWebPartState {
-    apps: Array<any>
+    appsUnfiltered: Array<any>;
+    appsFiltered: Array<any>;
+    showChapters: boolean;
+    showFunding: boolean;
+    showTranscript: boolean;
+    showAll: boolean;
+    activeFilter: [];
 }
 
 
@@ -18,8 +24,15 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps,AppsWe
     constructor(props: AppsWebPartProps) {
         super(props);
         this.state = {
-            apps: []
-        }
+            appsUnfiltered: [],
+            appsFiltered: [],
+            showChapters: false,
+            showFunding: false,
+            showTranscript: false,
+            activeFilter: [],
+            showAll: false
+        };
+        this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
     }
 
     _isMounted = false;
@@ -27,11 +40,12 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps,AppsWe
     async componentDidMount() {
         this._isMounted = true;
         console.log("componentDidMount(): loading from JSON:")
-        const apps = await this.getApps();
-        console.log("fetched apps=", apps);
+        const appsUnfiltered = await this.getApps();
+        const appsFiltered = [...appsUnfiltered];
+        console.log("fetched apps=", appsUnfiltered);
         if (this._isMounted) {
             this.setState({
-                apps
+                appsUnfiltered, appsFiltered
             })
         }
     }
@@ -48,11 +62,92 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps,AppsWe
         return await response.json()
     }
 
+    handleCheckboxChange(event) {
+        const target = event.target;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+        const name = target.name;
+        console.log("checkbox clicked: name="+name+",value="+value);
+        switch(name){
+            case "showChapters": { 
+                this.setState({showChapters:value}); 
+                break; 
+            } 
+            case "showFunding": { 
+                this.setState({showFunding:value}); 
+                break; 
+            } 
+            case "showTranscript": { 
+                this.setState({showTranscript:value}); 
+                break; 
+            } 
+            case "showAll": { 
+                this.setState({showAll:value});
+                break; 
+            } 
+        }
+        // const appsFiltered = this.state.appsUnfiltered.filter(anApp => (
+        //     (anApp.supportedElements.contains(name))
+        // ) );
+        const activeFilter = this.state.activeFilter;
+
+        // this.setState({
+        //   [name]: value
+        // });
+      }
+
+    renderCheckboxes() {
+        return (
+    <div className="podcastIndexAppsCheckboxArea">
+        <label>
+            <input
+                onChange={this.handleCheckboxChange}
+                type="checkbox"
+                name="showAll"
+                checked={this.state.showAll}
+                className="podcastIndexAppsCheckbox">
+            </input>
+            All
+        </label>
+        <label>
+            <input
+                onChange={this.handleCheckboxChange}
+                type="checkbox"
+                name="showChapters"
+                checked={this.state.showChapters}
+                className="podcastIndexAppsCheckbox">
+            </input>
+            Chapters
+        </label>
+        <label>
+            <input
+                onChange={this.handleCheckboxChange}
+                type="checkbox"
+                name="showFunding"
+                checked={this.state.showFunding}
+                className="podcastIndexAppsCheckbox">
+            </input>
+            Funding
+        </label>
+        <label>
+            <input
+                onChange={this.handleCheckboxChange}
+                type="checkbox"
+                name="showTranscript"
+                checked={this.state.showTranscript}
+                className="podcastIndexAppsCheckbox">
+            </input>
+            Transcript
+        </label>
+    </div>
+        )
+    }
+
     render() {
         return (
             <div className="podcastIndexAppsWebPart">
+               {this.renderCheckboxes()}
                apps loaded from JSON:
-               { this.state.apps.map((app,i) => (
+               { this.state.appsFiltered.map((app,i) => (
                  <div className="podcastIndexApp" key={`${i}`}>
                      { app.appName }
                      { app.supportedElements.map((suppElement, j) => (
