@@ -54,7 +54,13 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps,AppsWe
                apps loaded from JSON:
                { this.state.apps.map((app,i) => (
                  <div className="podcastIndexApp" key={`${i}`}>
-                     {app.appName}
+                     { app.appName }
+                     { app.supportedElements.map((suppElement, j) => (
+                         <div  key={`${j}`} className="podcastIndexElement">
+                             <a href={suppElement.elementURL}>{suppElement.elementName}</a>
+                         </div>
+                       )) 
+                     }
                  </div>
                 ))
                }
