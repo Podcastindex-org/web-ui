@@ -35,19 +35,29 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps,AppsWe
             filterList: [
                 {
                     id: 33,
-                    name: "Chapters",
-                    value: "Chapters"
-                },
+                    name: "Transcript",
+                    value: "Transcript"
+                }, 
                 {
                     id: 34,
-                    name: "Funding",
-                    value: "Funding"
+                    name: "Locked",
+                    value: "Locked"
                 },
                 {
                     id: 35,
-                    name: "Transcript",
-                    value: "Transcript"
-                }               
+                    name: "Funding",
+                    value: "Funding"
+                }, 
+                {
+                    id: 36,
+                    name: "Chapters",
+                    value: "Chapters"
+                }, 
+                {
+                    id: 37,
+                    name: "Soundbites",
+                    value: "Soundbites"
+                }              
             ]
         };
         this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
