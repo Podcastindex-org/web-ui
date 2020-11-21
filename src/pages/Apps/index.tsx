@@ -1,11 +1,12 @@
 import * as React from 'react'
-import { Stats } from 'webpack'
+
+import AppsWebPart from './AppsWebPart'
 
 import './styles.scss'
 
 interface IProps {}
 
-export default class Card extends React.Component<IProps> {
+export default class Apps extends React.Component<IProps> {
     static defaultProps = {}
 
     constructor(props: IProps) {
@@ -63,7 +64,8 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
         return (
             <div className="landing-content" style={{ marginTop: 20 }}>
 
-  <div className="csb">under dev by CSB, release 001</div> 
+  <div className="csb">under dev by CSB, release 002</div> 
+            <AppsWebPart/>
             {this.renderOld()}
        
          </div>
