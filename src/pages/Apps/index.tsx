@@ -64,7 +64,7 @@ For elements that are included in the official [DTD](https://github.com/Podcasti
         return (
             <div className="landing-content" style={{ marginTop: 20 }}>
 
-  <div className="csb">under dev by CSB, release 002</div> 
+  <div className="csb">under dev by CSB, release 003</div> 
             <AppsWebPart/>
             {this.renderOld()}
        
