@@ -48,6 +48,16 @@ app.use('/api/stats', async (req, res) => {
 })
 
 
+app.use('/api/apps', async (req, res) => {
+    fs.readFile('./www/apps.json', 'utf8', (err, data) => {  
+        // You should always specify the content type header,
+        // when you don't use 'res.json' for sending JSON.  
+        res.set('Content-Type', 'application/json');
+        res.send(data)
+      })
+})
+
+
 app.get('*', (req, res) => res.sendFile(path.resolve('www', 'index.html')))
 
 const PORT = process.env.PORT || 333;
