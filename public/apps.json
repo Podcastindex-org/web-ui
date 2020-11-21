@@ -13,6 +13,14 @@
             { 
                 "elementName": "Funding", 
                 "elementURL": "https://www.buzzsprout.com/"
+            },
+            { 
+                "elementName": "Chapters", 
+                "elementURL": "https://twitter.com/buzzsprout/status/1324425781330796545"
+            },
+            { 
+                "elementName": "Soundbites", 
+                "elementURL": "https://www.buzzsprout.com/"
             }
         ]
     },
@@ -24,12 +32,12 @@
                 "elementURL": "https://twitter.com/GoPodfriend/status/1316847938828742656"
             },
             { 
-                "elementName": "Chapters", 
-                "elementURL": "https://twitter.com/adamcurry/status/1323417144378445831"
-            },
-            { 
                 "elementName": "Funding", 
                 "elementURL": "https://twitter.com/GoPodfriend/status/1318663369684123648"
+            },
+            { 
+                "elementName": "Chapters", 
+                "elementURL": "https://twitter.com/adamcurry/status/1323417144378445831"
             }
         ]
     },
@@ -37,12 +45,29 @@
         "appName":"Podverse",        
         "supportedElements": [
             { 
-                "elementName": "Soundbites", 
-                "elementURL": "https://twitter.com/Podverse/status/1326072379597053953?s=20"
+                "elementName": "Funding", 
+                "elementURL": "https://twitter.com/Podverse/status/1325734448608899072?s=20"
             },
             { 
                 "elementName": "Chapters", 
                 "elementURL": "https://twitter.com/Podverse/status/1324729288281632771?s=20"
+            },
+            { 
+                "elementName": "Soundbites", 
+                "elementURL": "https://twitter.com/Podverse/status/1326072379597053953?s=20"
+            }
+        ]
+    },
+    {
+        "appName":"Podcast Addict",        
+        "supportedElements": [
+            { 
+                "elementName": "Transcript", 
+                "elementURL": "https://podcastaddict.com/changelog/2020_14#section1"
+            },
+            { 
+                "elementName": "Chapters", 
+                "elementURL": "https://podcastaddict.com/changelog/2020_16#section4"
             }
         ]
     }
