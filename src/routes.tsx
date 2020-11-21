@@ -7,6 +7,7 @@ import Results from './pages/results'
 import Stats from './pages/Stats'
 import DonationThankYou from './pages/donationThankYou'
 import Podcast from './pages/Podcast'
+import Apps from './pages/Apps'
 
 const Routes: React.FunctionComponent = () => (
     <Switch>
@@ -19,6 +20,8 @@ const Routes: React.FunctionComponent = () => (
         <Route exact path="/stats" render={() => <Stats/>}/>
 
         <Route path="/podcast" component={Podcast}/>
+
+        <Route path="/apps" component={Apps}/>
 
         <Route component={() => <div>Not Found</div>}/>
     </Switch>
