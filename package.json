@@ -65,9 +65,9 @@
         "webpack-dev-server": "^3.10.3"
     },
     "scripts": {
-        "start": "webpack-dev-server",
+        "start-originalAfterFork": "webpack-dev-server",
         "build": "webpack",
-        "production": "webpack && node server.js",
+        "start": "webpack && node server.js",
         "test": "react-scripts test --env=jsdom",
         "eject": "react-scripts eject",
         "flow": "flow",
