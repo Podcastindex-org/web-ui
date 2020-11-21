@@ -203,8 +203,11 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps,AppsWe
           }
         return (
             <div className="podcastIndexAppsWebPart">
+               <h4>Application Support by Element</h4>
+               For elements that are included in the
+                official <a href="https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md">DTD</a>, we will highlight applications offering production support. Links should point to a public announcement or production example.
+                <h4>Elements</h4>
                {this.renderCheckboxes()}
-               Application Support by Element:
                { appsFiltered.map((app,i) => (
                  <div className="podcastIndexApp" key={`${i}`}>
                      { app.appName }
