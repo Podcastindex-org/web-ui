@@ -51,6 +51,6 @@ app.use('/api/stats', async (req, res) => {
 app.get('*', (req, res) => res.sendFile(path.resolve('www', 'index.html')))
 
 // start express server on port 5001 (default)
-app.listen(process.env.SERVER_PORT, () => {
-    console.log(`server started on port ${process.env.SERVER_PORT}`)
+app.listen(process.env.PORT, () => {
+    console.log(`server started on port ${process.env.PORT}`)
 })
