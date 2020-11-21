@@ -67,7 +67,7 @@
     "scripts": {
         "start-originalAfterFork": "webpack-dev-server",
         "build": "webpack",
-        "start": "webpack && node server.js",
+        "start": "node server.js",
         "test": "react-scripts test --env=jsdom",
         "eject": "react-scripts eject",
         "flow": "flow",
