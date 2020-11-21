@@ -60,7 +60,6 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps,AppsWe
                 }              
             ]
         };
-        this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
     }
 
     _isMounted = false;
@@ -90,40 +89,7 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps,AppsWe
         return await response.json()
     }
 
-    handleCheckboxChange(event) {
-        const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        const name = target.name;
-        const activeFilter = this.state.activeFilter;
-        //console.log("checkbox clicked: name="+name+",value="+value);
-        switch(name){
-            case "showChapters": { 
-                this.setState({showChapters:value}); 
-                break; 
-            } 
-            case "showFunding": { 
-                this.setState({showFunding:value}); 
-                break; 
-            } 
-            case "showTranscript": { 
-                this.setState({showTranscript:value}); 
-                break; 
-            } 
-            case "showAll": { 
-                this.setState({showAll:value});
-                break; 
-            } 
-        }
-        // const appsFiltered = this.state.appsUnfiltered.filter(anApp => (
-        //     (anApp.supportedElements.contains(name))
-        // ) );
-
-        // this.setState({
-        //   [name]: value
-        // });
-      }
-
-      onFilterChange(filter) {
+    onFilterChange(filter) {
         const { filterList, activeFilter } = this.state;
         if (filter === "ALL") {
           if (activeFilter.length === filterList.length) {
@@ -197,10 +163,12 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps,AppsWe
           ) {
             //filteredList = this.state.searchLists;
             appsFiltered = [...this.state.appsUnfiltered];
-          } 
-          else {
+        } 
+        else {
             appsFiltered = this.state.appsUnfiltered.filter( anApp => this.matchFound(anApp));
-          }
+        }
+        let appsFilteredAndSorted: Array<any> = appsFiltered.sort(
+            (a1,a2) => { return (a1.appName).localeCompare(a2.appName); });
         return (
             <div className="podcastIndexAppsWebPart">
                <h4>Application Support by Element</h4>
@@ -208,9 +176,9 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps,AppsWe
                 official <a href="https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md">DTD</a>, we will highlight applications offering production support. Links should point to a public announcement or production example.
                 <h4>Elements</h4>
                {this.renderCheckboxes()}
-               { appsFiltered.map((app,i) => (
+               { appsFilteredAndSorted.map((app,i) => (
                  <div className="podcastIndexApp" key={`${i}`}>
-                     { app.appName }
+                     { (i+1) + ": "+ app.appName }
                      { app.supportedElements.map((suppElement, j) => (
                          <div  key={`${j}`} className="podcastIndexElement">
                              <a href={suppElement.elementURL}>{suppElement.elementName}</a>
