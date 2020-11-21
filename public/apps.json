@@ -70,5 +70,66 @@
                 "elementURL": "https://podcastaddict.com/changelog/2020_16#section4"
             }
         ]
+    },
+    { 
+        "appName":"Podnews",
+        "supportedElements": [
+            { 
+                "elementName": "Transcript", 
+                "elementURL": "https://podnews.net/rss"
+            },
+            { 
+                "elementName": "Locked", 
+                "elementURL": "https://podnews.net/rss"
+            }
+        ]
+    },    
+    { 
+        "appName":"Podcastindex",
+        "supportedElements": [
+            { 
+                "elementName": "Transcript", 
+                "elementURL": "https://podcastindex.org"
+            },
+            { 
+                "elementName": "Locked", 
+                "elementURL": "https://podcastindex.org"
+            },
+            { 
+                "elementName": "Funding", 
+                "elementURL": "https://podcastindex.org"
+            },
+            { 
+                "elementName": "Chapters", 
+                "elementURL": "https://podcastindex.org"
+            }
+        ]
+    },
+    {
+        "appName":"podStation",        
+        "supportedElements": [
+            { 
+                "elementName": "Funding", 
+                "elementURL": "https://chrome.google.com/webstore/detail/podstation-podcast-player/bpcagekijmfcocgjlnnhpdogbplajjfn"
+            }
+        ]
+    },
+    {
+        "appName":"Podcast Chapters",        
+        "supportedElements": [
+            { 
+                "elementName": "Chapters", 
+                "elementURL": "https://chaptersapp.com/faq/jsonExport.html"
+            }
+        ]
+    },
+    {
+        "appName":"Hypercatcher",        
+        "supportedElements": [
+            { 
+                "elementName": "Chapters", 
+                "elementURL": "https://hypercatcher.com/2020/11/how-to-create-podcast-chapters-as-a-listener/"
+            }
+        ]
     }
 ]
