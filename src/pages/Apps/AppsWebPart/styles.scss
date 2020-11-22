@@ -5,16 +5,22 @@
 
 .podcastIndexApp {
     background-color:transparent;
+    display:flex;
+    flex-direction: row;
+    border-bottom: lightgray;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
 }
 
 .podcastIndexElement {
-    padding-left:33px;
+   background-color: transparent;
 }
 
 .podcastIndexAppsCheckboxArea {
     background-color: #DCDCDC;
     border-radius: 5px;
     padding-left: 3px;
+    margin-bottom: 8px;
 }
 
 .podcastIndexAppsWebPart > h4 {
@@ -39,4 +45,16 @@
     width: 33px; 
     border: 1px solid rgb(203, 213, 224); 
     box-sizing: border-box;                
+}
+
+.podcastIndexAppTitle {
+    width: 33%;
+}
+
+.podcastIndexAppIcon {
+    width: 10%;
+}
+
+.podcastIndexAppSupportedElements {
+    width: 55%;
 }
