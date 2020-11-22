@@ -17,8 +17,6 @@ export default class Apps extends React.Component<IProps> {
         const {} = this.props
         return (
             <div className="landing-content" style={{ marginTop: 20 }}>
-
-  <div className="csb">under dev by CSB, release 014</div> 
             <AppsWebPart/>
          </div>
         )
