@@ -112,6 +112,7 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps,AppsWe
     renderCheckboxes() {
         return (
     <div className="podcastIndexAppsCheckboxArea">
+                Show:
         <label>
             <input
                 onChange={() => this.onFilterChange("ALL")}
