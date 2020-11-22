@@ -1,0 +1,148 @@
+[
+    { 
+        "appName":"Buzzsprout",
+        "supportedElements": [
+            { 
+                "elementName": "Transcript", 
+                "elementURL": "https://www.buzzsprout.com/blog/transcription-tools"
+            },
+            { 
+                "elementName": "Locked", 
+                "elementURL": "https://www.buzzsprout.com/blog/podcast-locking"
+            },
+            { 
+                "elementName": "Funding", 
+                "elementURL": "https://www.buzzsprout.com/"
+            },
+            { 
+                "elementName": "Chapters", 
+                "elementURL": "https://twitter.com/buzzsprout/status/1324425781330796545"
+            },
+            { 
+                "elementName": "Soundbites", 
+                "elementURL": "https://www.buzzsprout.com/"
+            }
+        ]
+    },
+    {
+        "appName":"Podfriend",        
+        "supportedElements": [
+            { 
+                "elementName": "Transcript", 
+                "elementURL": "https://twitter.com/GoPodfriend/status/1316847938828742656"
+            },
+            { 
+                "elementName": "Funding", 
+                "elementURL": "https://twitter.com/GoPodfriend/status/1318663369684123648"
+            },
+            { 
+                "elementName": "Chapters", 
+                "elementURL": "https://twitter.com/adamcurry/status/1323417144378445831"
+            }
+        ]
+    },
+    {
+        "appName":"Podverse",        
+        "supportedElements": [
+            { 
+                "elementName": "Funding", 
+                "elementURL": "https://twitter.com/Podverse/status/1325734448608899072?s=20"
+            },
+            { 
+                "elementName": "Chapters", 
+                "elementURL": "https://twitter.com/Podverse/status/1324729288281632771?s=20"
+            },
+            { 
+                "elementName": "Soundbites", 
+                "elementURL": "https://twitter.com/Podverse/status/1326072379597053953?s=20"
+            }
+        ]
+    },
+    {
+        "appName":"Podcast Addict",        
+        "supportedElements": [
+            { 
+                "elementName": "Transcript", 
+                "elementURL": "https://podcastaddict.com/changelog/2020_14#section1"
+            },
+            { 
+                "elementName": "Chapters", 
+                "elementURL": "https://podcastaddict.com/changelog/2020_16#section4"
+            }
+        ]
+    },
+    { 
+        "appName":"Podnews",
+        "supportedElements": [
+            { 
+                "elementName": "Transcript", 
+                "elementURL": "https://podnews.net/rss"
+            },
+            { 
+                "elementName": "Locked", 
+                "elementURL": "https://podnews.net/rss"
+            }
+        ]
+    },    
+    { 
+        "appName":"Podcastindex",
+        "supportedElements": [
+            { 
+                "elementName": "Transcript", 
+                "elementURL": "https://podcastindex.org"
+            },
+            { 
+                "elementName": "Locked", 
+                "elementURL": "https://podcastindex.org"
+            },
+            { 
+                "elementName": "Funding", 
+                "elementURL": "https://podcastindex.org"
+            },
+            { 
+                "elementName": "Chapters", 
+                "elementURL": "https://podcastindex.org"
+            }
+        ]
+    },
+    {
+        "appName":"podStation",        
+        "supportedElements": [
+            { 
+                "elementName": "Funding", 
+                "elementURL": "https://chrome.google.com/webstore/detail/podstation-podcast-player/bpcagekijmfcocgjlnnhpdogbplajjfn"
+            }
+        ]
+    },
+    {
+        "appName":"Podcast Chapters",        
+        "supportedElements": [
+            { 
+                "elementName": "Chapters", 
+                "elementURL": "https://chaptersapp.com/faq/jsonExport.html"
+            }
+        ]
+    },
+    {
+        "appName":"Hypercatcher",        
+        "supportedElements": [
+            { 
+                "elementName": "Chapters", 
+                "elementURL": "https://hypercatcher.com/2020/11/how-to-create-podcast-chapters-as-a-listener/"
+            }
+        ]
+    },    
+    { 
+        "appName":"Castopod",
+        "supportedElements": [
+            { 
+                "elementName": "Locked", 
+                "elementURL": "https://podlibre.org/castopod-supports-podcast-locking/"
+            },
+            { 
+                "elementName": "Funding", 
+                "elementURL": "https://podlibre.org/publish-your-podcast-on-all-platforms/#podcastindex"
+            }
+        ]
+    }
+]

@@ -127,6 +127,10 @@ module.exports = {
         new FileCopyOncePlugin({
             from: "./public/stats.json",
             to:   "./www/stats.json",
-         })
+         }),
+         new FileCopyOncePlugin({
+             from: "./public/apps.json",
+             to:   "./www/apps.json",
+          })
     ],
 }
