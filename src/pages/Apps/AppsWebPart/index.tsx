@@ -182,7 +182,9 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps,AppsWe
                      <div className="podcastIndexAppIcon">
                          <img src="/images/pci_avatar.jpg" className="podcastIndexAppImage"></img>
                     </div>
-                       <div className="podcastIndexAppTitle">{ (i+1) + ": "+ app.appName }</div>
+                       <div className="podcastIndexAppTitle">
+                           <a href={app.appUrl}>{ (i+1) + ": "+ app.appName }</a>
+                        </div>
                      <div className="podcastIndexAppSupportedElements">
                      { app.supportedElements.map((suppElement, j) => (
                          <React.Fragment key={`${j}`}>
