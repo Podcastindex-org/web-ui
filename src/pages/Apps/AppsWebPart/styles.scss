@@ -1,5 +1,5 @@
 .podcastIndexAppsWebPart {
-    background-color: #e0e0e0;
+    /*background-color: #e0e0e0;*/
     border-radius: 8px;
 }
 
@@ -16,3 +16,10 @@
     background-color: purple;
     color:white;
 }
+
+.podcastIndexAppsWebPart > h4 {
+    font-size: 16px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
