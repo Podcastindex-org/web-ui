@@ -4,11 +4,10 @@
 }
 
 .podcastIndexApp {
-    background-color: lightgreen;
+    background-color:transparent;
 }
 
 .podcastIndexElement {
-    background-color: lightsalmon;
     padding-left:33px;
 }
 
@@ -34,3 +33,10 @@
     margin-left:-8px;
 }
 
+.podcastIndexAppImage {
+    border-radius: 5px; 
+    height: 33px; 
+    width: 33px; 
+    border: 1px solid rgb(203, 213, 224); 
+    box-sizing: border-box;                
+}

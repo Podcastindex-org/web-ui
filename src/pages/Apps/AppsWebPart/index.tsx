@@ -179,6 +179,7 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps,AppsWe
                {this.renderCheckboxes()}
                { appsFilteredAndSorted.map((app,i) => (
                  <div className="podcastIndexApp" key={`${i}`}>
+                     <img src="/images/pci_avatar.jpg" className="podcastIndexAppImage"></img>
                      { (i+1) + ": "+ app.appName }
                      { app.supportedElements.map((suppElement, j) => (
                          <div  key={`${j}`} className="podcastIndexElement">
