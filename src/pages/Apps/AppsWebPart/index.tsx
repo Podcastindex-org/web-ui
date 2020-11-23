@@ -1,7 +1,5 @@
 import * as React from 'react'
 
-
-
 import './styles.scss'
 
 
@@ -55,9 +53,14 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps,AppsWe
                 }, 
                 {
                     id: 37,
-                    name: "Soundbites",
-                    value: "Soundbites"
-                }              
+                    name: "Soundbite",
+                    value: "Soundbite"
+                },
+                {
+                    id: 38,
+                    name: "Person",
+                    value: "Person"
+                }
             ]
         };
     }
