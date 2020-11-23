@@ -1,6 +1,7 @@
 [
     { 
         "appName":"Buzzsprout",
+        "appUrl": "https://www.buzzsprout.com",
         "supportedElements": [
             { 
                 "elementName": "Transcript", 
@@ -25,7 +26,8 @@
         ]
     },
     {
-        "appName":"Podfriend",        
+        "appName":"Podfriend",
+        "appUrl": "https://www.podfriend.com",
         "supportedElements": [
             { 
                 "elementName": "Transcript", 
@@ -42,7 +44,8 @@
         ]
     },
     {
-        "appName":"Podverse",        
+        "appName":"Podverse",  
+        "appUrl": "https://podverse.fm",
         "supportedElements": [
             { 
                 "elementName": "Funding", 
@@ -59,7 +62,8 @@
         ]
     },
     {
-        "appName":"Podcast Addict",        
+        "appName":"Podcast Addict",   
+        "appUrl": "https://podcastaddict.com",
         "supportedElements": [
             { 
                 "elementName": "Transcript", 
@@ -73,6 +77,7 @@
     },
     { 
         "appName":"Podnews",
+        "appUrl": "https://podnews.net",
         "supportedElements": [
             { 
                 "elementName": "Transcript", 
@@ -86,6 +91,7 @@
     },    
     { 
         "appName":"Podcastindex",
+        "appUrl": "https://podcastindex.org",
         "supportedElements": [
             { 
                 "elementName": "Transcript", 
@@ -106,7 +112,8 @@
         ]
     },
     {
-        "appName":"podStation",        
+        "appName":"podStation",    
+        "appUrl": "https://chrome.google.com/webstore/detail/podstation-podcast-player/bpcagekijmfcocgjlnnhpdogbplajjfn",
         "supportedElements": [
             { 
                 "elementName": "Funding", 
@@ -115,7 +122,8 @@
         ]
     },
     {
-        "appName":"Podcast Chapters",        
+        "appName":"Podcast Chapters",   
+        "appUrl": "https://chaptersapp.com",
         "supportedElements": [
             { 
                 "elementName": "Chapters", 
@@ -124,7 +132,8 @@
         ]
     },
     {
-        "appName":"Hypercatcher",        
+        "appName":"Hypercatcher",     
+        "appUrl": "https://hypercatcher.com",
         "supportedElements": [
             { 
                 "elementName": "Chapters", 
@@ -134,6 +143,7 @@
     },    
     { 
         "appName":"Castopod",
+        "appUrl": "https://podlibre.org/tag/castopod-server/",
         "supportedElements": [
             { 
                 "elementName": "Locked", 
