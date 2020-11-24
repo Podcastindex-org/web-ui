@@ -203,5 +203,20 @@
         "elementURL": "https://twitter.com/transistorfm"
       }
     ]
+  },
+  {
+    "appName": "PodServe",
+    "appUrl": "https://podserve.fm",
+    "supportedElements": [
+
+      {
+        "elementName": "Locked",
+        "elementURL": "https://twitter.com/PodServeFM/status/1329960334967226373"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://twitter.com/PodServeFM/status/1329960334967226373"
+      }
+    ]
   }
 ]
