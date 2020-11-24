@@ -108,6 +108,10 @@
       {
         "elementName": "Chapters",
         "elementURL": "https://podcastindex.org"
+      },
+      {
+        "elementName": "Soundbite",
+        "elementURL": "https://podcastindex.org"
       }
     ]
   },
