@@ -16,8 +16,8 @@ In order to have the UI hot reload for development, we utilized `webpack-dev-ser
 # Install dependencies
 npm install
 
-# Start app
-npm start
+# Start dev server
+npm run dev
 
 # Start the node server in another terminal window.
 node server.js
@@ -32,10 +32,12 @@ To start the server, simply run after setting the `.env` file
 The below script will compile the code and then start the node server.
 
 ```zsh
-npm run production
+npm run build
+npm start
 ```
 
 ## TODO
 
 -   Font should load through webpack properly
 -   Better image loading handling in the search results page.
+-   Developers page and login

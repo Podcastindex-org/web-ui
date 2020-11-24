@@ -1,7 +1,7 @@
 import * as React from 'react'
-import {Route} from 'react-router-dom';
-import PodcastInfo from "../PodcastInfo";
-import {updateTitle} from "../../utils";
+import { Route } from 'react-router-dom'
+import PodcastInfo from './PodcastInfo'
+import { updateTitle } from '../../utils'
 
 import './styles.scss'
 
@@ -10,13 +10,13 @@ interface IProps {
 }
 
 export default class Podcast extends React.PureComponent<IProps> {
-
     render() {
-        updateTitle("Podcast")
+        updateTitle('Podcast')
         return (
             <div>
                 <Route
-                    exact path={this.props.match.path}
+                    exact
+                    path={this.props.match.path}
                     render={() => (
                         <div className="page-content">
                             <h1>Podcasts</h1>
@@ -26,7 +26,7 @@ export default class Podcast extends React.PureComponent<IProps> {
                 />
                 <Route
                     path={`${this.props.match.path}/:podcastId`}
-                    render={props => <PodcastInfo {...props} />}
+                    render={(props) => <PodcastInfo {...props} />}
                 />
             </div>
         )

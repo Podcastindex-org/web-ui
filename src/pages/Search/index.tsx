@@ -1,10 +1,9 @@
 import * as React from 'react'
 import ReactList from 'react-list'
 import ReactLoading from 'react-loading'
-import ResultItem from '../components/ResultItem'
+import ResultItem from '../../components/ResultItem'
 
-import {cleanSearchQuery, updateTitle} from '../utils'
-
+import { cleanSearchQuery, updateTitle } from '../../utils'
 
 import './styles.scss'
 
@@ -91,14 +90,12 @@ export default class Results extends React.PureComponent<IProps> {
         const { loading, results } = this.state
         let query = cleanSearchQuery(this.props.location.search)
         if (results.length === 0 && !loading) {
-            const noResults = "No results for your search"
+            const noResults = 'No results for your search'
             updateTitle(noResults)
-            return (
-                <div className="results-list">{noResults}</div>
-            )
+            return <div className="results-list">{noResults}</div>
         }
         if (loading) {
-            updateTitle("Loading results ...")
+            updateTitle('Loading results ...')
             return (
                 <div className="loader-wrapper" style={{ height: 300 }}>
                     <ReactLoading type="cylon" color="#e90000" />

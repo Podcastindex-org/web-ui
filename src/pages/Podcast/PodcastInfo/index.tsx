@@ -1,10 +1,10 @@
 import * as React from 'react'
 import ReactList from 'react-list'
 import ReactLoading from 'react-loading'
-import PodcastHeader from "../../components/PodcastHeader";
-import Player from "../../components/Player";
-import EpisodeItem from "../../components/EpisodeItem";
-import {updateTitle} from "../../utils";
+import PodcastHeader from '../../../components/PodcastHeader'
+import Player from '../../../components/Player'
+import EpisodeItem from '../../../components/EpisodeItem'
+import { updateTitle } from '../../../utils'
 
 import './styles.scss'
 
@@ -45,7 +45,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
                     loading: false,
                     result,
                     episodes,
-                    selectedEpisode: episodes[0]
+                    selectedEpisode: episodes[0],
                 })
             }
         }
@@ -57,9 +57,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
 
     async componentDidUpdate(prevProps) {
         let id = this.props.match.params.podcastId
-        if (
-            id !== prevProps.match.params.podcastId
-        ) {
+        if (id !== prevProps.match.params.podcastId) {
             this.setState({
                 loading: true,
             })
@@ -69,7 +67,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
                 loading: false,
                 result,
                 episodes,
-                selectedEpisode: episodes[0]
+                selectedEpisode: episodes[0],
             })
         }
     }
@@ -96,7 +94,9 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         })
 
         if (index === undefined) {
-            index = this.state.episodes.findIndex(x => x === this.state.selectedEpisode)
+            index = this.state.episodes.findIndex(
+                (x) => x === this.state.selectedEpisode
+            )
         }
         const episode = this.state.episodes[index]
 
@@ -112,8 +112,10 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         this.player.current.play()
 
         // set all but current episode button to play; current to pause
-        this.episodeItems.forEach(episodeItem => {
-            episodeItem.current.setPlaying(index === episodeItem.current.props.index)
+        this.episodeItems.forEach((episodeItem) => {
+            episodeItem.current.setPlaying(
+                index === episodeItem.current.props.index
+            )
         })
     }
 
@@ -125,7 +127,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         this.player.current.pause()
 
         // set episode buttons to play
-        this.episodeItems.forEach(episodeItem => {
+        this.episodeItems.forEach((episodeItem) => {
             episodeItem.current.setPlaying(false)
         })
     }
@@ -193,7 +195,11 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     renderEpisode(index: number, key: number) {
         let title = this.state.episodes[index].title
         // try to use episode image, fall back to feed images
-        let image = this.state.episodes[index].image || this.state.episodes[index].feedImage || this.state.result.image || this.state.result.artwork
+        let image =
+            this.state.episodes[index].image ||
+            this.state.episodes[index].feedImage ||
+            this.state.result.image ||
+            this.state.result.artwork
         let link = this.state.episodes[index].link
         let description = this.state.episodes[index].description
         let datePublished = this.state.episodes[index].datePublished
@@ -221,21 +227,17 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     }
 
     render() {
-        const {loading, result, episodes} = this.state
+        const { loading, result, episodes } = this.state
         if ((result === undefined || episodes.length === 0) && !loading) {
             const errorMessage = `Unknown podcast ID: ${this.props.match.params.podcastId}`
             updateTitle(errorMessage)
-            return (
-                <div className="page-content">
-                    {errorMessage}
-                </div>
-            )
+            return <div className="page-content">{errorMessage}</div>
         }
         if (loading) {
-            updateTitle("Loading podcast ...")
+            updateTitle('Loading podcast ...')
             return (
-                <div className="loader-wrapper" style={{height: 300}}>
-                    <ReactLoading type="cylon" color="#e90000"/>
+                <div className="loader-wrapper" style={{ height: 300 }}>
+                    <ReactLoading type="cylon" color="#e90000" />
                 </div>
             )
         }

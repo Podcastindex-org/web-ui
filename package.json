@@ -65,7 +65,7 @@
         "webpack-dev-server": "^3.10.3"
     },
     "scripts": {
-        "start-originalAfterFork": "webpack-dev-server",
+        "dev": "webpack-dev-server",
         "build": "webpack",
         "production": "webpack && node server.js",
         "start": "node server.js",
