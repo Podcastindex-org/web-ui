@@ -125,6 +125,23 @@
     padding-left: 10px;
 }
 
+.podcastIndexApp a:link,
+.podcastIndexApp a:visited,
+.podcastIndexApp a:active {
+    color: #002752;
+    font-size: 20px;
+}
+.podcastIndexApp a:hover {
+    color: #cc2799;
+}
+
+.podcastIndexAppImage {
+    width:60px;
+    height:60px;
+    margin-bottom:8px;
+    margin-top:8px;
+}
+
 @media only screen and (min-width: 1168px) {
     /* tablets and desktop */
     .landing-content, .page-content {
