@@ -2,6 +2,7 @@
   {
     "appName": "Buzzsprout (Hosting)",
     "appUrl": "https://www.buzzsprout.com",
+    "appIconUrl": "/images/apps/buzzsprout.png",
     "supportedElements": [
       {
         "elementName": "Transcript",
@@ -28,6 +29,7 @@
   {
     "appName": "Podfriend (App)",
     "appUrl": "https://www.podfriend.com",
+    "appIconUrl": "/images/apps/podfriend.jpg",
     "supportedElements": [
       {
         "elementName": "Transcript",
@@ -40,12 +42,17 @@
       {
         "elementName": "Chapters",
         "elementURL": "https://twitter.com/adamcurry/status/1323417144378445831"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://twitter.com/GoPodfriend/status/1316847938828742656"
       }
     ]
   },
   {
     "appName": "Podverse (App)",
     "appUrl": "https://podverse.fm",
+    "appIconUrl": "/images/apps/podverse.jpg",
     "supportedElements": [
       {
         "elementName": "Funding",
@@ -64,6 +71,7 @@
   {
     "appName": "Podcast Addict (App)",
     "appUrl": "https://podcastaddict.com",
+    "appIconUrl": "/images/apps/podcastaddict.png",
     "supportedElements": [
       {
         "elementName": "Transcript",
@@ -72,12 +80,21 @@
       {
         "elementName": "Chapters",
         "elementURL": "https://podcastaddict.com/changelog/2020_16#section4"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://twitter.com/PodcastAddict/status/1319645267335933954"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://twitter.com/PodcastAddict/status/1319645267335933954"
       }
     ]
   },
   {
     "appName": "Podnews (News/Directory)",
     "appUrl": "https://podnews.net",
+    "appIconUrl": "/images/apps/podnews.jpg",
     "supportedElements": [
       {
         "elementName": "Transcript",
@@ -86,12 +103,17 @@
       {
         "elementName": "Locked",
         "elementURL": "https://podnews.net/rss"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://podnews.net"
       }
     ]
   },
   {
     "appName": "Podcastindex (Directory)",
     "appUrl": "https://podcastindex.org",
+    "appIconUrl": "/images/apps/podcastindex.jpg",
     "supportedElements": [
       {
         "elementName": "Transcript",
@@ -112,12 +134,21 @@
       {
         "elementName": "Soundbite",
         "elementURL": "https://podcastindex.org"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://podcastindex.org"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://podcastindex.org"
       }
     ]
   },
   {
     "appName": "podStation (App)",
     "appUrl": "https://chrome.google.com/webstore/detail/podstation-podcast-player/bpcagekijmfcocgjlnnhpdogbplajjfn",
+    "appIconUrl": "/images/apps/podstation.jpg",
     "supportedElements": [
       {
         "elementName": "Funding",
@@ -132,6 +163,7 @@
   {
     "appName": "Podcast Chapters (Mac App)",
     "appUrl": "https://chaptersapp.com",
+    "appIconUrl": "/images/apps/chaptersapp.jpg",
     "supportedElements": [
       {
         "elementName": "Chapters",
@@ -142,6 +174,7 @@
   {
     "appName": "Hypercatcher (App)",
     "appUrl": "https://hypercatcher.com",
+    "appIconUrl": "/images/apps/hypercatcher.jpg",
     "supportedElements": [
       {
         "elementName": "Chapters",
@@ -156,6 +189,7 @@
   {
     "appName": "Castopod (Hosting)",
     "appUrl": "https://podlibre.org/tag/castopod-server/",
+    "appIconUrl": "/images/apps/castopod.png",
     "supportedElements": [
       {
         "elementName": "Locked",
@@ -164,12 +198,21 @@
       {
         "elementName": "Funding",
         "elementURL": "https://podlibre.org/publish-your-podcast-on-all-platforms/#podcastindex"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://twitter.com/castopod/status/1331346407891083270"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://twitter.com/castopod/status/1331346407891083270"
       }
     ]
   },
   {
     "appName": "Fireside (Hosting)",
     "appUrl": "https://fireside.fm",
+    "appIconUrl": "/images/apps/fireside.jpg",
     "supportedElements": [
       {
         "elementName": "Transcript",
@@ -200,6 +243,7 @@
   {
     "appName": "Transistor (Hosting)",
     "appUrl": "https://transistor.fm",
+    "appIconUrl": "/images/apps/transistor.jpg",
     "supportedElements": [
       {
         "elementName": "Locked",
@@ -214,6 +258,7 @@
   {
     "appName": "PodServe (Hosting)",
     "appUrl": "https://podserve.fm",
+    "appIconUrl": "/images/apps/podserve.png",
     "supportedElements": [
       {
         "elementName": "Locked",
@@ -228,10 +273,26 @@
   {
     "appName": "Podcast GURU (App)",
     "appUrl": "https://podcastguru.io",
+    "appIconUrl": "/images/apps/podcastguru.jpg",
     "supportedElements": [
       {
         "elementName": "Search",
         "elementURL": "https://twitter.com/podcastguru_app/status/1325834426346041347"
+      }
+    ]
+  },
+  {
+    "appName": "Sphinx.chat (App)",
+    "appUrl": "https://sphinx.chat",
+    "appIconUrl": "/images/apps/sphinxchat.png",
+    "supportedElements": [
+      {
+        "elementName": "Value",
+        "elementURL": "https://twitter.com/MartyBent/status/1325892586985451520"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://twitter.com/MartyBent/status/1325892586985451520"
       }
     ]
   }

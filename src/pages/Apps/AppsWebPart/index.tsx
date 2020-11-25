@@ -65,8 +65,12 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps,AppsWe
                     id: 39,
                     name: "Search",
                     value: "Search"
+                },
+                {
+                    id: 40,
+                    name: "Value",
+                    value: "Value"
                 }
-
             ]
         };
     }
@@ -181,7 +185,7 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps,AppsWe
             (a1,a2) => { return (a1.appName).localeCompare(a2.appName); });
         return (
             <div className="podcastIndexAppsWebPart">
-               <h4>Application Support by Element</h4>
+               <h4>Applications Using the "Podcast" Namespace</h4>
                For elements that are included in the
                 official <a href="https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md">DTD</a>, we will highlight applications offering production support. Links should point to a public announcement or production example.
                 <h4>Elements</h4>
@@ -189,7 +193,7 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps,AppsWe
                { appsFilteredAndSorted.map((app,i) => (
                  <div className="podcastIndexApp" key={`${i}`}>
                      <div className="podcastIndexAppIcon">
-                         <img src="/images/pci_avatar.jpg" className="podcastIndexAppImage"></img>
+                         <img src={app.appIconUrl} className="podcastIndexAppImage"></img>
                     </div>
                        <div className="podcastIndexAppTitle">
                            <a href={app.appUrl}>{ (i+1) + ": "+ app.appName }</a>
