@@ -208,7 +208,7 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps, AppsW
                         <div className="podcastIndexAppSupportedElements">
                             {app.supportedElements.map((suppElement, j) => (
                                 <React.Fragment key={`${j}`}>
-                                    <a href={suppElement.elementURL}>{suppElement.elementName}</a>{", "}
+                                    {j > 0 && ", "}<a href={suppElement.elementURL}>{suppElement.elementName}</a>
                                 </React.Fragment>
                             ))
                             }
