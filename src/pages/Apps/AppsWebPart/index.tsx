@@ -189,9 +189,12 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps, AppsW
             <div className="podcastIndexAppsWebPart">
                 <h4>Applications Using the "Podcast" Namespace</h4>
                 For elements that are included in the
-                official <a href="https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md">DTD</a>,
+                official <a href="https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md">XMLNS document</a>,
                 we will highlight applications offering production support. Links should point to a public announcement
                 or production example.
+
+                The "Search" property listed below just means that the platform integrates with the Podcast Index directory search function.
+
                 <h4>Elements</h4>
                 {this.renderCheckboxes()}
                 {appsFilteredAndSorted.map((app, i) => (
