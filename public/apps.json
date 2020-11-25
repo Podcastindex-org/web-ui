@@ -1,6 +1,6 @@
 [
   {
-    "appName": "Buzzsprout",
+    "appName": "Buzzsprout (Hosting)",
     "appUrl": "https://www.buzzsprout.com",
     "supportedElements": [
       {
@@ -26,7 +26,7 @@
     ]
   },
   {
-    "appName": "Podfriend",
+    "appName": "Podfriend (App)",
     "appUrl": "https://www.podfriend.com",
     "supportedElements": [
       {
@@ -44,7 +44,7 @@
     ]
   },
   {
-    "appName": "Podverse",
+    "appName": "Podverse (App)",
     "appUrl": "https://podverse.fm",
     "supportedElements": [
       {
@@ -62,7 +62,7 @@
     ]
   },
   {
-    "appName": "Podcast Addict",
+    "appName": "Podcast Addict (App)",
     "appUrl": "https://podcastaddict.com",
     "supportedElements": [
       {
@@ -76,7 +76,7 @@
     ]
   },
   {
-    "appName": "Podnews",
+    "appName": "Podnews (News/Directory)",
     "appUrl": "https://podnews.net",
     "supportedElements": [
       {
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "appName": "Podcastindex",
+    "appName": "Podcastindex (Directory)",
     "appUrl": "https://podcastindex.org",
     "supportedElements": [
       {
@@ -116,17 +116,21 @@
     ]
   },
   {
-    "appName": "podStation",
+    "appName": "podStation (App)",
     "appUrl": "https://chrome.google.com/webstore/detail/podstation-podcast-player/bpcagekijmfcocgjlnnhpdogbplajjfn",
     "supportedElements": [
       {
         "elementName": "Funding",
         "elementURL": "https://chrome.google.com/webstore/detail/podstation-podcast-player/bpcagekijmfcocgjlnnhpdogbplajjfn"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://twitter.com/podStation_app/status/1309164054829826048"
       }
     ]
   },
   {
-    "appName": "Podcast Chapters",
+    "appName": "Podcast Chapters (Mac App)",
     "appUrl": "https://chaptersapp.com",
     "supportedElements": [
       {
@@ -136,17 +140,21 @@
     ]
   },
   {
-    "appName": "Hypercatcher",
+    "appName": "Hypercatcher (App)",
     "appUrl": "https://hypercatcher.com",
     "supportedElements": [
       {
         "elementName": "Chapters",
         "elementURL": "https://hypercatcher.com/2020/11/how-to-create-podcast-chapters-as-a-listener/"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://hypercatcher.com"
       }
     ]
   },
   {
-    "appName": "Castopod",
+    "appName": "Castopod (Hosting)",
     "appUrl": "https://podlibre.org/tag/castopod-server/",
     "supportedElements": [
       {
@@ -160,7 +168,7 @@
     ]
   },
   {
-    "appName": "Fireside",
+    "appName": "Fireside (Hosting)",
     "appUrl": "https://fireside.fm",
     "supportedElements": [
       {
@@ -190,10 +198,9 @@
     ]
   },
   {
-    "appName": "Transistor",
+    "appName": "Transistor (Hosting)",
     "appUrl": "https://transistor.fm",
     "supportedElements": [
-
       {
         "elementName": "Locked",
         "elementURL": "https://twitter.com/transistorfm"
@@ -205,10 +212,9 @@
     ]
   },
   {
-    "appName": "PodServe",
+    "appName": "PodServe (Hosting)",
     "appUrl": "https://podserve.fm",
     "supportedElements": [
-
       {
         "elementName": "Locked",
         "elementURL": "https://twitter.com/PodServeFM/status/1329960334967226373"
@@ -216,6 +222,16 @@
       {
         "elementName": "Funding",
         "elementURL": "https://twitter.com/PodServeFM/status/1329960334967226373"
+      }
+    ]
+  },
+  {
+    "appName": "Podcast GURU (App)",
+    "appUrl": "https://podcastguru.io",
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://twitter.com/podcastguru_app/status/1325834426346041347"
       }
     ]
   }
