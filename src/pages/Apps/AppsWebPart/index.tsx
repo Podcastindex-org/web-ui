@@ -203,7 +203,7 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps, AppsW
                             <img src={app.appIconUrl} className="podcastIndexAppImage"></img>
                         </div>
                         <div className="podcastIndexAppTitle">
-                            <a href={app.appUrl}>{(i + 1) + ": " + app.appName}</a>
+                            <a href={app.appUrl}>{app.appName}</a>
                         </div>
                         <div className="podcastIndexAppSupportedElements">
                             {app.supportedElements.map((suppElement, j) => (
