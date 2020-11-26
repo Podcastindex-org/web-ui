@@ -12,7 +12,9 @@ const api = require('podcast-index-api')(
     process.env.API_SECRET
 )
 
-app.use(express.static('www'))
+// ------------------------------------------------
+// ------------ Reverse proxy for API -------------
+// ------------------------------------------------
 
 app.use('/api/search/byterm', async (req, res) => {
     let term = req.query.q
@@ -38,18 +40,21 @@ app.use('/api/episodes/byfeedid', async (req, res) => {
     res.send(response)
 })
 
+// ------------------------------------------------
+// ---------- Static files for API data -----------
+// ------------------------------------------------
+
 app.use('/api/stats', async (req, res) => {
-    fs.readFile('./www/stats.json', 'utf8', (err, data) => {  
+    fs.readFile('./server/data/stats.json', 'utf8', (err, data) => {  
         // You should always specify the content type header,
         // when you don't use 'res.json' for sending JSON.  
         res.set('Content-Type', 'application/json');
         res.send(data)
       })
 })
-
 
 app.use('/api/apps', async (req, res) => {
-    fs.readFile('./www/apps.json', 'utf8', (err, data) => {  
+    fs.readFile('./server/data/apps.json', 'utf8', (err, data) => {  
         // You should always specify the content type header,
         // when you don't use 'res.json' for sending JSON.  
         res.set('Content-Type', 'application/json');
@@ -57,8 +62,17 @@ app.use('/api/apps', async (req, res) => {
       })
 })
 
+app.use('/api/images', express.static('./server/assets'))
 
-app.get('*', (req, res) => res.sendFile(path.resolve('www', 'index.html')))
+// ------------------------------------------------
+// ---------- Static content for client -----------
+// ------------------------------------------------
+
+app.use(express.static('./server/www'))
+app.get('*', (req, res) => res.sendFile(path.resolve('server', 'www', 'index.html')))
+
+// ------------------------------------------------
+
 
 const PORT = process.env.PORT || 333;
 
