@@ -1,6 +1,6 @@
 {
     "name": "podcastindex",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "license": "MIT",
     "private": true,
     "dependencies": {
@@ -67,8 +67,8 @@
     "scripts": {
         "dev": "webpack-dev-server",
         "build": "webpack",
-        "production": "NODE_ENV='production' && webpack && node server/index.js",
-        "start": "node server/index.js",
+        "production": "NODE_ENV='production' && webpack && node server",
+        "start": "node server",
         "test": "react-scripts test --env=jsdom",
         "eject": "react-scripts eject",
         "flow": "flow",
