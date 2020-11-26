@@ -247,11 +247,21 @@
         width: 100%;
     }
     .podcastIndexAppImage {
-        width: 30px !important;
-        height: 30px !important;;
-        margin-bottom: 8px;
-        margin-top: 8px;
+        width: 60px !important;
+        height: 60px !important;
+        margin-bottom: 13px;
+        margin-top: 20px;
         border: none !important;
+    }
+
+    .podcastIndexAppTitle {
+        width:70%;
+        margin-left:80px;
+
+    }
+
+    .podcastIndexAppSupportedElements {
+        display:none;
     }
 }
 
