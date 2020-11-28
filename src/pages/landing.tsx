@@ -78,7 +78,7 @@ export default class Landing extends React.Component<IProps, IState> {
                 <div className="hero-pitch">
                     <div className="hero-pitch-left">
                         <h1 className="hero-pitch-text">
-                            Let’s preserve podcasting as a platform for free
+                            Let's preserve podcasting as a platform for free
                             speech
                         </h1>
 
