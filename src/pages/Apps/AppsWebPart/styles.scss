@@ -1,11 +1,15 @@
+$gray-900: #0d0d16;
+$gray-800: #333333; //time to donate
+$gray-700: #4b4b58;
+
 .podcastIndexAppsWebPart {
     /*background-color: #e0e0e0;*/
     border-radius: 8px;
 }
 
 .podcastIndexApp {
-    background-color:transparent;
-    display:flex;
+    background-color: transparent;
+    display: flex;
     flex-direction: row;
     border-bottom: lightgray;
     border-bottom-width: 1px;
@@ -13,13 +17,13 @@
 }
 
 .podcastIndexElement {
-   background-color: transparent;
+    background-color: transparent;
 }
 
 .podcastIndexAppsCheckboxArea {
-    background-color: #DCDCDC;
+    background-color: #dcdcdc;
     border-radius: 5px;
-    padding-left: 3px;
+    padding: 4px;
     margin-bottom: 8px;
 }
 
@@ -30,25 +34,29 @@
 }
 
 .podcastIndexAppsCheckboxArea label {
-    margin-left:8px;
+    margin-left: 8px;
     display: inline-block;
     padding-right: 3px;
-} 
+}
 
 .podcastIndexAppsCheckboxArea label input[type='checkbox'] {
-    margin-left:-8px;
+    margin-left: -8px;
 }
 
 .podcastIndexAppImage {
-    border-radius: 5px; 
-    height: 33px; 
-    width: 33px; 
-    border: 1px solid rgb(203, 213, 224); 
-    box-sizing: border-box;                
+    border-radius: 5px;
+    height: 33px;
+    width: 33px;
+    border: 1px solid rgb(203, 213, 224);
+    box-sizing: border-box;
 }
 
-.podcastIndexAppTitle {
+.podcastIndexAppTitleAndType {
     width: 33%;
+
+    .podcastIndexAppTitle {
+        color: $gray-900;
+    }
 }
 
 .podcastIndexAppIcon {

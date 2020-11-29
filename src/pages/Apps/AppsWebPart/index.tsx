@@ -2,26 +2,25 @@ import * as React from 'react'
 
 import './styles.scss'
 
-
-interface AppsWebPartProps {
-}
+interface AppsWebPartProps {}
 
 interface AppsWebPartState {
-    appsUnfiltered: Array<any>;
+    appsUnfiltered: Array<any>
     // appsFiltered: Array<any>;
-    showChapters: boolean;
-    showFunding: boolean;
-    showTranscript: boolean;
-    showAll: boolean;
-    activeFilter: string[];
-    filterList: Array<{ id: number; name: string; value: string; }>;
+    showChapters: boolean
+    showFunding: boolean
+    showTranscript: boolean
+    showAll: boolean
+    activeFilter: string[]
+    filterList: Array<{ id: number; name: string; value: string }>
 }
 
-
-export default class AppsWebPart extends React.Component<AppsWebPartProps, AppsWebPartState> {
-
+export default class AppsWebPart extends React.Component<
+    AppsWebPartProps,
+    AppsWebPartState
+> {
     constructor(props: AppsWebPartProps) {
-        super(props);
+        super(props)
         this.state = {
             appsUnfiltered: [],
             // appsFiltered: [],
@@ -33,59 +32,59 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps, AppsW
             filterList: [
                 {
                     id: 33,
-                    name: "Transcript",
-                    value: "Transcript"
+                    name: 'Transcript',
+                    value: 'Transcript',
                 },
                 {
                     id: 34,
-                    name: "Locked",
-                    value: "Locked"
+                    name: 'Locked',
+                    value: 'Locked',
                 },
                 {
                     id: 35,
-                    name: "Funding",
-                    value: "Funding"
+                    name: 'Funding',
+                    value: 'Funding',
                 },
                 {
                     id: 36,
-                    name: "Chapters",
-                    value: "Chapters"
+                    name: 'Chapters',
+                    value: 'Chapters',
                 },
                 {
                     id: 37,
-                    name: "Soundbite",
-                    value: "Soundbite"
+                    name: 'Soundbite',
+                    value: 'Soundbite',
                 },
                 {
                     id: 38,
-                    name: "Person",
-                    value: "Person"
+                    name: 'Person',
+                    value: 'Person',
                 },
                 {
                     id: 39,
-                    name: "Search",
-                    value: "Search"
+                    name: 'Search',
+                    value: 'Search',
                 },
                 {
                     id: 40,
-                    name: "Value",
-                    value: "Value"
-                }
-            ]
-        };
+                    name: 'Value',
+                    value: 'Value',
+                },
+            ],
+        }
     }
 
-    _isMounted = false;
+    _isMounted = false
 
     async componentDidMount() {
-        this._isMounted = true;
+        this._isMounted = true
         //console.log("componentDidMount(): loading from JSON:")
-        const appsUnfiltered = await this.getApps();
-        const appsFiltered = [...appsUnfiltered];
-        console.log("fetched apps from JSON : ", appsUnfiltered);
+        const appsUnfiltered = await this.getApps()
+        const appsFiltered = [...appsUnfiltered]
+        console.log('fetched apps from JSON : ', appsUnfiltered)
         if (this._isMounted) {
             this.setState({
-                appsUnfiltered//, appsFiltered
+                appsUnfiltered, //, appsFiltered
             })
         }
     }
@@ -103,21 +102,23 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps, AppsW
     }
 
     onFilterChange(filter) {
-        const {filterList, activeFilter} = this.state;
-        if (filter === "ALL") {
+        const { filterList, activeFilter } = this.state
+        if (filter === 'ALL') {
             if (activeFilter.length === filterList.length) {
-                this.setState({activeFilter: []});
+                this.setState({ activeFilter: [] })
             } else {
-                this.setState({activeFilter: filterList.map(filter => filter.value)});
+                this.setState({
+                    activeFilter: filterList.map((filter) => filter.value),
+                })
             }
         } else {
             if (activeFilter.includes(filter)) {
-                const filterIndex = activeFilter.indexOf(filter);
-                const newFilter = [...activeFilter];
-                newFilter.splice(filterIndex, 1);
-                this.setState({activeFilter: newFilter});
+                const filterIndex = activeFilter.indexOf(filter)
+                const newFilter = [...activeFilter]
+                newFilter.splice(filterIndex, 1)
+                this.setState({ activeFilter: newFilter })
             } else {
-                this.setState({activeFilter: [...activeFilter, filter]});
+                this.setState({ activeFilter: [...activeFilter, filter] })
             }
         }
     }
@@ -128,94 +129,115 @@ export default class AppsWebPart extends React.Component<AppsWebPartProps, AppsW
                 Show:
                 <label>
                     <input
-                        onChange={() => this.onFilterChange("ALL")}
+                        onChange={() => this.onFilterChange('ALL')}
                         type="checkbox"
                         name="showAll"
-                        checked={this.state.activeFilter.length === this.state.filterList.length}
-                        className="podcastIndexAppsCheckbox">
-                    </input>
+                        checked={
+                            this.state.activeFilter.length ===
+                            this.state.filterList.length
+                        }
+                        className="podcastIndexAppsCheckbox"
+                    ></input>
                     All
                 </label>
-                {this.state.filterList.map(filter => (
+                {this.state.filterList.map((filter) => (
                     <span key={`checkboxArea${filter.id}`}>
-                <label>
-                    <input
-                        onChange={() => this.onFilterChange(filter.value)}
-                        type="checkbox"
-                        name={filter.name}
-                        checked={this.state.activeFilter.includes(filter.value)}
-                        className="podcastIndexAppsCheckbox">
-                    </input>
-                    {filter.name}
-                </label>
-            </span>
+                        <label>
+                            <input
+                                onChange={() =>
+                                    this.onFilterChange(filter.value)
+                                }
+                                type="checkbox"
+                                name={filter.name}
+                                checked={this.state.activeFilter.includes(
+                                    filter.value
+                                )}
+                                className="podcastIndexAppsCheckbox"
+                            ></input>
+                            {filter.name}
+                        </label>
+                    </span>
                 ))}
             </div>
         )
     }
 
     matchFound(anApp) {
-        const {activeFilter} = this.state;
+        const { activeFilter } = this.state
         //console.log("activeFilter=",activeFilter);
-        let matchFound: boolean = false;
+        let matchFound: boolean = false
         anApp.supportedElements.forEach(function (anElement) {
             //console.log("anElement.elementName=["+anElement.elementName+"]")
             if (activeFilter.includes(anElement.elementName)) {
                 //console.log("bingo!");
-                matchFound = true;
+                matchFound = true
             }
-        });
-        return matchFound;
+        })
+        return matchFound
     }
 
     render() {
-        const {filterList, activeFilter} = this.state;
+        const { filterList, activeFilter } = this.state
         //console.log("activeFilter=",activeFilter);
-        let appsFiltered: Array<any>;
+        let appsFiltered: Array<any>
         if (
             activeFilter.length === 0 ||
             activeFilter.length === filterList.length
         ) {
             //filteredList = this.state.searchLists;
-            appsFiltered = [...this.state.appsUnfiltered];
+            appsFiltered = [...this.state.appsUnfiltered]
         } else {
-            appsFiltered = this.state.appsUnfiltered.filter(anApp => this.matchFound(anApp));
+            appsFiltered = this.state.appsUnfiltered.filter((anApp) =>
+                this.matchFound(anApp)
+            )
         }
-        let appsFilteredAndSorted: Array<any> = appsFiltered.sort(
-            (a1, a2) => {
-                return (a1.appName).localeCompare(a2.appName);
-            });
+        let appsFilteredAndSorted: Array<any> = appsFiltered.sort((a1, a2) => {
+            return a1.appName.localeCompare(a2.appName)
+        })
         return (
             <div className="podcastIndexAppsWebPart">
                 <h4>Applications Using the "Podcast" Namespace</h4>
-                For elements that are included in the
-                official <a href="https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md">XMLNS document</a>,
-                we will highlight applications offering production support. Links should point to a public announcement
-                or production example.
-
-                The "Search" property listed below just means that the platform integrates with the Podcast Index directory search function.
-
+                For elements that are included in the official{' '}
+                <a href="https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md">
+                    XMLNS document
+                </a>
+                , we will highlight applications offering production support.
+                Links should point to a public announcement or production
+                example. The "Search" property listed below just means that the
+                platform integrates with the Podcast Index directory search
+                function.
                 <h4>Elements</h4>
                 {this.renderCheckboxes()}
                 {appsFilteredAndSorted.map((app, i) => (
                     <div className="podcastIndexApp" key={`${i}`}>
                         <div className="podcastIndexAppIcon">
-                            <img src={app.appIconUrl} className="podcastIndexAppImage"></img>
+                            <img
+                                src={app.appIconUrl}
+                                className="podcastIndexAppImage"
+                            ></img>
                         </div>
-                        <div className="podcastIndexAppTitle">
-                            <a href={app.appUrl}>{app.appName}</a>
+
+                        <div className="podcastIndexAppTitleAndType">
+                            <a
+                                className="podcastIndexAppTitle"
+                                href={app.appUrl}
+                            >
+                                {app.appName}
+                            </a>
                         </div>
+
                         <div className="podcastIndexAppSupportedElements">
                             {app.supportedElements.map((suppElement, j) => (
                                 <React.Fragment key={`${j}`}>
-                                    {j > 0 && ", "}<a href={suppElement.elementURL}>{suppElement.elementName}</a>
+                                    {j > 0 && ', '}
+                                    <a href={suppElement.elementURL}>
+                                        {suppElement.elementName}
+                                    </a>
                                 </React.Fragment>
-                            ))
-                            }
+                            ))}
                         </div>
                     </div>
-                ))
-                }
+                ))}
             </div>
         )
     }
