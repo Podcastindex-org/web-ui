@@ -327,9 +327,11 @@
         ]
     },
     {
-        "appName": "AntennaPod (App)",
+        "appName": "AntennaPod",
+        "appType": "app",
         "appUrl": "https://www.antennapod.org",
         "appIconUrl": "/images/apps/antennapod.png",
+        "platforms": ["Android"],
         "supportedElements": [
             {
                 "elementName": "Search",
