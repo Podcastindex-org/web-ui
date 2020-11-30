@@ -4,7 +4,7 @@
         "appType": "hosting",
         "appUrl": "https://www.buzzsprout.com",
         "appIconUrl": "/images/apps/buzzsprout.png",
-        "platforms": false,
+        "platforms": ["N/A"],
         "supportedElements": [
             {
                 "elementName": "Transcript",

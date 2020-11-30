@@ -9,12 +9,17 @@ $gray-700: #4b4b58;
 
 .podcastIndexApp {
     background-color: transparent;
-    display: flex;
-    flex-direction: row;
-}
 
-.podcastIndexElement {
-    background-color: transparent;
+    a:link,
+    a:visited,
+    a:active {
+        display: inline-block;
+        color: #002752;
+    }
+
+    a:hover {
+        color: #cc2799;
+    }
 }
 
 .podcastIndexAppsCheckboxArea {
@@ -44,46 +49,53 @@ $gray-700: #4b4b58;
     margin-left: -8px;
 }
 
+.podcastIndexAppsTable {
+    margin-top: 24px;
+}
+
+.podcastIndexAppsTableHeaders th {
+    text-align: start;
+}
+
 .podcastIndexAppImage {
     width: 60px;
     height: 60px;
 
-    margin-bottom: 8px;
-    margin-top: 8px;
+    margin: 8px 0;
 
     border-radius: 5px;
     box-sizing: border-box;
-}
-
-.podcastIndexApp {
-    a:link,
-    a:visited,
-    a:active {
-        display: inline-block;
-        margin-top: 24px;
-        color: #002752;
-        font-size: 20px;
-    }
-
-    a:hover {
-        color: #cc2799;
-    }
-}
-
-.podcastIndexAppTitleAndType {
-    width: 33%;
-
-    .podcastIndexAppTitle {
-        color: $gray-900;
-    }
 }
 
 .podcastIndexAppIcon {
     width: 10%;
 }
 
+.podcastIndexAppTitleAndTypeCell {
+    width: 30%;
+}
+
+.podcastIndexAppTitleAndType {
+    margin-left: 8px;
+
+    .podcastIndexAppTitle {
+        font-size: 24px;
+    }
+    .podcastIndexAppType {
+        color: $gray-700;
+
+        margin: 0;
+    }
+}
+
 .podcastIndexAppSupportedElements {
-    width: 55%;
+    width: 30%;
+}
+
+.podcastIndexAppPlatforms {
+    width: 20%;
+
+    margin-left: 24px;
 }
 
 @media only screen and (max-width: 767px) {
