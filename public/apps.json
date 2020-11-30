@@ -295,5 +295,16 @@
         "elementURL": "https://twitter.com/MartyBent/status/1325892586985451520"
       }
     ]
+  },
+  {
+    "appName": "AntennaPod (App)",
+    "appUrl": "https://www.antennapod.org",
+    "appIconUrl": "/images/apps/antennapod.png",
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://github.com/AntennaPod/AntennaPod/pull/4435"
+      }
+    ]
   }
 ]
