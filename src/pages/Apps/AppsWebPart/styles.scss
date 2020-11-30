@@ -37,7 +37,7 @@
         [image-start] 60px
         [image-end name-start] 1fr
         [name-end elements-start] 1fr
-        [elements-end platforms-start] 128px
+        [elements-end platforms-start] 192px
         [platforms-end];
     grid-template-rows: 30px;
 
@@ -58,7 +58,7 @@
 .podcastIndexAppsHeader {
     align-self: end;
 
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     margin: 0;
 }
@@ -82,19 +82,20 @@
     }
     .podcastIndexAppType {
         color: #4b4b58;
-
         margin: 0;
     }
 }
 
 .podcastIndexAppSupportedElements {
     align-self: center;
+    line-height: 1.5;
 }
 
 .podcastIndexAppPlatforms {
     align-self: center;
 
     color: #333333;
+    line-height: 1.5;
 }
 
 @media only screen and (max-width: 767px) {
