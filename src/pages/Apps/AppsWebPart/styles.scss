@@ -1,25 +1,6 @@
-$gray-900: #0d0d16;
-$gray-800: #333333; //time to donate
-$gray-700: #4b4b58;
-
 .podcastIndexAppsWebPart {
     /*background-color: #e0e0e0;*/
     border-radius: 8px;
-}
-
-.podcastIndexApp {
-    background-color: transparent;
-
-    a:link,
-    a:visited,
-    a:active {
-        display: inline-block;
-        color: #002752;
-    }
-
-    a:hover {
-        color: #cc2799;
-    }
 }
 
 .podcastIndexAppsCheckboxArea {
@@ -49,70 +30,88 @@ $gray-700: #4b4b58;
     margin-left: -8px;
 }
 
-.podcastIndexAppsTable {
+.podcastIndexApps {
+    display: grid;
+    gap: 16px 32px;
+    grid-template-columns:
+        [image-start] 60px
+        [image-end name-start] 1fr
+        [name-end elements-start] 1fr
+        [elements-end platforms-start] 128px
+        [platforms-end];
+    grid-template-rows: 30px;
+
     margin-top: 24px;
+
+    a:link,
+    a:visited,
+    a:active {
+        display: inline-block;
+        color: #002752;
+    }
+
+    a:hover {
+        color: #cc2799;
+    }
 }
 
-.podcastIndexAppsTableHeaders th {
-    text-align: start;
-}
+.podcastIndexAppsHeader {
+    align-self: end;
 
-.podcastIndexAppImage {
-    width: 60px;
-    height: 60px;
-
-    margin: 8px 0;
-
-    border-radius: 5px;
-    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
 }
 
 .podcastIndexAppIcon {
-    width: 10%;
-}
+    align-self: center;
 
-.podcastIndexAppTitleAndTypeCell {
-    width: 30%;
+    img {
+        width: 60px;
+        height: 60px;
+
+        border-radius: 5px;
+    }
 }
 
 .podcastIndexAppTitleAndType {
-    margin-left: 8px;
+    align-self: center;
 
     .podcastIndexAppTitle {
         font-size: 24px;
     }
     .podcastIndexAppType {
-        color: $gray-700;
+        color: #4b4b58;
 
         margin: 0;
     }
 }
 
 .podcastIndexAppSupportedElements {
-    width: 30%;
+    align-self: center;
 }
 
 .podcastIndexAppPlatforms {
-    width: 20%;
+    align-self: center;
 
-    margin-left: 24px;
+    color: #333333;
 }
 
 @media only screen and (max-width: 767px) {
-    .podcastIndexAppImage {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 13px;
-        margin-top: 20px;
-        border: none;
-    }
+    .podcastIndexApps {
+        display: grid;
+        column-gap: 48px;
+        grid-template-columns:
+            [image-start] 60px
+            [image-end name-start] 1fr
+            [name-end];
+        grid-template-rows: none;
 
-    .podcastIndexAppTitle {
-        width: 70%;
-        margin-left: 80px;
+        margin-top: 24px;
     }
-
-    .podcastIndexAppSupportedElements {
+    .podcastIndexAppsHeader,
+    .podcastIndexAppSupportedElements,
+    .podcastIndexAppPlatforms {
         display: none;
     }
 }

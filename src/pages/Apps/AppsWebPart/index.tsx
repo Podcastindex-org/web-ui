@@ -208,66 +208,53 @@ export default class AppsWebPart extends React.Component<
                 function.
                 <h4>Elements</h4>
                 {this.renderCheckboxes()}
-                <table className="podcastIndexAppsTable">
-                    <thead className="podcastIndexAppsTableHeaders">
-                        <tr>
-                            <th></th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Supported Elements</th>
-                            <th scope="col">Platforms</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {appsFilteredAndSorted.map((app, i) => (
-                            <tr className="podcastIndexApp" key={`${i}`}>
-                                <td className="podcastIndexAppIcon">
-                                    <img
-                                        src={app.appIconUrl}
-                                        className="podcastIndexAppImage"
-                                    ></img>
-                                </td>
+                <div className="podcastIndexApps">
+                    <div className="podcastIndexAppsHeader" />
+                    <h4 className="podcastIndexAppsHeader">App</h4>
+                    <h4 className="podcastIndexAppsHeader">
+                        Supported Elements
+                    </h4>
+                    <h4 className="podcastIndexAppsHeader">Platforms</h4>
+                    {appsFilteredAndSorted.map((app, i) => (
+                        <React.Fragment key={`${i}`}>
+                            <div className="podcastIndexAppIcon">
+                                <img src={app.appIconUrl}></img>
+                            </div>
 
-                                <td className="podcastIndexAppTitleAndType">
-                                    <a
-                                        className="podcastIndexAppTitle"
-                                        href={app.appUrl}
-                                    >
-                                        {app.appName}
-                                    </a>
-                                    <p className="podcastIndexAppType">
-                                        {app.appType}
-                                    </p>
-                                </td>
+                            <div className="podcastIndexAppTitleAndType">
+                                <a
+                                    className="podcastIndexAppTitle"
+                                    href={app.appUrl}
+                                >
+                                    {app.appName}
+                                </a>
+                                <p className="podcastIndexAppType">
+                                    {app.appType}
+                                </p>
+                            </div>
 
-                                <td className="podcastIndexAppSupportedElements">
-                                    {app.supportedElements.map(
-                                        (suppElement, j) => (
-                                            <React.Fragment key={`${j}`}>
-                                                {j > 0 && ', '}
-                                                <a
-                                                    href={
-                                                        suppElement.elementURL
-                                                    }
-                                                >
-                                                    {suppElement.elementName}
-                                                </a>
-                                            </React.Fragment>
-                                        )
-                                    )}
-                                </td>
+                            <div className="podcastIndexAppSupportedElements">
+                                {app.supportedElements.map((suppElement, j) => (
+                                    <React.Fragment key={`${j}`}>
+                                        {j > 0 && ', '}
+                                        <a href={suppElement.elementURL}>
+                                            {suppElement.elementName}
+                                        </a>
+                                    </React.Fragment>
+                                ))}
+                            </div>
 
-                                <td className="podcastIndexAppPlatforms">
-                                    {app.platforms.map((platform, j) => (
-                                        <React.Fragment key={`${j}`}>
-                                            {j > 0 && ', '}
-                                            {platform}
-                                        </React.Fragment>
-                                    ))}
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+                            <div className="podcastIndexAppPlatforms">
+                                {app.platforms.map((platform, j) => (
+                                    <React.Fragment key={`${j}`}>
+                                        {j > 0 && ', '}
+                                        {platform}
+                                    </React.Fragment>
+                                ))}
+                            </div>
+                        </React.Fragment>
+                    ))}
+                </div>
             </div>
         )
     }
