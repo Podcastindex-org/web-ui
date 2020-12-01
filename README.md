@@ -10,17 +10,17 @@ You should see a `.env-example` file. Copy this and remove the `-example`. The f
 
 ### Starting the dev server
 
-In order to have the UI hot reload for development, we utilized `webpack-dev-server` this allows for easier debugging, etc. In order for the dev-server to connect to the API, you must first have set the `.env` file variables and have started the server with `node server.js` 
+In order to have the UI hot reload for development, we utilized `webpack-dev-server` this allows for easier debugging, etc. In order for the dev-server to connect to the API, you must first have set the `.env` file variables and have started the server with `node server.js`
 
 ```zsh
 # Install dependencies
-npm install
+yarn install
 
-# Start app
-npm start
+# Build the app
+yarn build
 
 # Start the node server in another terminal window.
-node server.js
+yarn start
 ```
 
 ## Running production
@@ -32,7 +32,7 @@ To start the server, simply run after setting the `.env` file
 The below script will compile the code and then start the node server.
 
 ```zsh
-npm run production
+yarn production
 ```
 
 ## TODO
