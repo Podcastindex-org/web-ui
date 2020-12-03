@@ -2,7 +2,8 @@
     box-sizing: border-box;
 }
 
-.landing-content, .page-content {
+.landing-content,
+.page-content {
     position: relative;
     z-index: 1;
     padding: 0 10px 20px 10px;
@@ -82,7 +83,8 @@
         width: 100%;
         display: inline-flex;
     }
-    .paypal, .sphinx-chat {
+    .paypal,
+    .sphinx-chat {
         width: 50%;
         text-align: center;
         align-items: center;
@@ -116,45 +118,10 @@
     border-top: 1px solid #dbdbdb;
 }
 
-.podcastIndexAppsWebPart h4 {
-    font-size: 20px !important;
-    padding-top: 20px;
-    padding-bottom: 10px;
-}
-
-.podcastIndexAppsCheckboxArea label {
-    padding-left: 10px;
-}
-
-.podcastIndexApp {
-    border-bottom:none !important;
-}
-
-.podcastIndexApp a:link,
-.podcastIndexApp a:visited,
-.podcastIndexApp a:active {
-    display:inline-block;
-    margin-top:24px;
-    color: #002752;
-    font-size: 20px;
-}
-
-.podcastIndexApp a:hover {
-    color: #cc2799;
-}
-
-.podcastIndexAppImage {
-    width: 60px !important;
-    height: 60px !important;;
-    margin-bottom: 8px;
-    margin-top: 8px;
-    border: none !important;
-}
-
-
 @media only screen and (min-width: 1168px) {
     /* tablets and desktop */
-    .landing-content, .page-content {
+    .landing-content,
+    .page-content {
         width: 1108px;
     }
     .hero-pitch {
@@ -165,7 +132,8 @@
 /* TABLETS PORTRAIT */
 @media only screen and (max-width: 1167px) {
     /* tablets and desktop */
-    .landing-content, .page-content {
+    .landing-content,
+    .page-content {
         min-width: 768px;
         width: calc(100% - 40px);
     }
@@ -191,7 +159,8 @@
             display: flex;
             flex-direction: column;
         }
-        .paypal, .sphinx-chat {
+        .paypal,
+        .sphinx-chat {
             width: 100%;
         }
     }
@@ -241,27 +210,11 @@
         margin-bottom: 40px;
     }
     /* phones */
-    .landing-content, .page-content {
+    .landing-content,
+    .page-content {
         min-width: 350px;
         max-width: 600px;
         width: 100%;
-    }
-    .podcastIndexAppImage {
-        width: 60px !important;
-        height: 60px !important;
-        margin-bottom: 13px;
-        margin-top: 20px;
-        border: none !important;
-    }
-
-    .podcastIndexAppTitle {
-        width:70%;
-        margin-left:80px;
-
-    }
-
-    .podcastIndexAppSupportedElements {
-        display:none;
     }
 }
 
