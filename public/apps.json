@@ -338,5 +338,18 @@
                 "elementURL": "https://github.com/AntennaPod/AntennaPod/pull/4435"
             }
         ]
+    },
+    {
+        "appName": "CastCoverage",
+        "appType": "app",
+        "appUrl": "http://castcoverage.com",
+        "appIconUrl": "/images/apps/castcoverage.png",
+        "platforms": ["Web"],
+        "supportedElements": [
+            {
+                "elementName": "Search",
+                "elementURL": "http://castcoverage.com"
+            }
+        ]
     }
 ]
