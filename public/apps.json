@@ -207,7 +207,7 @@
     {
         "appName": "Castopod",
         "appType": "hosting",
-        "appUrl": "https://podlibre.org/tag/castopod-server/",
+        "appUrl": "https://castopod.org/",
         "appIconUrl": "/images/apps/castopod.png",
         "platforms": ["N/A"],
         "supportedElements": [
@@ -221,12 +221,16 @@
             },
             {
                 "elementName": "Transcript",
-                "elementURL": "https://twitter.com/castopod/status/1331346407891083270"
+                "elementURL": "https://podlibre.org/castopod-supports-chapters-and-transcript-tags/"
             },
             {
                 "elementName": "Chapters",
-                "elementURL": "https://twitter.com/castopod/status/1331346407891083270"
-            }
+                "elementURL": "https://podlibre.org/castopod-supports-chapters-and-transcript-tags/"
+            },
+            {
+                "elementName": "Soundbite",
+                "elementURL": "https://podlibre.org/castopod-supports-soundbite-tag/"
+            }  
         ]
     },
     {
