@@ -60,6 +60,16 @@ export default class AppsWebPart extends React.Component<
                     name: 'Person',
                     value: 'Person',
                 },
+                {
+                    id: 39,
+                    name: 'Search',
+                    value: 'Search',
+                },
+                {
+                    id: 40,
+                    name: 'Value',
+                    value: 'Value',
+                },
             ],
         }
     }
@@ -208,9 +218,7 @@ export default class AppsWebPart extends React.Component<
                     {appsFilteredAndSorted.map((app, i) => (
                         <React.Fragment key={`${i}`}>
                             <div className="podcastIndexAppIcon">
-                                <img
-                                    src={`${document.location.origin}/api/images/${app.appIconUrl}`}
-                                ></img>
+                                <img src={app.appIconUrl}></img>
                             </div>
 
                             <div className="podcastIndexAppTitleAndType">

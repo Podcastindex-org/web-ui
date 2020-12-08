@@ -1,8 +1,10 @@
 [
     {
-        "appName": "Buzzsprout (Hosting)",
+        "appName": "Buzzsprout",
+        "appType": "hosting",
         "appUrl": "https://www.buzzsprout.com",
         "appIconUrl": "buzzsprout.png",
+        "platforms": ["N/A"],
         "supportedElements": [
             {
                 "elementName": "Transcript",
@@ -27,9 +29,11 @@
         ]
     },
     {
-        "appName": "Podfriend (App)",
+        "appName": "Podfriend",
+        "appType": "app",
         "appUrl": "https://www.podfriend.com",
         "appIconUrl": "podfriend.jpg",
+        "platforms": ["Windows", "Web"],
         "supportedElements": [
             {
                 "elementName": "Transcript",
@@ -50,9 +54,11 @@
         ]
     },
     {
-        "appName": "Podverse (App)",
+        "appName": "Podverse",
+        "appType": "app",
         "appUrl": "https://podverse.fm",
         "appIconUrl": "podverse.jpg",
+        "platforms": ["iOS", "Android", "Web"],
         "supportedElements": [
             {
                 "elementName": "Funding",
@@ -69,9 +75,11 @@
         ]
     },
     {
-        "appName": "Podcast Addict (App)",
+        "appName": "Podcast Addict",
+        "appType": "app",
         "appUrl": "https://podcastaddict.com",
         "appIconUrl": "podcastaddict.png",
+        "platforms": ["Android", "Web"],
         "supportedElements": [
             {
                 "elementName": "Transcript",
@@ -92,9 +100,11 @@
         ]
     },
     {
-        "appName": "Podnews (News/Directory)",
+        "appName": "Podnews",
+        "appType": "news / directory",
         "appUrl": "https://podnews.net",
         "appIconUrl": "podnews.jpg",
+        "platforms": ["Email"],
         "supportedElements": [
             {
                 "elementName": "Transcript",
@@ -111,9 +121,11 @@
         ]
     },
     {
-        "appName": "Podcastindex (Directory)",
+        "appName": "Podcastindex",
+        "appType": "directory",
         "appUrl": "https://podcastindex.org",
         "appIconUrl": "podcastindex.jpg",
+        "platforms": ["N/A"],
         "supportedElements": [
             {
                 "elementName": "Transcript",
@@ -146,9 +158,11 @@
         ]
     },
     {
-        "appName": "podStation (App)",
+        "appName": "podStation",
+        "appType": "browser extension",
         "appUrl": "https://chrome.google.com/webstore/detail/podstation-podcast-player/bpcagekijmfcocgjlnnhpdogbplajjfn",
         "appIconUrl": "podstation.jpg",
+        "platforms": ["Chrome"],
         "supportedElements": [
             {
                 "elementName": "Funding",
@@ -161,9 +175,11 @@
         ]
     },
     {
-        "appName": "Podcast Chapters (Mac App)",
+        "appName": "Podcast Chapters",
+        "appType": "app",
         "appUrl": "https://chaptersapp.com",
         "appIconUrl": "chaptersapp.jpg",
+        "platforms": ["macOS"],
         "supportedElements": [
             {
                 "elementName": "Chapters",
@@ -172,9 +188,11 @@
         ]
     },
     {
-        "appName": "Hypercatcher (App)",
+        "appName": "Hypercatcher",
+        "appType": "app",
         "appUrl": "https://hypercatcher.com",
         "appIconUrl": "hypercatcher.jpg",
+        "platforms": ["iOS"],
         "supportedElements": [
             {
                 "elementName": "Chapters",
@@ -187,9 +205,11 @@
         ]
     },
     {
-        "appName": "Castopod (Hosting)",
-        "appUrl": "https://podlibre.org/tag/castopod-server/",
+        "appName": "Castopod",
+        "appType": "hosting",
+        "appUrl": "https://castopod.org/",
         "appIconUrl": "castopod.png",
+        "platforms": ["N/A"],
         "supportedElements": [
             {
                 "elementName": "Locked",
@@ -201,18 +221,24 @@
             },
             {
                 "elementName": "Transcript",
-                "elementURL": "https://twitter.com/castopod/status/1331346407891083270"
+                "elementURL": "https://podlibre.org/castopod-supports-chapters-and-transcript-tags/"
             },
             {
                 "elementName": "Chapters",
-                "elementURL": "https://twitter.com/castopod/status/1331346407891083270"
+                "elementURL": "https://podlibre.org/castopod-supports-chapters-and-transcript-tags/"
+            },
+            {
+                "elementName": "Soundbite",
+                "elementURL": "https://podlibre.org/castopod-supports-soundbite-tag/"
             }
         ]
     },
     {
-        "appName": "Fireside (Hosting)",
+        "appName": "Fireside",
+        "appType": "hosting",
         "appUrl": "https://fireside.fm",
         "appIconUrl": "fireside.jpg",
+        "platforms": ["N/A"],
         "supportedElements": [
             {
                 "elementName": "Transcript",
@@ -241,9 +267,11 @@
         ]
     },
     {
-        "appName": "Transistor (Hosting)",
+        "appName": "Transistor",
+        "appType": "hosting",
         "appUrl": "https://transistor.fm",
         "appIconUrl": "transistor.jpg",
+        "platforms": ["N/A"],
         "supportedElements": [
             {
                 "elementName": "Locked",
@@ -256,9 +284,11 @@
         ]
     },
     {
-        "appName": "PodServe (Hosting)",
+        "appName": "PodServe",
+        "appType": "hosting",
         "appUrl": "https://podserve.fm",
         "appIconUrl": "podserve.png",
+        "platforms": ["N/A"],
         "supportedElements": [
             {
                 "elementName": "Locked",
@@ -271,9 +301,11 @@
         ]
     },
     {
-        "appName": "Podcast GURU (App)",
+        "appName": "Podcast GURU",
+        "appType": "app",
         "appUrl": "https://podcastguru.io",
         "appIconUrl": "podcastguru.jpg",
+        "platforms": ["Android", "Web"],
         "supportedElements": [
             {
                 "elementName": "Search",
@@ -282,9 +314,11 @@
         ]
     },
     {
-        "appName": "Sphinx.chat (App)",
+        "appName": "Sphinx.chat",
+        "appType": "app",
         "appUrl": "https://sphinx.chat",
         "appIconUrl": "sphinxchat.png",
+        "platforms": ["iOS", "Android", "macOS", "Windows", "Linux"],
         "supportedElements": [
             {
                 "elementName": "Value",
@@ -297,13 +331,28 @@
         ]
     },
     {
-        "appName": "AntennaPod (App)",
+        "appName": "AntennaPod",
+        "appType": "app",
         "appUrl": "https://www.antennapod.org",
         "appIconUrl": "antennapod.png",
+        "platforms": ["Android"],
         "supportedElements": [
             {
                 "elementName": "Search",
                 "elementURL": "https://github.com/AntennaPod/AntennaPod/pull/4435"
+            }
+        ]
+    },
+    {
+        "appName": "CastCoverage",
+        "appType": "app",
+        "appUrl": "http://castcoverage.com",
+        "appIconUrl": "castcoverage.png",
+        "platforms": ["Web"],
+        "supportedElements": [
+            {
+                "elementName": "Search",
+                "elementURL": "http://castcoverage.com"
             }
         ]
     }

@@ -5,8 +5,8 @@ import Button from '../components/Button'
 import RecentPodcasts from '../components/RecentPodcasts'
 import StatsCard from './Stats/StatsCard'
 import RSSLogo from '../../images/feed.svg'
-import {updateTitle} from "../utils";
-import SphinxChat from "../components/SphinxChat";
+import { updateTitle } from '../utils'
+import SphinxChat from '../components/SphinxChat'
 
 import './styles.scss'
 
@@ -72,7 +72,7 @@ export default class Landing extends React.Component<IProps, IState> {
 
     render() {
         const { loading, recentPodcasts, stats } = this.state
-        updateTitle("Home")
+        updateTitle('Home')
         return (
             <div className="landing-content">
                 <div className="hero-pitch">
@@ -104,7 +104,7 @@ export default class Landing extends React.Component<IProps, IState> {
                                 target="_blank"
                                 href="http://mp3s.nashownotes.com/pc20rss.xml"
                             >
-                                <img src={RSSLogo}/>
+                                <img src={RSSLogo} />
                             </a>
                         </div>
                     </div>
@@ -191,8 +191,8 @@ export default class Landing extends React.Component<IProps, IState> {
                         Follow us on the blog:{' '}
                         <a href="https://blog.podcastindex.org/">
                             blog.podcastindex.org
-                        </a>
-                        {' '}or on{' '}
+                        </a>{' '}
+                        or on{' '}
                         <a href="https://twitter.com/PodcastindexOrg">
                             Twitter
                         </a>
@@ -225,7 +225,11 @@ export default class Landing extends React.Component<IProps, IState> {
                                 method="post"
                                 target="_top"
                             >
-                                <input type="hidden" name="cmd" value="_s-xclick"/>
+                                <input
+                                    type="hidden"
+                                    name="cmd"
+                                    value="_s-xclick"
+                                />
                                 <input
                                     type="hidden"
                                     name="hosted_button_id"
@@ -243,7 +247,7 @@ export default class Landing extends React.Component<IProps, IState> {
                         </div>
                         <div className="sphinx-chat">
                             <h4>Sphinx Chat</h4>
-                            <SphinxChat/>
+                            <SphinxChat />
                         </div>
                     </div>
                 </div>
