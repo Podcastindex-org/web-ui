@@ -102,12 +102,38 @@
 }
 
 .podcastIndexAppsWebPart h4 {
+    font-size: 20px !important;
     padding-top: 20px;
     padding-bottom: 10px;
 }
 
 .podcastIndexAppsCheckboxArea label {
     padding-left: 10px;
+}
+
+.podcastIndexApp {
+    border-bottom: none !important;
+}
+
+.podcastIndexApp a:link,
+.podcastIndexApp a:visited,
+.podcastIndexApp a:active {
+    display: inline-block;
+    margin-top: 24px;
+    color: #002752;
+    font-size: 20px;
+}
+
+.podcastIndexApp a:hover {
+    color: #cc2799;
+}
+
+.podcastIndexAppImage {
+    width: 60px !important;
+    height: 60px !important;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    border: none !important;
 }
 
 @media only screen and (min-width: 1168px) {
@@ -207,6 +233,22 @@
         min-width: 350px;
         max-width: 600px;
         width: 100%;
+    }
+    .podcastIndexAppImage {
+        width: 60px !important;
+        height: 60px !important;
+        margin-bottom: 13px;
+        margin-top: 20px;
+        border: none !important;
+    }
+
+    .podcastIndexAppTitle {
+        width: 70%;
+        margin-left: 80px;
+    }
+
+    .podcastIndexAppSupportedElements {
+        display: none;
     }
 }
 
