@@ -1,6 +1,6 @@
 {
     "name": "podcastindex",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "license": "MIT",
     "private": true,
     "dependencies": {
@@ -45,7 +45,7 @@
         "@storybook/preset-create-react-app": "^3.1.4",
         "@storybook/react": "^6.0.21",
         "babel-loader": "^8.1.0",
-        "copy-webpack-plugin": "^6.2.1",
+        "copy-webpack-plugin": "^6.3.2",
         "css-loader": "^3.4.2",
         "favicons-webpack-plugin": "^4.2.0",
         "file-loader": "^6.1.0",
@@ -65,10 +65,10 @@
         "webpack-dev-server": "^3.10.3"
     },
     "scripts": {
-        "start-originalAfterFork": "webpack-dev-server",
+        "dev": "webpack-dev-server",
         "build": "webpack",
-        "production": "webpack && node server.js",
-        "start": "node server.js",
+        "production": "NODE_ENV='production' && webpack && node server",
+        "start": "node server",
         "test": "react-scripts test --env=jsdom",
         "eject": "react-scripts eject",
         "flow": "flow",

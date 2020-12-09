@@ -1,6 +1,41 @@
-# PodcastIndex web and dev UI
+# PodcastIndex Web UI
 
-This is the UI for the public and dev portal
+Podcast Web UI is a project that houses the code for the React app and express server for [podcastindex.org](https://podcastindex.org/).
+
+- Landing page for PodcastIndex.
+- Search for podcasts in index.
+- Simple podcast player for listening
+- List of apps using the PodcastIndex
+- Documentation and developer login for credential management
+
+## Project Structure
+
+The project is split into two folders, `ui`, and `server`.
+
+    .
+    ├── ...
+    ├── ui
+    │   ├── public      # Static files for index.html and favicon
+    │   ├── fonts       # Fonts used in the UI
+    │   ├── images      # Images and icons that are part of the UI
+    │   └── src         # All React and client code
+    ├── server
+    │   ├── assets      # static files that are dynamically updated
+    │   ├── data        # static data files (ie. json) that are dynamically updated
+    │   └── index.js    # express app that serves the UI and is a reverse proxy (replaces need for NGINX)
+    └── ...
+
+The folder `ui` houses all the React and client based code and assets.
+
+The folder `server` houses all of the API, static server data, and the reverse proxy to the PodcastIndex API using [`comster/podcast-index-api`](https://github.com/comster/podcast-index-api).
+
+### Server `data` and `assets`
+
+The reason to build a custom express server for serving React and other data is due to the need for script updated `.json` files and dynamically adding apps to the `/apps` page. This data should not be bundled with the client compiled code.
+
+### CORS
+
+The custom express server also is used to [reverse proxy](https://en.wikipedia.org/wiki/Reverse_proxy#:~:text=In%20computer%20networks%2C%20a%20reverse,the%20reverse%20proxy%20server%20itself.) requests through the same domain to prevent [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) issues. Using the same domain to server up the UI content and to send api requests prevents CORS issues in modern browsers.
 
 ## Getting Started
 
@@ -16,11 +51,11 @@ In order to have the UI hot reload for development, we utilized `webpack-dev-ser
 # Install dependencies
 npm install
 
-# Start app
-npm start
+# Start dev server
+npm run dev
 
 # Start the node server in another terminal window.
-node server.js
+node server
 ```
 
 ## Running production
@@ -32,10 +67,18 @@ To start the server, simply run after setting the `.env` file
 The below script will compile the code and then start the node server.
 
 ```zsh
-npm run production
+npm run build
+npm start
 ```
+
+## Tech List
+
+- [Express](https://expressjs.com/)
+- [React](https://reactjs.org/)
+- [Webpack](https://webpack.js.org/)
 
 ## TODO
 
 -   Font should load through webpack properly
 -   Better image loading handling in the search results page.
+-   Developers page and login

@@ -1,0 +1,116 @@
+@media only screen and (min-width: 1168px) {
+    /* tablets and desktop */
+    .landing-content,
+    .page-content {
+        width: 1108px;
+    }
+    .hero-pitch {
+        flex-direction: row;
+    }
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (max-width: 1167px) {
+    /* tablets and desktop */
+    .landing-content,
+    .page-content {
+        min-width: 768px;
+        width: calc(100% - 40px);
+    }
+    // .hero-pitch {
+    //     align-items: center;
+    //     flex-direction: column;
+    //     flex-flow: column;
+    //     text-align: center;
+    // }
+    .hero-pitch-text {
+        font-size: 42px;
+    }
+    .hero-pitch-subtitle {
+        margin-top: 0 !important;
+        max-width: 100% !important;
+        font-size: 20px;
+    }
+    .info-section {
+        padding: 0 20px;
+
+        .donation-providers {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .paypal,
+        .sphinx-chat {
+            width: 100%;
+        }
+    }
+    .hero-pitch-right {
+        margin-top: 40px;
+        // padding: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 1010px) {
+    .results-list {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .hero-pitch {
+        align-items: center;
+        flex-direction: column;
+        flex-flow: column;
+        text-align: center;
+        max-width: 600px;
+    }
+    .hero-pitch-text {
+        padding: 0 30px;
+    }
+    .hero-pitch-subtitle {
+        padding: 0 30px;
+    }
+    .results-list {
+        width: 100% !important;
+    }
+    .hero-pitch-left {
+        padding: 0 20px;
+        align-items: center;
+        h5 {
+            text-align: center;
+            padding: 0 10px;
+        }
+        .listen-row {
+            justify-content: center;
+            padding: 0 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .hero-pitch {
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+    .hero-pitch-left {
+        align-items: center;
+        padding: 0 0;
+        h5 {
+            padding: 0 0;
+            width: calc(100% - 20px);
+            margin: inherit auto;
+        }
+        .listen-row {
+            padding: 0 0;
+            width: calc(100% - 20px);
+            margin: 0 auto;
+        }
+    }
+    /* phones */
+    .landing-content,
+    .page-content {
+        min-width: 350px;
+        max-width: 600px;
+        width: 100%;
+    }
+}
