@@ -359,7 +359,7 @@
     {
         "appName": "Brian's Twitter List",
         "appType": "social links",
-        "tagline": "Twitter list of active devs and apps for Podcasting 2.0",
+        "tagLine": "Twitter list of active devs and apps for Podcasting 2.0",
         "appUrl": "https://twitter.com/i/lists/1338026876745474048?s=20",
         "appIconUrl": "castcoverage.png",
         "platforms": ["Web"],
