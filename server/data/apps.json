@@ -333,7 +333,7 @@
     {
         "appName": "AntennaPod",
         "appType": "app",
-        "appUrl": "https://www.antennapod.org",
+        "appUrl": "https://antennapod.org/",
         "appIconUrl": "antennapod.png",
         "platforms": ["Android"],
         "supportedElements": [
