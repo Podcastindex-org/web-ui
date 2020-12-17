@@ -1,5 +1,7 @@
 import * as React from 'react'
 import AudioPlayer from 'react-h5-audio-player'
+import sha256 from 'crypto-js/sha256';
+import { v4 as uuidv4 } from 'uuid';
 import {Link} from "react-router-dom";
 import {getPrettyDate} from "../../utils";
 
@@ -105,9 +107,30 @@ export default class Player extends React.Component<IProps> {
     }
 
     render() {
+        var enclosureUrl = "";
         const {episode} = this.props
+        let enclosureHash = sha256(episode.enclosureUrl)
         const date = getPrettyDate(episode.datePublished)
+
+        //See if a pciguid exists
+        var pciStatsGuid = localStorage.getItem(enclosureHash)
+        if(pciStatsGuid === null) {
+            pciStatsGuid = uuidv4();
+            localStorage.setItem(enclosureHash, pciStatsGuid)
+        }
+
+        //Attach a pciguid string
+        var pciGuid = ""
+        if(episode.enclosureUrl.indexOf('?') > -1) {
+            pciGuid = '&__pciguid=' + pciStatsGuid
+        } else {
+            pciGuid = '?__pciguid=' + pciStatsGuid
+        }
+        enclosureUrl = episode.enclosureUrl + pciGuid
+
         return (
+
+
             <div className="player-media-controls">
                 <AudioPlayer
                     ref={this.player}
@@ -131,7 +154,7 @@ export default class Player extends React.Component<IProps> {
                     }
                     autoPlayAfterSrcChange={false}
                     autoPlay={false}
-                    src={episode.enclosureUrl}
+                    src={enclosureUrl}
                     onCanPlay={this.onCanPlay}
                     onPlay={this.onPlay}
                     onPause={this.onPause}
