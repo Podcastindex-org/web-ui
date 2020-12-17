@@ -128,7 +128,7 @@ export default class Player extends React.Component<IProps> {
         } else {
             pciGuid = '?__pciguid=' + pciStatsGuid
         }
-        let enclosureUrl = episode.enclosureUrl + pciGuid
+        let enclosureUrl = episode.enclosureUrl + pciGuid + "&__from=Podcastindex.org"
 
         return (
             <div className="player-media-controls">
