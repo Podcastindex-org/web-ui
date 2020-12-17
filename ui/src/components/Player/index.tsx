@@ -124,11 +124,11 @@ export default class Player extends React.Component<IProps> {
         //anonymous, yet reliable tracking stats
         var pciGuid = ""
         if(episode.enclosureUrl.indexOf('?') > -1) {
-            pciGuid = '&__pciguid=' + pciStatsGuid
+            pciGuid = '&_guid=' + pciStatsGuid
         } else {
-            pciGuid = '?__pciguid=' + pciStatsGuid
+            pciGuid = '?_guid=' + pciStatsGuid
         }
-        let enclosureUrl = episode.enclosureUrl + pciGuid + "&__from=Podcastindex.org"
+        let enclosureUrl = episode.enclosureUrl + pciGuid + "&_from=podcastindex.org"
 
         return (
             <div className="player-media-controls">
