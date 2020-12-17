@@ -107,30 +107,30 @@ export default class Player extends React.Component<IProps> {
     }
 
     render() {
-        var enclosureUrl = "";
         const {episode} = this.props
-        let enclosureHash = sha256(episode.enclosureUrl)
         const date = getPrettyDate(episode.datePublished)
 
-        //See if a pciguid exists
+        //See if a pciguid exists in local storage.  They are stored using a hash of the enclosure url as the key to avoid
+        //character encoding issues with what browsers accept as a valid key.  If the value exists, get it.  If not, create
+        //a new on and store it for potential use later if this enclosure is played again by this user
+        let enclosureHash = sha256(episode.enclosureUrl)
         var pciStatsGuid = localStorage.getItem(enclosureHash)
         if(pciStatsGuid === null) {
             pciStatsGuid = uuidv4();
             localStorage.setItem(enclosureHash, pciStatsGuid)
         }
 
-        //Attach a pciguid string
+        //Attach the pciguid value to the end of the enclosure url as a query parameter to pass back to the host/cdn for
+        //anonymous, yet reliable tracking stats
         var pciGuid = ""
         if(episode.enclosureUrl.indexOf('?') > -1) {
             pciGuid = '&__pciguid=' + pciStatsGuid
         } else {
             pciGuid = '?__pciguid=' + pciStatsGuid
         }
-        enclosureUrl = episode.enclosureUrl + pciGuid
+        let enclosureUrl = episode.enclosureUrl + pciGuid
 
         return (
-
-
             <div className="player-media-controls">
                 <AudioPlayer
                     ref={this.player}
