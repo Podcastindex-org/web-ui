@@ -45,17 +45,17 @@ You should see a `.env-example` file. Copy this and remove the `-example`. The f
 
 ### Starting the dev server
 
-In order to have the UI hot reload for development, we utilized `webpack-dev-server` this allows for easier debugging, etc. In order for the dev-server to connect to the API, you must first have set the `.env` file variables and have started the server with `node server.js` 
+In order to have the UI hot reload for development, we utilized `webpack-dev-server` this allows for easier debugging, etc. In order for the dev-server to connect to the API, you must first have set the `.env` file variables and have started the server with `yarn start`
 
 ```zsh
 # Install dependencies
-npm install
+yarn install
 
 # Start dev server
-npm run dev
+yarn dev
 
 # Start the node server in another terminal window.
-node server
+yarn start
 ```
 
 ## Running production
