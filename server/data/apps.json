@@ -355,5 +355,22 @@
                 "elementURL": "http://castcoverage.com"
             }
         ]
+    },
+    {
+        "appName": "Tsacdop",
+        "appType": "app",
+        "appUrl": "https://github.com/stonega/tsacdop",
+        "appIconUrl": "tsacdop.png",
+        "platforms": ["Android"],
+        "supportedElements": [
+            {
+                "elementName": "Search",
+                "elementURL": "https://github.com/stonega/tsacdop/releases/tag/v0.4.19"
+            },
+            {
+                "elementName": "Funding",
+                "elementURL": "https://github.com/stonega/tsacdop/releases/tag/v0.5.4"
+            },
+        ]
     }
 ]
