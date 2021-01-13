@@ -29,16 +29,19 @@
         margin-bottom: 5px;
         color: #2d2d2d;
     }
-    .player-podcast-name a {
-        font-size: 16px;
-        font-family: var(--font-family);
+    .player-podcast-name {
         text-align: center;
         width: 450px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        color: #2d2d2d;
         margin-bottom: 5px;
+
+        > a {
+            font-size: 16px;
+            font-family: var(--font-family);
+            color: #2d2d2d;
+        }
     }
     .player-feed-button {
         cursor: pointer;
