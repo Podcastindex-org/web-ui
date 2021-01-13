@@ -372,5 +372,19 @@
                 "elementURL": "https://github.com/stonega/tsacdop/releases/tag/v0.5.4"
             },
         ]
+    },
+    {
+        "appName": "Brian's Twitter List",
+        "appType": "social links",
+        "tagLine": "Twitter list of active devs and apps for Podcasting 2.0",
+        "appUrl": "https://twitter.com/i/lists/1338026876745474048?s=20",
+        "appIconUrl": "castcoverage.png",
+        "platforms": ["Web"],
+        "supportedElements": [
+            {
+                "elementName": "Search",
+                "elementURL": "https://twitter.com/i/lists/1338026876745474048?s=20"
+            }
+        ]       
     }
 ]
