@@ -1,5 +1,7 @@
 import * as React from 'react'
 import AudioPlayer from 'react-h5-audio-player'
+import sha256 from 'crypto-js/sha256';
+import { v4 as uuidv4 } from 'uuid';
 import {Link} from "react-router-dom";
 import {getPrettyDate} from "../../utils";
 
@@ -95,7 +97,7 @@ export default class Player extends React.Component<IProps> {
             navigator.mediaSession.metadata = new MediaMetadata({
                 title: episode.title,
                 artist: episode.feedTitle,
-                ...(image && 
+                ...(image &&
                     {
                         artwork: [{ src: image, sizes: '512x512'}]
                     }
@@ -107,6 +109,27 @@ export default class Player extends React.Component<IProps> {
     render() {
         const {episode} = this.props
         const date = getPrettyDate(episode.datePublished)
+
+        //See if a pciguid exists in local storage.  They are stored using a hash of the enclosure url as the key to avoid
+        //character encoding issues with what browsers accept as a valid key.  If the value exists, get it.  If not, create
+        //a new on and store it for potential use later if this enclosure is played again by this user
+        let enclosureHash = sha256(episode.enclosureUrl)
+        var pciStatsGuid = localStorage.getItem(enclosureHash)
+        if(pciStatsGuid === null) {
+            pciStatsGuid = uuidv4();
+            localStorage.setItem(enclosureHash, pciStatsGuid)
+        }
+
+        //Attach the pciguid value to the end of the enclosure url as a query parameter to pass back to the host/cdn for
+        //anonymous, yet reliable tracking stats
+        var pciGuid = ""
+        if(episode.enclosureUrl.indexOf('?') > -1) {
+            pciGuid = '&_guid=' + pciStatsGuid
+        } else {
+            pciGuid = '?_guid=' + pciStatsGuid
+        }
+        let enclosureUrl = episode.enclosureUrl + pciGuid + "&_from=podcastindex.org"
+
         return (
             <div className="player-media-controls">
                 <AudioPlayer
@@ -119,7 +142,7 @@ export default class Player extends React.Component<IProps> {
                             <div className="player-podcast-name">
                                 {episode.feedTitle !== undefined ?
                                     <Link to={`/podcast/${episode.feedId}`} title={episode.feedTitle}>
-                                        from: {episode.feedTitle}
+                                        {`from: ${episode.feedTitle}`}
                                     </Link>
                                     : ""
                                 }
@@ -131,7 +154,7 @@ export default class Player extends React.Component<IProps> {
                     }
                     autoPlayAfterSrcChange={false}
                     autoPlay={false}
-                    src={episode.enclosureUrl}
+                    src={enclosureUrl}
                     onCanPlay={this.onCanPlay}
                     onPlay={this.onPlay}
                     onPause={this.onPause}
