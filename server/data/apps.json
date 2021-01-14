@@ -378,7 +378,7 @@
         "appType": "social links",
         "tagLine": "Twitter list of active devs and apps for Podcasting 2.0",
         "appUrl": "https://twitter.com/i/lists/1338026876745474048?s=20",
-        "appIconUrl": "castcoverage.png",
+        "appIconUrl": "podcastindextwitter.png",
         "platforms": ["Web"],
         "supportedElements": [
             {
