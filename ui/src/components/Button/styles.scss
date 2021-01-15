@@ -6,6 +6,7 @@
     color: #2d2d2d;
     padding: 8px 20px;
     text-align: center;
+    white-space: nowrap;
     &:hover {
         transition: var(--transition-secs);
         background: #f2f2f2;
