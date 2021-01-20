@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link } from 'react-router-dom'
 
 // Components
 import Button from '../components/Button'
@@ -88,7 +89,8 @@ export default class Landing extends React.Component<IProps, IState> {
                             available for free, for any use.
                         </div>
                         <h5>
-                            Listen to the first episode of "Podcasting 2.0",
+                            Listen to the first episode of
+                            "<Link to="/podcast/920666">Podcasting 2.0</Link>",
                             where we discuss the project, and its goals.
                         </h5>
                         <div className="listen-row">
@@ -188,15 +190,16 @@ export default class Landing extends React.Component<IProps, IState> {
                         </a>
                     </p>
                     <p>
-                        Follow us on the blog:{' '}
-                        <a href="https://blog.podcastindex.org/">
-                            blog.podcastindex.org
-                        </a>{' '}
-                        or on{' '}
+                        Follow us on{' '}
+                        {/*the blog:{' '}*/}
+                        {/*<a href="https://blog.podcastindex.org/">*/}
+                        {/*    blog.podcastindex.org*/}
+                        {/*</a>{' '}*/}
+                        {/*or on{' '}*/}
                         <a href="https://twitter.com/PodcastindexOrg">
                             Twitter
                         </a>
-                        , or{' '}
+                        {' '} or{' '}
                         <a href="https://noagendasocial.com/@podcastindex">
                             Mastodon
                         </a>

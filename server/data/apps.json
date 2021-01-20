@@ -372,5 +372,18 @@
                 "elementURL": "https://github.com/stonega/tsacdop/releases/tag/v0.5.4"
             },
         ]
+    },
+    {
+        "appName": "Playapod",
+        "appType": "app",
+        "appUrl": "https://www.playapod.com",
+        "appIconUrl": "playapod.png",
+        "platforms": ["Android", "iOS", "Web"],
+        "supportedElements": [
+            {
+                "elementName": "Search",
+                "elementURL": "https://blog.playapod.com/2021/01/18/playapod-2-3-update/"
+            }
+        ]
     }
 ]

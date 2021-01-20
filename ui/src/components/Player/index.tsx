@@ -97,7 +97,7 @@ export default class Player extends React.Component<IProps> {
             navigator.mediaSession.metadata = new MediaMetadata({
                 title: episode.title,
                 artist: episode.feedTitle,
-                ...(image && 
+                ...(image &&
                     {
                         artwork: [{ src: image, sizes: '512x512'}]
                     }
@@ -150,7 +150,7 @@ export default class Player extends React.Component<IProps> {
                             <div className="player-podcast-name">
                                 {episode.feedTitle !== undefined ?
                                     <Link to={`/podcast/${episode.feedId}`} title={episode.feedTitle}>
-                                        from: {episode.feedTitle}
+                                        {`from: ${episode.feedTitle}`}
                                     </Link>
                                     : ""
                                 }
