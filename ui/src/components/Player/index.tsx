@@ -128,7 +128,15 @@ export default class Player extends React.Component<IProps> {
         } else {
             pciGuid = '?_guid=' + pciStatsGuid
         }
-        let enclosureUrl = episode.enclosureUrl + pciGuid + "&_from=podcastindex.org"
+
+        //Tag a _from on the end to give a stats hint
+        var fromTag = "&_from=podcastindex.org";
+        if(episode.enclosureUrl.indexOf('_from=') > -1) {
+            fromTag = "";
+        }
+
+        //Assemble the new url
+        let enclosureUrl = episode.enclosureUrl + pciGuid + fromTag
 
         return (
             <div className="player-media-controls">
@@ -157,6 +165,7 @@ export default class Player extends React.Component<IProps> {
                     src={enclosureUrl}
                     onCanPlay={this.onCanPlay}
                     onPlay={this.onPlay}
+                    preload="metadata"
                     onPause={this.onPause}
                     onEnded={this.onPause}
                     customAdditionalControls={[
