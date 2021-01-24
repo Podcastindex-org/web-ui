@@ -166,15 +166,15 @@
         "supportedElements": [
             {
                 "elementName": "Funding",
-                "elementURL": "https://chrome.google.com/webstore/detail/podstation-podcast-player/bpcagekijmfcocgjlnnhpdogbplajjfn"
+                "elementURL": "https://github.com/podStation/podStation/blob/master/docs/release_notes/v1.27.0.md"
             },
             {
                 "elementName": "Search",
-                "elementURL": "https://twitter.com/podStation_app/status/1309164054829826048"
+                "elementURL": "https://github.com/podStation/podStation/blob/master/docs/release_notes/v1.24.0.md"
             },
             {
                 "elementName": "Value",
-                "elementURL": "https://github.com/podStation/podStation/commit/8bb2e99b2f307ae6ef9358ef6ecb6c8f6fb9802f"
+                "elementURL": "https://github.com/podStation/podStation/blob/master/docs/release_notes/v1.33.0.md"
             }
         ]
     },
