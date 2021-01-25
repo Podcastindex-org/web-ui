@@ -98,21 +98,37 @@
     line-height: 1.5;
 }
 
+$podcastIndexAppsMobileLeftMargin: 84px;
+$podcastIndexAppsMobileTopPadding: 30px;
+
 @media only screen and (max-width: 767px) {
     .podcastIndexApps {
-        display: grid;
-        column-gap: 48px;
-        grid-template-columns:
-            [image-start] 60px
-            [image-end name-start] 1fr
-            [name-end];
-        grid-template-rows: none;
-
-        margin-top: 24px;
+        display: block;
+        margin-top: 0;
     }
-    .podcastIndexAppsHeader,
-    .podcastIndexAppSupportedElements,
+    .podcastIndexAppsCheckboxArea {
+      margin-bottom: 0;
+    }
+    .podcastIndexAppsHeader {
+      display: none;
+    }
+    .podcastIndexAppTitleAndType {
+      margin-left: $podcastIndexAppsMobileLeftMargin;
+      padding-top: $podcastIndexAppsMobileTopPadding;
+    }
+    .podcastIndexAppSupportedElements {
+      margin-left: $podcastIndexAppsMobileLeftMargin;
+      margin-top: 2px;
+    }
     .podcastIndexAppPlatforms {
-        display: none;
+      margin-left: $podcastIndexAppsMobileLeftMargin;
+    }
+    .podcastIndexAppIcon {
+      float: left;
+      padding-top: $podcastIndexAppsMobileTopPadding;
+    }
+
+    .hide-mobile {
+      display: none;
     }
 }
