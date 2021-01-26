@@ -133,7 +133,7 @@ export default class AppsWebPart extends React.Component<
                         }
                         className="podcastIndexAppsCheckbox"
                     ></input>
-                    All
+                    <span>All</span>
                 </label>
                 {this.state.filterList.map((filter) => (
                     <span key={`checkboxArea${filter.id}`}>
@@ -149,7 +149,7 @@ export default class AppsWebPart extends React.Component<
                                 )}
                                 className="podcastIndexAppsCheckbox"
                             ></input>
-                            {filter.name}
+                            <span>{filter.name}</span>
                         </label>
                     </span>
                 ))}
