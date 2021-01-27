@@ -13,6 +13,19 @@ const api = require('podcast-index-api')(
 )
 
 // ------------------------------------------------
+// ---------- Static files for namespace ----------
+// ------------------------------------------------
+
+app.use('/namespace/1.0', async (req, res) => {
+    fs.readFile('./server/data/namespace1.0.html', 'utf8', (err, data) => {
+        // You should always specify the content type header,
+        // when you don't use 'res.json' for sending JSON.
+        res.set('Content-Type', 'text/html');
+        res.send(data)
+    })
+})
+
+// ------------------------------------------------
 // ------------ Reverse proxy for API -------------
 // ------------------------------------------------
 
