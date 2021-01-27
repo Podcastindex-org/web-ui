@@ -21,6 +21,11 @@ module.exports = {
                 target: 'http://localhost:5001',
                 pathRewrite: { '^/api': '/api' },
             },
+            '/namespace': {
+                changeOrigin: true,
+                target: 'http://localhost:5001',
+                pathRewrite: { '^/namespace': '/namespace' },
+            },
         },
     },
     entry: './ui/src/index.tsx',

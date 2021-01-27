@@ -12,6 +12,10 @@ const api = require('podcast-index-api')(
     process.env.API_SECRET
 )
 
+app.use('/namespace/1.0', async (req, res) => {
+    res.redirect(301, 'https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md')
+})
+
 // ------------------------------------------------
 // ------------ Reverse proxy for API -------------
 // ------------------------------------------------
