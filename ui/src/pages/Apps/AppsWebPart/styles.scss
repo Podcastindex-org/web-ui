@@ -98,21 +98,54 @@
     line-height: 1.5;
 }
 
-@media only screen and (max-width: 767px) {
-    .podcastIndexApps {
-        display: grid;
-        column-gap: 48px;
-        grid-template-columns:
-            [image-start] 60px
-            [image-end name-start] 1fr
-            [name-end];
-        grid-template-rows: none;
+$podcastIndexAppsMobileLeftMargin: 84px;
+$podcastIndexAppsMobileTopPadding: 30px;
 
-        margin-top: 24px;
+@media only screen and (max-width: 767px) {
+    .podcastIndexAppsCheckboxArea label {
+        display: inline-block;
+        margin-bottom: 8px;
+
+        input[type='checkbox'] {
+            -ms-transform: scale(1.5); /* IE */
+            -moz-transform: scale(1.5); /* FF */
+            -webkit-transform: scale(1.5); /* Safari and Chrome */
+            -o-transform: scale(1.5); /* Opera */
+            transform: scale(1.5);
+        }
+
+        span {
+          display: inline-block;
+          padding-left: 5px;
+          vertical-align: text-bottom;
+        }
     }
-    .podcastIndexAppsHeader,
-    .podcastIndexAppSupportedElements,
-    .podcastIndexAppPlatforms {
-        display: none;
+
+
+    .podcastIndexApps {
+        display: block;
+        margin-top: 0;
+
+        .podcastIndexAppsCheckboxArea {
+            margin-bottom: 0;
+        }
+        .podcastIndexAppsHeader {
+            display: none;
+        }
+        .podcastIndexAppTitleAndType {
+            margin-left: $podcastIndexAppsMobileLeftMargin;
+            padding-top: $podcastIndexAppsMobileTopPadding;
+        }
+        .podcastIndexAppSupportedElements {
+            margin-left: $podcastIndexAppsMobileLeftMargin;
+            margin-top: 2px;
+        }
+        .podcastIndexAppPlatforms {
+            margin-left: $podcastIndexAppsMobileLeftMargin;
+        }
+        .podcastIndexAppIcon {
+            float: left;
+            padding-top: $podcastIndexAppsMobileTopPadding;
+        }
     }
 }

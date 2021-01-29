@@ -133,7 +133,7 @@ export default class AppsWebPart extends React.Component<
                         }
                         className="podcastIndexAppsCheckbox"
                     ></input>
-                    All
+                    <span>All</span>
                 </label>
                 {this.state.filterList.map((filter) => (
                     <span key={`checkboxArea${filter.id}`}>
@@ -149,7 +149,7 @@ export default class AppsWebPart extends React.Component<
                                 )}
                                 className="podcastIndexAppsCheckbox"
                             ></input>
-                            {filter.name}
+                            <span>{filter.name}</span>
                         </label>
                     </span>
                 ))}
@@ -242,12 +242,16 @@ export default class AppsWebPart extends React.Component<
                             </div>
 
                             <div className="podcastIndexAppPlatforms">
-                                {app.platforms.map((platform, j) => (
-                                    <React.Fragment key={`${j}`}>
+                                {app.platforms.map((platform, j) => {
+                                  const hideNAAppPlatformOnMobile = platform === 'N/A'
+
+                                  return (
+                                    <span className={hideNAAppPlatformOnMobile ? 'hide-mobile' : ''} key={`${j}`}>
                                         {j > 0 && ', '}
                                         {platform}
-                                    </React.Fragment>
-                                ))}
+                                    </span>
+                                  )
+                                })}
                             </div>
                         </React.Fragment>
                     ))}
