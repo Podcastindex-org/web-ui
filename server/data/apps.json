@@ -50,7 +50,16 @@
             {
                 "elementName": "Search",
                 "elementURL": "https://twitter.com/GoPodfriend/status/1316847938828742656"
+            },
+            {
+                "elementName": "Location",
+                "elementURL": "https://twitter.com/GoPodfriend/status/1343952962662629376"
+            },
+            {
+                "elementName": "Person",
+                "elementURL": "https://twitter.com/adamcurry/status/1348787383324577793"
             }
+            
         ]
     },
     {
@@ -96,6 +105,14 @@
             {
                 "elementName": "Funding",
                 "elementURL": "https://twitter.com/PodcastAddict/status/1319645267335933954"
+            },
+                        {
+                "elementName": "Location",
+                "elementURL": "https://podcastaddict.com/changelog/2021_3#section2"
+            },
+            {
+                "elementName": "Person",
+                "elementURL": "https://podcastaddict.com/changelog/2021_3#section1"
             }
         ]
     },
@@ -234,6 +251,14 @@
             {
                 "elementName": "Soundbite",
                 "elementURL": "https://podlibre.org/castopod-supports-soundbite-tag/"
+            },
+            {
+                "elementName": "Location",
+                "elementURL": "https://podlibre.org/castopod-supports-the-location-tag/"
+            },
+            {
+                "elementName": "Person",
+                "elementURL": "https://podlibre.org/castopod-supports-the-person-tag/"
             }
         ]
     },
