@@ -100,23 +100,40 @@
         ]
     },
     {
-        "appName": "Podnews",
-        "appType": "news / directory",
-        "appUrl": "https://podnews.net",
+        "appName": "Podnews directory",
+        "appType": "Directory",
+        "appUrl": "https://podnews.net/podcast",
         "appIconUrl": "podnews.jpg",
-        "platforms": ["Email"],
+        "platforms": ["Web"],
+        "supportedElements": [
+            {
+                "elementName": "Location",
+                "elementURL": "https://podnews.net/podcast"
+            },
+            {
+                "elementName": "Search",
+                "elementURL": "https://podnews.net"
+            }
+        ]
+    },
+    {
+        "appName": "Podnews podcast",
+        "appType": "hosting",
+        "appUrl": "https://podnews.net/listen",
+        "appIconUrl": "podnews.jpg",
+        "platforms": ["n/a"],
         "supportedElements": [
             {
                 "elementName": "Transcript",
                 "elementURL": "https://podnews.net/rss"
             },
             {
-                "elementName": "Locked",
+                "elementName": "Person",
                 "elementURL": "https://podnews.net/rss"
             },
             {
-                "elementName": "Search",
-                "elementURL": "https://podnews.net"
+                "elementName": "Locked",
+                "elementURL": "https://podnews.net/rss"
             }
         ]
     },
