@@ -196,9 +196,12 @@ export default class AppsWebPart extends React.Component<
                 this.matchFound(anApp)
             )
         }
+        /*
         let appsFilteredAndSorted: Array<any> = appsFiltered.sort((a1, a2) => {
             return a1.appName.localeCompare(a2.appName)
         })
+        */
+        let appsFilteredAndSorted = appsFiltered;
         return (
             <div className="podcastIndexAppsWebPart">
                 <h4>Apps, Directories and Hosting Companies</h4>
