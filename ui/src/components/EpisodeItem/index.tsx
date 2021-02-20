@@ -5,6 +5,7 @@ import NoImage from '../../../images/no-cover-art.png'
 import PlayLogo from '../../../images/play-circle.svg'
 import PauseLogo from '../../../images/pause-circle.svg'
 import EarthLogo from '../../../images/earth.svg'
+import DownloadLogo from '../../../images/download-outline.svg'
 
 import './styles.scss'
 
@@ -96,6 +97,20 @@ export default class EpisodeItem extends React.PureComponent<IProps> {
 
                         <div className="episode-links">
                             {episodeLink ?
+                                <a
+                                    className="episode-link"
+                                    href={episodeLink}
+                                    title="Episode Website"
+                                    target="_blank"
+                                >
+                                    <img
+                                        alt="Episode Website"
+                                        src={EarthLogo}/>
+                                </a>
+                                : ""
+                            }
+
+                            {episodeEnclosure ?
                                 <a
                                     className="episode-link"
                                     href={episodeLink}

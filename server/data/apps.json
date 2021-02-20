@@ -122,6 +122,14 @@
             {
                 "elementName": "Search",
                 "elementURL": "https://twitter.com/podcastguru_app/status/1325834426346041347"
+            },
+            {
+                "elementName": "Transcript",
+                "elementURL": "https://twitter.com/podcastguru_app/status/1362902472793223169"
+            },
+            {
+                "elementName": "Funding",
+                "elementURL": "https://twitter.com/podcastguru_app/status/1351911108886589448"
             }
         ]
     },
@@ -139,6 +147,23 @@
             {
                 "elementName": "Search",
                 "elementURL": "https://twitter.com/MartyBent/status/1325892586985451520"
+            }
+        ]
+    },
+    {
+        "appName": "Hypercatcher",
+        "appType": "app",
+        "appUrl": "https://hypercatcher.com",
+        "appIconUrl": "hypercatcher.jpg",
+        "platforms": ["iOS"],
+        "supportedElements": [
+            {
+                "elementName": "Chapters",
+                "elementURL": "https://hypercatcher.com/2020/11/how-to-create-podcast-chapters-as-a-listener/"
+            },
+            {
+                "elementName": "Search",
+                "elementURL": "https://hypercatcher.com"
             }
         ]
     },
@@ -312,23 +337,6 @@
             {
                 "elementName": "Chapters",
                 "elementURL": "https://chaptersapp.com/faq/jsonExport.html"
-            }
-        ]
-    },
-    {
-        "appName": "Hypercatcher",
-        "appType": "app",
-        "appUrl": "https://hypercatcher.com",
-        "appIconUrl": "hypercatcher.jpg",
-        "platforms": ["iOS"],
-        "supportedElements": [
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://hypercatcher.com/2020/11/how-to-create-podcast-chapters-as-a-listener/"
-            },
-            {
-                "elementName": "Search",
-                "elementURL": "https://hypercatcher.com"
             }
         ]
     },
