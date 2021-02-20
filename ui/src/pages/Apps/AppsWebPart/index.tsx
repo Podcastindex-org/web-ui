@@ -64,6 +64,16 @@ export default class AppsWebPart extends React.Component<
                     id: 39,
                     name: 'Value',
                     value: 'Value'
+                },
+                {
+                    id: 40,
+                    name: 'Season',
+                    value: 'Season'
+                },
+                {
+                    id: 41,
+                    name: 'Location',
+                    value: 'Location'
                 }
             ],
         }
