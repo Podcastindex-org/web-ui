@@ -457,5 +457,26 @@
                 "elementURL": "https://twitter.com/i/lists/1338026876745474048?s=20"
             }
         ]       
+    },
+    {
+        "appName": "Anytime Podcast Player",
+        "appType": "app",
+        "appUrl": "https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime",
+        "appIconUrl": "anytimelogo.png",
+        "platforms": ["Android"],
+        "supportedElements": [
+            {
+                "elementName": "Search",
+                "elementURL": "https://twitter.com/amugofjava/status/1364973551141466114"
+            },
+            {
+                "elementName": "Chapters",
+                "elementURL": "https://twitter.com/amugofjava/status/1364973551141466114"
+            },
+            {
+                "elementName": "Funding",
+                "elementURL": "https://twitter.com/amugofjava/status/1364973551141466114"
+            }
+        ]
     }
 ]
