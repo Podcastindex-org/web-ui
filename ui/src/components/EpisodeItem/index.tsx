@@ -15,6 +15,7 @@ interface IProps {
     title?: string
     image?: any
     link?: string
+    enclosureUrl?: string
     description?: string
     datePublished?: number
     onPlay?: any
@@ -73,9 +74,11 @@ export default class EpisodeItem extends React.PureComponent<IProps> {
     }
 
     render() {
-        const {title, image, link, description, datePublished} = this.props
+        const {title, image, link, enclosureUrl, description, datePublished} = this.props
         const date = getPrettyDate(datePublished)
         const episodeLink = link
+        const episodeEnclosure = enclosureUrl
+        console.log(this)
         return (
             <div className="episode">
                 <div className="episode-row">
@@ -112,14 +115,14 @@ export default class EpisodeItem extends React.PureComponent<IProps> {
 
                             {episodeEnclosure ?
                                 <a
-                                    className="episode-link"
-                                    href={episodeLink}
-                                    title="Episode Website"
+                                    className="episode-enclosure"
+                                    href={episodeEnclosure}
+                                    title="Download"
                                     target="_blank"
                                 >
                                     <img
-                                        alt="Episode Website"
-                                        src={EarthLogo}/>
+                                        alt="Download Episode"
+                                        src={DownloadLogo}/>
                                 </a>
                                 : ""
                             }

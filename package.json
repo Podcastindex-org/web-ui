@@ -71,7 +71,7 @@
     "scripts": {
         "dev": "webpack-dev-server",
         "build": "webpack",
-        "production": "set NODE_ENV='production' && webpack && node server",
+        "production": "NODE_ENV='production' && webpack && node server",
         "start": "node server",
         "test": "react-scripts test --env=jsdom",
         "eject": "react-scripts eject",

@@ -201,6 +201,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
             this.state.result.image ||
             this.state.result.artwork
         let link = this.state.episodes[index].link
+        let enclosureUrl = this.state.episodes[index].enclosureUrl
         let description = this.state.episodes[index].description
         let datePublished = this.state.episodes[index].datePublished
 
@@ -217,6 +218,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
                     title={title}
                     image={image}
                     link={link}
+                    enclosureUrl={enclosureUrl}
                     description={description}
                     datePublished={datePublished}
                     onPlay={this.onEpisodePlay}
