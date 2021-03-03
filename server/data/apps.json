@@ -432,6 +432,19 @@
         ]
     },
     {
+        "appName": "Captivate",
+        "appType": "hosting",
+        "appUrl": "https://www.captivate.fm/",
+        "appIconUrl": "captivate.jpg",
+        "platforms": ["N/A"],
+        "supportedElements": [
+            {
+                "elementName": "Transcript",
+                "elementURL": "https://twitter.com/CaptivateAudio"
+            }
+        ]
+    },
+    {
         "appName": "Transistor",
         "appType": "hosting",
         "appUrl": "https://transistor.fm",
