@@ -61,12 +61,9 @@ export default class NewFeedStatsCard extends React.Component<IProps> {
             <div className="kpi-card">
                 <Card>
                     <div className="kpi-massive-title">
-                        New feeds added in the last 30 days...
+                        Host submitted feeds (30 days)...
                     </div>
                     <div className="kpi-massive-value">{total.toLocaleString()}</div>
-                    <div className="kpi-massive-title kpi-title-2">
-                        Feeds added by podcast host...
-                    </div>
                     <div className="kpi-row">
                         <KPI title={top1name} value={top1count.toLocaleString()} />
                         <KPI title={top2name} value={top2count.toLocaleString()} />
