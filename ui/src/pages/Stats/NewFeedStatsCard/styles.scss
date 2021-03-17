@@ -1,0 +1,76 @@
+.kpi-card {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    .card {
+        display: inline-flex;
+        flex-direction: column;
+        width: inherit;
+        padding: 30px;
+        // box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.15);
+        background: #f3f3f3;
+        border-radius: 12px;
+    }
+    .kpi-massive-title {
+        font-family: var(--font-family-exp);
+        font-size: 32px;
+        color: #2d2d2d;
+        text-align: left;
+    }
+    .kpi-massive-value {
+        font-family: var(--font-family-exp);
+        font-weight: bold;
+        font-size: 186px;
+        color: #ff1c41;
+        text-align: left;
+    }
+    .kpi-title-2 {
+        margin-top: 40px;
+    }
+}
+
+.kpi-row {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: -7px -20px;
+    margin-top: 30px;
+
+    .kpi {
+        margin: 7px 20px;
+    }
+}
+
+@media only screen and (max-width: 1167px) {
+    .kpi-massive-value {
+        font-size: 100px !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .kpi-massive-title {
+        font-size: 26px !important;
+    }
+    .kpi-massive-value {
+        font-size: 56px !important;
+    }
+    .kpi-card {
+        margin: 0 10px;
+        width: calc(100% - 20px);
+        .card {
+            max-width: 500px;
+        }
+    }
+    /* phones */
+    .kpi-row {
+        flex-direction: column !important;
+    }
+    .kpi {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}

@@ -66,6 +66,15 @@ app.use('/api/stats', async (req, res) => {
       })
 })
 
+app.use('/api/newfeedstats', async (req, res) => {
+    fs.readFile('./server/data/newfeedstats.json', 'utf8', (err, data) => {
+        // You should always specify the content type header,
+        // when you don't use 'res.json' for sending JSON.
+        res.set('Content-Type', 'application/json');
+        res.send(data)
+    })
+})
+
 app.use('/api/apps', async (req, res) => {
     fs.readFile('./server/data/apps.json', 'utf8', (err, data) => {  
         // You should always specify the content type header,

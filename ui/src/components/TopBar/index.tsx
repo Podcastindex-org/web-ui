@@ -79,18 +79,15 @@ export default class Topbar extends React.PureComponent<IProps, IState> {
                             dropdownOpen ? 'topbar-dropdown-open' : ''
                         }`}
                     >
-                        {/* <Button link href="/stats">
-                            Stats
-                        </Button> */}
                         <Button href="/apps">Apps</Button>
-                        {/*<Button href="https://blog.podcastindex.org/">*/}
-                        {/*    Blog*/}
-                        {/*</Button>*/}
+                        <Button link href="/stats">
+                            Stats
+                        </Button>
                         <Button href="https://podcastindex-org.github.io/docs-api/">
-                            Documentation
+                            Docs
                         </Button>
                         <Button href="https://api.podcastindex.org">
-                            Developer Login
+                            API
                         </Button>
                     </div>
                     <a
