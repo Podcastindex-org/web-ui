@@ -291,6 +291,35 @@
         ]
     },
     {
+        "appName": "PowerPress by Blubrry",
+        "appType": "hosting",
+        "appUrl": "https://blubrry.com/services/powerpress-plugin/",
+        "appIconUrl": "powerpress.png",
+        "platforms": ["wordpress"],
+        "supportedElements": [
+            {
+                "elementName": "Transcript",
+                "elementURL": "https://wordpress.org/plugins/powerpress/#developers"
+            },
+            {
+                "elementName": "Locked",
+                "elementURL": "https://wordpress.org/plugins/powerpress/#developers"
+            },
+            {
+                "elementName": "Funding",
+                "elementURL": "https://wordpress.org/plugins/powerpress/#developers"
+            },
+            {
+                "elementName": "Chapters",
+                "elementURL": "https://wordpress.org/plugins/powerpress/#developers"
+            },
+            {
+                "elementName": "Location",
+                "elementURL": "https://wordpress.org/plugins/powerpress/#developers"
+            }
+        ]
+    },
+    {
         "appName": "Podnews podcast",
         "appType": "hosting",
         "appUrl": "https://podnews.net/listen",
