@@ -464,7 +464,7 @@
         "appName": "Captivate",
         "appType": "hosting",
         "appUrl": "https://www.captivate.fm/",
-        "appIconUrl": "captivate.jpg",
+        "appIconUrl": "captivate.png",
         "platforms": ["N/A"],
         "supportedElements": [
             {
