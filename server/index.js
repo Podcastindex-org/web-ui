@@ -12,6 +12,34 @@ const api = require('podcast-index-api')(
     process.env.API_SECRET
 )
 
+app.use((req, res, next) => {
+
+    const { rawHeaders, httpVersion, method, socket, url } = req;
+    const { remoteAddress, remoteFamily } = socket;
+
+    // console.log(
+    //     JSON.stringify({
+    //         timestamp: Date.now(),
+    //         rawHeaders,
+    //         httpVersion,
+    //         method,
+    //         remoteAddress,
+    //         remoteFamily,
+    //         url
+    //     })
+    // );
+
+    let userAgent = req.header('user-agent')
+    let cfLocation = req.header('CF-IPCountry')
+    let cfSourceIP = req.header('CF-Connecting-IP')
+
+    var logString = "["+Date.now()+"] " + "["+remoteAddress+"] " + method +" ("+url+") - UA: ["+userAgent+"] - LOC: ["+cfLocation+"|"+cfSourceIP+"]"
+
+    console.log(logString)
+
+    next();
+});
+
 // ------------------------------------------------
 // ---------- Static files for namespace ----------
 // ------------------------------------------------

@@ -166,6 +166,10 @@ export default class Landing extends React.Component<IProps, IState> {
                         </a>
                     </p>
                     <p>
+                        Download our full podcast database as a sqlite3 file over
+                        IPFS <a href="https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dkde1r01kchnaieukg7xy9i6eu78kk3mm3vaa690oaotk1px6wo/podcastindex_feeds.db.tgz" target="_blank">here</a>.
+                    </p>
+                    <p>
                         API Documentation is{' '}
                         <a
                             target="_blank"
