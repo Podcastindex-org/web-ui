@@ -32,8 +32,9 @@ app.use((req, res, next) => {
     let userAgent = req.header('user-agent')
     let cfLocation = req.header('CF-IPCountry')
     let cfSourceIP = req.header('CF-Connecting-IP')
+    let cfBotScore = req.header('Cf-Bot-Score')
 
-    var logString = "["+Date.now()+"] " + "["+remoteAddress+"] " + method +" ("+url+") - UA: ["+userAgent+"] - LOC: ["+cfLocation+"|"+cfSourceIP+"]"
+    var logString = "["+Date.now()+"] " + "["+remoteAddress+"] " + method +" ("+url+") - UA: ["+userAgent+"] - LOC: ["+cfLocation+"|"+cfSourceIP+"] - BOT: ["+cfBotScore+"]"
 
     console.log(logString)
 
