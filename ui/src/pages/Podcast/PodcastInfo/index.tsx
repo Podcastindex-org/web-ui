@@ -144,6 +144,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         let author = this.state.result.author
         let description = this.state.result.description
         let categories = this.state.result.categories
+        let value = this.state.result.value
         let id = this.state.result.id
         let podcastURL = this.state.result.link
         let feedURL = this.state.result.url
@@ -156,6 +157,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
                 image={image}
                 description={description}
                 categories={categories}
+                value={value}
                 id={id}
                 podcastURL={podcastURL}
                 feedURL={feedURL}
