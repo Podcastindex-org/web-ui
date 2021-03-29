@@ -23,6 +23,13 @@ export const truncateString = (input: string) => {
         return input
 }
 
+export const titleizeString = (input: string) => {
+  return input
+    .split(/\W+/gi)
+    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ')
+}
+
 export const getPrettyDate = (time: number, includeTime: boolean = true) => {
     // Javascript epoch is in milliseconds; datePublished is in seconds
     const dateObj = new Date(time*1000)
@@ -30,4 +37,3 @@ export const getPrettyDate = (time: number, includeTime: boolean = true) => {
         return dateObj.toLocaleString()
     return dateObj.toLocaleDateString()
 }
-

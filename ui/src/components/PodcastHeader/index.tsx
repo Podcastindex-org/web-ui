@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import NoImage from '../../../images/no-cover-art.png'
-import {truncateString} from '../../utils'
+import { truncateString, titleizeString } from '../../utils'
 import RSSLogo from "../../../images/feed.svg";
 import EarthLogo from "../../../images/earth.svg";
 import './styles.scss'
@@ -15,6 +15,19 @@ interface IProps {
     id?: string
     feedURL?: string
     podcastURL?: string
+    value?: {
+      model: {
+        type: string
+        method: string
+        suggested: string
+      }
+      destinations?: Array<{
+        name: string
+        type: string
+        address: string
+        split: string
+      }>
+    }
 }
 
 export default class PodcastHeader extends React.PureComponent<IProps> {
@@ -45,7 +58,8 @@ export default class PodcastHeader extends React.PureComponent<IProps> {
     }
 
     render() {
-        const {title, description, author, categories, image, feedURL, podcastURL} = this.props
+        const {title, description, author, categories, image, feedURL, podcastURL, value} = this.props
+        const splitTotal = value && value.destinations ? value && value.destinations.reduce((total, d) => total + parseInt(d.split, 10), 0): null
         return (
             <div className="podcast-header">
                 <h1 className="podcast-header-title">{title}</h1>
@@ -90,6 +104,18 @@ export default class PodcastHeader extends React.PureComponent<IProps> {
                                 : ""
                             }
                         </div>
+                        {value && value.destinations &&
+                          <div className="podcast-value">
+                            <h4>Value for Value via {titleizeString(value.model.type)}</h4>
+                            <ul>
+                              {value.destinations.map(dest => (
+                                <li>
+                                  <progress value={dest.split} max={splitTotal}></progress> {dest.name}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        }
                     </div>
                 </div>
             </div>
