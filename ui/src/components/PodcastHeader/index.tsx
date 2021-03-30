@@ -60,6 +60,11 @@ export default class PodcastHeader extends React.PureComponent<IProps> {
     render() {
         const {title, description, author, categories, image, feedURL, podcastURL, value} = this.props
         const splitTotal = value && value.destinations ? value && value.destinations.reduce((total, d) => total + parseInt(d.split, 10), 0): null
+
+        if(value && value.destinations && value.destinations.length > 1 && value.destinations[(value.destinations.length - 1)].name.toLowerCase() === "podcastindex.org") {
+            value.destinations.pop();
+        }
+
         return (
             <div className="podcast-header">
                 <h1 className="podcast-header-title">{title}</h1>
