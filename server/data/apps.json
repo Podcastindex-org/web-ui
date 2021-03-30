@@ -168,6 +168,27 @@
         ]
     },
     {
+        "appName": "Breez",
+        "appType": "app",
+        "appUrl": "https://breez.technology/",
+        "appIconUrl": "breez.png",
+        "platforms": ["Android", "iOS"],
+        "supportedElements": [
+            {
+                "elementName": "Chapters",
+                "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
+            },
+            {
+                "elementName": "Search",
+                "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
+            },
+            {
+                "elementName": "Value",
+                "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
+            }
+        ]
+    },
+    {
         "appName": "AntennaPod",
         "appType": "app",
         "appUrl": "https://www.antennapod.org",
@@ -520,26 +541,5 @@
                 "elementURL": "https://twitter.com/i/lists/1338026876745474048?s=20"
             }
         ]       
-    },
-    {
-        "appName": "Breez",
-        "appType": "app",
-        "appUrl": "https://breez.technology/",
-        "appIconUrl": "breez.png",
-        "platforms": ["Android", "iOS"],
-        "supportedElements": [
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
-            },
-            {
-                "elementName": "Search",
-                "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
-            },
-            {
-                "elementName": "Value",
-                "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
-            }
-        ]
     }
 ]
