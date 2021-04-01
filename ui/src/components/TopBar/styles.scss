@@ -49,6 +49,12 @@ a,
         display: inline-flex;
         flex-direction: row;
     }
+
+    a:link,
+    a:visited,
+    a:active{
+        color: #2d2d2d;
+    }
 }
 
 .topbar-mobile-dropdown {

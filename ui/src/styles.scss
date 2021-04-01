@@ -71,6 +71,16 @@ h4 {
     font-size: 27px;
 }
 
+a:link,
+a:visited,
+a:active {
+    color: #002752;
+}
+
+a:hover {
+    color: #cc2799;
+}
+
 .landing-graphic {
     opacity: 0.75;
     top: 120px;
