@@ -78,7 +78,6 @@ export default class EpisodeItem extends React.PureComponent<IProps> {
         const date = getPrettyDate(datePublished)
         const episodeLink = link
         const episodeEnclosure = enclosureUrl
-        console.log(this)
         return (
             <div className="episode">
                 <div className="episode-row">
