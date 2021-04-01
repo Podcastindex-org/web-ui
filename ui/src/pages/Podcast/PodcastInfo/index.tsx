@@ -232,7 +232,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
 
     render() {
         const { loading, result, episodes } = this.state
-        if ((result === undefined || episodes.length === 0) && !loading) {
+        if ((result === undefined || result.length === 0 || episodes.length === 0) && !loading) {
             const errorMessage = `Unknown podcast ID: ${this.props.match.params.podcastId}`
             updateTitle(errorMessage)
             return <div className="page-content">{errorMessage}</div>
