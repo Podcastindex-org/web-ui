@@ -85,9 +85,16 @@
     }
 
     img {
+        margin-right: 5px;
         width: 35px;
         height: 35px;
     }
+}
+
+.podcast-header-external-links a#aLightningClaim img {
+  padding-top:2px;
+  width: 30px;
+  height: 30px;
 }
 
 .podcast-header-description {

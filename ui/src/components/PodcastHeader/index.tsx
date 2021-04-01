@@ -4,6 +4,7 @@ import NoImage from '../../../images/no-cover-art.png'
 import { truncateString, titleizeString } from '../../utils'
 import RSSLogo from "../../../images/feed.svg";
 import EarthLogo from "../../../images/earth.svg";
+import LightningLogo from "../../../images/lightning.svg"
 import './styles.scss'
 
 interface IProps {
@@ -58,7 +59,7 @@ export default class PodcastHeader extends React.PureComponent<IProps> {
     }
 
     render() {
-        const {title, description, author, categories, image, feedURL, podcastURL, value} = this.props
+        const {title, description, author, categories, image, id, feedURL, podcastURL, value} = this.props
         const splitTotal = value && value.destinations ? value && value.destinations.reduce((total, d) => total + parseInt(d.split, 10), 0): null
 
         if(value && value.destinations && value.destinations.length > 1 && value.destinations[(value.destinations.length - 1)].name.toLowerCase() === "podcastindex.org") {
@@ -105,6 +106,17 @@ export default class PodcastHeader extends React.PureComponent<IProps> {
                                     target="_blank"
                                 >
                                     <img src={RSSLogo}/>
+                                </a>
+                                : ""
+                            }
+                            {!value && feedURL ?
+                                <a
+                                    href={"https://podcasterwallet.com/?pcid=" + id}
+                                    title="Claim this feed on Podcasterwallet.com"
+                                    target="_blank"
+                                    id="aLightningClaim"
+                                >
+                                    <img src={LightningLogo}/>
                                 </a>
                                 : ""
                             }
