@@ -127,7 +127,7 @@ export default class PodcastHeader extends React.PureComponent<IProps> {
                             <ul>
                               {value.destinations.map(dest => (
                                 <li key={dest.name}>
-                                  <progress value={dest.split} max={splitTotal}></progress> {dest.name}
+                                  <progress value={dest.split} max={splitTotal} title={dest.address}></progress> {dest.name}
                                 </li>
                               ))}
                             </ul>
