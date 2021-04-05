@@ -406,8 +406,32 @@
         "platforms": ["macOS"],
         "supportedElements": [
             {
+                "elementName": "Transcript",
+                "elementURL": "https://chaptersapp.com/faq/pc20.html"
+            },
+            {
                 "elementName": "Chapters",
                 "elementURL": "https://chaptersapp.com/faq/jsonExport.html"
+            },
+            {
+                "elementName": "Soundbite",
+                "elementURL": "https://chaptersapp.com/faq/pc20.html"
+            },
+            {
+                "elementName": "Location",
+                "elementURL": "https://chaptersapp.com/faq/pc20.html"
+            },
+            {
+                "elementName": "Person",
+                "elementURL": "https://chaptersapp.com/faq/pc20.html"
+            },
+            {
+                "elementName": "Season",
+                "elementURL": "https://chaptersapp.com/faq/pc20.html"
+            },
+            {
+                "elementName": "Episode",
+                "elementURL": "https://chaptersapp.com/faq/pc20.html"
             }
         ]
     },
