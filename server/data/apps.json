@@ -300,7 +300,7 @@
     },
     {
         "appName": "Podnews directory",
-        "appType": "Directory",
+        "appType": "directory",
         "appUrl": "https://podnews.net/podcast",
         "appIconUrl": "podnews.jpg",
         "platforms": ["Web"],
@@ -567,6 +567,20 @@
             {
                 "elementName": "Search",
                 "elementURL": "https://twitter.com/i/lists/1338026876745474048?s=20"
+            }
+        ]       
+    },
+    {
+        "appName": "Satoshis.Stream ",
+        "appType": "node hosting",
+        "tagLine": "Receive value as a podcaster without running your own node",
+        "appUrl": "https://satoshis.stream/",
+        "appIconUrl": "satoshisstream.png",
+        "platforms": ["iOS", "Android", "Web"],
+        "supportedElements": [
+            {
+                "elementName": "Value",
+                "elementURL": "https://satoshis.stream/"
             }
         ]       
     }
