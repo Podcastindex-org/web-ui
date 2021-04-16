@@ -611,6 +611,23 @@
                 "elementName": "Episode",
                 "elementURL": "https://podcastpage.io/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
             }
+        ]       
+    },
+    {
+        "appName": "N2N2.chat",
+        "appType": "app",
+        "appUrl": "https://n2n2.co",
+        "appIconUrl": "n2n2.png",
+        "platforms": ["iOS", "Android", "macOS", "Windows", "Linux"],
+        "supportedElements": [
+            {
+                "elementName": "Value",
+                "elementURL": "https://n2n2.co"
+            },
+            {
+                "elementName": "Search",
+                "elementURL": "N2N2 Universe"
+            }
         ]
     }
 ]

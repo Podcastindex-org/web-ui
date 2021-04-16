@@ -204,7 +204,7 @@ export default class AppsWebPart extends React.Component<
         let appsFilteredAndSorted = appsFiltered;
         return (
             <div className="podcastIndexAppsWebPart">
-                <h4>Apps, Directories and Hosting Companies</h4>
+                <h4>Supporting Apps, Directories and Hosting Companies</h4>
                 {/* this.renderCheckboxes() */}
                 <div className="podcastIndexApps">
                     <div className="podcastIndexAppsHeader" />
