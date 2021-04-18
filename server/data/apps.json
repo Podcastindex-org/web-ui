@@ -582,6 +582,35 @@
                 "elementName": "Value",
                 "elementURL": "https://satoshis.stream/"
             }
+        ]
+    },
+    {
+        "appName": "Podcastpage.io",
+        "appType": "website",
+        "appUrl": "https://podcastpage.io",
+        "appIconUrl": "podcastpage.png",
+        "platforms": ["Web"],
+        "supportedElements": [
+            {
+                "elementName": "Transcript",
+                "elementURL": "https://podcastpage.io/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
+            },
+            {
+                "elementName": "Soundbite",
+                "elementURL": "https://podcastpage.io/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
+            },
+            {
+                "elementName": "Person",
+                "elementURL": "https://podcastpage.io/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
+            },
+            {
+                "elementName": "Season",
+                "elementURL": "https://podcastpage.io/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
+            },
+            {
+                "elementName": "Episode",
+                "elementURL": "https://podcastpage.io/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
+            }
         ]       
     },
     {
