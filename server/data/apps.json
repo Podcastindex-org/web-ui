@@ -317,10 +317,10 @@
     },
     {
         "appName": "PowerPress by Blubrry",
-        "appType": "hosting",
+        "appType": "wordpress plugin",
         "appUrl": "https://blubrry.com/services/powerpress-plugin/",
         "appIconUrl": "powerpress.png",
-        "platforms": ["wordpress"],
+        "platforms": ["Wordpress"],
         "supportedElements": [
             {
                 "elementName": "Transcript",
@@ -346,10 +346,10 @@
     },
     {
         "appName": "Podnews podcast",
-        "appType": "hosting",
+        "appType": "website",
         "appUrl": "https://podnews.net/listen",
         "appIconUrl": "podnews.jpg",
-        "platforms": ["n/a"],
+        "platforms": ["N/A"],
         "supportedElements": [
             {
                 "elementName": "Transcript",
@@ -627,6 +627,27 @@
             {
                 "elementName": "Search",
                 "elementURL": "N2N2 Universe"
+            }
+        ]
+    },
+    {
+        "appName": "Podlove Podcast Publisher",
+        "appType": "wordpress plugin",
+        "appUrl": "https://publisher.podlove.org",
+        "appIconUrl": "podlove-publisher.png",
+        "platforms": ["Wordpress"],
+        "supportedElements": [
+            {
+                "elementName": "Transcript",
+                "elementURL": "https://github.com/podlove/podlove-publisher/commit/d3ce9d117c57a4c864d982fb5451c3fb6d20bd91"
+            },
+            {
+                "elementName": "Funding",
+                "elementURL": "https://github.com/podlove/podlove-publisher/releases/tag/3.3.1"
+            },
+            {
+                "elementName": "Person",
+                "elementURL": "https://github.com/podlove/podlove-publisher/commit/08d52424b359569d795d318163b0c697ef623199"
             }
         ]
     }
