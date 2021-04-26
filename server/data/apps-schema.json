@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/App"
+  },
+  "definitions": {
+    "App": {
+      "type": "object",
+      "title": "App or Service",
+      "additionalProperties": false,
+      "required": [
+        "appName",
+        "appType",
+        "appIconUrl",
+        "appUrl",
+        "platforms",
+        "supportedElements"
+      ],
+      "properties": {
+        "appName": {
+          "type": "string"
+        },
+        "appType": {
+          "type": "string",
+          "enum": ["app", "hosting", "directory", "browser extension", "wordpress plugin", "website", "other"]
+        },
+        "appUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "appIconUrl": {
+          "type": "string",
+          "description": "Filename of png or jpg in assets folder"
+        },
+        "platforms": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["Web", "iOS", "Android", "macOS", "Windows", "Linux", "Chrome", "Wordpress", "N/A"]
+          }
+        },
+        "supportedElements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SupportedElement"
+          }
+        },
+        "tagLine": {
+          "type": "string"
+        }
+      }
+    },
+    "SupportedElement": {
+      "type": "object",
+      "title": "Supported Element",
+      "additionalProperties": false,
+      "properties": {
+        "elementName": {
+          "type": "string",
+          "enum": ["Transcript", "Locked", "Funding", "Chapters", "Search", "Season", "Episode", "Soundbite", "Location", "Person", "Value"]
+        },
+        "elementURL": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "elementName",
+        "elementURL"
+      ]
+    }
+  }
+}
