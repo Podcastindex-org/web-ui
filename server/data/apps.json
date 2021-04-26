@@ -269,6 +269,19 @@
             }
         ]
     },
+        {
+        "appName": "Escapepod",
+        "appType": "app",
+        "appUrl": "https://github.com/y20k/escapepod",
+        "appIconUrl": "escapepod.png",
+        "platforms": ["Android"],
+        "supportedElements": [
+            {
+                "elementName": "Search",
+                "elementURL": "https://github.com/y20k/escapepod/blob/v1.0.3/app/src/main/java/org/y20k/escapepod/search/results/PodcastindexResult.kt"
+            }
+        ]
+    },
     {
         "appName": "Buzzsprout",
         "appType": "hosting",
