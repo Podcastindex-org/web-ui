@@ -140,7 +140,7 @@ export default class EpisodeItem extends React.PureComponent<IProps> {
                         onClick={this.togglePlayPause}/>
                 </div>
                 <p className="episode-description">
-                    {truncateString(description).replace(/(<([^>]+)>)/gi, "")}
+                    {truncateString(description).replace(/(<([^>]+)>)/gi, " ")}
                 </p>
             </div>
         )
