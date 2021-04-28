@@ -668,7 +668,7 @@
         "appName": "Plink",
         "appType": "directory",
         "appUrl": "https://plinkhq.com/",
-        "appIconUrl": "plink.jpg",
+        "appIconUrl": "plink.png",
         "platforms": ["Web"],
         "supportedElements": [
             {
