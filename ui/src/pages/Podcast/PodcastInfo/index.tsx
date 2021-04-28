@@ -5,6 +5,7 @@ import PodcastHeader from '../../../components/PodcastHeader'
 import Player from '../../../components/Player'
 import EpisodeItem from '../../../components/EpisodeItem'
 import { updateTitle } from '../../../utils'
+const he = require('he')
 
 import './styles.scss'
 
@@ -204,7 +205,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
             this.state.result.artwork
         let link = this.state.episodes[index].link
         let enclosureUrl = this.state.episodes[index].enclosureUrl
-        let description = this.state.episodes[index].description
+        let description = he.decode(this.state.episodes[index].description)
         let datePublished = this.state.episodes[index].datePublished
 
         // create a reference to the generated EpisodeItem if one doesn't already exist
