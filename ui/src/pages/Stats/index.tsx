@@ -16,24 +16,24 @@ export default class Card extends React.Component<IProps> {
     state = {
         loading: true,
         overallStats: {
-            feedCountTotal: '1,318,328',
-            feedCount3days: '81,919',
+            feedCountTotal: '3,432,180',
+            feedCount3days: '100,201',
             feedCount10days: '208,264',
             feedCount30days: '303,007',
-            feedCount60days: '376,576',
+            feedCount60days: '416,576',
         },
         stats: {
-            totalCount: 1619,
-            top1name: '',
-            top1count: 473,
-            top2name: '',
-            top2count: 208,
-            top3name: '',
-            top3count: 113,
-            top4name: '',
-            top4count: 86,
-            top5name: '',
-            top5count: 39
+            totalCount: 3773,
+            top1name: 'Buzzsprout',
+            top1count: 1870,
+            top2name: 'RSS.com',
+            top2count: 967,
+            top3name: 'Captivate',
+            top3count: 381,
+            top4name: 'Transistor',
+            top4count: 376,
+            top5name: 'Blubrry',
+            top5count: 96,
         }
     }
     _isMounted = false
