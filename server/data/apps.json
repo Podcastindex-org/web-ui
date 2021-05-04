@@ -663,5 +663,22 @@
                 "elementURL": "https://github.com/podlove/podlove-publisher/commit/08d52424b359569d795d318163b0c697ef623199"
             }
         ]
-    }
+    },
+    {
+        "appName": "Plink",
+        "appType": "directory",
+        "appUrl": "https://plinkhq.com/",
+        "appIconUrl": "plink.png",
+        "platforms": ["Web"],
+        "supportedElements": [
+            {
+                "elementName": "Search",
+                "elementURL": "https://plinkhq.com/smart-links/"
+            },
+            {
+                "elementName": "Funding",
+                "elementURL": "https://plinkhq.com/"
+            }
+        ]
+    },
 ]
