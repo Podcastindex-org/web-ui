@@ -680,5 +680,18 @@
                 "elementURL": "https://plinkhq.com/"
             }
         ]
+    },
+    {
+        "appName": "Headliner",
+        "appType": "app",
+        "appUrl": "https://headliner.app/",
+        "appIconUrl": "headliner.png",
+        "platforms": ["Web"],
+        "supportedElements": [
+            {
+                "elementName": "Soundbite",
+                "elementURL": "https://www.headliner.app/blog/2021/04/23/no-more-clipping-headliner-now-supports-the-soundbite-tag/"
+            }
+        ]
     }
 ]
