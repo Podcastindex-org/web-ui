@@ -683,7 +683,7 @@
     },
     {
         "appName": "Headliner",
-        "appType": "video platform",
+        "appType": "video",
         "appUrl": "https://headliner.app/",
         "appIconUrl": "headliner.png",
         "platforms": ["Web"],
