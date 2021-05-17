@@ -11802,10 +11802,10 @@ pnp-webpack-plugin@1.6.4, pnp-webpack-plugin@^1.6.4:
   dependencies:
     ts-pnp "^1.1.6"
 
-podcast-index-api@^1.1.8:
-  version "1.1.8"
-  resolved "https://registry.yarnpkg.com/podcast-index-api/-/podcast-index-api-1.1.8.tgz#24dde4424d41886b70ddd1665276401939821f0d"
-  integrity sha512-tZQqehwJFVIP4KJ2ST6/Qx/KeyT7WsaVn0xUwH4kJhz19RgQ1wXH8ivU8catWsBT4SIWX8a/aGkvNu9jnYux4g==
+podcast-index-api@^1.1.9:
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/podcast-index-api/-/podcast-index-api-1.1.9.tgz#52758ae2e81bc3990d0f460bb95420d3b24ab238"
+  integrity sha512-jG/JMb2KJIAdv/NrI6+OpFmxlh5Mln07AHzH6cYDsnmLyO4fTd24zdwFHch8DgD/CVhWkzG+oZroEL3ig92v5g==
   dependencies:
     got "^11.6.0"
 
