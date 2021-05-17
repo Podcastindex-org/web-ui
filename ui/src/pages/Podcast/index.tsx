@@ -1,7 +1,8 @@
 import * as React from 'react'
-import { Route } from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
+import {updateTitle} from '../../utils'
 import PodcastInfo from './PodcastInfo'
-import { updateTitle } from '../../utils'
+import Value4Value from "./Value4Value";
 
 import './styles.scss'
 
@@ -14,20 +15,27 @@ export default class Podcast extends React.PureComponent<IProps> {
         updateTitle('Podcast')
         return (
             <div>
-                <Route
-                    exact
-                    path={this.props.match.path}
-                    render={() => (
-                        <div className="page-content">
-                            <h1>Podcasts</h1>
-                            <p>Please search for a podcast above</p>
-                        </div>
-                    )}
-                />
-                <Route
-                    path={`${this.props.match.path}/:podcastId`}
-                    render={(props) => <PodcastInfo {...props} />}
-                />
+                <Switch>
+                    <Route
+                        exact
+                        path={this.props.match.path}
+                        render={() => (
+                            <div className="page-content">
+                                <h1>Podcasts</h1>
+                                <p>Please search for a podcast above</p>
+                            </div>
+                        )}
+                    />
+                    <Route
+                        exact
+                        path={`${this.props.match.path}/value4value`}
+                        render={(props) => <Value4Value {...props} />}
+                    />
+                    <Route
+                        path={`${this.props.match.path}/:podcastId`}
+                        render={(props) => <PodcastInfo {...props} />}
+                    />
+                </Switch>
             </div>
         )
     }

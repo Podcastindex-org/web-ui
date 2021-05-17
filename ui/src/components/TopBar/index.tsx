@@ -80,6 +80,7 @@ export default class Topbar extends React.PureComponent<IProps, IState> {
                         }`}
                     >
                         <Button href="/apps">Apps</Button>
+                        <Button href="/podcast/value4value">Value 4 Value</Button>
                         <Button link href="/stats">
                             Stats
                         </Button>

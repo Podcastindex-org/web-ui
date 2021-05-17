@@ -70,6 +70,34 @@ app.use('/api/recent/episodes', async (req, res) => {
     res.send(response)
 })
 
+// TODO borrowing from podcast-index-api package until generic API support added
+const withResponse = (response) => {
+    // Check for success or failure and create a predictable error response
+    let body = response.body
+    // if response.statusCode == 200?
+    if (
+        response.statusCode == 500 ||
+        (body.hasOwnProperty('status') && body.status === 'false')
+    ) {
+        // Failed
+        if (body.hasOwnProperty('description')) {
+            // Error message from server API
+            throw { message: body.description, code: response.statusCode }
+        } else {
+            throw { message: 'Request failed.', code: response.statusCode }
+        }
+    } else {
+        // Success // 200
+        return body
+    }
+}
+
+app.use('/api/podcasts/bytag', async (req, res) => {
+    // TODO not currently supported by podcast-index-api package so call directly
+    const response = await api.api('podcasts/bytag?podcast-value')
+    res.send(withResponse(response))
+})
+
 app.use('/api/podcasts/byfeedid', async (req, res) => {
     let feedId = req.query.id
     const response = await api.podcastsByFeedId(feedId)
