@@ -70,6 +70,11 @@ app.use('/api/recent/episodes', async (req, res) => {
     res.send(response)
 })
 
+app.use('/api/podcasts/bytag', async (req, res) => {
+    const response = await api.podcastsByTag()
+    res.send(response)
+})
+
 app.use('/api/podcasts/byfeedid', async (req, res) => {
     let feedId = req.query.id
     const response = await api.podcastsByFeedId(feedId)
@@ -87,7 +92,7 @@ app.use('/api/episodes/byfeedid', async (req, res) => {
 // ------------------------------------------------
 
 app.use('/api/stats', async (req, res) => {
-    fs.readFile('./server/data/stats.json', 'utf8', (err, data) => {  
+    fs.readFile('./server/data/stats.json', 'utf8', (err, data) => {
         // You should always specify the content type header,
         // when you don't use 'res.json' for sending JSON.  
         res.set('Content-Type', 'application/json');
@@ -105,7 +110,7 @@ app.use('/api/newfeedstats', async (req, res) => {
 })
 
 app.use('/api/apps', async (req, res) => {
-    fs.readFile('./server/data/apps.json', 'utf8', (err, data) => {  
+    fs.readFile('./server/data/apps.json', 'utf8', (err, data) => {
         // You should always specify the content type header,
         // when you don't use 'res.json' for sending JSON.  
         res.set('Content-Type', 'application/json');

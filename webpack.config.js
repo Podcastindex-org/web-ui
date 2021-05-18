@@ -4,12 +4,10 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const dotenv = require('dotenv')
 dotenv.config()
 
-const isProduction = process.env.NODE_ENV === 'production'
-
 module.exports = {
-    watch: !isProduction,
-    mode: 'development',
-    devtool: 'inline-source-map',
+    watch: false,
+    mode: 'production',
+    devtool: false,
     devServer: {
         contentBase: path.join(__dirname, './server/www'),
         compress: true,
