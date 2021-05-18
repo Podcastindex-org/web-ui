@@ -11,6 +11,8 @@ interface IProps {
     tendays: string
     lastMonth: string
     last60: string
+    valueblocks: string
+    episodes: string
 }
 
 export default class StatsCard extends React.Component<IProps> {
@@ -21,6 +23,8 @@ export default class StatsCard extends React.Component<IProps> {
         lastWeek: '',
         lastMonth: '',
         last60: '',
+        valueblocks: '',
+        episodes: ''
     }
 
     constructor(props: IProps) {
@@ -32,8 +36,9 @@ export default class StatsCard extends React.Component<IProps> {
     }
 
     render() {
-        const { total, threedays, tendays, lastMonth, last60 } = this.props
+        const { total, threedays, tendays, lastMonth, last60, valueblocks, episodes } = this.props
         return (
+            <div>
             <div className="kpi-card">
                 <Card>
                     <div className="kpi-massive-title">
@@ -54,6 +59,16 @@ export default class StatsCard extends React.Component<IProps> {
                         /> */}
                     </div>
                 </Card>
+            </div>
+
+            <div className="kpi-card">
+                <Card>
+                    <div className="kpi-massive-title">
+                        Total episodes ...
+                    </div>
+                    <div className="kpi-massive-value">{episodes}</div>
+                </Card>
+            </div>
             </div>
         )
     }
