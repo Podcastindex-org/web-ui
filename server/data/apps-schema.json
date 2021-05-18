@@ -23,7 +23,7 @@
         },
         "appType": {
           "type": "string",
-          "enum": ["app", "hosting", "directory", "browser extension", "wordpress plugin", "website", "social links", "node hosting", "other"]
+          "enum": ["app", "hosting", "directory", "browser extension", "wordpress plugin", "website", "social links", "node hosting", "video", "other"]
         },
         "appUrl": {
           "type": "string",
