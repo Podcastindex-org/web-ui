@@ -87,11 +87,10 @@ export default class Value4Value extends React.PureComponent<IProps> {
         return (
             <div className="v4v">
                 <h2>Value 4 Value Podcasts</h2>
-                <p>Podcasts supporting Value 4 Value using lighting.</p>
-                <p>
-                    To get your podcasts on this list, add the podcast:value tag to the feed XML or claim your feed.
-                    To claim your feed, search for it above and click the lightning bold on the podcast page.
-                </p>
+                <p>These are the podcasts currently using the &lt;podcast:value&gt; tag to directly earn Bitcoin from listeners over the Lightning network. To get your podcast on this
+                    list just add the <b><a href="https://github.com/Podcastindex-org/podcast-namespace/blob/main/value/value.md">value tag</a></b> to your feed's XML.  To get you started, there are
+                    easy to follow instructions <b><a href="https://podnews.net/article/how-to-earn-bitcoin-from-your-podcast">here</a></b>.</p>
+                <br/>
 
                 <div className="v4v-results">
                     <ReactList
