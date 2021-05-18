@@ -4,7 +4,7 @@ import ReactLoading from 'react-loading'
 import PodcastHeader from '../../../components/PodcastHeader'
 import Player from '../../../components/Player'
 import EpisodeItem from '../../../components/EpisodeItem'
-import { updateTitle } from '../../../utils'
+import {fixURL, updateTitle} from '../../../utils'
 const he = require('he')
 
 import './styles.scss'
@@ -147,8 +147,8 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         let categories = this.state.result.categories
         let value = this.state.result.value
         let id = this.state.result.id
-        let podcastURL = this.state.result.link
-        let feedURL = this.state.result.url
+        let podcastURL = fixURL(this.state.result.link)
+        let feedURL = fixURL(this.state.result.url)
 
         updateTitle(title)
         return (
@@ -204,7 +204,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
             this.state.result.image ||
             this.state.result.artwork
         let link = this.state.episodes[index].link
-        let enclosureUrl = this.state.episodes[index].enclosureUrl
+        let enclosureUrl = fixURL(this.state.episodes[index].enclosureUrl)
         let description = he.decode(this.state.episodes[index].description)
         let datePublished = this.state.episodes[index].datePublished
 
