@@ -1,0 +1,86 @@
+.player-info {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.player-bottom {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: inherit;
+    margin-top: 5px;
+    padding: 0 10px;
+    // width: calc100%;
+}
+
+.player-media-controls {
+    width: calc(100% - 20px);
+    .player-show-title p {
+        font-size: 20px;
+        font-family: var(--font-family);
+        font-weight: bold;
+        text-align: center;
+        width: 450px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 5px;
+        color: #2d2d2d;
+    }
+    .player-podcast-name {
+        text-align: center;
+        width: 450px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 5px;
+
+        > a {
+            font-size: 16px;
+            font-family: var(--font-family);
+            color: #2d2d2d;
+        }
+    }
+    .player-feed-button {
+        cursor: pointer;
+    }
+    p {
+        margin: 5px 0 0;
+        font-family: var(--font-family-exp);
+        font-size: 14px;
+        //line-height: 16px;
+        color: #868686;
+    }
+    .rhap_container {
+        outline: none;
+        box-shadow: none;
+        button {
+            outline: none;
+        }
+        .rhap_volume-bar-area {
+            outline: none;
+        }
+        .rhap_progress-container {
+            outline: none;
+        }
+        .rhap_progress-indicator {
+            width: 15px;
+            height: 15px;
+            top: -5px;
+            background: var(--color-primary);
+        }
+        .rhap_play-pause-button {
+            svg path {
+                fill: var(--color-primary);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .player-show-title p {
+        max-width: 350px;
+    }
+}

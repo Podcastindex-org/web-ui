@@ -1,0 +1,21 @@
+name: CI
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Validate JSON
+        uses: nhalstead/validate-json-action@0.1.3
+        with:
+          # Relative file path under the repository of a JSON schema file to validate the other JSON files with.
+          schema: server/data/apps-schema.json
+          # One or more relative file paths under the repository (separated by comma) of the JSON files to validate with the schema provided.
+          jsons: server/data/apps.json

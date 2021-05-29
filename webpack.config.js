@@ -1,18 +1,15 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
-const FileCopyOncePlugin = require('./file-copy-once-plugin.webpack')
 const dotenv = require('dotenv')
 dotenv.config()
 
-const isProduction = process.env.NODE_ENV === 'production'
-
 module.exports = {
-    watch: !isProduction,
-    mode: 'development',
-    devtool: 'inline-source-map',
+    watch: false,
+    mode: 'production',
+    devtool: false,
     devServer: {
-        contentBase: path.join(__dirname, 'www'),
+        contentBase: path.join(__dirname, './server/www'),
         compress: true,
         port: 9001,
         historyApiFallback: true,
@@ -22,11 +19,16 @@ module.exports = {
                 target: 'http://localhost:5001',
                 pathRewrite: { '^/api': '/api' },
             },
+            '/namespace': {
+                changeOrigin: true,
+                target: 'http://localhost:5001',
+                pathRewrite: { '^/namespace': '/namespace' },
+            }
         },
     },
-    entry: './src/index.tsx',
+    entry: './ui/src/index.tsx',
     output: {
-        path: path.resolve(__dirname, 'www'),
+        path: path.resolve(__dirname, './server/www'),
         publicPath: '/',
         filename: 'bundle.js',
     },
@@ -60,7 +62,7 @@ module.exports = {
                 use: ['html-loader'],
             },
             {
-                test: /\.(svg|gif|png|jpg)(\?v=\d+\.\d+\.\d+)?$/i,
+                test: /\.(png|svg|jpg|gif|ico)$/,
                 exclude: [/node_modules/],
                 use: [
                     {
@@ -100,14 +102,14 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'public', 'index.html'),
+            template: path.resolve(__dirname, './ui/public', 'index.html'),
             minify: {
                 removeComments: true,
                 removeRedundantAttributes: true,
             },
         }),
         new FaviconsWebpackPlugin({
-            logo: path.resolve(__dirname, 'public', 'pci_avatar.svg'),
+            logo: path.resolve(__dirname, './ui/public', 'pci_avatar.svg'),
             prefix: '.',
             mode: 'webapp',
             devMode: 'webapp',
@@ -123,14 +125,6 @@ module.exports = {
                     yandex: false
                 }
             }
-        }),
-        new FileCopyOncePlugin({
-            from: "./public/stats.json",
-            to:   "./www/stats.json",
-         }),
-         new FileCopyOncePlugin({
-             from: "./public/apps.json",
-             to:   "./www/apps.json",
-          })
+        })
     ],
 }

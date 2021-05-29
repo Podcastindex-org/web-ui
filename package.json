@@ -1,6 +1,8 @@
 {
     "name": "podcastindex",
-    "version": "0.1.0",
+    "version": "0.2.1",
+    "user-agent-org": "Podcastindex.org/",
+    "user-agent-app": "www",
     "license": "MIT",
     "private": true,
     "dependencies": {
@@ -14,12 +16,13 @@
         "@types/redux-thunk": "^2.1.0",
         "apexcharts": "^3.20.0",
         "connected-react-router": "^6.7.0",
+        "crypto-js": "^4.0.0",
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
         "history": "^4.10.1",
         "moment": "^2.29.0",
         "pluralize": "^8.0.0",
-        "podcast-index-api": "^1.1.6",
+        "podcast-index-api": "^1.1.9",
         "query-string": "^6.13.5",
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
@@ -34,7 +37,8 @@
         "redux-thunk": "^2.3.0",
         "reduxsauce": "^1.1.2",
         "shortid": "^2.2.15",
-        "typesafe-actions": "^5.1.0"
+        "typesafe-actions": "^5.1.0",
+        "uuid": "^8.3.2"
     },
     "devDependencies": {
         "@babel/core": "^7.11.6",
@@ -45,7 +49,7 @@
         "@storybook/preset-create-react-app": "^3.1.4",
         "@storybook/react": "^6.0.21",
         "babel-loader": "^8.1.0",
-        "copy-webpack-plugin": "^6.2.1",
+        "copy-webpack-plugin": "^6.3.2",
         "css-loader": "^3.4.2",
         "favicons-webpack-plugin": "^4.2.0",
         "file-loader": "^6.1.0",
@@ -65,10 +69,10 @@
         "webpack-dev-server": "^3.10.3"
     },
     "scripts": {
-        "start-originalAfterFork": "webpack-dev-server",
+        "dev": "webpack-dev-server --mode development --devtool inline-source-map",
         "build": "webpack",
-        "production": "webpack && node server.js",
-        "start": "node server.js",
+        "production": "NODE_ENV='production' && webpack --mode production && node server",
+        "start": "node server",
         "test": "react-scripts test --env=jsdom",
         "eject": "react-scripts eject",
         "flow": "flow",

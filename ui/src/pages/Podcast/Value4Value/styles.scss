@@ -1,0 +1,22 @@
+.v4v {
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+    width: 1024px;
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+.loader-wrapper {
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

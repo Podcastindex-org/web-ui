@@ -1,0 +1,100 @@
+@font-face {
+    font-family: D-DIN;
+    src: url(../fonts/D-DIN.otf) format('otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: D-DIN-Bold;
+    src: url(../fonts/D-DIN-Bold.otf) format('otf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: D-DINExp;
+    src: url(../fonts/D-DINExp.otf) format('otf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: D-DINExp-Bold;
+    src: url(../fonts/D-DINExp-Bold.otf) format('otf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: DINAlternate-Bold;
+    src: url(../fonts/DIN-Alternate-Bold.ttf) format('ttf');
+    font-weight: bold;
+}
+
+:root {
+    --transition-secs: 0.2s;
+    --bg-main: #ffffff;
+    --color-primary: #e90000;
+    --font-family: D-DIN, sans-serif;
+    --font-family-bold: D-DIN-Bold, sans-serif;
+    --font-family-exp: D-DINExp, sans-serif;
+    --font-family-exp-bold: D-DINExp-Bold, sans-serif;
+    --font-alt: DINAlternate-Bold, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    // max-width: 100vw;
+    font-family: var(--font-family);
+    margin: 0;
+    color: #2d2d2d;
+    overflow-y: scroll; // Disable scrolling on body
+}
+
+h1 {
+    font-family: var(--font-family-exp);
+    font-weight: bold;
+    font-size: 55px;
+}
+
+h2 {
+    font-family: var(--font-family-exp);
+    font-weight: bold;
+    font-size: 44px;
+}
+
+h3 {
+    font-family: var(--font-family-exp);
+    font-weight: bold;
+    font-size: 33px;
+}
+
+h4 {
+    font-family: var(--font-family-exp);
+    font-weight: bold;
+    font-size: 27px;
+}
+
+a:link,
+a:visited,
+a:active {
+    color: #002752;
+}
+
+a:hover {
+    color: #cc2799;
+}
+
+.landing-graphic {
+    opacity: 0.75;
+    top: 120px;
+    left: -300px;
+    position: absolute;
+    z-index: -1000;
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+    .landing-graphic {
+        display: none;
+    }
+    .hide-mobile {
+      display: none;
+    }
+}

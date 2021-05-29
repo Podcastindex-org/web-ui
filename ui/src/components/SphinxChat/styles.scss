@@ -1,0 +1,8 @@
+// Mobile resize
+@media only screen and (max-width: 767px) {
+    sphinx-widget {
+        > div {
+            width: 300px !important;
+        }
+    }
+}
