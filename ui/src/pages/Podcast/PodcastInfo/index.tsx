@@ -149,6 +149,11 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         let id = this.state.result.id
         let podcastURL = fixURL(this.state.result.link)
         let feedURL = fixURL(this.state.result.url)
+        let donationPageURL = null
+        if (this.state.result.funding) // not null, exists
+        {
+            donationPageURL = this.state.result.funding?.url
+        }
 
         updateTitle(title)
         return (
@@ -161,6 +166,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
                 value={value}
                 id={id}
                 podcastURL={podcastURL}
+                donationPageURL={donationPageURL}
                 feedURL={feedURL}
             />
         )
