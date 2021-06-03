@@ -3,6 +3,7 @@ import * as React from 'react'
 import NoImage from '../../../images/no-cover-art.png'
 import { truncateString, titleizeString } from '../../utils'
 import RSSLogo from "../../../images/feed.svg";
+import DonationPage from "../../../images/donation-page.svg";
 import EarthLogo from "../../../images/earth.svg";
 import LightningLogo from "../../../images/lightning.svg"
 import './styles.scss'
@@ -16,6 +17,7 @@ interface IProps {
     id?: string
     feedURL?: string
     podcastURL?: string
+    donationPageURL?: string
     value?: {
       model: {
         type: string
@@ -76,7 +78,7 @@ export default class PodcastHeader extends React.PureComponent<IProps, PodState>
     }
 
     render() {
-        const {title, description, author, categories, image, id, feedURL, podcastURL, value} = this.props
+        const {title, description, author, categories, image, id, feedURL, donationPageURL, podcastURL, value} = this.props
         const splitTotal = value && value.destinations ? value && value.destinations.reduce((total, d) => total + parseInt(d.split, 10), 0): null
 
         if(value && value.destinations && value.destinations.length > 1 && value.destinations[(value.destinations.length - 1)].name.toLowerCase() === "podcastindex.org") {
@@ -123,6 +125,16 @@ export default class PodcastHeader extends React.PureComponent<IProps, PodState>
                                     target="_blank"
                                 >
                                     <img src={RSSLogo}/>
+                                </a>
+                                : ""
+                            }
+                            {donationPageURL ?
+                                <a
+                                    href={donationPageURL}
+                                    title="Donation Page"
+                                    target="_blank"
+                                >
+                                    <img src={DonationPage}/>
                                 </a>
                                 : ""
                             }
