@@ -31,7 +31,24 @@ interface IProps {
     }
 }
 
-export default class PodcastHeader extends React.PureComponent<IProps> {
+type PodState = { copyMessage: string };
+
+export default class PodcastHeader extends React.PureComponent<IProps, PodState> {
+
+    constructor(props) {
+        super(props);
+        this.state = {copyMessage: "Copy RSS"};
+      }
+
+      copyClicked = () => {
+        navigator.clipboard.writeText(this.props.feedURL)
+        this.setState({copyMessage: "Copied!"});
+        setTimeout(() => {
+            this.setState({
+            copyMessage: "Copy RSS"
+          })
+        }, 1833); // 18 = happy Jewish number, 33 = magic number of No Agenda
+      }
 
     renderCategories(categories) {
         let categoryArray = []
@@ -118,6 +135,10 @@ export default class PodcastHeader extends React.PureComponent<IProps> {
                                 >
                                     <img src={LightningLogo}/>
                                 </a>
+                                : ""
+                            }
+                            {feedURL ?
+                                <span onClick={this.copyClicked}>{ this.state.copyMessage }</span>
                                 : ""
                             }
                         </div>
