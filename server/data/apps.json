@@ -722,5 +722,26 @@
                 "elementURL": "https://curiocaster.com/"
             }               
         ]
+    },
+    {
+        "appName": "PodLP",
+        "appType": "app",
+        "appUrl": "https://podlp.com/",
+        "appIconUrl": "podlp.png",
+        "platforms": ["KaiOS"],
+        "supportedElements": [
+			{
+                "elementName": "Person",
+                "elementURL": "https://blog.podlp.com/posts/podcasting-20/"
+            },
+			{
+                "elementName": "Location",
+                "elementURL": "https://blog.podlp.com/posts/podcasting-20/"
+            },
+            {
+                "elementName": "Funding",
+                "elementURL": "https://blog.podlp.com/posts/podcasting-20/"
+            }              
+        ]
     }    
 ]
