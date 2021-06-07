@@ -240,6 +240,56 @@
         ]
     },
     {
+        "appName": "CurioCaster",
+        "appType": "app",
+        "appUrl": "https://curiocaster.com/",
+        "appIconUrl": "curiocaster.png",
+        "platforms": ["Web"],
+        "supportedElements": [
+            {
+                "elementName": "Value",
+                "elementURL": "https://curiocaster.com/"
+            },
+            {
+                "elementName": "Chapters",
+                "elementURL": "https://curiocaster.com/"
+            },
+            {
+                "elementName": "Transcript",
+                "elementURL": "https://curiocaster.com/"
+            },
+            {
+                "elementName": "Funding",
+                "elementURL": "https://curiocaster.com/"
+            },
+            {
+                "elementName": "Search",
+                "elementURL": "https://curiocaster.com/"
+            }
+        ]
+    },
+    {
+        "appName": "PodLP",
+        "appType": "app",
+        "appUrl": "https://podlp.com/",
+        "appIconUrl": "podlp.png",
+        "platforms": ["KaiOS"],
+        "supportedElements": [
+            {
+                "elementName": "Person",
+                "elementURL": "https://blog.podlp.com/posts/podcasting-20/"
+            },
+            {
+                "elementName": "Location",
+                "elementURL": "https://blog.podlp.com/posts/podcasting-20/"
+            },
+            {
+                "elementName": "Funding",
+                "elementURL": "https://blog.podlp.com/posts/podcasting-20/"
+            }
+        ]
+    },
+    {
         "appName": "Tsacdop",
         "appType": "app",
         "appUrl": "https://github.com/stonega/tsacdop",
@@ -279,6 +329,23 @@
             {
                 "elementName": "Search",
                 "elementURL": "https://github.com/y20k/escapepod/blob/v1.0.3/app/src/main/java/org/y20k/escapepod/search/results/PodcastindexResult.kt"
+            }
+        ]
+    },
+    {
+        "appName": "N2N2.chat",
+        "appType": "app",
+        "appUrl": "https://n2n2.co",
+        "appIconUrl": "n2n2.png",
+        "platforms": ["iOS", "Android", "macOS", "Windows", "Linux"],
+        "supportedElements": [
+            {
+                "elementName": "Value",
+                "elementURL": "https://n2n2.co"
+            },
+            {
+                "elementName": "Search",
+                "elementURL": "https://n2n2.co"
             }
         ]
     },
@@ -627,23 +694,6 @@
         ]       
     },
     {
-        "appName": "N2N2.chat",
-        "appType": "app",
-        "appUrl": "https://n2n2.co",
-        "appIconUrl": "n2n2.png",
-        "platforms": ["iOS", "Android", "macOS", "Windows", "Linux"],
-        "supportedElements": [
-            {
-                "elementName": "Value",
-                "elementURL": "https://n2n2.co"
-            },
-            {
-                "elementName": "Search",
-                "elementURL": "https://n2n2.co"
-            }
-        ]
-    },
-    {
         "appName": "Podlove Podcast Publisher",
         "appType": "wordpress plugin",
         "appUrl": "https://publisher.podlove.org",
@@ -693,55 +743,5 @@
                 "elementURL": "https://www.headliner.app/blog/2021/04/23/no-more-clipping-headliner-now-supports-the-soundbite-tag/"
             }
         ]
-    },
-	{
-        "appName": "CurioCaster",
-        "appType": "app",
-        "appUrl": "https://curiocaster.com/",
-        "appIconUrl": "curiocaster.png",
-        "platforms": ["Web"],
-        "supportedElements": [
-			{
-                "elementName": "Value",
-                "elementURL": "https://curiocaster.com/"
-            },
-			{
-                "elementName": "Chapters",
-                "elementURL": "https://curiocaster.com/"
-            },
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://curiocaster.com/"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://curiocaster.com/"
-            },            
-            {
-                "elementName": "Search",
-                "elementURL": "https://curiocaster.com/"
-            }               
-        ]
-    },
-    {
-        "appName": "PodLP",
-        "appType": "app",
-        "appUrl": "https://podlp.com/",
-        "appIconUrl": "podlp.png",
-        "platforms": ["KaiOS"],
-        "supportedElements": [
-			{
-                "elementName": "Person",
-                "elementURL": "https://blog.podlp.com/posts/podcasting-20/"
-            },
-			{
-                "elementName": "Location",
-                "elementURL": "https://blog.podlp.com/posts/podcasting-20/"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://blog.podlp.com/posts/podcasting-20/"
-            }              
-        ]
-    }    
+    }
 ]
