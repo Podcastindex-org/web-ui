@@ -37,7 +37,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "enum": ["Web", "iOS", "Android", "macOS", "Windows", "Linux", "Chrome", "Wordpress", "N/A"]
+            "enum": ["Web", "iOS", "Android", "macOS", "Windows", "Linux", "KaiOS", "Chrome", "Wordpress", "N/A"]
           }
         },
         "supportedElements": {
