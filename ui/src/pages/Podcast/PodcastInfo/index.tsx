@@ -175,13 +175,19 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     renderPlayer() {
         return (
             <div className="podcast-header-player">
-                <Player
-                    ref={this.player}
-                    episode={this.state.selectedEpisode}
-                    onPlay={this.onEpisodePlay}
-                    onPause={this.onEpisodePause}
-                    onCanPlay={this.onEpisodeCanPlay}
-                />
+                {
+                    this.state.episodes.length > 0
+                        ?
+                        <Player
+                            ref={this.player}
+                            episode={this.state.selectedEpisode}
+                            onPlay={this.onEpisodePlay}
+                            onPause={this.onEpisodePause}
+                            onCanPlay={this.onEpisodeCanPlay}
+                        />
+                        :
+                        <div></div>
+                }
             </div>
         )
     }
@@ -190,13 +196,21 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         return (
             <div className="episodes-list">
                 <h2 className="episode-header">Episodes</h2>
-                <ReactList
-                    minSize={10}
-                    pageSize={10}
-                    itemRenderer={this.renderEpisode.bind(this)}
-                    length={this.state.episodes.length}
-                    type="simple"
-                />
+                {
+                    this.state.episodes.length > 0
+                        ?
+                        <ReactList
+                            minSize={10}
+                            pageSize={10}
+                            itemRenderer={this.renderEpisode.bind(this)}
+                            length={this.state.episodes.length}
+                            type="simple"
+                        />
+                        :
+                        <div>
+                            No episodes found
+                        </div>
+                }
             </div>
         )
     }
@@ -238,8 +252,8 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     }
 
     render() {
-        const { loading, result, episodes } = this.state
-        if ((result === undefined || result.length === 0 || episodes.length === 0) && !loading) {
+        const { loading, result } = this.state
+        if ((result === undefined || result.length === 0) && !loading) {
             const errorMessage = `Unknown podcast ID: ${this.props.match.params.podcastId}`
             updateTitle(errorMessage)
             return <div className="page-content">{errorMessage}</div>
