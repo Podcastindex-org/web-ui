@@ -82,16 +82,20 @@
         "platforms": ["iOS", "Android", "Web"],
         "supportedElements": [
             {
-                "elementName": "Funding",
-                "elementURL": "https://twitter.com/Podverse/status/1325734448608899072?s=20"
-            },
-            {
                 "elementName": "Chapters",
                 "elementURL": "https://twitter.com/Podverse/status/1324729288281632771?s=20"
             },
             {
                 "elementName": "Soundbite",
                 "elementURL": "https://twitter.com/Podverse/status/1326072379597053953?s=20"
+            },
+            {
+                "elementName": "Transcript",
+                "elementURL": "https://twitter.com/Podverse/status/1324729288281632771?s=20"
+            },
+            {
+                "elementName": "Funding",
+                "elementURL": "https://twitter.com/Podverse/status/1325734448608899072?s=20"
             }
         ]
     },
