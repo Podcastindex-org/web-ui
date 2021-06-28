@@ -33,6 +33,10 @@
             {
                 "elementName": "Season",
                 "elementURL": "https://podcastaddict.com/changelog/2021_4#section2"
+            },
+            {
+                "elementName": "Alternate Enclosure",
+                "elementURL": "https://twitter.com/PodcastAddict/status/1409220118614208518"
             }
         ]
     },
@@ -289,6 +293,10 @@
             },
             {
                 "elementName": "Search",
+                "elementURL": "https://curiocaster.com/"
+            },
+            {
+                "elementName": "Alternate Enclosure",
                 "elementURL": "https://curiocaster.com/"
             }
         ]
