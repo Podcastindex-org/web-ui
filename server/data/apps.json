@@ -210,6 +210,27 @@
         ]
     },
     {
+        "appName": "Ivy.fm",
+        "appType": "app",
+        "appUrl": "https://ivy.fm",
+        "appIconUrl": "ivyfm.jpg",
+        "platforms": ["Web"],
+        "supportedElements": [
+            {
+                "elementName": "Chapters",
+                "elementURL": "https://twitter.com/ivypodcasts/status/1409566617143590915"
+            },
+            {
+                "elementName": "Funding",
+                "elementURL": "https://twitter.com/ivypodcasts/status/1376280859620339719"
+            },
+            {
+                "elementName": "Person",
+                "elementURL": "https://twitter.com/ivypodcasts/status/1376280859620339719"
+            }
+        ]
+    },    
+    {
         "appName": "Anytime Podcast Player",
         "appType": "app",
         "appUrl": "https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime",
