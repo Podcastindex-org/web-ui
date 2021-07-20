@@ -210,6 +210,10 @@
             {
                 "elementName": "Search",
                 "elementURL": "https://github.com/AntennaPod/AntennaPod/pull/4435"
+            },
+            {
+                "elementName": "Funding",
+                "elementURL": "https://github.com/AntennaPod/AntennaPod/pull/4933"
             }
         ]
     },
@@ -774,6 +778,19 @@
             {
                 "elementName": "Soundbite",
                 "elementURL": "https://www.headliner.app/blog/2021/04/23/no-more-clipping-headliner-now-supports-the-soundbite-tag/"
+            }
+        ]
+    },
+    {
+    "appName": "Castamatic",
+        "appType": "app",
+        "appUrl": "https://castamatic.com",
+        "appIconUrl": "castamatic.png",
+        "platforms": ["iOS"],
+        "supportedElements": [
+            {
+                "elementName": "Search",
+                "elementURL": "https://castamatic.com/jekyll/2021/05/20/castamatic-7-5/"
             }
         ]
     }
