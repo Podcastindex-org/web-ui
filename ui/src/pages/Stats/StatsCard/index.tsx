@@ -11,6 +11,7 @@ interface IProps {
     tendays: string
     lastMonth: string
     last60: string
+    last90: string
 }
 
 export default class StatsCard extends React.Component<IProps> {
@@ -21,6 +22,7 @@ export default class StatsCard extends React.Component<IProps> {
         lastWeek: '',
         lastMonth: '',
         last60: '',
+        last90: '',
     }
 
     constructor(props: IProps) {
@@ -32,7 +34,7 @@ export default class StatsCard extends React.Component<IProps> {
     }
 
     render() {
-        const { total, threedays, tendays, lastMonth, last60 } = this.props
+        const { total, threedays, tendays, lastMonth, last60, last90 } = this.props
         return (
             <div className="kpi-card">
                 <Card>
@@ -48,6 +50,7 @@ export default class StatsCard extends React.Component<IProps> {
                         <KPI title="10 days" value={tendays} />
                         <KPI title="30 days" value={lastMonth} />
                         <KPI title="60 days" value={last60} />
+                        <KPI title="90 days" value={last90} />
                         {/* <KPI
                             title="90 days"
                             value={this.numberWithCommas(last90)}

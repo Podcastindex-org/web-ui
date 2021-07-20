@@ -28,6 +28,7 @@ export default class Landing extends React.Component<IProps, IState> {
             feedCount10days: '208,264',
             feedCount30days: '303,007',
             feedCount60days: '376,576',
+            feedCount90days: '607,991',
         },
     }
     _isMounted = false
@@ -124,6 +125,7 @@ export default class Landing extends React.Component<IProps, IState> {
                     tendays={stats.feedCount10days}
                     lastMonth={stats.feedCount30days}
                     last60={stats.feedCount60days}
+                    last90={stats.feedCount90days}
                 />
                 <div className="info-section">
                     <h3>Promise</h3>

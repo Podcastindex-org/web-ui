@@ -16,11 +16,12 @@ export default class Card extends React.Component<IProps> {
     state = {
         loading: true,
         overallStats: {
-            feedCountTotal: '3,432,180',
+            feedCountTotal: '4,013,180',
             feedCount3days: '100,201',
             feedCount10days: '208,264',
             feedCount30days: '303,007',
             feedCount60days: '416,576',
+            feedCount90days: '616,576',
         },
         stats: {
             totalCount: 3773,
@@ -84,6 +85,7 @@ export default class Card extends React.Component<IProps> {
                     tendays={overallStats.feedCount10days}
                     lastMonth={overallStats.feedCount30days}
                     last60={overallStats.feedCount60days}
+                    last90={overallStats.feedCount90days}
                 />
                 <div className="info-section">&nbsp;</div>
                 <NewFeedStatsCard
