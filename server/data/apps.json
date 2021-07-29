@@ -674,6 +674,19 @@
         ]
     },
     {
+        "appName": "JustCast",
+        "appType": "hosting",
+        "appUrl": "https://justcast.com",
+        "appIconUrl": "transistor.jpg",
+        "platforms": ["N/A"],
+        "supportedElements": [
+            {
+                "elementName": "Chapters",
+                "elementURL": "https://twitter.com/thejustcast/status/1420783756156145664"
+            }
+        ]
+    },    
+    {
         "appName": "Podcast 2.0 Twitter List",
         "appType": "social links",
         "tagLine": "Twitter list of active devs and apps for Podcasting 2.0",
