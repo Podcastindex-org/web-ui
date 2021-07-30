@@ -383,6 +383,19 @@
         ]
     },
     {
+        "appName": "Kasts",
+        "appType": "app",
+        "appUrl": "https://apps.kde.org/kasts",
+        "appIconUrl": "kasts.png",
+        "platforms": ["Linux", "Android"],
+        "supportedElements": [
+            {
+                "elementName": "Search",
+                "elementURL": "https://www.plasma-mobile.org/2021/07/20/plasma-mobile-gear-21-07"
+            }
+        ]
+    },
+    {
         "appName": "N2N2.chat",
         "appType": "app",
         "appUrl": "https://n2n2.co",
