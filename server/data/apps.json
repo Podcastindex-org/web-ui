@@ -327,6 +327,19 @@
         ]
     },
     {
+        "appName": "Castamatic",
+        "appType": "app",
+        "appUrl": "https://castamatic.com",
+        "appIconUrl": "castamatic.png",
+        "platforms": ["iOS"],
+        "supportedElements": [
+            {
+                "elementName": "Search",
+                "elementURL": "https://castamatic.com/jekyll/2021/05/20/castamatic-7-5/"
+            }
+        ]
+    },
+    {
         "appName": "Tsacdop",
         "appType": "app",
         "appUrl": "https://github.com/stonega/tsacdop",
@@ -677,7 +690,7 @@
         "appName": "JustCast",
         "appType": "hosting",
         "appUrl": "https://justcast.com",
-        "appIconUrl": "transistor.jpg",
+        "appIconUrl": "justcast.png",
         "platforms": ["N/A"],
         "supportedElements": [
             {
@@ -791,19 +804,6 @@
             {
                 "elementName": "Soundbite",
                 "elementURL": "https://www.headliner.app/blog/2021/04/23/no-more-clipping-headliner-now-supports-the-soundbite-tag/"
-            }
-        ]
-    },
-    {
-    "appName": "Castamatic",
-        "appType": "app",
-        "appUrl": "https://castamatic.com",
-        "appIconUrl": "castamatic.png",
-        "platforms": ["iOS"],
-        "supportedElements": [
-            {
-                "elementName": "Search",
-                "elementURL": "https://castamatic.com/jekyll/2021/05/20/castamatic-7-5/"
             }
         ]
     }
