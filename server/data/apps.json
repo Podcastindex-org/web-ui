@@ -1,5 +1,18 @@
 [
     {
+        "appName": "Fountain",
+        "appType": "app",
+        "appUrl": "https://www.fountain.fm",
+        "appIconUrl": "fountain.png",
+        "platforms": ["iOS"],
+        "supportedElements": [
+            {
+                "elementName": "Value",
+                "elementURL": "https://twitter.com/MerryOscar/status/1420818281959677952"
+            }
+        ]
+    },
+    {
         "appName": "Podcast Addict",
         "appType": "app",
         "appUrl": "https://podcastaddict.com",
