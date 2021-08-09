@@ -108,7 +108,7 @@
         "appType": "app",
         "appUrl": "https://www.fountain.fm",
         "appIconUrl": "fountain.png",
-        "platforms": ["iOS"],
+        "platforms": ["iOS", "Android"],
         "supportedElements": [
             {
                 "elementName": "Value",
