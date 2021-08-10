@@ -80,8 +80,8 @@ export default class Landing extends React.Component<IProps, IState> {
                 <div className="hero-pitch">
                     <div className="hero-pitch-left">
                         <h1 className="hero-pitch-text">
-                            The Podcast Index exists to preserve open, independent podcasting and
-                            protect it from large corporate influence and control.
+                            The Podcast Index exists to preserve and protect the open,
+                            independent podcasting ecosystem.
                         </h1>
 
                         <div className="hero-pitch-subtitle">
