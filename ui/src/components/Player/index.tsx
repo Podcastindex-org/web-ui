@@ -124,9 +124,9 @@ export default class Player extends React.Component<IProps> {
         //anonymous, yet reliable tracking stats
         var pciGuid = ""
         if(episode.enclosureUrl.indexOf('?') > -1) {
-            pciGuid = '&_guid=' + pciStatsGuid
+            pciGuid = '&_ulid=' + pciStatsGuid
         } else {
-            pciGuid = '?_guid=' + pciStatsGuid
+            pciGuid = '?_ulid=' + pciStatsGuid
         }
 
         //Tag a _from on the end to give a stats hint
