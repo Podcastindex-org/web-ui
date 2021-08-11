@@ -80,7 +80,7 @@ export default class Landing extends React.Component<IProps, IState> {
                 <div className="hero-pitch">
                     <div className="hero-pitch-left">
                         <h1 className="hero-pitch-text">
-                            The Podcast Index exists to preserve and protect the open,
+                            The Podcast Index is here to preserve, protect and extend the open,
                             independent podcasting ecosystem.
                         </h1>
 
@@ -90,9 +90,7 @@ export default class Landing extends React.Component<IProps, IState> {
                             available for free, for any use.
                         </div>
                         <h5>
-                            Listen to the first episode of
-                            "<Link to="/podcast/920666">Podcasting 2.0</Link>",
-                            where we discuss the project, and its goals.
+                            Try a <a href="/apps">new podcast app</a> today and see how much better the experience can be.
                         </h5>
                         <div className="listen-row">
                             <audio controls preload="none">
@@ -155,7 +153,7 @@ export default class Landing extends React.Component<IProps, IState> {
                         API services of value to developers and organizations.
                     </p>
                     <h3>Mission and Goal</h3>
-                    <p>Preserve podcasting as a platform for free speech.</p>
+                    <p>preserve, protect and extend the open, independent podcasting ecosystem.</p>
                     <p>
                         Re-tool podcasting to a platform of value exchange that
                         includes developers with podcasters and listeners.
