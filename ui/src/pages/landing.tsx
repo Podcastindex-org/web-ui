@@ -89,25 +89,25 @@ export default class Landing extends React.Component<IProps, IState> {
                             an open, categorized index that will always be
                             available for free, for any use.
                         </div>
-                        <h5>
-                            Try a <a href="/apps">new podcast app</a> today and see how much better the experience can be.
-                        </h5>
-                        <div className="listen-row">
-                            <audio controls preload="none">
-                                <source
-                                    src="https://mp3s.nashownotes.com/PC20-01-2020-08-28-Final.mp3"
-                                    type="audio/mpeg"
-                                />
-                            </audio>
-                            <a
-                                className="subscribe-badge"
-                                title="Subscribe"
-                                target="_blank"
-                                href="http://mp3s.nashownotes.com/pc20rss.xml"
-                            >
-                                <img src={RSSLogo} />
-                            </a>
+                        <div className="hero-pitch-subtitle">
+                            Try a <a href="/apps"><u>new podcast app</u></a> today and see how much better the experience can be.
                         </div>
+                        {/*<div className="listen-row">*/}
+                        {/*    <audio controls preload="none">*/}
+                        {/*        <source*/}
+                        {/*            src="https://mp3s.nashownotes.com/PC20-01-2020-08-28-Final.mp3"*/}
+                        {/*            type="audio/mpeg"*/}
+                        {/*        />*/}
+                        {/*    </audio>*/}
+                        {/*    <a*/}
+                        {/*        className="subscribe-badge"*/}
+                        {/*        title="Subscribe"*/}
+                        {/*        target="_blank"*/}
+                        {/*        href="http://mp3s.nashownotes.com/pc20rss.xml"*/}
+                        {/*    >*/}
+                        {/*        <img src={RSSLogo} />*/}
+                        {/*    </a>*/}
+                        {/*</div>*/}
                     </div>
                     <div className="hero-pitch-right">
                         <RecentPodcasts
