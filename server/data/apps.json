@@ -15,6 +15,7 @@
     {
         "appName": "Podcast Addict",
         "appType": "app",
+        "tagLine": "How podcasters share URLs, images, and videos during their podcasts.",
         "appUrl": "https://podcastaddict.com",
         "appIconUrl": "podcastaddict.png",
         "platforms": ["Android", "Web"],
