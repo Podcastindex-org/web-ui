@@ -1,4 +1,17 @@
 [
+  {
+      "appName": "JumpLink",
+      "appType": "app",
+      "appUrl": "https://jump.link",
+      "appIconUrl": "jumplink.png",
+      "platforms": ["Web"],
+      "supportedElements": [
+          {
+              "elementName": "Search",
+              "elementURL": "https://twitter.com/Pod_JumpLinks/status/1425867711268151300?s=20"
+          }
+      ]
+    },
     {
         "appName": "Podcast Addict",
         "appType": "app",
@@ -75,7 +88,7 @@
                 "elementName": "Value",
                 "elementURL": "https://twitter.com/GoPodfriend/status/1378079735234838531"
             }
-            
+
         ]
     },
     {
@@ -250,7 +263,7 @@
                 "elementURL": "https://twitter.com/ivypodcasts/status/1376280859620339719"
             }
         ]
-    },    
+    },
     {
         "appName": "Anytime Podcast Player",
         "appType": "app",
@@ -724,7 +737,7 @@
                 "elementURL": "https://twitter.com/thejustcast/status/1420783756156145664"
             }
         ]
-    },    
+    },
     {
         "appName": "Podcast 2.0 Twitter List",
         "appType": "social links",
@@ -737,7 +750,7 @@
                 "elementName": "Search",
                 "elementURL": "https://twitter.com/i/lists/1338026876745474048?s=20"
             }
-        ]       
+        ]
     },
     {
         "appName": "Satoshis.Stream ",
@@ -780,7 +793,7 @@
                 "elementName": "Episode",
                 "elementURL": "https://podcastpage.io/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
             }
-        ]       
+        ]
     },
     {
         "appName": "Podlove Podcast Publisher",
