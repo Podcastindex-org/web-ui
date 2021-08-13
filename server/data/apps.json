@@ -846,5 +846,26 @@
                 "elementURL": "https://www.headliner.app/blog/2021/04/23/no-more-clipping-headliner-now-supports-the-soundbite-tag/"
             }
         ]
+    },
+    {
+        "appName": "RSS.com",
+        "appType": "hosting",
+        "appUrl": "https://rss.com",
+        "appIconUrl": "rsscom.png",
+        "platforms": ["N/A"],
+        "supportedElements": [
+            {
+                "elementName": "Locked",
+                "elementURL": "https://rss.com/"
+            },
+            {
+                "elementName": "Chapters",
+                "elementURL": "https://rss.com/"
+            },
+            {
+                "elementName": "Soundbite",
+                "elementURL": "https://rss.com/"
+            }
+        ]
     }
 ]
