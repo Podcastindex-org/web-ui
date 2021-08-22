@@ -13,6 +13,15 @@ export const cleanSearchQuery = (queryString: string) => {
     if (!queryAr) {
         return ''
     }
+
+    // try {
+    //     var a = decodeURIComponent(<string>queryAr);
+    // } catch(e) {
+    //     var a = <string>queryAr;
+    // }
+    // console.log(a);
+    // return a;
+
     return decodeURIComponent(<string>queryAr)
 }
 

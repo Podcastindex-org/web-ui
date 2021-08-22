@@ -45,7 +45,8 @@ export default class Topbar extends React.PureComponent<IProps, IState> {
         if (!this.state.search) {
             history.push(`/search`)
         } else {
-            history.push(`/search?q=${this.state.search}`)
+            let cleanQuery = this.state.search.replace('%','');
+            history.push(`/search?q=${cleanQuery}`)
         }
         evt.preventDefault()
     }

@@ -21,7 +21,7 @@ export default class Card extends React.Component<IProps> {
 
         return (
             <form className="topbar-search" onSubmit={onSearchSubmit}>
-                <img height={18} width={18} src={SearchIcon} />
+                <img height={18} width={18} src={SearchIcon} alt="" />
                 <input
                     id="search"
                     type="text"
