@@ -901,5 +901,22 @@
                 "elementURL": "https://gpodder.net/"
             }
         ]
+    },
+    {
+        "appName": "fyyd",
+        "appType": "directory",
+        "appUrl": "https://fyyd.de",
+        "appIconUrl": "https://fyyd.de/images/fyyd-touch-180.png",
+        "platforms": ["Web"],
+        "supportedElements": [
+            {
+                "elementName": "Search",
+                "elementURL": "https://fyyd.de"
+            },
+            {
+                "elementName": "Sn-Network",
+                "elementURL": "https://fyyd.de"
+            }
+        ]
     }
 ]
