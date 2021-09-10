@@ -878,6 +878,10 @@
             {
                 "elementName": "Soundbite",
                 "elementURL": "https://rss.com/"
+            },
+            {
+                "elementName": "Funding",
+                "elementURL": "https://rss.com/"
             }
         ]
     },
