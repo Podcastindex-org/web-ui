@@ -744,12 +744,19 @@
         "appType": "hosting",
         "appUrl": "https://justcast.com",
         "appIconUrl": "justcast.png",
-        "platforms": ["N/A"],
+        "platforms": ["Web"],
         "supportedElements": [
             {
                 "elementName": "Chapters",
                 "elementURL": "https://twitter.com/thejustcast/status/1420783756156145664"
-            }
+            },
+            {
+                "elementName": "Soundbite"
+            },
+            {
+                "elementName": "Value",
+                "elementURL": "https://twitter.com/thejustcast/status/1435271788523450373"
+            }                        
         ]
     },
     {
