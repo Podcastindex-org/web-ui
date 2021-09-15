@@ -917,7 +917,7 @@
         "appName": "fyyd",
         "appType": "directory",
         "appUrl": "https://fyyd.de",
-        "appIconUrl": "https://fyyd.de/images/fyyd-touch-180.png",
+        "appIconUrl": "fyyd.png",
         "platforms": ["Web"],
         "supportedElements": [
             {
