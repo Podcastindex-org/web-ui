@@ -125,8 +125,16 @@
         "platforms": ["iOS", "Android"],
         "supportedElements": [
             {
+                "elementName": "Search",
+                "elementURL": "https://twitter.com/fountain_app/status/1438166024478724098"
+            },
+            {
                 "elementName": "Value",
                 "elementURL": "https://twitter.com/MerryOscar/status/1420818281959677952"
+            },
+            {
+                "elementName": "Chapters",
+                "elementURL": "https://twitter.com/fountain_app/status/1438166024478724098"
             }
         ]
     },
