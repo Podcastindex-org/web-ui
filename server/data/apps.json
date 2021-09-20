@@ -364,13 +364,25 @@
     {
         "appName": "Castamatic",
         "appType": "app",
-        "appUrl": "https://castamatic.com",
+        "appUrl": "https://castamatic.com/beta",
         "appIconUrl": "castamatic.png",
         "platforms": ["iOS"],
         "supportedElements": [
             {
+                "elementName": "Value",
+                "elementURL": "https://castamatic.com/beta"
+            },
+            {
+                "elementName": "Funding",
+                "elementURL": "https://castamatic.com/beta"
+            },
+            {
+                "elementName": "Chapters",
+                "elementURL": "https://castamatic.com/beta"
+            },
+            {
                 "elementName": "Search",
-                "elementURL": "https://castamatic.com/jekyll/2021/05/20/castamatic-7-5/"
+                "elementURL": "https://castamatic.com/beta"
             }
         ]
     },
