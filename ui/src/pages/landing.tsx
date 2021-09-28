@@ -153,7 +153,7 @@ export default class Landing extends React.Component<IProps, IState> {
                         API services of value to developers and organizations.
                     </p>
                     <h3>Mission and Goal</h3>
-                    <p>preserve, protect and extend the open, independent podcasting ecosystem.</p>
+                    <p>Preserve, protect and extend the open, independent podcasting ecosystem.</p>
                     <p>
                         Re-tool podcasting to a platform of value exchange that
                         includes developers with podcasters and listeners.
