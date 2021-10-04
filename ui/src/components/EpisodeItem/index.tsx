@@ -1,6 +1,7 @@
 import * as React from 'react'
 import {getPrettyDate, truncateString} from '../../utils'
 
+import Value from '../Value'
 import NoImage from '../../../images/no-cover-art.png'
 import PlayLogo from '../../../images/play-circle.svg'
 import PauseLogo from '../../../images/pause-circle.svg'
@@ -9,12 +10,12 @@ import DownloadLogo from '../../../images/download-outline.svg'
 
 import './styles.scss'
 
-
 interface IProps {
     index?: number
     title?: string
     image?: any
-    link?: string
+    link?: string,
+    value?: any,
     enclosureUrl?: string
     description?: string
     datePublished?: number
@@ -74,10 +75,11 @@ export default class EpisodeItem extends React.PureComponent<IProps> {
     }
 
     render() {
-        const {title, image, link, enclosureUrl, description, datePublished} = this.props
+        const {title, image, link, value, enclosureUrl, description, datePublished} = this.props
         const date = getPrettyDate(datePublished)
         const episodeLink = link
         const episodeEnclosure = enclosureUrl
+
         return (
             <div className="episode">
                 <div className="episode-row">
@@ -142,6 +144,7 @@ export default class EpisodeItem extends React.PureComponent<IProps> {
                 <p className="episode-description">
                     {truncateString(description).replace(/(<([^>]+)>)/gi, " ")}
                 </p>
+                {value && <Value {...value} />}
             </div>
         )
     }

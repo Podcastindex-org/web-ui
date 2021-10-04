@@ -1,5 +1,6 @@
 import * as React from 'react'
 
+import Value from '../Value'
 import NoImage from '../../../images/no-cover-art.png'
 import { truncateString, titleizeString } from '../../utils'
 import RSSLogo from "../../../images/feed.svg";
@@ -154,18 +155,7 @@ export default class PodcastHeader extends React.PureComponent<IProps, PodState>
                                 : ""
                             }
                         </div>
-                        {value && value.destinations &&
-                          <div className="podcast-value">
-                            <h4>Value for Value via {titleizeString(value.model.type)}</h4>
-                            <ul>
-                              {value.destinations.map(dest => (
-                                <li key={dest.name}>
-                                    <progress value={dest.split} max={splitTotal} title={dest.address}></progress> <a target="_blank" href={"https://amboss.space/node/"+dest.address}>{dest.name}</a>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        }
+                        {value && <Value {...value} />}
                     </div>
                 </div>
             </div>
