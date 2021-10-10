@@ -768,7 +768,7 @@
         "supportedElements": [
             {
                 "elementName": "Chapters",
-                "elementURL": "https://twitter.com/thejustcast/status/1420783756156145664"
+                "elementURL": "https://justcast.zendesk.com/hc/en-us/articles/4407906495892-Chapter-Markers"
             },
             {
                 "elementName": "Soundbite"
@@ -776,7 +776,10 @@
             {
                 "elementName": "Value",
                 "elementURL": "https://twitter.com/thejustcast/status/1435271788523450373"
-            }                        
+            },
+            {
+                "elementName": "Trailer"
+            }                                    
         ]
     },
     {
