@@ -160,11 +160,11 @@
         ]
     },
     {
-        "appName": "Podcast GURU",
+        "appName": "Podcast Guru",
         "appType": "app",
         "appUrl": "https://podcastguru.io",
         "appIconUrl": "podcastguru.jpg",
-        "platforms": ["Android", "Web"],
+        "platforms": ["Android", "iOS"],
         "supportedElements": [
             {
                 "elementName": "Search",
@@ -177,6 +177,22 @@
             {
                 "elementName": "Funding",
                 "elementURL": "https://twitter.com/podcastguru_app/status/1351911108886589448"
+            },
+            {
+                "elementName": "Chapters",
+                "elementURL": "https://twitter.com/podcastguru_app/status/1460362621647933447"
+            },
+            {
+                "elementName": "Location",
+                "elementURL": "https://twitter.com/podcastguru_app/status/1460362621647933447"
+            },
+            {
+                "elementName": "Person",
+                "elementURL": "https://twitter.com/podcastguru_app/status/1460362621647933447"
+            },
+            {
+                "elementName": "Season",
+                "elementURL": "https://twitter.com/podcastguru_app/status/1460362621647933447"
             }
         ]
     },
