@@ -1,4 +1,69 @@
 [
+    {
+
+        "appName": "mp.money",
+        
+        "appType": "app",
+        
+        "appUrl": "https://cryptostream.online/",
+        
+        "appIconUrl": "mpmoney.jpg",
+        
+        "platforms": ["Web"],
+        
+        "supportedElements": [
+        
+        {
+        
+        "elementName": "Value",
+        
+        "elementURL": "https://cryptostream.online/"
+        
+        },
+        
+        {
+        
+        "elementName": "Chapters",
+        
+        "elementURL": "https://cryptostream.online/"
+        
+        },
+        
+        {
+        
+        "elementName": "Transcript",
+        
+        "elementURL": "https://cryptostream.online/"
+        
+        },
+        
+        {
+        
+        "elementName": "Funding",
+        
+        "elementURL": "https://cryptostream.online/"
+        
+        },
+        
+        {
+        
+        "elementName": "Search",
+        
+        "elementURL": "https://cryptostream.online/"
+        
+        },
+        
+        {
+        
+        "elementName": "Alternate Enclosure",
+        
+        "elementURL": "https://cryptostream.online/"
+        
+        }
+        
+        ]
+        
+        },
   {
       "appName": "JumpLink",
       "appType": "app",
