@@ -41,7 +41,7 @@ The custom express server also is used to [reverse proxy](https://en.wikipedia.o
 
 ### Set .env
 
-You should see a `.env-example` file. Copy this and remove the `-example`. The file `.env` is ignored by GIT and is needed to set the `API_KEY` and `API_SECRET` variables
+You should see a `.env-example` file. Copy this and remove the `-example`. The file `.env` is ignored by GIT and is needed to set the `API_KEY`, `API_SECRET`, `API_ADD_KEY` and `API_ADD_SECRET` variables
 
 ### Starting the dev server
 

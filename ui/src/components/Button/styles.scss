@@ -23,6 +23,13 @@
         font-size: 26px;
         border-radius: 22px;
     }
+    &.disabled {
+        color: #7e7e7e;
+        &:hover {
+            background: rgba(239, 239, 239, 0.3);
+            cursor: default;
+        }
+    }
 }
 
 a,

@@ -8,6 +8,7 @@ import Stats from './pages/Stats'
 import DonationThankYou from './pages/Donations'
 import Podcast from './pages/Podcast'
 import Apps from './pages/Apps'
+import AddFeed from "./pages/AddFeed";
 
 const Routes: React.FunctionComponent = () => (
     <Switch>
@@ -22,6 +23,8 @@ const Routes: React.FunctionComponent = () => (
         <Route path="/podcast" component={Podcast} />
 
         <Route path="/apps" component={Apps} />
+
+        <Route path="/add" component={AddFeed} />
 
         <Route component={() => <div>Not Found</div>} />
     </Switch>
