@@ -13,6 +13,7 @@ interface IProps {
     type?: string
     alt?: string
     onClick?: () => void
+    disabled?: boolean
 }
 
 export default class Button extends React.PureComponent<IProps> {
@@ -28,24 +29,27 @@ export default class Button extends React.PureComponent<IProps> {
             big,
             type,
             alt,
+            disabled,
         } = this.props
         let buttonEl = null
+        let buttonClass = disabled ? "disabled" : ""
         if (type === 'submit') {
             buttonEl = (
                 <input
                     alt={alt}
                     type="submit"
                     value={children}
-                    className={`button ${primary ? 'primary' : ''} ${
+                    className={`button ${buttonClass} ${primary ? 'primary' : ''} ${
                         big ? 'big' : ''
                     }`}
+                    disabled={disabled}
                 />
             )
         } else if (href && !link) {
             buttonEl = (
                 <a
                     href={href}
-                    className={`button ${primary ? 'primary' : ''} ${
+                    className={`button ${buttonClass} ${primary ? 'primary' : ''} ${
                         big ? 'big' : ''
                     }`}
                 >
@@ -56,7 +60,7 @@ export default class Button extends React.PureComponent<IProps> {
             buttonEl = (
                 <Link
                     to={href}
-                    className={`button ${primary ? 'primary' : ''} ${
+                    className={`button ${buttonClass} ${primary ? 'primary' : ''} ${
                         big ? 'big' : ''
                     }`}
                 >
@@ -66,10 +70,11 @@ export default class Button extends React.PureComponent<IProps> {
         } else {
             buttonEl = (
                 <button
-                    className={`button ${primary ? 'primary' : ''} ${
+                    className={`button ${buttonClass} ${primary ? 'primary' : ''} ${
                         big ? 'big' : ''
                     }`}
                     onClick={onClick}
+                    disabled={disabled}
                 >
                     {children}
                 </button>

@@ -7,20 +7,12 @@ export const updateTitle = (tile?: string) => {
     document.title = newTitle
 }
 
-export const cleanSearchQuery = (queryString: string) => {
+export const cleanSearchQuery = (queryString: string, field: string = "q") => {
     let params = queryStringHelper.parse(queryString)
-    let queryAr = params.q
+    let queryAr = params[field]
     if (!queryAr) {
         return ''
     }
-
-    // try {
-    //     var a = decodeURIComponent(<string>queryAr);
-    // } catch(e) {
-    //     var a = <string>queryAr;
-    // }
-    // console.log(a);
-    // return a;
 
     return decodeURIComponent(<string>queryAr)
 }
@@ -59,4 +51,13 @@ export const fixURL = (url: string) => {
         }
     }
     return url
+}
+
+export const isValidURL = (urlString: string) => {
+    try {
+        let url = new URL(urlString);
+        return url.protocol === "http:" || url.protocol === "https:";
+    } catch (_) {
+        return false;
+    }
 }

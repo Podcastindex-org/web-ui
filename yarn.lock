@@ -1415,6 +1415,11 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
+"@hcaptcha/react-hcaptcha@^0.3.9":
+  version "0.3.9"
+  resolved "https://registry.yarnpkg.com/@hcaptcha/react-hcaptcha/-/react-hcaptcha-0.3.9.tgz#37f16f80827699d37fb77473a436ff10fe100e12"
+  integrity sha512-yc3rRVQCz3w+rq9+Y1yi+hUlZscMDoXli0st8liefZ79gkFRa3vqd2zl+qGeRq+3HG7i+ydNNIXmnWhg8wJCSg==
+
 "@iconify/icons-mdi@^1.0.46":
   version "1.0.136"
   resolved "https://registry.yarnpkg.com/@iconify/icons-mdi/-/icons-mdi-1.0.136.tgz#c7b4e0f41fabe678fe6b26c6001c6337d1518084"
