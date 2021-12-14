@@ -272,7 +272,7 @@ export default class AddFeed extends React.PureComponent<IProps> {
                             id="feed"
                             type="text"
                             value={feed}
-                            placeholder="Add feed"
+                            placeholder="https://example.org/podcast/feed.xml"
                             onChange={this.setFeed}
                             autoComplete="off"
                             required
@@ -280,7 +280,7 @@ export default class AddFeed extends React.PureComponent<IProps> {
                     </div>
                     <HCaptcha
                         // TODO: replace this
-                        sitekey="10000000-ffff-ffff-ffff-000000000001"
+                        sitekey="00000001-0000-0001-0000-000000000001"
                         onVerify={this.setToken}
                         onError={this.onError}
                         onExpire={this.onExpire}
