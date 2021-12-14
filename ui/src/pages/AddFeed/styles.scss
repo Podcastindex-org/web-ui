@@ -13,6 +13,11 @@
         font-size: 20px;
     }
 
+    .add-result a {
+        text-decoration: underline !important;
+        color: red;
+    }
+
     .add-feed-form {
         display: flex;
         flex-direction: column;
