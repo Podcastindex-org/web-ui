@@ -137,9 +137,9 @@ export default class AddFeed extends React.PureComponent<IProps> {
     }
 
     onExpire() {
-        // this.setState({
-        //     token: null
-        // })
+        this.setState({
+            token: null
+        })
     }
 
     onError(err) {
