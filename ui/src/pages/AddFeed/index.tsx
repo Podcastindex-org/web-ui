@@ -80,8 +80,6 @@ export default class AddFeed extends React.PureComponent<IProps> {
         evt.preventDefault()
         const {feed} = this.state
 
-        this.captchaRef.current.execute()
-
         this.resetStates()
         this.setState({
             adding: true,
@@ -89,7 +87,6 @@ export default class AddFeed extends React.PureComponent<IProps> {
 
         if (feed !== null) {
             const result = await this.addFeed(feed)
-            console.log("add reply results:", result)
             this.setState({
                 addDone: true,
                 result,
@@ -99,7 +96,6 @@ export default class AddFeed extends React.PureComponent<IProps> {
                 feedInfo: undefined,
             })
             const feedInfo = (await this.getPodcastInfo(feed)).feed || null
-            console.log("get feed results:", feedInfo)
             this.setState({
                 feedInfo,
             })
@@ -141,9 +137,9 @@ export default class AddFeed extends React.PureComponent<IProps> {
     }
 
     onExpire() {
-        this.setState({
-            token: null
-        })
+        // this.setState({
+        //     token: null
+        // })
     }
 
     onError(err) {
