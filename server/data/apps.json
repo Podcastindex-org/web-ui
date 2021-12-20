@@ -451,6 +451,14 @@
             {
                 "elementName": "Funding",
                 "elementURL": "https://blog.podlp.com/posts/podcasting-20/"
+            },
+            {
+                "elementName": "Transcript",
+                "elementURL": "https://twitter.com/PodLP_App/status/1466805341597827079?s=20"
+            },
+            {
+                "elementName": "Alternate Enclosure",
+                "elementURL": "https://podlp.com/"
             }
         ]
     },
