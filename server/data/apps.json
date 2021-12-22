@@ -1138,5 +1138,25 @@
                 "elementURL": "https://twitter.com/gsokianos/status/1445459459397070848"
             }
         ]
+    },
+    {
+        "appName": "PodBrowser",
+        "appType": "app",
+        "appUrl": "http://podbrowser.org",
+        "appIconUrl": "podcastindex.jpg",
+        "tagLine": "Lean and mean player, all about finding/playing podcasts.",
+        "platforms": [
+            "web"
+        ],
+        "supportedElements": [
+            {
+                "elementName": "Chapters",
+                "elementURL": "http://sources.vsta.org:7100/browser/timeline?c=791cb1e4a67ce9eb&y=a"
+            }
+            {
+                "elementName": "Search",
+                "elementURL": "http://sources.vsta.org:7100/browser/timeline?c=fdd2747d496fa15f&y=a"
+            }
+        ]
     }
 ]
