@@ -1146,7 +1146,7 @@
         "appIconUrl": "podcastindex.jpg",
         "tagLine": "Lean and mean player, all about finding/playing podcasts.",
         "platforms": [
-            "web"
+            "Web"
         ],
         "supportedElements": [
             {
