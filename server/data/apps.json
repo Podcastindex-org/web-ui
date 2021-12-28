@@ -1158,5 +1158,23 @@
                 "elementURL": "http://sources.vsta.org:7100/browser/timeline?c=fdd2747d496fa15f&y=a"
             }
         ]
+    },
+    {
+        "appName": "Disctopia",
+        "appType": "app",
+        "appUrl": "https://disctopia.com",
+        "appIconUrl": "disctopia.png",
+        "tagLine": "A Podcaster's Paradise.",
+        "platforms": [
+            "Web",
+            "iOS",
+            "Android"
+        ],
+        "supportedElements":[
+            {
+                "elementName": "Search",
+                "elementURL": "https://disctopia.com"
+            }
+        ]
     }
 ]
