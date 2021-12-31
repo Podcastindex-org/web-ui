@@ -12,6 +12,11 @@ const api = require('podcast-index-api')(
     process.env.API_SECRET
 )
 
+const apiAdd = require('podcast-index-api')(
+    process.env.API_ADD_KEY,
+    process.env.API_ADD_SECRET
+)
+
 app.use((req, res, next) => {
 
     const { rawHeaders, httpVersion, method, socket, url } = req;
@@ -81,9 +86,24 @@ app.use('/api/podcasts/byfeedid', async (req, res) => {
     res.send(response)
 })
 
+app.use('/api/podcasts/byfeedurl', async (req, res) => {
+    let feedUrl = req.query.url
+    const response = await api.podcastsByFeedUrl(feedUrl)
+    res.send(response)
+})
+
+
 app.use('/api/episodes/byfeedid', async (req, res) => {
     let feedId = req.query.id
     const response = await api.episodesByFeedId(feedId)
+    res.send(response)
+})
+
+app.use('/api/add/byfeedurl', async (req, res) => {
+    let feedUrl = req.query.url
+    console.log("Request to add: ", feedUrl)
+    const response = await apiAdd.addByFeedUrl(feedUrl)
+    console.log("Add response: ", response)
     res.send(response)
 })
 

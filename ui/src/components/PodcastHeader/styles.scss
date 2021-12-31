@@ -106,48 +106,8 @@
     //padding: 10px;
 }
 
-.podcast-value {
-  font-size: 18px;
-
-  h4 {
-    font-size: 18px;
-    margin-bottom: .5rem;
-  }
-
-  ul {
-    margin: 0 0 1.5rem;
-    padding-left: 0;
-
-    li {
-      display: flex;
-      align-items: center;
-      margin: .25rem 0;
-    }
-  }
-
-  progress[value] {
-    appearance: none;
-    border: 0;
-    border-radius: .25rem;
-    width: 100px;
-    height: 1rem;
-    margin-right: .5rem;
-  }
-
-  progress[value]::-webkit-progress-bar {
-    background-color: #eee;
-    border-radius: .25rem;
-  }
-
-  // though both use the same styles, it does not work as a combined selector!
-  progress[value]::-webkit-progress-value {
-    background-color: var(--color-primary);
-    border-radius: .25rem;
-  }
-  progress[value]::-moz-progress-bar {
-    background-color: var(--color-primary);
-    border-radius: .25rem;
-  }
+.podcast-header .podcast-value {
+  padding: 10px 0;
 }
 
 @media only screen and (max-width: 767px) {
@@ -198,8 +158,5 @@
         border-radius: 5px;
         margin: 3px;
         padding: 4px 12px;
-    }
-    .podcast-value {
-        font-size: 14px;
     }
 }

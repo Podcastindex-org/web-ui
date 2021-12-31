@@ -165,7 +165,7 @@ export default class Player extends React.Component<IProps> {
                     src={enclosureUrl}
                     onCanPlay={this.onCanPlay}
                     onPlay={this.onPlay}
-                    preload="metadata"
+                    preload="none"
                     onPause={this.onPause}
                     onEnded={this.onPause}
                     customAdditionalControls={[

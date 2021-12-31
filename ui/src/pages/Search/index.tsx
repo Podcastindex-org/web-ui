@@ -1,9 +1,10 @@
 import * as React from 'react'
 import ReactList from 'react-list'
 import ReactLoading from 'react-loading'
+import { Link } from 'react-router-dom'
 import ResultItem from '../../components/ResultItem'
 
-import { cleanSearchQuery, updateTitle } from '../../utils'
+import { cleanSearchQuery, isValidURL, updateTitle } from '../../utils'
 
 import './styles.scss'
 
@@ -15,6 +16,7 @@ interface IProps {
 
 export default class Results extends React.PureComponent<IProps> {
     state = {
+        query: "",
         results: [],
         loading: true,
     }
@@ -29,6 +31,7 @@ export default class Results extends React.PureComponent<IProps> {
             if (this._isMounted) {
                 this.setState({
                     loading: false,
+                    query,
                     results,
                 })
             }
@@ -51,6 +54,7 @@ export default class Results extends React.PureComponent<IProps> {
             const results = (await this.getSearchResults(query)).feeds
             this.setState({
                 loading: false,
+                query,
                 results,
             })
         }
@@ -86,13 +90,38 @@ export default class Results extends React.PureComponent<IProps> {
         )
     }
 
+    renderNoResults() {
+        const { query } = this.state
+
+        const isURL = isValidURL(query)
+
+        const noResults = 'No results for your search'
+        updateTitle(noResults)
+        return (
+            <div className="results-list">
+                <p>{noResults}</p>
+                {
+                    isURL ?
+                        <p>
+                            {`Add ${query} to index? `}
+                            <Link
+                                to={`/add?feed=${query}`}
+                            >
+                                Click here
+                            </Link>
+                        </p>
+                        :
+                        <p/>
+                }
+            </div>
+        )
+    }
+
     render() {
         const { loading, results } = this.state
         let query = cleanSearchQuery(this.props.location.search)
         if (results.length === 0 && !loading) {
-            const noResults = 'No results for your search'
-            updateTitle(noResults)
-            return <div className="results-list">{noResults}</div>
+            return this.renderNoResults()
         }
         if (loading) {
             updateTitle('Loading results ...')

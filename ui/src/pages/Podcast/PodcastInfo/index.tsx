@@ -227,6 +227,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         let enclosureUrl = fixURL(this.state.episodes[index].enclosureUrl)
         let description = he.decode(this.state.episodes[index].description)
         let datePublished = this.state.episodes[index].datePublished
+        let value = this.state.episodes[index].value
 
         // create a reference to the generated EpisodeItem if one doesn't already exist
         if (index >= this.episodeItems.length) {
@@ -241,6 +242,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
                     title={title}
                     image={image}
                     link={link}
+                    value={value}
                     enclosureUrl={enclosureUrl}
                     description={description}
                     datePublished={datePublished}
