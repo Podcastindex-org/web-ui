@@ -868,6 +868,10 @@
         "platforms": ["N/A"],
         "supportedElements": [
             {
+                "elementName": "Transcript",
+                "elementURL": "https://rss.com/"
+            },
+            {
                 "elementName": "Locked",
                 "elementURL": "https://rss.com/"
             },
