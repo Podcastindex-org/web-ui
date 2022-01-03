@@ -224,6 +224,21 @@
         ]
     },
     {
+        "appName": "Podcast Republic",
+        "appType": "app",
+        "appUrl": "https://podcastrepublic.net",
+        "appIconUrl": "podcastrepublic.jpg",
+        "platforms": [
+            "Android"
+        ],
+        "supportedElements": [
+            {
+                "elementName": "Transcript",
+                "elementURL": "https://twitter.com/castrepublic/status/1477881117789196289"
+            }
+        ]
+    },
+    {
         "appName": "Hypercatcher",
         "appType": "app",
         "appUrl": "https://hypercatcher.com",
