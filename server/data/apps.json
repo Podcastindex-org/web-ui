@@ -120,7 +120,8 @@
         "appIconUrl": "fountain.png",
         "platforms": [
             "iOS",
-            "Android"
+            "Android",
+            "web"
         ],
         "supportedElements": [
             {
