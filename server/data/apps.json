@@ -121,7 +121,7 @@
         "platforms": [
             "iOS",
             "Android",
-            "web"
+            "Web"
         ],
         "supportedElements": [
             {
