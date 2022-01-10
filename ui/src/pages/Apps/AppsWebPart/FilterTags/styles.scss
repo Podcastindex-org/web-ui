@@ -1,4 +1,9 @@
-.podcastIndexAppsFilterCategories > button {
+.podcastIndexAppsFilterTags {
+    font-weight: 700;
+    margin: 0 0 12px 0;
+}
+
+.podcastIndexAppsFilterTags > button {
     cursor: pointer;
     margin: 8px 4px;
     padding: 4px 8px;
@@ -8,7 +13,6 @@
     background-color: var(--color-primary);
     &:hover {
         background-color: darken($color: #e90000, $amount: 5%);
-        transition: var(--transition-secs);
     }
     &.inactive {
         color: #2d2d2d;
@@ -19,7 +23,28 @@
             background: #b3b2b2;
         }
     }
-    &[data-tag='All'] {
+    &[data-tag='All'],
+    &[data-tag='Clear'] {
         width: 47.88px;
+        background-color: #aa0000;
     }
+    &[data-tag='All']:hover,
+    &[data-tag='Clear']:hover {
+        background-color: darken($color: #aa0000, $amount: 5%);
+    }
+}
+
+.podcastIndexAppsFilterTagContainer > h4 {
+    cursor: pointer;
+    user-select: none;
+    margin: 0 0 8px 0;
+    & > .podcastIndexAppsFilterArrow {
+        font-size: 0.75em;
+    }
+}
+
+.podcastIndexAppsFilterCategories {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s linear;
 }

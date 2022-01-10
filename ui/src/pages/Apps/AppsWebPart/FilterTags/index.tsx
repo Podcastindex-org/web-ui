@@ -62,7 +62,7 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
     function handleTagClick(e) {
         const { type, tag } = e.target.dataset
 
-        if (tag === 'None') {
+        if (tag === 'Clear') {
             if (type === 'appType') {
                 setAppTypeFilters(new Set())
             } else if (type === 'supportedElements') {
@@ -93,7 +93,7 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
                     new Set(filterTypes.supportedElements)
                 )
             } else if (type === 'platforms') {
-                setPlatformsFilters(new Set(filterTypes.platformElements))
+                setPlatformsFilters(new Set(filterTypes.platforms))
             }
             setAppTypeFilters(new Set(filterTypes.appType))
             let elements = document.querySelectorAll(`[data-type='${type}']`)
@@ -107,8 +107,8 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
             for (const sel of selectors) {
                 let s = sel as HTMLElement
                 if (s.dataset.type === type) {
-                    s.innerText = 'None'
-                    s.dataset.tag = 'None'
+                    s.innerText = 'Clear'
+                    s.dataset.tag = 'Clear'
                 }
             }
         } else {
@@ -156,9 +156,57 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
         }
     }
 
+    function toggleFilters(e){
+        const arrow = document.querySelector(".podcastIndexAppsFilterArrow") as HTMLElement
+        
+        arrow.innerText = arrow.innerText === '▼' ? '▲' : '▼'
+
+        const container = document.querySelector('.podcastIndexAppsFilterCategories') as HTMLElement
+        const isCollapsed = container.getAttribute('data-collapsed') === 'true';
+          
+        if(isCollapsed) {
+          expandSection(container)
+          container.setAttribute('data-collapsed', 'false')
+        } else {
+          collapseSection(container)
+        }
+    }
+
+    function collapseSection(element) {
+        var sectionHeight = element.scrollHeight;
+        
+        var elementTransition = element.style.transition;
+        element.style.transition = '';
+        
+        requestAnimationFrame(function() {
+          element.style.height = sectionHeight + 'px';
+          element.style.transition = elementTransition;
+         
+          requestAnimationFrame(function() {
+            element.style.height = 0 + 'px';
+          });
+        });
+        
+        element.setAttribute('data-collapsed', 'true');
+      }
+      
+      function expandSection(element) {        
+        var sectionHeight = element.scrollHeight;
+        
+        element.style.height = sectionHeight + 'px';
+      
+        element.addEventListener('transitionend', function(e) {
+          element.removeEventListener('transitionend', arguments.callee);         
+          element.style.height = null;
+        });
+        
+        element.setAttribute('data-collapsed', 'false');
+      }
+
     return (
         <div className="podcastIndexAppsFilterTagContainer">
-            <h4>Filters</h4>
+            <h4 onClick={toggleFilters}>Filters<span className="podcastIndexAppsFilterArrow">▼</span></h4>
+            <div className="podcastIndexAppsFilterCategories" data-collapsed='true'>
             {Object.keys(filterTypes).map((key, i) => {
                 let type = ''
                 if (key === 'appType') {
@@ -170,10 +218,10 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
                 }
                 let tags = [...filterTypes[key]].map((tag) => tag)
                 return (
-                    <div className="podcastIndexAppsFilterCategories" key={i}>
+                    <div className="podcastIndexAppsFilterTags" key={i}>
                         <div>{type}</div>
                         {[
-                            'None',
+                            'Clear',
                             ...tags.sort((a, b) => a.localeCompare(b)),
                         ].map((tag, j) => (
                             <button
@@ -183,12 +231,14 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
                                 data-type={key}
                                 data-tag={tag}
                             >
-                                {tag}
+                                {tag.split(' ').map(v=>v.charAt(0).toUpperCase() + v.slice(1)).join(' ')}
                             </button>
                         ))}
                     </div>
                 )
+                
             })}
+            </div>
         </div>
     )
 }
