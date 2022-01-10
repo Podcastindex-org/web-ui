@@ -1,0 +1,25 @@
+.podcastIndexAppsFilterCategories > button {
+    cursor: pointer;
+    margin: 8px 4px;
+    padding: 4px 8px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background-color: var(--color-primary);
+    &:hover {
+        background-color: darken($color: #e90000, $amount: 5%);
+        transition: var(--transition-secs);
+    }
+    &.inactive {
+        color: #2d2d2d;
+        background: initial;
+
+        background: #c7c7c7;
+        &:hover {
+            background: #b3b2b2;
+        }
+    }
+    &[data-tag='All'] {
+        width: 47.88px;
+    }
+}
