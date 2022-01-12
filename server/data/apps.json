@@ -1,5 +1,36 @@
 [
     {
+        "appName": "Caproni",
+        "appType": "app",
+        "appUrl": "https://caproni.fm/en",
+        "appIconUrl": "caproni.png",
+        "platforms": [
+            "Web"
+        ],
+        "supportedElements": [
+            {
+                "elementName": "Locked",
+                "elementURL": "https://caproni.fm/en#feature-cards"
+            },
+            {
+                "elementName": "Transcript",
+                "elementURL": "https://caproni.fm/en#feature-cards"
+            },
+            {
+                "elementName": "Funding",
+                "elementURL": "https://caproni.fm/en#feature-cards"
+            },
+            {
+                "elementName": "Location",
+                "elementURL": "https://caproni.fm/en#feature-cards"
+            },
+            {
+                "elementName": "Podping",
+                "elementURL": "hhttps://caproni.fm/en#feature-cards"
+            }
+        ]
+    },
+    {
         "appName": "Podcast Addict",
         "appType": "app",
         "tagLine": "How podcasters share URLs, images, and videos during their podcasts.",
@@ -1190,7 +1221,7 @@
             "iOS",
             "Android"
         ],
-        "supportedElements":[
+        "supportedElements": [
             {
                 "elementName": "Search",
                 "elementURL": "https://disctopia.com"
