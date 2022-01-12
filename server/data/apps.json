@@ -1,11 +1,11 @@
 [
     {
         "appName": "Caproni",
-        "appType": "app",
+        "appType": "hosting",
         "appUrl": "https://caproni.fm/en",
         "appIconUrl": "caproni.png",
         "platforms": [
-            "Web"
+            "N/A"
         ],
         "supportedElements": [
             {
