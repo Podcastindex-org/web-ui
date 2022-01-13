@@ -23,7 +23,18 @@
         },
         "appType": {
           "type": "string",
-          "enum": ["app", "hosting", "directory", "browser extension", "wordpress plugin", "website", "social links", "node hosting", "video", "other"]
+          "enum": [
+            "app",
+            "hosting",
+            "directory",
+            "browser extension",
+            "wordpress plugin",
+            "website",
+            "social links",
+            "node hosting",
+            "video",
+            "other"
+          ]
         },
         "appUrl": {
           "type": "string",
@@ -37,7 +48,19 @@
           "type": "array",
           "items": {
             "type": "string",
-            "enum": ["Web", "iOS", "Android", "macOS", "Windows", "Linux", "KaiOS", "Chrome", "Wordpress", "N/A"]
+            "enum": [
+              "Web",
+              "iOS",
+              "Android",
+              "macOS",
+              "Windows",
+              "Linux",
+              "KaiOS",
+              "Chrome",
+              "Wordpress",
+              "N/A",
+              "AmigaOS 4"
+            ]
           }
         },
         "supportedElements": {
@@ -58,7 +81,24 @@
       "properties": {
         "elementName": {
           "type": "string",
-          "enum": ["Transcript", "Locked", "Funding", "Chapters", "Search", "Season", "Episode", "Soundbite", "Location", "Person", "Value"]
+          "enum": [
+            "Transcript",
+            "Locked",
+            "Funding",
+            "Chapters",
+            "Search",
+            "Season",
+            "Episode",
+            "Soundbite",
+            "Location",
+            "Person",
+            "Value",
+            "Sn-Network",
+            "Boostagrams",
+            "Sat Streaming",
+            "Video",
+            "Synchronize"
+          ]
         },
         "elementURL": {
           "type": "string",
