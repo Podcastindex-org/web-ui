@@ -1,0 +1,47 @@
+.podcastIndexAppsSingleApp {
+    display: grid;
+    grid-template-columns: 1fr 1fr 192px;
+    grid-template-rows: 1fr;
+    gap: 0px 32px;
+    grid-template-rows: auto;
+    margin-bottom: 16px;
+}
+
+.podcastIndexAppIdentifier {
+    display: flex;
+}
+
+.podcastIndexAppIcon {
+    align-self: center;
+
+    img {
+        width: 60px;
+        height: 60px;
+        border-radius: 5px;
+    }
+}
+
+.podcastIndexAppTitleAndType {
+    align-self: center;
+    margin-left: 32px;
+
+    .podcastIndexAppTitle {
+        font-size: 24px;
+    }
+    .podcastIndexAppType {
+        color: #4b4b58;
+        margin: 0;
+    }
+}
+
+.podcastIndexAppSupportedElements {
+    align-self: center;
+    line-height: 1.5;
+}
+
+.podcastIndexAppPlatforms {
+    align-self: center;
+
+    color: #333333;
+    line-height: 1.5;
+}
