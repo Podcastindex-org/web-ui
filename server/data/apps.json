@@ -333,6 +333,50 @@
         ]
     },
     {
+        "appName": "CurioCaster",
+        "appType": "podcast player",
+        "appUrl": "https://curiocaster.com/",
+        "appIconUrl": "curiocaster.png",
+        "platforms": [
+            "Web",
+            "Mobile"
+        ],
+        "supportedElements": [
+            {
+                "elementName": "Boostagrams",
+                "elementURL": "https://curiocaster.com/"
+            },
+            {
+                "elementName": "Sat Streaming",
+                "elementURL": "https://curiocaster.com/"
+            },
+            {
+                "elementName": "Value",
+                "elementURL": "https://curiocaster.com/"
+            },
+            {
+                "elementName": "Chapters",
+                "elementURL": "https://curiocaster.com/"
+            },
+            {
+                "elementName": "Transcript",
+                "elementURL": "https://curiocaster.com/"
+            },
+            {
+                "elementName": "Funding",
+                "elementURL": "https://curiocaster.com/"
+            },
+            {
+                "elementName": "Search",
+                "elementURL": "https://curiocaster.com/"
+            },
+            {
+                "elementName": "Alternate Enclosure",
+                "elementURL": "https://curiocaster.com/"
+            }
+        ]
+    },
+    {
         "appName": "mp.money",
         "appType": "app",
         "appUrl": "https://cryptostream.online/",
@@ -440,41 +484,6 @@
             {
                 "elementName": "Search",
                 "elementURL": "http://castcoverage.com"
-            }
-        ]
-    },
-    {
-        "appName": "CurioCaster",
-        "appType": "app",
-        "appUrl": "https://curiocaster.com/",
-        "appIconUrl": "curiocaster.png",
-        "platforms": [
-            "Web"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Value",
-                "elementURL": "https://curiocaster.com/"
-            },
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://curiocaster.com/"
-            },
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://curiocaster.com/"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://curiocaster.com/"
-            },
-            {
-                "elementName": "Search",
-                "elementURL": "https://curiocaster.com/"
-            },
-            {
-                "elementName": "Alternate Enclosure",
-                "elementURL": "https://curiocaster.com/"
             }
         ]
     },
