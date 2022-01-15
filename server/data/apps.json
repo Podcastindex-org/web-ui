@@ -117,7 +117,7 @@
     },
     {
         "appName": "Podverse",
-        "appType": "app",
+        "appType": "podcast player",
         "appUrl": "https://podverse.fm",
         "appIconUrl": "podverse.jpg",
         "platforms": [
