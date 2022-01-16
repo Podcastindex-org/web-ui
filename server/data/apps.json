@@ -1010,7 +1010,7 @@
         "appType": "node hosting",
         "tagLine": "Receive value as a podcaster without running your own node",
         "appUrl": "https://satoshis.stream/",
-        "appIconUrl": "satoshisstream.png",
+        "appIconUrl": "satoshisstream-bot.png",
         "platforms": [
             "iOS",
             "Android",
