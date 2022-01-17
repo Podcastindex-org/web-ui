@@ -1,7 +1,9 @@
 [
     {
         "appName": "Caproni",
-        "appType": "hosting",
+        "appType": [
+            "hosting"
+        ],
         "appUrl": "https://caproni.fm/en",
         "appIconUrl": "caproni.png",
         "platforms": [
@@ -32,7 +34,9 @@
     },
     {
         "appName": "Podcast Addict",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "tagLine": "How podcasters share URLs, images, and videos during their podcasts.",
         "appUrl": "https://podcastaddict.com",
         "appIconUrl": "podcastaddict.png",
@@ -77,7 +81,9 @@
     },
     {
         "appName": "Podfriend",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://www.podfriend.com",
         "appIconUrl": "podfriend.jpg",
         "platforms": [
@@ -117,7 +123,10 @@
     },
     {
         "appName": "Podverse",
-        "appType": "podcast player",
+        "appType": [
+            "app",
+            "podcast player"
+        ],
         "appUrl": "https://podverse.fm",
         "appIconUrl": "podverse.jpg",
         "platforms": [
@@ -146,7 +155,9 @@
     },
     {
         "appName": "Fountain",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://www.fountain.fm",
         "appIconUrl": "fountain.png",
         "platforms": [
@@ -171,7 +182,9 @@
     },
     {
         "appName": "podStation",
-        "appType": "browser extension",
+        "appType": [
+            "browser extension"
+        ],
         "appUrl": "https://chrome.google.com/webstore/detail/podstation-podcast-player/bpcagekijmfcocgjlnnhpdogbplajjfn",
         "appIconUrl": "podstation.jpg",
         "platforms": [
@@ -194,7 +207,9 @@
     },
     {
         "appName": "Podcast Guru",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://podcastguru.io",
         "appIconUrl": "podcastguru.jpg",
         "platforms": [
@@ -234,7 +249,9 @@
     },
     {
         "appName": "Sphinx.chat",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://sphinx.chat",
         "appIconUrl": "sphinxchat.png",
         "platforms": [
@@ -257,7 +274,9 @@
     },
     {
         "appName": "Podcast Republic",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://podcastrepublic.net",
         "appIconUrl": "podcastrepublic.jpg",
         "platforms": [
@@ -272,7 +291,9 @@
     },
     {
         "appName": "Hypercatcher",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://hypercatcher.com",
         "appIconUrl": "hypercatcher.jpg",
         "platforms": [
@@ -291,7 +312,9 @@
     },
     {
         "appName": "Breez",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://breez.technology/",
         "appIconUrl": "breez.png",
         "platforms": [
@@ -315,7 +338,9 @@
     },
     {
         "appName": "AntennaPod",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://www.antennapod.org",
         "appIconUrl": "antennapod.png",
         "platforms": [
@@ -334,7 +359,11 @@
     },
     {
         "appName": "CurioCaster",
-        "appType": "podcast player",
+        "appType": [
+            "app",
+            "podcast player"
+        ],
+        "tagLine": "The Best Podcast Player in Texas",
         "appUrl": "https://curiocaster.com/",
         "appIconUrl": "curiocaster.png",
         "platforms": [
@@ -378,7 +407,9 @@
     },
     {
         "appName": "mp.money",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://cryptostream.online/",
         "appIconUrl": "mpmoney.jpg",
         "platforms": [
@@ -413,7 +444,9 @@
     },
     {
         "appName": "JumpLink",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://jump.link",
         "appIconUrl": "jumplink.png",
         "platforms": [
@@ -428,7 +461,9 @@
     },
     {
         "appName": "Ivy.fm",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://ivy.fm",
         "appIconUrl": "ivyfm.jpg",
         "platforms": [
@@ -451,7 +486,9 @@
     },
     {
         "appName": "Anytime Podcast Player",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime",
         "appIconUrl": "anytimelogo.png",
         "platforms": [
@@ -474,7 +511,9 @@
     },
     {
         "appName": "CastCoverage",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "http://castcoverage.com",
         "appIconUrl": "castcoverage.png",
         "platforms": [
@@ -489,7 +528,9 @@
     },
     {
         "appName": "PodLP",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://podlp.com/",
         "appIconUrl": "podlp.png",
         "platforms": [
@@ -520,7 +561,9 @@
     },
     {
         "appName": "Castamatic",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://castamatic.com/beta",
         "appIconUrl": "castamatic.png",
         "platforms": [
@@ -547,7 +590,9 @@
     },
     {
         "appName": "Tsacdop",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://github.com/stonega/tsacdop",
         "appIconUrl": "tsacdop.png",
         "platforms": [
@@ -566,7 +611,9 @@
     },
     {
         "appName": "Playapod",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://www.playapod.com",
         "appIconUrl": "playapod.png",
         "platforms": [
@@ -583,7 +630,9 @@
     },
     {
         "appName": "Escapepod",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://github.com/y20k/escapepod",
         "appIconUrl": "escapepod.png",
         "platforms": [
@@ -598,7 +647,9 @@
     },
     {
         "appName": "Kasts",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://apps.kde.org/kasts",
         "appIconUrl": "kasts.png",
         "platforms": [
@@ -614,7 +665,9 @@
     },
     {
         "appName": "Zion",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://getzion.com",
         "appIconUrl": "n2n2.png",
         "platforms": [
@@ -637,7 +690,9 @@
     },
     {
         "appName": "gpodder",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://gpodder.org",
         "appIconUrl": "gpodder.png",
         "platforms": [
@@ -657,7 +712,9 @@
     },
     {
         "appName": "Buzzsprout",
-        "appType": "hosting",
+        "appType": [
+            "hosting"
+        ],
         "appUrl": "https://www.buzzsprout.com",
         "appIconUrl": "buzzsprout.png",
         "platforms": [
@@ -688,7 +745,9 @@
     },
     {
         "appName": "Podnews directory",
-        "appType": "directory",
+        "appType": [
+            "directory"
+        ],
         "appUrl": "https://podnews.net/podcast",
         "appIconUrl": "podnews.jpg",
         "platforms": [
@@ -707,7 +766,9 @@
     },
     {
         "appName": "PowerPress by Blubrry",
-        "appType": "wordpress plugin",
+        "appType": [
+            "wordpress plugin"
+        ],
         "appUrl": "https://blubrry.com/services/powerpress-plugin/",
         "appIconUrl": "powerpress.png",
         "platforms": [
@@ -738,7 +799,9 @@
     },
     {
         "appName": "Podnews podcast",
-        "appType": "website",
+        "appType": [
+            "website"
+        ],
         "appUrl": "https://podnews.net/listen",
         "appIconUrl": "podnews.jpg",
         "platforms": [
@@ -761,7 +824,9 @@
     },
     {
         "appName": "Podcastindex",
-        "appType": "directory",
+        "appType": [
+            "directory"
+        ],
         "appUrl": "https://podcastindex.org",
         "appIconUrl": "podcastindex.jpg",
         "platforms": [
@@ -800,7 +865,9 @@
     },
     {
         "appName": "Podcast Chapters",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://chaptersapp.com",
         "appIconUrl": "chaptersapp.jpg",
         "platforms": [
@@ -839,7 +906,9 @@
     },
     {
         "appName": "Castopod",
-        "appType": "hosting",
+        "appType": [
+            "hosting"
+        ],
         "appUrl": "https://castopod.org/",
         "appIconUrl": "castopod.png",
         "platforms": [
@@ -878,7 +947,9 @@
     },
     {
         "appName": "Fireside",
-        "appType": "hosting",
+        "appType": [
+            "hosting"
+        ],
         "appUrl": "https://fireside.fm",
         "appIconUrl": "fireside.jpg",
         "platforms": [
@@ -913,7 +984,9 @@
     },
     {
         "appName": "Captivate",
-        "appType": "hosting",
+        "appType": [
+            "hosting"
+        ],
         "appUrl": "https://www.captivate.fm/",
         "appIconUrl": "captivate.png",
         "platforms": [
@@ -928,7 +1001,9 @@
     },
     {
         "appName": "Transistor",
-        "appType": "hosting",
+        "appType": [
+            "hosting"
+        ],
         "appUrl": "https://transistor.fm",
         "appIconUrl": "transistor.jpg",
         "platforms": [
@@ -947,7 +1022,9 @@
     },
     {
         "appName": "PodServe",
-        "appType": "hosting",
+        "appType": [
+            "hosting"
+        ],
         "appUrl": "https://podserve.fm",
         "appIconUrl": "podserve.png",
         "platforms": [
@@ -966,7 +1043,9 @@
     },
     {
         "appName": "JustCast",
-        "appType": "hosting",
+        "appType": [
+            "hosting"
+        ],
         "appUrl": "https://justcast.com",
         "appIconUrl": "justcast.png",
         "platforms": [
@@ -991,7 +1070,9 @@
     },
     {
         "appName": "Podcast 2.0 Twitter List",
-        "appType": "social links",
+        "appType": [
+            "social links"
+        ],
         "tagLine": "Twitter list of active devs and apps for Podcasting 2.0",
         "appUrl": "https://twitter.com/i/lists/1338026876745474048?s=20",
         "appIconUrl": "podcastindextwitter.png",
@@ -1007,7 +1088,9 @@
     },
     {
         "appName": "Satoshis.Stream ",
-        "appType": "node hosting",
+        "appType": [
+            "node hosting"
+        ],
         "tagLine": "Receive value as a podcaster without running your own node",
         "appUrl": "https://satoshis.stream/",
         "appIconUrl": "satoshisstream-bot.png",
@@ -1025,7 +1108,9 @@
     },
     {
         "appName": "Podcastpage.io",
-        "appType": "website",
+        "appType": [
+            "website"
+        ],
         "appUrl": "https://podcastpage.io",
         "appIconUrl": "podcastpage.png",
         "platforms": [
@@ -1056,7 +1141,9 @@
     },
     {
         "appName": "Podlove Podcast Publisher",
-        "appType": "wordpress plugin",
+        "appType": [
+            "wordpress plugin"
+        ],
         "appUrl": "https://publisher.podlove.org",
         "appIconUrl": "podlove-publisher.png",
         "platforms": [
@@ -1079,7 +1166,9 @@
     },
     {
         "appName": "Plink",
-        "appType": "directory",
+        "appType": [
+            "directory"
+        ],
         "appUrl": "https://plinkhq.com/",
         "appIconUrl": "plink.png",
         "platforms": [
@@ -1098,7 +1187,9 @@
     },
     {
         "appName": "Headliner",
-        "appType": "video",
+        "appType": [
+            "video"
+        ],
         "appUrl": "https://headliner.app/",
         "appIconUrl": "headliner.png",
         "platforms": [
@@ -1113,7 +1204,9 @@
     },
     {
         "appName": "RSS.com",
-        "appType": "hosting",
+        "appType": [
+            "hosting"
+        ],
         "appUrl": "https://rss.com",
         "appIconUrl": "rsscom.png",
         "platforms": [
@@ -1144,7 +1237,9 @@
     },
     {
         "appName": "gpodder",
-        "appType": "sn-network",
+        "appType": [
+            "sn-network"
+        ],
         "appUrl": "https://gpodder.net/",
         "appIconUrl": "gpodder.png",
         "platforms": [
@@ -1167,7 +1262,9 @@
     },
     {
         "appName": "fyyd",
-        "appType": "directory",
+        "appType": [
+            "directory"
+        ],
         "appUrl": "https://fyyd.de",
         "appIconUrl": "fyyd.png",
         "platforms": [
@@ -1186,7 +1283,9 @@
     },
     {
         "appName": "MediaVault",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://github.com/walkero-gr/mediavault",
         "appIconUrl": "mediavault.png",
         "platforms": [
@@ -1201,7 +1300,9 @@
     },
     {
         "appName": "PodBrowser",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "http://podbrowser.org",
         "appIconUrl": "podcastindex.jpg",
         "tagLine": "Lean and mean player, all about finding/playing podcasts.",
@@ -1221,7 +1322,9 @@
     },
     {
         "appName": "Disctopia",
-        "appType": "app",
+        "appType": [
+            "app"
+        ],
         "appUrl": "https://disctopia.com",
         "appIconUrl": "disctopia.png",
         "tagLine": "A Podcaster's Paradise.",

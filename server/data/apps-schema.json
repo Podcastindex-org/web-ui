@@ -22,19 +22,23 @@
           "type": "string"
         },
         "appType": {
-          "type": "string",
-          "enum": [
-            "app",
-            "hosting",
-            "directory",
-            "browser extension",
-            "wordpress plugin",
-            "website",
-            "social links",
-            "node hosting",
-            "video",
-            "other"
-          ]
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "app",
+              "hosting",
+              "directory",
+              "browser extension",
+              "wordpress plugin",
+              "website",
+              "social links",
+              "node hosting",
+              "podcast player",
+              "video",
+              "other"
+            ]
+          }
         },
         "appUrl": {
           "type": "string",
