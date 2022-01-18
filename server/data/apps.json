@@ -1340,5 +1340,35 @@
                 "elementURL": "https://disctopia.com"
             }
         ]
+    },
+    {
+        "appName": "3speak.tv",
+        "appType": [
+            "hosting",
+            "video"
+        ],
+        "appUrl": "https://3speak.tv",
+        "appIconUrl": "3speaklogo.png",
+        "platforms": [
+            "N/A"
+        ],
+        "supportedElements": [
+            {
+                "elementName": "Locked",
+                "elementURL": "https://3speak.tv/"
+            },
+            {
+                "elementName": "Funding",
+                "elementURL": "https://3speak.tv/"
+            },
+            {
+                "elementName": "Value",
+                "elementURL": "https://3speak.tv/"
+            },
+            {
+                "elementName": "Person",
+                "elementURL": "https://3speak.tv/"
+            }
+        ]
     }
 ]
