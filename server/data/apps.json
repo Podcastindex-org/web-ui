@@ -1358,10 +1358,6 @@
                 "elementURL": "https://3speak.tv/"
             },
             {
-                "elementName": "Podping",
-                "elementURL": "https://3speak.tv/"
-            },
-            {
                 "elementName": "Funding",
                 "elementURL": "https://3speak.tv/"
             },
@@ -1370,7 +1366,7 @@
                 "elementURL": "https://3speak.tv/"
             },
             {
-                "elementName": "People",
+                "elementName": "Person",
                 "elementURL": "https://3speak.tv/"
             }
         ]
