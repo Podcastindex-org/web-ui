@@ -199,6 +199,7 @@
         "appIconUrl": "podcastguru.jpg",
         "platforms": [
             "Android",
+            "Web",
             "iOS"
         ],
         "supportedElements": [
