@@ -15,7 +15,14 @@ function SingleApp(app) {
                     <a className="podcastIndexAppTitle" href={app.appUrl}>
                         {app.appName}
                     </a>
-                    <p className="podcastIndexAppType">{app.appType}</p>
+                    <p className="podcastIndexAppType">
+                        {app.appType.map((type, j) => (
+                            <React.Fragment key={`${j}`}>
+                                {j > 0 && ', '}
+                                {type}
+                            </React.Fragment>
+                        ))}
+                    </p>
                 </div>
             </div>
 

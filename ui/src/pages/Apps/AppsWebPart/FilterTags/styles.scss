@@ -23,12 +23,11 @@
             background: #b3b2b2;
         }
     }
-    &[data-tag='All'],
     &[data-tag='Clear'] {
         width: 47.88px;
         background-color: #aa0000;
+        color: white;
     }
-    &[data-tag='All']:hover,
     &[data-tag='Clear']:hover {
         background-color: darken($color: #aa0000, $amount: 5%);
     }

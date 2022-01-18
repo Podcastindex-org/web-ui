@@ -19,7 +19,10 @@ async function getApps(setApps, setFilterTypes) {
 
         apps.forEach((app, index) => {
             app.key = index
-            filterSets.appType.add(app.appType)
+            app.appType.forEach((type) => {
+                filterSets.appType.add(type)
+            })
+
             app.supportedElements.forEach((elem) =>
                 filterSets.supportedElements.add(elem.elementName)
             )
