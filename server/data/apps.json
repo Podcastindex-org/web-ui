@@ -1364,6 +1364,14 @@
             {
                 "elementName": "Funding",
                 "elementURL": "https://3speak.tv/"
+            },
+            {
+                "elementName": "Value",
+                "elementURL": "https://3speak.tv/"
+            },
+            {
+                "elementName": "People",
+                "elementURL": "https://3speak.tv/"
             }
         ]
     }
