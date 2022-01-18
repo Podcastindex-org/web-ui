@@ -1340,5 +1340,31 @@
                 "elementURL": "https://disctopia.com"
             }
         ]
+    },
+    {
+        "appName": "3speak.tv",
+        "appType": [
+            "hosting",
+            "video"
+        ],
+        "appUrl": "https://3speak.tv",
+        "appIconUrl": "3speaklogo.png",
+        "platforms": [
+            "N/A"
+        ],
+        "supportedElements": [
+            {
+                "elementName": "Locked",
+                "elementURL": "https://3speak.tv/"
+            },
+            {
+                "elementName": "Podping",
+                "elementURL": "https://3speak.tv/"
+            },
+            {
+                "elementName": "Funding",
+                "elementURL": "https://3speak.tv/"
+            }
+        ]
     }
 ]
