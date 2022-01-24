@@ -183,7 +183,8 @@
     {
         "appName": "podStation",
         "appType": [
-            "browser extension"
+            "browser extension",
+            "podcast player"
         ],
         "appUrl": "https://chrome.google.com/webstore/detail/podstation-podcast-player/bpcagekijmfcocgjlnnhpdogbplajjfn",
         "appIconUrl": "podstation.jpg",
@@ -202,7 +203,15 @@
             {
                 "elementName": "Value",
                 "elementURL": "https://github.com/podStation/podStation/blob/master/docs/release_notes/v1.33.0.md"
-            }
+            },
+            {
+                "elementName": "Sat Streaming",
+                "elementURL": "https://github.com/podStation/podStation/blob/master/docs/release_notes/v1.33.0.md"
+            },
+            {
+                "elementName": "Boostagrams",
+                "elementURL": "https://github.com/podStation/podStation/blob/master/CHANGELOG.md#1470"
+            }            
         ]
     },
     {
