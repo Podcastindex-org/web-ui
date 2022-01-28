@@ -156,7 +156,8 @@
     {
         "appName": "Fountain",
         "appType": [
-            "app"
+            "app",
+            "podcast player"
         ],
         "appUrl": "https://www.fountain.fm",
         "appIconUrl": "fountain.png",
@@ -167,12 +168,20 @@
         ],
         "supportedElements": [
             {
-                "elementName": "Search",
-                "elementURL": "https://twitter.com/fountain_app/status/1438166024478724098"
+                "elementName": "Sat Streaming",
+                "elementURL": "https://twitter.com/fountain_app/status/1428355721301610503"
+            },
+            {
+                "elementName": "Boostagrams",
+                "elementURL": "https://twitter.com/fountain_app/status/1428355721301610503"
             },
             {
                 "elementName": "Value",
                 "elementURL": "https://twitter.com/MerryOscar/status/1420818281959677952"
+            },
+            {
+                "elementName": "Search",
+                "elementURL": "https://twitter.com/fountain_app/status/1438166024478724098"
             },
             {
                 "elementName": "Chapters",
@@ -211,7 +220,7 @@
             {
                 "elementName": "Boostagrams",
                 "elementURL": "https://github.com/podStation/podStation/blob/master/CHANGELOG.md#1470"
-            }            
+            }
         ]
     },
     {
