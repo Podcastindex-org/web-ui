@@ -121,6 +121,23 @@
             }
         ]
     },
+     {
+        "appName": "Libsyn",
+        "appType": [
+            "hosting"
+        ],
+        "appUrl": "https://libsyn.com/",
+        "appIconUrl": "libsyn.png",
+        "platforms": [
+            "N/A"
+        ],
+        "supportedElements": [
+            {
+                "elementName": "Locked",
+                "elementURL": "https://blog.libsyn.com/2022/01/20/welcome-to-the-new-libsyn/"
+            }
+        ]
+    },
     {
         "appName": "Podverse",
         "appType": [
