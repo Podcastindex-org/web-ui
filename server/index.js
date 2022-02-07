@@ -101,9 +101,7 @@ app.use('/api/episodes/byfeedid', async (req, res) => {
 
 app.use('/api/add/byfeedurl', async (req, res) => {
     let feedUrl = req.query.url
-    console.log("Request to add: ", feedUrl)
     const response = await apiAdd.addByFeedUrl(feedUrl)
-    console.log("Add response: ", response)
     res.send(response)
 })
 

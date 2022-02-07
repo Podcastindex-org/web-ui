@@ -38,7 +38,6 @@ export default class Value4Value extends React.PureComponent<IProps> {
     }
 
     async getValue4ValuePodcasts() {
-        console.log('called')
         let response = await fetch(`/api/podcasts/bytag?podcast-value`, {
             // credentials: 'same-origin',
             method: 'GET',
