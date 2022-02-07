@@ -42,6 +42,13 @@ export const getPrettyDate = (time: number, includeTime: boolean = true) => {
     return dateObj.toLocaleDateString()
 }
 
+export const getISODate = (time: number): string => {
+    // Javascript epoch is in milliseconds; datePublished is in seconds
+    const dateObj = new Date(time * 1000)
+    return dateObj.toISOString()
+}
+
+
 export const fixURL = (url: string) => {
     if (url === undefined || url === null) {
         return url
