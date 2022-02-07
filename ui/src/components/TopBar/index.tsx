@@ -7,7 +7,7 @@ import Searchbar from '../SearchBar'
 import BrandIcon from '../../../images/brand-icon.svg'
 import BrandName from '../../../images/brand-text.svg'
 import MenuIcon from '../../../images/menu.svg'
-import { cleanSearchQuery } from '../../utils'
+import { cleanSearchQuery, encodeSearch } from '../../utils'
 
 import './styles.scss'
 
@@ -42,10 +42,12 @@ export default class Topbar extends React.PureComponent<IProps, IState> {
     }
 
     onSearchSubmit(evt: React.ChangeEvent<HTMLFormElement>) {
-        if (!this.state.search) {
+        const {search} = this.state
+        if (!search) {
             history.push(`/search`)
         } else {
-            let cleanQuery = this.state.search.replace('%','');
+            // let cleanQuery = this.state.search.replace('%','');
+            let cleanQuery = encodeSearch(search)
             history.push(`/search?q=${cleanQuery}`)
         }
         evt.preventDefault()

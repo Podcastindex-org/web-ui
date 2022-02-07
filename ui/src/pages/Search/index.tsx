@@ -4,7 +4,7 @@ import ReactLoading from 'react-loading'
 import { Link } from 'react-router-dom'
 import ResultItem from '../../components/ResultItem'
 
-import { cleanSearchQuery, isValidURL, updateTitle } from '../../utils'
+import { cleanSearchQuery, encodeSearch, isValidURL, updateTitle } from '../../utils'
 
 import './styles.scss'
 
@@ -25,7 +25,9 @@ export default class Results extends React.PureComponent<IProps> {
     async componentDidMount(): Promise<void> {
         this._isMounted = true
 
+        console.log("mount before:", this.props.location.search)
         let query = cleanSearchQuery(this.props.location.search)
+        console.log("mount after:", query)
         if (query) {
             const results = (await this.getSearchResults(query)).feeds
             if (this._isMounted) {
@@ -43,10 +45,16 @@ export default class Results extends React.PureComponent<IProps> {
     }
 
     async componentDidUpdate(prevProps) {
+        console.log("update before current:", this.props.location.search)
         let query = cleanSearchQuery(this.props.location.search)
+        console.log("update after current:", query)
+
+        console.log("update before prev:", prevProps.location.search)
+        let prevQuery = cleanSearchQuery(prevProps.location.search)
+        console.log("update after prev:", prevQuery)
         if (
             query.length &&
-            query !== cleanSearchQuery(prevProps.location.search)
+            query !== prevQuery
         ) {
             this.setState({
                 loading: true,
@@ -61,6 +69,7 @@ export default class Results extends React.PureComponent<IProps> {
     }
 
     async getSearchResults(query: string) {
+        query = encodeSearch(query)
         let response = await fetch(`/api/search/byterm?q=${query}`, {
             // credentials: 'same-origin',
             method: 'GET',
@@ -119,7 +128,9 @@ export default class Results extends React.PureComponent<IProps> {
 
     render() {
         const { loading, results } = this.state
+        console.log("render before:", this.props.location.search)
         let query = cleanSearchQuery(this.props.location.search)
+        console.log("render after:", query)
         if (results.length === 0 && !loading) {
             return this.renderNoResults()
         }
