@@ -1405,5 +1405,26 @@
                 "elementURL": "https://3speak.tv/"
             }
         ]
-    }
+    },
+    {
+        "appName": "usocial",
+        "appType": [
+            "website"
+        ],
+        "appUrl": "http://usocial.me",
+        "appIconUrl": "usocial.png",
+        "platforms": [
+            "Umbrel", "Citadel"
+        ],
+        "supportedElements": [
+            {
+                "elementName": "Value",
+                "elementURL": "https://usocial.me/"
+            },
+            {
+                "elementName": "Search",
+                "elementURL": "https://usocial.me/"
+            }
+        ]
+    },
 ]
