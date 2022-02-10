@@ -1,13 +1,13 @@
 import * as React from 'react'
-import ReactList from 'react-list'
 import ReactLoading from 'react-loading'
-import PodcastHeader from '../../../components/PodcastHeader'
-import Player from '../../../components/Player'
 import EpisodeItem from '../../../components/EpisodeItem'
-import {fixURL, updateTitle} from '../../../utils'
-const he = require('he')
-
+import InfiniteList from "../../../components/InfiniteList";
+import Player from '../../../components/Player'
+import PodcastHeader from '../../../components/PodcastHeader'
+import { fixURL, updateTitle } from '../../../utils'
 import './styles.scss'
+
+const he = require('he')
 
 interface IProps {
     match: any
@@ -32,6 +32,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         this.onEpisodePlay = this.onEpisodePlay.bind(this)
         this.onEpisodePause = this.onEpisodePause.bind(this)
         this.onEpisodeCanPlay = this.onEpisodeCanPlay.bind(this)
+        this.renderEpisode = this.renderEpisode.bind(this)
     }
 
     async componentDidMount(): Promise<void> {
@@ -39,16 +40,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
 
         let id = this.props.match.params.podcastId
         if (id) {
-            const result = (await this.getPodcastInfo(id)).feed
-            const episodes = (await this.getEpisodes(id)).items
-            if (this._isMounted) {
-                this.setState({
-                    loading: false,
-                    result,
-                    episodes,
-                    selectedEpisode: episodes[0],
-                })
-            }
+            await this.fetchData(id)
         }
     }
 
@@ -62,8 +54,14 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
             this.setState({
                 loading: true,
             })
-            const result = (await this.getPodcastInfo(id)).feed
-            const episodes = (await this.getEpisodes(id)).items
+            await this.fetchData(id)
+        }
+    }
+
+    async fetchData(id) {
+        const result = (await this.getPodcastInfo(id)).feed
+        const episodes: Array<any> = (await this.getEpisodes(id)).items
+        if (this._isMounted) {
             this.setState({
                 loading: false,
                 result,
@@ -74,6 +72,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     }
 
     async getPodcastInfo(id: string) {
+        // noinspection SpellCheckingInspection
         let response = await fetch(`/api/podcasts/byfeedid?id=${id}`, {
             // credentials: 'same-origin',
             method: 'GET',
@@ -82,7 +81,8 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     }
 
     async getEpisodes(id: string) {
-        let response = await fetch(`/api/episodes/byfeedid?id=${id}`, {
+        // noinspection SpellCheckingInspection
+        let response = await fetch(`/api/episodes/byfeedid?id=${id}&max=100`, {
             // credentials: 'same-origin',
             method: 'GET',
         })
@@ -90,18 +90,19 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     }
 
     onEpisodePlay(index: number) {
+        const {episodes, selectedEpisode} = this.state
         this.setState({
             playing: true,
         })
 
         if (index === undefined) {
-            index = this.state.episodes.findIndex(
-                (x) => x === this.state.selectedEpisode
+            index = episodes.findIndex(
+                (x) => x === selectedEpisode
             )
         }
-        const episode = this.state.episodes[index]
+        const episode = episodes[index]
 
-        if (this.state.selectedEpisode !== episode) {
+        if (selectedEpisode !== episode) {
             this.setState({
                 selectedEpisode: episode,
             })
@@ -134,25 +135,22 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     }
 
     onEpisodeCanPlay() {
-        if (this.state.playing) {
+        const {playing} = this.state
+        if (playing) {
             this.player.current.play()
         }
     }
 
     renderHeader() {
-        let title = this.state.result.title
-        let image = this.state.result.image || this.state.result.artwork
-        let author = this.state.result.author
-        let description = this.state.result.description
-        let categories = this.state.result.categories
-        let value = this.state.result.value
-        let id = this.state.result.id
-        let podcastURL = fixURL(this.state.result.link)
-        let feedURL = fixURL(this.state.result.url)
+        let {result} = this.state
+        let {title, image, artwork, author, description, categories, value, id, link, url, funding} = result
+        image = image || artwork
+        let podcastURL = fixURL(link)
+        let feedURL = fixURL(url)
         let donationPageURL = null
-        if (this.state.result.funding) // not null, exists
+        if (result.funding) // not null, exists
         {
-            donationPageURL = this.state.result.funding?.url
+            donationPageURL = funding?.url
         }
 
         updateTitle(title)
@@ -173,38 +171,37 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     }
 
     renderPlayer() {
+        const {episodes, selectedEpisode} = this.state
         return (
             <div className="podcast-header-player">
                 {
-                    this.state.episodes.length > 0
+                    episodes.length > 0
                         ?
                         <Player
                             ref={this.player}
-                            episode={this.state.selectedEpisode}
+                            episode={selectedEpisode}
                             onPlay={this.onEpisodePlay}
                             onPause={this.onEpisodePause}
                             onCanPlay={this.onEpisodeCanPlay}
                         />
                         :
-                        <div></div>
+                        <div/>
                 }
             </div>
         )
     }
 
     renderEpisodes() {
+        const {episodes} = this.state
         return (
             <div className="episodes-list">
                 <h2 className="episode-header">Episodes</h2>
                 {
-                    this.state.episodes.length > 0
+                    episodes.length > 0
                         ?
-                        <ReactList
-                            minSize={10}
-                            pageSize={10}
-                            itemRenderer={this.renderEpisode.bind(this)}
-                            length={this.state.episodes.length}
-                            type="simple"
+                        <InfiniteList
+                            data={episodes}
+                            itemRenderer={this.renderEpisode}
                         />
                         :
                         <div>
@@ -215,19 +212,18 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         )
     }
 
-    renderEpisode(index: number, key: number) {
-        let title = this.state.episodes[index].title
+
+    renderEpisode(item, index: number) {
+        let {title, image, feedImage, link, enclosureUrl, description, datePublished, value} = item
+        let {result} = this.state
         // try to use episode image, fall back to feed images
-        let image =
-            this.state.episodes[index].image ||
-            this.state.episodes[index].feedImage ||
-            this.state.result.image ||
-            this.state.result.artwork
-        let link = this.state.episodes[index].link
-        let enclosureUrl = fixURL(this.state.episodes[index].enclosureUrl)
-        let description = he.decode(this.state.episodes[index].description)
-        let datePublished = this.state.episodes[index].datePublished
-        let value = this.state.episodes[index].value
+        image =
+            image ||
+            feedImage ||
+            result.image ||
+            result.artwork
+        enclosureUrl = fixURL(enclosureUrl)
+        description = he.decode(description)
 
         // create a reference to the generated EpisodeItem if one doesn't already exist
         if (index >= this.episodeItems.length) {
@@ -235,7 +231,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         }
 
         return (
-            <div key={key}>
+            <div key={index}>
                 <EpisodeItem
                     ref={this.episodeItems[index]}
                     index={index}
@@ -254,7 +250,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     }
 
     render() {
-        const { loading, result } = this.state
+        const {loading, result} = this.state
         if ((result === undefined || result.length === 0) && !loading) {
             const errorMessage = `Unknown podcast ID: ${this.props.match.params.podcastId}`
             updateTitle(errorMessage)
@@ -263,8 +259,8 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         if (loading) {
             updateTitle('Loading podcast ...')
             return (
-                <div className="loader-wrapper" style={{ height: 300 }}>
-                    <ReactLoading type="cylon" color="#e90000" />
+                <div className="loader-wrapper" style={{height: 300}}>
+                    <ReactLoading type="cylon" color="#e90000"/>
                 </div>
             )
         }

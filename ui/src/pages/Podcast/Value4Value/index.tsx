@@ -1,9 +1,10 @@
 import * as React from 'react'
-import ReactList from 'react-list'
 import ReactLoading from 'react-loading'
+import { Link } from 'react-router-dom'
+import InfiniteList from "../../../components/InfiniteList";
 import ResultItem from '../../../components/ResultItem'
 
-import {updateTitle} from '../../../utils'
+import { updateTitle } from '../../../utils'
 
 import './styles.scss'
 
@@ -20,11 +21,18 @@ export default class Value4Value extends React.PureComponent<IProps> {
     }
     _isMounted = false
 
+    constructor(props) {
+        super(props)
+
+        this.renderItem = this.renderItem.bind(this)
+    }
+
+
     async componentDidMount(): Promise<void> {
         this._isMounted = true
 
-        let results = (await this.getValue4ValuePodcasts()).feeds
-        results.sort((a, b) => a.title.localeCompare(b.title))
+        let results = (await this.getValue4ValuePodcasts()).feeds as Array<any>
+
         if (this._isMounted) {
             this.setState({
                 loading: false,
@@ -38,6 +46,7 @@ export default class Value4Value extends React.PureComponent<IProps> {
     }
 
     async getValue4ValuePodcasts() {
+        // noinspection SpellCheckingInspection
         let response = await fetch(`/api/podcasts/bytag?podcast-value`, {
             // credentials: 'same-origin',
             method: 'GET',
@@ -45,13 +54,11 @@ export default class Value4Value extends React.PureComponent<IProps> {
         return await response.json()
     }
 
-    renderItem(index: number, key: number) {
-        let title = this.state.results[index].title
-        let image = this.state.results[index].image
-        let author = this.state.results[index].author
-        let description = this.state.results[index].description
-        let categories = this.state.results[index].categories
-        let id = this.state.results[index].id
+    renderItem(item, index: number) {
+        let {results} = this.state
+        const key = `v4v-podcast-${index}`
+
+        let {title, image, author, description, categories, id} = results[index]
 
         return (
             <div key={key}>
@@ -63,6 +70,32 @@ export default class Value4Value extends React.PureComponent<IProps> {
                     categories={categories}
                     id={id}
                 />
+            </div>
+        )
+    }
+
+    renderResults() {
+        let {results} = this.state
+
+        if (results.length == 0) {
+            return (<div/>)
+        }
+
+        // TODO: do we want to sort alphabetically? Return data is by popularity
+        // results = results.sort((a: any, b: any) => a.title.localeCompare(b.title))
+        return (
+            <div className="v4v-results">
+                {
+                    results.length === 0
+                        ?
+                        <p>No podcasts</p>
+                        :
+                        <InfiniteList
+                            data={results}
+                            itemRenderer={this.renderItem}
+                            initialDisplay={25}
+                        />
+                }
             </div>
         )
     }
@@ -86,19 +119,11 @@ export default class Value4Value extends React.PureComponent<IProps> {
         return (
             <div className="v4v">
                 <h2>Value 4 Value Podcasts</h2>
-                <p>These podcasts are set up to receive Bitcoin payments in real-time over the Lightning network using compatible <b><a href="/apps">Podcasting 2.0 apps</a></b>.</p>
-
+                <p>These podcasts are set up to receive Bitcoin payments in real-time over the Lightning network using
+                    compatible <b><Link to="/apps">Podcasting 2.0 apps</Link></b>.</p>
+                <p>There are <b>{results.length}</b> Value 4 Value podcasts!</p>
                 <br/>
-
-                <div className="v4v-results">
-                    <ReactList
-                        minSize={1}
-                        pageSize={10}
-                        itemRenderer={this.renderItem.bind(this)}
-                        length={results.length}
-                        type="simple"
-                    />
-                </div>
+                {this.renderResults()}
             </div>
         )
     }
