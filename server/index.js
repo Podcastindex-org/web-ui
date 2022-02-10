@@ -95,7 +95,8 @@ app.use('/api/podcasts/byfeedurl', async (req, res) => {
 
 app.use('/api/episodes/byfeedid', async (req, res) => {
     let feedId = req.query.id
-    const response = await api.episodesByFeedId(feedId)
+    let max = req.query.max
+    const response = await api.episodesByFeedId(feedId, null, max)
     res.send(response)
 })
 
