@@ -49,7 +49,14 @@ export default class Results extends React.PureComponent<IProps> {
     fetchResults = async () => {
         let query = cleanSearchQuery(this.props.location.search)
         if (query) {
-            const results = (await this.getSearchResults(query)).feeds
+            const results = (await this.getTitleSearchResults(query)).feeds as Array<any>
+            const termResults = (await this.getTermSearchResults(query)).feeds as Array<any>
+            const ids = results.map((value) => value.id)
+            termResults.forEach((value) => {
+                if (!ids.includes(value.id)) {
+                    results.push(value)
+                }
+            })
             if (this._isMounted) {
                 this.setState({
                     loading: false,
@@ -60,10 +67,20 @@ export default class Results extends React.PureComponent<IProps> {
         }
     }
 
-    async getSearchResults(query: string) {
+    async getTermSearchResults(query: string) {
         query = encodeSearch(query)
         // noinspection SpellCheckingInspection
         let response = await fetch(`/api/search/byterm?q=${query}`, {
+            // credentials: 'same-origin',
+            method: 'GET',
+        })
+        return await response.json()
+    }
+
+    async getTitleSearchResults(query: string) {
+        query = encodeSearch(query)
+        // noinspection SpellCheckingInspection
+        let response = await fetch(`/api/search/bytitle?q=${query}`, {
             // credentials: 'same-origin',
             method: 'GET',
         })

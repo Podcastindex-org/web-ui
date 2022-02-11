@@ -69,6 +69,12 @@ app.use('/api/search/byterm', async (req, res) => {
     res.send(response)
 })
 
+app.use('/api/search/bytitle', async (req, res) => {
+    let term = req.query.q
+    const response = await api.custom('search/bytitle', {q: term})
+    res.send(response)
+})
+
 app.use('/api/recent/episodes', async (req, res) => {
     let max = req.query.max
     const response = await api.recentEpisodes(max)
