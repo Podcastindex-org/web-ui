@@ -36,6 +36,7 @@
               "node hosting",
               "podcast player",
               "video",
+              "sn-network",
               "other"
             ]
           }
@@ -54,16 +55,21 @@
             "type": "string",
             "enum": [
               "Web",
+              "Mobile",
               "iOS",
               "Android",
               "macOS",
               "Windows",
               "Linux",
+              "BSD",
               "KaiOS",
               "Chrome",
               "Wordpress",
               "N/A",
-              "AmigaOS 4"
+              "AmigaOS 4",
+              "Sailfish OS",
+              "Umbrel",
+              "Citadel"
             ]
           }
         },
@@ -101,7 +107,10 @@
             "Boostagrams",
             "Sat Streaming",
             "Video",
-            "Synchronize"
+            "Synchronize",
+            "Podping",
+            "Alternate Enclosure",
+            "Trailer"
           ]
         },
         "elementURL": {
@@ -110,8 +119,7 @@
         }
       },
       "required": [
-        "elementName",
-        "elementURL"
+        "elementName"
       ]
     }
   }

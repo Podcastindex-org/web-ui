@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {getPrettyDate, truncateString} from '../../utils'
+import { getISODate, getPrettyDate, truncateString } from '../../utils'
 
 import Value from '../Value'
 import NoImage from '../../../images/no-cover-art.png'
@@ -76,7 +76,6 @@ export default class EpisodeItem extends React.PureComponent<IProps> {
 
     render() {
         const {title, image, link, value, enclosureUrl, description, datePublished} = this.props
-        const date = getPrettyDate(datePublished)
         const episodeLink = link
         const episodeEnclosure = enclosureUrl
 
@@ -96,7 +95,9 @@ export default class EpisodeItem extends React.PureComponent<IProps> {
                     <div className="episode-info">
                         <div className="episode-title">{title}</div>
                         <p className="episode-date">
-                            <time dateTime={date}>{date}</time>
+                            <time dateTime={getISODate(datePublished)}>
+                                {getPrettyDate(datePublished)}
+                            </time>
                         </p>
 
                         <div className="episode-links">

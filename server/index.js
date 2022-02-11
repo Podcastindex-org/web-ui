@@ -69,6 +69,12 @@ app.use('/api/search/byterm', async (req, res) => {
     res.send(response)
 })
 
+app.use('/api/search/bytitle', async (req, res) => {
+    let term = req.query.q
+    const response = await api.custom('search/bytitle', {q: term})
+    res.send(response)
+})
+
 app.use('/api/recent/episodes', async (req, res) => {
     let max = req.query.max
     const response = await api.recentEpisodes(max)
@@ -95,15 +101,14 @@ app.use('/api/podcasts/byfeedurl', async (req, res) => {
 
 app.use('/api/episodes/byfeedid', async (req, res) => {
     let feedId = req.query.id
-    const response = await api.episodesByFeedId(feedId)
+    let max = req.query.max
+    const response = await api.episodesByFeedId(feedId, null, max)
     res.send(response)
 })
 
 app.use('/api/add/byfeedurl', async (req, res) => {
     let feedUrl = req.query.url
-    console.log("Request to add: ", feedUrl)
     const response = await apiAdd.addByFeedUrl(feedUrl)
-    console.log("Add response: ", response)
     res.send(response)
 })
 

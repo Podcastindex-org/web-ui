@@ -1,10 +1,10 @@
-import * as React from 'react'
-import ReactList from 'react-list'
+import * as React from "react";
 import ReactLoading from 'react-loading'
 import { Link } from 'react-router-dom'
+import InfiniteList from "../../components/InfiniteList";
 import ResultItem from '../../components/ResultItem'
 
-import { cleanSearchQuery, isValidURL, updateTitle } from '../../utils'
+import { cleanSearchQuery, encodeSearch, isValidURL, updateTitle } from '../../utils'
 
 import './styles.scss'
 
@@ -25,9 +25,38 @@ export default class Results extends React.PureComponent<IProps> {
     async componentDidMount(): Promise<void> {
         this._isMounted = true
 
+        await this.fetchResults()
+    }
+
+    componentWillUnmount() {
+        this._isMounted = false
+    }
+
+    async componentDidUpdate(prevProps) {
+        let query = cleanSearchQuery(this.props.location.search)
+        let prevQuery = cleanSearchQuery(prevProps.location.search)
+        if (
+            query.length &&
+            query !== prevQuery
+        ) {
+            this.setState({
+                loading: true,
+            })
+            await this.fetchResults()
+        }
+    }
+
+    fetchResults = async () => {
         let query = cleanSearchQuery(this.props.location.search)
         if (query) {
-            const results = (await this.getSearchResults(query)).feeds
+            const results = (await this.getTitleSearchResults(query)).feeds as Array<any>
+            const termResults = (await this.getTermSearchResults(query)).feeds as Array<any>
+            const ids = results.map((value) => value.id)
+            termResults.forEach((value) => {
+                if (!ids.includes(value.id)) {
+                    results.push(value)
+                }
+            })
             if (this._isMounted) {
                 this.setState({
                     loading: false,
@@ -38,29 +67,9 @@ export default class Results extends React.PureComponent<IProps> {
         }
     }
 
-    componentWillUnmount() {
-        this._isMounted = false
-    }
-
-    async componentDidUpdate(prevProps) {
-        let query = cleanSearchQuery(this.props.location.search)
-        if (
-            query.length &&
-            query !== cleanSearchQuery(prevProps.location.search)
-        ) {
-            this.setState({
-                loading: true,
-            })
-            const results = (await this.getSearchResults(query)).feeds
-            this.setState({
-                loading: false,
-                query,
-                results,
-            })
-        }
-    }
-
-    async getSearchResults(query: string) {
+    async getTermSearchResults(query: string) {
+        query = encodeSearch(query)
+        // noinspection SpellCheckingInspection
         let response = await fetch(`/api/search/byterm?q=${query}`, {
             // credentials: 'same-origin',
             method: 'GET',
@@ -68,16 +77,21 @@ export default class Results extends React.PureComponent<IProps> {
         return await response.json()
     }
 
-    renderItem(index: number, key: number) {
-        let title = this.state.results[index].title
-        let image = this.state.results[index].image
-        let author = this.state.results[index].author
-        let description = this.state.results[index].description
-        let categories = this.state.results[index].categories
-        let id = this.state.results[index].id
+    async getTitleSearchResults(query: string) {
+        query = encodeSearch(query)
+        // noinspection SpellCheckingInspection
+        let response = await fetch(`/api/search/bytitle?q=${query}`, {
+            // credentials: 'same-origin',
+            method: 'GET',
+        })
+        return await response.json()
+    }
+
+    renderItem(item, index: number) {
+        let {title, image, author, description, categories, id} = item
 
         return (
-            <div key={key}>
+            <div key={index}>
                 <ResultItem
                     title={title}
                     author={author}
@@ -91,7 +105,7 @@ export default class Results extends React.PureComponent<IProps> {
     }
 
     renderNoResults() {
-        const { query } = this.state
+        const {query} = this.state
 
         const isURL = isValidURL(query)
 
@@ -118,7 +132,7 @@ export default class Results extends React.PureComponent<IProps> {
     }
 
     render() {
-        const { loading, results } = this.state
+        const {loading, results} = this.state
         let query = cleanSearchQuery(this.props.location.search)
         if (results.length === 0 && !loading) {
             return this.renderNoResults()
@@ -126,20 +140,18 @@ export default class Results extends React.PureComponent<IProps> {
         if (loading) {
             updateTitle('Loading results ...')
             return (
-                <div className="loader-wrapper" style={{ height: 300 }}>
-                    <ReactLoading type="cylon" color="#e90000" />
+                <div className="loader-wrapper" style={{height: 300}}>
+                    <ReactLoading type="cylon" color="#e90000"/>
                 </div>
             )
         }
         updateTitle(`Search results for "${query}"`)
         return (
             <div className="results-list">
-                <ReactList
-                    minSize={10}
-                    pageSize={10}
-                    itemRenderer={this.renderItem.bind(this)}
-                    length={results.length}
-                    type="simple"
+                <InfiniteList
+                    data={results}
+                    itemRenderer={this.renderItem}
+                    initialDisplay={30}
                 />
             </div>
         )

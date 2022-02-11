@@ -9,7 +9,7 @@ interface IProps {
     filterFunction?: any
 }
 
-export default class Card extends React.Component<IProps> {
+export default class Searchbar extends React.Component<IProps> {
     static defaultProps = {}
 
     constructor(props: IProps) {
