@@ -12,6 +12,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
 }
 
 .episode-cover-art {
@@ -32,6 +33,7 @@
     display: inline-flex;
     flex-direction: column;
     margin-left: 10px;
+    overflow: hidden;
     p {
         margin: 10px 0;
     }
@@ -44,6 +46,8 @@
     font-size: 26px;
     color: #2d2d2d;
     text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .episode-date {
@@ -91,9 +95,6 @@
 
 @media only screen and (max-width: 767px) {
     /* phones */
-    .episode-row {
-        // height: 170px;
-    }
     .episode {
         height: fit-content;
         display: flex;
