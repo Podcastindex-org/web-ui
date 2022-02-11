@@ -1,6 +1,7 @@
 import * as React from 'react'
 import AudioPlayer from 'react-h5-audio-player'
 import sha256 from 'crypto-js/sha256';
+import { AUDIO_PRELOAD_ATTRIBUTE } from "react-h5-audio-player/src/constants";
 import { v4 as uuidv4 } from 'uuid';
 import {Link} from "react-router-dom";
 import { getISODate, getPrettyDate } from "../../utils";
@@ -13,9 +14,13 @@ interface IProps {
     onPlay?: any
     onPause?: any
     onCanPlay?: any
+    preload?: AUDIO_PRELOAD_ATTRIBUTE
 }
 
 export default class Player extends React.Component<IProps> {
+    static defaultProps = {
+        preload: "none"
+    }
     state = {
         playing: false,
     }
@@ -107,7 +112,7 @@ export default class Player extends React.Component<IProps> {
     }
 
     render() {
-        const {episode} = this.props
+        const {episode, preload} = this.props
 
         //See if a pciguid exists in local storage.  They are stored using a hash of the enclosure url as the key to avoid
         //character encoding issues with what browsers accept as a valid key.  If the value exists, get it.  If not, create
@@ -166,7 +171,7 @@ export default class Player extends React.Component<IProps> {
                     src={enclosureUrl}
                     onCanPlay={this.onCanPlay}
                     onPlay={this.onPlay}
-                    preload="none"
+                    preload={preload}
                     onPause={this.onPause}
                     onEnded={this.onPause}
                     customAdditionalControls={[

@@ -171,7 +171,8 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     }
 
     renderPlayer() {
-        const {episodes, selectedEpisode} = this.state
+        const {episodes, selectedEpisode, playing} = this.state
+        const preload = playing ? "auto" : "none"
         return (
             <div className="podcast-header-player">
                 {
@@ -183,6 +184,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
                             onPlay={this.onEpisodePlay}
                             onPause={this.onEpisodePause}
                             onCanPlay={this.onEpisodeCanPlay}
+                            preload={preload}
                         />
                         :
                         <div/>
