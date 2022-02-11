@@ -42,7 +42,6 @@ export default class Landing extends React.Component<IProps, IState> {
         const recentPodcasts = (await this.getRecentEpisodes()).items
         const stats = await this.getStats()
 
-        // console.log(stats)
         if (this._isMounted) {
             this.setState({
                 loading: false,

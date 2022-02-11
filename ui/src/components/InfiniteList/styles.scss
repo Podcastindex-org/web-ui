@@ -1,9 +1,12 @@
 .infinite-list{
 
     .infinite-list-header {
+        margin-top: 10px;
         display: flex;
         flex-direction: row;
         align-items: center;
+
+        font-size: 12px;
 
         .button {
             margin: 0;

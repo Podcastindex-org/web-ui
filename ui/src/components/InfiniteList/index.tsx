@@ -12,6 +12,7 @@ interface IProps {
     showButton?: boolean,
     initialDisplay?: number
     step?: number,
+    itemsShown?: (value: number) => void
 }
 
 export default class InfiniteList extends React.PureComponent<IProps> {
@@ -22,10 +23,12 @@ export default class InfiniteList extends React.PureComponent<IProps> {
         showButton: true,
         initialDisplay: 10,
         step: 10,
+        itemsShown: null,
     }
     state = {
         displayCount: 0,
     }
+    _isMounted = false
 
     constructor(props) {
         super(props)
@@ -36,23 +39,35 @@ export default class InfiniteList extends React.PureComponent<IProps> {
     }
 
     componentDidMount(): void {
-        let {data, initialDisplay} = this.props
-        const displayCount = (data.length >= initialDisplay) ? initialDisplay : data.length
-        this.setState({
-            displayCount: displayCount,
-        })
+        this._isMounted = true
+        this.load()
+    }
+
+    componentDidUpdate(prevProps: Readonly<IProps>, prevState: Readonly<{}>, snapshot?: any): void {
+        if (this.props.data !== prevProps.data) {
+            this.load()
+        }
+    }
+
+    componentWillUnmount(): void {
+        this._isMounted = false
+    }
+
+    load() {
+        if (this._isMounted) {
+            let {data, initialDisplay} = this.props
+            const displayCount = (data.length >= initialDisplay) ? initialDisplay : data.length
+            this.updateDisplayCount(displayCount)
+        }
     }
 
     showAll() {
-        console.log("show all")
         this.showMoreData(true)
     }
 
     showMoreData(all: boolean = false) {
         let {data, step} = this.props
         let {displayCount} = this.state
-
-        console.log("show", displayCount, data.length, step)
 
         if (all || displayCount >= data.length) {
             displayCount = data.length
@@ -65,9 +80,22 @@ export default class InfiniteList extends React.PureComponent<IProps> {
             displayCount = displayCount + step
         }
 
-        this.setState({
-            displayCount: displayCount
-        })
+        this.updateDisplayCount(displayCount)
+    }
+
+    updateDisplayCount(count: number) {
+        const {itemsShown} = this.props
+
+        this.setState(
+            {
+                displayCount: count
+            },
+            () => {
+                if (itemsShown) {
+                    itemsShown(count)
+                }
+            }
+        )
     }
 
     showLoader() {
@@ -86,12 +114,11 @@ export default class InfiniteList extends React.PureComponent<IProps> {
         const {displayCount} = this.state
 
         const disabled = data.length == displayCount
-        console.log("show button", showButton, disabled)
 
         if (showButton) {
             return (
                 <div className="infinite-list-header">
-                    <Button onClick={this.showAll} disabled={disabled}>Show All</Button>
+                    <Button onClick={this.showAll} disabled={disabled} small={true}>Show All</Button>
                     <p className="count">{displayCount} / {data.length}</p>
                 </div>
             )
@@ -109,7 +136,7 @@ export default class InfiniteList extends React.PureComponent<IProps> {
                 <InfiniteScroll
                     dataLength={displayCount}
                     next={this.showMoreData}
-                    hasMore={true}
+                    hasMore={displayCount < data.length}
                     loader={this.showLoader()}
                 >
                     {
