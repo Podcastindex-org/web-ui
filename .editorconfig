@@ -16,3 +16,6 @@ ij_javascript_spaces_within_imports = true
 
 [{*.yaml,*.yml}]
 indent_size = 2
+
+[*.json]
+indent_size = 2
