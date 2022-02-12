@@ -1,1430 +1,1460 @@
 [
-    {
-        "appName": "Caproni",
-        "appType": [
-            "hosting"
-        ],
-        "appUrl": "https://caproni.fm/en",
-        "appIconUrl": "caproni.png",
-        "platforms": [
-            "N/A"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Locked",
-                "elementURL": "https://twitter.com/gaburieru4649/status/1481293512435974146"
-            },
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://twitter.com/gaburieru4649/status/1481293512435974146"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://twitter.com/gaburieru4649/status/1481293512435974146"
-            },
-            {
-                "elementName": "Location",
-                "elementURL": "https://twitter.com/gaburieru4649/status/1481293512435974146"
-            },
-            {
-                "elementName": "Podping",
-                "elementURL": "https://twitter.com/gaburieru4649/status/1481293512435974146"
-            }
-        ]
-    },
-    {
-        "appName": "Podcast Addict",
-        "appType": [
-            "app"
-        ],
-        "tagLine": "How podcasters share URLs, images, and videos during their podcasts.",
-        "appUrl": "https://podcastaddict.com",
-        "appIconUrl": "podcastaddict.png",
-        "platforms": [
-            "Android",
-            "Web"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://podcastaddict.com/changelog/2020_14#section1"
-            },
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://podcastaddict.com/changelog/2020_16#section4"
-            },
-            {
-                "elementName": "Search",
-                "elementURL": "https://twitter.com/PodcastAddict/status/1319645267335933954"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://twitter.com/PodcastAddict/status/1319645267335933954"
-            },
-            {
-                "elementName": "Location",
-                "elementURL": "https://podcastaddict.com/changelog/2021_3#section2"
-            },
-            {
-                "elementName": "Person",
-                "elementURL": "https://podcastaddict.com/changelog/2021_3#section1"
-            },
-            {
-                "elementName": "Season",
-                "elementURL": "https://podcastaddict.com/changelog/2021_4#section2"
-            },
-            {
-                "elementName": "Alternate Enclosure",
-                "elementURL": "https://twitter.com/PodcastAddict/status/1409220118614208518"
-            }
-        ]
-    },
-    {
-        "appName": "Podfriend",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://www.podfriend.com",
-        "appIconUrl": "podfriend.jpg",
-        "platforms": [
-            "Windows",
-            "Web"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://twitter.com/GoPodfriend/status/1316847938828742656"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://twitter.com/GoPodfriend/status/1318663369684123648"
-            },
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://twitter.com/adamcurry/status/1323417144378445831"
-            },
-            {
-                "elementName": "Search",
-                "elementURL": "https://twitter.com/GoPodfriend/status/1316847938828742656"
-            },
-            {
-                "elementName": "Location",
-                "elementURL": "https://twitter.com/GoPodfriend/status/1343952962662629376"
-            },
-            {
-                "elementName": "Person",
-                "elementURL": "https://twitter.com/adamcurry/status/1348787383324577793"
-            },
-            {
-                "elementName": "Value",
-                "elementURL": "https://twitter.com/GoPodfriend/status/1378079735234838531"
-            }
-        ]
-    },
-     {
-        "appName": "Libsyn",
-        "appType": [
-            "hosting"
-        ],
-        "appUrl": "https://libsyn.com/",
-        "appIconUrl": "libsyn.png",
-        "platforms": [
-            "N/A"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Locked",
-                "elementURL": "https://blog.libsyn.com/2022/01/20/welcome-to-the-new-libsyn/"
-            }
-        ]
-    },
-    {
-        "appName": "Podverse",
-        "appType": [
-            "app",
-            "podcast player"
-        ],
-        "appUrl": "https://podverse.fm",
-        "appIconUrl": "podverse.jpg",
-        "platforms": [
-            "iOS",
-            "Android",
-            "Web"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://twitter.com/Podverse/status/1324729288281632771?s=20"
-            },
-            {
-                "elementName": "Soundbite",
-                "elementURL": "https://twitter.com/Podverse/status/1326072379597053953?s=20"
-            },
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://twitter.com/Podverse/status/1324729288281632771?s=20"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://twitter.com/Podverse/status/1325734448608899072?s=20"
-            }
-        ]
-    },
-    {
-        "appName": "Fountain",
-        "appType": [
-            "app",
-            "podcast player"
-        ],
-        "appUrl": "https://www.fountain.fm",
-        "appIconUrl": "fountain.png",
-        "platforms": [
-            "iOS",
-            "Android",
-            "Web"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Sat Streaming",
-                "elementURL": "https://twitter.com/fountain_app/status/1428355721301610503"
-            },
-            {
-                "elementName": "Boostagrams",
-                "elementURL": "https://twitter.com/fountain_app/status/1428355721301610503"
-            },
-            {
-                "elementName": "Value",
-                "elementURL": "https://twitter.com/MerryOscar/status/1420818281959677952"
-            },
-            {
-                "elementName": "Search",
-                "elementURL": "https://twitter.com/fountain_app/status/1438166024478724098"
-            },
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://twitter.com/fountain_app/status/1438166024478724098"
-            }
-        ]
-    },
-    {
-        "appName": "podStation",
-        "appType": [
-            "browser extension",
-            "podcast player"
-        ],
-        "appUrl": "https://chrome.google.com/webstore/detail/podstation-podcast-player/bpcagekijmfcocgjlnnhpdogbplajjfn",
-        "appIconUrl": "podstation.jpg",
-        "platforms": [
-            "Chrome"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Funding",
-                "elementURL": "https://github.com/podStation/podStation/blob/master/docs/release_notes/v1.27.0.md"
-            },
-            {
-                "elementName": "Search",
-                "elementURL": "https://github.com/podStation/podStation/blob/master/docs/release_notes/v1.24.0.md"
-            },
-            {
-                "elementName": "Value",
-                "elementURL": "https://github.com/podStation/podStation/blob/master/docs/release_notes/v1.33.0.md"
-            },
-            {
-                "elementName": "Sat Streaming",
-                "elementURL": "https://github.com/podStation/podStation/blob/master/docs/release_notes/v1.33.0.md"
-            },
-            {
-                "elementName": "Boostagrams",
-                "elementURL": "https://github.com/podStation/podStation/blob/master/CHANGELOG.md#1470"
-            }
-        ]
-    },
-    {
-        "appName": "Podcast Guru",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://podcastguru.io",
-        "appIconUrl": "podcastguru.jpg",
-        "platforms": [
-            "Android",
-            "Web",
-            "iOS"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Search",
-                "elementURL": "https://twitter.com/podcastguru_app/status/1325834426346041347"
-            },
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://twitter.com/podcastguru_app/status/1362902472793223169"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://twitter.com/podcastguru_app/status/1351911108886589448"
-            },
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://twitter.com/podcastguru_app/status/1460362621647933447"
-            },
-            {
-                "elementName": "Location",
-                "elementURL": "https://twitter.com/podcastguru_app/status/1460362621647933447"
-            },
-            {
-                "elementName": "Person",
-                "elementURL": "https://twitter.com/podcastguru_app/status/1460362621647933447"
-            },
-            {
-                "elementName": "Season",
-                "elementURL": "https://twitter.com/podcastguru_app/status/1460362621647933447"
-            }
-        ]
-    },
-    {
-        "appName": "Sphinx.chat",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://sphinx.chat",
-        "appIconUrl": "sphinxchat.png",
-        "platforms": [
-            "iOS",
-            "Android",
-            "macOS",
-            "Windows",
-            "Linux"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Value",
-                "elementURL": "https://twitter.com/MartyBent/status/1325892586985451520"
-            },
-            {
-                "elementName": "Search",
-                "elementURL": "https://twitter.com/MartyBent/status/1325892586985451520"
-            }
-        ]
-    },
-    {
-        "appName": "Podcast Republic",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://podcastrepublic.net",
-        "appIconUrl": "podcastrepublic.jpg",
-        "platforms": [
-            "Android"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://twitter.com/castrepublic/status/1477881117789196289"
-            }
-        ]
-    },
-    {
-        "appName": "Hypercatcher",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://hypercatcher.com",
-        "appIconUrl": "hypercatcher.jpg",
-        "platforms": [
-            "iOS"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://hypercatcher.com/2020/11/how-to-create-podcast-chapters-as-a-listener/"
-            },
-            {
-                "elementName": "Search",
-                "elementURL": "https://hypercatcher.com"
-            }
-        ]
-    },
-    {
-        "appName": "Breez",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://breez.technology/",
-        "appIconUrl": "breez.png",
-        "platforms": [
-            "Android",
-            "iOS"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
-            },
-            {
-                "elementName": "Search",
-                "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
-            },
-            {
-                "elementName": "Value",
-                "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
-            }
-        ]
-    },
-    {
-        "appName": "AntennaPod",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://www.antennapod.org",
-        "appIconUrl": "antennapod.png",
-        "platforms": [
-            "Android"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Search",
-                "elementURL": "https://github.com/AntennaPod/AntennaPod/pull/4435"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://github.com/AntennaPod/AntennaPod/pull/4933"
-            }
-        ]
-    },
-    {
-        "appName": "CurioCaster",
-        "appType": [
-            "app",
-            "podcast player"
-        ],
-        "tagLine": "The Best Podcast Player in Texas",
-        "appUrl": "https://curiocaster.com/",
-        "appIconUrl": "curiocaster.png",
-        "platforms": [
-            "Web",
-            "Mobile"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Boostagrams",
-                "elementURL": "https://curiocaster.com/"
-            },
-            {
-                "elementName": "Sat Streaming",
-                "elementURL": "https://curiocaster.com/"
-            },
-            {
-                "elementName": "Value",
-                "elementURL": "https://curiocaster.com/"
-            },
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://curiocaster.com/"
-            },
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://curiocaster.com/"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://curiocaster.com/"
-            },
-            {
-                "elementName": "Search",
-                "elementURL": "https://curiocaster.com/"
-            },
-            {
-                "elementName": "Alternate Enclosure",
-                "elementURL": "https://curiocaster.com/"
-            }
-        ]
-    },
-    {
-        "appName": "mp.money",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://cryptostream.online/",
-        "appIconUrl": "mpmoney.jpg",
-        "platforms": [
-            "Web"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Value",
-                "elementURL": "https://cryptostream.online/"
-            },
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://cryptostream.online/"
-            },
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://cryptostream.online/"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://cryptostream.online/"
-            },
-            {
-                "elementName": "Search",
-                "elementURL": "https://cryptostream.online/"
-            },
-            {
-                "elementName": "Alternate Enclosure",
-                "elementURL": "https://cryptostream.online/"
-            }
-        ]
-    },
-    {
-        "appName": "JumpLink",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://jump.link",
-        "appIconUrl": "jumplink.png",
-        "platforms": [
-            "Web"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Search",
-                "elementURL": "https://twitter.com/Pod_JumpLinks/status/1425867711268151300?s=20"
-            }
-        ]
-    },
-    {
-        "appName": "Ivy.fm",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://ivy.fm",
-        "appIconUrl": "ivyfm.jpg",
-        "platforms": [
-            "Web"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://twitter.com/ivypodcasts/status/1409566617143590915"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://twitter.com/ivypodcasts/status/1376280859620339719"
-            },
-            {
-                "elementName": "Person",
-                "elementURL": "https://twitter.com/ivypodcasts/status/1376280859620339719"
-            }
-        ]
-    },
-    {
-        "appName": "Anytime Podcast Player",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime",
-        "appIconUrl": "anytimelogo.png",
-        "platforms": [
-            "Android"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Search",
-                "elementURL": "https://twitter.com/amugofjava/status/1364973551141466114"
-            },
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://twitter.com/amugofjava/status/1364973551141466114"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://twitter.com/amugofjava/status/1364973551141466114"
-            }
-        ]
-    },
-    {
-        "appName": "CastCoverage",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "http://castcoverage.com",
-        "appIconUrl": "castcoverage.png",
-        "platforms": [
-            "Web"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Search",
-                "elementURL": "http://castcoverage.com"
-            }
-        ]
-    },
-    {
-        "appName": "PodLP",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://podlp.com/",
-        "appIconUrl": "podlp.png",
-        "platforms": [
-            "KaiOS"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Person",
-                "elementURL": "https://blog.podlp.com/posts/podcasting-20/"
-            },
-            {
-                "elementName": "Location",
-                "elementURL": "https://blog.podlp.com/posts/podcasting-20/"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://blog.podlp.com/posts/podcasting-20/"
-            },
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://twitter.com/PodLP_App/status/1466805341597827079?s=20"
-            },
-            {
-                "elementName": "Alternate Enclosure",
-                "elementURL": "https://podlp.com/"
-            }
-        ]
-    },
-    {
-        "appName": "Castamatic",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://castamatic.com/",
-        "appIconUrl": "castamatic.png",
-        "platforms": [
-            "iOS"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Value",
-                "elementURL": "https://itunes.apple.com/it/app/castamatic-podcast-player/id966632553?mt=8"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://itunes.apple.com/it/app/castamatic-podcast-player/id966632553?mt=8"
-            },
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://itunes.apple.com/it/app/castamatic-podcast-player/id966632553?mt=8"
-            },
-            {
-                "elementName": "Search",
-                "elementURL": "https://itunes.apple.com/it/app/castamatic-podcast-player/id966632553?mt=8"
-            }
-        ]
-    },
-    {
-        "appName": "Tsacdop",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://github.com/stonega/tsacdop",
-        "appIconUrl": "tsacdop.png",
-        "platforms": [
-            "Android"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Search",
-                "elementURL": "https://github.com/stonega/tsacdop/releases/tag/v0.4.19"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://github.com/stonega/tsacdop/releases/tag/v0.5.4"
-            }
-        ]
-    },
-    {
-        "appName": "Playapod",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://www.playapod.com",
-        "appIconUrl": "playapod.png",
-        "platforms": [
-            "Android",
-            "iOS",
-            "Web"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Search",
-                "elementURL": "https://blog.playapod.com/2021/01/18/playapod-2-3-update/"
-            }
-        ]
-    },
-    {
-        "appName": "Escapepod",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://github.com/y20k/escapepod",
-        "appIconUrl": "escapepod.png",
-        "platforms": [
-            "Android"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Search",
-                "elementURL": "https://github.com/y20k/escapepod/blob/v1.0.3/app/src/main/java/org/y20k/escapepod/search/results/PodcastindexResult.kt"
-            }
-        ]
-    },
-    {
-        "appName": "Kasts",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://apps.kde.org/kasts",
-        "appIconUrl": "kasts.png",
-        "platforms": [
-            "Linux",
-            "Android"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Search",
-                "elementURL": "https://www.plasma-mobile.org/2021/07/20/plasma-mobile-gear-21-07"
-            }
-        ]
-    },
-    {
-        "appName": "Zion",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://getzion.com",
-        "appIconUrl": "n2n2.png",
-        "platforms": [
-            "iOS",
-            "Android",
-            "macOS",
-            "Windows",
-            "Linux"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Value",
-                "elementURL": "https://getzion.com"
-            },
-            {
-                "elementName": "Search",
-                "elementURL": "https://getzion.com"
-            }
-        ]
-    },
-    {
-        "appName": "gpodder",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://gpodder.org",
-        "appIconUrl": "gpodder.png",
-        "platforms": [
-            "Windows",
-            "Windows",
-            "macOS",
-            "Linux",
-            "BSD",
-            "Sailfish OS"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Search",
-                "elementURL": "https://gpodder.org"
-            }
-        ]
-    },
-    {
-        "appName": "Buzzsprout",
-        "appType": [
-            "hosting"
-        ],
-        "appUrl": "https://www.buzzsprout.com",
-        "appIconUrl": "buzzsprout.png",
-        "platforms": [
-            "N/A"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://www.buzzsprout.com/blog/transcription-tools"
-            },
-            {
-                "elementName": "Locked",
-                "elementURL": "https://www.buzzsprout.com/blog/podcast-locking"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://www.buzzsprout.com/"
-            },
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://twitter.com/buzzsprout/status/1324425781330796545"
-            },
-            {
-                "elementName": "Soundbite",
-                "elementURL": "https://www.buzzsprout.com/"
-            }
-        ]
-    },
-    {
-        "appName": "Podnews directory",
-        "appType": [
-            "directory"
-        ],
-        "appUrl": "https://podnews.net/podcast",
-        "appIconUrl": "podnews.jpg",
-        "platforms": [
-            "Web"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Location",
-                "elementURL": "https://podnews.net/podcast"
-            },
-            {
-                "elementName": "Search",
-                "elementURL": "https://podnews.net"
-            }
-        ]
-    },
-    {
-        "appName": "PowerPress by Blubrry",
-        "appType": [
-            "wordpress plugin"
-        ],
-        "appUrl": "https://blubrry.com/services/powerpress-plugin/",
-        "appIconUrl": "powerpress.png",
-        "platforms": [
-            "Wordpress"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://wordpress.org/plugins/powerpress/#developers"
-            },
-            {
-                "elementName": "Locked",
-                "elementURL": "https://wordpress.org/plugins/powerpress/#developers"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://wordpress.org/plugins/powerpress/#developers"
-            },
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://wordpress.org/plugins/powerpress/#developers"
-            },
-            {
-                "elementName": "Location",
-                "elementURL": "https://wordpress.org/plugins/powerpress/#developers"
-            }
-        ]
-    },
-    {
-        "appName": "Podnews podcast",
-        "appType": [
-            "website"
-        ],
-        "appUrl": "https://podnews.net/listen",
-        "appIconUrl": "podnews.jpg",
-        "platforms": [
-            "N/A"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://podnews.net/rss"
-            },
-            {
-                "elementName": "Person",
-                "elementURL": "https://podnews.net/rss"
-            },
-            {
-                "elementName": "Locked",
-                "elementURL": "https://podnews.net/rss"
-            }
-        ]
-    },
-    {
-        "appName": "Podcastindex",
-        "appType": [
-            "directory"
-        ],
-        "appUrl": "https://podcastindex.org",
-        "appIconUrl": "podcastindex.jpg",
-        "platforms": [
-            "N/A"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://podcastindex.org"
-            },
-            {
-                "elementName": "Locked",
-                "elementURL": "https://podcastindex.org"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://podcastindex.org"
-            },
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://podcastindex.org"
-            },
-            {
-                "elementName": "Soundbite",
-                "elementURL": "https://podcastindex.org"
-            },
-            {
-                "elementName": "Value",
-                "elementURL": "https://podcastindex.org"
-            },
-            {
-                "elementName": "Search",
-                "elementURL": "https://podcastindex.org"
-            }
-        ]
-    },
-    {
-        "appName": "Podcast Chapters",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://chaptersapp.com",
-        "appIconUrl": "chaptersapp.jpg",
-        "platforms": [
-            "macOS"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://chaptersapp.com/faq/pc20.html"
-            },
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://chaptersapp.com/faq/jsonExport.html"
-            },
-            {
-                "elementName": "Soundbite",
-                "elementURL": "https://chaptersapp.com/faq/pc20.html"
-            },
-            {
-                "elementName": "Location",
-                "elementURL": "https://chaptersapp.com/faq/pc20.html"
-            },
-            {
-                "elementName": "Person",
-                "elementURL": "https://chaptersapp.com/faq/pc20.html"
-            },
-            {
-                "elementName": "Season",
-                "elementURL": "https://chaptersapp.com/faq/pc20.html"
-            },
-            {
-                "elementName": "Episode",
-                "elementURL": "https://chaptersapp.com/faq/pc20.html"
-            }
-        ]
-    },
-    {
-        "appName": "Castopod",
-        "appType": [
-            "hosting"
-        ],
-        "appUrl": "https://castopod.org/",
-        "appIconUrl": "castopod.png",
-        "platforms": [
-            "N/A"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Locked",
-                "elementURL": "https://podlibre.org/castopod-supports-podcast-locking/"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://podlibre.org/publish-your-podcast-on-all-platforms/#podcastindex"
-            },
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://podlibre.org/castopod-supports-chapters-and-transcript-tags/"
-            },
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://podlibre.org/castopod-supports-chapters-and-transcript-tags/"
-            },
-            {
-                "elementName": "Soundbite",
-                "elementURL": "https://podlibre.org/castopod-supports-soundbite-tag/"
-            },
-            {
-                "elementName": "Location",
-                "elementURL": "https://podlibre.org/castopod-supports-the-location-tag/"
-            },
-            {
-                "elementName": "Person",
-                "elementURL": "https://podlibre.org/castopod-supports-the-person-tag/"
-            }
-        ]
-    },
-    {
-        "appName": "Fireside",
-        "appType": [
-            "hosting"
-        ],
-        "appUrl": "https://fireside.fm",
-        "appIconUrl": "fireside.jpg",
-        "platforms": [
-            "N/A"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://twitter.com/firesidefm/status/1318970082891075590"
-            },
-            {
-                "elementName": "Locked",
-                "elementURL": "https://twitter.com/firesidefm/status/1318970082891075590"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://twitter.com/firesidefm/status/1318970082891075590"
-            },
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://twitter.com/firesidefm/status/1318970082891075590"
-            },
-            {
-                "elementName": "Soundbite",
-                "elementURL": "https://twitter.com/firesidefm/status/1318970082891075590"
-            },
-            {
-                "elementName": "Person",
-                "elementURL": "https://twitter.com/firesidefm/status/1318970082891075590"
-            }
-        ]
-    },
-    {
-        "appName": "Captivate",
-        "appType": [
-            "hosting"
-        ],
-        "appUrl": "https://www.captivate.fm/",
-        "appIconUrl": "captivate.png",
-        "platforms": [
-            "N/A"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://twitter.com/CaptivateAudio"
-            }
-        ]
-    },
-    {
-        "appName": "Transistor",
-        "appType": [
-            "hosting"
-        ],
-        "appUrl": "https://transistor.fm",
-        "appIconUrl": "transistor.jpg",
-        "platforms": [
-            "N/A"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Locked",
-                "elementURL": "https://twitter.com/transistorfm"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://twitter.com/transistorfm"
-            }
-        ]
-    },
-    {
-        "appName": "PodServe",
-        "appType": [
-            "hosting"
-        ],
-        "appUrl": "https://podserve.fm",
-        "appIconUrl": "podserve.png",
-        "platforms": [
-            "N/A"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Locked",
-                "elementURL": "https://twitter.com/PodServeFM/status/1329960334967226373"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://twitter.com/PodServeFM/status/1329960334967226373"
-            }
-        ]
-    },
-    {
-        "appName": "JustCast",
-        "appType": [
-            "hosting"
-        ],
-        "appUrl": "https://justcast.com",
-        "appIconUrl": "justcast.png",
-        "platforms": [
-            "Web"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://justcast.zendesk.com/hc/en-us/articles/4407906495892-Chapter-Markers"
-            },
-            {
-                "elementName": "Soundbite"
-            },
-            {
-                "elementName": "Value",
-                "elementURL": "https://twitter.com/thejustcast/status/1435271788523450373"
-            },
-            {
-                "elementName": "Trailer"
-            }
-        ]
-    },
-    {
-        "appName": "Podcast 2.0 Twitter List",
-        "appType": [
-            "social links"
-        ],
-        "tagLine": "Twitter list of active devs and apps for Podcasting 2.0",
-        "appUrl": "https://twitter.com/i/lists/1338026876745474048?s=20",
-        "appIconUrl": "podcastindextwitter.png",
-        "platforms": [
-            "Web"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Search",
-                "elementURL": "https://twitter.com/i/lists/1338026876745474048?s=20"
-            }
-        ]
-    },
-    {
-        "appName": "Satoshis.Stream ",
-        "appType": [
-            "node hosting"
-        ],
-        "tagLine": "Receive value as a podcaster without running your own node",
-        "appUrl": "https://satoshis.stream/",
-        "appIconUrl": "satoshisstream-bot.png",
-        "platforms": [
-            "iOS",
-            "Android",
-            "Web"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Value",
-                "elementURL": "https://satoshis.stream/"
-            }
-        ]
-    },
-    {
-        "appName": "Podcastpage.io",
-        "appType": [
-            "website"
-        ],
-        "appUrl": "https://podcastpage.io",
-        "appIconUrl": "podcastpage.png",
-        "platforms": [
-            "Web"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://podcastpage.io/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
-            },
-            {
-                "elementName": "Soundbite",
-                "elementURL": "https://podcastpage.io/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
-            },
-            {
-                "elementName": "Person",
-                "elementURL": "https://podcastpage.io/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
-            },
-            {
-                "elementName": "Season",
-                "elementURL": "https://podcastpage.io/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
-            },
-            {
-                "elementName": "Episode",
-                "elementURL": "https://podcastpage.io/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
-            }
-        ]
-    },
-    {
-        "appName": "Podlove Podcast Publisher",
-        "appType": [
-            "wordpress plugin"
-        ],
-        "appUrl": "https://publisher.podlove.org",
-        "appIconUrl": "podlove-publisher.png",
-        "platforms": [
-            "Wordpress"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://github.com/podlove/podlove-publisher/commit/d3ce9d117c57a4c864d982fb5451c3fb6d20bd91"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://github.com/podlove/podlove-publisher/releases/tag/3.3.1"
-            },
-            {
-                "elementName": "Person",
-                "elementURL": "https://github.com/podlove/podlove-publisher/commit/08d52424b359569d795d318163b0c697ef623199"
-            }
-        ]
-    },
-    {
-        "appName": "Plink",
-        "appType": [
-            "directory"
-        ],
-        "appUrl": "https://plinkhq.com/",
-        "appIconUrl": "plink.png",
-        "platforms": [
-            "Web"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Search",
-                "elementURL": "https://plinkhq.com/smart-links/"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://plinkhq.com/"
-            }
-        ]
-    },
-    {
-        "appName": "Headliner",
-        "appType": [
-            "video"
-        ],
-        "appUrl": "https://headliner.app/",
-        "appIconUrl": "headliner.png",
-        "platforms": [
-            "Web"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Soundbite",
-                "elementURL": "https://www.headliner.app/blog/2021/04/23/no-more-clipping-headliner-now-supports-the-soundbite-tag/"
-            }
-        ]
-    },
-    {
-        "appName": "RSS.com",
-        "appType": [
-            "hosting"
-        ],
-        "appUrl": "https://rss.com",
-        "appIconUrl": "rsscom.png",
-        "platforms": [
-            "N/A"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://rss.com/"
-            },
-            {
-                "elementName": "Locked",
-                "elementURL": "https://rss.com/"
-            },
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://rss.com/"
-            },
-            {
-                "elementName": "Soundbite",
-                "elementURL": "https://rss.com/"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://rss.com/"
-            }
-        ]
-    },
-    {
-        "appName": "gpodder",
-        "appType": [
-            "sn-network"
-        ],
-        "appUrl": "https://gpodder.net/",
-        "appIconUrl": "gpodder.png",
-        "platforms": [
-            "Web"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Sn-Network",
-                "elementURL": "https://gpodder.net/"
-            },
-            {
-                "elementName": "Synchronize",
-                "elementURL": "https://gpodder.net/"
-            },
-            {
-                "elementName": "Search",
-                "elementURL": "https://gpodder.net/"
-            }
-        ]
-    },
-    {
-        "appName": "fyyd",
-        "appType": [
-            "directory"
-        ],
-        "appUrl": "https://fyyd.de",
-        "appIconUrl": "fyyd.png",
-        "platforms": [
-            "Web"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Search",
-                "elementURL": "https://fyyd.de"
-            },
-            {
-                "elementName": "Sn-Network",
-                "elementURL": "https://fyyd.de"
-            }
-        ]
-    },
-    {
-        "appName": "MediaVault",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://github.com/walkero-gr/mediavault",
-        "appIconUrl": "mediavault.png",
-        "platforms": [
-            "AmigaOS 4"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Search",
-                "elementURL": "https://twitter.com/gsokianos/status/1445459459397070848"
-            }
-        ]
-    },
-    {
-        "appName": "PodBrowser",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "http://podbrowser.org",
-        "appIconUrl": "podcastindex.jpg",
-        "tagLine": "Lean and mean player, all about finding/playing podcasts.",
-        "platforms": [
-            "Web"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Chapters",
-                "elementURL": "http://sources.vsta.org:7100/browser/timeline?c=791cb1e4a67ce9eb&y=a"
-            },
-            {
-                "elementName": "Search",
-                "elementURL": "http://sources.vsta.org:7100/browser/timeline?c=fdd2747d496fa15f&y=a"
-            }
-        ]
-    },
-    {
-        "appName": "Disctopia",
-        "appType": [
-            "app"
-        ],
-        "appUrl": "https://disctopia.com",
-        "appIconUrl": "disctopia.png",
-        "tagLine": "A Podcaster's Paradise.",
-        "platforms": [
-            "Web",
-            "iOS",
-            "Android"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Search",
-                "elementURL": "https://disctopia.com"
-            }
-        ]
-    },
-    {
-        "appName": "3speak.tv",
-        "appType": [
-            "hosting",
-            "video"
-        ],
-        "appUrl": "https://3speak.tv",
-        "appIconUrl": "3speaklogo.png",
-        "platforms": [
-            "N/A"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Locked",
-                "elementURL": "https://3speak.tv/"
-            },
-            {
-                "elementName": "Funding",
-                "elementURL": "https://3speak.tv/"
-            },
-            {
-                "elementName": "Value",
-                "elementURL": "https://3speak.tv/"
-            },
-            {
-                "elementName": "Person",
-                "elementURL": "https://3speak.tv/"
-            }
-        ]
-    },
-    {
-        "appName": "usocial",
-        "appType": [
-            "website"
-        ],
-        "appUrl": "http://usocial.me",
-        "appIconUrl": "usocial.png",
-        "platforms": [
-            "Umbrel", "Citadel"
-        ],
-        "supportedElements": [
-            {
-                "elementName": "Value",
-                "elementURL": "https://usocial.me/"
-            },
-            {
-                "elementName": "Search",
-                "elementURL": "https://usocial.me/"
-            }
-        ]
-    }
+  {
+    "appName": "Caproni",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://caproni.fm/en",
+    "appIconUrl": "caproni.png",
+    "platforms": [
+      "N/A"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Locked",
+        "elementURL": "https://twitter.com/gaburieru4649/status/1481293512435974146"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://twitter.com/gaburieru4649/status/1481293512435974146"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://twitter.com/gaburieru4649/status/1481293512435974146"
+      },
+      {
+        "elementName": "Location",
+        "elementURL": "https://twitter.com/gaburieru4649/status/1481293512435974146"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://twitter.com/gaburieru4649/status/1481293512435974146"
+      }
+    ]
+  },
+  {
+    "appName": "Podcast Addict",
+    "appType": [
+      "app"
+    ],
+    "tagLine": "How podcasters share URLs, images, and videos during their podcasts.",
+    "appUrl": "https://podcastaddict.com",
+    "appIconUrl": "podcastaddict.png",
+    "platforms": [
+      "Android",
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://podcastaddict.com/changelog/2020_14#section1"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://podcastaddict.com/changelog/2020_16#section4"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://twitter.com/PodcastAddict/status/1319645267335933954"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://twitter.com/PodcastAddict/status/1319645267335933954"
+      },
+      {
+        "elementName": "Location",
+        "elementURL": "https://podcastaddict.com/changelog/2021_3#section2"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://podcastaddict.com/changelog/2021_3#section1"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://podcastaddict.com/changelog/2021_4#section2"
+      },
+      {
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://twitter.com/PodcastAddict/status/1409220118614208518"
+      }
+    ]
+  },
+  {
+    "appName": "Podfriend",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://www.podfriend.com",
+    "appIconUrl": "podfriend.jpg",
+    "platforms": [
+      "Windows",
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://twitter.com/GoPodfriend/status/1316847938828742656"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://twitter.com/GoPodfriend/status/1318663369684123648"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://twitter.com/adamcurry/status/1323417144378445831"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://twitter.com/GoPodfriend/status/1316847938828742656"
+      },
+      {
+        "elementName": "Location",
+        "elementURL": "https://twitter.com/GoPodfriend/status/1343952962662629376"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://twitter.com/adamcurry/status/1348787383324577793"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://twitter.com/GoPodfriend/status/1378079735234838531"
+      }
+    ]
+  },
+  {
+    "appName": "Libsyn",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://libsyn.com/",
+    "appIconUrl": "libsyn.png",
+    "platforms": [
+      "N/A"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Locked",
+        "elementURL": "https://blog.libsyn.com/2022/01/20/welcome-to-the-new-libsyn/"
+      }
+    ]
+  },
+  {
+    "appName": "CastOS",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://castos.com",
+    "appIconUrl": "castos.jpg",
+    "platforms": [
+      "N/A"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value",
+        "elementURL": "https://castos.com/earn-bitcoin-from-your-listeners/"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://castos.com/introducing-podcast-2-0-support/"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://castos.com/introducing-podcast-2-0-support/"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://castos.com/introducing-podcast-2-0-support/"
+      }
+    ]
+  },
+  {
+    "appName": "Podverse",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "appUrl": "https://podverse.fm",
+    "appIconUrl": "podverse.jpg",
+    "platforms": [
+      "iOS",
+      "Android",
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://twitter.com/Podverse/status/1324729288281632771?s=20"
+      },
+      {
+        "elementName": "Soundbite",
+        "elementURL": "https://twitter.com/Podverse/status/1326072379597053953?s=20"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://twitter.com/Podverse/status/1324729288281632771?s=20"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://twitter.com/Podverse/status/1325734448608899072?s=20"
+      }
+    ]
+  },
+  {
+    "appName": "Fountain",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "appUrl": "https://www.fountain.fm",
+    "appIconUrl": "fountain.png",
+    "platforms": [
+      "iOS",
+      "Android",
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Sat Streaming",
+        "elementURL": "https://twitter.com/fountain_app/status/1428355721301610503"
+      },
+      {
+        "elementName": "Boostagrams",
+        "elementURL": "https://twitter.com/fountain_app/status/1428355721301610503"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://twitter.com/MerryOscar/status/1420818281959677952"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://twitter.com/fountain_app/status/1438166024478724098"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://twitter.com/fountain_app/status/1438166024478724098"
+      }
+    ]
+  },
+  {
+    "appName": "podStation",
+    "appType": [
+      "browser extension",
+      "podcast player"
+    ],
+    "appUrl": "https://chrome.google.com/webstore/detail/podstation-podcast-player/bpcagekijmfcocgjlnnhpdogbplajjfn",
+    "appIconUrl": "podstation.jpg",
+    "platforms": [
+      "Chrome"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Funding",
+        "elementURL": "https://github.com/podStation/podStation/blob/master/docs/release_notes/v1.27.0.md"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://github.com/podStation/podStation/blob/master/docs/release_notes/v1.24.0.md"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://github.com/podStation/podStation/blob/master/docs/release_notes/v1.33.0.md"
+      },
+      {
+        "elementName": "Sat Streaming",
+        "elementURL": "https://github.com/podStation/podStation/blob/master/docs/release_notes/v1.33.0.md"
+      },
+      {
+        "elementName": "Boostagrams",
+        "elementURL": "https://github.com/podStation/podStation/blob/master/CHANGELOG.md#1470"
+      }
+    ]
+  },
+  {
+    "appName": "Podcast Guru",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://podcastguru.io",
+    "appIconUrl": "podcastguru.jpg",
+    "platforms": [
+      "Android",
+      "Web",
+      "iOS"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://twitter.com/podcastguru_app/status/1325834426346041347"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://twitter.com/podcastguru_app/status/1362902472793223169"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://twitter.com/podcastguru_app/status/1351911108886589448"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://twitter.com/podcastguru_app/status/1460362621647933447"
+      },
+      {
+        "elementName": "Location",
+        "elementURL": "https://twitter.com/podcastguru_app/status/1460362621647933447"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://twitter.com/podcastguru_app/status/1460362621647933447"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://twitter.com/podcastguru_app/status/1460362621647933447"
+      }
+    ]
+  },
+  {
+    "appName": "Sphinx.chat",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://sphinx.chat",
+    "appIconUrl": "sphinxchat.png",
+    "platforms": [
+      "iOS",
+      "Android",
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value",
+        "elementURL": "https://twitter.com/MartyBent/status/1325892586985451520"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://twitter.com/MartyBent/status/1325892586985451520"
+      }
+    ]
+  },
+  {
+    "appName": "Podcast Republic",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://podcastrepublic.net",
+    "appIconUrl": "podcastrepublic.jpg",
+    "platforms": [
+      "Android"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://twitter.com/castrepublic/status/1477881117789196289"
+      }
+    ]
+  },
+  {
+    "appName": "Hypercatcher",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://hypercatcher.com",
+    "appIconUrl": "hypercatcher.jpg",
+    "platforms": [
+      "iOS"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://hypercatcher.com/2020/11/how-to-create-podcast-chapters-as-a-listener/"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://hypercatcher.com"
+      }
+    ]
+  },
+  {
+    "appName": "Breez",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://breez.technology/",
+    "appIconUrl": "breez.png",
+    "platforms": [
+      "Android",
+      "iOS"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
+      }
+    ]
+  },
+  {
+    "appName": "AntennaPod",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://www.antennapod.org",
+    "appIconUrl": "antennapod.png",
+    "platforms": [
+      "Android"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://github.com/AntennaPod/AntennaPod/pull/4435"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://github.com/AntennaPod/AntennaPod/pull/4933"
+      }
+    ]
+  },
+  {
+    "appName": "CurioCaster",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "The Best Podcast Player in Texas",
+    "appUrl": "https://curiocaster.com/",
+    "appIconUrl": "curiocaster.png",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Boostagrams",
+        "elementURL": "https://curiocaster.com/"
+      },
+      {
+        "elementName": "Sat Streaming",
+        "elementURL": "https://curiocaster.com/"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://curiocaster.com/"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://curiocaster.com/"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://curiocaster.com/"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://curiocaster.com/"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://curiocaster.com/"
+      },
+      {
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://curiocaster.com/"
+      }
+    ]
+  },
+  {
+    "appName": "mp.money",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://cryptostream.online/",
+    "appIconUrl": "mpmoney.jpg",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value",
+        "elementURL": "https://cryptostream.online/"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://cryptostream.online/"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://cryptostream.online/"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://cryptostream.online/"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://cryptostream.online/"
+      },
+      {
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://cryptostream.online/"
+      }
+    ]
+  },
+  {
+    "appName": "JumpLink",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://jump.link",
+    "appIconUrl": "jumplink.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://twitter.com/Pod_JumpLinks/status/1425867711268151300?s=20"
+      }
+    ]
+  },
+  {
+    "appName": "Ivy.fm",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://ivy.fm",
+    "appIconUrl": "ivyfm.jpg",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://twitter.com/ivypodcasts/status/1409566617143590915"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://twitter.com/ivypodcasts/status/1376280859620339719"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://twitter.com/ivypodcasts/status/1376280859620339719"
+      }
+    ]
+  },
+  {
+    "appName": "Anytime Podcast Player",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime",
+    "appIconUrl": "anytimelogo.png",
+    "platforms": [
+      "Android"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://twitter.com/amugofjava/status/1364973551141466114"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://twitter.com/amugofjava/status/1364973551141466114"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://twitter.com/amugofjava/status/1364973551141466114"
+      }
+    ]
+  },
+  {
+    "appName": "CastCoverage",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "http://castcoverage.com",
+    "appIconUrl": "castcoverage.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "http://castcoverage.com"
+      }
+    ]
+  },
+  {
+    "appName": "PodLP",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://podlp.com/",
+    "appIconUrl": "podlp.png",
+    "platforms": [
+      "KaiOS"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Person",
+        "elementURL": "https://blog.podlp.com/posts/podcasting-20/"
+      },
+      {
+        "elementName": "Location",
+        "elementURL": "https://blog.podlp.com/posts/podcasting-20/"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://blog.podlp.com/posts/podcasting-20/"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://twitter.com/PodLP_App/status/1466805341597827079?s=20"
+      },
+      {
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://podlp.com/"
+      }
+    ]
+  },
+  {
+    "appName": "Castamatic",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://castamatic.com/",
+    "appIconUrl": "castamatic.png",
+    "platforms": [
+      "iOS"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value",
+        "elementURL": "https://itunes.apple.com/it/app/castamatic-podcast-player/id966632553?mt=8"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://itunes.apple.com/it/app/castamatic-podcast-player/id966632553?mt=8"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://itunes.apple.com/it/app/castamatic-podcast-player/id966632553?mt=8"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://itunes.apple.com/it/app/castamatic-podcast-player/id966632553?mt=8"
+      }
+    ]
+  },
+  {
+    "appName": "Tsacdop",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://github.com/stonega/tsacdop",
+    "appIconUrl": "tsacdop.png",
+    "platforms": [
+      "Android"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://github.com/stonega/tsacdop/releases/tag/v0.4.19"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://github.com/stonega/tsacdop/releases/tag/v0.5.4"
+      }
+    ]
+  },
+  {
+    "appName": "Playapod",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://www.playapod.com",
+    "appIconUrl": "playapod.png",
+    "platforms": [
+      "Android",
+      "iOS",
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://blog.playapod.com/2021/01/18/playapod-2-3-update/"
+      }
+    ]
+  },
+  {
+    "appName": "Escapepod",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://github.com/y20k/escapepod",
+    "appIconUrl": "escapepod.png",
+    "platforms": [
+      "Android"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://github.com/y20k/escapepod/blob/v1.0.3/app/src/main/java/org/y20k/escapepod/search/results/PodcastindexResult.kt"
+      }
+    ]
+  },
+  {
+    "appName": "Kasts",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://apps.kde.org/kasts",
+    "appIconUrl": "kasts.png",
+    "platforms": [
+      "Linux",
+      "Android"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://www.plasma-mobile.org/2021/07/20/plasma-mobile-gear-21-07"
+      }
+    ]
+  },
+  {
+    "appName": "Zion",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://getzion.com",
+    "appIconUrl": "n2n2.png",
+    "platforms": [
+      "iOS",
+      "Android",
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value",
+        "elementURL": "https://getzion.com"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://getzion.com"
+      }
+    ]
+  },
+  {
+    "appName": "gpodder",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://gpodder.org",
+    "appIconUrl": "gpodder.png",
+    "platforms": [
+      "Windows",
+      "Windows",
+      "macOS",
+      "Linux",
+      "BSD",
+      "Sailfish OS"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://gpodder.org"
+      }
+    ]
+  },
+  {
+    "appName": "Buzzsprout",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://www.buzzsprout.com",
+    "appIconUrl": "buzzsprout.png",
+    "platforms": [
+      "N/A"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://www.buzzsprout.com/blog/transcription-tools"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://www.buzzsprout.com/blog/podcast-locking"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://www.buzzsprout.com/"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://twitter.com/buzzsprout/status/1324425781330796545"
+      },
+      {
+        "elementName": "Soundbite",
+        "elementURL": "https://www.buzzsprout.com/"
+      }
+    ]
+  },
+  {
+    "appName": "Podnews directory",
+    "appType": [
+      "directory"
+    ],
+    "appUrl": "https://podnews.net/podcast",
+    "appIconUrl": "podnews.jpg",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Location",
+        "elementURL": "https://podnews.net/podcast"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://podnews.net"
+      }
+    ]
+  },
+  {
+    "appName": "PowerPress by Blubrry",
+    "appType": [
+      "wordpress plugin"
+    ],
+    "appUrl": "https://blubrry.com/services/powerpress-plugin/",
+    "appIconUrl": "powerpress.png",
+    "platforms": [
+      "Wordpress"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://wordpress.org/plugins/powerpress/#developers"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://wordpress.org/plugins/powerpress/#developers"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://wordpress.org/plugins/powerpress/#developers"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://wordpress.org/plugins/powerpress/#developers"
+      },
+      {
+        "elementName": "Location",
+        "elementURL": "https://wordpress.org/plugins/powerpress/#developers"
+      }
+    ]
+  },
+  {
+    "appName": "Podnews podcast",
+    "appType": [
+      "website"
+    ],
+    "appUrl": "https://podnews.net/listen",
+    "appIconUrl": "podnews.jpg",
+    "platforms": [
+      "N/A"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://podnews.net/rss"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://podnews.net/rss"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://podnews.net/rss"
+      }
+    ]
+  },
+  {
+    "appName": "Podcastindex",
+    "appType": [
+      "directory"
+    ],
+    "appUrl": "https://podcastindex.org",
+    "appIconUrl": "podcastindex.jpg",
+    "platforms": [
+      "N/A"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://podcastindex.org"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://podcastindex.org"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://podcastindex.org"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://podcastindex.org"
+      },
+      {
+        "elementName": "Soundbite",
+        "elementURL": "https://podcastindex.org"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://podcastindex.org"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://podcastindex.org"
+      }
+    ]
+  },
+  {
+    "appName": "Podcast Chapters",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://chaptersapp.com",
+    "appIconUrl": "chaptersapp.jpg",
+    "platforms": [
+      "macOS"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://chaptersapp.com/faq/pc20.html"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://chaptersapp.com/faq/jsonExport.html"
+      },
+      {
+        "elementName": "Soundbite",
+        "elementURL": "https://chaptersapp.com/faq/pc20.html"
+      },
+      {
+        "elementName": "Location",
+        "elementURL": "https://chaptersapp.com/faq/pc20.html"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://chaptersapp.com/faq/pc20.html"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://chaptersapp.com/faq/pc20.html"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://chaptersapp.com/faq/pc20.html"
+      }
+    ]
+  },
+  {
+    "appName": "Castopod",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://castopod.org/",
+    "appIconUrl": "castopod.png",
+    "platforms": [
+      "N/A"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Locked",
+        "elementURL": "https://podlibre.org/castopod-supports-podcast-locking/"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://podlibre.org/publish-your-podcast-on-all-platforms/#podcastindex"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://podlibre.org/castopod-supports-chapters-and-transcript-tags/"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://podlibre.org/castopod-supports-chapters-and-transcript-tags/"
+      },
+      {
+        "elementName": "Soundbite",
+        "elementURL": "https://podlibre.org/castopod-supports-soundbite-tag/"
+      },
+      {
+        "elementName": "Location",
+        "elementURL": "https://podlibre.org/castopod-supports-the-location-tag/"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://podlibre.org/castopod-supports-the-person-tag/"
+      }
+    ]
+  },
+  {
+    "appName": "Fireside",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://fireside.fm",
+    "appIconUrl": "fireside.jpg",
+    "platforms": [
+      "N/A"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://twitter.com/firesidefm/status/1318970082891075590"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://twitter.com/firesidefm/status/1318970082891075590"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://twitter.com/firesidefm/status/1318970082891075590"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://twitter.com/firesidefm/status/1318970082891075590"
+      },
+      {
+        "elementName": "Soundbite",
+        "elementURL": "https://twitter.com/firesidefm/status/1318970082891075590"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://twitter.com/firesidefm/status/1318970082891075590"
+      }
+    ]
+  },
+  {
+    "appName": "Captivate",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://www.captivate.fm/",
+    "appIconUrl": "captivate.png",
+    "platforms": [
+      "N/A"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://twitter.com/CaptivateAudio"
+      }
+    ]
+  },
+  {
+    "appName": "Transistor",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://transistor.fm",
+    "appIconUrl": "transistor.jpg",
+    "platforms": [
+      "N/A"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Locked",
+        "elementURL": "https://twitter.com/transistorfm"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://twitter.com/transistorfm"
+      }
+    ]
+  },
+  {
+    "appName": "PodServe",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://podserve.fm",
+    "appIconUrl": "podserve.png",
+    "platforms": [
+      "N/A"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Locked",
+        "elementURL": "https://twitter.com/PodServeFM/status/1329960334967226373"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://twitter.com/PodServeFM/status/1329960334967226373"
+      }
+    ]
+  },
+  {
+    "appName": "JustCast",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://justcast.com",
+    "appIconUrl": "justcast.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://justcast.zendesk.com/hc/en-us/articles/4407906495892-Chapter-Markers"
+      },
+      {
+        "elementName": "Soundbite"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://twitter.com/thejustcast/status/1435271788523450373"
+      },
+      {
+        "elementName": "Trailer"
+      }
+    ]
+  },
+  {
+    "appName": "Podcast 2.0 Twitter List",
+    "appType": [
+      "social links"
+    ],
+    "tagLine": "Twitter list of active devs and apps for Podcasting 2.0",
+    "appUrl": "https://twitter.com/i/lists/1338026876745474048?s=20",
+    "appIconUrl": "podcastindextwitter.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://twitter.com/i/lists/1338026876745474048?s=20"
+      }
+    ]
+  },
+  {
+    "appName": "Satoshis.Stream ",
+    "appType": [
+      "node hosting"
+    ],
+    "tagLine": "Receive value as a podcaster without running your own node",
+    "appUrl": "https://satoshis.stream/",
+    "appIconUrl": "satoshisstream-bot.png",
+    "platforms": [
+      "iOS",
+      "Android",
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value",
+        "elementURL": "https://satoshis.stream/"
+      }
+    ]
+  },
+  {
+    "appName": "Podcastpage.io",
+    "appType": [
+      "website"
+    ],
+    "appUrl": "https://podcastpage.io",
+    "appIconUrl": "podcastpage.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://podcastpage.io/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
+      },
+      {
+        "elementName": "Soundbite",
+        "elementURL": "https://podcastpage.io/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://podcastpage.io/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://podcastpage.io/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://podcastpage.io/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
+      }
+    ]
+  },
+  {
+    "appName": "Podlove Podcast Publisher",
+    "appType": [
+      "wordpress plugin"
+    ],
+    "appUrl": "https://publisher.podlove.org",
+    "appIconUrl": "podlove-publisher.png",
+    "platforms": [
+      "Wordpress"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://github.com/podlove/podlove-publisher/commit/d3ce9d117c57a4c864d982fb5451c3fb6d20bd91"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://github.com/podlove/podlove-publisher/releases/tag/3.3.1"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://github.com/podlove/podlove-publisher/commit/08d52424b359569d795d318163b0c697ef623199"
+      }
+    ]
+  },
+  {
+    "appName": "Plink",
+    "appType": [
+      "directory"
+    ],
+    "appUrl": "https://plinkhq.com/",
+    "appIconUrl": "plink.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://plinkhq.com/smart-links/"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://plinkhq.com/"
+      }
+    ]
+  },
+  {
+    "appName": "Headliner",
+    "appType": [
+      "video"
+    ],
+    "appUrl": "https://headliner.app/",
+    "appIconUrl": "headliner.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Soundbite",
+        "elementURL": "https://www.headliner.app/blog/2021/04/23/no-more-clipping-headliner-now-supports-the-soundbite-tag/"
+      }
+    ]
+  },
+  {
+    "appName": "RSS.com",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://rss.com",
+    "appIconUrl": "rsscom.png",
+    "platforms": [
+      "N/A"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://rss.com/"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://rss.com/"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://rss.com/"
+      },
+      {
+        "elementName": "Soundbite",
+        "elementURL": "https://rss.com/"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://rss.com/"
+      }
+    ]
+  },
+  {
+    "appName": "gpodder",
+    "appType": [
+      "sn-network"
+    ],
+    "appUrl": "https://gpodder.net/",
+    "appIconUrl": "gpodder.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Sn-Network",
+        "elementURL": "https://gpodder.net/"
+      },
+      {
+        "elementName": "Synchronize",
+        "elementURL": "https://gpodder.net/"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://gpodder.net/"
+      }
+    ]
+  },
+  {
+    "appName": "fyyd",
+    "appType": [
+      "directory"
+    ],
+    "appUrl": "https://fyyd.de",
+    "appIconUrl": "fyyd.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://fyyd.de"
+      },
+      {
+        "elementName": "Sn-Network",
+        "elementURL": "https://fyyd.de"
+      }
+    ]
+  },
+  {
+    "appName": "MediaVault",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://github.com/walkero-gr/mediavault",
+    "appIconUrl": "mediavault.png",
+    "platforms": [
+      "AmigaOS 4"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://twitter.com/gsokianos/status/1445459459397070848"
+      }
+    ]
+  },
+  {
+    "appName": "PodBrowser",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "http://podbrowser.org",
+    "appIconUrl": "podcastindex.jpg",
+    "tagLine": "Lean and mean player, all about finding/playing podcasts.",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "http://sources.vsta.org:7100/browser/timeline?c=791cb1e4a67ce9eb&y=a"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "http://sources.vsta.org:7100/browser/timeline?c=fdd2747d496fa15f&y=a"
+      }
+    ]
+  },
+  {
+    "appName": "Disctopia",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://disctopia.com",
+    "appIconUrl": "disctopia.png",
+    "tagLine": "A Podcaster's Paradise.",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://disctopia.com"
+      }
+    ]
+  },
+  {
+    "appName": "3speak.tv",
+    "appType": [
+      "hosting",
+      "video"
+    ],
+    "appUrl": "https://3speak.tv",
+    "appIconUrl": "3speaklogo.png",
+    "platforms": [
+      "N/A"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Locked",
+        "elementURL": "https://3speak.tv/"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://3speak.tv/"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://3speak.tv/"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://3speak.tv/"
+      }
+    ]
+  },
+  {
+    "appName": "usocial",
+    "appType": [
+      "website"
+    ],
+    "appUrl": "http://usocial.me",
+    "appIconUrl": "usocial.png",
+    "platforms": [
+      "Umbrel",
+      "Citadel"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value",
+        "elementURL": "https://usocial.me/"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://usocial.me/"
+      }
+    ]
+  }
 ]
