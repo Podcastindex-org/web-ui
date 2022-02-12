@@ -8,6 +8,7 @@
     z-index: 1;
     padding: 0 10px 20px 10px;
     margin: 0 auto;
+    max-width: 1200px;
 }
 
 .hero-pitch {
@@ -81,13 +82,23 @@
     }
     .donation-providers {
         width: 100%;
-        display: inline-flex;
-    }
-    .paypal,
-    .sphinx-chat {
-        width: 50%;
-        text-align: center;
-        align-items: center;
+        display: flex;
+        flex-direction: row;
+
+        .paypal,
+        .sphinx-chat,
+        .tally-coin {
+            flex: 1;
+            text-align: center;
+        }
+
+        .paypal {
+            form {
+                .button {
+                    margin: 0 auto;
+                }
+            }
+        }
     }
 }
 
