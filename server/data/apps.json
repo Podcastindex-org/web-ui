@@ -7,7 +7,7 @@
     "appUrl": "https://caproni.fm/en",
     "appIconUrl": "caproni.png",
     "platforms": [
-      "N/A"
+      "Web"
     ],
     "supportedElements": [
       {
@@ -129,7 +129,7 @@
     "appUrl": "https://libsyn.com/",
     "appIconUrl": "libsyn.png",
     "platforms": [
-      "N/A"
+      "Web"
     ],
     "supportedElements": [
       {
@@ -144,9 +144,9 @@
       "hosting"
     ],
     "appUrl": "https://castos.com",
-    "appIconUrl": "castos.jpg",
+    "appIconUrl": "castos.png",
     "platforms": [
-      "N/A"
+      "Web"
     ],
     "supportedElements": [
       {
@@ -783,7 +783,7 @@
     "appUrl": "https://www.buzzsprout.com",
     "appIconUrl": "buzzsprout.png",
     "platforms": [
-      "N/A"
+      "Web"
     ],
     "supportedElements": [
       {
@@ -870,7 +870,7 @@
     "appUrl": "https://podnews.net/listen",
     "appIconUrl": "podnews.jpg",
     "platforms": [
-      "N/A"
+      "Web"
     ],
     "supportedElements": [
       {
@@ -895,7 +895,7 @@
     "appUrl": "https://podcastindex.org",
     "appIconUrl": "podcastindex.jpg",
     "platforms": [
-      "N/A"
+      "Web"
     ],
     "supportedElements": [
       {
@@ -977,7 +977,7 @@
     "appUrl": "https://castopod.org/",
     "appIconUrl": "castopod.png",
     "platforms": [
-      "N/A"
+      "Web"
     ],
     "supportedElements": [
       {
@@ -1018,7 +1018,7 @@
     "appUrl": "https://fireside.fm",
     "appIconUrl": "fireside.jpg",
     "platforms": [
-      "N/A"
+      "Web"
     ],
     "supportedElements": [
       {
@@ -1055,7 +1055,7 @@
     "appUrl": "https://www.captivate.fm/",
     "appIconUrl": "captivate.png",
     "platforms": [
-      "N/A"
+      "Web"
     ],
     "supportedElements": [
       {
@@ -1072,7 +1072,7 @@
     "appUrl": "https://transistor.fm",
     "appIconUrl": "transistor.jpg",
     "platforms": [
-      "N/A"
+      "Web"
     ],
     "supportedElements": [
       {
@@ -1093,7 +1093,7 @@
     "appUrl": "https://podserve.fm",
     "appIconUrl": "podserve.png",
     "platforms": [
-      "N/A"
+      "Web"
     ],
     "supportedElements": [
       {
@@ -1275,7 +1275,7 @@
     "appUrl": "https://rss.com",
     "appIconUrl": "rsscom.png",
     "platforms": [
-      "N/A"
+      "Web"
     ],
     "supportedElements": [
       {
@@ -1409,12 +1409,14 @@
     "appName": "3speak.tv",
     "appType": [
       "hosting",
-      "video"
+      "video",
+      "blockchain"
     ],
     "appUrl": "https://3speak.tv",
     "appIconUrl": "3speaklogo.png",
     "platforms": [
-      "N/A"
+      "Web",
+      "Hive"
     ],
     "supportedElements": [
       {
