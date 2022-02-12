@@ -805,6 +805,14 @@
       {
         "elementName": "Soundbite",
         "elementURL": "https://www.buzzsprout.com/"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://www.buzzsprout.com/"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://www.buzzsprout.com/"
       }
     ]
   },
@@ -832,12 +840,14 @@
   {
     "appName": "PowerPress by Blubrry",
     "appType": [
-      "wordpress plugin"
+      "wordpress plugin",
+      "hosting"
     ],
     "appUrl": "https://blubrry.com/services/powerpress-plugin/",
     "appIconUrl": "powerpress.png",
     "platforms": [
-      "Wordpress"
+      "Wordpress",
+      "Web"
     ],
     "supportedElements": [
       {
@@ -1061,6 +1071,10 @@
       {
         "elementName": "Transcript",
         "elementURL": "https://twitter.com/CaptivateAudio"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://twitter.com/CaptivateAudio"
       }
     ]
   },
@@ -1081,6 +1095,10 @@
       },
       {
         "elementName": "Funding",
+        "elementURL": "https://twitter.com/transistorfm"
+      },
+      {
+        "elementName": "Podping",
         "elementURL": "https://twitter.com/transistorfm"
       }
     ]
@@ -1122,14 +1140,20 @@
         "elementURL": "https://justcast.zendesk.com/hc/en-us/articles/4407906495892-Chapter-Markers"
       },
       {
-        "elementName": "Soundbite"
+        "elementName": "Soundbite",
+        "elementUrl": "https://justcast.com"
       },
       {
         "elementName": "Value",
         "elementURL": "https://twitter.com/thejustcast/status/1435271788523450373"
       },
       {
-        "elementName": "Trailer"
+        "elementName": "Trailer",
+        "elementUrl": "https://justcast.com"
+      },
+      {
+        "elementName": "Podping",
+        "elementUrl": "https://justcast.com"
       }
     ]
   },
@@ -1296,6 +1320,10 @@
       },
       {
         "elementName": "Funding",
+        "elementURL": "https://rss.com/"
+      },
+      {
+        "elementName": "Podping",
         "elementURL": "https://rss.com/"
       }
     ]
