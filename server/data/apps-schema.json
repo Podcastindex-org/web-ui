@@ -37,6 +37,7 @@
               "podcast player",
               "video",
               "sn-network",
+              "blockchain",
               "other"
             ]
           }
@@ -69,7 +70,8 @@
               "AmigaOS 4",
               "Sailfish OS",
               "Umbrel",
-              "Citadel"
+              "Citadel",
+              "Hive"
             ]
           }
         },
@@ -87,7 +89,7 @@
     "SupportedElement": {
       "type": "object",
       "title": "Supported Element",
-      "additionalProperties": false,
+      "additionalProperties": true,
       "properties": {
         "elementName": {
           "type": "string",
@@ -110,7 +112,8 @@
             "Synchronize",
             "Podping",
             "Alternate Enclosure",
-            "Trailer"
+            "Trailer",
+            "GUID"
           ]
         },
         "elementURL": {

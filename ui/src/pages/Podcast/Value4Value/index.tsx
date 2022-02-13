@@ -404,8 +404,15 @@ export default class Value4Value extends React.PureComponent<IProps> {
                 <h2>Value 4 Value Podcasts</h2>
                 <p>These podcasts are set up to receive Bitcoin payments in real-time over the Lightning network using
                     compatible <b><Link to="/apps">Podcasting 2.0 apps</Link></b>.</p>
-                <p>There are <b>{total}</b> Value 4 Value podcasts! Podcasts are grouped by the first letter of the
-                    title.</p>
+
+                <p>There are <b>{total}</b> Value 4 Value podcasts!</p>
+
+                <br/>
+
+                <p>Podcasts are grouped by the first character of the title and then displayed in sort order for that page.</p>
+                <p>The "Popular" page shows all podcasts in the "popularity" order returned from the API.</p>
+                <p>The "All" page shows all podcasts in sort order.</p>
+
                 <br/>
 
                 {this.renderPageLinks()}

@@ -90,6 +90,7 @@ export default class EpisodeItem extends React.PureComponent<IProps> {
                             onError={(ev: any) => {
                                 ev.target.src = NoImage
                             }}
+                            loading="lazy"
                         />
                     </div>
                     <div className="episode-info">

@@ -61,6 +61,7 @@ export default class ResultItem extends React.PureComponent<IProps> {
                                 onError={(ev: any) => {
                                     ev.target.src = NoImage
                                 }}
+                                loading="lazy"
                             />
                         </Link>
                     </div>

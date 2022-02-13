@@ -2,7 +2,7 @@
     /* tablets and desktop */
     .landing-content,
     .page-content {
-        width: 1108px;
+        width: 100%;
     }
     .hero-pitch {
         flex-direction: row;
@@ -15,7 +15,6 @@
     .landing-content,
     .page-content {
         min-width: 768px;
-        width: calc(100% - 40px);
     }
     // .hero-pitch {
     //     align-items: center;
@@ -33,16 +32,6 @@
     }
     .info-section {
         padding: 0 20px;
-
-        .donation-providers {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        .paypal,
-        .sphinx-chat {
-            width: 100%;
-        }
     }
     .hero-pitch-right {
         margin-top: 40px;
@@ -83,6 +72,12 @@
         .listen-row {
             justify-content: center;
             padding: 0 10px;
+        }
+    }
+    .info-section {
+        .donation-providers {
+            width: 100%;
+            flex-direction: column;
         }
     }
 }
