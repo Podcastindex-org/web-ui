@@ -35,7 +35,8 @@
   {
     "appName": "Podcast Addict",
     "appType": [
-      "app"
+      "app",
+      "podcast player"
     ],
     "tagLine": "How podcasters share URLs, images, and videos during their podcasts.",
     "appUrl": "https://podcastaddict.com",
@@ -82,7 +83,8 @@
   {
     "appName": "Podfriend",
     "appType": [
-      "app"
+      "app",
+      "podcast player"
     ],
     "appUrl": "https://www.podfriend.com",
     "appIconUrl": "podfriend.jpg",
@@ -357,7 +359,8 @@
   {
     "appName": "Hypercatcher",
     "appType": [
-      "app"
+      "app",
+      "podcast player"
     ],
     "appUrl": "https://hypercatcher.com",
     "appIconUrl": "hypercatcher.jpg",
@@ -404,7 +407,8 @@
   {
     "appName": "AntennaPod",
     "appType": [
-      "app"
+      "app",
+      "podcast player"
     ],
     "appUrl": "https://www.antennapod.org",
     "appIconUrl": "antennapod.png",
@@ -552,7 +556,8 @@
   {
     "appName": "Anytime Podcast Player",
     "appType": [
-      "app"
+      "app",
+      "podcast player"
     ],
     "appUrl": "https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime",
     "appIconUrl": "anytimelogo.png",
@@ -594,7 +599,8 @@
   {
     "appName": "PodLP",
     "appType": [
-      "app"
+      "app",
+      "podcast player"
     ],
     "appUrl": "https://podlp.com/",
     "appIconUrl": "podlp.png",
@@ -627,7 +633,8 @@
   {
     "appName": "Castamatic",
     "appType": [
-      "app"
+      "app",
+      "podcast player"
     ],
     "appUrl": "https://castamatic.com/",
     "appIconUrl": "castamatic.png",
