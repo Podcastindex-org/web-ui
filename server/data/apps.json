@@ -999,32 +999,36 @@
     "supportedElements": [
       {
         "elementName": "Locked",
-        "elementURL": "https://podlibre.org/castopod-supports-podcast-locking/"
+        "elementURL": "https://blog.castopod.org/castopod-supports-podcast-locking/"
       },
       {
         "elementName": "Funding",
-        "elementURL": "https://podlibre.org/publish-your-podcast-on-all-platforms/#podcastindex"
+        "elementURL": "https://blog.castopod.org/publish-your-podcast-on-all-platforms/#podcastindex"
       },
       {
         "elementName": "Transcript",
-        "elementURL": "https://podlibre.org/castopod-supports-chapters-and-transcript-tags/"
+        "elementURL": "https://blog.castopod.org/castopod-supports-chapters-and-transcript-tags/"
       },
       {
         "elementName": "Chapters",
-        "elementURL": "https://podlibre.org/castopod-supports-chapters-and-transcript-tags/"
+        "elementURL": "https://blog.castopod.org/castopod-supports-chapters-and-transcript-tags/"
       },
       {
         "elementName": "Soundbite",
-        "elementURL": "https://podlibre.org/castopod-supports-soundbite-tag/"
+        "elementURL": "https://blog.castopod.org/castopod-supports-soundbite-tag/"
       },
       {
         "elementName": "Location",
-        "elementURL": "https://podlibre.org/castopod-supports-the-location-tag/"
+        "elementURL": "https://blog.castopod.org/castopod-supports-the-location-tag/"
       },
       {
         "elementName": "Person",
-        "elementURL": "https://podlibre.org/castopod-supports-the-person-tag/"
-      }
+        "elementURL": "https://blog.castopod.org/castopod-supports-the-person-tag/"
+      },
+      {
+        "elementName": "GUID",
+        "https://blog.castopod.org/castopod-supports-the-podcast-guid-tag/"
+      }        
     ]
   },
   {
