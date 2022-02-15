@@ -1027,7 +1027,7 @@
       },
       {
         "elementName": "GUID",
-        "https://blog.castopod.org/castopod-supports-the-podcast-guid-tag/"
+        "elementURL": "https://blog.castopod.org/castopod-supports-the-podcast-guid-tag/"
       }        
     ]
   },
