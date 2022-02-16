@@ -8,6 +8,7 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
         new Set()
     )
     const [platformsFilters, setPlatformsFilters] = useState(new Set())
+    const [filtersExpanded, setFiltersExpanded] = useState(false);
 
     useEffect(filterApps, [
         appTypeFilters,
@@ -116,23 +117,20 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
     }
 
     function toggleFilters(e) {
-        const arrow = document.querySelector(
-            '.podcastIndexAppsFilterArrow'
-        ) as HTMLElement
-
-        arrow.innerText = arrow.innerText === '▼' ? '▲' : '▼'
-
         const container = document.querySelector(
             '.podcastIndexAppsFilterCategories'
         ) as HTMLElement
-        const isCollapsed = container.getAttribute('data-collapsed') === 'true'
 
-        if (isCollapsed) {
-            expandSection(container)
-            container.setAttribute('data-collapsed', 'false')
-        } else {
+        // The collapse and expand functions are requires because
+        // it is not possible to animate to height: auto with CSS
+        // more at https://carlanderson.xyz/how-to-animate-on-height-auto/
+        if (filtersExpanded) {
             collapseSection(container)
+        } else {
+            expandSection(container)
         }
+
+        setFiltersExpanded(!filtersExpanded)
     }
 
     function collapseSection(element) {
@@ -149,8 +147,6 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
                 element.style.height = 0 + 'px'
             })
         })
-
-        element.setAttribute('data-collapsed', 'true')
     }
 
     function expandSection(element) {
@@ -162,19 +158,14 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
             element.removeEventListener('transitionend', arguments.callee)
             element.style.height = null
         })
-
-        element.setAttribute('data-collapsed', 'false')
     }
 
     return (
         <div className="podcastIndexAppsFilterTagContainer">
             <h4 onClick={toggleFilters}>
-                Filters<span className="podcastIndexAppsFilterArrow">▼</span>
+                Filters<span className="podcastIndexAppsFilterArrow">{filtersExpanded ? '▲': '▼'}</span>
             </h4>
-            <div
-                className="podcastIndexAppsFilterCategories"
-                data-collapsed="true"
-            >
+            <div className="podcastIndexAppsFilterCategories">
                 {Object.keys(filterTypes).map((key, i) => {
                     let type = ''
                     if (key === 'appType') {
