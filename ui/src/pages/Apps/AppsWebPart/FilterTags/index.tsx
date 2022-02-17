@@ -160,6 +160,21 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
         })
     }
 
+    /**
+     * Format the tag name for display in the UI by capitalizing 
+     * the first letter of each word in the tag (i.e. podcast player => Podcast Player)
+     */
+    function formatTagName(tag: string): string {
+        return tag
+            .split(' ')
+            .map(
+                (v) =>
+                    v.charAt(0).toUpperCase() +
+                    v.slice(1)
+            )
+            .join(' ')
+    }
+
     return (
         <div className="podcastIndexAppsFilterTagContainer">
             <h4 onClick={toggleFilters}>
@@ -190,14 +205,7 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
                                     data-type={key}
                                     data-tag={tag}
                                 >
-                                    {tag
-                                        .split(' ')
-                                        .map(
-                                            (v) =>
-                                                v.charAt(0).toUpperCase() +
-                                                v.slice(1)
-                                        )
-                                        .join(' ')}
+                                    {formatTagName(tag)}
                                 </button>
                             ))}
                         </div>
