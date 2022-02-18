@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react'
 import './styles.scss'
 
 function FilterTags({ apps, setFilteredApps, filterTypes }) {
-    const [appTypeFilters, setAppTypeFilters] = useState(new Set())
+    const [appTypeFilters, setAppTypeFilters] = useState(new Set() as Set<string>)
     const [supportedElementsFilters, setSupportedElementsFilters] = useState(
-        new Set()
+        new Set() as Set<string>
     )
-    const [platformsFilters, setPlatformsFilters] = useState(new Set())
+    const [platformsFilters, setPlatformsFilters] = useState(new Set() as Set<string>)
     const [filtersExpanded, setFiltersExpanded] = useState(false);
 
     useEffect(filterApps, [
@@ -53,67 +53,49 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
         return intersection.length === b.size
     }
 
+    function getFilterStateByType(type: string): Set<string> {
+        switch(type) {
+            default:
+            case 'appType': 
+                return appTypeFilters;
+            case 'supportedElements':
+                return supportedElementsFilters;
+            case 'platforms':
+                return platformsFilters;
+        }
+    }
+
+    function getFilterStateSetterByType(type: string): React.Dispatch<React.SetStateAction<Set<string>>> {
+        switch(type) {
+            default:
+            case 'appType': 
+                return setAppTypeFilters;
+            case 'supportedElements':
+                return setSupportedElementsFilters;
+            case 'platforms':
+                return setPlatformsFilters;
+        }
+    }
+
+    function handleClearClick(e: React.MouseEvent<HTMLButtonElement>) {
+        const type = e.currentTarget.getAttribute('type') as string
+
+        getFilterStateSetterByType(type)(new Set());
+    }
+
     function handleTagClick(e) {
         const { type, tag } = e.target.dataset
 
-        if (tag === 'Clear') {
-            if (type === 'appType') {
-                setAppTypeFilters(new Set())
-            } else if (type === 'supportedElements') {
-                setSupportedElementsFilters(new Set())
-            } else if (type === 'platforms') {
-                setPlatformsFilters(new Set())
-            }
-            let elements = document.querySelectorAll(`[data-type='${type}']`)
-            for (const [index, el] of elements.entries()) {
-                if (index > 0) {
-                    el.classList.add('inactive')
-                    el.classList.remove('active')
-                }
-            }
-        } else {
-            if (e.target.classList.contains('active')) {
-                e.target.classList.add('inactive')
-                e.target.classList.remove('active')
-                removeTag(type, tag)
-            } else {
-                e.target.classList.add('active')
-                e.target.classList.remove('inactive')
-                addTag(type, tag)
-            }
-        }
-    }
+        const filterStateCopy = new Set(getFilterStateByType(type));
 
-    function addTag(type, tag) {
-        if (type === 'appType') {
-            let a = new Set(appTypeFilters)
-            a.add(tag)
-            setAppTypeFilters(a)
-        } else if (type === 'supportedElements') {
-            let e = new Set(supportedElementsFilters)
-            e.add(tag)
-            setSupportedElementsFilters(e)
-        } else if (type === 'platforms') {
-            let p = new Set(platformsFilters)
-            p.add(tag)
-            setPlatformsFilters(p)
+        if(filterStateCopy.has(tag)) {
+            filterStateCopy.delete(tag);
         }
-    }
+        else {
+            filterStateCopy.add(tag)
+        }
 
-    function removeTag(type, tag) {
-        if (type === 'appType') {
-            let a = new Set(appTypeFilters)
-            a.delete(tag)
-            setAppTypeFilters(a)
-        } else if (type === 'supportedElements') {
-            let e = new Set(supportedElementsFilters)
-            e.delete(tag)
-            setSupportedElementsFilters(e)
-        } else if (type === 'platforms') {
-            let p = new Set(platformsFilters)
-            p.delete(tag)
-            setPlatformsFilters(p)
-        }
+        getFilterStateSetterByType(type)(filterStateCopy);
     }
 
     function toggleFilters(e) {
@@ -160,6 +142,12 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
         })
     }
 
+    function isTagButtonActive(type, tag): boolean {
+        const state = getFilterStateByType(type);
+
+        return state.has(tag);
+    }
+
     /**
      * Format the tag name for display in the UI by capitalizing 
      * the first letter of each word in the tag (i.e. podcast player => Podcast Player)
@@ -194,13 +182,17 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
                     return (
                         <div className="podcastIndexAppsFilterTags" key={i}>
                             <div>{type}</div>
+                            <button 
+                                className="clear-button" 
+                                onClick={handleClearClick}>
+                                    Clear
+                            </button>
                             {[
-                                'Clear',
                                 ...tags.sort((a, b) => a.localeCompare(b)),
                             ].map((tag, j) => (
                                 <button
                                     key={j}
-                                    className="inactive"
+                                    className={isTagButtonActive(key, tag) ? 'active' : 'inactive'}
                                     onClick={handleTagClick}
                                     data-type={key}
                                     data-tag={tag}
