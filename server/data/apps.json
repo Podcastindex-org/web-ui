@@ -643,6 +643,10 @@
     ],
     "supportedElements": [
       {
+        "elementName": "Boostagrams",
+        "elementURL": "https://itunes.apple.com/it/app/castamatic-podcast-player/id966632553?mt=8"
+      },
+      {
         "elementName": "Value",
         "elementURL": "https://itunes.apple.com/it/app/castamatic-podcast-player/id966632553?mt=8"
       },
