@@ -23,12 +23,12 @@
             background: #b3b2b2;
         }
     }
-    &[data-tag='Clear'] {
+    &.clear-button {
         width: 47.88px;
         background-color: #aa0000;
         color: white;
     }
-    &[data-tag='Clear']:hover {
+    &.clear-button:hover {
         background-color: darken($color: #aa0000, $amount: 5%);
     }
 }
