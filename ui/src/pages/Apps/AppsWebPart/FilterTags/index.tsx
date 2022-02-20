@@ -10,11 +10,28 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
     const [platformsFilters, setPlatformsFilters] = useState(new Set() as Set<string>)
     const [filtersExpanded, setFiltersExpanded] = useState(false);
 
+    useEffect(expandOrCollapseFilters, [filtersExpanded])
+
     useEffect(filterApps, [
         appTypeFilters,
         supportedElementsFilters,
         platformsFilters,
     ])
+
+    function expandOrCollapseFilters() {
+        const container = document.querySelector(
+            '.podcastIndexAppsFilterCategories'
+        ) as HTMLElement
+
+        // The collapse and expand functions are requires because
+        // it is not possible to animate to height: auto with CSS
+        // more at https://carlanderson.xyz/how-to-animate-on-height-auto/
+        if (filtersExpanded) {
+            expandSection(container)
+        } else {
+            collapseSection(container)
+        }
+    }
 
     function filterApps() {
         let filteredApps = filterAppType(
@@ -98,20 +115,7 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
         getFilterStateSetterByType(type)(filterStateCopy);
     }
 
-    function toggleFilters(e) {
-        const container = document.querySelector(
-            '.podcastIndexAppsFilterCategories'
-        ) as HTMLElement
-
-        // The collapse and expand functions are requires because
-        // it is not possible to animate to height: auto with CSS
-        // more at https://carlanderson.xyz/how-to-animate-on-height-auto/
-        if (filtersExpanded) {
-            collapseSection(container)
-        } else {
-            expandSection(container)
-        }
-
+    function toggleFilters() {
         setFiltersExpanded(!filtersExpanded)
     }
 
