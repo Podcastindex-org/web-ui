@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom';
 
 import './styles.scss'
 
 function FilterTags({ apps, setFilteredApps, filterTypes }) {
+    const query = useUrlSearchParams();
     const [appTypeFilters, setAppTypeFilters] = useState(new Set() as Set<string>)
     const [supportedElementsFilters, setSupportedElementsFilters] = useState(
         new Set() as Set<string>
@@ -19,6 +21,14 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
         apps
     ])
 
+    useEffect(setFiltersFromUrlSearchParams, [])
+
+    function useUrlSearchParams() {
+        const { search } = useLocation();
+    
+        return React.useMemo(() => new URLSearchParams(search), [search]);
+    }
+
     function expandOrCollapseFilters() {
         const container = document.querySelector(
             '.podcastIndexAppsFilterCategories'
@@ -31,6 +41,21 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
             expandSection(container)
         } else {
             collapseSection(container)
+        }
+    }
+
+    function setFiltersFromUrlSearchParams() {
+        setFiltersFromUrlSearchParam('appTypes', setAppTypeFilters);
+        setFiltersFromUrlSearchParam('elements', setSupportedElementsFilters);
+        setFiltersFromUrlSearchParam('platforms', setPlatformsFilters);
+    }
+
+    function setFiltersFromUrlSearchParam(paramName: string, filterStateSetter:  React.Dispatch<React.SetStateAction<Set<string>>>) {
+        const paramValue = query.get(paramName)
+
+        if(paramValue) {
+            const filterValues = paramValue.split(',')
+            filterStateSetter(new Set(filterValues));
         }
     }
 
