@@ -16,6 +16,7 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
         appTypeFilters,
         supportedElementsFilters,
         platformsFilters,
+        apps
     ])
 
     function expandOrCollapseFilters() {

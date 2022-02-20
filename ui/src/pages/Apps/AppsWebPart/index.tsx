@@ -50,9 +50,6 @@ function AppsWebPart() {
         getApps(setApps, setFilterTypes)
     }, [])
 
-    useEffect(() => {
-        setFilteredApps(apps)
-    }, [apps])
     return (
         <div className="podcastIndexAppsWebPart">
             <FilterTags
