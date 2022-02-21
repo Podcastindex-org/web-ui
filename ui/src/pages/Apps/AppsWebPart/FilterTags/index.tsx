@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 
 import './styles.scss'
 
 function FilterTags({ apps, setFilteredApps, filterTypes }) {
     const query = useUrlSearchParams();
+    const history = useHistory();
     const [appTypeFilters, setAppTypeFilters] = useState(new Set() as Set<string>)
     const [supportedElementsFilters, setSupportedElementsFilters] = useState(
         new Set() as Set<string>
@@ -21,7 +22,7 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
         apps
     ])
 
-    useEffect(setFiltersFromUrlSearchParams, [])
+    useEffect(setFiltersFromUrlSearchParams, [query])
 
     function useUrlSearchParams() {
         const { search } = useLocation();
@@ -57,6 +58,39 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
             const filterValues = paramValue.split(',')
             filterStateSetter(new Set(filterValues));
         }
+        else {
+            filterStateSetter(new Set());
+        }
+    }
+
+    function updateLocationURLSearchParameters(filterType: string, filterValue: Set<string>) {
+        const filtersStateCopy = {
+            appTypeFilters: new Set(appTypeFilters),
+            supportedElementsFilters: new Set(supportedElementsFilters),
+            platformsFilters: new Set(platformsFilters)
+        }
+
+        switch(filterType) {
+            case 'appType':
+                filtersStateCopy.appTypeFilters = filterValue;
+                break;
+            case 'supportedElements':
+                filtersStateCopy.supportedElementsFilters = filterValue;
+                break;
+            case 'platforms':
+                filtersStateCopy.platformsFilters = filterValue;
+                break;
+        }
+
+        const search = new URLSearchParams({
+            ...(filtersStateCopy.appTypeFilters.size && {appTypes: Array.from(filtersStateCopy.appTypeFilters).join(',')}),
+            ...(filtersStateCopy.supportedElementsFilters.size && {elements: Array.from(filtersStateCopy.supportedElementsFilters).join(',')}),
+            ...(filtersStateCopy.platformsFilters.size && {platforms: Array.from(filtersStateCopy.platformsFilters).join(',')}),
+        }).toString();
+        
+        history.push({
+            search: search? '?' + search : ''
+        })
     }
 
     function filterApps() {
@@ -108,22 +142,10 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
         }
     }
 
-    function getFilterStateSetterByType(type: string): React.Dispatch<React.SetStateAction<Set<string>>> {
-        switch(type) {
-            default:
-            case 'appType': 
-                return setAppTypeFilters;
-            case 'supportedElements':
-                return setSupportedElementsFilters;
-            case 'platforms':
-                return setPlatformsFilters;
-        }
-    }
-
     function handleClearClick(e: React.MouseEvent<HTMLButtonElement>) {
-        const type = e.currentTarget.getAttribute('type') as string
+        const type = e.currentTarget.getAttribute('data-type') as string
 
-        getFilterStateSetterByType(type)(new Set());
+        updateLocationURLSearchParameters(type, new Set())
     }
 
     function handleTagClick(e) {
@@ -138,7 +160,7 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
             filterStateCopy.add(tag)
         }
 
-        getFilterStateSetterByType(type)(filterStateCopy);
+        updateLocationURLSearchParameters(type, filterStateCopy)
     }
 
     function toggleFilters() {
@@ -214,7 +236,8 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
                             <div>{type}</div>
                             <button 
                                 className="clear-button" 
-                                onClick={handleClearClick}>
+                                onClick={handleClearClick}
+                                data-type={key}>
                                     Clear
                             </button>
                             {[
