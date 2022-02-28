@@ -1501,5 +1501,38 @@
         "elementURL": "https://usocial.me/"
       }
     ]
+  },
+  {
+    "appName": "Sounder",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://sounder.fm/",
+    "appIconUrl": "sounder.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Person",
+        "elementURL": "https://blog.sounder.fm/efficiency-updates-transcription-podcast-index-and-adc/"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://blog.sounder.fm/efficiency-updates-transcription-podcast-index-and-adc/"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://blog.sounder.fm/efficiency-updates-transcription-podcast-index-and-adc/"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://blog.sounder.fm/efficiency-updates-transcription-podcast-index-and-adc/"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://blog.sounder.fm/efficiency-updates-transcription-podcast-index-and-adc/"
+      }
+    ]
   }
 ]
