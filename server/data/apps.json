@@ -724,7 +724,8 @@
   {
     "appName": "Kasts",
     "appType": [
-      "app"
+      "app",
+      "podcast player"
     ],
     "appUrl": "https://apps.kde.org/kasts",
     "appIconUrl": "kasts.png",
