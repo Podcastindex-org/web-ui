@@ -120,6 +120,10 @@
       {
         "elementName": "Value",
         "elementURL": "https://twitter.com/GoPodfriend/status/1378079735234838531"
+      },
+      {
+        "elementName": "Sat Streaming",
+        "elementURL": "https://twitter.com/GoPodfriend/status/1378079735234838531"
       }
     ]
   },
@@ -274,7 +278,8 @@
   {
     "appName": "Podcast Guru",
     "appType": [
-      "app"
+      "app",
+      "podcast player"
     ],
     "appUrl": "https://podcastguru.io",
     "appIconUrl": "podcastguru.jpg",
@@ -317,7 +322,8 @@
   {
     "appName": "Sphinx.chat",
     "appType": [
-      "app"
+      "app",
+      "podcast player"
     ],
     "appUrl": "https://sphinx.chat",
     "appIconUrl": "sphinxchat.png",
@@ -336,13 +342,18 @@
       {
         "elementName": "Search",
         "elementURL": "https://twitter.com/MartyBent/status/1325892586985451520"
+      },
+      {
+        "elementName": "Sat Streaming",
+        "elementURL": "https://twitter.com/MartyBent/status/1325892586985451520"
       }
     ]
   },
   {
     "appName": "Podcast Republic",
     "appType": [
-      "app"
+      "app",
+      "podcast player"
     ],
     "appUrl": "https://podcastrepublic.net",
     "appIconUrl": "podcastrepublic.jpg",
@@ -381,7 +392,8 @@
   {
     "appName": "Breez",
     "appType": [
-      "app"
+      "app",
+      "podcast player"
     ],
     "appUrl": "https://breez.technology/",
     "appIconUrl": "breez.png",
@@ -400,6 +412,10 @@
       },
       {
         "elementName": "Value",
+        "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
+      },
+      {
+        "elementName": "Sat Streaming",
         "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
       }
     ]
@@ -661,13 +677,18 @@
       {
         "elementName": "Search",
         "elementURL": "https://itunes.apple.com/it/app/castamatic-podcast-player/id966632553?mt=8"
+      },
+      {
+        "elementName": "Sat Streaming",
+        "elementURL": "https://itunes.apple.com/it/app/castamatic-podcast-player/id966632553?mt=8"
       }
     ]
   },
   {
     "appName": "Tsacdop",
     "appType": [
-      "app"
+      "app",
+      "podcast player"
     ],
     "appUrl": "https://github.com/stonega/tsacdop",
     "appIconUrl": "tsacdop.png",
@@ -688,7 +709,8 @@
   {
     "appName": "Playapod",
     "appType": [
-      "app"
+      "app",
+      "podcast player"
     ],
     "appUrl": "https://www.playapod.com",
     "appIconUrl": "playapod.png",
@@ -707,7 +729,8 @@
   {
     "appName": "Escapepod",
     "appType": [
-      "app"
+      "app",
+      "podcast player"
     ],
     "appUrl": "https://github.com/y20k/escapepod",
     "appIconUrl": "escapepod.png",
@@ -724,7 +747,8 @@
   {
     "appName": "Kasts",
     "appType": [
-      "app"
+      "app",
+      "podcast player"
     ],
     "appUrl": "https://apps.kde.org/kasts",
     "appIconUrl": "kasts.png",
@@ -767,7 +791,8 @@
   {
     "appName": "gpodder",
     "appType": [
-      "app"
+      "app",
+      "podcast player"
     ],
     "appUrl": "https://gpodder.org",
     "appIconUrl": "gpodder.png",
@@ -1392,7 +1417,8 @@
   {
     "appName": "MediaVault",
     "appType": [
-      "app"
+      "app",
+      "podcast player"
     ],
     "appUrl": "https://github.com/walkero-gr/mediavault",
     "appIconUrl": "mediavault.png",
