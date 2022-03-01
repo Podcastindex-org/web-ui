@@ -1560,5 +1560,29 @@
         "elementURL": "https://blog.sounder.fm/efficiency-updates-transcription-podcast-index-and-adc/"
       }
     ]
+  },
+  {
+    "appName": "BoostCLI",
+    "appType": [
+      "app",
+      "lnd client"
+    ],
+    "appUrl": "https://github.com/valcanobacon/BoostCLI",
+    "appIconUrl": "boostcli.png",
+    "platforms": [
+      "Linux",
+      "Mac",
+      "Windows"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://github.com/valcanobacon/BoostCLI/blob/master/README.md"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://github.com/valcanobacon/BoostCLI/blob/master/README.md"
+      }
+    ]
   }
 ]
