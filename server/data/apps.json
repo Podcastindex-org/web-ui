@@ -84,7 +84,8 @@
     "appName": "Podfriend",
     "appType": [
       "app",
-      "podcast player"
+      "podcast player",
+      "open source"
     ],
     "appUrl": "https://www.podfriend.com",
     "appIconUrl": "podfriend.jpg",
@@ -245,7 +246,8 @@
     "appName": "podStation",
     "appType": [
       "browser extension",
-      "podcast player"
+      "podcast player",
+      "open source"
     ],
     "appUrl": "https://chrome.google.com/webstore/detail/podstation-podcast-player/bpcagekijmfcocgjlnnhpdogbplajjfn",
     "appIconUrl": "podstation.jpg",
@@ -393,7 +395,8 @@
     "appName": "Breez",
     "appType": [
       "app",
-      "podcast player"
+      "podcast player",
+      "open source"
     ],
     "appUrl": "https://breez.technology/",
     "appIconUrl": "breez.png",
@@ -424,7 +427,8 @@
     "appName": "AntennaPod",
     "appType": [
       "app",
-      "podcast player"
+      "podcast player",
+      "open source"
     ],
     "appUrl": "https://www.antennapod.org",
     "appIconUrl": "antennapod.png",
@@ -573,7 +577,8 @@
     "appName": "Anytime Podcast Player",
     "appType": [
       "app",
-      "podcast player"
+      "podcast player",
+      "open source"
     ],
     "appUrl": "https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime",
     "appIconUrl": "anytimelogo.png",
@@ -688,7 +693,8 @@
     "appName": "Tsacdop",
     "appType": [
       "app",
-      "podcast player"
+      "podcast player",
+      "open source"
     ],
     "appUrl": "https://github.com/stonega/tsacdop",
     "appIconUrl": "tsacdop.png",
@@ -730,7 +736,8 @@
     "appName": "Escapepod",
     "appType": [
       "app",
-      "podcast player"
+      "podcast player",
+      "open source"
     ],
     "appUrl": "https://github.com/y20k/escapepod",
     "appIconUrl": "escapepod.png",
@@ -748,7 +755,8 @@
     "appName": "Kasts",
     "appType": [
       "app",
-      "podcast player"
+      "podcast player",
+      "open source"
     ],
     "appUrl": "https://apps.kde.org/kasts",
     "appIconUrl": "kasts.png",
@@ -766,7 +774,8 @@
   {
     "appName": "Zion",
     "appType": [
-      "app"
+      "app",
+      "open source"
     ],
     "appUrl": "https://getzion.com",
     "appIconUrl": "n2n2.png",
@@ -792,7 +801,8 @@
     "appName": "gpodder",
     "appType": [
       "app",
-      "podcast player"
+      "podcast player",
+      "open source"
     ],
     "appUrl": "https://gpodder.org",
     "appIconUrl": "gpodder.png",
@@ -877,7 +887,8 @@
     "appName": "PowerPress by Blubrry",
     "appType": [
       "wordpress plugin",
-      "hosting"
+      "hosting",
+      "open source"
     ],
     "appUrl": "https://blubrry.com/services/powerpress-plugin/",
     "appIconUrl": "powerpress.png",
@@ -936,7 +947,8 @@
   {
     "appName": "Podcastindex",
     "appType": [
-      "directory"
+      "directory",
+      "open source"
     ],
     "appUrl": "https://podcastindex.org",
     "appIconUrl": "podcastindex.jpg",
@@ -1018,7 +1030,8 @@
   {
     "appName": "Castopod",
     "appType": [
-      "hosting"
+      "hosting",
+      "open source"
     ],
     "appUrl": "https://castopod.org/",
     "appIconUrl": "castopod.png",
@@ -1271,7 +1284,8 @@
   {
     "appName": "Podlove Podcast Publisher",
     "appType": [
-      "wordpress plugin"
+      "wordpress plugin",
+      "open source"
     ],
     "appUrl": "https://publisher.podlove.org",
     "appIconUrl": "podlove-publisher.png",
@@ -1371,7 +1385,8 @@
   {
     "appName": "gpodder",
     "appType": [
-      "sn-network"
+      "sn-network",
+      "open source"
     ],
     "appUrl": "https://gpodder.net/",
     "appIconUrl": "gpodder.png",
@@ -1418,7 +1433,8 @@
     "appName": "MediaVault",
     "appType": [
       "app",
-      "podcast player"
+      "podcast player",
+      "open source"
     ],
     "appUrl": "https://github.com/walkero-gr/mediavault",
     "appIconUrl": "mediavault.png",
@@ -1435,7 +1451,8 @@
   {
     "appName": "PodBrowser",
     "appType": [
-      "app"
+      "app",
+      "open source"
     ],
     "appUrl": "http://podbrowser.org",
     "appIconUrl": "podcastindex.jpg",
@@ -1509,7 +1526,8 @@
   {
     "appName": "usocial",
     "appType": [
-      "website"
+      "website",
+      "open source"
     ],
     "appUrl": "http://usocial.me",
     "appIconUrl": "usocial.png",
