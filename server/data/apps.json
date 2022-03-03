@@ -1589,7 +1589,7 @@
     "appIconUrl": "boostcli.png",
     "platforms": [
       "Linux",
-      "Mac",
+      "macOS",
       "Windows"
     ],
     "supportedElements": [
