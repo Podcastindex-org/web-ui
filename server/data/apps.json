@@ -1594,6 +1594,10 @@
     ],
     "supportedElements": [
       {
+        "elementName": "Boostagrams",
+        "elementURL": "https://github.com/valcanobacon/BoostCLI/blob/master/README.md"
+      },
+      {
         "elementName": "Search",
         "elementURL": "https://github.com/valcanobacon/BoostCLI/blob/master/README.md"
       },
