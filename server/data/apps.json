@@ -1583,16 +1583,20 @@
     "appName": "BoostCLI",
     "appType": [
       "app",
-      "lnd client"
+      "open source"
     ],
     "appUrl": "https://github.com/valcanobacon/BoostCLI",
     "appIconUrl": "boostcli.png",
     "platforms": [
       "Linux",
-      "Mac",
+      "macOS",
       "Windows"
     ],
     "supportedElements": [
+      {
+        "elementName": "Boostagrams",
+        "elementURL": "https://github.com/valcanobacon/BoostCLI/blob/master/README.md"
+      },
       {
         "elementName": "Search",
         "elementURL": "https://github.com/valcanobacon/BoostCLI/blob/master/README.md"
