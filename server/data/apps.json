@@ -119,11 +119,7 @@
         "elementURL": "https://twitter.com/adamcurry/status/1348787383324577793"
       },
       {
-        "elementName": "Value",
-        "elementURL": "https://twitter.com/GoPodfriend/status/1378079735234838531"
-      },
-      {
-        "elementName": "Sat Streaming",
+        "elementName": "Value (SAT Streaming)",
         "elementURL": "https://twitter.com/GoPodfriend/status/1378079735234838531"
       }
     ]
@@ -157,7 +153,7 @@
     ],
     "supportedElements": [
       {
-        "elementName": "Value",
+        "elementName": "Value (Other)",
         "elementURL": "https://castos.com/earn-bitcoin-from-your-listeners/"
       },
       {
@@ -221,16 +217,12 @@
     ],
     "supportedElements": [
       {
-        "elementName": "Sat Streaming",
+        "elementName": "Value (SAT Streaming)",
         "elementURL": "https://twitter.com/fountain_app/status/1428355721301610503"
       },
       {
-        "elementName": "Boostagrams",
+        "elementName": "Value (Boostagrams)",
         "elementURL": "https://twitter.com/fountain_app/status/1428355721301610503"
-      },
-      {
-        "elementName": "Value",
-        "elementURL": "https://twitter.com/MerryOscar/status/1420818281959677952"
       },
       {
         "elementName": "Search",
@@ -264,15 +256,11 @@
         "elementURL": "https://github.com/podStation/podStation/blob/master/docs/release_notes/v1.24.0.md"
       },
       {
-        "elementName": "Value",
+        "elementName": "Value (SAT Streaming)",
         "elementURL": "https://github.com/podStation/podStation/blob/master/docs/release_notes/v1.33.0.md"
       },
       {
-        "elementName": "Sat Streaming",
-        "elementURL": "https://github.com/podStation/podStation/blob/master/docs/release_notes/v1.33.0.md"
-      },
-      {
-        "elementName": "Boostagrams",
+        "elementName": "Value (Boostagrams)",
         "elementURL": "https://github.com/podStation/podStation/blob/master/CHANGELOG.md#1470"
       }
     ]
@@ -338,15 +326,11 @@
     ],
     "supportedElements": [
       {
-        "elementName": "Value",
-        "elementURL": "https://twitter.com/MartyBent/status/1325892586985451520"
-      },
-      {
         "elementName": "Search",
         "elementURL": "https://twitter.com/MartyBent/status/1325892586985451520"
       },
       {
-        "elementName": "Sat Streaming",
+        "elementName": "Value (SAT Streaming)",
         "elementURL": "https://twitter.com/MartyBent/status/1325892586985451520"
       }
     ]
@@ -414,11 +398,7 @@
         "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
       },
       {
-        "elementName": "Value",
-        "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
-      },
-      {
-        "elementName": "Sat Streaming",
+        "elementName": "Value (SAT Streaming)",
         "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
       }
     ]
@@ -461,15 +441,11 @@
     ],
     "supportedElements": [
       {
-        "elementName": "Boostagrams",
+        "elementName": "Value (Boostagrams)",
         "elementURL": "https://curiocaster.com/"
       },
       {
-        "elementName": "Sat Streaming",
-        "elementURL": "https://curiocaster.com/"
-      },
-      {
-        "elementName": "Value",
+        "elementName": "Value (SAT Streaming)",
         "elementURL": "https://curiocaster.com/"
       },
       {
@@ -506,7 +482,7 @@
     ],
     "supportedElements": [
       {
-        "elementName": "Value",
+        "elementName": "Value (Other)",
         "elementURL": "https://cryptostream.online/"
       },
       {
@@ -664,11 +640,7 @@
     ],
     "supportedElements": [
       {
-        "elementName": "Boostagrams",
-        "elementURL": "https://itunes.apple.com/it/app/castamatic-podcast-player/id966632553?mt=8"
-      },
-      {
-        "elementName": "Value",
+        "elementName": "Value (Boostagrams)",
         "elementURL": "https://itunes.apple.com/it/app/castamatic-podcast-player/id966632553?mt=8"
       },
       {
@@ -684,7 +656,7 @@
         "elementURL": "https://itunes.apple.com/it/app/castamatic-podcast-player/id966632553?mt=8"
       },
       {
-        "elementName": "Sat Streaming",
+        "elementName": "Value (SAT Streaming)",
         "elementURL": "https://itunes.apple.com/it/app/castamatic-podcast-player/id966632553?mt=8"
       }
     ]
@@ -788,7 +760,7 @@
     ],
     "supportedElements": [
       {
-        "elementName": "Value",
+        "elementName": "Value (Other)",
         "elementURL": "https://getzion.com"
       },
       {
@@ -977,7 +949,7 @@
         "elementURL": "https://podcastindex.org"
       },
       {
-        "elementName": "Value",
+        "elementName": "Value (Other)",
         "elementURL": "https://podcastindex.org"
       },
       {
@@ -1197,7 +1169,7 @@
         "elementUrl": "https://justcast.com"
       },
       {
-        "elementName": "Value",
+        "elementName": "Value (Other)",
         "elementURL": "https://twitter.com/thejustcast/status/1435271788523450373"
       },
       {
@@ -1243,7 +1215,7 @@
     ],
     "supportedElements": [
       {
-        "elementName": "Value",
+        "elementName": "Value (Other)",
         "elementURL": "https://satoshis.stream/"
       }
     ]
@@ -1514,7 +1486,7 @@
         "elementURL": "https://3speak.tv/"
       },
       {
-        "elementName": "Value",
+        "elementName": "Value (Other)",
         "elementURL": "https://3speak.tv/"
       },
       {
@@ -1537,7 +1509,7 @@
     ],
     "supportedElements": [
       {
-        "elementName": "Value",
+        "elementName": "Value (Other)",
         "elementURL": "https://usocial.me/"
       },
       {
@@ -1594,15 +1566,11 @@
     ],
     "supportedElements": [
       {
-        "elementName": "Boostagrams",
+        "elementName": "Value (Boostagrams)",
         "elementURL": "https://github.com/valcanobacon/BoostCLI/blob/master/README.md"
       },
       {
         "elementName": "Search",
-        "elementURL": "https://github.com/valcanobacon/BoostCLI/blob/master/README.md"
-      },
-      {
-        "elementName": "Value",
         "elementURL": "https://github.com/valcanobacon/BoostCLI/blob/master/README.md"
       }
     ]
