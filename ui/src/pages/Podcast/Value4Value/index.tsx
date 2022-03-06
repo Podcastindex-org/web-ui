@@ -401,6 +401,12 @@ export default class Value4Value extends React.PureComponent<IProps> {
         updateTitle(`Value 4 Value Podcasts`)
         return (
             <div className="v4v">
+                <h2>Value 4 Value</h2>
+                <p>Value 4 Value is a concept where listeners are asked to share the value they get from listening to the podcast with its producers. 
+                   In most cases this means paying an amount, this can be one-off or structural in nature. But alternative contributions are also welcome. 
+                   Like designing a cover for a podcast episode. Or help with developing the platform. But also sharing newsworthy facts.</p>
+                
+                
                 <h2>Value 4 Value Podcasts</h2>
                 <p>These podcasts are set up to receive Bitcoin payments in real-time over the Lightning network using
                     compatible <b><Link to="/apps">Podcasting 2.0 apps</Link></b>.</p>
