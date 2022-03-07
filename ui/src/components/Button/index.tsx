@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom'
 import './styles.scss'
 
 interface IProps {
+    className?: string
     big?: boolean
+    small?: boolean
     primary?: boolean
     link?: boolean
     children?: any
@@ -12,8 +14,10 @@ interface IProps {
     href?: string
     type?: string
     alt?: string
-    onClick?: () => void
+    onClick?: (e?: any) => void
     disabled?: boolean
+    dataValue?: string
+    selected?: boolean
 }
 
 export default class Button extends React.PureComponent<IProps> {
@@ -21,37 +25,50 @@ export default class Button extends React.PureComponent<IProps> {
 
     render() {
         const {
+            className,
             children,
             href,
             onClick,
             link,
             primary,
             big,
+            small,
             type,
             alt,
             disabled,
+            dataValue,
+            selected,
         } = this.props
         let buttonEl = null
-        let buttonClass = disabled ? "disabled" : ""
+        let buttonClasses = [
+            "button",
+            className,
+            disabled ? "disabled" : "",
+            primary ? 'primary' : '',
+            big ? 'big' : '',
+            small ? 'small' : '',
+            selected ? 'selected' : '',
+        ]
+        let buttonClass = buttonClasses.join(" ")
         if (type === 'submit') {
             buttonEl = (
                 <input
                     alt={alt}
                     type="submit"
                     value={children}
-                    className={`button ${buttonClass} ${primary ? 'primary' : ''} ${
-                        big ? 'big' : ''
-                    }`}
+                    className={buttonClass}
                     disabled={disabled}
+                    data-value={dataValue}
+                    onClick={onClick}
                 />
             )
         } else if (href && !link) {
             buttonEl = (
                 <a
                     href={href}
-                    className={`button ${buttonClass} ${primary ? 'primary' : ''} ${
-                        big ? 'big' : ''
-                    }`}
+                    className={buttonClass}
+                    data-value={dataValue}
+                    onClick={onClick}
                 >
                     {children}
                 </a>
@@ -60,9 +77,9 @@ export default class Button extends React.PureComponent<IProps> {
             buttonEl = (
                 <Link
                     to={href}
-                    className={`button ${buttonClass} ${primary ? 'primary' : ''} ${
-                        big ? 'big' : ''
-                    }`}
+                    className={buttonClass}
+                    data-value={dataValue}
+                    onClick={onClick}
                 >
                     {children}
                 </Link>
@@ -70,11 +87,10 @@ export default class Button extends React.PureComponent<IProps> {
         } else {
             buttonEl = (
                 <button
-                    className={`button ${buttonClass} ${primary ? 'primary' : ''} ${
-                        big ? 'big' : ''
-                    }`}
+                    className={buttonClass}
                     onClick={onClick}
                     disabled={disabled}
+                    data-value={dataValue}
                 >
                     {children}
                 </button>

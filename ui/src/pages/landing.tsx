@@ -1,13 +1,11 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom'
 
-// Components
 import Button from '../components/Button'
 import RecentPodcasts from '../components/RecentPodcasts'
-import StatsCard from './Stats/StatsCard'
-import RSSLogo from '../../images/feed.svg'
+import TallyCoinWidget from "../components/TallyCoinWidget";
 import { updateTitle } from '../utils'
-import SphinxChat from '../components/SphinxChat'
+import StatsCard from './Stats/StatsCard'
 
 import './styles.scss'
 
@@ -42,7 +40,6 @@ export default class Landing extends React.Component<IProps, IState> {
         const recentPodcasts = (await this.getRecentEpisodes()).items
         const stats = await this.getStats()
 
-        // console.log(stats)
         if (this._isMounted) {
             this.setState({
                 loading: false,
@@ -90,7 +87,7 @@ export default class Landing extends React.Component<IProps, IState> {
                             available for free, for any use.
                         </div>
                         <div className="hero-pitch-subtitle">
-                            Try a <a href="/apps"><u>new podcast app</u></a> today and see how much better the experience can be.
+                            Try a <Link to="/apps"><u>new podcast app</u></Link> today and see how much better the experience can be.
                         </div>
                         {/*<div className="listen-row">*/}
                         {/*    <audio controls preload="none">*/}
@@ -167,7 +164,8 @@ export default class Landing extends React.Component<IProps, IState> {
                     </p>
                     <p>
                         Download our full podcast database as a sqlite3 file over
-                        IPFS <a href="https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dkde1r01kchnaieukg7xy9i6eu78kk3mm3vaa690oaotk1px6wo/podcastindex_feeds.db.tgz" target="_blank">here</a>.
+                        IPFS <a href="https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dkde1r01kchnaieukg7xy9i6eu78kk3mm3vaa690oaotk1px6wo/podcastindex_feeds.db.tgz" target="_blank">here</a> or
+                        using HTTP <a href="https://public.podcastindex.org/podcastindex_feeds.db.tgz">here</a>.
                     </p>
                     <p>
                         API Documentation is{' '}
@@ -252,10 +250,14 @@ export default class Landing extends React.Component<IProps, IState> {
                                 </Button>
                             </form>
                         </div>
-                        <div className="sphinx-chat">
-                            <h4>Sphinx Chat</h4>
-                            <SphinxChat />
+                        <div className="tally-coin">
+                            <h4>Tally Coin</h4>
+                            <TallyCoinWidget/>
                         </div>
+                        {/*<div className="sphinx-chat">*/}
+                        {/*    <h4>Sphinx Chat</h4>*/}
+                        {/*    <SphinxChat />*/}
+                        {/*</div>*/}
                     </div>
                 </div>
                 {/* <div className="footer">

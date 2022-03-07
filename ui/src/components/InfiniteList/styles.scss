@@ -1,0 +1,25 @@
+.infinite-list{
+
+    .infinite-list-header {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        font-size: 12px;
+
+        .button {
+            margin: 0;
+        }
+
+        .count {
+            margin: 0 0 0 auto;
+            justify-self: flex-end;
+        }
+    }
+
+    .loader {
+        text-align: center;
+        margin: 0 auto;
+    }
+}

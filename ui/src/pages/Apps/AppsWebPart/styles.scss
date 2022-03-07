@@ -1,140 +1,61 @@
-.podcastIndexAppsWebPart {
-    /*background-color: #e0e0e0;*/
-    border-radius: 8px;
-}
-
-.podcastIndexAppsCheckboxArea {
-    background-color: #dcdcdc;
-    border-radius: 5px;
-    padding: 4px;
-    margin-bottom: 8px;
-}
-
 .podcastIndexAppsWebPart > h4 {
     font-size: 20px;
-
     margin-top: 3px;
     margin-bottom: 3px;
     padding-top: 20px;
     padding-bottom: 10px;
 }
 
-.podcastIndexAppsCheckboxArea label {
-    display: inline-block;
-    margin-left: 8px;
-    padding-left: 10px;
-    padding-right: 3px;
-}
-
-.podcastIndexAppsCheckboxArea label input[type='checkbox'] {
-    margin-left: -8px;
-}
-
-.podcastIndexApps {
-    display: grid;
-    gap: 16px 32px;
-    grid-template-columns:
-        [image-start] 60px
-        [image-end name-start] 1fr
-        [name-end elements-start] 1fr
-        [elements-end platforms-start] 192px
-        [platforms-end];
-    grid-template-rows: 30px;
-
-    margin-top: 24px;
-}
-
 .podcastIndexAppsHeader {
-    align-self: end;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr 192px;
+    grid-template-rows: 1fr;
+    gap: 0px 32px;
+    grid-template-rows: auto;
+    margin-top: 36px;
+}
+.podcastIndexAppsHeader > div > h4,
+.podcastIndexAppsHeader > h4 {
     font-size: 16px;
     font-weight: 700;
     margin: 0;
 }
 
-.podcastIndexAppIcon {
-    align-self: center;
-
-    img {
-        width: 60px;
-        height: 60px;
-
-        border-radius: 5px;
-    }
+.podcastIndexAppsHeader > div > h4 {
+    margin-left: 92px;
 }
 
-.podcastIndexAppTitleAndType {
-    align-self: center;
-
-    .podcastIndexAppTitle {
-        font-size: 24px;
-    }
-    .podcastIndexAppType {
-        color: #4b4b58;
-        margin: 0;
-    }
-}
-
-.podcastIndexAppSupportedElements {
-    align-self: center;
-    line-height: 1.5;
-}
-
-.podcastIndexAppPlatforms {
-    align-self: center;
-
-    color: #333333;
-    line-height: 1.5;
+.podcastIndexAppList {
+    padding: 0;
 }
 
 $podcastIndexAppsMobileLeftMargin: 84px;
 $podcastIndexAppsMobileTopPadding: 30px;
 
 @media only screen and (max-width: 767px) {
-    .podcastIndexAppsCheckboxArea label {
-        display: inline-block;
-        margin-bottom: 8px;
-
-        input[type='checkbox'] {
-            -ms-transform: scale(1.5); /* IE */
-            -moz-transform: scale(1.5); /* FF */
-            -webkit-transform: scale(1.5); /* Safari and Chrome */
-            -o-transform: scale(1.5); /* Opera */
-            transform: scale(1.5);
-        }
-
-        span {
-          display: inline-block;
-          padding-left: 5px;
-          vertical-align: text-bottom;
-        }
+    .podcastIndexAppsHeader {
+        display: none;
+    }
+    .podcastIndexAppsSingleApp {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-rows: auto;
+        margin-top: 36px;
     }
 
+    .podcastIndexAppPlatforms {
+        display: none;
+    }
 
-    .podcastIndexApps {
-        display: block;
-        margin-top: 0;
+    .podcastIndexAppTitleAndType {
+        align-self: flex-start;
+        margin-left: 24px;
+    }
 
-        .podcastIndexAppsCheckboxArea {
-            margin-bottom: 0;
-        }
-        .podcastIndexAppsHeader {
-            display: none;
-        }
-        .podcastIndexAppTitleAndType {
-            margin-left: $podcastIndexAppsMobileLeftMargin;
-            padding-top: $podcastIndexAppsMobileTopPadding;
-        }
-        .podcastIndexAppSupportedElements {
-            margin-left: $podcastIndexAppsMobileLeftMargin;
-            margin-top: 2px;
-        }
-        .podcastIndexAppPlatforms {
-            margin-left: $podcastIndexAppsMobileLeftMargin;
-        }
-        .podcastIndexAppIcon {
-            float: left;
-            padding-top: $podcastIndexAppsMobileTopPadding;
-        }
+    .podcastIndexAppSupportedElements {
+        margin-left: 84px;
+        position: relative;
     }
 }

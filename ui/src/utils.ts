@@ -7,14 +7,17 @@ export const updateTitle = (tile?: string) => {
     document.title = newTitle
 }
 
-export const cleanSearchQuery = (queryString: string, field: string = "q") => {
+export const encodeSearch = (searchString: string): string => {
+    return encodeURIComponent(searchString)
+}
+
+export const cleanSearchQuery = (queryString: string, field: string = "q"): string => {
     let params = queryStringHelper.parse(queryString)
-    let queryAr = params[field]
+    let queryAr = params[field] as string
     if (!queryAr) {
         return ''
     }
-
-    return decodeURIComponent(<string>queryAr)
+    return queryAr
 }
 
 export const truncateString = (input: string) => {
@@ -38,6 +41,13 @@ export const getPrettyDate = (time: number, includeTime: boolean = true) => {
         return dateObj.toLocaleString()
     return dateObj.toLocaleDateString()
 }
+
+export const getISODate = (time: number): string => {
+    // Javascript epoch is in milliseconds; datePublished is in seconds
+    const dateObj = new Date(time * 1000)
+    return dateObj.toISOString()
+}
+
 
 export const fixURL = (url: string) => {
     if (url === undefined || url === null) {

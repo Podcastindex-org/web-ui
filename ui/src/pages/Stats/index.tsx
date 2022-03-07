@@ -48,7 +48,6 @@ export default class Card extends React.Component<IProps> {
         const stats = await this.getNewFeedStats()
         const overallStats = await this.getStats()
 
-        //console.log(stats)
         if (this._isMounted) {
             this.setState({
                 loading: false,

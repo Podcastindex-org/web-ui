@@ -7,7 +7,7 @@ import Searchbar from '../SearchBar'
 import BrandIcon from '../../../images/brand-icon.svg'
 import BrandName from '../../../images/brand-text.svg'
 import MenuIcon from '../../../images/menu.svg'
-import { cleanSearchQuery } from '../../utils'
+import { cleanSearchQuery, encodeSearch } from '../../utils'
 
 import './styles.scss'
 
@@ -21,7 +21,7 @@ interface IState {
     dropdownOpen: boolean
 }
 
-export default class Topbar extends React.PureComponent<IProps, IState> {
+export default class TopBar extends React.PureComponent<IProps, IState> {
     static defaultProps = {}
 
     constructor(props: IProps) {
@@ -42,10 +42,12 @@ export default class Topbar extends React.PureComponent<IProps, IState> {
     }
 
     onSearchSubmit(evt: React.ChangeEvent<HTMLFormElement>) {
-        if (!this.state.search) {
+        const {search} = this.state
+        if (!search) {
             history.push(`/search`)
         } else {
-            let cleanQuery = this.state.search.replace('%','');
+            // let cleanQuery = this.state.search.replace('%','');
+            let cleanQuery = encodeSearch(search)
             history.push(`/search?q=${cleanQuery}`)
         }
         evt.preventDefault()
@@ -80,12 +82,12 @@ export default class Topbar extends React.PureComponent<IProps, IState> {
                             dropdownOpen ? 'topbar-dropdown-open' : ''
                         }`}
                     >
-                        <Button href="/apps">Apps</Button>
-                        <Button href="/podcast/value4value">Value 4 Value</Button>
+                        <Button link href="/apps">Apps</Button>
+                        <Button link href="/podcast/value4value">Value 4 Value</Button>
                         <Button link href="/stats">
                             Stats
                         </Button>
-                        <Button href="/add">Add</Button>
+                        <Button link href="/add">Add</Button>
                         <Button href="https://podcastindex-org.github.io/docs-api/">
                             Docs
                         </Button>

@@ -22,8 +22,26 @@
           "type": "string"
         },
         "appType": {
-          "type": "string",
-          "enum": ["app", "hosting", "directory", "browser extension", "wordpress plugin", "website", "social links", "node hosting", "video", "other"]
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "app",
+              "hosting",
+              "directory",
+              "browser extension",
+              "wordpress plugin",
+              "website",
+              "social links",
+              "node hosting",
+              "podcast player",
+              "video",
+              "sn-network",
+              "blockchain",
+              "open source",
+              "other"
+            ]
+          }
         },
         "appUrl": {
           "type": "string",
@@ -37,7 +55,25 @@
           "type": "array",
           "items": {
             "type": "string",
-            "enum": ["Web", "iOS", "Android", "macOS", "Windows", "Linux", "KaiOS", "Chrome", "Wordpress", "N/A"]
+            "enum": [
+              "Web",
+              "Mobile",
+              "iOS",
+              "Android",
+              "macOS",
+              "Windows",
+              "Linux",
+              "BSD",
+              "KaiOS",
+              "Chrome",
+              "Wordpress",
+              "N/A",
+              "AmigaOS 4",
+              "Sailfish OS",
+              "Umbrel",
+              "Citadel",
+              "Hive"
+            ]
           }
         },
         "supportedElements": {
@@ -54,11 +90,32 @@
     "SupportedElement": {
       "type": "object",
       "title": "Supported Element",
-      "additionalProperties": false,
+      "additionalProperties": true,
       "properties": {
         "elementName": {
           "type": "string",
-          "enum": ["Transcript", "Locked", "Funding", "Chapters", "Search", "Season", "Episode", "Soundbite", "Location", "Person", "Value"]
+          "enum": [
+            "Transcript",
+            "Locked",
+            "Funding",
+            "Chapters",
+            "Search",
+            "Season",
+            "Episode",
+            "Soundbite",
+            "Location",
+            "Person",
+            "Value",
+            "Sn-Network",
+            "Boostagrams",
+            "Sat Streaming",
+            "Video",
+            "Synchronize",
+            "Podping",
+            "Alternate Enclosure",
+            "Trailer",
+            "GUID"
+          ]
         },
         "elementURL": {
           "type": "string",
@@ -66,8 +123,7 @@
         }
       },
       "required": [
-        "elementName",
-        "elementURL"
+        "elementName"
       ]
     }
   }

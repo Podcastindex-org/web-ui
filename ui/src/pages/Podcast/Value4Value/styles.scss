@@ -8,15 +8,77 @@
     h2 {
         font-size: 24px;
     }
+
+    .pages {
+        .page-buttons {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 15px;
+            column-gap: 5px;
+            justify-content: center;
+
+            .page {
+                min-width: 20px;
+
+                border-radius: 9px;
+                padding: 6px 9px;
+                color: #2d2d2d;
+
+                &.selected {
+                    background: #f2f2f2;
+                }
+            }
+
+            &.hidden {
+                display: None;
+            }
+        }
+
+        .page-menu-row {
+            text-align: center;
+            display: none;
+
+            .pages-menu {
+                width: 100px;
+
+                border-radius: 4px;
+                transition: var(--transition-secs);
+                font-family: var(--font-family-exp);
+                font-size: 16px;
+                padding: 2px 5px;
+                text-align: center;
+                white-space: nowrap;
+            }
+        }
+    }
 }
 
-.loader-wrapper {
-    margin: 0 auto;
-    position: relative;
-    height: 100%;
-    z-index: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+@media only screen and (max-width: 720px) {
+    /* phones */
+    .v4v {
+        .pages {
+            .page-buttons {
+                row-gap: 20px;
+                .page {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    /* phones */
+    .v4v {
+        .pages {
+            .page-buttons {
+                display: none;
+            }
+
+            .page-menu-row {
+                display: block;
+            }
+        }
+    }
 }
