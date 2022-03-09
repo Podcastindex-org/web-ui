@@ -1474,7 +1474,8 @@
   {
     "appName": "Disctopia",
     "appType": [
-      "app"
+      "app",
+      "hosting"
     ],
     "appUrl": "https://disctopia.com",
     "appIconUrl": "disctopia.png",
@@ -1488,6 +1489,14 @@
       {
         "elementName": "Search",
         "elementURL": "https://disctopia.com"
+      },
+      {
+          "elementName": "Locked",
+          "elementURL": "https://disctopia.com"
+      },
+      {
+          "elementName":"Funding",
+          "elementURL":"https://disctopia.com"
       }
     ]
   },
