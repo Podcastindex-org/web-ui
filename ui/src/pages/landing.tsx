@@ -1,9 +1,11 @@
 import * as React from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Container, Row, Col } from 'react-bootstrap'
 
 import Button from '../components/Button'
 import RecentPodcasts from '../components/RecentPodcasts'
-import TallyCoinWidget from "../components/TallyCoinWidget";
+import TallyCoinWidget from '../components/TallyCoinWidget'
 import { updateTitle } from '../utils'
 import StatsCard from './Stats/StatsCard'
 
@@ -71,24 +73,33 @@ export default class Landing extends React.Component<IProps, IState> {
 
     render() {
         const { loading, recentPodcasts, stats } = this.state
+        // const [show, setShow] = useState(false)
+
+        // const handleClose = () => setShow(false)
+        // const handleShow = () => setShow(true)
         updateTitle('Home')
+
         return (
-            <div className="landing-content">
-                <div className="hero-pitch">
-                    <div className="hero-pitch-left">
-                        <h1 className="hero-pitch-text">
-                            The Podcast Index is here to preserve, protect and extend the open,
-                            independent podcasting ecosystem.
+            <Container>
+                <Row>
+                    <Col>
+                        <h1>
+                            We&rsquo;re making podcasting better for audiences,
+                            podcasters, and developers. This is Podcasting 2.0!
                         </h1>
 
-                        <div className="hero-pitch-subtitle">
+                        <p className="fs-3 text-muted">
                             We do this by enabling developers to have access to
                             an open, categorized index that will always be
                             available for free, for any use.
-                        </div>
-                        <div className="hero-pitch-subtitle">
-                            Try a <Link to="/apps"><u>new podcast app</u></Link> today and see how much better the experience can be.
-                        </div>
+                        </p>
+                        <p className="fs-3 text-muted">
+                            Try a{' '}
+                            <Link to="/apps">
+                                <u>new podcast app</u>
+                            </Link>{' '}
+                            today and see how much better the experience can be.
+                        </p>
                         {/*<div className="listen-row">*/}
                         {/*    <audio controls preload="none">*/}
                         {/*        <source*/}
@@ -105,24 +116,26 @@ export default class Landing extends React.Component<IProps, IState> {
                         {/*        <img src={RSSLogo} />*/}
                         {/*    </a>*/}
                         {/*</div>*/}
-                    </div>
-                    <div className="hero-pitch-right">
+                    </Col>
+                    <Col>
                         <RecentPodcasts
                             title="Recent Podcasts"
                             loading={loading}
                             podcasts={recentPodcasts}
                         />
-                    </div>
-                </div>
-                <StatsCard
-                    total={stats.feedCountTotal}
-                    threedays={stats.feedCount3days}
-                    tendays={stats.feedCount10days}
-                    lastMonth={stats.feedCount30days}
-                    last60={stats.feedCount60days}
-                    last90={stats.feedCount90days}
-                />
-                <div className="info-section">
+                    </Col>
+                </Row>
+                <Row>
+                    <StatsCard
+                        total={stats.feedCountTotal}
+                        threedays={stats.feedCount3days}
+                        tendays={stats.feedCount10days}
+                        lastMonth={stats.feedCount30days}
+                        last60={stats.feedCount60days}
+                        last90={stats.feedCount90days}
+                    />
+                </Row>
+                <Row>
                     <h3>Promise</h3>
                     <p>
                         The core, categorized index will always be available for
@@ -150,7 +163,10 @@ export default class Landing extends React.Component<IProps, IState> {
                         API services of value to developers and organizations.
                     </p>
                     <h3>Mission and Goal</h3>
-                    <p>Preserve, protect and extend the open, independent podcasting ecosystem.</p>
+                    <p>
+                        Preserve, protect and extend the open, independent
+                        podcasting ecosystem.
+                    </p>
                     <p>
                         Re-tool podcasting to a platform of value exchange that
                         includes developers with podcasters and listeners.
@@ -163,9 +179,19 @@ export default class Landing extends React.Component<IProps, IState> {
                         </a>
                     </p>
                     <p>
-                        Download our full podcast database as a sqlite3 file over
-                        IPFS <a href="https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dkde1r01kchnaieukg7xy9i6eu78kk3mm3vaa690oaotk1px6wo/podcastindex_feeds.db.tgz" target="_blank">here</a> or
-                        using HTTP <a href="https://public.podcastindex.org/podcastindex_feeds.db.tgz">here</a>.
+                        Download our full podcast database as a sqlite3 file
+                        over IPFS{' '}
+                        <a
+                            href="https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dkde1r01kchnaieukg7xy9i6eu78kk3mm3vaa690oaotk1px6wo/podcastindex_feeds.db.tgz"
+                            target="_blank"
+                        >
+                            here
+                        </a>{' '}
+                        or using HTTP{' '}
+                        <a href="https://public.podcastindex.org/podcastindex_feeds.db.tgz">
+                            here
+                        </a>
+                        .
                     </p>
                     <p>
                         API Documentation is{' '}
@@ -192,16 +218,15 @@ export default class Landing extends React.Component<IProps, IState> {
                         </a>
                     </p>
                     <p>
-                        Follow us on{' '}
-                        {/*the blog:{' '}*/}
+                        Follow us on {/*the blog:{' '}*/}
                         {/*<a href="https://blog.podcastindex.org/">*/}
                         {/*    blog.podcastindex.org*/}
                         {/*</a>{' '}*/}
                         {/*or on{' '}*/}
                         <a href="https://twitter.com/PodcastindexOrg">
                             Twitter
-                        </a>
-                        {' '} or{' '}
+                        </a>{' '}
+                        or{' '}
                         <a href="https://noagendasocial.com/@podcastindex">
                             Mastodon
                         </a>
@@ -213,7 +238,7 @@ export default class Landing extends React.Component<IProps, IState> {
                             info@podcastindex.org
                         </a>
                     </p>
-                </div>
+                </Row>
                 <div id="donate" className="info-section">
                     <h3>Help us out...</h3>
                     <p>
@@ -252,7 +277,7 @@ export default class Landing extends React.Component<IProps, IState> {
                         </div>
                         <div className="tally-coin">
                             <h4>Tally Coin</h4>
-                            <TallyCoinWidget/>
+                            <TallyCoinWidget />
                         </div>
                         {/*<div className="sphinx-chat">*/}
                         {/*    <h4>Sphinx Chat</h4>*/}
@@ -276,7 +301,7 @@ export default class Landing extends React.Component<IProps, IState> {
                         />
                     </a>
                 </div> */}
-            </div>
+            </Container>
         )
     }
 }

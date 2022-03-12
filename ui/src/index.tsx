@@ -10,6 +10,7 @@ import Topbar from './components/TopBar'
 import Routes from './routes'
 
 import LandingBG from '../images/landing-bg.svg'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './styles.scss'
 
 import { ApplicationState } from './state/store'
@@ -20,7 +21,6 @@ interface MainProps {
 }
 
 const Index: React.FC<MainProps> = ({ store, history }) => {
-
     return (
         <Provider store={store}>
             <ConnectedRouter history={history}>

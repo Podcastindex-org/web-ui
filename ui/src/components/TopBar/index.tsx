@@ -10,6 +10,7 @@ import MenuIcon from '../../../images/menu.svg'
 import { cleanSearchQuery, encodeSearch } from '../../utils'
 
 import './styles.scss'
+import { Container, Nav, Navbar } from 'react-bootstrap'
 
 // Separate state props + dispatch props to their own interfaces.
 interface IProps {
@@ -42,7 +43,7 @@ export default class TopBar extends React.PureComponent<IProps, IState> {
     }
 
     onSearchSubmit(evt: React.ChangeEvent<HTMLFormElement>) {
-        const {search} = this.state
+        const { search } = this.state
         if (!search) {
             history.push(`/search`)
         } else {
@@ -56,75 +57,47 @@ export default class TopBar extends React.PureComponent<IProps, IState> {
     render() {
         const { search, dropdownOpen } = this.state
         return (
-            <nav className="topbar">
-                <Link className="topbar-brand" to="/">
-                    <img
-                        // height={38}
-                        width={36}
-                        src={BrandIcon}
-                        alt="Brand logo"
-                    />
-                    <div className="topbar-title">
-                        <img src={BrandName} width={230} alt="Brand name" />
-                    </div>
-                </Link>
-                <div className="topbar-span">
+            <Container>
+                <Navbar variant="light" expand="md" className="py-4">
+                    <Container>
+                        <Navbar.Brand href="/">
+                            <img
+                                // height={38}
+                                width={36}
+                                src={BrandIcon}
+                                alt="Brand logo"
+                                className="me-2"
+                            />
+                            <img src={BrandName} width={230} alt="Brand name" />
+                        </Navbar.Brand>
+                        <Navbar.Toggle
+                            aria-controls="main-nav"
+                            className="px-0"
+                        />
+                        <Navbar.Collapse id="main-nav">
+                            <Nav className="me-auto">
+                                <Nav.Link href="/apps">Apps</Nav.Link>
+                                <Nav.Link href="/podcast/value4value">
+                                    Value 4 Value
+                                </Nav.Link>
+                                <Nav.Link href="/stats">Stats</Nav.Link>
+                                <Nav.Link href="/add">Add</Nav.Link>
+                                <Nav.Link href="https://podcastindex-org.github.io/docs-api/">
+                                    Docs
+                                </Nav.Link>
+                                <Nav.Link href="https://api.podcastindex.org">
+                                    API
+                                </Nav.Link>
+                            </Nav>
+                        </Navbar.Collapse>
+                    </Container>
                     <Searchbar
                         search={search}
                         onSearchChange={this.onSearchChange}
                         onSearchSubmit={this.onSearchSubmit}
                     />
-                </div>
-                <div className="topbar-links">
-                    <div
-                        id="topbar-nav-links"
-                        className={`${
-                            dropdownOpen ? 'topbar-dropdown-open' : ''
-                        }`}
-                    >
-                        <Button link href="/apps">Apps</Button>
-                        <Button link href="/podcast/value4value">Value 4 Value</Button>
-                        <Button link href="/stats">
-                            Stats
-                        </Button>
-                        <Button link href="/add">Add</Button>
-                        <Button href="https://podcastindex-org.github.io/docs-api/">
-                            Docs
-                        </Button>
-                        <Button href="https://api.podcastindex.org">
-                            API
-                        </Button>
-                    </div>
-                    <a
-                        href={null}
-                        className="topbar-mobile-dropdown"
-                        onClick={() =>
-                            this.setState({
-                                dropdownOpen: !dropdownOpen,
-                            })
-                        }
-                    >
-                        <img
-                            height={30}
-                            width={25}
-                            src={MenuIcon}
-                            alt="Menu icon"
-                        />
-                    </a>
-                </div>
-
-                {/* <select>
-                    <option value="" selected={true}>
-                        Select
-                    </option>
-
-                    <option value="/">Home</option>
-                    <option value="/collections/all">Books</option>
-                    <option value="/blogs/five-simple-steps-blog">Blog</option>
-                    <option value="/pages/about-us">About Us</option>
-                    <option value="/pages/support">Support</option>
-                </select> */}
-            </nav>
+                </Navbar>
+            </Container>
         )
     }
 }
