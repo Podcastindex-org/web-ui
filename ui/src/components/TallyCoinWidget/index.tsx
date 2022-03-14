@@ -3,13 +3,13 @@ import * as React from 'react'
 import './styles.scss'
 
 interface IProps {
-    theme?: ("dark" | "light"),
+    theme?: 'dark' | 'light'
 }
 
 export default class TallyCoinWidget extends React.PureComponent<IProps> {
     tallypayRef = React.createRef<HTMLDivElement>()
     static defaultProps = {
-        theme: "light",
+        theme: 'light',
     }
 
     constructor(props: IProps) {
@@ -42,15 +42,13 @@ export default class TallyCoinWidget extends React.PureComponent<IProps> {
                     // call start function in tallypay.js
                     // @ts-ignore
                     window.init_tallypay_widget()
-                } catch (e) {
-                }
+                } catch (e) {}
             }
         }
-
     }
 
     render() {
-        const {theme} = this.props
+        const { theme } = this.props
         return (
             <div
                 ref={this.tallypayRef}
