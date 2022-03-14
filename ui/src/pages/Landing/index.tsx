@@ -6,7 +6,6 @@ import RecentPodcasts from '../../components/RecentPodcasts'
 import { updateTitle } from '../../utils'
 import StatsCard from '../Stats/StatsCard'
 
-import './styles.scss'
 import InfoSection from './infoSection'
 import DonateSection from './donateSection'
 import WelcomeSection from './welcomeSection'
@@ -82,25 +81,34 @@ export default class Landing extends React.Component<IProps, IState> {
 
         return (
             <Container>
+                <WelcomeSection />
+                {/*<div className="listen-row">*/}
+                {/*    <audio controls preload="none">*/}
+                {/*        <source*/}
+                {/*            src="https://mp3s.nashownotes.com/PC20-01-2020-08-28-Final.mp3"*/}
+                {/*            type="audio/mpeg"*/}
+                {/*        />*/}
+                {/*    </audio>*/}
+                {/*    <a*/}
+                {/*        className="subscribe-badge"*/}
+                {/*        title="Subscribe"*/}
+                {/*        target="_blank"*/}
+                {/*        href="http://mp3s.nashownotes.com/pc20rss.xml"*/}
+                {/*    >*/}
+                {/*        <img src={RSSLogo} />*/}
+                {/*    </a>*/}
+                {/*</div>*/}
+                <BenefitsSection />
                 <Row className="py-3">
                     <Col>
-                        <WelcomeSection />
-                        {/*<div className="listen-row">*/}
-                        {/*    <audio controls preload="none">*/}
-                        {/*        <source*/}
-                        {/*            src="https://mp3s.nashownotes.com/PC20-01-2020-08-28-Final.mp3"*/}
-                        {/*            type="audio/mpeg"*/}
-                        {/*        />*/}
-                        {/*    </audio>*/}
-                        {/*    <a*/}
-                        {/*        className="subscribe-badge"*/}
-                        {/*        title="Subscribe"*/}
-                        {/*        target="_blank"*/}
-                        {/*        href="http://mp3s.nashownotes.com/pc20rss.xml"*/}
-                        {/*    >*/}
-                        {/*        <img src={RSSLogo} />*/}
-                        {/*    </a>*/}
-                        {/*</div>*/}
+                        <StatsCard
+                            total={stats.feedCountTotal}
+                            threedays={stats.feedCount3days}
+                            tendays={stats.feedCount10days}
+                            lastMonth={stats.feedCount30days}
+                            last60={stats.feedCount60days}
+                            last90={stats.feedCount90days}
+                        />
                     </Col>
                     <Col>
                         <RecentPodcasts
@@ -109,17 +117,6 @@ export default class Landing extends React.Component<IProps, IState> {
                             podcasts={recentPodcasts}
                         />
                     </Col>
-                </Row>
-                <BenefitsSection />
-                <Row className="py-3">
-                    <StatsCard
-                        total={stats.feedCountTotal}
-                        threedays={stats.feedCount3days}
-                        tendays={stats.feedCount10days}
-                        lastMonth={stats.feedCount30days}
-                        last60={stats.feedCount60days}
-                        last90={stats.feedCount90days}
-                    />
                 </Row>
                 <InfoSection />
                 <DonateSection />
