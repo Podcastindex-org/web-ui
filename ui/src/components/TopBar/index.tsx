@@ -8,7 +8,7 @@ import BrandName from '../../../images/brand-text.svg'
 import { cleanSearchQuery, encodeSearch } from '../../utils'
 
 import './styles.scss'
-import { Container, Nav, Navbar } from 'react-bootstrap'
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 
 // Separate state props + dispatch props to their own interfaces.
 interface IProps {
@@ -75,21 +75,57 @@ export default class TopBar extends React.PureComponent<IProps, IState> {
                             <LinkContainer to="/apps">
                                 <Nav.Link>Apps</Nav.Link>
                             </LinkContainer>
-                            <LinkContainer to="/podcast/value4value">
-                                <Nav.Link>Value 4 Value</Nav.Link>
-                            </LinkContainer>
-                            <LinkContainer to="/stats">
-                                <Nav.Link>Stats</Nav.Link>
-                            </LinkContainer>
-                            <LinkContainer to="/add">
-                                <Nav.Link>Add</Nav.Link>
-                            </LinkContainer>
-                            <Nav.Link href="https://podcastindex-org.github.io/docs-api/">
-                                Docs
-                            </Nav.Link>
-                            <Nav.Link href="https://api.podcastindex.org">
-                                API
-                            </Nav.Link>
+                            <NavDropdown
+                                title="Podcasters"
+                                id="podcasters-nav-dropdown"
+                            >
+                                <LinkContainer to="/podcasters">
+                                    <NavDropdown.Item href="#action/3.1">
+                                        Podcast Namespace
+                                    </NavDropdown.Item>
+                                </LinkContainer>
+                                <LinkContainer to="/add">
+                                    <NavDropdown.Item>
+                                        Add your podcast
+                                    </NavDropdown.Item>
+                                </LinkContainer>
+                                <LinkContainer to="/apps">
+                                    <NavDropdown.Item>
+                                        Apps/providers
+                                    </NavDropdown.Item>
+                                </LinkContainer>
+                            </NavDropdown>
+                            <NavDropdown
+                                title="Developers"
+                                id="developers-nav-dropdown"
+                            >
+                                <LinkContainer to="/developers">
+                                    <NavDropdown.Item>
+                                        Developer resources
+                                    </NavDropdown.Item>
+                                </LinkContainer>
+                                <NavDropdown.Item href="https://podcastindex-org.github.io/docs-api/">
+                                    Documentation
+                                </NavDropdown.Item>
+                                <NavDropdown.Item href="#https://api.podcastindex.org">
+                                    Get your API key
+                                </NavDropdown.Item>
+                            </NavDropdown>
+                            <NavDropdown
+                                title="Podcast Catalog"
+                                id="catalog-nav-dropdown"
+                            >
+                                <LinkContainer to="/podcast/value4value">
+                                    <NavDropdown.Item>
+                                        Value 4 Value podcasts
+                                    </NavDropdown.Item>
+                                </LinkContainer>
+                                <LinkContainer to="/stats">
+                                    <NavDropdown.Item>
+                                        Catalog stats
+                                    </NavDropdown.Item>
+                                </LinkContainer>
+                            </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

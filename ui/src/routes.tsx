@@ -7,7 +7,9 @@ import Apps from './pages/Apps'
 import DonationThankYou from './pages/Donations'
 
 import Landing from './pages/Landing'
+import Podcasters from './pages/Podcasters'
 import Podcast from './pages/Podcast'
+import Developers from './pages/Developers'
 import Search from './pages/Search'
 import Stats from './pages/Stats'
 import { history } from './state/store'
@@ -24,6 +26,8 @@ const Routes: React.FunctionComponent = () => (
             <Route path="/thankyou" component={DonationThankYou} />
             <Route exact path="/stats" render={() => <Stats />} />
 
+            <Route path="/podcasters" component={Podcasters} />
+            <Route path="/developers" component={Developers} />
             <Route path="/podcast" component={Podcast} />
 
             <Route path="/apps" component={Apps} />
