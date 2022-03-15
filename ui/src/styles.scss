@@ -1,41 +1,21 @@
+// @import '../fonts/style.css';
+
 @font-face {
-    font-family: D-DIN;
-    src: url(../fonts/D-DIN.otf) format('otf');
+    font-family: 'D-DIN Regular';
+    font-style: normal;
     font-weight: normal;
-}
-
-@font-face {
-    font-family: D-DIN-Bold;
-    src: url(../fonts/D-DIN-Bold.otf) format('otf');
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: D-DINExp;
-    src: url(../fonts/D-DINExp.otf) format('otf');
-    font-weight: normal;
-}
-@font-face {
-    font-family: D-DINExp-Bold;
-    src: url(../fonts/D-DINExp-Bold.otf) format('otf');
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: DINAlternate-Bold;
-    src: url(../fonts/DIN-Alternate-Bold.ttf) format('ttf');
-    font-weight: bold;
+    src: local('D-DIN Regular'), url('../fonts/D-DIN.woff') format('woff');
 }
 
 :root {
     --transition-secs: 0.2s;
     --bg-main: #ffffff;
     --color-primary: #e90000;
-    --font-family: D-DIN, sans-serif;
-    --font-family-bold: D-DIN-Bold, sans-serif;
-    --font-family-exp: D-DINExp, sans-serif;
-    --font-family-exp-bold: D-DINExp-Bold, sans-serif;
-    --font-alt: DINAlternate-Bold, sans-serif;
+    --font-family: 'D-DIN', sans-serif;
+    --font-family-bold: 'D-DIN-Bold', sans-serif;
+    --font-family-exp: 'D-DINExp', sans-serif;
+    --font-family-exp-bold: 'D-DINExp-Bold', sans-serif;
+    --font-alt: 'DINAlternate-Bold', sans-serif;
 }
 
 body {
@@ -95,6 +75,6 @@ a:hover {
         display: none;
     }
     .hide-mobile {
-      display: none;
+        display: none;
     }
 }

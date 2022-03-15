@@ -23,7 +23,7 @@ module.exports = {
                 changeOrigin: true,
                 target: 'http://localhost:5001',
                 pathRewrite: { '^/namespace': '/namespace' },
-            }
+            },
         },
     },
     entry: './ui/src/index.tsx',
@@ -115,16 +115,17 @@ module.exports = {
             devMode: 'webapp',
             favicons: {
                 appName: 'Podcastindex.org',
-                appDescription: 'Let’s preserve podcasting as a platform for free speech',
+                appDescription:
+                    'Let’s preserve podcasting as a platform for free speech',
                 developerName: 'Podcastindex.org',
                 developerURL: null, // prevent retrieving from the nearest package.json
                 background: '#ffffff',
                 theme_color: '#e90000',
                 icons: {
                     coast: false,
-                    yandex: false
-                }
-            }
-        })
+                    yandex: false,
+                },
+            },
+        }),
     ],
 }
