@@ -16,22 +16,26 @@ class InfoSection extends React.Component<InfoSectionProps, InfoSectionState> {
                         The core, categorized index will always be available for
                         free, for any use.
                     </p>
+                    <p>
+                        We will always endeavor to make podcasting{' '}
+                        <em>better</em>!
+                    </p>
                 </Col>
                 <Col>
                     <h3>Operations</h3>
                     <p>
-                        Podcast Index LLC is a software developer focused
+                        Podcast Index LLC is a software-developer-focused
                         partnership that provides tools and data to anyone who
-                        aspires to create new and exciting Podcast experiences
-                        without the heavy lifting of indexing, aggregation and
-                        data management.
+                        aspires to create new and exciting podcast and
+                        podcasting experiences without the heavy-lifting of
+                        indexing, aggregation, and data management.
                     </p>
                 </Col>
                 <Col>
                     <h3>Financing</h3>
                     <p>
                         The core Podcast Index is financed by its founders and
-                        stakeholders: Podcasters, Developers and Listeners.
+                        stakeholders: audiences, podcasters, and developers.
                     </p>
                     <p>
                         Corporate interests and advertising are antithetical to
@@ -43,14 +47,15 @@ class InfoSection extends React.Component<InfoSectionProps, InfoSectionState> {
                     </p>
                 </Col>
                 <Col>
-                    <h3>Mission and Goal</h3>
+                    <h3>Mission</h3>
                     <p>
-                        Preserve, protect and extend the open, independent
-                        podcasting ecosystem.
+                        Our mission is to preserve, protect, and extend the
+                        open, independent podcasting ecosystem.
                     </p>
                     <p>
-                        Re-tool podcasting to a platform of value exchange that
-                        includes developers with podcasters and listeners.
+                        Together, we will grow podcasting to a platform of
+                        value-exchange that includes developers with podcasters
+                        and audiences.
                     </p>
                 </Col>
                 {/* <h3>Developer? Join the fun!</h3>

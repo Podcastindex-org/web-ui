@@ -6,7 +6,8 @@ import { ConnectedRouter } from 'connected-react-router'
 import { Store } from 'redux'
 import { History } from 'history'
 
-import Topbar from './components/TopBar'
+import TopBar from './components/TopBar'
+import BottomBar from './components/BottomBar'
 import Routes from './routes'
 
 import LandingBG from '../images/landing-bg.svg'
@@ -23,7 +24,7 @@ const Index: React.FC<MainProps> = ({ store, history }) => {
     return (
         <Provider store={store}>
             <ConnectedRouter history={history}>
-                <Topbar history={history} />
+                <TopBar history={history} />
                 <img
                     draggable="false"
                     className="landing-graphic"
@@ -33,6 +34,7 @@ const Index: React.FC<MainProps> = ({ store, history }) => {
                     alt="Sidebar logo"
                 />
                 <Routes />
+                <BottomBar />
             </ConnectedRouter>
         </Provider>
     )

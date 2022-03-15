@@ -48,15 +48,13 @@ export default class StatsCard extends React.Component<IProps> {
                         {total}
                     </Card.Text>
                     <Card.Title>Shows published in the last ...</Card.Title>
-                    <Card.Text>
-                        <Row className="row-cols-2 row-cols-md-3 row-cols-lg-2 row-cols-xl-3">
-                            <KPI title="3 days" value={threedays} />
-                            <KPI title="10 days" value={tendays} />
-                            <KPI title="30 days" value={lastMonth} />
-                            <KPI title="60 days" value={last60} />
-                            <KPI title="90 days" value={last90} />
-                        </Row>
-                    </Card.Text>
+                    <Row className="row-cols-2 row-cols-md-3 row-cols-lg-2 row-cols-xl-3">
+                        <KPI title="3 days" value={threedays} />
+                        <KPI title="10 days" value={tendays} />
+                        <KPI title="30 days" value={lastMonth} />
+                        <KPI title="60 days" value={last60} />
+                        <KPI title="90 days" value={last90} />
+                    </Row>
                 </Card.Body>
             </Card>
         )

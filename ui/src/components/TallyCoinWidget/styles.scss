@@ -3,8 +3,23 @@
     display: flex;
     flex-direction: column;
 
+    .tc_bbox {
+        height: auto !important;
+    }
+
     & > div {
         margin: 0 auto;
+    }
+    .tc_pr_title_box,
+    .tc_name_box {
+        display: none;
+    }
+
+    .tc_donate_btn {
+        @extend .btn, .btn-primary, .btn-lg;
+    }
+    .tc_donate_btn img {
+        top: inherit;
     }
 
     .loginlink {

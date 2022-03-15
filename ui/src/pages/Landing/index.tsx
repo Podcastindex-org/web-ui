@@ -7,7 +7,6 @@ import { updateTitle } from '../../utils'
 import StatsCard from '../Stats/StatsCard'
 
 import InfoSection from './infoSection'
-import DonateSection from './donateSection'
 import WelcomeSection from './welcomeSection'
 import BenefitsSection from './benefitsSection'
 
@@ -120,7 +119,6 @@ export default class Landing extends React.Component<IProps, IState> {
                     </Col>
                 </Row>
                 <InfoSection />
-                <DonateSection />
 
                 {/* <div className="footer">
                     <a className="social-link">
