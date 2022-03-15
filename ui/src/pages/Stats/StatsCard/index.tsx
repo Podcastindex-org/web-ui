@@ -43,11 +43,13 @@ export default class StatsCard extends React.Component<IProps> {
         return (
             <Card className="bg-light">
                 <Card.Body>
-                    <Card.Title>Total podcasts in the index ...</Card.Title>
+                    <Card.Title>Total podcasts in the index</Card.Title>
                     <Card.Text className="display-1 text-primary fw-bold">
                         {total}
                     </Card.Text>
-                    <Card.Title>Shows published in the last ...</Card.Title>
+                    <Card.Title>
+                        Shows published in the last &hellip;
+                    </Card.Title>
                     <Row className="row-cols-2 row-cols-md-3 row-cols-lg-2 row-cols-xl-3">
                         <KPI title="3 days" value={threedays} />
                         <KPI title="10 days" value={tendays} />

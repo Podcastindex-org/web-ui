@@ -55,59 +55,50 @@ export default class TopBar extends React.PureComponent<IProps, IState> {
     render() {
         const { search, dropdownOpen } = this.state
         return (
-            <Container>
-                <Navbar variant="light" expand="md" className="py-4">
-                    <Container>
-                        <LinkContainer to="/">
-                            <Navbar.Brand>
-                                <img
-                                    // height={38}
-                                    width={36}
-                                    src={BrandIcon}
-                                    alt="Brand logo"
-                                    className="me-2"
-                                />
-                                <img
-                                    src={BrandName}
-                                    width={230}
-                                    alt="Brand name"
-                                />
-                            </Navbar.Brand>
-                        </LinkContainer>
-                        <Navbar.Toggle
-                            aria-controls="main-nav"
-                            className="px-0"
-                        />
-                        <Navbar.Collapse id="main-nav">
-                            <Nav className="me-auto">
-                                <LinkContainer to="/apps">
-                                    <Nav.Link>Apps</Nav.Link>
-                                </LinkContainer>
-                                <LinkContainer to="/podcast/value4value">
-                                    <Nav.Link>Value 4 Value</Nav.Link>
-                                </LinkContainer>
-                                <LinkContainer to="/stats">
-                                    <Nav.Link>Stats</Nav.Link>
-                                </LinkContainer>
-                                <LinkContainer to="/add">
-                                    <Nav.Link>Add</Nav.Link>
-                                </LinkContainer>
-                                <LinkContainer to="https://podcastindex-org.github.io/docs-api/">
-                                    <Nav.Link>Docs</Nav.Link>
-                                </LinkContainer>
-                                <LinkContainer to="https://api.podcastindex.org">
-                                    <Nav.Link>API</Nav.Link>
-                                </LinkContainer>
-                            </Nav>
-                        </Navbar.Collapse>
-                    </Container>
-                    <Searchbar
-                        search={search}
-                        onSearchChange={this.onSearchChange}
-                        onSearchSubmit={this.onSearchSubmit}
-                    />
-                </Navbar>
-            </Container>
+            <Navbar variant="light" expand="md" className="py-4">
+                <Container>
+                    <LinkContainer to="/">
+                        <Navbar.Brand>
+                            <img
+                                // height={38}
+                                width={36}
+                                src={BrandIcon}
+                                alt="Brand logo"
+                                className="me-2"
+                            />
+                            <img src={BrandName} width={230} alt="Brand name" />
+                        </Navbar.Brand>
+                    </LinkContainer>
+                    <Navbar.Toggle aria-controls="main-nav" className="px-0" />
+                    <Navbar.Collapse id="main-nav">
+                        <Nav className="me-auto">
+                            <LinkContainer to="/apps">
+                                <Nav.Link>Apps</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to="/podcast/value4value">
+                                <Nav.Link>Value 4 Value</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to="/stats">
+                                <Nav.Link>Stats</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to="/add">
+                                <Nav.Link>Add</Nav.Link>
+                            </LinkContainer>
+                            <Nav.Link href="https://podcastindex-org.github.io/docs-api/">
+                                Docs
+                            </Nav.Link>
+                            <Nav.Link href="https://api.podcastindex.org">
+                                API
+                            </Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+                <Searchbar
+                    search={search}
+                    onSearchChange={this.onSearchChange}
+                    onSearchSubmit={this.onSearchSubmit}
+                />
+            </Navbar>
         )
     }
 }

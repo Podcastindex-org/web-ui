@@ -1,6 +1,5 @@
 import * as React from 'react'
-import { useState } from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 import RecentPodcasts from '../../components/RecentPodcasts'
 import { updateTitle } from '../../utils'
@@ -79,7 +78,7 @@ export default class Landing extends React.Component<IProps, IState> {
         updateTitle('Home')
 
         return (
-            <Container>
+            <>
                 <WelcomeSection />
                 {/*<div className="listen-row">*/}
                 {/*    <audio controls preload="none">*/}
@@ -136,7 +135,7 @@ export default class Landing extends React.Component<IProps, IState> {
                         />
                     </a>
                 </div> */}
-            </Container>
+            </>
         )
     }
 }

@@ -1,9 +1,10 @@
 import HCaptcha from '@hcaptcha/react-hcaptcha'
-import * as React from "react"
+import * as React from 'react'
+import { Form, Button } from 'react-bootstrap'
 import ReactLoading from 'react-loading'
 import { Link } from 'react-router-dom'
-import Button from "../../components/Button"
-import ResultItem from "../../components/ResultItem"
+// import Button from '../../components/Button'
+import ResultItem from '../../components/ResultItem'
 
 import { cleanSearchQuery, updateTitle } from '../../utils'
 
@@ -20,7 +21,7 @@ export default class AddFeed extends React.PureComponent<IProps> {
         adding: false,
         addDone: false,
         token: null,
-        feed: "",
+        feed: '',
         result: null,
         feedInfo: undefined,
     }
@@ -43,11 +44,11 @@ export default class AddFeed extends React.PureComponent<IProps> {
     async componentDidMount(): Promise<void> {
         this._isMounted = true
 
-        let feed = cleanSearchQuery(this.props.location.search, "feed")
+        let feed = cleanSearchQuery(this.props.location.search, 'feed')
         if (feed) {
             if (this._isMounted) {
                 this.setState({
-                    feed: feed
+                    feed: feed,
                 })
             }
         }
@@ -66,19 +67,19 @@ export default class AddFeed extends React.PureComponent<IProps> {
         let feed = evt.target.value
         this.resetStates()
         this.setState({
-            feed: feed
+            feed: feed,
         })
     }
 
     setToken(token) {
         this.setState({
-            token: token
+            token: token,
         })
     }
 
     async onSubmit(evt: React.FormEvent<HTMLFormElement>) {
         evt.preventDefault()
-        const {feed} = this.state
+        const { feed } = this.state
 
         this.resetStates()
         this.setState({
@@ -108,12 +109,14 @@ export default class AddFeed extends React.PureComponent<IProps> {
         await fetch(`/api/add/byfeedurl?url=${feed}`, {
             method: 'GET',
         })
-            .then(res => res.text())
-            .then(body => {
+            .then((res) => res.text())
+            .then((body) => {
                 try {
                     result = JSON.parse(body)
                 } catch {
-                    result = JSON.parse(`{"status":"false", "description": "Error adding feed"}`)
+                    result = JSON.parse(
+                        `{"status":"false", "description": "Error adding feed"}`
+                    )
                 }
             })
         return result
@@ -125,12 +128,14 @@ export default class AddFeed extends React.PureComponent<IProps> {
         await fetch(`/api/podcasts/byfeedurl?url=${feed}`, {
             method: 'GET',
         })
-            .then(res => res.text())
-            .then(body => {
+            .then((res) => res.text())
+            .then((body) => {
                 try {
                     result = JSON.parse(body)
                 } catch {
-                    result = JSON.parse(`{"status":"false", "description": "Error getting feed"}`)
+                    result = JSON.parse(
+                        `{"status":"false", "description": "Error getting feed"}`
+                    )
                 }
             })
         return result
@@ -138,7 +143,7 @@ export default class AddFeed extends React.PureComponent<IProps> {
 
     onExpire() {
         this.setState({
-            token: null
+            token: null,
         })
     }
 
@@ -147,17 +152,17 @@ export default class AddFeed extends React.PureComponent<IProps> {
     }
 
     showAddResult() {
-        const {adding, addDone, result} = this.state
+        const { adding, addDone, result } = this.state
 
         if (adding) {
             if (addDone) {
                 if (result === null) {
-                    return this.renderError("API returned without data")
+                    return this.renderError('API returned without data')
                 } else {
                     return this.renderReply()
                 }
             } else {
-                return this.renderLoading("add-result")
+                return this.renderLoading('add-result')
             }
         } else {
             return this.renderEmpty()
@@ -165,17 +170,14 @@ export default class AddFeed extends React.PureComponent<IProps> {
     }
 
     renderEmpty() {
-        return (
-            <div className="add-result empty">
-            </div>
-        )
+        return <div className="add-result empty"></div>
     }
 
     renderLoading(className) {
         return (
             <div className={`${className} loading`}>
-                <div className="loader-wrapper" style={{height: 300}}>
-                    <ReactLoading type="cylon" color="#e90000"/>
+                <div className="loader-wrapper" style={{ height: 300 }}>
+                    <ReactLoading type="cylon" color="#e90000" />
                 </div>
             </div>
         )
@@ -191,20 +193,19 @@ export default class AddFeed extends React.PureComponent<IProps> {
     }
 
     renderPodcast(feedId: number) {
-        const {feedInfo, feed, result} = this.state
+        const { feedInfo, feed, result } = this.state
         if (feedInfo === undefined) {
-            return this.renderLoading("feed-info")
+            return this.renderLoading('feed-info')
         } else if (feedInfo === null) {
-            const {feedId} = result
+            const { feedId } = result
             return (
                 <div className="add-result podcast-fail">
                     <h3>Result</h3>
                     <p>Feed {feed} already exists</p>
-                    <p>View feed page for <Link
-                        to={`/podcast/${feedId}`}
-                    >
-                        {feedId}
-                    </Link>.</p>
+                    <p>
+                        View feed page for{' '}
+                        <Link to={`/podcast/${feedId}`}>{feedId}</Link>.
+                    </p>
                 </div>
             )
         } else {
@@ -225,9 +226,9 @@ export default class AddFeed extends React.PureComponent<IProps> {
     }
 
     renderReply() {
-        const {feed, result} = this.state
+        const { feed, result } = this.state
         console.log(result)
-        const {status, description, existed, feedId} = result
+        const { status, description, existed, feedId } = result
 
         if (status === true || status === 'true') {
             // if existing, show podcast "result"
@@ -240,10 +241,15 @@ export default class AddFeed extends React.PureComponent<IProps> {
                         <h3>Result</h3>
                         <p>Feed {feed} added to queue</p>
                         <p>Description: {description}</p>
-                        <p>View feed in <Link
-                            to={`/search?q=${feed}`}
-                        >search results
-                        </Link>. <i>Note: will take some time before feed is first parsed.</i></p>
+                        <p>
+                            View feed in{' '}
+                            <Link to={`/search?q=${feed}`}>search results</Link>
+                            .{' '}
+                            <i>
+                                Note: will take some time before feed is first
+                                parsed.
+                            </i>
+                        </p>
                     </div>
                 )
             }
@@ -254,26 +260,27 @@ export default class AddFeed extends React.PureComponent<IProps> {
     }
 
     render() {
-        const {token, feed} = this.state
+        const { token, feed } = this.state
 
         updateTitle(`Add Feed`)
         return (
-            <div className="add-feed">
-                <h2>Add a feed to the index</h2>
-                <p>Enter the URL to the Podcast feed in the box below.</p>
+            <>
+                <h1>Add a podcast feed to the index</h1>
+                {/* <p>Enter the URL to the Podcast feed in the box below.</p> */}
 
-                <form className="add-feed-form" onSubmit={this.onSubmit}>
-                    <div className="feed">
-                        <input
+                <Form onSubmit={this.onSubmit}>
+                    <Form.Group className="mb-3" controlId="formBasicUrl">
+                        <Form.Label>Your podcast feed URL</Form.Label>
+                        <Form.Control
                             id="feed"
                             type="text"
-                            value={feed}
                             placeholder="https://example.org/podcast/feed.xml"
+                            value={feed}
                             onChange={this.setFeed}
                             autoComplete="off"
                             required
                         />
-                    </div>
+                    </Form.Group>
                     <HCaptcha
                         // TODO: replace this
                         sitekey="00000001-0000-0001-0000-000000000001"
@@ -284,12 +291,14 @@ export default class AddFeed extends React.PureComponent<IProps> {
                     />
                     <Button
                         type="submit"
-                        disabled={feed == "" || token == null}
-                    >Add</Button>
-                </form>
+                        disabled={feed == '' || token == null}
+                    >
+                        Add
+                    </Button>
+                </Form>
 
                 {this.showAddResult()}
-            </div>
+            </>
         )
     }
 }

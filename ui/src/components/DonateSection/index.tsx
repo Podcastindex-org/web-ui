@@ -13,7 +13,7 @@ const DonateSection = () => {
 
     return (
         <>
-            <h3>Support Podcasting 2.0!</h3>
+            <h4>Support Podcasting 2.0!</h4>
             <p>
                 If you get any value from Podcasting 2.0, or if you simply
                 believe in it and want to help us with hosting fees and paying

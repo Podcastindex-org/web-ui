@@ -10,10 +10,10 @@ import TopBar from './components/TopBar'
 import BottomBar from './components/BottomBar'
 import Routes from './routes'
 
-import LandingBG from '../images/landing-bg.svg'
 import './styles.scss'
 
 import { ApplicationState } from './state/store'
+import { Container } from 'react-bootstrap'
 
 interface MainProps {
     store: Store<ApplicationState>
@@ -24,17 +24,21 @@ const Index: React.FC<MainProps> = ({ store, history }) => {
     return (
         <Provider store={store}>
             <ConnectedRouter history={history}>
-                <TopBar history={history} />
-                <img
-                    draggable="false"
-                    className="landing-graphic"
-                    height={1017}
-                    width={1017}
-                    src={LandingBG}
-                    alt="Sidebar logo"
-                />
-                <Routes />
-                <BottomBar />
+                <header>
+                    <Container>
+                        <TopBar history={history} />
+                    </Container>
+                </header>
+                <main className="pb-4">
+                    <Container>
+                        <Routes />
+                    </Container>
+                </main>
+                <footer className="footer mt-auto bg-light py-4">
+                    <Container>
+                        <BottomBar />
+                    </Container>
+                </footer>
             </ConnectedRouter>
         </Provider>
     )

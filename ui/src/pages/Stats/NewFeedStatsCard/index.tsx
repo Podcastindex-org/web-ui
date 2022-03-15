@@ -1,7 +1,7 @@
 import * as React from 'react'
+import { Card, Row } from 'react-bootstrap'
 
 import KPI from '../../../components/KPI'
-import Card from '../../../components/Card'
 
 import './styles.scss'
 
@@ -31,7 +31,7 @@ export default class NewFeedStatsCard extends React.Component<IProps> {
         top4name: '',
         top4count: 0,
         top5name: '',
-        top5count: 0
+        top5count: 0,
     }
 
     constructor(props: IProps) {
@@ -54,29 +54,42 @@ export default class NewFeedStatsCard extends React.Component<IProps> {
             top4name,
             top4count,
             top5name,
-            top5count
+            top5count,
         } = this.props
 
         return (
-            <div className="kpi-card">
-                <Card>
-                    <div className="kpi-massive-title">
-                        Host submitted feeds (30 days)...
-                    </div>
-                    <div className="kpi-massive-value">{total.toLocaleString()}</div>
-                    <div className="kpi-row">
-                        <KPI title={top1name} value={top1count.toLocaleString()} />
-                        <KPI title={top2name} value={top2count.toLocaleString()} />
-                        <KPI title={top3name} value={top3count.toLocaleString()} />
-                        <KPI title={top4name} value={top4count.toLocaleString()} />
-                        <KPI title={top5name} value={top5count.toLocaleString()} />
-                        {/* <KPI
-                            title="90 days"
-                            value={this.numberWithCommas(last90)}
-                        /> */}
-                    </div>
-                </Card>
-            </div>
+            <Card className="bg-light">
+                <Card.Body>
+                    <Card.Title>
+                        Host-submitted feeds in the last 30 days
+                    </Card.Title>
+                    <Card.Text className="display-1 text-primary fw-bold">
+                        {total.toLocaleString()}
+                    </Card.Text>
+                    <Row className="row-cols-2 row-cols-md-3 row-cols-lg-2 row-cols-xl-3">
+                        <KPI
+                            title={top1name}
+                            value={top1count.toLocaleString()}
+                        />
+                        <KPI
+                            title={top2name}
+                            value={top2count.toLocaleString()}
+                        />
+                        <KPI
+                            title={top3name}
+                            value={top3count.toLocaleString()}
+                        />
+                        <KPI
+                            title={top4name}
+                            value={top4count.toLocaleString()}
+                        />
+                        <KPI
+                            title={top5name}
+                            value={top5count.toLocaleString()}
+                        />
+                    </Row>
+                </Card.Body>
+            </Card>
         )
     }
 }

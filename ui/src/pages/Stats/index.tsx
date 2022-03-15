@@ -2,14 +2,11 @@ import * as React from 'react'
 import { Stats } from 'webpack'
 
 import NewFeedStatsCard from './NewFeedStatsCard'
-import StatsCard from "./StatsCard";
+import StatsCard from './StatsCard'
 
 import './styles.scss'
 
-
 interface IProps {}
-
-
 
 export default class Card extends React.Component<IProps> {
     static defaultProps = {}
@@ -35,7 +32,7 @@ export default class Card extends React.Component<IProps> {
             top4count: 376,
             top5name: 'Blubrry',
             top5count: 96,
-        }
+        },
     }
     _isMounted = false
 
@@ -52,7 +49,7 @@ export default class Card extends React.Component<IProps> {
             this.setState({
                 loading: false,
                 overallStats,
-                stats
+                stats,
             })
         }
     }
@@ -77,7 +74,7 @@ export default class Card extends React.Component<IProps> {
         const {} = this.props
         const { loading, overallStats, stats } = this.state
         return (
-            <div className="landing-content" style={{ marginTop: 20 }}>
+            <>
                 <StatsCard
                     total={overallStats.feedCountTotal}
                     threedays={overallStats.feedCount3days}
@@ -100,7 +97,7 @@ export default class Card extends React.Component<IProps> {
                     top5name={stats.top5name}
                     top5count={stats.top5count}
                 />
-            </div>
+            </>
         )
     }
 }
