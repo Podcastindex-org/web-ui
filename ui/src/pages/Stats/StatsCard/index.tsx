@@ -1,9 +1,7 @@
 import * as React from 'react'
 
 import KPI from '../../../components/KPI'
-import Card from '../../../components/Card'
-
-import './styles.scss'
+import { Card, Row } from 'react-bootstrap'
 
 interface IProps {
     total: string
@@ -34,30 +32,33 @@ export default class StatsCard extends React.Component<IProps> {
     }
 
     render() {
-        const { total, threedays, tendays, lastMonth, last60, last90 } = this.props
+        const {
+            total,
+            threedays,
+            tendays,
+            lastMonth,
+            last60,
+            last90,
+        } = this.props
         return (
-            <div className="kpi-card">
-                <Card>
-                    <div className="kpi-massive-title">
-                        Total podcasts in the index ...
-                    </div>
-                    <div className="kpi-massive-value">{total}</div>
-                    <div className="kpi-massive-title kpi-title-2">
-                        Shows published in the last ...
-                    </div>
-                    <div className="kpi-row">
-                        <KPI title="3 days" value={threedays} />
-                        <KPI title="10 days" value={tendays} />
-                        <KPI title="30 days" value={lastMonth} />
-                        <KPI title="60 days" value={last60} />
-                        <KPI title="90 days" value={last90} />
-                        {/* <KPI
-                            title="90 days"
-                            value={this.numberWithCommas(last90)}
-                        /> */}
-                    </div>
-                </Card>
-            </div>
+            <Card className="bg-light">
+                <Card.Body>
+                    <Card.Title>Total podcasts in the index ...</Card.Title>
+                    <Card.Text className="display-1 text-primary fw-bold">
+                        {total}
+                    </Card.Text>
+                    <Card.Title>Shows published in the last ...</Card.Title>
+                    <Card.Text>
+                        <Row className="row-cols-2 row-cols-md-3 row-cols-lg-2 row-cols-xl-3">
+                            <KPI title="3 days" value={threedays} />
+                            <KPI title="10 days" value={tendays} />
+                            <KPI title="30 days" value={lastMonth} />
+                            <KPI title="60 days" value={last60} />
+                            <KPI title="90 days" value={last90} />
+                        </Row>
+                    </Card.Text>
+                </Card.Body>
+            </Card>
         )
     }
 }

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Component } from 'react'
-import { Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 
 interface InfoSectionProps {}
 
@@ -9,43 +9,51 @@ interface InfoSectionState {}
 class InfoSection extends React.Component<InfoSectionProps, InfoSectionState> {
     render() {
         return (
-            <Row className="py-3">
-                <h3>Promise</h3>
-                <p>
-                    The core, categorized index will always be available for
-                    free, for any use.
-                </p>
-                <h3>Operations</h3>
-                <p>
-                    Podcast Index LLC is a software developer focused
-                    partnership that provides tools and data to anyone who
-                    aspires to create new and exciting Podcast experiences
-                    without the heavy lifting of indexing, aggregation and data
-                    management.
-                </p>
-                <h3>Financing</h3>
-                <p>
-                    The core Podcast Index is financed by its founders and
-                    stakeholders: Podcasters, Developers and Listeners.
-                </p>
-                <p>
-                    Corporate interests and advertising are antithetical to our
-                    business.
-                </p>
-                <p>
-                    Podcast Index LLC strives to grow by providing enhanced API
-                    services of value to developers and organizations.
-                </p>
-                <h3>Mission and Goal</h3>
-                <p>
-                    Preserve, protect and extend the open, independent
-                    podcasting ecosystem.
-                </p>
-                <p>
-                    Re-tool podcasting to a platform of value exchange that
-                    includes developers with podcasters and listeners.
-                </p>
-                <h3>Developer? Join the fun!</h3>
+            <Row className="py-3 row-cols-1 row-cols-md-2">
+                <Col>
+                    <h3>Promise</h3>
+                    <p>
+                        The core, categorized index will always be available for
+                        free, for any use.
+                    </p>
+                </Col>
+                <Col>
+                    <h3>Operations</h3>
+                    <p>
+                        Podcast Index LLC is a software developer focused
+                        partnership that provides tools and data to anyone who
+                        aspires to create new and exciting Podcast experiences
+                        without the heavy lifting of indexing, aggregation and
+                        data management.
+                    </p>
+                </Col>
+                <Col>
+                    <h3>Financing</h3>
+                    <p>
+                        The core Podcast Index is financed by its founders and
+                        stakeholders: Podcasters, Developers and Listeners.
+                    </p>
+                    <p>
+                        Corporate interests and advertising are antithetical to
+                        our business.
+                    </p>
+                    <p>
+                        Podcast Index LLC strives to grow by providing enhanced
+                        API services of value to developers and organizations.
+                    </p>
+                </Col>
+                <Col>
+                    <h3>Mission and Goal</h3>
+                    <p>
+                        Preserve, protect and extend the open, independent
+                        podcasting ecosystem.
+                    </p>
+                    <p>
+                        Re-tool podcasting to a platform of value exchange that
+                        includes developers with podcasters and listeners.
+                    </p>
+                </Col>
+                {/* <h3>Developer? Join the fun!</h3>
                 <p>
                     Sign up for an account and get API keys at:{' '}
                     <a href="https://api.podcastindex.org/signup">
@@ -91,11 +99,7 @@ class InfoSection extends React.Component<InfoSectionProps, InfoSectionState> {
                     </a>
                 </p>
                 <p>
-                    Follow us on {/*the blog:{' '}*/}
-                    {/*<a href="https://blog.podcastindex.org/">*/}
-                    {/*    blog.podcastindex.org*/}
-                    {/*</a>{' '}*/}
-                    {/*or on{' '}*/}
+                    Follow us on
                     <a href="https://twitter.com/PodcastindexOrg">
                         Twitter
                     </a> or{' '}
@@ -109,7 +113,7 @@ class InfoSection extends React.Component<InfoSectionProps, InfoSectionState> {
                     <a href="mailto:info@podcastindex.org">
                         info@podcastindex.org
                     </a>
-                </p>
+                </p> */}
             </Row>
         )
     }

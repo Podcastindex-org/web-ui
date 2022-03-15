@@ -10,8 +10,6 @@ import Topbar from './components/TopBar'
 import Routes from './routes'
 
 import LandingBG from '../images/landing-bg.svg'
-import 'bootstrap/scss/bootstrap.scss'
-// import './_variables.scss'
 import './styles.scss'
 
 import { ApplicationState } from './state/store'

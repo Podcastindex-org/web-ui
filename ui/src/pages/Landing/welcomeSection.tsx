@@ -9,7 +9,9 @@ const WelcomeSection = (props) => {
                     We&rsquo;re making podcasting better for audiences,
                     podcasters, and developers. <br />
                     <br />
-                    <span className="text-info">This is Podcasting 2.0!</span>
+                    <span className="text-info fw-bold">
+                        This is Podcasting 2.0!
+                    </span>
                 </h1>
             </Container>
         </Row>

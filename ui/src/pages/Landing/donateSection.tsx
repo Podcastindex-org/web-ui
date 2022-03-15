@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react'
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Button } from 'react-bootstrap'
 import TallyCoinWidget from '../../components/TallyCoinWidget'
-import Button from '../../components/Button'
+// import Button from '../../components/Button'
 
 const DonateSection = () => {
     const [show, setShow] = useState(false)
@@ -34,12 +34,7 @@ const DonateSection = () => {
                             name="hosted_button_id"
                             value="9GEMYSYB7G2DW"
                         />
-                        <Button
-                            big
-                            primary
-                            type="submit"
-                            alt="Donate with PayPal button"
-                        >
+                        <Button type="submit" size="lg">
                             Donate
                         </Button>
                     </form>

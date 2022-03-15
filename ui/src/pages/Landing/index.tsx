@@ -100,6 +100,7 @@ export default class Landing extends React.Component<IProps, IState> {
                 {/*</div>*/}
                 <BenefitsSection />
                 <Row className="py-3">
+                    <h2>The latest from the Podcast Index</h2>
                     <Col>
                         <StatsCard
                             total={stats.feedCountTotal}

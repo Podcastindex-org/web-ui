@@ -1,65 +1,97 @@
-// @import '../fonts/style.css';
+// Option B: Include parts of Bootstrap
 
-@font-face {
-    font-family: 'D-DIN Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('D-DIN Regular'), url('../fonts/D-DIN.woff') format('woff');
-}
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import '../../node_modules/bootstrap/scss/functions';
 
-:root {
-    --transition-secs: 0.2s;
-    --bg-main: #ffffff;
-    --color-primary: #e90000;
-    --font-family: 'D-DIN', sans-serif;
-    --font-family-bold: 'D-DIN-Bold', sans-serif;
-    --font-family-exp: 'D-DINExp', sans-serif;
-    --font-family-exp-bold: 'D-DINExp-Bold', sans-serif;
-    --font-alt: 'DINAlternate-Bold', sans-serif;
-}
+// 2. Include any default variable overrides here
+@import '../fonts/style.css';
+@import './variables';
 
-body {
-    min-height: 100vh;
-    // max-width: 100vw;
-    font-family: var(--font-family);
-    margin: 0;
-    color: #2d2d2d;
-    overflow-y: scroll; // Disable scrolling on body
-}
+// 3. Include remainder of required Bootstrap stylesheets
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+@import '../../node_modules/bootstrap/scss/root';
+@import '../../node_modules/bootstrap/scss/utilities';
 
-h1 {
-    font-family: var(--font-family-exp);
-    font-weight: bold;
-    font-size: 55px;
-}
+// 4. Include any optional Bootstrap CSS as needed
+// Layout & components
+@import '../../node_modules/bootstrap/scss/root';
+@import '../../node_modules/bootstrap/scss/reboot';
+@import '../../node_modules/bootstrap/scss/type';
+@import '../../node_modules/bootstrap/scss/images';
+@import '../../node_modules/bootstrap/scss/containers';
+@import '../../node_modules/bootstrap/scss/grid';
+@import '../../node_modules/bootstrap/scss/tables';
+@import '../../node_modules/bootstrap/scss/forms';
+@import '../../node_modules/bootstrap/scss/buttons';
+@import '../../node_modules/bootstrap/scss/transitions';
+@import '../../node_modules/bootstrap/scss/dropdown';
+@import '../../node_modules/bootstrap/scss/button-group';
+@import '../../node_modules/bootstrap/scss/nav';
+@import '../../node_modules/bootstrap/scss/navbar';
+@import '../../node_modules/bootstrap/scss/card';
+@import '../../node_modules/bootstrap/scss/accordion';
+@import '../../node_modules/bootstrap/scss/breadcrumb';
+@import '../../node_modules/bootstrap/scss/pagination';
+@import '../../node_modules/bootstrap/scss/badge';
+@import '../../node_modules/bootstrap/scss/alert';
+@import '../../node_modules/bootstrap/scss/progress';
+@import '../../node_modules/bootstrap/scss/list-group';
+@import '../../node_modules/bootstrap/scss/close';
+@import '../../node_modules/bootstrap/scss/toasts';
+@import '../../node_modules/bootstrap/scss/modal';
+@import '../../node_modules/bootstrap/scss/tooltip';
+@import '../../node_modules/bootstrap/scss/popover';
+@import '../../node_modules/bootstrap/scss/carousel';
+@import '../../node_modules/bootstrap/scss/spinners';
+@import '../../node_modules/bootstrap/scss/offcanvas';
+@import '../../node_modules/bootstrap/scss/placeholders';
 
-h2 {
-    font-family: var(--font-family-exp);
-    font-weight: bold;
-    font-size: 44px;
-}
+// Helpers
+@import '../../node_modules/bootstrap/scss/helpers';
 
-h3 {
-    font-family: var(--font-family-exp);
-    font-weight: bold;
-    font-size: 33px;
-}
+// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import '../../node_modules/bootstrap/scss/utilities/api';
 
-h4 {
-    font-family: var(--font-family-exp);
-    font-weight: bold;
-    font-size: 27px;
-}
+// 6. Add additional custom code here
 
-a:link,
-a:visited,
-a:active {
-    color: #002752;
-}
+// :root {
+//     --transition-secs: 0.2s;
+//     --bg-main: #ffffff;
+//     --color-primary: #e90000;
+//     --font-family: 'D-DIN Regular', sans-serif;
+//     --font-family-bold: 'D-DIN Bold', sans-serif;
+//     --font-family-exp: 'D-DIN Exp Regular', sans-serif;
+//     --font-family-exp-bold: 'D-DIN Exp Bold', sans-serif;
+//     // --font-alt: 'DINAlternate-Bold', sans-serif;
+// }
 
-a:hover {
-    color: #cc2799;
-}
+// body {
+//     min-height: 100vh;
+//     // max-width: 100vw;
+//     font-family: var(--font-family);
+//     margin: 0;
+//     color: #2d2d2d;
+//     overflow-y: scroll; // Disable scrolling on body
+// }
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5 {
+//     font-family: var(--font-family-exp);
+// }
+
+// a:link,
+// a:visited,
+// a:active {
+//     color: #002752;
+// }
+
+// a:hover {
+//     color: #cc2799;
+// }
 
 .landing-graphic {
     opacity: 0.75;

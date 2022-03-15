@@ -6,46 +6,49 @@ import {
     faMicrophone,
 } from '@fortawesome/free-solid-svg-icons'
 import { Row, Col, Button } from 'react-bootstrap'
-import { faApper } from '@fortawesome/free-brands-svg-icons'
+import { LinkContainer } from 'react-router-bootstrap'
 
 const BenefitsSection = (props) => {
     return (
         <Row className="row-cols-1 row-cols-lg-3 text-center">
             <Col className="py-3">
                 <FontAwesomeIcon icon={faHeadphones} size="6x" />
-                <h2>For audiences</h2>
+                <h2 className="my-3">For audiences</h2>
                 <p>
                     Enjoy richer listening and viewing experiences! Podcasting
                     2.0 lets you follow, engage, support, and share podcasts
                     more easily.
                 </p>
-                <Button href="/apps" variant="primary">
-                    Try a better podcast app!
-                </Button>
+                <LinkContainer to="/apps">
+                    <Button>Try a better podcast app!</Button>
+                </LinkContainer>
             </Col>
             <Col className="py-3">
                 <FontAwesomeIcon icon={faMicrophone} size="6x" />
 
-                <h2>For podcasters</h2>
+                <h2 className="my-3">For podcasters</h2>
                 <p>
-                    Podcasting 2.0 gives you better tools to more easily improve
+                    Podcasting 2.0 offers the new Podcast Namespace to improve
                     your podcast, grow your audience, and even monetize your
                     show!
                 </p>
-                <Button href="/podcasters">Upgrade to Podcasting 2.0!</Button>
+                <LinkContainer to="/podcasters">
+                    <Button>Upgrade to Podcasting 2.0!</Button>
+                </LinkContainer>
             </Col>
             <Col className="py-3">
                 <FontAwesomeIcon icon={faCode} size="6x" />
 
-                <h2>For developers</h2>
+                <h2 className="my-3">For developers</h2>
                 <p>
-                    Access an open, categorized index of all podcasts that will
-                    always be free for any use. Make finding, following, and
-                    funding podcasts easier for your users!
+                    Integrate an open, inclusive, always-free podcast catalog
+                    API and add Podcasting 2.0 features to your app. Make
+                    finding, following, and funding podcasts easier for your
+                    users!
                 </p>
-                <Button href="/developers">
-                    Use Podcast Index for your app!
-                </Button>
+                <LinkContainer to="/developers">
+                    <Button>Put Podcasting 2.0 in your app!</Button>
+                </LinkContainer>
             </Col>
         </Row>
     )

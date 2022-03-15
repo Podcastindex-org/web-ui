@@ -1,12 +1,10 @@
 import * as React from 'react'
-import { Link } from 'react-router-dom'
 import { history } from '../../state/store'
 
-import Button from '../Button'
+import { LinkContainer } from 'react-router-bootstrap'
 import Searchbar from '../SearchBar'
 import BrandIcon from '../../../images/brand-icon.svg'
 import BrandName from '../../../images/brand-text.svg'
-import MenuIcon from '../../../images/menu.svg'
 import { cleanSearchQuery, encodeSearch } from '../../utils'
 
 import './styles.scss'
@@ -60,34 +58,46 @@ export default class TopBar extends React.PureComponent<IProps, IState> {
             <Container>
                 <Navbar variant="light" expand="md" className="py-4">
                     <Container>
-                        <Navbar.Brand href="/">
-                            <img
-                                // height={38}
-                                width={36}
-                                src={BrandIcon}
-                                alt="Brand logo"
-                                className="me-2"
-                            />
-                            <img src={BrandName} width={230} alt="Brand name" />
-                        </Navbar.Brand>
+                        <LinkContainer to="/">
+                            <Navbar.Brand>
+                                <img
+                                    // height={38}
+                                    width={36}
+                                    src={BrandIcon}
+                                    alt="Brand logo"
+                                    className="me-2"
+                                />
+                                <img
+                                    src={BrandName}
+                                    width={230}
+                                    alt="Brand name"
+                                />
+                            </Navbar.Brand>
+                        </LinkContainer>
                         <Navbar.Toggle
                             aria-controls="main-nav"
                             className="px-0"
                         />
                         <Navbar.Collapse id="main-nav">
                             <Nav className="me-auto">
-                                <Nav.Link href="/apps">Apps</Nav.Link>
-                                <Nav.Link href="/podcast/value4value">
-                                    Value 4 Value
-                                </Nav.Link>
-                                <Nav.Link href="/stats">Stats</Nav.Link>
-                                <Nav.Link href="/add">Add</Nav.Link>
-                                <Nav.Link href="https://podcastindex-org.github.io/docs-api/">
-                                    Docs
-                                </Nav.Link>
-                                <Nav.Link href="https://api.podcastindex.org">
-                                    API
-                                </Nav.Link>
+                                <LinkContainer to="/apps">
+                                    <Nav.Link>Apps</Nav.Link>
+                                </LinkContainer>
+                                <LinkContainer to="/podcast/value4value">
+                                    <Nav.Link>Value 4 Value</Nav.Link>
+                                </LinkContainer>
+                                <LinkContainer to="/stats">
+                                    <Nav.Link>Stats</Nav.Link>
+                                </LinkContainer>
+                                <LinkContainer to="/add">
+                                    <Nav.Link>Add</Nav.Link>
+                                </LinkContainer>
+                                <LinkContainer to="https://podcastindex-org.github.io/docs-api/">
+                                    <Nav.Link>Docs</Nav.Link>
+                                </LinkContainer>
+                                <LinkContainer to="https://api.podcastindex.org">
+                                    <Nav.Link>API</Nav.Link>
+                                </LinkContainer>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
