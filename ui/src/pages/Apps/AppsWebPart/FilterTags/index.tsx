@@ -183,7 +183,7 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
 
     return (
         <Row className="mb-4">
-            <Accordion defaultActiveKey="0">
+            <Accordion>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Filters</Accordion.Header>
                     <Accordion.Body>

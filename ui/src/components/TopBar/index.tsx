@@ -56,79 +56,77 @@ export default class TopBar extends React.PureComponent<IProps, IState> {
         const { search, dropdownOpen } = this.state
         return (
             <Navbar variant="light" expand="lg" className="py-4">
-                <Container>
-                    <LinkContainer to="/">
-                        <Navbar.Brand>
-                            <img
-                                // height={38}
-                                width={36}
-                                src={BrandIcon}
-                                alt="Brand logo"
-                                className="me-2"
-                            />
-                            <img src={BrandName} width={230} alt="Brand name" />
-                        </Navbar.Brand>
-                    </LinkContainer>
-                    <Navbar.Toggle aria-controls="main-nav" className="px-0" />
-                    <Navbar.Collapse id="main-nav">
-                        <Nav className="me-auto">
-                            <LinkContainer to="/apps">
-                                <Nav.Link>Apps</Nav.Link>
+                <LinkContainer to="/">
+                    <Navbar.Brand>
+                        <img
+                            // height={38}
+                            width={36}
+                            src={BrandIcon}
+                            alt="Brand logo"
+                            className="me-2"
+                        />
+                        <img src={BrandName} width={230} alt="Brand name" />
+                    </Navbar.Brand>
+                </LinkContainer>
+                <Navbar.Toggle aria-controls="main-nav" className="px-0" />
+                <Navbar.Collapse id="main-nav">
+                    <Nav className="me-auto">
+                        <LinkContainer to="/apps">
+                            <Nav.Link>Apps</Nav.Link>
+                        </LinkContainer>
+                        <NavDropdown
+                            title="Podcasters"
+                            id="podcasters-nav-dropdown"
+                        >
+                            <LinkContainer to="/podcasters">
+                                <NavDropdown.Item href="#action/3.1">
+                                    Podcast Namespace
+                                </NavDropdown.Item>
                             </LinkContainer>
-                            <NavDropdown
-                                title="Podcasters"
-                                id="podcasters-nav-dropdown"
-                            >
-                                <LinkContainer to="/podcasters">
-                                    <NavDropdown.Item href="#action/3.1">
-                                        Podcast Namespace
-                                    </NavDropdown.Item>
-                                </LinkContainer>
-                                <LinkContainer to="/add">
-                                    <NavDropdown.Item>
-                                        Add your podcast
-                                    </NavDropdown.Item>
-                                </LinkContainer>
-                                <LinkContainer to="/apps">
-                                    <NavDropdown.Item>
-                                        Apps/providers
-                                    </NavDropdown.Item>
-                                </LinkContainer>
-                            </NavDropdown>
-                            <NavDropdown
-                                title="Developers"
-                                id="developers-nav-dropdown"
-                            >
-                                <LinkContainer to="/developers">
-                                    <NavDropdown.Item>
-                                        Developer resources
-                                    </NavDropdown.Item>
-                                </LinkContainer>
-                                <NavDropdown.Item href="https://podcastindex-org.github.io/docs-api/">
-                                    Documentation
+                            <LinkContainer to="/add">
+                                <NavDropdown.Item>
+                                    Add your podcast
                                 </NavDropdown.Item>
-                                <NavDropdown.Item href="https://api.podcastindex.org">
-                                    Get your API key
+                            </LinkContainer>
+                            <LinkContainer to="/apps">
+                                <NavDropdown.Item>
+                                    Apps/providers
                                 </NavDropdown.Item>
-                            </NavDropdown>
-                            <NavDropdown
-                                title="Podcast Catalog"
-                                id="catalog-nav-dropdown"
-                            >
-                                <LinkContainer to="/podcast/value4value">
-                                    <NavDropdown.Item>
-                                        Value 4 Value podcasts
-                                    </NavDropdown.Item>
-                                </LinkContainer>
-                                <LinkContainer to="/stats">
-                                    <NavDropdown.Item>
-                                        Catalog stats
-                                    </NavDropdown.Item>
-                                </LinkContainer>
-                            </NavDropdown>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
+                            </LinkContainer>
+                        </NavDropdown>
+                        <NavDropdown
+                            title="Developers"
+                            id="developers-nav-dropdown"
+                        >
+                            <LinkContainer to="/developers">
+                                <NavDropdown.Item>
+                                    Developer resources
+                                </NavDropdown.Item>
+                            </LinkContainer>
+                            <NavDropdown.Item href="https://podcastindex-org.github.io/docs-api/">
+                                Documentation
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="https://api.podcastindex.org">
+                                Get your API key
+                            </NavDropdown.Item>
+                        </NavDropdown>
+                        <NavDropdown
+                            title="Podcast Catalog"
+                            id="catalog-nav-dropdown"
+                        >
+                            <LinkContainer to="/podcast/value4value">
+                                <NavDropdown.Item>
+                                    Value 4 Value podcasts
+                                </NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="/stats">
+                                <NavDropdown.Item>
+                                    Catalog stats
+                                </NavDropdown.Item>
+                            </LinkContainer>
+                        </NavDropdown>
+                    </Nav>
+                </Navbar.Collapse>
                 <Searchbar
                     search={search}
                     onSearchChange={this.onSearchChange}

@@ -1,22 +1,24 @@
 import * as React from 'react'
+import { Pagination, Row, Form, Col } from 'react-bootstrap'
 import ReactLoading from 'react-loading'
 import { Link } from 'react-router-dom'
-import Button from "../../../components/Button";
-import InfiniteList from "../../../components/InfiniteList";
+import Button from '../../../components/Button'
+import InfiniteList from '../../../components/InfiniteList'
 import ResultItem from '../../../components/ResultItem'
+import { LinkContainer } from 'react-router-bootstrap'
 
 import { updateTitle } from '../../../utils'
 
 import './styles.scss'
 
 // noinspection SpellCheckingInspection
-const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-const NUMBERS = "0123456789"
-const SYMBOLS = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+const NUMBERS = '0123456789'
+const SYMBOLS = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
 
 interface PageData {
-    groupPages: Array<any>,
-    displayCount: number,
+    groupPages: Array<any>
+    displayCount: number
 }
 
 enum SpecialPages {
@@ -53,24 +55,33 @@ export default class Value4Value extends React.PureComponent<IProps> {
         this.pageMenuChanged = this.pageMenuChanged.bind(this)
     }
 
-
     async componentDidMount(): Promise<void> {
-        const {initialDisplay} = this.state
+        const { initialDisplay } = this.state
         this._isMounted = true
 
         let results = (await this.getValue4ValuePodcasts()).feeds as Array<any>
 
-        let pages = new Map<string, PageData>(
+        let pages = new Map<string, PageData>([
             [
-                [SpecialPages.POPULAR, {groupPages: results, displayCount: initialDisplay}],
-                [SpecialPages.SYMBOL, {groupPages: [], displayCount: initialDisplay}],
-                [SpecialPages.NUMERIC, {groupPages: [], displayCount: initialDisplay}],
-            ]
-        )
+                SpecialPages.POPULAR,
+                { groupPages: results, displayCount: initialDisplay },
+            ],
+            [
+                SpecialPages.SYMBOL,
+                { groupPages: [], displayCount: initialDisplay },
+            ],
+            [
+                SpecialPages.NUMERIC,
+                { groupPages: [], displayCount: initialDisplay },
+            ],
+        ])
         Array.from(ALPHABET).forEach((value: string) => {
-            pages.set(value, {groupPages: [], displayCount: initialDisplay})
+            pages.set(value, { groupPages: [], displayCount: initialDisplay })
         })
-        pages.set(SpecialPages.OTHER, {groupPages: [], displayCount: initialDisplay})
+        pages.set(SpecialPages.OTHER, {
+            groupPages: [],
+            displayCount: initialDisplay,
+        })
 
         const allPages = []
         results.forEach((value) => {
@@ -92,7 +103,10 @@ export default class Value4Value extends React.PureComponent<IProps> {
             }
             pages.get(startChar).groupPages.push(value)
         })
-        pages.set(SpecialPages.ALL, {groupPages: allPages, displayCount: initialDisplay})
+        pages.set(SpecialPages.ALL, {
+            groupPages: allPages,
+            displayCount: initialDisplay,
+        })
 
         const hash = this.getHash()
 
@@ -124,7 +138,11 @@ export default class Value4Value extends React.PureComponent<IProps> {
         return hash
     }
 
-    componentDidUpdate(prevProps: Readonly<IProps>, prevState: Readonly<{}>, snapshot?: any): void {
+    componentDidUpdate(
+        prevProps: Readonly<IProps>,
+        prevState: Readonly<{}>,
+        snapshot?: any
+    ): void {
         this.updateSelectedPage(this.getHash())
     }
 
@@ -134,23 +152,23 @@ export default class Value4Value extends React.PureComponent<IProps> {
 
     getPageId(page: string): string {
         if (page === null) {
-            return ""
+            return ''
         }
         let pageId = page.toLowerCase()
         if (page === SpecialPages.OTHER) {
-            pageId = "other"
+            pageId = 'other'
         } else if (page === SpecialPages.NUMERIC) {
-            pageId = "num"
+            pageId = 'num'
         } else if (page === SpecialPages.SYMBOL) {
-            pageId = "sym"
+            pageId = 'sym'
         } else if (page === SpecialPages.POPULAR) {
-            pageId = ""
+            pageId = 'popular'
         }
         return pageId
     }
 
-    pageClick(e: React.ChangeEvent<HTMLElement>) {
-        const page = e.target.getAttribute('data-value')
+    pageClick(page) {
+        console.log(page)
         this.updateSelectedPage(page)
     }
 
@@ -160,7 +178,7 @@ export default class Value4Value extends React.PureComponent<IProps> {
     }
 
     updateSelectedPage(page: string = null) {
-        let {pages, initialDisplay} = this.state
+        let { pages, initialDisplay } = this.state
         let selectedPage = null
         if (page) {
             page = page.toUpperCase()
@@ -170,13 +188,13 @@ export default class Value4Value extends React.PureComponent<IProps> {
             } else {
                 if (SYMBOLS.includes(page)) {
                     selectedPage = SpecialPages.SYMBOL
-                } else if (page === "NUM") {
+                } else if (page === 'NUM') {
                     selectedPage = SpecialPages.NUMERIC
-                } else if (page === "SYM") {
+                } else if (page === 'SYM') {
                     selectedPage = SpecialPages.SYMBOL
-                } else if (page === "OTHER") {
+                } else if (page === 'OTHER') {
                     selectedPage = SpecialPages.OTHER
-                } else if (page === "ALL") {
+                } else if (page === 'ALL') {
                     selectedPage = SpecialPages.ALL
                 } else {
                     selectedPage = SpecialPages.POPULAR
@@ -186,14 +204,17 @@ export default class Value4Value extends React.PureComponent<IProps> {
 
         const pageData = pages.get(selectedPage)
         if (pageData !== undefined) {
-            let {groupPages, displayCount} = pageData
+            let { groupPages, displayCount } = pageData
 
             if (groupPages) {
                 if (groupPages.length < initialDisplay)
                     displayCount = groupPages.length
             }
 
-            pages.set(selectedPage, {groupPages: groupPages, displayCount: displayCount})
+            pages.set(selectedPage, {
+                groupPages: groupPages,
+                displayCount: displayCount,
+            })
         }
         this.setState({
             selectedPage: selectedPage,
@@ -211,7 +232,7 @@ export default class Value4Value extends React.PureComponent<IProps> {
     }
 
     updateDisplayCount(count: number) {
-        let {selectedPage, pages} = this.state
+        let { selectedPage, pages } = this.state
 
         if (selectedPage === null) {
             selectedPage = SpecialPages.POPULAR
@@ -223,12 +244,12 @@ export default class Value4Value extends React.PureComponent<IProps> {
             return
         }
 
-        let {groupPages} = pageData
-        pages.set(selectedPage, {groupPages: groupPages, displayCount: count})
+        let { groupPages } = pageData
+        pages.set(selectedPage, { groupPages: groupPages, displayCount: count })
     }
 
     renderItem(item, index: number) {
-        let {selectedPage, pages} = this.state
+        let { selectedPage, pages } = this.state
         const key = `v4v-podcast-${selectedPage}-${index}`
 
         if (selectedPage === null) {
@@ -236,25 +257,28 @@ export default class Value4Value extends React.PureComponent<IProps> {
         }
 
         const pageData = pages.get(selectedPage)
-        let {groupPages} = pageData
-        let {title, image, author, description, categories, id} = groupPages[index]
+        let { groupPages } = pageData
+        let { title, image, author, description, categories, id } = groupPages[
+            index
+        ]
 
         return (
-            <div key={key}>
-                <ResultItem
-                    title={title}
-                    author={author}
-                    image={image}
-                    description={description}
-                    categories={categories}
-                    id={id}
-                />
-            </div>
+            // <Row key={key}>
+            <ResultItem
+                key={key}
+                title={title}
+                author={author}
+                image={image}
+                description={description}
+                categories={categories}
+                id={id}
+            />
+            // </Row>
         )
     }
 
     renderPageLinks() {
-        let {selectedPage, pages} = this.state
+        let { selectedPage, pages } = this.state
         if (selectedPage === null) {
             selectedPage = SpecialPages.POPULAR
         }
@@ -262,93 +286,110 @@ export default class Value4Value extends React.PureComponent<IProps> {
         let pageData = pages.get(selectedPage)
 
         if (pageData === undefined) {
-            return (
-                <div className="pages"/>
-            )
+            return <div className="pages" />
         }
 
         return (
-            <div className="pages">
-                <div className="page-buttons">
-                    {
-                        Array.from(pages.keys()).map((value, index) => {
+            <>
+                <div className="d-none d-lg-block">
+                    <Pagination size="sm">
+                        {Array.from(pages.keys()).map((value, index) => {
                             return this.renderPageLink(value, index)
-                        })
-                    }
+                        })}
+                    </Pagination>
                 </div>
-                <div className="page-menu-row">
-                    {`Select Page: `}
-                    <select
-                        className="pages-menu"
-                        value={this.getPageId(selectedPage)}
-                        onChange={this.pageMenuChanged}
-                    >
-                        {
-                            Array.from(pages.keys()).map((value, index) => {
-                                return this.renderPageLink(value, index, true)
-                            })
-                        }
-                    </select>
+                <div className="d-lg-none">
+                    <Form>
+                        <Form.Group as={Row}>
+                            <Form.Label column xs="auto">
+                                Select Page:
+                            </Form.Label>
+                            <Col xs="auto">
+                                <Form.Select
+                                    value={this.getPageId(selectedPage)}
+                                    onChange={this.pageMenuChanged}
+                                >
+                                    {Array.from(pages.keys()).map(
+                                        (value, index) => {
+                                            return this.renderPageLink(
+                                                value,
+                                                index,
+                                                true
+                                            )
+                                        }
+                                    )}
+                                </Form.Select>
+                            </Col>
+                        </Form.Group>
+                    </Form>
                 </div>
-            </div>
+            </>
         )
     }
 
     renderPageLink(page: string, index: number, asOption: boolean = false) {
-        const {selectedPage, pages} = this.state
+        const { selectedPage, pages } = this.state
         const selected = page === selectedPage
-        const selectedClass = selected ? "selected" : ""
+        // const selectedClass = selected ? 'selected' : ''
 
         const pageData = pages.get(page)
 
         if (pageData === undefined) {
-            return (
-                <div className="page"/>
-            )
+            return <div className="page" />
         }
-        const {groupPages} = pageData
+        const { groupPages } = pageData
 
         const disabled = groupPages !== undefined && groupPages.length === 0
-        const disabledClass = disabled ? "disabled" : ""
+        // const disabledClass = disabled ? 'disabled' : ''
 
         const pageId = this.getPageId(page)
 
-        let link = false
-        let href = disabled ? "" : `#${pageId}`
-        if (page === SpecialPages.POPULAR) {
-            link = true
-            href = this.props.location.pathname
-        }
+        // let link = false
+        let href = disabled ? '' : `#${pageId}`
+        // if (page === SpecialPages.POPULAR) {
+        //     link = true
+        //     href = this.props.location.pathname
+        // }
 
         if (asOption) {
             return (
-                <option
-                    key={`page${index}`}
-                    disabled={disabled}
-                    value={pageId}
-                >{page}</option>
+                <option key={`page${index}`} disabled={disabled} value={pageId}>
+                    {page}
+                </option>
             )
         } else {
             return (
-                <Button
-                    className={`page ${selectedClass} ${disabledClass}`}
-                    onClick={this.pageClick}
-                    disabled={disabled}
-                    small={true}
-                    key={`page${index}`}
-                    dataValue={pageId}
-                    href={href}
-                    link={link}
-                    selected={selected}
-                >
-                    {page}
-                </Button>
+                <>
+                    <LinkContainer to={href}>
+                        <Pagination.Item
+                            key={`page${index}`}
+                            active={selected}
+                            onClick={() => this.pageClick(pageId)}
+                            disabled={disabled}
+                        >
+                            {page}
+                        </Pagination.Item>
+                    </LinkContainer>
+                    {/* <Button
+                        className={`page ${selectedClass} ${disabledClass}`}
+                        onClick={this.pageClick}
+                        disabled={disabled}
+                        small={true}
+                        key={`page${index}`}
+                        dataValue={pageId}
+                        href={href}
+                        link={link}
+                        selected={selected}
+                    >
+                        {page}
+                    </Button> */}
+                </>
             )
         }
     }
 
     renderResults() {
-        let {selectedPage, pages} = this.state
+        let { selectedPage, pages } = this.state
 
         if (selectedPage === null) {
             selectedPage = SpecialPages.POPULAR
@@ -357,34 +398,34 @@ export default class Value4Value extends React.PureComponent<IProps> {
         const pageData = pages.get(selectedPage)
 
         if (pageData === null) {
-            return (<div/>)
+            return <div />
         }
 
-        let {groupPages, displayCount} = pageData
+        let { groupPages, displayCount } = pageData
 
         if (selectedPage !== SpecialPages.POPULAR) {
-            groupPages = groupPages.sort((a: any, b: any) => a.title.localeCompare(b.title))
+            groupPages = groupPages.sort((a: any, b: any) =>
+                a.title.localeCompare(b.title)
+            )
         }
         return (
-            <div className="v4v-results">
-                {
-                    groupPages.length === 0
-                        ?
-                        <p>No podcasts for group {selectedPage}</p>
-                        :
-                        <InfiniteList
-                            data={groupPages}
-                            itemRenderer={this.renderItem}
-                            initialDisplay={displayCount}
-                            itemsShown={this.updateDisplayCount}
-                        />
-                }
-            </div>
+            <>
+                {groupPages.length === 0 ? (
+                    <p>No podcasts for group {selectedPage}</p>
+                ) : (
+                    <InfiniteList
+                        data={groupPages}
+                        itemRenderer={this.renderItem}
+                        initialDisplay={displayCount}
+                        itemsShown={this.updateDisplayCount}
+                    />
+                )}
+            </>
         )
     }
 
     render() {
-        const {loading, total} = this.state
+        const { loading, total } = this.state
         if (total === 0 && !loading) {
             const noResults = 'No Value 4 Value podcasts found'
             updateTitle(noResults)
@@ -393,32 +434,45 @@ export default class Value4Value extends React.PureComponent<IProps> {
         if (loading) {
             updateTitle('Loading Value 4 Value podcasts ...')
             return (
-                <div className="loader-wrapper" style={{height: 300}}>
-                    <ReactLoading type="cylon" color="#e90000"/>
+                <div className="loader-wrapper" style={{ height: 300 }}>
+                    <ReactLoading type="cylon" color="#e90000" />
                 </div>
             )
         }
         updateTitle(`Value 4 Value Podcasts`)
         return (
-            <div className="v4v">
+            <>
                 <h2>Value 4 Value Podcasts</h2>
-                <p>These podcasts are set up to receive Bitcoin payments in real-time over the Lightning network using
-                    compatible <b><Link to="/apps">Podcasting 2.0 apps</Link></b>.</p>
+                <p>
+                    These podcasts are set up to receive Bitcoin payments in
+                    real-time over the Lightning network using compatible{' '}
+                    <b>
+                        <Link to="/apps">Podcasting 2.0 apps</Link>
+                    </b>
+                    .
+                </p>
 
-                <p>There are <b>{total}</b> Value 4 Value podcasts!</p>
+                <p>
+                    There are <b>{total}</b> Value 4 Value podcasts!
+                </p>
 
-                <br/>
+                <br />
 
-                <p>Podcasts are grouped by the first character of the title and then displayed in sort order for that page.</p>
-                <p>The "Popular" page shows all podcasts in the "popularity" order returned from the API.</p>
+                <p>
+                    Podcasts are grouped by the first character of the title and
+                    then displayed in sort order for that page.
+                </p>
+                <p>
+                    The "Popular" page shows all podcasts in the "popularity"
+                    order returned from the API.
+                </p>
                 <p>The "All" page shows all podcasts in sort order.</p>
 
-                <br/>
-
+                <br />
                 {this.renderPageLinks()}
 
                 {this.renderResults()}
-            </div>
+            </>
         )
     }
 }
