@@ -1,17 +1,17 @@
 import * as React from 'react'
-import InfiniteScroll from "react-infinite-scroll-component";
-import ReactLoading from "react-loading";
-import Button from "../Button";
+import InfiniteScroll from 'react-infinite-scroll-component'
+import ReactLoading from 'react-loading'
+import { Button, ButtonGroup } from 'react-bootstrap'
 
 import './styles.scss'
 
 interface IProps {
-    data: Array<any>,
-    itemRenderer: (value: any, index: number) => {},
-    className?: string,
-    showButton?: boolean,
+    data: Array<any>
+    itemRenderer: (value: any, index: number) => {}
+    className?: string
+    showButton?: boolean
     initialDisplay?: number
-    step?: number,
+    step?: number
     itemsShown?: (value: number) => void
 }
 
@@ -43,7 +43,11 @@ export default class InfiniteList extends React.PureComponent<IProps> {
         this.load()
     }
 
-    componentDidUpdate(prevProps: Readonly<IProps>, prevState: Readonly<{}>, snapshot?: any): void {
+    componentDidUpdate(
+        prevProps: Readonly<IProps>,
+        prevState: Readonly<{}>,
+        snapshot?: any
+    ): void {
         if (this.props.data !== prevProps.data) {
             this.load()
         }
@@ -55,8 +59,9 @@ export default class InfiniteList extends React.PureComponent<IProps> {
 
     load() {
         if (this._isMounted) {
-            let {data, initialDisplay} = this.props
-            const displayCount = (data.length >= initialDisplay) ? initialDisplay : data.length
+            let { data, initialDisplay } = this.props
+            const displayCount =
+                data.length >= initialDisplay ? initialDisplay : data.length
             this.updateDisplayCount(displayCount)
         }
     }
@@ -66,8 +71,8 @@ export default class InfiniteList extends React.PureComponent<IProps> {
     }
 
     showMoreData(all: boolean = false) {
-        let {data, step} = this.props
-        let {displayCount} = this.state
+        let { data, step } = this.props
+        let { displayCount } = this.state
 
         if (all || displayCount >= data.length) {
             displayCount = data.length
@@ -84,11 +89,11 @@ export default class InfiniteList extends React.PureComponent<IProps> {
     }
 
     updateDisplayCount(count: number) {
-        const {itemsShown} = this.props
+        const { itemsShown } = this.props
 
         this.setState(
             {
-                displayCount: count
+                displayCount: count,
             },
             () => {
                 if (itemsShown) {
@@ -99,37 +104,50 @@ export default class InfiniteList extends React.PureComponent<IProps> {
     }
 
     showLoader() {
-        let {data} = this.props
-        const {displayCount} = this.state
+        let { data } = this.props
+        const { displayCount } = this.state
         if (displayCount <= data.length) {
-            return (<div/>)
+            return <div />
         }
-        return (
-            <ReactLoading type="cylon" color="#e90000" className="loader"/>
-        )
+        return <ReactLoading type="cylon" color="#e90000" className="loader" />
     }
 
     renderHeader() {
-        const {data, showButton} = this.props
-        const {displayCount} = this.state
+        const { data, showButton } = this.props
+        const { displayCount } = this.state
 
         const disabled = data.length == displayCount
 
         if (showButton) {
             return (
-                <div className="infinite-list-header">
-                    <Button onClick={this.showAll} disabled={disabled} small={true}>Show All</Button>
-                    <p className="count">{displayCount} / {data.length}</p>
+                <div className="d-flex justify-content-end">
+                    <ButtonGroup>
+                        <Button
+                            variant="outline-secondary"
+                            className="btn-xs"
+                            disabled
+                        >
+                            {displayCount} / {data.length}
+                        </Button>
+                        <Button
+                            onClick={this.showAll}
+                            disabled={disabled}
+                            className="btn-xs"
+                            variant="secondary"
+                        >
+                            Show all
+                        </Button>
+                    </ButtonGroup>
                 </div>
             )
         } else {
-            return (<div/>)
+            return <div />
         }
     }
 
     render() {
-        const {data, className, itemRenderer} = this.props
-        let {displayCount} = this.state
+        const { data, className, itemRenderer } = this.props
+        let { displayCount } = this.state
         return (
             <div className={`${className} infinite-list`}>
                 {this.renderHeader()}
@@ -139,13 +157,9 @@ export default class InfiniteList extends React.PureComponent<IProps> {
                     hasMore={displayCount < data.length}
                     loader={this.showLoader()}
                 >
-                    {
-                        data.slice(0, displayCount).map(
-                            (i: any, index) => {
-                                return itemRenderer(i, index)
-                            }
-                        )
-                    }
+                    {data.slice(0, displayCount).map((i: any, index) => {
+                        return itemRenderer(i, index)
+                    })}
                 </InfiniteScroll>
             </div>
         )

@@ -291,38 +291,35 @@ export default class Value4Value extends React.PureComponent<IProps> {
 
         return (
             <>
-                <div className="d-none d-lg-block">
-                    <Pagination size="sm">
-                        {Array.from(pages.keys()).map((value, index) => {
-                            return this.renderPageLink(value, index)
-                        })}
-                    </Pagination>
-                </div>
-                <div className="d-lg-none">
-                    <Form>
-                        <Form.Group as={Row}>
-                            <Form.Label column xs="auto">
-                                Select Page:
-                            </Form.Label>
-                            <Col xs="auto">
-                                <Form.Select
-                                    value={this.getPageId(selectedPage)}
-                                    onChange={this.pageMenuChanged}
-                                >
-                                    {Array.from(pages.keys()).map(
-                                        (value, index) => {
-                                            return this.renderPageLink(
-                                                value,
-                                                index,
-                                                true
-                                            )
-                                        }
-                                    )}
-                                </Form.Select>
-                            </Col>
-                        </Form.Group>
-                    </Form>
-                </div>
+                <Pagination
+                    size="sm"
+                    className="d-none d-lg-flex justify-content-between"
+                >
+                    {Array.from(pages.keys()).map((value, index) => {
+                        return this.renderPageLink(value, index)
+                    })}
+                </Pagination>
+                <Form className=" d-lg-none d-flex justify-content-start">
+                    <Form.Group as={Row}>
+                        <Form.Label column>Select Page:</Form.Label>
+                        <Col>
+                            <Form.Select
+                                value={this.getPageId(selectedPage)}
+                                onChange={this.pageMenuChanged}
+                            >
+                                {Array.from(pages.keys()).map(
+                                    (value, index) => {
+                                        return this.renderPageLink(
+                                            value,
+                                            index,
+                                            true
+                                        )
+                                    }
+                                )}
+                            </Form.Select>
+                        </Col>
+                    </Form.Group>
+                </Form>
             </>
         )
     }
@@ -472,6 +469,8 @@ export default class Value4Value extends React.PureComponent<IProps> {
                 {this.renderPageLinks()}
 
                 {this.renderResults()}
+
+                {this.renderPageLinks()}
             </>
         )
     }
