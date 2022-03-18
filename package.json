@@ -52,12 +52,6 @@
     },
     "devDependencies": {
         "@babel/core": "^7.11.6",
-        "@storybook/addon-actions": "^6.0.21",
-        "@storybook/addon-essentials": "^6.0.21",
-        "@storybook/addon-links": "^6.0.21",
-        "@storybook/node-logger": "^6.0.21",
-        "@storybook/preset-create-react-app": "^3.1.4",
-        "@storybook/react": "^6.0.21",
         "babel-loader": "^8.1.0",
         "copy-webpack-plugin": "^6.3.2",
         "css-loader": "^3.4.2",
@@ -86,8 +80,6 @@
         "test": "react-scripts test --env=jsdom",
         "eject": "react-scripts eject",
         "flow": "flow",
-        "format": "prettier --write 'src/**/*.js'",
-        "storybook": "start-storybook -p 6006 -s public",
-        "build-storybook": "build-storybook -s public"
+        "format": "prettier --write 'src/**/*.js'"
     }
 }
