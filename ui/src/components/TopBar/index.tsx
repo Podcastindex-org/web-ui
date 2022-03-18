@@ -7,7 +7,7 @@ import BrandIcon from '../../../images/brand-icon.svg'
 import BrandName from '../../../images/brand-text.svg'
 import { cleanSearchQuery, encodeSearch } from '../../utils'
 
-import './styles.scss'
+// import './styles.scss'
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 
 // Separate state props + dispatch props to their own interfaces.
