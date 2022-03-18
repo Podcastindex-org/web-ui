@@ -581,7 +581,7 @@ $font-family-sans-serif: 'D-DIN', system-ui, -apple-system, 'Segoe UI', Roboto,
 // // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // // $font-size-base affects the font size of the body text
 $font-size-root: 18px;
-// $font-size-base:              2rem; // Assumes the browser default, typically `16px`
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
 // $font-size-sm:                $font-size-base * .875;
 // $font-size-lg:                $font-size-base * 1.25;
 
@@ -597,23 +597,24 @@ $font-size-root: 18px;
 // $line-height-sm:              1.25;
 // $line-height-lg:              2;
 
-// $h1-font-size:                $font-size-base * 2.5;
-// $h2-font-size:                $font-size-base * 2;
-// $h3-font-size:                $font-size-base * 1.75;
-// $h4-font-size:                $font-size-base * 1.5;
-// $h5-font-size:                $font-size-base * 1.25;
-// $h6-font-size:                $font-size-base;
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
 // // scss-docs-end font-variables
 
 // // scss-docs-start font-sizes
-// $font-sizes: (
-//   1: $h1-font-size,
-//   2: $h2-font-size,
-//   3: $h3-font-size,
-//   4: $h4-font-size,
-//   5: $h5-font-size,
-//   6: $h6-font-size
-// );
+$font-sizes: (
+    1: $h1-font-size,
+    2: $h2-font-size,
+    3: $h3-font-size,
+    4: $h4-font-size,
+    5: $h5-font-size,
+    6: $h6-font-size,
+    7: $font-size-base * 0.8,
+);
 // // scss-docs-end font-sizes
 
 // // scss-docs-start headings-variables

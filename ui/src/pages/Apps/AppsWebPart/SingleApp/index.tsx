@@ -1,32 +1,33 @@
 import React from 'react'
+import { Col, Row } from 'react-bootstrap'
 
-import './styles.scss'
+// import './styles.scss'
 
 function SingleApp(app) {
     return (
-        <li className="podcastIndexAppsSingleApp" key={app.key}>
-            <div className="podcastIndexAppIdentifier">
-                <div className="podcastIndexAppIcon">
+        <Row className="mb-4">
+            <Col xs="3" sm="2" md="1">
+                <a href={app.appUrl}>
                     <img
+                        className="mw-100"
                         src={`${document.location.origin}/api/images/${app.appIconUrl}`}
-                    ></img>
-                </div>
-                <div className="podcastIndexAppTitleAndType">
-                    <a className="podcastIndexAppTitle" href={app.appUrl}>
-                        {app.appName}
-                    </a>
-                    <p className="podcastIndexAppType">
-                        {app.appType.map((type, j) => (
-                            <React.Fragment key={`${j}`}>
-                                {j > 0 && ', '}
-                                {type}
-                            </React.Fragment>
-                        ))}
-                    </p>
-                </div>
-            </div>
-
-            <div className="podcastIndexAppSupportedElements">
+                    />
+                </a>
+            </Col>
+            <Col xs="9" sm="10" md="3">
+                <h5>
+                    <a href={app.appUrl}>{app.appName}</a>
+                </h5>
+                <p>
+                    {app.appType.map((type, j) => (
+                        <React.Fragment key={`${j}`}>
+                            {j > 0 && ', '}
+                            {type}
+                        </React.Fragment>
+                    ))}
+                </p>
+            </Col>
+            <Col xs="12" md="6">
                 {app.supportedElements
                     .sort((a, b) => (a.elementName > b.elementName ? 1 : -1))
                     .map((suppElement, j) => (
@@ -37,14 +38,12 @@ function SingleApp(app) {
                             </a>
                         </React.Fragment>
                     ))}
-            </div>
-
-            <div className="podcastIndexAppPlatforms">
+            </Col>
+            <Col xs="12" md="2">
                 {app.platforms
                     .sort((a, b) => (a > b ? 1 : -1))
                     .map((platform, j) => {
                         const hideNAAppPlatformOnMobile = platform === 'N/A'
-
                         return (
                             <span
                                 className={
@@ -59,8 +58,8 @@ function SingleApp(app) {
                             </span>
                         )
                     })}
-            </div>
-        </li>
+            </Col>
+        </Row>
     )
 }
 

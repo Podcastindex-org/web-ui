@@ -17,6 +17,7 @@ export default class Apps extends React.Component<IProps> {
         const {} = this.props
         return (
             <>
+                <h1>Podcasting 2.0 apps, tools, and services</h1>
                 <AppsWebPart />
                 <div className="contribute-notes">
                     <h4>Your application or website missing?</h4>

@@ -1,95 +1,97 @@
 import React, { useState, useEffect } from 'react'
-import { useHistory, useLocation } from 'react-router-dom';
+import { Accordion, Badge, Button, ButtonGroup, Row } from 'react-bootstrap'
+import { useHistory, useLocation } from 'react-router-dom'
 
-import './styles.scss'
+// import './styles.scss'
 
 function FilterTags({ apps, setFilteredApps, filterTypes }) {
-    const query = useUrlSearchParams();
-    const history = useHistory();
-    const [appTypeFilters, setAppTypeFilters] = useState(new Set() as Set<string>)
+    const query = useUrlSearchParams()
+    const history = useHistory()
+    const [appTypeFilters, setAppTypeFilters] = useState(
+        new Set() as Set<string>
+    )
     const [supportedElementsFilters, setSupportedElementsFilters] = useState(
         new Set() as Set<string>
     )
-    const [platformsFilters, setPlatformsFilters] = useState(new Set() as Set<string>)
-    const [filtersExpanded, setFiltersExpanded] = useState(false);
-
-    useEffect(expandOrCollapseFilters, [filtersExpanded])
+    const [platformsFilters, setPlatformsFilters] = useState(
+        new Set() as Set<string>
+    )
 
     useEffect(filterApps, [
         appTypeFilters,
         supportedElementsFilters,
         platformsFilters,
-        apps
+        apps,
     ])
 
     useEffect(setFiltersFromUrlSearchParams, [query])
 
     function useUrlSearchParams() {
-        const { search } = useLocation();
-    
-        return React.useMemo(() => new URLSearchParams(search), [search]);
-    }
+        const { search } = useLocation()
 
-    function expandOrCollapseFilters() {
-        const container = document.querySelector(
-            '.podcastIndexAppsFilterCategories'
-        ) as HTMLElement
-
-        // The collapse and expand functions are requires because
-        // it is not possible to animate to height: auto with CSS
-        // more at https://carlanderson.xyz/how-to-animate-on-height-auto/
-        if (filtersExpanded) {
-            expandSection(container)
-        } else {
-            collapseSection(container)
-        }
+        return React.useMemo(() => new URLSearchParams(search), [search])
     }
 
     function setFiltersFromUrlSearchParams() {
-        setFiltersFromUrlSearchParam('appTypes', setAppTypeFilters);
-        setFiltersFromUrlSearchParam('elements', setSupportedElementsFilters);
-        setFiltersFromUrlSearchParam('platforms', setPlatformsFilters);
+        setFiltersFromUrlSearchParam('appTypes', setAppTypeFilters)
+        setFiltersFromUrlSearchParam('elements', setSupportedElementsFilters)
+        setFiltersFromUrlSearchParam('platforms', setPlatformsFilters)
     }
 
-    function setFiltersFromUrlSearchParam(paramName: string, filterStateSetter:  React.Dispatch<React.SetStateAction<Set<string>>>) {
+    function setFiltersFromUrlSearchParam(
+        paramName: string,
+        filterStateSetter: React.Dispatch<React.SetStateAction<Set<string>>>
+    ) {
         const paramValue = query.get(paramName)
 
-        if(paramValue) {
+        if (paramValue) {
             const filterValues = paramValue.split(',')
-            filterStateSetter(new Set(filterValues));
-        }
-        else {
-            filterStateSetter(new Set());
+            filterStateSetter(new Set(filterValues))
+        } else {
+            filterStateSetter(new Set())
         }
     }
 
-    function updateLocationURLSearchParameters(filterType: string, filterValue: Set<string>) {
+    function updateLocationURLSearchParameters(
+        filterType: string,
+        filterValue: Set<string>
+    ) {
         const filtersStateCopy = {
             appTypeFilters: new Set(appTypeFilters),
             supportedElementsFilters: new Set(supportedElementsFilters),
-            platformsFilters: new Set(platformsFilters)
+            platformsFilters: new Set(platformsFilters),
         }
 
-        switch(filterType) {
+        switch (filterType) {
             case 'appType':
-                filtersStateCopy.appTypeFilters = filterValue;
-                break;
+                filtersStateCopy.appTypeFilters = filterValue
+                break
             case 'supportedElements':
-                filtersStateCopy.supportedElementsFilters = filterValue;
-                break;
+                filtersStateCopy.supportedElementsFilters = filterValue
+                break
             case 'platforms':
-                filtersStateCopy.platformsFilters = filterValue;
-                break;
+                filtersStateCopy.platformsFilters = filterValue
+                break
         }
 
         const search = new URLSearchParams({
-            ...(filtersStateCopy.appTypeFilters.size && {appTypes: Array.from(filtersStateCopy.appTypeFilters).join(',')}),
-            ...(filtersStateCopy.supportedElementsFilters.size && {elements: Array.from(filtersStateCopy.supportedElementsFilters).join(',')}),
-            ...(filtersStateCopy.platformsFilters.size && {platforms: Array.from(filtersStateCopy.platformsFilters).join(',')}),
-        }).toString();
-        
+            ...(filtersStateCopy.appTypeFilters.size && {
+                appTypes: Array.from(filtersStateCopy.appTypeFilters).join(','),
+            }),
+            ...(filtersStateCopy.supportedElementsFilters.size && {
+                elements: Array.from(
+                    filtersStateCopy.supportedElementsFilters
+                ).join(','),
+            }),
+            ...(filtersStateCopy.platformsFilters.size && {
+                platforms: Array.from(filtersStateCopy.platformsFilters).join(
+                    ','
+                ),
+            }),
+        }).toString()
+
         history.push({
-            search: search? '?' + search : ''
+            search: search ? '?' + search : '',
         })
     }
 
@@ -131,14 +133,14 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
     }
 
     function getFilterStateByType(type: string): Set<string> {
-        switch(type) {
+        switch (type) {
             default:
-            case 'appType': 
-                return appTypeFilters;
+            case 'appType':
+                return appTypeFilters
             case 'supportedElements':
-                return supportedElementsFilters;
+                return supportedElementsFilters
             case 'platforms':
-                return platformsFilters;
+                return platformsFilters
         }
     }
 
@@ -151,113 +153,89 @@ function FilterTags({ apps, setFilteredApps, filterTypes }) {
     function handleTagClick(e) {
         const { type, tag } = e.target.dataset
 
-        const filterStateCopy = new Set(getFilterStateByType(type));
+        const filterStateCopy = new Set(getFilterStateByType(type))
 
-        if(filterStateCopy.has(tag)) {
-            filterStateCopy.delete(tag);
-        }
-        else {
+        if (filterStateCopy.has(tag)) {
+            filterStateCopy.delete(tag)
+        } else {
             filterStateCopy.add(tag)
         }
 
         updateLocationURLSearchParameters(type, filterStateCopy)
     }
 
-    function toggleFilters() {
-        setFiltersExpanded(!filtersExpanded)
-    }
-
-    function collapseSection(element) {
-        var sectionHeight = element.scrollHeight
-
-        var elementTransition = element.style.transition
-        element.style.transition = ''
-
-        requestAnimationFrame(function () {
-            element.style.height = sectionHeight + 'px'
-            element.style.transition = elementTransition
-
-            requestAnimationFrame(function () {
-                element.style.height = 0 + 'px'
-            })
-        })
-    }
-
-    function expandSection(element) {
-        var sectionHeight = element.scrollHeight
-
-        element.style.height = sectionHeight + 'px'
-
-        element.addEventListener('transitionend', function (e) {
-            element.removeEventListener('transitionend', arguments.callee)
-            element.style.height = null
-        })
-    }
-
     function isTagButtonActive(type, tag): boolean {
-        const state = getFilterStateByType(type);
+        const state = getFilterStateByType(type)
 
-        return state.has(tag);
+        return state.has(tag)
     }
 
     /**
-     * Format the tag name for display in the UI by capitalizing 
+     * Format the tag name for display in the UI by capitalizing
      * the first letter of each word in the tag (i.e. podcast player => Podcast Player)
      */
     function formatTagName(tag: string): string {
         return tag
             .split(' ')
-            .map(
-                (v) =>
-                    v.charAt(0).toUpperCase() +
-                    v.slice(1)
-            )
+            .map((v) => v.charAt(0).toUpperCase() + v.slice(1))
             .join(' ')
     }
 
     return (
-        <div className="podcastIndexAppsFilterTagContainer">
-            <h4 onClick={toggleFilters}>
-                Filters<span className="podcastIndexAppsFilterArrow">{filtersExpanded ? '▲': '▼'}</span>
-            </h4>
-            <div className="podcastIndexAppsFilterCategories">
-                {Object.keys(filterTypes).map((key, i) => {
-                    let type = ''
-                    if (key === 'appType') {
-                        type = 'App Type'
-                    } else if (key === 'supportedElements') {
-                        type = 'Supported Elements'
-                    } else if (key === 'platforms') {
-                        type = 'Platforms'
-                    }
-                    let tags = [...filterTypes[key]].map((tag) => tag)
-                    return (
-                        <div className="podcastIndexAppsFilterTags" key={i}>
-                            <div>{type}</div>
-                            <button 
-                                className="clear-button" 
-                                onClick={handleClearClick}
-                                data-type={key}>
-                                    Clear
-                            </button>
-                            {[
-                                ...tags.sort((a, b) => a.localeCompare(b)),
-                            ].map((tag, j) => (
-                                <button
-                                    key={j}
-                                    className={isTagButtonActive(key, tag) ? 'active' : 'inactive'}
-                                    onClick={handleTagClick}
-                                    data-type={key}
-                                    data-tag={tag}
-                                >
-                                    {formatTagName(tag)}
-                                </button>
-                            ))}
-                        </div>
-                    )
-                })}
-            </div>
-        </div>
+        <Row className="mb-4">
+            <Accordion defaultActiveKey="0">
+                <Accordion.Item eventKey="0">
+                    <Accordion.Header>Filters</Accordion.Header>
+                    <Accordion.Body>
+                        {Object.keys(filterTypes).map((key, i) => {
+                            let type = ''
+                            if (key === 'appType') {
+                                type = 'App Type'
+                            } else if (key === 'supportedElements') {
+                                type = 'Supported Elements'
+                            } else if (key === 'platforms') {
+                                type = 'Platforms'
+                            }
+                            let tags = [...filterTypes[key]].map((tag) => tag)
+                            return (
+                                <div key={i} className="mb-3">
+                                    <h6>{type}</h6>
+                                    <Button
+                                        variant="primary"
+                                        className="clear-button me-1 mb-1 btn-xs"
+                                        onClick={handleClearClick}
+                                        data-type={key}
+                                    >
+                                        Clear
+                                    </Button>
+                                    {[
+                                        ...tags.sort((a, b) =>
+                                            a.localeCompare(b)
+                                        ),
+                                    ].map((tag, j) => (
+                                        <Button
+                                            key={j}
+                                            variant="secondary"
+                                            className={
+                                                'me-1 mb-1 btn-xs ' +
+                                                (isTagButtonActive(key, tag)
+                                                    ? 'bg-dark'
+                                                    : '')
+                                            }
+                                            onClick={handleTagClick}
+                                            data-type={key}
+                                            data-tag={tag}
+                                        >
+                                            {formatTagName(tag)}
+                                        </Button>
+                                    ))}
+                                </div>
+                            )
+                        })}
+                    </Accordion.Body>
+                </Accordion.Item>
+            </Accordion>
+        </Row>
     )
 }
 

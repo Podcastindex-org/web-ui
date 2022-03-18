@@ -55,7 +55,7 @@ export default class TopBar extends React.PureComponent<IProps, IState> {
     render() {
         const { search, dropdownOpen } = this.state
         return (
-            <Navbar variant="light" expand="md" className="py-4">
+            <Navbar variant="light" expand="lg" className="py-4">
                 <Container>
                     <LinkContainer to="/">
                         <Navbar.Brand>
@@ -107,7 +107,7 @@ export default class TopBar extends React.PureComponent<IProps, IState> {
                                 <NavDropdown.Item href="https://podcastindex-org.github.io/docs-api/">
                                     Documentation
                                 </NavDropdown.Item>
-                                <NavDropdown.Item href="#https://api.podcastindex.org">
+                                <NavDropdown.Item href="https://api.podcastindex.org">
                                     Get your API key
                                 </NavDropdown.Item>
                             </NavDropdown>
