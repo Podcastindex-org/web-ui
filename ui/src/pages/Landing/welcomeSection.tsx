@@ -3,8 +3,11 @@ import { Container, Row } from 'react-bootstrap'
 
 const WelcomeSection = (props) => {
     return (
-        <Row className="p-5 mb-4">
-            <Container className="py-5" fluid>
+        <Row className="py-md-4 mb-4">
+            <Container
+                className="py-2 py-md-3 py-lg-5 text-center text-lg-start"
+                fluid
+            >
                 <h1>
                     We&rsquo;re making podcasting better for audiences,
                     podcasters, and developers. <br />

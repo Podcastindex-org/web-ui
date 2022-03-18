@@ -6,10 +6,10 @@ import SocialSection from '../SocialSection'
 const BottomBar = (props) => {
     return (
         <Row>
-            <Col>
+            <Col xs="12" md="8">
                 <DonateSection />
             </Col>
-            <Col className="col-4">
+            <Col xs="12" md="4">
                 <SocialSection />
             </Col>
         </Row>

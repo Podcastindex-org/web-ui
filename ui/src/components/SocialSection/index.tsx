@@ -34,10 +34,8 @@ const SocialSection = (props) => {
                     {/* Email us: info@podcastindex.org */}
                 </a>
             </p>
-            <p>
-                Created and maintained by Adam Curry, Dave Jones, and many
-                volunteers.
-            </p>
+            Created and maintained by Adam Curry, Dave Jones, and many
+            volunteers.
         </>
     )
 }

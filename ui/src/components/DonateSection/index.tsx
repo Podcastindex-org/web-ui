@@ -31,14 +31,14 @@ const DonateSection = () => {
                     }).render('#donate-button');} */}
             <Button
                 href="https://www.paypal.com/donate/?hosted_button_id=9GEMYSYB7G2DW"
-                className="me-3"
+                className="me-3 mb-3 mb-lg-0"
                 target="_blank"
                 size="lg"
             >
                 <FontAwesomeIcon icon={faPaypal} className="me-2" />
                 Donate via PayPal
             </Button>
-            <Button onClick={handleShow} size="lg">
+            <Button onClick={handleShow} size="lg" className="mb-3 mb-md-0">
                 <FontAwesomeIcon icon={faBitcoin} className="me-2" />
                 Donate Bitcoin via Talley Coin
             </Button>

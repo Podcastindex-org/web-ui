@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    overflow: hidden;
 }
 
 .player-bottom {
@@ -17,12 +18,15 @@
 
 .player-media-controls {
     width: calc(100% - 20px);
+    .player-show-title {
+        width: 100%;
+    }
     .player-show-title p {
         font-size: 20px;
         font-family: var(--font-family);
         font-weight: bold;
         text-align: center;
-        width: 450px;
+        // width: 450px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -31,7 +35,7 @@
     }
     .player-podcast-name {
         text-align: center;
-        width: 450px;
+        width: 100%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -79,8 +83,8 @@
     }
 }
 
-@media only screen and (max-width: 520px) {
-    .player-show-title p {
-        max-width: 350px;
-    }
-}
+// @media only screen and (max-width: 520px) {
+//     .player-show-title p {
+//         max-width: 350px;
+//     }
+// }

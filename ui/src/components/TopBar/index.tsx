@@ -70,7 +70,7 @@ export default class TopBar extends React.PureComponent<IProps, IState> {
                 </LinkContainer>
                 <Navbar.Toggle aria-controls="main-nav" className="px-0" />
                 <Navbar.Collapse id="main-nav">
-                    <Nav className="me-auto">
+                    <Nav className="me-xl-5">
                         <LinkContainer to="/apps">
                             <Nav.Link>Apps</Nav.Link>
                         </LinkContainer>

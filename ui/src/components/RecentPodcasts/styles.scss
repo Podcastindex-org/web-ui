@@ -23,7 +23,6 @@
 .player-title {
     font-family: var(--font-family);
     font-size: 22px;
-    color: #e64545;
     text-align: center;
     padding-top: 15px;
     padding-bottom: 10px;
@@ -101,30 +100,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // padding: 25px 25px 0 25px;
+    padding: 25px 25px 0 25px;
     img {
-        width: 450px;
-        height: 450px;
+        max-width: 100%;
         border-radius: 14px;
         border: 1px solid lighten(#d6d6d6, 0.2);
     }
-    z-index: 99999;
+    // z-index: 99999;
 }
 
 @media only screen and (max-width: 520px) {
     /* portrait phones */
     .player-card {
         margin: 0 auto;
-        width: 340px;
+        width: 100%;
         min-height: 480px;
-        height: 525px;
-    }
-    .player-info {
-        .player-show-title {
-            p {
-                width: 300px;
-            }
-        }
     }
     .player-cover-art {
         display: inline-flex;
