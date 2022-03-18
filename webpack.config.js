@@ -9,7 +9,7 @@ module.exports = {
     mode: 'production',
     devtool: false,
     devServer: {
-        contentBase: path.join(__dirname, './server/www'),
+        static: path.join(__dirname, './server/www'),
         compress: true,
         port: 9001,
         historyApiFallback: true,
@@ -32,25 +32,33 @@ module.exports = {
         publicPath: '/',
         filename: 'bundle.js',
     },
-    node: {
-        fs: 'empty',
-    },
     resolve: {
         // Add `.ts` and `.tsx` as a resolvable extension.
         extensions: ['.ts', '.tsx', '.js'],
+        fallback: {
+            fs: false,
+        },
     },
     module: {
         rules: [
             // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
             { test: /\.tsx?$/, loader: 'ts-loader' },
             {
-                test: /\.scss$/,
+                test: /\.s[ac]ss$/i,
                 use: [
                     'style-loader',
                     {
                         loader: 'css-loader',
+                        options: {
+                            sourceMap: true,
+                        },
                     },
-                    'sass-loader?sourceMap',
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
                 ],
             },
             {
@@ -116,7 +124,7 @@ module.exports = {
             favicons: {
                 appName: 'Podcastindex.org',
                 appDescription:
-                    'Let’s preserve podcasting as a platform for free speech',
+                    "Let's preserve podcasting as a platform for free speech",
                 developerName: 'Podcastindex.org',
                 developerURL: null, // prevent retrieving from the nearest package.json
                 background: '#ffffff',
