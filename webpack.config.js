@@ -98,6 +98,17 @@ module.exports = {
             {
                 test: /\.(woff(2)?|ttf|eot|otf)(\?v=\d+\.\d+\.\d+)?$/,
                 type: 'asset/resource',
+                generator: {
+                    filename: 'fonts/[name][ext][query]',
+                },
+                // use: {
+                //     loader: 'file-loader',
+                //     options: {
+                //         limit: 50000,
+                //         name: './fonts/[name].[ext]', // Output below ./fonts
+                //         publicPath: '../', // Take the directory into account
+                //     },
+                // },
             },
         ],
     },
