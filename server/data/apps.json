@@ -1615,5 +1615,27 @@
         "elementURL": "https://github.com/valcanobacon/BoostCLI/blob/master/README.md"
       }
     ]
+  },
+  {
+    "appName": "Value 4 Value Calculator",
+    "appType": [
+      "open source",
+      "website"
+    ],
+    "appUrl": "https://github.com/dwvisser/v4v_exchange",
+    "appIconUrl": "github.jpg",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value",
+        "elementURL": "https://dwvisser.github.io/v4v_exchange/"
+      },
+      {
+        "elementName": "Sat Streaming",
+        "elementURL": "https://dwvisser.github.io/v4v_exchange/"
+      }
+    ]
   }
 ]
