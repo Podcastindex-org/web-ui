@@ -603,7 +603,8 @@
   {
     "appName": "CastCoverage",
     "appType": [
-      "app"
+      "app",
+      "podcast player"
     ],
     "appUrl": "http://castcoverage.com",
     "appIconUrl": "castcoverage.png",
@@ -613,6 +614,18 @@
     "supportedElements": [
       {
         "elementName": "Search",
+        "elementURL": "http://castcoverage.com"
+      },
+      {
+        "elementName": "Randomizer",
+        "elementURL": "http://castcoverage.com"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "http://castcoverage.com"
+      },
+      {
+        "elementName": "Chapters",
         "elementURL": "http://castcoverage.com"
       }
     ]
