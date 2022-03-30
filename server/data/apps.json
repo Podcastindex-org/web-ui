@@ -1,5 +1,36 @@
 [
   {
+    "appName": "AudioWave",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "appUrl": "https://apps.apple.com/be/app/audiowave-podcast-player/id1602776751",
+    "appIconUrl": "audiowave.jpg",
+    "platforms": [
+      "iOS",
+      "iPad OS"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://apps.apple.com/be/app/audiowave-podcast-player/id1602776751"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://twitter.com/audiowave_fm/status/1503754058066243593"
+      },
+      {
+        "elementName": "Location",
+        "elementURL": "https://apps.apple.com/be/app/audiowave-podcast-player/id1602776751"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://apps.apple.com/be/app/audiowave-podcast-player/id1602776751"
+      }
+    ]
+  },
+  {
     "appName": "Caproni",
     "appType": [
       "hosting"
