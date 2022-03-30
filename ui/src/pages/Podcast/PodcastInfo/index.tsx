@@ -144,7 +144,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     renderHeader() {
         let {result} = this.state
         let {title, image, artwork, author, description, categories, value, id, link, url, funding} = result
-        image = image || artwork
+        image = artwork || image
         let podcastURL = fixURL(link)
         let feedURL = fixURL(url)
         let donationPageURL = null
