@@ -9,7 +9,7 @@
     "appIconUrl": "audiowave.jpg",
     "platforms": [
       "iOS",
-      "iPad OS"
+      "Web"
     ],
     "supportedElements": [
       {
