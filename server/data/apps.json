@@ -455,6 +455,10 @@
       {
         "elementName": "Sat Streaming",
         "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
+      },
+      {
+        "elementName": "Boostagrams",
+        "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.12.lnaddrees"
       }
     ]
   },
