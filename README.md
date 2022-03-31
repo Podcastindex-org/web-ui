@@ -2,11 +2,11 @@
 
 Podcast Web UI is a project that houses the code for the React app and express server for [podcastindex.org](https://podcastindex.org/).
 
-- Landing page for PodcastIndex.
-- Search for podcasts in index.
-- Simple podcast player for listening
-- List of apps using the PodcastIndex
-- Documentation and developer login for credential management
+-   Landing page for PodcastIndex.
+-   Search for podcasts in index.
+-   Simple podcast player for listening
+-   List of apps using the PodcastIndex
+-   Documentation and developer login for credential management
 
 ## Project Structure
 
@@ -58,6 +58,24 @@ yarn dev
 yarn start
 ```
 
+### Run the dev server with Docker
+
+Build the image direct from the source (Daniel J. Lewis's branch currently shown):
+
+```zsh
+docker build https://github.com/theDanielJLewis/web-ui.git\#djl -t podcastindex-ui
+```
+
+Replace the text in the quotation marks with your API key and secret (but keep the surrounding single quotes) in the following command and then run it:
+
+```zsh
+docker run -p 9001:9001 -p 5001:5001 --env API_KEY='your_api_key_here' --env API_SECRET='your_api_secret_here' -it podcastindex-ui
+```
+
+Now, you can view the site through http://localhost:9001/ in your browser. Watch for the line `On Your Network (IPv4):` to get the address for viewing through another device on your network.
+
+To quit the server, press Ctrl-C (even on macOS) back in the terminal.
+
 ## Running production
 
 To start the server, simply run after setting the `.env` file
@@ -73,9 +91,9 @@ npm start
 
 ## Tech List
 
-- [Express](https://expressjs.com/)
-- [React](https://reactjs.org/)
-- [Webpack](https://webpack.js.org/)
+-   [Express](https://expressjs.com/)
+-   [React](https://reactjs.org/)
+-   [Webpack](https://webpack.js.org/)
 
 ## TODO
 

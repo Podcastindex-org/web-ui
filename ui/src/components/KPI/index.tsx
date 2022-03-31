@@ -1,6 +1,5 @@
 import * as React from 'react'
-
-import './styles.scss'
+import { Col } from 'react-bootstrap'
 
 // Separate state props + dispatch props to their own interfaces.
 interface PropsFromState {
@@ -22,18 +21,15 @@ export default class KPI extends React.PureComponent<AllProps> {
 
     render() {
         const { big, title, value, unit, trending } = this.props
-        const bigClass = big ? 'big' : ''
         return (
-            <div className={`kpi ${bigClass}`}>
-                {title && <div className="kpi-title">{title}</div>}
-                <div className="kpi-data">
-                    <div className="kpi-value">{value}</div>
-                    <div className="kpi-metadata">
-                        <div className="kpi-trending"></div>
-                        <div className="kpi-unit">{unit}</div>
-                    </div>
-                </div>
-            </div>
+            <Col>
+                {title && <h6 className="mb-0">{title}</h6>}
+                <p className="fs-1 text-primary">{value}</p>
+                {/* <div className="kpi-metadata">
+                    <div className="kpi-trending"></div>
+                    <div className="kpi-unit">{unit}</div>
+                </div> */}
+            </Col>
         )
     }
 }

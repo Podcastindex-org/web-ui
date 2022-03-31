@@ -1,10 +1,11 @@
 import * as React from 'react'
 
-import {Link} from "react-router-dom";
-import {truncateString} from '../../utils'
+import { Link } from 'react-router-dom'
+import { truncateString } from '../../utils'
 import NoImage from '../../../images/no-cover-art.png'
 
 import './styles.scss'
+import { Badge, Card, Col, Container, Row } from 'react-bootstrap'
 
 interface IProps {
     title?: string
@@ -36,47 +37,61 @@ export default class ResultItem extends React.PureComponent<IProps> {
         }
         if (categoryArray.length === 0) {
             return (
-                <div className="result-category no-category">No Categories</div>
+                <Badge bg="light" pill className="text-muted">
+                    No Categories
+                </Badge>
             )
         }
         // Only render a max of 5 categories
         return categoryArray.slice(0, 5).map((cat, i) => (
-            <div key={`cat-${i}`} className="result-category">
+            <Badge bg="light" pill key={`cat-${i}`} className="text-dark">
                 {cat}
-            </div>
+            </Badge>
         ))
     }
 
     render() {
-        const {title, description, author, categories, image, id} = this.props
+        const { title, description, author, categories, image, id } = this.props
         // const { open } = this.state
         return (
-            <div className="result">
-                <div className="result-row">
-                    <div className="result-cover-art">
-                        <Link to={`/podcast/${id}`}>
-                            <img
-                                draggable={false}
-                                src={image}
-                                onError={(ev: any) => {
-                                    ev.target.src = NoImage
-                                }}
-                                loading="lazy"
-                            />
-                        </Link>
+            <Card className="my-3">
+                <Card.Body>
+                    <Row className="mb-2">
+                        <Col xs="4" sm="3" lg="2" className="align-self-center">
+                            <Link to={`/podcast/${id}`}>
+                                <img
+                                    draggable={false}
+                                    src={image}
+                                    onError={(ev: any) => {
+                                        ev.target.src = NoImage
+                                    }}
+                                    loading="lazy"
+                                    className="mw-100 "
+                                />
+                            </Link>
+                        </Col>
+                        <Col
+                            xs="8"
+                            sm="9"
+                            lg="10"
+                            className="align-self-center"
+                        >
+                            <h5>
+                                <Link to={`/podcast/${id}`}>{title}</Link>
+                            </h5>
+                            by {author}
+                            <div className="mt-2 d-none d-sm-block">
+                                {this.renderCategories(categories)}
+                            </div>
+                        </Col>
+                    </Row>
+                    <div className="d-sm-none mb-2">
+                        {this.renderCategories(categories)}
                     </div>
-                    <div className="result-info">
-                        <div className="result-title"><Link to={`/podcast/${id}`}>{title}</Link></div>
-                        <p>by {author}</p>
-                        <div className="result-categories">
-                            {this.renderCategories(categories)}
-                        </div>
-                    </div>
-                </div>
-                <p className="result-description">
-                    {truncateString(description)}
-                </p>
-            </div>
+
+                    <Card.Text>{truncateString(description)}</Card.Text>
+                </Card.Body>
+            </Card>
         )
     }
 }
