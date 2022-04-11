@@ -209,13 +209,16 @@
     "appName": "Podverse",
     "appType": [
       "app",
-      "podcast player"
+      "open source",
+      "podcast player",
+      "video"
     ],
     "appUrl": "https://podverse.fm",
     "appIconUrl": "podverse.jpg",
     "platforms": [
-      "iOS",
       "Android",
+      "F-Droid",
+      "iOS",
       "Web"
     ],
     "supportedElements": [
@@ -224,16 +227,20 @@
         "elementURL": "https://twitter.com/Podverse/status/1324729288281632771?s=20"
       },
       {
+        "elementName": "Funding",
+        "elementURL": "https://twitter.com/Podverse/status/1325734448608899072?s=20"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://podverse.fm"
+      },
+      {
         "elementName": "Soundbite",
         "elementURL": "https://twitter.com/Podverse/status/1326072379597053953?s=20"
       },
       {
         "elementName": "Transcript",
         "elementURL": "https://twitter.com/Podverse/status/1324729288281632771?s=20"
-      },
-      {
-        "elementName": "Funding",
-        "elementURL": "https://twitter.com/Podverse/status/1325734448608899072?s=20"
       }
     ]
   },
