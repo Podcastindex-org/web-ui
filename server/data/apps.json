@@ -475,7 +475,8 @@
     "appUrl": "https://www.antennapod.org",
     "appIconUrl": "antennapod.png",
     "platforms": [
-      "Android"
+      "Android",
+      "F-Droid"
     ],
     "supportedElements": [
       {
