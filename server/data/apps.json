@@ -177,13 +177,14 @@
     ]
   },
   {
-    "appName": "CastOS",
+    "appName": "Castos",
     "appType": [
       "hosting"
     ],
     "appUrl": "https://castos.com",
     "appIconUrl": "castos.png",
     "platforms": [
+      "Wordpress",
       "Web"
     ],
     "supportedElements": [
