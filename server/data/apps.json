@@ -1264,7 +1264,27 @@
       {
         "elementName": "Podping",
         "elementUrl": "https://justcast.com"
-      }
+      },
+      {
+        "elementName": "Location",
+        "elementUrl": "https://justcast.com"
+      },
+      {
+        "elementName": "People",
+        "elementUrl": "https://justcast.com"
+      },
+      {
+        "elementName": "Funding",
+        "elementUrl": "https://justcast.com"
+      },
+      {
+        "elementName": "Locked",
+        "elementUrl": "https://justcast.com"
+      },
+      {
+        "elementName": "Season",
+        "elementUrl": "https://justcast.com"
+      }      
     ]
   },
   {
