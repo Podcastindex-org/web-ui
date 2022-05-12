@@ -70,9 +70,9 @@
         "webpack-dev-server": "^3.10.3"
     },
     "scripts": {
-        "dev": "webpack-dev-server --mode development --devtool inline-source-map",
+        "dev": "webpack-dev-server --env.file=development --mode development --devtool inline-source-map",
         "build": "webpack",
-        "production": "NODE_ENV='production' && webpack --mode production && node server",
+        "production": "NODE_ENV='production' && webpack --env.file=production --mode production && node server",
         "start": "node server",
         "test": "react-scripts test --env=jsdom",
         "eject": "react-scripts eject",

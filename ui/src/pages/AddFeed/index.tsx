@@ -4,7 +4,6 @@ import ReactLoading from 'react-loading'
 import { Link } from 'react-router-dom'
 import Button from "../../components/Button"
 import ResultItem from "../../components/ResultItem"
-
 import { cleanSearchQuery, updateTitle } from '../../utils'
 
 import './styles.scss'
@@ -275,8 +274,8 @@ export default class AddFeed extends React.PureComponent<IProps> {
                         />
                     </div>
                     <HCaptcha
-                        // TODO: replace this
-                        sitekey="00000001-0000-0001-0000-000000000001"
+                        //sitekey="00000001-0000-0001-0000-000000000001"
+                        sitekey={process.env.HCAPTCHA_SITE_KEY}
                         onVerify={this.setToken}
                         onError={this.onError}
                         onExpire={this.onExpire}
