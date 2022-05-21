@@ -1718,5 +1718,33 @@
         "elementURL": "https://dwvisser.github.io/v4v_exchange/"
       }
     ]
+  },
+  {
+    "appName": "Podvine",
+    "appType": [
+      "hosting",
+      "podcasting player",
+      "app"
+    ],
+    "appUrl": "https://podvine.com",
+    "appIconUrl": "podvine.png",
+    "platforms": [
+      "Web",
+      "App"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://podvine.com/search?="
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://podvine.com"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://podvine.com"
+      }
+    ]
   }
 ]
