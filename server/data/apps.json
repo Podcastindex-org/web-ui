@@ -1750,5 +1750,42 @@
         "elementURL": "https://podvine.com"
       }
     ]
+  },
+  {
+    "appName": "RSS Blue",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://rssblue.com",
+    "appIconUrl": "rssblue.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://rssblue.com/help/episode-metadata#transcript"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://rssblue.com/help/podcast-metadata#locked"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://rssblue.com/help/podcast-metadata#funding-url"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://rssblue.com/help/episode-metadata#chapters-data"
+      },
+      {
+        "elementName": "Location",
+        "elementURL": "https://rssblue.com/help/podcast-metadata#location"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://rssblue.com/help/podcast-metadata#lightning-node"
+      }
+    ]
   }
 ]
