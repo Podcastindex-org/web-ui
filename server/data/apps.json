@@ -1783,6 +1783,10 @@
         "elementURL": "https://rssblue.com/help/podcast-metadata#location"
       },
       {
+        "elementName": "GUID",
+        "elementURL": "https://rssblue.com/help/podcasting-2.0#progress-2"
+      },
+      {
         "elementName": "Value",
         "elementURL": "https://rssblue.com/help/podcast-metadata#lightning-node"
       }
