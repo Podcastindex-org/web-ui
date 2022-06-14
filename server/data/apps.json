@@ -1789,6 +1789,10 @@
       {
         "elementName": "Value",
         "elementURL": "https://rssblue.com/help/podcast-metadata#lightning-node"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://rssblue.com/help/podcast-metadata#medium"
       }
     ]
   }
