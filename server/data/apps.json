@@ -224,6 +224,14 @@
     ],
     "supportedElements": [
       {
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://twitter.com/Podverse/status/1540138088873205760"
+      },
+      {
+        "elementName": "Boostagrams",
+        "elementURL": "https://twitter.com/Podverse/status/1540142944539262978"
+      },
+      {
         "elementName": "Chapters",
         "elementURL": "https://twitter.com/Podverse/status/1324729288281632771?s=20"
       },
@@ -232,8 +240,12 @@
         "elementURL": "https://twitter.com/Podverse/status/1325734448608899072?s=20"
       },
       {
+        "elementName": "Live Item",
+        "elementURL": "https://twitter.com/Podverse/status/1521198937742487553"
+      },
+      {
         "elementName": "Search",
-        "elementURL": "https://podverse.fm"
+        "elementURL": "https://podverse.fm/search"
       },
       {
         "elementName": "Soundbite",
