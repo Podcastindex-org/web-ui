@@ -1347,6 +1347,25 @@
       }
     ]
   },
+    {
+    "appName": "Alby",
+    "appType": [
+      "node hosting",
+      "podcaster wallet"
+    ],
+    "tagLine": "The simplest way to receive boostagrams from your listeners",
+    "appUrl": "https://getalby.com/podcast-wallet",
+    "appIconUrl": "https://cdn.getalby-assets.com/alby-on-other-websites/Alby-logo-figure-400.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value",
+        "elementURL": "https://blog.getalby.com/bitcoin-payments-for-podcasters-with-alby/"
+      }
+    ]
+  },
   {
     "appName": "Podcastpage.io",
     "appType": [
