@@ -1,5 +1,29 @@
 [
   {
+    "appName": "Moonbeam",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "appUrl": "https://www.moonbeam.fm/",
+    "appIconUrl": "moonbeam_logo.png",
+    "platforms": [
+      "Android",
+      "iOS",
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Podping",
+        "elementURL": "https://www.moonbeam.fm/"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://www.moonbeam.fm/"
+      }
+    ]
+  },
+  {
     "appName": "AudioWave",
     "appType": [
       "app",
