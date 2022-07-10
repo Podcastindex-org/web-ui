@@ -1828,5 +1828,22 @@
         "elementURL": "https://rssblue.com/help/podcast-metadata#medium"
       }
     ]
+  },
+    {
+    "appName": "Taddy Podcast API",
+    "appType": [
+      "directory"
+    ],
+    "appUrl": "https://taddy.org/developers/podcast-api",
+    "appIconUrl": "taddydev.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://taddy.org/developers/podcast-api/search"
+      },
+    ]
   }
 ]
