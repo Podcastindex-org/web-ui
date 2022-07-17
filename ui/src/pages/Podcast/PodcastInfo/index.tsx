@@ -62,7 +62,6 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         const result = (await this.getPodcastInfo(id)).feed
         const episodes: Array<any> = (await this.getEpisodes(id)).items
         if (this._isMounted) {
-            window["csb1"] = episodes;
             this.setState({
                 loading: false,
                 result,
