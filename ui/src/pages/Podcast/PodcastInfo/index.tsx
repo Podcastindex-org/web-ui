@@ -62,6 +62,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         const result = (await this.getPodcastInfo(id)).feed
         const episodes: Array<any> = (await this.getEpisodes(id)).items
         if (this._isMounted) {
+            window["csb1"] = episodes;
             this.setState({
                 loading: false,
                 result,
@@ -216,7 +217,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
 
 
     renderEpisode(item, index: number) {
-        let {title, image, feedImage, link, enclosureUrl, description, datePublished, value} = item
+        let {title, image, feedImage, link, enclosureUrl, transcriptUrl, description, datePublished, value} = item
         let {result} = this.state
         // try to use episode image, fall back to feed images
         image =
@@ -242,6 +243,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
                     link={link}
                     value={value}
                     enclosureUrl={enclosureUrl}
+                    transcriptUrl={transcriptUrl}
                     description={description}
                     datePublished={datePublished}
                     onPlay={this.onEpisodePlay}
