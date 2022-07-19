@@ -787,7 +787,11 @@
       {
         "elementName": "Funding",
         "elementURL": "https://github.com/stonega/tsacdop/releases/tag/v0.5.4"
-      }
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://github.com/stonega/tsacdop/releases/tag/v0.5.8"
+      } 
     ]
   },
   {
@@ -817,7 +821,7 @@
       "podcast player",
       "open source"
     ],
-    "appUrl": "https://github.com/y20k/escapepod",
+    "appUrl": "https://codeberg.org/y20k/escapepod",
     "appIconUrl": "escapepod.png",
     "platforms": [
       "Android",
