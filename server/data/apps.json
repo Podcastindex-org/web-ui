@@ -1795,7 +1795,8 @@
     "appIconUrl": "podvine.png",
     "platforms": [
       "Web",
-      "App"
+      "iOS",
+      "Android"
     ],
     "supportedElements": [
       {
