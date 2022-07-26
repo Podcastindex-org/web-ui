@@ -531,6 +531,10 @@
       {
         "elementName": "Funding",
         "elementURL": "https://github.com/AntennaPod/AntennaPod/pull/4933"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://github.com/AntennaPod/AntennaPod/pull/5630"
       }
     ]
   },
