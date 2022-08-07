@@ -7,6 +7,7 @@ import PlayLogo from '../../../images/play-circle.svg'
 import PauseLogo from '../../../images/pause-circle.svg'
 import EarthLogo from '../../../images/earth.svg'
 import DownloadLogo from '../../../images/download-outline.svg'
+import TranscriptLogo from '../../../images/transcript.svg'
 
 import './styles.scss'
 
@@ -16,7 +17,8 @@ interface IProps {
     image?: any
     link?: string,
     value?: any,
-    enclosureUrl?: string
+    enclosureUrl?: string,
+    transcriptUrl?: string, //csbdev
     description?: string
     datePublished?: number
     onPlay?: any
@@ -75,9 +77,10 @@ export default class EpisodeItem extends React.PureComponent<IProps> {
     }
 
     render() {
-        const {title, image, link, value, enclosureUrl, description, datePublished} = this.props
+        const {title, image, link, value, enclosureUrl, transcriptUrl, description, datePublished} = this.props
         const episodeLink = link
         const episodeEnclosure = enclosureUrl
+        const episodeTranscript = transcriptUrl
 
         return (
             <div className="episode">
@@ -130,6 +133,20 @@ export default class EpisodeItem extends React.PureComponent<IProps> {
                                 : ""
                             }
 
+                            {episodeTranscript ?
+                                <a
+                                    className="episode-link"
+                                    href={episodeTranscript}
+                                    title="Transcript"
+                                    download
+                                >
+                                    <img
+                                        alt="Download Transcript"
+                                        src={TranscriptLogo}/>
+                                </a>
+                                : ""
+                            }
+                            
                             <img
                                 alt="Play/pause episode"
                                 className="episode-play-pause-mobile"
