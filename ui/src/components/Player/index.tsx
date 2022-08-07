@@ -26,7 +26,7 @@ export default class Player extends React.Component<IProps> {
     }
     state = {
         playing: false,
-        satAmount: 100,
+        satAmount: 5000,
         boostagram: '',
         destinations: undefined,
     }
