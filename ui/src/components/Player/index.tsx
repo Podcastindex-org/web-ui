@@ -5,11 +5,11 @@ import { AUDIO_PRELOAD_ATTRIBUTE } from 'react-h5-audio-player/src/constants'
 import { v4 as uuidv4 } from 'uuid'
 import { Link } from 'react-router-dom'
 import { getISODate, getPrettyDate } from '../../utils'
-import { requestProvider } from 'webln'
-import confetti from 'canvas-confetti'
 
 import 'react-h5-audio-player/src/styles.scss'
 import './styles.scss'
+
+import Boostagram from '../Boostagram'
 
 interface IProps {
     episode?: any
@@ -124,147 +124,8 @@ export default class Player extends React.Component<IProps> {
         }
     }
 
-    handleSatChange = (e: any) => {
-        this.setState({
-            satAmount: e.target.validity.valid
-                ? e.target.value
-                : this.state.satAmount,
-        })
-    }
-
-    handleTextAreaChange = (e: any) => {
-        this.setState({
-            boostagram: e.target.value,
-        })
-    }
-
-    boost = async () => {
-        const { episode, podcast } = this.props
-        let webln
-        let destinations = this.state.destinations
-
-        const getBaseRecord = () => {
-            return {
-                podcast: podcast?.title,
-                feedID: podcast?.id,
-                itemID: episode?.id,
-                episode: episode?.title,
-                ts: Math.trunc(this.player.current.audio.current.currentTime),
-                action: 'boost',
-                app_name: 'Podcast Index',
-                value_msat: 0,
-                value_msat_total: this.state.satAmount * 1000,
-                name: undefined,
-                message: this.state.boostagram,
-            }
-        }
-
-        let feesDestinations = destinations.filter((v) => v.fee)
-        let splitsDestinations = destinations.filter((v) => !v.fee)
-        let runningTotal = this.state.satAmount
-
-        try {
-            webln = await requestProvider()
-        } catch (err) {
-            // Tell the user what went wrong
-            alert(
-                `${err.message} \r\n Try using Alby ( https://getalby.com/ ) on the Desktop \r\n or installing Blue Wallet ( https://bluewallet.io/ ) \r\n or Blixt Wallet ( https://blixtwallet.github.io/ )  \r\n on your mobile device.`
-            )
-        }
-
-        if (webln) {
-            this.throwConfetti()
-            for (const dest of feesDestinations) {
-                let feeRecord = getBaseRecord()
-
-                let amount = Math.round(
-                    (dest.split / 100) * this.state.satAmount
-                )
-                if (amount) {
-                    runningTotal -= amount
-                    feeRecord.name = dest.name
-                    feeRecord.value_msat = amount * 1000
-
-                    let customRecords = { '7629169': JSON.stringify(feeRecord) }
-
-                    if (dest.customKey) {
-                        customRecords[dest.customKey] = dest.customValue
-                    }
-
-                    try {
-                        await webln.keysend({
-                            destination: dest.address,
-                            amount: amount,
-                            customRecords: customRecords,
-                        })
-                    } catch (err) {
-                        alert(`error with  ${dest.name}:  ${err.message}`)
-                    }
-                }
-            }
-
-            for (const dest of splitsDestinations) {
-                let record = getBaseRecord()
-                let amount = Math.round((dest.split / 100) * runningTotal)
-                record.name = dest.name
-                record.value_msat = amount * 1000
-                if (amount >= 1) {
-                    let customRecords = { '7629169': JSON.stringify(record) }
-                    if (dest.customKey) {
-                        customRecords[dest.customKey] = dest.customValue
-                    }
-
-                    try {
-                        await webln.keysend({
-                            destination: dest.address,
-                            amount: amount,
-                            customRecords: customRecords,
-                        })
-                    } catch (err) {
-                        alert(`error with  ${dest.name}:  ${err.message}`)
-                    }
-                }
-            }
-        }
-    }
-
-    throwConfetti() {
-        let end = Date.now() + 0.1 * 1000
-
-        let colors = [
-            '#fa6060',
-            '#faa560',
-            '#faf760',
-            '#b2fa60',
-            '#60c1fa',
-            '#7260fa',
-            '#fa60f2',
-        ]
-
-        ;(function frame() {
-            confetti({
-                particleCount: 12,
-                angle: 60,
-                spread: 75,
-                origin: { x: 0, y: 0.9 },
-                colors: colors,
-            })
-            confetti({
-                particleCount: 12,
-                angle: 120,
-                spread: 75,
-                origin: { x: 1, y: 0.9 },
-                colors: colors,
-            })
-
-            if (Date.now() < end) {
-                requestAnimationFrame(frame)
-            }
-        })()
-    }
-
     render() {
-        const { episode, preload } = this.props
+        const { episode, podcast, preload } = this.props
 
         //See if a pciguid exists in local storage.  They are stored using a hash of the enclosure url as the key to avoid
         //character encoding issues with what browsers accept as a valid key.  If the value exists, get it.  If not, create
@@ -293,31 +154,6 @@ export default class Player extends React.Component<IProps> {
 
         //Assemble the new url
         let enclosureUrl = episode.enclosureUrl + pciGuid + fromTag
-
-        let boostagram
-
-        if (this.state.destinations) {
-            boostagram = (
-                <div className="boostagram-corner">
-                    <textarea
-                        value={this.state.boostagram}
-                        onChange={this.handleTextAreaChange}
-                        placeholder="type your boostagram here"
-                    />
-                    <label>
-                        <input
-                            type="text"
-                            pattern="[0-9]*"
-                            value={this.state.satAmount}
-                            onChange={this.handleSatChange}
-                            onFocus={(e) => e.target.select()}
-                        />
-                        sats
-                    </label>
-                    <button onClick={this.boost}>Boost</button>
-                </div>
-            )
-        }
 
         return (
             <div className="player-media-controls">
@@ -367,7 +203,11 @@ export default class Player extends React.Component<IProps> {
                         </a>,
                     ]}
                 />
-                {boostagram}
+                <Boostagram
+                    episode={episode}
+                    podcast={podcast}
+                    player={this.player}
+                />
             </div>
         )
     }

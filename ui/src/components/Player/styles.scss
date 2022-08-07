@@ -76,59 +76,7 @@
                 fill: var(--color-primary);
             }
         }
-    }
-
-    .boostagram-corner{
-        display: flex;
-        margin: 0 0 8px 0;
-        align-items: center;
-    }
-    .episode .podcast-value .v4v-header h4{
-        margin: 0;
-    }
-
-    .boostagram-corner textarea{
-        flex-grow:1;
-        margin: 0 16px;
-        font-size: 1.2em;
-        border-radius: 5px;        
-        height: 80px;
-        resize: none;
-        padding: 8px
-    }
-
-    .boostagram-corner label{
-        font-size: 1.1em;
-        font-weight: 550;
-    }
-
-    .boostagram-corner input{
-        border:1px solid gray;
-        padding: 8px;
-        font-size: 1.1em;
-        font-weight: 550;
-        text-align: right ;
-        width: 100px;
-        margin-right: 4px;
-        border-radius: 5px
-    }
-
-    .boostagram-corner input:focus{
-        border:2px solid black;
-    }
-    
-    .boostagram-corner button{
-        margin: 0 0 0 16px;
-        padding: 8px 12px;
-        width: 100px;
-        border: none;
-        background-color: #AA0000;
-        border-radius: 5px;
-        color: #fff;
-        cursor: pointer;
-        font-size: 1.1em;
-        font-weight: 600; 
-    }
+    } 
 }
 
 @media only screen and (max-width: 520px) {
