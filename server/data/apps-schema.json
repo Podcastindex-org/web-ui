@@ -115,7 +115,8 @@
             "Podping",
             "Alternate Enclosure",
             "Trailer",
-            "GUID"
+            "GUID",
+            "Medium"
           ]
         },
         "elementURL": {

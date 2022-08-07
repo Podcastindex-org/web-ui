@@ -1,5 +1,29 @@
 [
   {
+    "appName": "Moonbeam",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "appUrl": "https://www.moonbeam.fm/",
+    "appIconUrl": "moonbeam_logo.png",
+    "platforms": [
+      "Android",
+      "iOS",
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Podping",
+        "elementURL": "https://www.moonbeam.fm/"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://www.moonbeam.fm/"
+      }
+    ]
+  },
+  {
     "appName": "AudioWave",
     "appType": [
       "app",
@@ -224,6 +248,14 @@
     ],
     "supportedElements": [
       {
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://twitter.com/Podverse/status/1540138088873205760"
+      },
+      {
+        "elementName": "Boostagrams",
+        "elementURL": "https://twitter.com/Podverse/status/1540142944539262978"
+      },
+      {
         "elementName": "Chapters",
         "elementURL": "https://twitter.com/Podverse/status/1324729288281632771?s=20"
       },
@@ -232,8 +264,12 @@
         "elementURL": "https://twitter.com/Podverse/status/1325734448608899072?s=20"
       },
       {
+        "elementName": "Live Item",
+        "elementURL": "https://twitter.com/Podverse/status/1521198937742487553"
+      },
+      {
         "elementName": "Search",
-        "elementURL": "https://podverse.fm"
+        "elementURL": "https://podverse.fm/search"
       },
       {
         "elementName": "Soundbite",
@@ -241,6 +277,10 @@
       },
       {
         "elementName": "Transcript",
+        "elementURL": "https://twitter.com/Podverse/status/1324729288281632771?s=20"
+      },
+      {
+        "elementName": "Value",
         "elementURL": "https://twitter.com/Podverse/status/1324729288281632771?s=20"
       }
     ]
@@ -463,6 +503,10 @@
       {
         "elementName": "Sat Streaming",
         "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
+      },
+      {
+        "elementName": "Boostagrams",
+        "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.12.lnaddrees"
       }
     ]
   },
@@ -487,6 +531,10 @@
       {
         "elementName": "Funding",
         "elementURL": "https://github.com/AntennaPod/AntennaPod/pull/4933"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://github.com/AntennaPod/AntennaPod/pull/5630"
       }
     ]
   },
@@ -756,7 +804,8 @@
     "appUrl": "https://github.com/stonega/tsacdop",
     "appIconUrl": "tsacdop.png",
     "platforms": [
-      "Android"
+      "Android",
+      "F-Droid"
     ],
     "supportedElements": [
       {
@@ -766,6 +815,10 @@
       {
         "elementName": "Funding",
         "elementURL": "https://github.com/stonega/tsacdop/releases/tag/v0.5.4"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://github.com/stonega/tsacdop/releases/tag/v0.5.8"
       }
     ]
   },
@@ -796,10 +849,11 @@
       "podcast player",
       "open source"
     ],
-    "appUrl": "https://github.com/y20k/escapepod",
+    "appUrl": "https://codeberg.org/y20k/escapepod",
     "appIconUrl": "escapepod.png",
     "platforms": [
-      "Android"
+      "Android",
+      "F-Droid"
     ],
     "supportedElements": [
       {
@@ -1127,7 +1181,7 @@
       {
         "elementName": "GUID",
         "elementURL": "https://blog.castopod.org/castopod-supports-the-podcast-guid-tag/"
-      }        
+      }
     ]
   },
   {
@@ -1264,6 +1318,26 @@
       {
         "elementName": "Podping",
         "elementUrl": "https://justcast.com"
+      },
+      {
+        "elementName": "Location",
+        "elementUrl": "https://justcast.com"
+      },
+      {
+        "elementName": "Person",
+        "elementUrl": "https://justcast.com"
+      },
+      {
+        "elementName": "Funding",
+        "elementUrl": "https://justcast.com"
+      },
+      {
+        "elementName": "Locked",
+        "elementUrl": "https://justcast.com"
+      },
+      {
+        "elementName": "Season",
+        "elementUrl": "https://justcast.com"
       }
     ]
   },
@@ -1302,6 +1376,25 @@
       {
         "elementName": "Value",
         "elementURL": "https://satoshis.stream/"
+      }
+    ]
+  },
+  {
+    "appName": "Alby",
+    "appType": [
+      "node hosting",
+      "podcaster wallet"
+    ],
+    "tagLine": "The simplest way to receive boostagrams from your listeners",
+    "appUrl": "https://getalby.com/podcast-wallet",
+    "appIconUrl": "alby.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value",
+        "elementURL": "https://blog.getalby.com/bitcoin-payments-for-podcasters-with-alby/"
       }
     ]
   },
@@ -1548,12 +1641,12 @@
         "elementURL": "https://disctopia.com"
       },
       {
-          "elementName": "Locked",
-          "elementURL": "https://disctopia.com"
+        "elementName": "Locked",
+        "elementURL": "https://disctopia.com"
       },
       {
-          "elementName":"Funding",
-          "elementURL":"https://disctopia.com"
+        "elementName": "Funding",
+        "elementURL": "https://disctopia.com"
       }
     ]
   },
@@ -1692,6 +1785,97 @@
       {
         "elementName": "Sat Streaming",
         "elementURL": "https://dwvisser.github.io/v4v_exchange/"
+      }
+    ]
+  },
+  {
+    "appName": "Podvine",
+    "appType": [
+      "hosting",
+      "podcasting player",
+      "app"
+    ],
+    "appUrl": "https://podvine.com",
+    "appIconUrl": "podvine.png",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://podvine.com/search?="
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://podvine.com"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://podvine.com"
+      }
+    ]
+  },
+  {
+    "appName": "RSS Blue",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://rssblue.com",
+    "appIconUrl": "rssblue.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://rssblue.com/help/episode-metadata#transcript"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://rssblue.com/help/podcast-metadata#locked"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://rssblue.com/help/podcast-metadata#funding-url"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://rssblue.com/help/episode-metadata#chapters-data"
+      },
+      {
+        "elementName": "Location",
+        "elementURL": "https://rssblue.com/help/podcast-metadata#location"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://rssblue.com/help/podcasting-2.0#progress-2"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://rssblue.com/help/podcast-metadata#lightning-node"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://rssblue.com/help/podcast-metadata#medium"
+      }
+    ]
+  },
+    {
+    "appName": "Taddy Podcast API",
+    "appType": [
+      "directory"
+    ],
+    "appUrl": "https://taddy.org/developers/podcast-api",
+    "appIconUrl": "taddydev.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://taddy.org/developers/podcast-api/search"
       }
     ]
   }
