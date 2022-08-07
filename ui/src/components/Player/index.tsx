@@ -28,6 +28,7 @@ export default class Player extends React.Component<IProps> {
         playing: false,
         satAmount: 100,
         boostagram: '',
+        destinations: undefined,
     }
 
     player = React.createRef<AudioPlayer>()
@@ -73,7 +74,12 @@ export default class Player extends React.Component<IProps> {
     }
 
     componentDidMount() {
+        const { episode, podcast } = this.props
         this.setMediaSessionActionHandlers()
+        this.setState({
+            destinations:
+                episode?.value?.destinations || podcast?.value?.destinations,
+        })
     }
 
     componentDidUpdate() {
@@ -135,8 +141,7 @@ export default class Player extends React.Component<IProps> {
     boost = async () => {
         const { episode, podcast } = this.props
         let webln
-        let destinations =
-            episode?.value?.destinations || podcast?.value?.destinations
+        let destinations = this.state.destinations
 
         const getBaseRecord = () => {
             return {
@@ -289,6 +294,31 @@ export default class Player extends React.Component<IProps> {
         //Assemble the new url
         let enclosureUrl = episode.enclosureUrl + pciGuid + fromTag
 
+        let boostagram
+
+        if (this.state.destinations) {
+            boostagram = (
+                <div className="boostagram-corner">
+                    <textarea
+                        value={this.state.boostagram}
+                        onChange={this.handleTextAreaChange}
+                        placeholder="type your boostagram here"
+                    />
+                    <label>
+                        <input
+                            type="text"
+                            pattern="[0-9]*"
+                            value={this.state.satAmount}
+                            onChange={this.handleSatChange}
+                            onFocus={(e) => e.target.select()}
+                        />
+                        sats
+                    </label>
+                    <button onClick={this.boost}>Boost</button>
+                </div>
+            )
+        }
+
         return (
             <div className="player-media-controls">
                 <AudioPlayer
@@ -337,24 +367,7 @@ export default class Player extends React.Component<IProps> {
                         </a>,
                     ]}
                 />
-                <div className="boostagram-corner">
-                    <textarea
-                        value={this.state.boostagram}
-                        onChange={this.handleTextAreaChange}
-                        placeholder="type your boostagram here"
-                    />
-                    <label>
-                        <input
-                            type="text"
-                            pattern="[0-9]*"
-                            value={this.state.satAmount}
-                            onChange={this.handleSatChange}
-                            onFocus={(e) => e.target.select()}
-                        />
-                        sats
-                    </label>
-                    <button onClick={this.boost}>Boost</button>
-                </div>
+                {boostagram}
             </div>
         )
     }
