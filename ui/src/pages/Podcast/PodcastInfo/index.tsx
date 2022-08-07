@@ -1,7 +1,7 @@
 import * as React from 'react'
 import ReactLoading from 'react-loading'
 import EpisodeItem from '../../../components/EpisodeItem'
-import InfiniteList from "../../../components/InfiniteList";
+import InfiniteList from '../../../components/InfiniteList'
 import Player from '../../../components/Player'
 import PodcastHeader from '../../../components/PodcastHeader'
 import { fixURL, updateTitle } from '../../../utils'
@@ -90,15 +90,13 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     }
 
     onEpisodePlay(index: number) {
-        const {episodes, selectedEpisode} = this.state
+        const { episodes, selectedEpisode } = this.state
         this.setState({
             playing: true,
         })
 
         if (index === undefined) {
-            index = episodes.findIndex(
-                (x) => x === selectedEpisode
-            )
+            index = episodes.findIndex((x) => x === selectedEpisode)
         }
         const episode = episodes[index]
 
@@ -135,21 +133,33 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     }
 
     onEpisodeCanPlay() {
-        const {playing} = this.state
+        const { playing } = this.state
         if (playing) {
             this.player.current.play()
         }
     }
 
     renderHeader() {
-        let {result} = this.state
-        let {title, image, artwork, author, description, categories, value, id, link, url, funding} = result
+        let { result } = this.state
+        let {
+            title,
+            image,
+            artwork,
+            author,
+            description,
+            categories,
+            value,
+            id,
+            link,
+            url,
+            funding,
+        } = result
         image = artwork || image
         let podcastURL = fixURL(link)
         let feedURL = fixURL(url)
         let donationPageURL = null
-        if (result.funding) // not null, exists
-        {
+        if (result.funding) {
+            // not null, exists
             donationPageURL = funding?.url
         }
 
@@ -171,59 +181,58 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     }
 
     renderPlayer() {
-        const {episodes, selectedEpisode, playing} = this.state
-        const preload = playing ? "auto" : "none"
+        const { episodes, selectedEpisode, playing, result } = this.state
+        const preload = playing ? 'auto' : 'none'
         return (
             <div className="podcast-header-player">
-                {
-                    episodes.length > 0
-                        ?
-                        <Player
-                            ref={this.player}
-                            episode={selectedEpisode}
-                            onPlay={this.onEpisodePlay}
-                            onPause={this.onEpisodePause}
-                            onCanPlay={this.onEpisodeCanPlay}
-                            preload={preload}
-                        />
-                        :
-                        <div/>
-                }
+                {episodes.length > 0 ? (
+                    <Player
+                        ref={this.player}
+                        episode={selectedEpisode}
+                        podcast={result}
+                        onPlay={this.onEpisodePlay}
+                        onPause={this.onEpisodePause}
+                        onCanPlay={this.onEpisodeCanPlay}
+                        preload={preload}
+                    />
+                ) : (
+                    <div />
+                )}
             </div>
         )
     }
 
     renderEpisodes() {
-        const {episodes} = this.state
+        const { episodes } = this.state
         return (
             <div className="episodes-list">
                 <h2 className="episode-header">Episodes</h2>
-                {
-                    episodes.length > 0
-                        ?
-                        <InfiniteList
-                            data={episodes}
-                            itemRenderer={this.renderEpisode}
-                        />
-                        :
-                        <div>
-                            No episodes found
-                        </div>
-                }
+                {episodes.length > 0 ? (
+                    <InfiniteList
+                        data={episodes}
+                        itemRenderer={this.renderEpisode}
+                    />
+                ) : (
+                    <div>No episodes found</div>
+                )}
             </div>
         )
     }
 
-
     renderEpisode(item, index: number) {
-        let {title, image, feedImage, link, enclosureUrl, description, datePublished, value} = item
-        let {result} = this.state
+        let {
+            title,
+            image,
+            feedImage,
+            link,
+            enclosureUrl,
+            description,
+            datePublished,
+            value,
+        } = item
+        let { result } = this.state
         // try to use episode image, fall back to feed images
-        image =
-            image ||
-            feedImage ||
-            result.image ||
-            result.artwork
+        image = image || feedImage || result.image || result.artwork
         enclosureUrl = fixURL(enclosureUrl)
         description = he.decode(description)
 
@@ -252,7 +261,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     }
 
     render() {
-        const {loading, result} = this.state
+        const { loading, result } = this.state
         if ((result === undefined || result.length === 0) && !loading) {
             const errorMessage = `Unknown podcast ID: ${this.props.match.params.podcastId}`
             updateTitle(errorMessage)
@@ -261,8 +270,8 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         if (loading) {
             updateTitle('Loading podcast ...')
             return (
-                <div className="loader-wrapper" style={{height: 300}}>
-                    <ReactLoading type="cylon" color="#e90000"/>
+                <div className="loader-wrapper" style={{ height: 300 }}>
+                    <ReactLoading type="cylon" color="#e90000" />
                 </div>
             )
         }
