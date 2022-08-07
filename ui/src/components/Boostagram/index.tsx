@@ -15,7 +15,7 @@ export default class Boostagram extends React.PureComponent<IProps> {
     }
 
     state = {
-        satAmount: 100,
+        satAmount: 5000,
         boostagram: '',
         destinations: undefined,
         senderName: '',
@@ -26,6 +26,7 @@ export default class Boostagram extends React.PureComponent<IProps> {
         this.setState({
             destinations:
                 episode?.value?.destinations || podcast?.value?.destinations,
+            senderName: localStorage.getItem('senderName'),
         })
     }
 
@@ -47,6 +48,7 @@ export default class Boostagram extends React.PureComponent<IProps> {
         this.setState({
             senderName: e.target.value,
         })
+        localStorage.setItem('senderName', e.target.value)
     }
 
     boost = async () => {
