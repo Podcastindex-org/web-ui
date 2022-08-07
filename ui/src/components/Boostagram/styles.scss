@@ -3,6 +3,10 @@
         display: flex;
         margin: 0 0 8px 0;
         align-items: center;
+        height: 90px
+    }
+    .boostagram-corner > div{
+       width: 260px
     }
   
     .boostagram-corner textarea{
@@ -10,7 +14,7 @@
         margin: 0 16px;
         font-size: 1.2em;
         border-radius: 5px;        
-        height: 80px;
+        height: 88px;
         resize: none;
         padding: 8px
     }
@@ -31,6 +35,32 @@
         border-radius: 5px
     }
 
+    .boostagram-corner .boostagram-sender-name{
+        width: 100%;
+        text-align: left;
+        margin: 0 0 8px 0;
+        height: 41px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .boostagram-corner .boostagram-sender-name input{       
+        width: 100%;
+        text-align: left;
+        margin: 0
+    }    
+   
+    .boostagram-corner .boostagram-sat-input{
+        width: 100%;
+        text-align: left;
+        height: 41px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+   
+
     .boostagram-corner input:focus{
         border:2px solid black;
     }
@@ -40,7 +70,7 @@
         padding: 8px 12px;
         width: 100px;
         border: none;
-        background-color: #AA0000;
+        background-color: #E90000;
         border-radius: 5px;
         color: #fff;
         cursor: pointer;

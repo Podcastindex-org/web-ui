@@ -15,9 +15,10 @@ export default class Boostagram extends React.PureComponent<IProps> {
     }
 
     state = {
-        satAmount: 5000,
+        satAmount: 100,
         boostagram: '',
         destinations: undefined,
+        senderName: '',
     }
 
     componentDidMount() {
@@ -42,6 +43,12 @@ export default class Boostagram extends React.PureComponent<IProps> {
         })
     }
 
+    handleSenderNameChange = (e: any) => {
+        this.setState({
+            senderName: e.target.value,
+        })
+    }
+
     boost = async () => {
         const { episode, podcast, player } = this.props
         let webln
@@ -60,6 +67,7 @@ export default class Boostagram extends React.PureComponent<IProps> {
                 value_msat_total: this.state.satAmount * 1000,
                 name: undefined,
                 message: this.state.boostagram,
+                sender_name: this.state.senderName,
             }
         }
 
@@ -177,17 +185,30 @@ export default class Boostagram extends React.PureComponent<IProps> {
                         onChange={this.handleTextAreaChange}
                         placeholder="type your boostagram here"
                     />
-                    <label>
-                        <input
-                            type="text"
-                            pattern="[0-9]*"
-                            value={this.state.satAmount}
-                            onChange={this.handleSatChange}
-                            onFocus={(e) => e.target.select()}
-                        />
-                        sats
-                    </label>
-                    <button onClick={this.boost}>Boost</button>
+                    <div>
+                        <div className="boostagram-sender-name">
+                            <input
+                                type="text"
+                                value={this.state.senderName}
+                                onChange={this.handleSenderNameChange}
+                                onFocus={(e) => e.target.select()}
+                                placeholder="Sender's Name"
+                            />
+                        </div>
+                        <div className="boostagram-sat-input">
+                            <label>
+                                <input
+                                    type="text"
+                                    pattern="[0-9]*"
+                                    value={this.state.satAmount}
+                                    onChange={this.handleSatChange}
+                                    onFocus={(e) => e.target.select()}
+                                />
+                                sats
+                            </label>
+                            <button onClick={this.boost}>Boost</button>
+                        </div>
+                    </div>
                 </div>
             )
         }
