@@ -709,10 +709,6 @@
         "elementURL": "http://castcoverage.com"
       },
       {
-        "elementName": "Randomizer",
-        "elementURL": "http://castcoverage.com"
-      },
-      {
         "elementName": "Transcript",
         "elementURL": "http://castcoverage.com"
       },
@@ -1792,7 +1788,7 @@
     "appName": "Podvine",
     "appType": [
       "hosting",
-      "podcasting player",
+      "podcast player",
       "app"
     ],
     "appUrl": "https://podvine.com",
@@ -1908,5 +1904,49 @@
         "elementURL": "https://podtrics.com/"
       }
     ]
-  }
+  },
+ {
+    "appName": "myWebLog",
+    "appType": [
+      "hosting",
+      "website",
+      "open source"
+    ],
+    "appUrl": "https://bitbadger.solutions/open-source/myweblog",
+    "appIconUrl": "myweblog.png",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://bitbadger.solutions/open-source/myweblog/writing.html#podcast-episodes"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://bitbadger.solutions/open-source/myweblog/rss.html#podcast-feeds"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://bitbadger.solutions/open-source/myweblog/writing.html#podcast-episodes"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://bitbadger.solutions/open-source/myweblog/writing.html#podcast-episodes"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://bitbadger.solutions/open-source/myweblog/writing.html#podcast-episodes"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://bitbadger.solutions/open-source/myweblog/rss.html#podcast-feeds"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://bitbadger.solutions/open-source/myweblog/rss.html#podcast-feeds"
+      }
+    ]
+  }  
 ]
