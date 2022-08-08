@@ -709,10 +709,6 @@
         "elementURL": "http://castcoverage.com"
       },
       {
-        "elementName": "Randomizer",
-        "elementURL": "http://castcoverage.com"
-      },
-      {
         "elementName": "Transcript",
         "elementURL": "http://castcoverage.com"
       },
@@ -1792,7 +1788,7 @@
     "appName": "Podvine",
     "appType": [
       "hosting",
-      "podcasting player",
+      "podcast player",
       "app"
     ],
     "appUrl": "https://podvine.com",
