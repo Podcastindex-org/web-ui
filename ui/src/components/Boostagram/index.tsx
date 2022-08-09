@@ -21,13 +21,19 @@ export default class Boostagram extends React.PureComponent<IProps> {
         senderName: '',
     }
 
-    componentDidMount() {
-        const { episode, podcast } = this.props
-        this.setState({
-            destinations:
-                episode?.value?.destinations || podcast?.value?.destinations,
-            senderName: localStorage.getItem('senderName'),
-        })
+    webln: any
+
+    async componentDidMount() {
+        try {
+            await requestProvider()
+            const { episode, podcast } = this.props
+            this.setState({
+                destinations:
+                    episode?.value?.destinations ||
+                    podcast?.value?.destinations,
+                senderName: localStorage.getItem('senderName'),
+            })
+        } catch (error) {}
     }
 
     handleSatChange = (e: any) => {
@@ -178,7 +184,9 @@ export default class Boostagram extends React.PureComponent<IProps> {
     }
 
     render() {
-        let boostagram = <div className="boostagram-corner" />
+        let boostagram = (
+            <div className="boostagram-corner" style={{ display: 'none' }} />
+        )
         if (this.state.destinations) {
             boostagram = (
                 <div className="boostagram-corner">
