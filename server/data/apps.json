@@ -1177,6 +1177,10 @@
       {
         "elementName": "GUID",
         "elementURL": "https://blog.castopod.org/castopod-supports-the-podcast-guid-tag/"
+      },
+      {
+        "elementName": "Social Interact",
+        "elementURL": "https://blog.castopod.org/your-podcast-is-your-own-social-network/"
       }
     ]
   },
