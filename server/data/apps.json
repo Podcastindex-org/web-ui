@@ -1888,6 +1888,36 @@
     ]
   },
   {
+    "appName": "Podtrics",
+    "appType": [
+      "app",
+      "hosting"
+    ],
+    "appUrl": "https://podtrics.com",
+    "appIconUrl": "podtrics_p_logo.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Season",
+        "elementURL": "https://podtrics.com/"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://podtrics.com/"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://podtrics.com/"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://podtrics.com/"
+      }
+    ]
+  },
+ {
     "appName": "myWebLog",
     "appType": [
       "hosting",
@@ -1930,5 +1960,5 @@
         "elementURL": "https://bitbadger.solutions/open-source/myweblog/rss.html#podcast-feeds"
       }
     ]
-  }
+  } 
 ]
