@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 import Button from '../components/Button'
 import RecentPodcasts from '../components/RecentPodcasts'
-import TallyCoinWidget from "../components/TallyCoinWidget";
 import { updateTitle } from '../utils'
 import StatsCard from './Stats/StatsCard'
 
@@ -249,8 +248,15 @@ export default class Landing extends React.Component<IProps, IState> {
                             </form>
                         </div>
                         <div className="tally-coin">
-                            <h4>Tally Coin</h4>
-                            <TallyCoinWidget/>
+                            <h4>Tallycoin</h4>
+                            <Button
+                                big
+                                primary
+                                slim
+                                href="https://tallycoin.app/@podcastindex/support-podcastindex-t5x9vv/"
+                            >
+                                Donate Bitcoin
+                            </Button>
                         </div>
                         {/*<div className="sphinx-chat">*/}
                         {/*    <h4>Sphinx Chat</h4>*/}
