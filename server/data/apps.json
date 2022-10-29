@@ -264,7 +264,7 @@
         "elementURL": "https://twitter.com/Podverse/status/1325734448608899072?s=20"
       },
       {
-        "elementName": "Live Item",
+        "elementName": "Live",
         "elementURL": "https://twitter.com/Podverse/status/1521198937742487553"
       },
       {
@@ -1177,6 +1177,10 @@
       {
         "elementName": "GUID",
         "elementURL": "https://blog.castopod.org/castopod-supports-the-podcast-guid-tag/"
+      },
+      {
+        "elementName": "Social Interact",
+        "elementURL": "https://blog.castopod.org/your-podcast-is-your-own-social-network/"
       }
     ]
   },
@@ -1260,6 +1264,14 @@
       {
         "elementName": "Podping",
         "elementURL": "https://twitter.com/transistorfm"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://twitter.com/transistorfm"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://twitter.com/TransistorFM/status/1575920428068937728"
       }
     ]
   },
