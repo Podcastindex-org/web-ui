@@ -30,6 +30,9 @@
         border-radius: 13px;
         padding: 6px 13px;
     }
+    &.slim {
+        display: inline-block;
+    }
     &.disabled {
         color: #7e7e7e !important;
         border-spacing: 0;
