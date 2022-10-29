@@ -25,12 +25,15 @@ export default class Boostagram extends React.PureComponent<IProps> {
 
     async componentDidMount() {
         try {
-            await requestProvider()
             const { episode, podcast } = this.props
+            const destinations = episode?.value?.destinations || podcast?.value?.destinations
+
+            if (destinations) {
+                await requestProvider()
+            }
+
             this.setState({
-                destinations:
-                    episode?.value?.destinations ||
-                    podcast?.value?.destinations,
+                destinations: destinations,
                 senderName: localStorage.getItem('senderName'),
             })
         } catch (error) {}
