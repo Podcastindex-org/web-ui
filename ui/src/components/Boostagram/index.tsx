@@ -24,19 +24,13 @@ export default class Boostagram extends React.PureComponent<IProps> {
     webln: any
 
     async componentDidMount() {
-        try {
-            const { episode, podcast } = this.props
-            const destinations = episode?.value?.destinations || podcast?.value?.destinations
+        const { episode, podcast } = this.props
+        const destinations = episode?.value?.destinations || podcast?.value?.destinations
 
-            if (destinations) {
-                await requestProvider()
-            }
-
-            this.setState({
-                destinations: destinations,
-                senderName: localStorage.getItem('senderName'),
-            })
-        } catch (error) {}
+        this.setState({
+            destinations: destinations,
+            senderName: localStorage.getItem('senderName'),
+        })
     }
 
     handleSatChange = (e: any) => {
@@ -190,6 +184,11 @@ export default class Boostagram extends React.PureComponent<IProps> {
         let boostagram = (
             <div className="boostagram-corner" style={{ display: 'none' }} />
         )
+
+        if ((window as any).webln === undefined) {
+            return boostagram; // WebLN provider not available
+        }
+
         if (this.state.destinations) {
             boostagram = (
                 <div className="boostagram-corner">
