@@ -11,14 +11,14 @@ import './styles.scss'
 interface IProps {}
 interface IState {
     loading?: boolean
-    recentPodcasts?: Array<any>
+    podcasts?: Array<any>
     stats?: {}
 }
 
 export default class Landing extends React.Component<IProps, IState> {
     state = {
         loading: true,
-        recentPodcasts: [],
+        podcasts: [],
         stats: {
             feedCountTotal: '1,318,328',
             feedCount3days: '81,919',
@@ -36,13 +36,13 @@ export default class Landing extends React.Component<IProps, IState> {
 
     async componentDidMount(): Promise<void> {
         this._isMounted = true
-        const recentPodcasts = (await this.getRecentEpisodes()).items
+        const podcasts = await this.getEpisodes()
         const stats = await this.getStats()
 
         if (this._isMounted) {
             this.setState({
                 loading: false,
-                recentPodcasts,
+                podcasts,
                 stats,
             })
         }
@@ -68,8 +68,29 @@ export default class Landing extends React.Component<IProps, IState> {
         return await response.json()
     }
 
+    async getLiveEpisodes() {
+        let response = await fetch(`/api/episodes/live?max=3`, {
+            credentials: 'same-origin',
+            method: 'GET',
+        })
+        return await response.json()
+    }
+
+    async getEpisodes() {
+        let liveResponse = await this.getLiveEpisodes()
+        let episodes = liveResponse.items.map(ep => {
+            ep.live = true
+            return ep
+        })
+
+        let recentResponse = await this.getRecentEpisodes()
+        episodes = episodes.concat(recentResponse.items)
+
+        return episodes;
+    }
+
     render() {
-        const { loading, recentPodcasts, stats } = this.state
+        const { loading, podcasts, stats } = this.state
         updateTitle('Home')
         return (
             <div className="landing-content">
@@ -108,8 +129,9 @@ export default class Landing extends React.Component<IProps, IState> {
                     <div className="hero-pitch-right">
                         <RecentPodcasts
                             title="Recent Podcasts"
+                            liveTitle="⬤ Live Podcasts"
                             loading={loading}
-                            podcasts={recentPodcasts}
+                            podcasts={podcasts}
                         />
                     </div>
                 </div>

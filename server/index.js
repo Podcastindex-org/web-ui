@@ -112,6 +112,27 @@ app.use('/api/episodes/byfeedid', async (req, res) => {
     res.send(response)
 })
 
+app.use('/api/episodes/live', async (req, res) => {
+    let max = req.query.max
+    const response = await api.custom('episodes/live', {pretty: true, max: max})
+    const minPublished = Math.floor(new Date().getTime() / 1000) - 3600
+
+    // assume live episodes posted within the past hour are live
+    // since the api doesn't provide start and end times
+
+    response.items = response.items.filter(item => {
+        return item.datePublished >= minPublished
+    })
+
+    response.count = response.items.length;
+
+    if (response.count === 0) {
+        response.description = 'No matching items'
+    }
+
+    res.send(response)
+})
+
 app.use('/api/add/byfeedurl', async (req, res) => {
     let feedUrl = req.query.url
     const response = await apiAdd.addByFeedUrl(feedUrl)
