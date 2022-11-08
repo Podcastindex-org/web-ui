@@ -1516,27 +1516,31 @@
     "supportedElements": [
       {
         "elementName": "Transcript",
-        "elementURL": "https://rss.com/"
+        "elementURL": "https://rss.com/blog/podcast-transcripts-ada-compliance/"
       },
       {
         "elementName": "Locked",
-        "elementURL": "https://rss.com/"
+        "elementURL": "https://rss.com/blog/updates-rss-platform-q2-2021/"
       },
       {
         "elementName": "Chapters",
-        "elementURL": "https://rss.com/"
+        "elementURL": "https://rss.com/blog/how-to-add-chapters-to-your-podcast/"
       },
       {
         "elementName": "Soundbite",
-        "elementURL": "https://rss.com/"
+        "elementURL": "https://rss.com/features/"
       },
       {
         "elementName": "Funding",
-        "elementURL": "https://rss.com/"
+        "elementURL": "https://rss.com/blog/updates-to-rss-com-in-q4-2021/"
       },
       {
         "elementName": "Podping",
-        "elementURL": "https://rss.com/"
+        "elementURL": "https://rss.com/features/"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://rss.com/blog/rss-com-enables-value-4-value-bitcoin-payments/"
       }
     ]
   },
