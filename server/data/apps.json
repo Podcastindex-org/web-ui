@@ -1475,7 +1475,8 @@
     "appName": "Disctopia",
     "appType": [
       "app",
-      "hosting"
+      "hosting",
+      "podcast player"
     ],
     "appUrl": "https://disctopia.com",
     "appIconUrl": "disctopia.png",
@@ -1497,6 +1498,26 @@
       {
           "elementName":"Funding",
           "elementURL":"https://disctopia.com"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://podnews.net/press-release/disctopia-alby"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://disctopia.prowly.com/210652-disctopia-implements-transcription-feature-for-all-users"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://disctopia.com"
+      },
+      {
+        "elementName": "Trailer",
+        "elementURL": "https://disctopia.com"
+      },
+      {
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://disctopia.com"
       }
     ]
   },
