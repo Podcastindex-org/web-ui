@@ -1,10 +1,9 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
-const dotenv = require('dotenv')
-dotenv.config()
+const Dotenv = require('dotenv-webpack');
 
-module.exports = {
+module.exports = env => ({
     watch: false,
     mode: 'production',
     devtool: false,
@@ -125,6 +124,9 @@ module.exports = {
                     yandex: false
                 }
             }
-        })
+        }),
+        new Dotenv({
+            path: `./.environments/.env${env.file ? `.${env.file}` : ''}`
+        }),
     ],
-}
+})

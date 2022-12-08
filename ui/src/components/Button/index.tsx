@@ -7,6 +7,7 @@ interface IProps {
     className?: string
     big?: boolean
     small?: boolean
+    slim?: boolean
     primary?: boolean
     link?: boolean
     children?: any
@@ -33,6 +34,7 @@ export default class Button extends React.PureComponent<IProps> {
             primary,
             big,
             small,
+            slim,
             type,
             alt,
             disabled,
@@ -47,6 +49,7 @@ export default class Button extends React.PureComponent<IProps> {
             primary ? 'primary' : '',
             big ? 'big' : '',
             small ? 'small' : '',
+            slim ? 'slim' : '',
             selected ? 'selected' : '',
         ]
         let buttonClass = buttonClasses.join(" ")

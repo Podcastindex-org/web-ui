@@ -38,6 +38,7 @@
               "video",
               "sn-network",
               "blockchain",
+              "podcaster wallet",
               "open source",
               "other"
             ]
@@ -59,7 +60,9 @@
               "Web",
               "Mobile",
               "iOS",
+              "iPad OS",
               "Android",
+              "F-Droid",
               "macOS",
               "Windows",
               "Linux",
@@ -114,7 +117,11 @@
             "Podping",
             "Alternate Enclosure",
             "Trailer",
-            "GUID"
+            "GUID",
+            "Medium",
+            "Live",
+            "Block",
+            "Social Interact"
           ]
         },
         "elementURL": {

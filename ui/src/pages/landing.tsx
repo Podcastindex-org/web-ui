@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 import Button from '../components/Button'
 import RecentPodcasts from '../components/RecentPodcasts'
-import TallyCoinWidget from "../components/TallyCoinWidget";
 import { updateTitle } from '../utils'
 import StatsCard from './Stats/StatsCard'
 
@@ -163,9 +162,7 @@ export default class Landing extends React.Component<IProps, IState> {
                         </a>
                     </p>
                     <p>
-                        Download our full podcast database as a sqlite3 file over
-                        IPFS <a href="https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dkde1r01kchnaieukg7xy9i6eu78kk3mm3vaa690oaotk1px6wo/podcastindex_feeds.db.tgz" target="_blank">here</a> or
-                        using HTTP <a href="https://public.podcastindex.org/podcastindex_feeds.db.tgz">here</a>.
+                        Download our full podcast database as a sqlite3 file HTTP <a href="https://public.podcastindex.org/podcastindex_feeds.db.tgz">here</a>.
                     </p>
                     <p>
                         API Documentation is{' '}
@@ -251,8 +248,15 @@ export default class Landing extends React.Component<IProps, IState> {
                             </form>
                         </div>
                         <div className="tally-coin">
-                            <h4>Tally Coin</h4>
-                            <TallyCoinWidget/>
+                            <h4>Tallycoin</h4>
+                            <Button
+                                big
+                                primary
+                                slim
+                                href="https://tallycoin.app/@podcastindex/support-podcastindex-t5x9vv/"
+                            >
+                                Donate Bitcoin
+                            </Button>
                         </div>
                         {/*<div className="sphinx-chat">*/}
                         {/*    <h4>Sphinx Chat</h4>*/}
