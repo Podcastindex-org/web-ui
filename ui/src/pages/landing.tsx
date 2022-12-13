@@ -199,7 +199,7 @@ export default class Landing extends React.Component<IProps, IState> {
                             Twitter
                         </a>
                         {' '} or{' '}
-                        <a href="https://noagendasocial.com/@podcastindex">
+                        <a href="https://podcastindex.social/">
                             Mastodon
                         </a>
                         .
