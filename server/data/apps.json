@@ -1185,6 +1185,10 @@
       {
         "elementName": "Social Interact",
         "elementURL": "https://blog.castopod.org/your-podcast-is-your-own-social-network/"
+      },
+      {
+        "elementName": "OP3",
+        "elementURL": "https://blog.castopod.org/value-your-analytics-data-with-op3-an-open-source-and-trusted-third-party/"
       }
     ]
   },
@@ -1243,6 +1247,10 @@
       {
         "elementName": "Podping",
         "elementURL": "https://twitter.com/CaptivateAudio"
+      },
+      {
+        "elementName": "OP3",
+        "elementURL": "https://help.captivate.fm/en/articles/3045914-captivate-feature-releases-changelog"
       }
     ]
   },
@@ -1280,6 +1288,10 @@
       {
         "elementName": "Person",
         "elementURL": "https://twitter.com/TransistorFM/status/1575920428068937728"
+      },
+      {
+        "elementName": "OP3",
+        "elementURL": "https://transistor.fm/changelog/open-prefix/"
       }
     ]
   },
@@ -1470,6 +1482,10 @@
       {
         "elementName": "Person",
         "elementURL": "https://github.com/podlove/podlove-publisher/commit/08d52424b359569d795d318163b0c697ef623199"
+      },
+      {
+        "elementName": "OP3",
+        "elementURL": "https://wordpress.org/plugins/podlove-podcasting-plugin-for-wordpress/#developers"
       }
     ]
   },
@@ -1900,6 +1916,10 @@
       {
         "elementName": "Medium",
         "elementURL": "https://rssblue.com/help/podcast-metadata#medium"
+      },
+      {
+        "elementName": "OP3",
+        "elementURL": "https://rssblue.com/help/analytics"
       }
     ]
   },
@@ -1993,5 +2013,23 @@
         "elementURL": "https://bitbadger.solutions/open-source/myweblog/rss.html#podcast-feeds"
       }
     ]
-  } 
+  },
+  {
+    "appName": "podCloud",
+    "appType": [
+      "podcast player",
+      "hosting"
+    ],
+    "appUrl": "https://podcloud.fr/",
+    "appIconUrl": "podCloud.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "OP3",
+        "elementURL": "https://aide.podcloud.fr/question/partager-ses-statistiques-decoutes-publiquement-avec-op3-dev/"
+      }
+    ]
+  }
 ]
