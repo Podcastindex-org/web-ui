@@ -1912,6 +1912,10 @@
       {
         "elementName": "Medium",
         "elementURL": "https://rssblue.com/help/podcast-metadata#medium"
+      },
+      {
+        "elementName": "OP3",
+        "elementURL": "https://rssblue.com/help/analytics"
       }
     ]
   },
