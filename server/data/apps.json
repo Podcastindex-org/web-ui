@@ -286,6 +286,25 @@
     ]
   },
   {
+    "appName": "Fathom",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "appUrl": "https://fathom.fm",
+    "appIconUrl": "fathom.png",
+    "platforms": [
+      "iOS",
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://hello.fathom.fm"
+      }
+    ]
+  },
+  {
     "appName": "Fountain",
     "appType": [
       "app",
