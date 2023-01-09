@@ -1315,6 +1315,10 @@
       {
         "elementName": "OP3",
         "elementURL": "https://transistor.fm/changelog/open-prefix/"
+      },
+      {
+        "elementName": "Txt",
+        "elementURL": "https://transistor.fm/changelog/verification-code"
       }
     ]
   },
@@ -1943,6 +1947,10 @@
       {
         "elementName": "OP3",
         "elementURL": "https://rssblue.com/help/analytics"
+      },
+      {
+        "elementName": "Txt",
+        "elementURL": "https://rssblue.com/help/podcast-metadata#txt-records"
       }
     ]
   },
