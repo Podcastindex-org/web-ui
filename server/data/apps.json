@@ -2054,5 +2054,31 @@
         "elementURL": "https://aide.podcloud.fr/question/partager-ses-statistiques-decoutes-publiquement-avec-op3-dev/"
       }
     ]
+  },
+  {
+    "appName": "FocusPodcast",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "appUrl": "https://play.google.com/store/apps/details?id=allen.town.focus.podcast",
+    "appIconUrl": "FocusPodcast.png",
+    "platforms": [
+      "Android"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "http://focus.hk.cn"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "http://focus.hk.cn"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "http://focus.hk.cn"
+      }
+    ]
   }
 ]
