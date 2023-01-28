@@ -39,7 +39,8 @@ class Comment extends React.PureComponent<ICommentProps> {
         return (
         <div className='comment'>
             <img className='comment-author-picture' src={this.props.comment.attributedTo.iconUrl}></img>
-            <a target="_blank" href={this.props.comment.attributedTo.url}>{this.props.comment.attributedTo.name} ({this.props.comment.attributedTo.account})</a>
+            <p><a target="_blank" href={this.props.comment.attributedTo.url}>{this.props.comment.attributedTo.name} ({this.props.comment.attributedTo.account})</a></p>
+            <p><a target="_blank" href={this.props.comment.url}>Open external source</a></p>
             <div dangerouslySetInnerHTML={{__html: this.props.comment.content}}></div>
             <div className='replies'>
             {this.props.comment.replies.map((reply) => <Comment comment={reply}/>)}
