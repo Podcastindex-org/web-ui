@@ -2,6 +2,7 @@ import * as React from 'react'
 import { getISODate, getPrettyDate, truncateString } from '../../utils'
 
 import Value from '../Value'
+import Comments from '../Comments'
 import NoImage from '../../../images/no-cover-art.png'
 import PlayLogo from '../../../images/play-circle.svg'
 import PauseLogo from '../../../images/pause-circle.svg'
@@ -10,7 +11,6 @@ import DownloadLogo from '../../../images/download-outline.svg'
 import TranscriptLogo from '../../../images/transcript.svg'
 
 import './styles.scss'
-import Comments from '../Comments'
 
 interface IProps {
     id: number,
