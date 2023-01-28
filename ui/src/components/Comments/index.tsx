@@ -7,6 +7,7 @@ interface IProps {
 }
 
 interface IState {
+    showComments: boolean,
     comments: StateComment[] 
 }
 
@@ -52,20 +53,29 @@ export default class Comments extends React.PureComponent<IProps, IState> {
     constructor(props) {
         super(props);
         this.state = {
+            showComments: false,
             comments: []
         };
     }
     
     async onClickShowComments() {
-        const response = await fetch('/api/comments/byepisodeid?' + new URLSearchParams({id: String(this.props.id) }));
+        const stateToSet: any = {
+            showComments: true
+        };
 
-        const responseBody = await response.json();
+        if(!this.state.comments.length) {
+            const response = await fetch('/api/comments/byepisodeid?' + new URLSearchParams({id: String(this.props.id) }));
 
-        const stateComments = responseBody.roots.map((root) => Comments.buildStateComment(root, responseBody))
+            const responseBody = await response.json();
 
-        this.setState({
-            comments: stateComments
-        });
+            stateToSet.comments = responseBody.roots.map((root) => Comments.buildStateComment(root, responseBody));
+        }
+
+        this.setState(stateToSet);
+    }
+
+    async onClickHideComments() {
+        this.setState({showComments: false});
     }
 
     private static buildStateComment(commentUrl: string, commentsApiResponseBody): StateComment {
@@ -89,8 +99,9 @@ export default class Comments extends React.PureComponent<IProps, IState> {
     render() {
         return (
         <div>
-            <button onClick={() => this.onClickShowComments()}>Show comments</button>
-            {this.state.comments.map((comment) => <Comment comment={comment}/>)}
+            {!this.state.showComments && <button onClick={() => this.onClickShowComments()}>Show comments</button>}
+            {this.state.showComments && <button onClick={() => this.onClickHideComments()}>Hide comments</button>}
+            {this.state.showComments && this.state.comments.map((comment) => <Comment comment={comment}/>)}
         </div>
         )
     }
