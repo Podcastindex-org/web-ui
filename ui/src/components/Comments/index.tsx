@@ -13,10 +13,12 @@ interface IState {
 
 interface StateComment {
     url: string,
-    publishedAt: Date,
-    content: string,
-    attributedTo: Commenter;
-    replies: StateComment[]
+    publishedAt?: Date,
+    content?: string,
+    attributedTo?: Commenter;
+    replies?: StateComment[]
+    commentError?: string,
+    repliesError?: string
 }
 
 interface Commenter {
@@ -38,13 +40,26 @@ class Comment extends React.PureComponent<ICommentProps> {
     render(): React.ReactNode {
         return (
         <div className='comment'>
-            <img className='comment-author-picture' src={this.props.comment.attributedTo.iconUrl}></img>
-            <p><a target="_blank" href={this.props.comment.attributedTo.url}>{this.props.comment.attributedTo.name} ({this.props.comment.attributedTo.account})</a></p>
-            <p><a target="_blank" href={this.props.comment.url}>Open external source</a></p>
-            <div dangerouslySetInnerHTML={{__html: this.props.comment.content}}></div>
-            <div className='replies'>
-            {this.props.comment.replies.map((reply) => <Comment comment={reply}/>)}
+            { !this.props.comment.commentError && 
+            <div>
+                <img className='comment-author-picture' src={this.props.comment.attributedTo.iconUrl}></img>
+                <p><a target="_blank" href={this.props.comment.attributedTo.url}>{this.props.comment.attributedTo.name} ({this.props.comment.attributedTo.account})</a></p>
+                <p><a target="_blank" href={this.props.comment.url}>Open external source</a></p>
+                <div dangerouslySetInnerHTML={{__html: this.props.comment.content}}></div>
             </div>
+            }
+            {this.props.comment.commentError && 
+            <div>
+                <p><a target="_blank" href={this.props.comment.url}>Open external source</a></p>
+                <p>Error fetching this comment.</p>
+            </div>}
+            {this.props.comment.replies && <div className='replies'>
+                {this.props.comment.replies.map((reply) => <Comment comment={reply}/>)}
+            </div>}
+            {this.props.comment.repliesError && 
+            <div>
+                <p>Error fetching replies for this comment</p>
+            </div>}
         </div>
         )
     }
@@ -79,22 +94,51 @@ export default class Comments extends React.PureComponent<IProps, IState> {
         this.setState({showComments: false});
     }
 
-    private static buildStateComment(commentUrl: string, commentsApiResponseBody): StateComment {
+    private static buildStateComment(commentUrl: string, commentsApiResponseBody): StateComment | null {
         const node = commentsApiResponseBody.nodes[commentUrl];
-        const commenter = commentsApiResponseBody.commenters[node.comment.attributedTo];
 
-        return node && {
-            url: node.comment.url,
-            publishedAt: new Date(node.comment.published),
-            content: node.comment.content.en,
-            attributedTo: {
-                name: commenter.name,
-                iconUrl: commenter.icon.url,
-                url: commenter.url,
-                account: commenter.fqUsername,
-            },
-            replies: node.replies.map((reply) => Comments.buildStateComment(reply, commentsApiResponseBody))
+        if(!node) {
+            return null;
         }
+
+        const commenter = node.comment && commentsApiResponseBody.commenters[node.comment.attributedTo];
+
+        let stateComment: StateComment = {
+            url: commentUrl
+        }
+
+        if(node.comment) {
+            stateComment = {
+                ...stateComment,
+                url: node.comment.url,
+                publishedAt: new Date(node.comment.published),
+                content: node.comment.content.en,
+
+                attributedTo: commenter && {
+                    name: commenter.name,
+                    iconUrl: commenter.icon.url,
+                    url: commenter.url,
+                    account: commenter.fqUsername,
+                }
+            }
+        }
+        else {
+            console.warn('There was an error on the server fetching a comment', node.commentError);
+            stateComment.commentError = node.commentError;
+        }
+
+        if(node.replies) {
+            stateComment = {
+                ...stateComment,
+                replies: node.replies.map((reply) => Comments.buildStateComment(reply, commentsApiResponseBody))
+            }
+        }
+        else {
+            console.warn('There was an error on the server fetching a replies to a comment', node.repliesError);
+            stateComment.repliesError = node.repliesError
+        }
+
+        return stateComment;
     }
     
     render() {

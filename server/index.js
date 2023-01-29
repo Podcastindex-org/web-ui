@@ -2,6 +2,9 @@ const path = require('path')
 const fs = require('fs');
 const express = require('express')
 const app = express() // create express app
+const { makeThreadcap, InMemoryCache, updateThreadcap, makeRateLimitedFetcher } = require('threadcap');
+const fetch = require('node-fetch');
+
 // Gets the .env variables
 require('dotenv').config()
 
@@ -110,6 +113,30 @@ app.use('/api/add/byfeedurl', async (req, res) => {
     let feedUrl = req.query.url
     const response = await apiAdd.addByFeedUrl(feedUrl)
     res.send(response)
+})
+
+// ------------------------------------------------
+// ------------ API to get comments for episode ---
+// ------------------------------------------------
+app.use('/api/comments/byepisodeid', async (req, res) => {
+    let episodeId = req.query.id
+    const response = await api.episodesById(episodeId, false)
+
+    // The API request above will be used once socialInteract is returned by the API
+    // the log statement below just shows the API call is working, it should be removed
+    // later when the response is actually used
+    console.log(response)
+
+    const userAgent = 'podcastindex.org server';
+    const cache = new InMemoryCache();
+    const fetcher = makeRateLimitedFetcher(fetch);
+
+    // TODO: Once socialInteract is returned by the API, we should replace the URL here
+    const threadcap = await makeThreadcap('https://podcastindex.social/users/dave/statuses/109683341113064081', { userAgent, cache, fetcher });
+
+    await updateThreadcap(threadcap, { updateTime: new Date().toISOString(), userAgent, cache, fetcher });
+
+    res.send(threadcap)
 })
 
 // ------------------------------------------------
