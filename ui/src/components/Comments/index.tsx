@@ -39,28 +39,40 @@ class Comment extends React.PureComponent<ICommentProps> {
 
     render(): React.ReactNode {
         return (
-        <div className='comment'>
-            { !this.props.comment.commentError && 
-            <div>
-                {this.props.comment.attributedTo.iconUrl && <img className='comment-author-picture' src={this.props.comment.attributedTo.iconUrl}></img>}
-                <p><a target="_blank" href={this.props.comment.attributedTo.url}>{this.props.comment.attributedTo.name} ({this.props.comment.attributedTo.account})</a></p>
-                <p><a target="_blank" href={this.props.comment.url}>Open external source</a></p>
-                <div dangerouslySetInnerHTML={{__html: this.props.comment.content}}></div>
-            </div>
+        <details open>
+            {!this.props.comment.commentError &&
+                <summary>
+                    <a className='profile' href={this.props.comment.attributedTo.url}>
+                        <img className='profile-img' src={this.props.comment.attributedTo.iconUrl || '/images/brand-icon.svg'} />
+                        <strong>{this.props.comment.attributedTo.name}</strong>
+                        <span>{this.props.comment.attributedTo.account}</span>
+                    </a>
+                    <span aria-hidden="true">·</span>
+                    <a href={this.props.comment.url} className='permalink'>
+                        <time>{this.props.comment.publishedAt.toLocaleString()}</time>
+                    </a>
+                </summary>
+            }
+            {
+                // content can be empty when there are attachments
+                !this.props.comment.commentError && this.props.comment.content &&
+                <div className="contents" dangerouslySetInnerHTML={{__html: this.props.comment.content}}/>
             }
             {this.props.comment.commentError && 
-            <div>
-                <p><a target="_blank" href={this.props.comment.url}>Open external source</a></p>
-                <p>Error fetching this comment.</p>
-            </div>}
-            {this.props.comment.replies && <div className='replies'>
+                <summary>
+                    <a className='profile' href={this.props.comment.url}>
+                        <img className='profile-img' src='/images/brand-icon.svg' />
+                        <strong>Error loading this comment</strong>
+                    </a>
+                </summary>
+            }
+            {!this.props.comment.repliesError && this.props.comment.replies && <div>
                 {this.props.comment.replies.map((reply) => <Comment comment={reply}/>)}
             </div>}
-            {this.props.comment.repliesError && 
-            <div>
-                <p>Error fetching replies for this comment</p>
-            </div>}
-        </div>
+            {
+                this.props.comment.repliesError && <div className='contents'>Error loading replies for this comment</div>
+            }
+        </details>
         )
     }
 }
