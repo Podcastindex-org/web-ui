@@ -42,7 +42,7 @@ class Comment extends React.PureComponent<ICommentProps> {
         <div className='comment'>
             { !this.props.comment.commentError && 
             <div>
-                <img className='comment-author-picture' src={this.props.comment.attributedTo.iconUrl}></img>
+                {this.props.comment.attributedTo.iconUrl && <img className='comment-author-picture' src={this.props.comment.attributedTo.iconUrl}></img>}
                 <p><a target="_blank" href={this.props.comment.attributedTo.url}>{this.props.comment.attributedTo.name} ({this.props.comment.attributedTo.account})</a></p>
                 <p><a target="_blank" href={this.props.comment.url}>Open external source</a></p>
                 <div dangerouslySetInnerHTML={{__html: this.props.comment.content}}></div>
@@ -116,7 +116,7 @@ export default class Comments extends React.PureComponent<IProps, IState> {
 
                 attributedTo: commenter && {
                     name: commenter.name,
-                    iconUrl: commenter.icon.url,
+                    iconUrl: commenter.icon?.url,
                     url: commenter.url,
                     account: commenter.fqUsername,
                 }
