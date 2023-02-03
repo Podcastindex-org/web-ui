@@ -1029,31 +1029,15 @@
     ],
     "supportedElements": [
       {
-        "elementName": "Transcript",
+        "elementName": "GUID",
         "elementURL": "https://hubhopper.com"
       },
       {
-        "elementName": "Locked",
+        "elementName": "Season",
         "elementURL": "https://hubhopper.com"
       },
       {
-        "elementName": "Funding",
-        "elementURL": "https://hubhopper.com"
-      },
-      {
-        "elementName": "Chapters",
-        "elementURL": "https://hubhopper.com"
-      },
-      {
-        "elementName": "Soundbite",
-        "elementURL": "https://hubhopper.com"
-      },
-      {
-        "elementName": "Value",
-        "elementURL": "https://hubhopper.com"
-      },
-      {
-        "elementName": "Search",
+        "elementName": "Trailer",
         "elementURL": "https://hubhopper.com"
       }
     ]
