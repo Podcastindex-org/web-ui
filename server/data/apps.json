@@ -1030,31 +1030,31 @@
     "supportedElements": [
       {
         "elementName": "Transcript",
-        "elementURL": "https://podcastindex.org"
+        "elementURL": "https://hubhopper.com"
       },
       {
         "elementName": "Locked",
-        "elementURL": "https://podcastindex.org"
+        "elementURL": "https://hubhopper.com"
       },
       {
         "elementName": "Funding",
-        "elementURL": "https://podcastindex.org"
+        "elementURL": "https://hubhopper.com"
       },
       {
         "elementName": "Chapters",
-        "elementURL": "https://podcastindex.org"
+        "elementURL": "https://hubhopper.com"
       },
       {
         "elementName": "Soundbite",
-        "elementURL": "https://podcastindex.org"
+        "elementURL": "https://hubhopper.com"
       },
       {
         "elementName": "Value",
-        "elementURL": "https://podcastindex.org"
+        "elementURL": "https://hubhopper.com"
       },
       {
         "elementName": "Search",
-        "elementURL": "https://podcastindex.org"
+        "elementURL": "https://hubhopper.com"
       }
     ]
   },
