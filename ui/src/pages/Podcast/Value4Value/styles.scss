@@ -1,3 +1,13 @@
+:root {
+    --selected-page-color: #f2f2f2;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --selected-page-color: #505050;
+    }
+}
+
 .v4v {
     margin: 0 auto;
     padding: 0 10px;
@@ -23,10 +33,10 @@
 
                 border-radius: 9px;
                 padding: 6px 9px;
-                color: #2d2d2d;
+                color: var(--fg-main);
 
                 &.selected {
-                    background: #f2f2f2;
+                    background: var(--selected-page-color);
                 }
             }
 

@@ -1,3 +1,17 @@
+:root {
+    --input-bg-color: #f7f7f7;
+    --input-border-color: #d6d6d6;
+    --input-placeholder-color: #b6b6b6;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --input-bg-color: #000000;
+        --input-border-color: #303030;
+        --input-placeholder-color: #969696;
+    }
+}
+
 .add-feed {
     margin: 0 auto;
     padding: 0 10px;
@@ -29,8 +43,8 @@
             display: inline-flex;
             flex-direction: row;
             align-items: center;
-            background: #f7f7f7;
-            border: 1px solid #d6d6d6;
+            background: var(--input-bg-color);
+            border: 1px solid var(--input-border-color);
             border-radius: 17px;
             height: 34px;
             margin: 10px 15px;
@@ -47,34 +61,35 @@
                 border-left-style: hidden !important;
                 border-bottom-style: hidden !important;
                 background-color: transparent !important;
+                color: var(--text-color);
             }
 
             ::-webkit-input-placeholder {
                 /* Chrome/Opera/Safari */
                 font-family: var(--font-family-expily-exp);
                 font-size: 14px;
-                color: #b6b6b6;
+                color: var(--input-placeholder-color);
             }
 
             ::-moz-placeholder {
                 /* Firefox 19+ */
                 font-family: var(--font-family-expily-exp);
                 font-size: 14px;
-                color: #b6b6b6;
+                color: var(--input-placeholder-color);
             }
 
             :-ms-input-placeholder {
                 /* IE 10+ */
                 font-family: var(--font-family-expily-exp);
                 font-size: 14px;
-                color: #b6b6b6;
+                color: var(--input-placeholder-color);
             }
 
             :-moz-placeholder {
                 /* Firefox 18- */
                 font-family: var(--font-family-expily-exp);
                 font-size: 14px;
-                color: #b6b6b6;
+                color: var(--input-placeholder-color);
             }
 
             input:focus {
