@@ -78,7 +78,7 @@ class Comment extends React.PureComponent<ICommentProps> {
                 </summary>
             }
             {!this.props.comment.repliesError && this.props.comment.replies && <div>
-                {this.props.comment.replies.map((reply) => <Comment comment={reply}/>)}
+                {this.props.comment.replies.map((reply) => <Comment key={reply.url} comment={reply}/>)}
             </div>}
             {
                 this.props.comment.repliesError && <div className='contents'>Error loading replies for this comment</div>
@@ -200,7 +200,7 @@ export default class Comments extends React.PureComponent<IProps, IState> {
         <div>
             {!this.state.showComments && <button onClick={() => this.onClickShowComments()}>Show comments</button>}
             {this.state.showComments && <button onClick={() => this.onClickHideComments()}>Hide comments</button>}
-            {this.state.showComments && this.state.comments.map((comment) => <Comment comment={comment}/>)}
+            {this.state.showComments && this.state.comments.map((comment) => <Comment key={comment.url} comment={comment}/>)}
         </div>
         )
     }
