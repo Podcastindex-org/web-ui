@@ -14,9 +14,10 @@ interface IState {
 interface StateComment {
     url: string,
     publishedAt?: Date,
+    summary?: string,
     content?: string,
-    attributedTo?: Commenter;
-    replies?: StateComment[]
+    attributedTo?: Commenter,
+    replies?: StateComment[],
     commentError?: string,
     repliesError?: string
 }
@@ -53,7 +54,17 @@ class Comment extends React.PureComponent<ICommentProps> {
                     </a>
                 </summary>
             }
-            {
+            {   this.props.comment.summary ? 
+                <div className="contents">
+                    <details className="content-warning">
+                        <summary>Content Warning Summary</summary>
+                        {
+                            !this.props.comment.commentError && this.props.comment.content &&
+                            <div dangerouslySetInnerHTML={{__html: this.props.comment.content}}/>
+                        }
+                    </details>
+                </div>
+                :
                 // content can be empty when there are attachments
                 !this.props.comment.commentError && this.props.comment.content &&
                 <div className="contents" dangerouslySetInnerHTML={{__html: this.props.comment.content}}/>
@@ -120,11 +131,15 @@ export default class Comments extends React.PureComponent<IProps, IState> {
         }
 
         if(node.comment) {
+            const summary = Comments.resolveLanguageTaggedValues(node.comment.summary);
+            const content = Comments.resolveLanguageTaggedValues(node.comment.content); 
+
             stateComment = {
                 ...stateComment,
                 url: node.comment.url,
                 publishedAt: new Date(node.comment.published),
-                content: node.comment && Comments.resolveLanguageTaggedValues(node.comment.content),
+                summary: summary,
+                content: content,
 
                 attributedTo: commenter && {
                     name: commenter.name,
@@ -168,7 +183,11 @@ export default class Comments extends React.PureComponent<IProps, IState> {
      * @param languageTaggedValues 
      * @returns the value of the first property in languageTaggedValues
      */
-    private static resolveLanguageTaggedValues(languageTaggedValues): string {
+    private static resolveLanguageTaggedValues(languageTaggedValues): string | null {
+        if(!languageTaggedValues) {
+            return null;
+        }
+
         for(let propertyName in languageTaggedValues) {
             if(languageTaggedValues.hasOwnProperty(propertyName)) {
                 return languageTaggedValues[propertyName];
