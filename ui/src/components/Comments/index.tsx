@@ -124,7 +124,7 @@ export default class Comments extends React.PureComponent<IProps, IState> {
                 ...stateComment,
                 url: node.comment.url,
                 publishedAt: new Date(node.comment.published),
-                content: node.comment.content.en,
+                content: node.comment && Comments.resolveLanguageTaggedValues(node.comment.content),
 
                 attributedTo: commenter && {
                     name: commenter.name,
@@ -151,6 +151,29 @@ export default class Comments extends React.PureComponent<IProps, IState> {
         }
 
         return stateComment;
+    }
+
+    /**
+     * Returns a single value from a an object with multiple language tagged values
+     * 
+     * Currently, it returns the value of the fist property in languageTaggedValues.
+     * In the future, it should return the value of the property that best matches
+     * the user's language (navigator.language || navigator.userLanguage), as
+     * reference, see https://www.rfc-editor.org/info/bcp47
+     * 
+     * @example
+     * // value will be 'A mensagem'
+     * let value = resolveLanguageTaggedValues({pt-BR: 'A mensagem', en: 'The message'})
+     * 
+     * @param languageTaggedValues 
+     * @returns the value of the first property in languageTaggedValues
+     */
+    private static resolveLanguageTaggedValues(languageTaggedValues): string {
+        for(let propertyName in languageTaggedValues) {
+            if(languageTaggedValues.hasOwnProperty(propertyName)) {
+                return languageTaggedValues[propertyName];
+            }
+        }
     }
     
     render() {
