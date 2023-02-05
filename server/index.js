@@ -4,9 +4,12 @@ const express = require('express')
 const app = express() // create express app
 const { makeThreadcap, InMemoryCache, updateThreadcap, makeRateLimitedFetcher } = require('threadcap');
 const fetch = require('node-fetch');
+const packageJson = require('../package.json');
 
 // Gets the .env variables
 require('dotenv').config()
+
+const USER_AGENT = `Podcastindex.org-web/${packageJson.version}`;
 
 // Utilizing the node repo from comster/podcast-index-api :)
 // NOTE: This server will work as a reverse proxy.
@@ -106,6 +109,17 @@ app.use('/api/episodes/byfeedid', async (req, res) => {
     let feedId = req.query.id
     let max = req.query.max
     const response = await api.episodesByFeedId(feedId, null, max)
+
+    // Inject fake socialInteract content here for testing
+    // it does not even have to be valid data, the comments API fetches it again
+    // based on the episode ID
+    response.items.forEach((item) => {
+        item.socialInteracts = [{
+            uri: 'https://podcastindex.social/users/dave/statuses/109683341113064081',
+            protocol: 'activitypub',
+        }]
+    })
+
     res.send(response)
 })
 
@@ -127,7 +141,7 @@ app.use('/api/comments/byepisodeid', async (req, res) => {
     // later when the response is actually used
     console.log(response)
 
-    const userAgent = 'podcastindex.org server';
+    const userAgent = USER_AGENT;
     const cache = new InMemoryCache();
     const fetcher = makeRateLimitedFetcher(fetch);
 
