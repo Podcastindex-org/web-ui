@@ -8,6 +8,7 @@ interface IProps {
 
 interface IState {
     showComments: boolean,
+    loadingComments: boolean,
     comments: StateComment[] 
 }
 
@@ -93,16 +94,22 @@ export default class Comments extends React.PureComponent<IProps, IState> {
         super(props);
         this.state = {
             showComments: false,
+            loadingComments: false,
             comments: []
         };
     }
     
     async onClickShowComments() {
         const stateToSet: any = {
-            showComments: true
+            showComments: true,
+            loadingComments: false
         };
 
         if(!this.state.comments.length) {
+            this.setState({
+                loadingComments: true
+            });
+
             const response = await fetch('/api/comments/byepisodeid?' + new URLSearchParams({id: String(this.props.id) }));
 
             const responseBody = await response.json();
@@ -198,8 +205,9 @@ export default class Comments extends React.PureComponent<IProps, IState> {
     render() {
         return (
         <div>
-            {!this.state.showComments && <button onClick={() => this.onClickShowComments()}>Show comments</button>}
+            {!this.state.showComments && <button disabled={this.state.loadingComments} onClick={() => this.onClickShowComments()}>Show comments</button>}
             {this.state.showComments && <button onClick={() => this.onClickHideComments()}>Hide comments</button>}
+            {this.state.loadingComments && <p>Loading comments...</p>}
             {this.state.showComments && this.state.comments.map((comment) => <Comment key={comment.url} comment={comment}/>)}
         </div>
         )
