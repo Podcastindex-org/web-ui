@@ -1037,6 +1037,64 @@
     ]
   },
   {
+    "appName": "Blubrry",
+    "appType": [
+      "hosting",
+      "directory"
+    ],
+    "appUrl": "https://blubrry.com",
+    "appIconUrl": "blubrry.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Live",
+        "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Location",
+        "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Txt",
+        "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      }
+    ]
+  },
+  {
     "appName": "PowerPress by Blubrry",
     "appType": [
       "wordpress plugin",
@@ -1052,27 +1110,47 @@
     "supportedElements": [
       {
         "elementName": "Transcript",
-        "elementURL": "https://wordpress.org/plugins/powerpress/#developers"
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
       },
       {
         "elementName": "Locked",
-        "elementURL": "https://wordpress.org/plugins/powerpress/#developers"
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
       },
       {
         "elementName": "Funding",
-        "elementURL": "https://wordpress.org/plugins/powerpress/#developers"
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Live",
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
       },
       {
         "elementName": "Chapters",
-        "elementURL": "https://wordpress.org/plugins/powerpress/#developers"
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
       },
       {
         "elementName": "Location",
-        "elementURL": "https://wordpress.org/plugins/powerpress/#developers"
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
       },
       {
         "elementName": "Podping",
-        "elementURL": "https://wordpress.org/plugins/powerpress/#developers"
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Txt",
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
       }
     ]
   },
