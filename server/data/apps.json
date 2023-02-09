@@ -1040,8 +1040,7 @@
     "appName": "Blubrry",
     "appType": [
       "hosting",
-      "directory",
-      "web"
+      "directory"
     ],
     "appUrl": "https://blubrry.com",
     "appIconUrl": "blubrry.png",
