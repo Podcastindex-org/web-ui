@@ -46,8 +46,10 @@ class Comment extends React.PureComponent<ICommentProps> {
                 <summary>
                     <a className='profile' href={this.props.comment.attributedTo.url}>
                         <img className='profile-img' src={this.props.comment.attributedTo.iconUrl || '/images/brand-icon.svg'} />
-                        <strong>{this.props.comment.attributedTo.name}</strong>
-                        <span>{this.props.comment.attributedTo.account}</span>
+                        <div className='user'>
+                            <strong>{this.props.comment.attributedTo.name}</strong>
+                            <span className='handle'>{this.props.comment.attributedTo.account}</span>
+                        </div>
                     </a>
                     <span aria-hidden="true">·</span>
                     <a href={this.props.comment.url} className='permalink'>
@@ -204,7 +206,7 @@ export default class Comments extends React.PureComponent<IProps, IState> {
     
     render() {
         return (
-        <div>
+        <div className='comments-container'>
             {!this.state.showComments && <button disabled={this.state.loadingComments} onClick={() => this.onClickShowComments()}>Show comments</button>}
             {this.state.showComments && <button onClick={() => this.onClickHideComments()}>Hide comments</button>}
             {this.state.loadingComments && <p>Loading comments...</p>}
