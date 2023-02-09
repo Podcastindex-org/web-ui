@@ -1615,6 +1615,10 @@
       {
         "elementName": "Value",
         "elementURL": "https://rss.com/blog/rss-com-enables-value-4-value-bitcoin-payments/"
+      },
+      {
+        "elementName": "Txt",
+        "elementURL": "https://changelog.rss.com/v23-2-2-257210"
       }
     ]
   },
