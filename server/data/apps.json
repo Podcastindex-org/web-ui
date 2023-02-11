@@ -1016,6 +1016,33 @@
     ]
   },
   {
+    "appName": "Hubhopper",
+    "appType": [
+      "hosting",
+      "podcast player",
+      "app"
+    ],
+    "appUrl": "https://Hubhopper.com",
+    "appIconUrl": "hubhopper.png",
+    "platforms": [
+      "Web", "Android"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "GUID",
+        "elementURL": "https://hubhopper.com"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://hubhopper.com"
+      },
+      {
+        "elementName": "Trailer",
+        "elementURL": "https://hubhopper.com"
+      }
+    ]
+  },
+  {
     "appName": "Podnews directory",
     "appType": [
       "directory"
