@@ -109,17 +109,6 @@ app.use('/api/episodes/byfeedid', async (req, res) => {
     let feedId = req.query.id
     let max = req.query.max
     const response = await api.episodesByFeedId(feedId, null, max)
-
-    // Inject fake socialInteract content here for testing
-    // it does not even have to be valid data, the comments API fetches it again
-    // based on the episode ID
-    response.items.forEach((item) => {
-        item.socialInteracts = [{
-            uri: 'https://podcastindex.social/users/dave/statuses/109683341113064081',
-            protocol: 'activitypub',
-        }]
-    })
-
     res.send(response)
 })
 
