@@ -17,3 +17,13 @@ venv.bak/
 www
 
 package-lock.json
+
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+# We are not using Zero-installs
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
