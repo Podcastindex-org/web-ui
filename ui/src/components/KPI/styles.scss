@@ -1,3 +1,13 @@
+:root {
+    --kpi-title-color: #494949;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --kpi-title-color: #cdcdcd;
+    }
+}
+
 .kpi {
     display: flex;
     flex-direction: column;
@@ -11,7 +21,7 @@
             opacity: 0.64;
             font-family: var(--font-family-exp);
             font-size: 20px;
-            color: #494949;
+            color: var(--kpi-title-color);
             text-align: left;
             margin-right: 50px;
         }
@@ -44,7 +54,7 @@
     opacity: 0.63;
     text-transform: uppercase;
     font-size: 18px;
-    color: #494949;
+    color: var(--kpi-title-color);
     text-align: left;
     margin-bottom: 10px;
 }

@@ -1,3 +1,15 @@
+:root {
+    --inactive-button-color: #c7c7c7;
+    --inactive-button-hover-color: #b3b2b2;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --inactive-button-color: #808080;
+        --inactive-button-hover-color: #505050;
+    }
+}
+
 .podcastIndexAppsFilterTags {
     font-weight: 700;
     margin: 0 0 12px 0;
@@ -15,12 +27,12 @@
         background-color: darken($color: #e90000, $amount: 5%);
     }
     &.inactive {
-        color: #2d2d2d;
+        color: var(--fg-main);
         background: initial;
 
-        background: #c7c7c7;
+        background: var(--inactive-button-color);
         &:hover {
-            background: #b3b2b2;
+            background: var(--inactive-button-hover-color);
         }
     }
     &.clear-button {

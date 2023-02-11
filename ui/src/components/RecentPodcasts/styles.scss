@@ -1,14 +1,31 @@
+:root {
+    --player-bg-color: #ffffff;
+    --player-border-color: #d6d6d6;
+    --player-cover-art-border-color: lighten(#d6d6d6, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --player-bg-color: var(--bg-main);
+        --player-border-color: #302d2d;
+        --player-cover-art-border-color: darken(#302d2d, 0.2);
+    }
+}
+
 .player-card {
-    background: #ffffff;
+    background: var(--player-bg-color);
     width: 500px;
     height: auto;
     min-height: 660px;
-    border: 1px solid #d6d6d6;
-    box-shadow: 0 0 9px 0 rgba(192, 192, 192, 0.5);
+    border: 1px solid var(--player-border-color);
+    box-shadow: 0 0 12px 0 rgba(192, 192, 192, 0.5);
     border-radius: 12px;
     transition: var(--transition-secs);
     .loader-wrapper {
         height: 660px;
+    }
+    .rhap_container {
+        background-color: var(--player-bg-color);
     }
 }
 .player {
@@ -106,7 +123,7 @@
         width: 450px;
         height: 450px;
         border-radius: 14px;
-        border: 1px solid lighten(#d6d6d6, 0.2);
+        border: 1px solid var(--player-cover-art-border-color);
     }
     z-index: 99999;
 }

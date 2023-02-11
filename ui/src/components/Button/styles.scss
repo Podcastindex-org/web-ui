@@ -1,17 +1,27 @@
+:root {
+    --button-hover-color: #f2f2f2;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --button-hover-color: #302d2d;
+    }
+}
+
 .button {
     border-radius: 17px;
     transition: var(--transition-secs);
     font-family: var(--font-family-exp);
     font-size: 16px;
-    color: #2d2d2d;
+    color: var(--fg-main);
     padding: 8px 20px;
     text-align: center;
     white-space: nowrap;
     display: block;
     &:hover {
         transition: var(--transition-secs);
-        background: #f2f2f2;
-        color: #2d2d2d;
+        background: var(--button-hover-color);
+        color: var(--fg-main);
         cursor: pointer;
     }
     &.primary {

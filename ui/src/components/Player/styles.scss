@@ -27,7 +27,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         margin-bottom: 5px;
-        color: #2d2d2d;
+        color: var(--fg-main);
     }
     .player-podcast-name {
         text-align: center;
@@ -40,7 +40,7 @@
         > a {
             font-size: 16px;
             font-family: var(--font-family);
-            color: #2d2d2d;
+            color: var(--fg-main);
         }
     }
     .player-feed-button {
@@ -51,7 +51,7 @@
         font-family: var(--font-family-exp);
         font-size: 14px;
         //line-height: 16px;
-        color: #868686;
+        color: var(--text-color);
     }
     .rhap_container {
         outline: none;
@@ -77,6 +77,14 @@
             }
         }
     } 
+    @media (prefers-color-scheme: dark) {
+        .rhap_container {
+            background-color: var(--bg-main);
+        }
+        .rhap_time {
+            color: var(--fg-main);
+        }
+    }
 }
 
 @media only screen and (max-width: 520px) {
