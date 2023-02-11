@@ -7,6 +7,7 @@
     "private": true,
     "dependencies": {
         "@hcaptcha/react-hcaptcha": "^0.3.9",
+        "@types/dompurify": "^2.4.0",
         "@types/history": "^4.7.5",
         "@types/react": "^16.9.20",
         "@types/react-dom": "^16.9.5",
@@ -19,10 +20,12 @@
         "canvas-confetti": "^1.5.1",
         "connected-react-router": "^6.7.0",
         "crypto-js": "^4.0.0",
+        "dompurify": "^2.4.3",
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
         "history": "^4.10.1",
         "moment": "^2.29.0",
+        "node-fetch": "^2.6.8",
         "pluralize": "^8.0.0",
         "podcast-index-api": "^1.1.9",
         "query-string": "^6.13.5",
@@ -39,6 +42,7 @@
         "redux-thunk": "^2.3.0",
         "reduxsauce": "^1.1.2",
         "shortid": "^2.2.15",
+        "threadcap": "^0.1.9",
         "typesafe-actions": "^5.1.0",
         "uuid": "^8.3.2",
         "webln": "^0.3.0"

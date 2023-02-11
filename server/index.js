@@ -2,8 +2,14 @@ const path = require('path')
 const fs = require('fs');
 const express = require('express')
 const app = express() // create express app
+const { makeThreadcap, InMemoryCache, updateThreadcap, makeRateLimitedFetcher } = require('threadcap');
+const fetch = require('node-fetch');
+const packageJson = require('../package.json');
+
 // Gets the .env variables
 require('dotenv').config()
+
+const USER_AGENT = `Podcastindex.org-web/${packageJson.version}`;
 
 // Utilizing the node repo from comster/podcast-index-api :)
 // NOTE: This server will work as a reverse proxy.
@@ -110,6 +116,32 @@ app.use('/api/add/byfeedurl', async (req, res) => {
     let feedUrl = req.query.url
     const response = await apiAdd.addByFeedUrl(feedUrl)
     res.send(response)
+})
+
+// ------------------------------------------------
+// ------------ API to get comments for episode ---
+// ------------------------------------------------
+app.use('/api/comments/byepisodeid', async (req, res) => {
+    let episodeId = req.query.id;
+    const response = await api.episodesById(episodeId, false);
+
+    const socialInteract = response.episode.socialInteract && response.episode.socialInteract.filter((si) => si.protocol === 'activitypub');
+
+    if(!socialInteract && socialInteract.lenght >= 0) {
+        // Bad requests sounds appropriate, as the client is only expected to call this API
+        // when it validated upfront that the episode has a property socialInteract with activitypub protocol
+        res.status(400).send('The episode does not contain a socialInteract property')
+    }
+
+    const userAgent = USER_AGENT;
+    const cache = new InMemoryCache();
+    const fetcher = makeRateLimitedFetcher(fetch);
+
+    const threadcap = await makeThreadcap(socialInteract[0].uri, { userAgent, cache, fetcher });
+
+    await updateThreadcap(threadcap, { updateTime: new Date().toISOString(), userAgent, cache, fetcher });
+
+    res.send(threadcap)
 })
 
 // ------------------------------------------------

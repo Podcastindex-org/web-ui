@@ -221,7 +221,19 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
 
     renderEpisode(item, index: number) {
 
-        let {title, image, feedImage, link, enclosureUrl, transcriptUrl, description, datePublished, value} = item
+        let {
+            id,
+            title,
+            image,
+            feedImage,
+            link,
+            enclosureUrl,
+            transcriptUrl,
+            description,
+            datePublished,
+            value,
+            socialInteract
+        } = item
         let {result} = this.state
         // try to use episode image, fall back to feed images
         image = image || feedImage || result.image || result.artwork
@@ -237,6 +249,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
             <div key={index}>
                 <EpisodeItem
                     ref={this.episodeItems[index]}
+                    id={id}
                     index={index}
                     title={title}
                     image={image}
@@ -246,6 +259,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
                     transcriptUrl={transcriptUrl}
                     description={description}
                     datePublished={datePublished}
+                    hasComments={socialInteract && socialInteract.length > 0}
                     onPlay={this.onEpisodePlay}
                     onPause={this.onEpisodePause}
                 />
