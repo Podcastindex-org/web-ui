@@ -2193,5 +2193,31 @@
         "elementURL": "http://focus.hk.cn"
       }
     ]
+  },
+  {
+    "appName": "iCatcher! Podcast Player",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "appUrl": "https://apps.apple.com/app/apple-store/id414419105",
+    "appIconUrl": "",
+    "platforms": [
+      "iOS"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Person",
+        "elementURL": "https://joeisanerd.com"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://joeisanerd.com"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://joeisanerd.com"
+      }
+    ]
   }
 ]
