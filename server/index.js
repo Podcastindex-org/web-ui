@@ -122,20 +122,22 @@ app.use('/api/add/byfeedurl', async (req, res) => {
 // ------------ API to get comments for episode ---
 // ------------------------------------------------
 app.use('/api/comments/byepisodeid', async (req, res) => {
-    let episodeId = req.query.id
-    const response = await api.episodesById(episodeId, false)
+    let episodeId = req.query.id;
+    const response = await api.episodesById(episodeId, false);
 
-    // The API request above will be used once socialInteract is returned by the API
-    // the log statement below just shows the API call is working, it should be removed
-    // later when the response is actually used
-    console.log(response)
+    const socialInteract = response.episode.socialInteract && response.episode.socialInteract.filter((si) => si.protocol === 'activitypub');
+
+    if(!socialInteract && socialInteract.lenght >= 0) {
+        // Bad requests sounds appropriate, as the client is only expected to call this API
+        // when it validated upfront that the episode has a property socialInteract with activitypub protocol
+        res.status(400).send('The episode does not contain a socialInteract property')
+    }
 
     const userAgent = USER_AGENT;
     const cache = new InMemoryCache();
     const fetcher = makeRateLimitedFetcher(fetch);
 
-    // TODO: Once socialInteract is returned by the API, we should replace the URL here
-    const threadcap = await makeThreadcap('https://podcastindex.social/users/dave/statuses/109683341113064081', { userAgent, cache, fetcher });
+    const threadcap = await makeThreadcap(socialInteract[0].uri, { userAgent, cache, fetcher });
 
     await updateThreadcap(threadcap, { updateTime: new Date().toISOString(), userAgent, cache, fetcher });
 

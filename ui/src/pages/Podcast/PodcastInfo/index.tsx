@@ -232,7 +232,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
             description,
             datePublished,
             value,
-            socialInteracts
+            socialInteract
         } = item
         let {result} = this.state
         // try to use episode image, fall back to feed images
@@ -259,7 +259,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
                     transcriptUrl={transcriptUrl}
                     description={description}
                     datePublished={datePublished}
-                    hasComments={socialInteracts && socialInteracts.length > 0}
+                    hasComments={socialInteract && socialInteract.length > 0}
                     onPlay={this.onEpisodePlay}
                     onPause={this.onEpisodePause}
                 />
