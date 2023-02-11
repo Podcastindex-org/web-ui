@@ -1,4 +1,5 @@
 import * as React from 'react'
+import DOMPurify from 'dompurify'
 
 import './styles.scss'
 
@@ -140,8 +141,8 @@ export default class Comments extends React.PureComponent<IProps, IState> {
         }
 
         if(node.comment) {
-            const summary = Comments.resolveLanguageTaggedValues(node.comment.summary);
-            const content = Comments.resolveLanguageTaggedValues(node.comment.content); 
+            const summary = node.comment.summary && DOMPurify.sanitize(Comments.resolveLanguageTaggedValues(node.comment.summary));
+            const content = node.comment.content && DOMPurify.sanitize(Comments.resolveLanguageTaggedValues(node.comment.content));
 
             stateComment = {
                 ...stateComment,
