@@ -151,7 +151,7 @@ export default class PodcastHeader extends React.PureComponent<IProps, PodState>
                                 : ""
                             }
                             {feedURL ?
-                                <span onClick={this.copyClicked}>{ this.state.copyMessage }</span>
+                                <button onClick={this.copyClicked}>{ this.state.copyMessage }</button>
                                 : ""
                             }
                         </div>

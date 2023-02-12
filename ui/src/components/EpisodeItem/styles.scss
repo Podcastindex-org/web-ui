@@ -1,6 +1,20 @@
+:root {
+    --bg-color: #ffffff;
+    --border-color: #d6d6d6;
+    --cover-art-border-color: lighten(#d6d6d6, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #180e0e;
+        --border-color: #505050;
+        --cover-art-border-color: var(--border-color);
+    }
+}
+
 .episode {
-    background: #ffffff;
-    border: 1px solid #d6d6d6;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     margin: 10px 0px;
     height: auto;
@@ -25,7 +39,7 @@
         height: 140px;
         width: 140px;
         border-radius: 10px;
-        border: 1px solid lighten(#d6d6d6, 0.2);
+        border: 1px solid var(--cover-art-border-color);
     }
 }
 
@@ -44,14 +58,14 @@
     font-weight: bold;
     width: 100%;
     font-size: 26px;
-    color: #2d2d2d;
+    color: var(--fg-main);
     text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .episode-date {
-    color: #868686;
+    color: var(--text-color);
 }
 
 .episode-links {

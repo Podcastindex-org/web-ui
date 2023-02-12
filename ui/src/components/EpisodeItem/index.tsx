@@ -2,6 +2,7 @@ import * as React from 'react'
 import { getISODate, getPrettyDate, truncateString } from '../../utils'
 
 import Value from '../Value'
+import Comments from '../Comments'
 import NoImage from '../../../images/no-cover-art.png'
 import PlayLogo from '../../../images/play-circle.svg'
 import PauseLogo from '../../../images/pause-circle.svg'
@@ -12,6 +13,7 @@ import TranscriptLogo from '../../../images/transcript.svg'
 import './styles.scss'
 
 interface IProps {
+    id: number,
     index?: number
     title?: string
     image?: any
@@ -21,6 +23,7 @@ interface IProps {
     transcriptUrl?: string, //csbdev
     description?: string
     datePublished?: number
+    hasComments: boolean
     onPlay?: any
     onPause?: any
 }
@@ -77,7 +80,18 @@ export default class EpisodeItem extends React.PureComponent<IProps> {
     }
 
     render() {
-        const {title, image, link, value, enclosureUrl, transcriptUrl, description, datePublished} = this.props
+        const {
+            id,
+            title,
+            image,
+            link,
+            value,
+            enclosureUrl,
+            transcriptUrl,
+            description,
+            datePublished,
+            hasComments,
+        } = this.props
         const episodeLink = link
         const episodeEnclosure = enclosureUrl
         const episodeTranscript = transcriptUrl
@@ -164,6 +178,7 @@ export default class EpisodeItem extends React.PureComponent<IProps> {
                     {truncateString(description).replace(/(<([^>]+)>)/gi, " ")}
                 </p>
                 {value && <Value {...value} />}
+                {hasComments && <Comments id={id}/>}
             </div>
         )
     }

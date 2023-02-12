@@ -49,13 +49,13 @@
 .hero-pitch-text {
     // font-family: var(--font-family-exp);
     font-size: 55px;
-    color: #2d2d2d;
+    color: var(--fg-main);
 }
 
 .hero-pitch-subtitle {
     font-size: 22px;
     max-width: 425px;
-    color: #868686;
+    color: var(--text-color);
     margin-bottom: 10px;
 }
 
@@ -78,7 +78,7 @@
         font-family: var(--font-family-exp);
         font-size: 18px;
         line-height: 20px;
-        color: #868686;
+        color: var(--text-color);
     }
     .donation-providers {
         width: 100%;

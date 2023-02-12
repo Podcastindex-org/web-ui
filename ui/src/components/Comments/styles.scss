@@ -1,0 +1,152 @@
+:root {
+    --thread: clamp(1rem, 8vw, 2rem);
+  }
+  
+  details {
+    margin: .5rem 0;
+    position: relative;
+  }
+  
+  details details {
+    margin-left: calc(var(--thread) + .5rem);
+  }
+  
+  details.content-warning {
+    margin-left: 0;
+  }
+  
+  summary {
+    list-style: none;
+    display: flex;
+    gap: .25rem;
+    place-items: center;
+    font-size: .75rem;
+    line-height: 1rem;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  details:not([open]) > summary::before {
+    content: "";
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' %3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M8.25 4.5l7.5 7.5-7.5 7.5' /%3E%3C/svg%3E") center no-repeat;
+    width: 1rem;
+    height: 1rem;
+    opacity: .4;
+  }
+  
+  details[open]:not(.content-warning) > summary::before {
+    content: "";
+    position: absolute;
+    top: calc(var(--thread) + .5rem);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: var(--thread);
+    display: block;
+    color: rgba(0,0,0,.4);
+    background: linear-gradient(
+      to right,
+      transparent calc(var(--thread) / 2 - 1px),
+      currentColor calc(var(--thread) / 2 - 1px),
+      currentColor calc(var(--thread) / 2 + 1px),
+      transparent calc(var(--thread) / 2 + 1px)
+    );
+  }
+  
+  .profile {
+    display: flex;
+    gap: .5rem;
+    place-items: center;
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .profile-img {
+    width: var(--thread);
+    height: var(--thread);
+    border-radius: var(--thread);
+    object-fit: cover;
+  }
+  
+  .user {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .handle {
+    display: none;
+  }
+  
+  .permalink {
+    text-align: right;
+    text-decoration: none;
+    color: rgba(0,0,0,.6);
+  }
+  
+  .contents {
+    padding-left: calc(var(--thread) + .5rem);
+    font-size: 0.875rem;
+  }
+  
+  .ellipsis::after {
+    content: "…";
+  }
+  
+  .invisible {
+    position: absolute;
+    font-size: 0;
+    line-height: 0;
+    display: inline-block;
+    width: 0;
+    height: 0;
+  }
+  
+  details.content-warning > summary {
+    font-size: 0.875rem;
+  }
+  
+  details.content-warning > summary::before {
+    display: none;
+  }
+  
+  details.content-warning > summary::after {
+    content: "Show More";
+    display: inline-block;
+    background: rgba(0,0,0,.1);
+    border-radius: .75rem;
+    padding: .25rem .5rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  details.content-warning[open] > summary::after {
+    content: "Show Less";
+  }
+  
+  @media screen and (min-width: 25rem) {
+    .handle {
+      display: block;
+    }
+  
+    .profile {
+      flex: 1;
+    }
+  
+    .profile + span {
+      display: none;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  .comments-container {
+    width: 100%;
+  }

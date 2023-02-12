@@ -405,7 +405,7 @@ export default class Value4Value extends React.PureComponent<IProps> {
                 <p>These podcasts are set up to receive Bitcoin payments in real-time over the Lightning network using
                     compatible <b><Link to="/apps">Podcasting 2.0 apps</Link></b>.</p>
 
-                <p>There are <b>{total}</b> Value 4 Value podcasts!</p>
+                <p>There are <b>{total}</b> Value 4 Value podcasts! Add yours by including the value block on your feed using <b><Link to="https://podcasterwallet.com/">podcasterwallet.com</Link></b></p>
 
                 <br/>
 

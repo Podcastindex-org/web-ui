@@ -1,3 +1,13 @@
+:root {
+    --dimmed-color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --dimmed-color: #808080;
+    }
+}
+
 .podcastIndexAppsSingleApp {
     display: grid;
     grid-template-columns: 1fr 1fr 192px;
@@ -29,7 +39,7 @@
         font-size: 24px;
     }
     .podcastIndexAppType {
-        color: #4b4b58;
+        color: var(--dimmed-color);
         margin: 0;
     }
 }
@@ -42,6 +52,6 @@
 .podcastIndexAppPlatforms {
     align-self: center;
 
-    color: #333333;
+    color: var(--dimmed-color);
     line-height: 1.5;
 }
