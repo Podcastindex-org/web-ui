@@ -22,6 +22,7 @@
         "crypto-js": "^4.0.0",
         "dompurify": "^2.4.3",
         "dotenv": "^8.2.0",
+        "dotenv-webpack": "^8.0.1",
         "express": "^4.17.1",
         "history": "^4.10.1",
         "moment": "^2.29.0",
