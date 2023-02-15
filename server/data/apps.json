@@ -1841,8 +1841,8 @@
         "elementURL": "https://disctopia.com"
       },
       {
-          "elementName":"Funding",
-          "elementURL":"https://disctopia.com"
+        "elementName":"Funding",
+        "elementURL":"https://disctopia.com"
       },
       {
         "elementName": "Value",
@@ -2086,7 +2086,7 @@
       }
     ]
   },
-    {
+  {
     "appName": "Taddy Podcast API",
     "appType": [
       "directory"
@@ -2133,7 +2133,7 @@
       }
     ]
   },
- {
+  {
     "appName": "myWebLog",
     "appType": [
       "hosting",
@@ -2196,6 +2196,56 @@
     ]
   },
   {
+    "appName": "Vodio",
+    "appType": [
+      "podcast player",
+      "hosting"
+    ],
+    "appUrl": "https://vodio.fr/",
+    "appIconUrl": "vodio.jpg",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "GUID",
+        "elementURL": "https://www.vodio.fr/en/articles/34/how-to-broadcast-your-podcast/"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://www.vodio.fr/en/articles/34/how-to-broadcast-your-podcast/"
+      },
+      {
+        "elementName": "Id",
+        "elementURL": "https://www.vodio.fr/en/articles/34/how-to-broadcast-your-podcast/"
+      },
+      {
+        "elementName": "socialInteract",
+        "elementURL": "https://www.vodio.fr/en/articles/34/how-to-broadcast-your-podcast/"
+      },
+      {
+        "elementName": "License",
+        "elementURL": "https://www.vodio.fr/en/articles/34/how-to-broadcast-your-podcast/"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://www.vodio.fr/en/articles/34/how-to-broadcast-your-podcast/"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://www.vodio.fr/en/articles/34/how-to-broadcast-your-podcast/"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://www.vodio.fr/en/articles/34/how-to-broadcast-your-podcast/"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://www.vodio.fr/en/articles/34/how-to-broadcast-your-podcast/"
+      }
+    ]
+  },
+  {
     "appName": "FocusPodcast",
     "appType": [
       "app",
@@ -2228,7 +2278,7 @@
       "podcast player"
     ],
     "appUrl": "https://apps.apple.com/app/apple-store/id414419105",
-    "appIconUrl": "",
+    "appIconUrl": "icatcher.webp",
     "platforms": [
       "iOS"
     ],
