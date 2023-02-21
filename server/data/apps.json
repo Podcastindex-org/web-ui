@@ -2134,11 +2134,7 @@
         "elementURL": "https://www.vodio.fr/en/articles/34/how-to-broadcast-your-podcast/"
       },
       {
-        "elementName": "Id",
-        "elementURL": "https://www.vodio.fr/en/articles/34/how-to-broadcast-your-podcast/"
-      },
-      {
-        "elementName": "socialInteract",
+        "elementName": "Social Interact",
         "elementURL": "https://www.vodio.fr/en/articles/34/how-to-broadcast-your-podcast/"
       },
       {
@@ -2212,6 +2208,60 @@
       {
         "elementName": "Transcript",
         "elementURL": "https://joeisanerd.com"
+      }
+    ]
+  },
+  {
+    "appName": "Steno.fm",
+    "appType": [
+      "podcast player",
+      "website"
+    ],
+    "appUrl": "https://steno.fm",
+    "appIconUrl": "stenofm.jpg",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://blog.steno.fm/introducing-stenofm/#chapters"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://blog.steno.fm/introducing-stenofm/#trailer-season-episode"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://blog.steno.fm/introducing-stenofm/#funding"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://blog.steno.fm/introducing-stenofm/#guid"
+      },
+      {
+        "elementName": "OP3",
+        "elementURL": "https://blog.steno.fm/introducing-stenofm/#trending-episodes-with-op3"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://blog.steno.fm/introducing-stenofm/#person"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://blog.steno.fm/introducing-stenofm/#search"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://blog.steno.fm/introducing-stenofm/#trailer-season-episode"
+      },
+      {
+        "elementName": "Trailer",
+        "elementURL": "https://blog.steno.fm/introducing-stenofm/#trailer-season-episode"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://blog.steno.fm/introducing-stenofm/#transcripts"
       }
     ]
   }
