@@ -57,13 +57,13 @@ export default class Card extends React.Component<IProps> {
         }
     }
 
-    async getNewFeedStats() {
-        let response = await fetch('/api/newfeedstats', {
-            credentials: 'same-origin',
-            method: 'GET',
-        })
-        return await response.json()
-    }
+    // async getNewFeedStats() {
+    //     let response = await fetch('/api/newfeedstats', {
+    //         credentials: 'same-origin',
+    //         method: 'GET',
+    //     })
+    //     return await response.json()
+    // }
 
     async getStats() {
         let response = await fetch('/api/stats', {
@@ -85,20 +85,6 @@ export default class Card extends React.Component<IProps> {
                     lastMonth={overallStats.feedCount30days}
                     last60={overallStats.feedCount60days}
                     last90={overallStats.feedCount90days}
-                />
-                <div className="info-section">&nbsp;</div>
-                <NewFeedStatsCard
-                    total={stats.totalCount}
-                    top1name={stats.top1name}
-                    top1count={stats.top1count}
-                    top2name={stats.top2name}
-                    top2count={stats.top2count}
-                    top3name={stats.top3name}
-                    top3count={stats.top3count}
-                    top4name={stats.top4name}
-                    top4count={stats.top4count}
-                    top5name={stats.top5name}
-                    top5count={stats.top5count}
                 />
             </div>
         )
