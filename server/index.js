@@ -137,12 +137,47 @@ app.use('/api/comments/byepisodeid', async (req, res) => {
     const cache = new InMemoryCache();
     const fetcher = makeRateLimitedFetcher(fetch);
 
+    const sentCommenters = {};
+
     const threadcap = await makeThreadcap(socialInteract[0].uri, { userAgent, cache, fetcher });
 
-    await updateThreadcap(threadcap, { updateTime: new Date().toISOString(), userAgent, cache, fetcher });
+    const callbacks = {
+        onEvent: e => {
+            console.log(e);
+            if (e.kind === 'node-processed' && e.part === 'replies') {
+                console.log(threadcap);
+                writeThreadcapChunk(e.nodeId, threadcap, sentCommenters, res);
+            }
+        }
+    }
 
-    res.send(threadcap)
+    await updateThreadcap(threadcap, { updateTime: new Date().toISOString(), userAgent, cache, fetcher, callbacks });
+
+    res.end()
 })
+
+function writeThreadcapChunk(processedNodeId, threadcap, sentCommenters, res) {
+    const threadcapChunk = {};
+
+    threadcapChunk.roots = threadcap.roots.filter((root) => root === processedNodeId);
+    threadcapChunk.nodes = {};
+    threadcapChunk.nodes[processedNodeId] = threadcap.nodes[processedNodeId];
+
+    const comment = threadcapChunk.nodes[processedNodeId].comment;
+
+    // nodes are always new, but commenters can be repeated, we only include
+    // them in th chunk if they have not been sent before, as there is no purpose
+    // on sending them again.
+    // this could be determines by inspecting previous nodes, but this way
+    // is easier.
+    if(comment && !sentCommenters[comment.attributedTo]) {
+        sentCommenters[comment.attributedTo] = true;
+        threadcapChunk.commenters = {};
+        threadcapChunk.commenters[comment.attributedTo] = threadcap.commenters[comment.attributedTo];
+    }
+
+    res.write(JSON.stringify(threadcapChunk))
+}
 
 // ------------------------------------------------
 // ---------- Static files for API data -----------
