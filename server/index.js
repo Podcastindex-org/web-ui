@@ -143,9 +143,7 @@ app.use('/api/comments/byepisodeid', async (req, res) => {
 
     const callbacks = {
         onEvent: e => {
-            console.log(e);
             if (e.kind === 'node-processed' && e.part === 'replies') {
-                console.log(threadcap);
                 writeThreadcapChunk(e.nodeId, threadcap, sentCommenters, res);
             }
         }
