@@ -131,7 +131,6 @@ export default class Comments extends React.PureComponent<IProps, IState> {
 
             await reader.read().then(function processChunk({done, value}) {
                 if(done) {
-                    console.log('done');
                     thisComponent.setState({
                         loadingComments: false
                     });
