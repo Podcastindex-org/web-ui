@@ -140,7 +140,6 @@ export default class Comments extends React.PureComponent<IProps, IState> {
                 
                 updateResponseBody(responseBody, parsedChunk);
 
-                console.log(responseBody);
                 
                 const stateToSet: any = {
                     showComments: true,
