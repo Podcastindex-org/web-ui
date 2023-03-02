@@ -45,14 +45,14 @@ export default class Card extends React.Component<IProps> {
 
     async componentDidMount(): Promise<void> {
         this._isMounted = true
-        const stats = await this.getNewFeedStats()
+        //const stats = await this.getNewFeedStats()
         const overallStats = await this.getStats()
 
         if (this._isMounted) {
             this.setState({
                 loading: false,
                 overallStats,
-                stats
+                // /stats
             })
         }
     }
