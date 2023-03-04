@@ -21,7 +21,8 @@ interface StateComment {
     attributedTo?: Commenter,
     replies?: StateComment[],
     commentError?: string,
-    repliesError?: string
+    repliesError?: string,
+    loaded: boolean
 }
 
 interface Commenter {
@@ -43,7 +44,7 @@ class Comment extends React.PureComponent<ICommentProps> {
     render(): React.ReactNode {
         return (
         <details open>
-            {!this.props.comment.commentError &&
+            {!this.props.comment.commentError && this.props.comment.loaded &&
                 <summary>
                     <a className='profile' href={this.props.comment.attributedTo.url}>
                         <img className='profile-img' src={this.props.comment.attributedTo.iconUrl || '/images/brand-icon.svg'} />
@@ -72,6 +73,14 @@ class Comment extends React.PureComponent<ICommentProps> {
                 // content can be empty when there are attachments
                 !this.props.comment.commentError && this.props.comment.content &&
                 <div className="contents" dangerouslySetInnerHTML={{__html: this.props.comment.content}}/>
+            }
+            {!this.props.comment.loaded && 
+                <summary>
+                    <a className='profile' href={this.props.comment.url}>
+                        <img className='profile-img' src='/images/brand-icon.svg' />
+                        <strong>Loading...</strong>
+                    </a>
+                </summary>
             }
             {this.props.comment.commentError && 
                 <summary>
@@ -103,9 +112,10 @@ export default class Comments extends React.PureComponent<IProps, IState> {
     }
     
     async onClickShowComments() {
-        const stateToSet: any = {
-            showComments: true,
-            loadingComments: false
+        const responseBody = {
+            roots: [],
+            nodes: {},
+            commenters: {}
         };
 
         if(!this.state.comments.length) {
@@ -115,12 +125,47 @@ export default class Comments extends React.PureComponent<IProps, IState> {
 
             const response = await fetch('/api/comments/byepisodeid?' + new URLSearchParams({id: String(this.props.id) }));
 
-            const responseBody = await response.json();
+            const reader = response.body.getReader();
 
-            stateToSet.comments = responseBody.roots.map((root) => Comments.buildStateComment(root, responseBody));
+            const thisComponent = this;
+
+            await reader.read().then(function processChunk({done, value}) {
+                if(done) {
+                    thisComponent.setState({
+                        loadingComments: false
+                    });
+                    return;
+                }
+                const parsedChunk = JSON.parse(new TextDecoder().decode(value));
+                
+                updateResponseBody(responseBody, parsedChunk);
+
+                
+                const stateToSet: any = {
+                    showComments: true,
+                };
+
+                stateToSet.comments = responseBody.roots.map((root) => Comments.buildStateComment(root, responseBody));
+                
+                thisComponent.setState(stateToSet);
+                return reader.read().then(processChunk);
+            });
+
+            function updateResponseBody(responseBody, parsedChunk) {
+                responseBody.roots = responseBody.roots.concat(parsedChunk.roots);
+                for(let key in parsedChunk.nodes) {
+                    responseBody.nodes[key] = parsedChunk.nodes[key];
+                }
+                for(let key in parsedChunk.commenters) {
+                    responseBody.commenters[key] = parsedChunk.commenters[key];
+                }
+            }
         }
-
-        this.setState(stateToSet);
+        else {
+            this.setState({
+                showComments: true
+            });
+        }
     }
 
     async onClickHideComments() {
@@ -128,17 +173,20 @@ export default class Comments extends React.PureComponent<IProps, IState> {
     }
 
     private static buildStateComment(commentUrl: string, commentsApiResponseBody): StateComment | null {
+        let stateComment: StateComment = {
+            url: commentUrl,
+            loaded: false
+        }
+
         const node = commentsApiResponseBody.nodes[commentUrl];
 
         if(!node) {
-            return null;
+            return stateComment;
         }
+
+        stateComment.loaded = true;
 
         const commenter = node.comment && commentsApiResponseBody.commenters[node.comment.attributedTo];
-
-        let stateComment: StateComment = {
-            url: commentUrl
-        }
 
         if(node.comment) {
             const summary = node.comment.summary && DOMPurify.sanitize(Comments.resolveLanguageTaggedValues(node.comment.summary));
