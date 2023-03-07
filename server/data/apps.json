@@ -43,37 +43,6 @@
     ]
   },
   {
-    "appName": "AudioWave",
-    "appType": [
-      "app",
-      "podcast player"
-    ],
-    "appUrl": "https://apps.apple.com/be/app/audiowave-podcast-player/id1602776751",
-    "appIconUrl": "audiowave.jpg",
-    "platforms": [
-      "iOS",
-      "iPad OS"
-    ],
-    "supportedElements": [
-      {
-        "elementName": "Transcript",
-        "elementURL": "https://apps.apple.com/be/app/audiowave-podcast-player/id1602776751"
-      },
-      {
-        "elementName": "Funding",
-        "elementURL": "https://twitter.com/audiowave_fm/status/1503754058066243593"
-      },
-      {
-        "elementName": "Location",
-        "elementURL": "https://apps.apple.com/be/app/audiowave-podcast-player/id1602776751"
-      },
-      {
-        "elementName": "Person",
-        "elementURL": "https://apps.apple.com/be/app/audiowave-podcast-player/id1602776751"
-      }
-    ]
-  },
-  {
     "appName": "Caproni",
     "appType": [
       "hosting"
@@ -135,6 +104,10 @@
       {
         "elementName": "Funding",
         "elementURL": "https://twitter.com/PodcastAddict/status/1319645267335933954"
+      },
+      {
+        "elementName": "Live",
+        "elementURL": "https://podcastaddict.com/changelog/2023_1#section2"
       },
       {
         "elementName": "Location",
@@ -199,6 +172,10 @@
       {
         "elementName": "Sat Streaming",
         "elementURL": "https://twitter.com/GoPodfriend/status/1378079735234838531"
+      },
+      {
+        "elementName": "Social Interact",
+        "elementURL": "https://twitter.com/PodcastindexOrg/status/1497630426457911304"
       }
     ]
   },
@@ -293,6 +270,10 @@
       {
         "elementName": "Search",
         "elementURL": "https://podverse.fm/search"
+      },
+      {
+        "elementName": "Social Interact",
+        "elementURL": "https://twitter.com/Podverse/status/1469470115284590595"
       },
       {
         "elementName": "Soundbite",
@@ -1922,39 +1903,6 @@
     ]
   },
   {
-    "appName": "Sounder",
-    "appType": [
-      "hosting"
-    ],
-    "appUrl": "https://sounder.fm/",
-    "appIconUrl": "sounder.png",
-    "platforms": [
-      "Web"
-    ],
-    "supportedElements": [
-      {
-        "elementName": "Person",
-        "elementURL": "https://blog.sounder.fm/efficiency-updates-transcription-podcast-index-and-adc/"
-      },
-      {
-        "elementName": "GUID",
-        "elementURL": "https://blog.sounder.fm/efficiency-updates-transcription-podcast-index-and-adc/"
-      },
-      {
-        "elementName": "Episode",
-        "elementURL": "https://blog.sounder.fm/efficiency-updates-transcription-podcast-index-and-adc/"
-      },
-      {
-        "elementName": "Season",
-        "elementURL": "https://blog.sounder.fm/efficiency-updates-transcription-podcast-index-and-adc/"
-      },
-      {
-        "elementName": "Transcript",
-        "elementURL": "https://blog.sounder.fm/efficiency-updates-transcription-podcast-index-and-adc/"
-      }
-    ]
-  },
-  {
     "appName": "BoostCLI",
     "appType": [
       "app",
@@ -2100,36 +2048,6 @@
       {
         "elementName": "Search",
         "elementURL": "https://taddy.org/developers/podcast-api/search"
-      }
-    ]
-  },
-  {
-    "appName": "Podtrics",
-    "appType": [
-      "app",
-      "hosting"
-    ],
-    "appUrl": "https://podtrics.com",
-    "appIconUrl": "podtrics_p_logo.png",
-    "platforms": [
-      "Web"
-    ],
-    "supportedElements": [
-      {
-        "elementName": "Season",
-        "elementURL": "https://podtrics.com/"
-      },
-      {
-        "elementName": "Episode",
-        "elementURL": "https://podtrics.com/"
-      },
-      {
-        "elementName": "GUID",
-        "elementURL": "https://podtrics.com/"
-      },
-      {
-        "elementName": "Funding",
-        "elementURL": "https://podtrics.com/"
       }
     ]
   },
