@@ -1009,24 +1009,24 @@
     "supportedElements": [
       {
         "elementName": "Transcript",
-        "elementURL": "https://www.buzzsprout.com/blog/transcription-tools"
+        "elementURL": "https://redcircle.com"
       },
       {
         "elementName": "Locked",
-        "elementURL": "https://www.buzzsprout.com/blog/podcast-locking"
+        "elementURL": "https://redcircle.com"
       },
       {
         "elementName": "Funding",
-        "elementURL": "https://www.buzzsprout.com/"
+        "elementURL": "https://redcircle.com"
       },
       {
         "elementName": "Podping",
-        "elementURL": "https://www.buzzsprout.com/"
+        "elementURL": "https://redcircle.com"
       },
-            {
+      {
         "elementName": "GUID",
-        "elementURL": "https://hubhopper.com"
-  }
+        "elementURL": "https://redcircle.com"
+      }
     ]
   },
   {
