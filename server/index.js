@@ -113,24 +113,50 @@ app.use('/api/episodes/byfeedid', async (req, res) => {
 })
 
 app.use('/api/episodes/live', async (req, res) => {
-    let max = req.query.max
-    const response = await api.custom('episodes/live', {pretty: true, max: max})
-    const minPublished = Math.floor(new Date().getTime() / 1000) - 3600
+    const max = req.query.max
 
-    // assume live episodes posted within the past hour are live
-    // since the api doesn't provide start and end times
+    // grab live items from recently updated feeds
+    // (large max value to work around sorting issue `docs-api#96`)
+    const updatedLiveItems = await api.custom('episodes/live', {max: 100})
 
-    response.items = response.items.filter(item => {
-        return item.datePublished >= minPublished
-    })
+    // re-sort to put recently updated live items first
+    updatedLiveItems.items.sort((a, b) => {
+        return (b.datePublished - a.datePublished)
+    });
 
-    response.count = response.items.length;
+    const feedIds = new Set(updatedLiveItems.items.map(feed => feed.feedId))
+    const feedTitles = updatedLiveItems.items.reduce((result, item) => {
+        result[item.feedId] = item.feedTitle
+        return result
+    }, {})
 
-    if (response.count === 0) {
-        response.description = 'No matching items'
+    const liveItems = []
+    const liveCutoff = 3600 // cut off perpetually live shows after an hour
+
+    const now = Math.floor(new Date().getTime() / 1000)
+
+    // check each individual feed and collect live items that are actually live (status = live)
+    for (const feedId of feedIds) {
+        const feed = await api.episodesByFeedId(feedId)
+
+        for (const item of feed.liveItems) {
+            if (item.status === 'live' && now < (item.startTime + liveCutoff) && liveItems.length < max) {
+                item.feedTitle = feedTitles[item.feedId];
+                liveItems.push(item);
+            }
+        }
+
+        if (liveItems.length >= max) {
+            break;
+        }
     }
 
-    res.send(response)
+    // sort and put newly started items first
+    liveItems.sort((a, b) => {
+        return (b.startTime - a.startTime)
+    });
+
+    res.send(liveItems)
 })
 
 app.use('/api/add/byfeedurl', async (req, res) => {

@@ -78,7 +78,7 @@ export default class Landing extends React.Component<IProps, IState> {
 
     async getEpisodes() {
         let liveResponse = await this.getLiveEpisodes()
-        let episodes = liveResponse.items.map(ep => {
+        let episodes = liveResponse.map(ep => {
             ep.live = true
             return ep
         })
