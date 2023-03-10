@@ -24,6 +24,7 @@ interface IProps {
     description?: string
     datePublished?: number
     hasComments: boolean
+    startTime?: number
     onPlay?: any
     onPause?: any
 }
@@ -91,6 +92,7 @@ export default class EpisodeItem extends React.PureComponent<IProps> {
             description,
             datePublished,
             hasComments,
+            startTime,
         } = this.props
         const episodeLink = link
         const episodeEnclosure = enclosureUrl
@@ -113,9 +115,15 @@ export default class EpisodeItem extends React.PureComponent<IProps> {
                     <div className="episode-info">
                         <div className="episode-title">{title}</div>
                         <p className="episode-date">
-                            <time dateTime={getISODate(datePublished)}>
-                                {getPrettyDate(datePublished)}
-                            </time>
+                            {startTime ? (
+                                <time dateTime={getISODate(startTime)}>
+                                    {getPrettyDate(startTime)}
+                                </time>
+                            ) : (
+                                <time dateTime={getISODate(datePublished)}>
+                                    {getPrettyDate(datePublished)}
+                                </time>
+                            )}
                         </p>
 
                         <div className="episode-links">
