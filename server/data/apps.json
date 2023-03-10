@@ -997,6 +997,39 @@
     ]
   },
   {
+    "appName": "RedCircle",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://redcircle.com",
+    "appIconUrl": "redcircle.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://www.buzzsprout.com/blog/transcription-tools"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://www.buzzsprout.com/blog/podcast-locking"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://www.buzzsprout.com/"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://www.buzzsprout.com/"
+      },
+            {
+        "elementName": "GUID",
+        "elementURL": "https://hubhopper.com"
+  }
+    ]
+  },
+  {
     "appName": "Hubhopper",
     "appType": [
       "hosting",
