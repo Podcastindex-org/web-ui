@@ -997,6 +997,39 @@
     ]
   },
   {
+    "appName": "RedCircle",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://redcircle.com",
+    "appIconUrl": "redcircle.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://redcircle.com"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://redcircle.com"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://redcircle.com"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://redcircle.com"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://redcircle.com"
+      }
+    ]
+  },
+  {
     "appName": "Hubhopper",
     "appType": [
       "hosting",
