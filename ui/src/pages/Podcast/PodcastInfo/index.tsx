@@ -1,13 +1,10 @@
 import * as React from 'react'
 import ReactLoading from 'react-loading'
-import EpisodeItem from '../../../components/EpisodeItem'
-import InfiniteList from '../../../components/InfiniteList'
+import EpisodeList from '../../../components/EpisodeList'
 import Player from '../../../components/Player'
 import PodcastHeader from '../../../components/PodcastHeader'
 import { fixURL, updateTitle } from '../../../utils'
 import './styles.scss'
-
-const he = require('he')
 
 interface IProps {
     match: any
@@ -17,9 +14,10 @@ interface IProps {
 export default class PodcastInfo extends React.PureComponent<IProps> {
     state = {
         result: Object(),
-        episodes: [],
+        episodes: Object(),
         loading: true,
         selectedEpisode: undefined,
+        playingEpisode: undefined,
         playing: false,
     }
     _isMounted = false
@@ -32,7 +30,6 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         this.onEpisodePlay = this.onEpisodePlay.bind(this)
         this.onEpisodePause = this.onEpisodePause.bind(this)
         this.onEpisodeCanPlay = this.onEpisodeCanPlay.bind(this)
-        this.renderEpisode = this.renderEpisode.bind(this)
     }
 
     async componentDidMount(): Promise<void> {
@@ -60,13 +57,20 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
 
     async fetchData(id) {
         const result = (await this.getPodcastInfo(id)).feed
-        const episodes: Array<any> = (await this.getEpisodes(id)).items
+        const episodes = (await this.getEpisodes(id))
+
         if (this._isMounted) {
+            let selectedEpisode = episodes.items[0]
+
+            if (episodes.live.length > 0) {
+                selectedEpisode = episodes.live[0]
+            }
+
             this.setState({
                 loading: false,
                 result,
                 episodes,
-                selectedEpisode: episodes[0],
+                selectedEpisode,
             })
         }
     }
@@ -86,19 +90,28 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
             // credentials: 'same-origin',
             method: 'GET',
         })
-        return await response.json()
+
+        const episodes = await response.json()
+
+        return {
+            items: episodes.items,
+            live: episodes.liveItems.filter(
+                item => item.status === 'live'
+            ),
+        }
     }
 
-    onEpisodePlay(index: number) {
-        const { episodes, selectedEpisode } = this.state
+    onEpisodePlay(episode: object) {
+        const { selectedEpisode } = this.state
+
+        if (!episode) {
+            episode = selectedEpisode
+        }
+
         this.setState({
             playing: true,
+            playingEpisode: episode,
         })
-
-        if (index === undefined) {
-            index = episodes.findIndex((x) => x === selectedEpisode)
-        }
-        const episode = episodes[index]
 
         if (selectedEpisode !== episode) {
             this.setState({
@@ -110,26 +123,15 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         // and then check it when onCanPlay is triggered (handled by onEpisodeCanPlay) where the play call can be
         // made again.
         this.player.current.play()
-
-        // set all but current episode button to play; current to pause
-        this.episodeItems.forEach((episodeItem) => {
-            episodeItem.current.setPlaying(
-                index === episodeItem.current.props.index
-            )
-        })
     }
 
     onEpisodePause() {
         this.setState({
             playing: false,
+            playingEpisode: null,
         })
 
         this.player.current.pause()
-
-        // set episode buttons to play
-        this.episodeItems.forEach((episodeItem) => {
-            episodeItem.current.setPlaying(false)
-        })
     }
 
     onEpisodeCanPlay() {
@@ -181,11 +183,11 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     }
 
     renderPlayer() {
-        const { episodes, selectedEpisode, playing, result } = this.state
+        const { selectedEpisode, playing, result } = this.state
         const preload = playing ? 'auto' : 'none'
         return (
             <div className="podcast-header-player">
-                {episodes.length > 0 ? (
+                {selectedEpisode ? (
                     <Player
                         ref={this.player}
                         episode={selectedEpisode}
@@ -203,67 +205,29 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     }
 
     renderEpisodes() {
-        const { episodes } = this.state
+        const { result, episodes, playingEpisode } = this.state
+
         return (
-            <div className="episodes-list">
-                <h2 className="episode-header">Episodes</h2>
-                {episodes.length > 0 ? (
-                    <InfiniteList
-                        data={episodes}
-                        itemRenderer={this.renderEpisode}
+            <>
+                {episodes.live.length > 0 ? (
+                    <EpisodeList
+                        title="Live Now!"
+                        podcast={result}
+                        episodes={episodes.live}
+                        playingEpisode={playingEpisode}
+                        onEpisodePlay={this.onEpisodePlay}
+                        onEpisodePause={this.onEpisodePause}
                     />
-                ) : (
-                    <div>No episodes found</div>
-                )}
-            </div>
-        )
-    }
-
-    renderEpisode(item, index: number) {
-
-        let {
-            id,
-            title,
-            image,
-            feedImage,
-            link,
-            enclosureUrl,
-            transcriptUrl,
-            description,
-            datePublished,
-            value,
-            socialInteract
-        } = item
-        let {result} = this.state
-        // try to use episode image, fall back to feed images
-        image = image || feedImage || result.image || result.artwork
-        enclosureUrl = fixURL(enclosureUrl)
-        description = he.decode(description)
-
-        // create a reference to the generated EpisodeItem if one doesn't already exist
-        if (index >= this.episodeItems.length) {
-            this.episodeItems.push(React.createRef<EpisodeItem>())
-        }
-
-        return (
-            <div key={index}>
-                <EpisodeItem
-                    ref={this.episodeItems[index]}
-                    id={id}
-                    index={index}
-                    title={title}
-                    image={image}
-                    link={link}
-                    value={value}
-                    enclosureUrl={enclosureUrl}
-                    transcriptUrl={transcriptUrl}
-                    description={description}
-                    datePublished={datePublished}
-                    hasComments={socialInteract && socialInteract.length > 0}
-                    onPlay={this.onEpisodePlay}
-                    onPause={this.onEpisodePause}
+                ) : ''}
+                <EpisodeList
+                    title="Episodes"
+                    podcast={result}
+                    episodes={episodes.items}
+                    playingEpisode={playingEpisode}
+                    onEpisodePlay={this.onEpisodePlay}
+                    onEpisodePause={this.onEpisodePause}
                 />
-            </div>
+            </>
         )
     }
 
