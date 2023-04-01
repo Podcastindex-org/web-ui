@@ -137,6 +137,10 @@ app.use('/api/comments/byepisodeid', async (req, res) => {
     const cache = new InMemoryCache();
     const fetcher = makeRateLimitedFetcher(fetch);
 
+    // Disable buffering in the nginx server so that the delivery of
+    // chunks are not delayed
+    res.setHeader('X-Accel-Buffering', 'no');
+
     const sentCommenters = {};
 
     const threadcap = await makeThreadcap(socialInteract[0].uri, { userAgent, cache, fetcher });
