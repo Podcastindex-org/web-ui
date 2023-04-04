@@ -1,5 +1,22 @@
 [
   {
+    "appName": "Audicy",
+    "appType": [
+      "Discord Audio Streaming Bot"
+    ],
+    "appUrl": "https://audicy.xyz",
+    "appIconUrl": "audicylogo.png",
+    "platforms": [
+      "Discord"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Discord Server",
+        "elementURL": "https://discord.gg/4Vxsf4Y8KK"
+      }
+    ]
+  },
+  {
     "appName": "chaptertool",
     "appType": [
       "app",
