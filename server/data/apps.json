@@ -2,7 +2,7 @@
   {
     "appName": "Audicy",
     "appType": [
-      "Discord Audio Streaming Bot"
+      "podcast player"
     ],
     "appUrl": "https://audicy.xyz",
     "appIconUrl": "audicylogo.png",
