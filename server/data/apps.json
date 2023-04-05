@@ -2,7 +2,9 @@
   {
     "appName": "Audicy",
     "appType": [
-      "podcast player"
+      "podcast player",
+      "other",
+      "chat bot"
     ],
     "appUrl": "https://audicy.xyz",
     "appIconUrl": "audicylogo.png",
