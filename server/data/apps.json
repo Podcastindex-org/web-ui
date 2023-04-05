@@ -11,8 +11,12 @@
     ],
     "supportedElements": [
       {
-        "elementName": "Discord Server",
-        "elementURL": "https://discord.gg/4Vxsf4Y8KK"
+        "elementName": "Search",
+        "elementURL": "https://audicy.xyz"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://audicy.xyz"
       }
     ]
   },
