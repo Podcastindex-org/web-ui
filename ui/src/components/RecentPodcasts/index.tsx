@@ -11,6 +11,7 @@ import {Link} from "react-router-dom";
 
 interface IProps {
     title?: string
+    liveTitle?: string
     podcasts?: Array<any>
     loading?: boolean
 }
@@ -60,7 +61,7 @@ export default class RecentPodcasts extends React.Component<IProps, IState> {
     }
 
     render() {
-        const {loading, title, podcasts} = this.props
+        const {loading, title, liveTitle, podcasts} = this.props
         const {index} = this.state
         const selectedPodcast = podcasts[index]
         return (
@@ -87,7 +88,7 @@ export default class RecentPodcasts extends React.Component<IProps, IState> {
                         </div>
                         {title && (
                             <div className="player-title">
-                                <b>{title}</b>
+                                <b>{selectedPodcast.live ? liveTitle : title}</b>
                             </div>
                         )}
                         <div className="player-cover-art">
