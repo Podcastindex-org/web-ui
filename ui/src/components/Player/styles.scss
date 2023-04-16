@@ -37,7 +37,7 @@
         text-overflow: ellipsis;
         margin-bottom: 5px;
 
-        > a {
+        a {
             font-size: 16px;
             font-family: var(--font-family);
             color: var(--fg-main);
@@ -89,6 +89,9 @@
 
 @media only screen and (max-width: 520px) {
     .player-show-title p {
+        max-width: 350px;
+    }
+    .player-podcast-name {
         max-width: 350px;
     }
 }
