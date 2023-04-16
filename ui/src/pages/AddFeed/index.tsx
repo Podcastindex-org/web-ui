@@ -284,6 +284,7 @@ export default class AddFeed extends React.PureComponent<IProps> {
                     <Button
                         type="submit"
                         disabled={feed == "" || token == null}
+                        className="add-button"
                     >Add</Button>
                 </form>
 

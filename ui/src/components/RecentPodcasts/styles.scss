@@ -122,6 +122,7 @@
     img {
         width: 450px;
         height: 450px;
+        object-fit: contain;
         border-radius: 14px;
         border: 1px solid var(--player-cover-art-border-color);
     }

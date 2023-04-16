@@ -26,6 +26,7 @@
     img {
         height: 300px;
         width: 300px;
+        object-fit: contain;
         border-radius: 10px;
         border: 1px solid var(--cover-art-border-color);
     }

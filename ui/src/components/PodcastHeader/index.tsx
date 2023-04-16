@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Button from "../Button";
 
 import Value from '../Value'
 import NoImage from '../../../images/no-cover-art.png'
@@ -151,7 +152,7 @@ export default class PodcastHeader extends React.PureComponent<IProps, PodState>
                                 : ""
                             }
                             {feedURL ?
-                                <button onClick={this.copyClicked}>{ this.state.copyMessage }</button>
+                                <Button small={true} onClick={this.copyClicked}>{ this.state.copyMessage }</Button>
                                 : ""
                             }
                         </div>

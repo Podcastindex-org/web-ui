@@ -1,9 +1,11 @@
 :root {
+    --button-background: #F0F0F0;
     --button-hover-color: #f2f2f2;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
+        --button-background: #1a1a1a;
         --button-hover-color: #302d2d;
     }
 }
@@ -14,6 +16,7 @@
     font-family: var(--font-family-exp);
     font-size: 16px;
     color: var(--fg-main);
+    background-color: var(--button-background);
     padding: 8px 20px;
     text-align: center;
     white-space: nowrap;
