@@ -118,13 +118,28 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // padding: 25px 25px 0 25px;
+
     img {
         width: 450px;
         height: 450px;
         object-fit: contain;
         border-radius: 14px;
         border: 1px solid var(--player-cover-art-border-color);
+
+        &.image-loading {
+            height: 0;
+            position: absolute;
+        }
+    }
+    .image-loading-placeholder {
+        width: 450px;
+        height: 450px;
+        display: grid;
+        align-items: center;
+
+        div {
+            justify-self: center;
+        }
     }
     z-index: 99999;
 }
@@ -160,7 +175,10 @@
             width: 275px;
             height: 275px;
             border-radius: 10px;
-            border: 1px solid lighten(#d6d6d6, 0.2);
+        }
+        .image-loading-placeholder {
+            width: 275px;
+            height: 275px;
         }
     }
 }
