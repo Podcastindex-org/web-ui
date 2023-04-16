@@ -2,10 +2,8 @@
     --player-bg-color: #ffffff;
     --player-border-color: #d6d6d6;
     --player-cover-art-border-color: lighten(#d6d6d6, 0.2);
-}
 
-@media (prefers-color-scheme: dark) {
-    :root {
+    &[data-theme="dark"] {
         --player-bg-color: var(--bg-main);
         --player-border-color: #302d2d;
         --player-cover-art-border-color: darken(#302d2d, 0.2);

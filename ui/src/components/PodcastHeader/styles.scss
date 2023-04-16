@@ -2,10 +2,8 @@
     --category-bg-color: #f3f3f3;
     --category-border-color: #cecece;
     --cover-art-border-color: lighten(#d6d6d6, 0.2);
-}
 
-@media (prefers-color-scheme: dark) {
-    :root {
+    &[data-theme="dark"] {
         --category-bg-color: #302d2d;
         --category-border-color: #505050;
         --cover-art-border-color: var(--border-color);

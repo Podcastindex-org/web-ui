@@ -1,9 +1,7 @@
 :root {
     --bg-color: #ffffff;
-}
 
-@media (prefers-color-scheme: dark) {
-    :root {
+    &[data-theme="dark"] {
         --bg-color: #180e0e;
     }
 }
