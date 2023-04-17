@@ -143,7 +143,7 @@ export default class EpisodeItem extends React.PureComponent<IProps> {
 
                             {episodeEnclosure ?
                                 <a
-                                    className="episode-enclosure"
+                                    className="episode-link"
                                     href={episodeEnclosure}
                                     title="Download"
                                     target="_blank"

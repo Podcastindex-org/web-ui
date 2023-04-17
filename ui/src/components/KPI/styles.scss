@@ -1,9 +1,7 @@
 :root {
     --kpi-title-color: #494949;
-}
 
-@media (prefers-color-scheme: dark) {
-    :root {
+    &[data-theme="dark"] {
         --kpi-title-color: #cdcdcd;
     }
 }
