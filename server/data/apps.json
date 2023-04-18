@@ -1132,6 +1132,22 @@
       {
         "elementName": "Txt",
         "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Trailer",
+        "elementUrl": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "License",
+        "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
       }
     ]
   },
@@ -1191,6 +1207,22 @@
       },
       {
         "elementName": "Txt",
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Trailer",
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "License",
         "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
       }
     ]
