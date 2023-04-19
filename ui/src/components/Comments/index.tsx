@@ -2,6 +2,7 @@ import * as React from 'react'
 import DOMPurify from 'dompurify'
 
 import './styles.scss'
+import CommentMenu from '../CommentMenu'
 
 interface IProps {
     id: number,
@@ -36,9 +37,20 @@ interface ICommentProps {
     comment: StateComment 
 }
 
-class Comment extends React.PureComponent<ICommentProps> {
+interface ICommentState {
+    showMenu: boolean
+}
+
+class Comment extends React.PureComponent<ICommentProps, ICommentState> {
     constructor(props) {
         super(props);
+        this.state = {
+            showMenu: false
+        }
+    }
+
+    onClickShowMenu() {
+        this.setState({showMenu: !this.state.showMenu});
     }
 
     render(): React.ReactNode {
@@ -53,10 +65,21 @@ class Comment extends React.PureComponent<ICommentProps> {
                             <span className='handle'>{this.props.comment.attributedTo.account}</span>
                         </div>
                     </a>
-                    <span aria-hidden="true">·</span>
                     <a href={this.props.comment.url} className='permalink'>
                         <time>{this.props.comment.publishedAt.toLocaleString()}</time>
                     </a>
+                    <button className="context-menu" aria-label="More" onClick={() => this.onClickShowMenu()}>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                        </svg>
+                        { this.state.showMenu && 
+                            <CommentMenu 
+                                url={this.props.comment.url}
+                                commenterUrl={this.props.comment.attributedTo.url}
+                                commenterAccount={this.props.comment.attributedTo.account}
+                            />
+                        }
+                    </button>
                 </summary>
             }
             {   this.props.comment.summary ? 

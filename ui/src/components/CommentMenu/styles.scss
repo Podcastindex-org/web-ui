@@ -1,0 +1,84 @@
+.context-menu {
+    all: unset;
+    position: relative;
+}
+
+.context-menu svg {
+    display: block;
+}
+
+.context-menu menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: #FFF;
+    margin: 0;
+    padding: .75rem;
+    z-index: 1;
+    border-radius: .25rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+.context-menu menu a {
+    white-space: nowrap;
+    text-decoration: none;
+    line-height: 2;
+}
+
+.dialog-homeinstance {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+    width: calc((100% - 6px) - 2em);
+    max-width: 28rem;
+}
+
+.dialog-homeinstance form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0;
+}
+
+.dialog-homeinstance input {
+    padding: 0.5rem;
+}
+
+.dialog-homeinstance menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: .5rem;
+    margin: 1.5rem 0 0 0;
+}
+
+.dialog-homeinstance button {
+    border: none;
+    padding: .5rem;
+    border-radius: 4px;
+    min-width: 4.5rem;
+    background-color: #2962ff;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: .25px;
+    line-height: 1rem;
+    outline: none;
+    color: #FFF;
+}
+
+.dialog-homeinstance button:hover {
+    background-color: #2F7DE2;
+}
+
+.dialog-homeinstance button[type="reset"] {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px #DADCE0;
+    color: #2962ff;
+}
+
+.dialog-homeinstance button[type="reset"]:hover {
+    background-color: #EAF2FD;
+}
