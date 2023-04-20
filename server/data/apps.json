@@ -2096,6 +2096,10 @@
       {
         "elementName": "Txt",
         "elementURL": "https://rssblue.com/help/podcast-metadata#txt-records"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://rssblue.com/blog/podping-is-live"
       }
     ]
   },
