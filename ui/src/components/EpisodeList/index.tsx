@@ -1,7 +1,7 @@
 import * as React from 'react'
 import EpisodeItem from '../EpisodeItem'
 import InfiniteList from '../InfiniteList'
-import { fixURL } from '../../utils'
+import { fixURL, getImage } from '../../utils'
 
 const he = require('he')
 
@@ -51,8 +51,6 @@ export default class EpisodeList extends React.PureComponent<IProps> {
         let {
             id,
             title,
-            image,
-            feedImage,
             link,
             enclosureUrl,
             transcriptUrl,
@@ -64,7 +62,7 @@ export default class EpisodeList extends React.PureComponent<IProps> {
         } = item
         let {podcast} = this.props
         // try to use episode image, fall back to feed images
-        image = image || feedImage || podcast.image || podcast.artwork
+        const image = getImage(item) || getImage(podcast)
         enclosureUrl = fixURL(enclosureUrl)
         description = he.decode(description)
 

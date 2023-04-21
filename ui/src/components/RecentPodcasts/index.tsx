@@ -1,5 +1,6 @@
 import * as React from 'react'
 import ReactLoading from 'react-loading'
+import { getImage } from "../../utils";
 
 import Player from "../Player";
 import BackIcon from '../../../images/chevron-back-outline.svg'
@@ -39,14 +40,10 @@ export default class RecentPodcasts extends React.Component<IProps, IState> {
         this.setState({index})
     }
 
-    getImage(selectedPodcast) {
-        return selectedPodcast.image || selectedPodcast.feedImage || NoImage
-    }
-
     updateIndex(newIndex: number) {
         const {index} = this.state
         const {podcasts} = this.props
-        const imageLoading = this.getImage(podcasts[index]) !== this.getImage(podcasts[newIndex])
+        const imageLoading = getImage(podcasts[index]) !== getImage(podcasts[newIndex])
         this.setState({
             index: newIndex,
             imageLoading: imageLoading,
@@ -117,7 +114,7 @@ export default class RecentPodcasts extends React.Component<IProps, IState> {
                                     <img
                                         className={imageLoadingClass}
                                         draggable={false}
-                                        src={this.getImage(selectedPodcast)}
+                                        src={getImage(selectedPodcast)}
                                         onError={(ev: any) => {
                                             ev.target.src = NoImage
                                             this.onImageLoad()

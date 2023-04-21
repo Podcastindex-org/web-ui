@@ -3,7 +3,7 @@ import ReactLoading from 'react-loading'
 import EpisodeList from '../../../components/EpisodeList'
 import Player from '../../../components/Player'
 import PodcastHeader from '../../../components/PodcastHeader'
-import { fixURL, updateTitle } from '../../../utils'
+import { fixURL, getImage, updateTitle } from '../../../utils'
 import './styles.scss'
 
 interface IProps {
@@ -145,8 +145,6 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         let { result } = this.state
         let {
             title,
-            image,
-            artwork,
             author,
             description,
             categories,
@@ -156,7 +154,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
             url,
             funding,
         } = result
-        image = artwork || image
+        const image = getImage(result)
         let podcastURL = fixURL(link)
         let feedURL = fixURL(url)
         let donationPageURL = null
