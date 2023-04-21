@@ -4,7 +4,7 @@ import sha256 from 'crypto-js/sha256'
 import { AUDIO_PRELOAD_ATTRIBUTE } from 'react-h5-audio-player/src/constants'
 import { v4 as uuidv4 } from 'uuid'
 import { Link } from 'react-router-dom'
-import { getISODate, getPrettyDate } from '../../utils'
+import { getImage, getISODate, getPrettyDate } from '../../utils'
 
 import 'react-h5-audio-player/src/styles.scss'
 import './styles.scss'
@@ -111,7 +111,7 @@ export default class Player extends React.Component<IProps> {
     setMediaSessionMetadata() {
         let navigator: any = window.navigator
         let episode = this.props.episode
-        let image: string = episode.image || episode.feedImage
+        let image: string = getImage(episode)
         if (episode && 'mediaSession' in window.navigator) {
             // @ts-ignore
             navigator.mediaSession.metadata = new MediaMetadata({

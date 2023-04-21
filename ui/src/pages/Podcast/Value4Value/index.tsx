@@ -5,7 +5,7 @@ import Button from "../../../components/Button";
 import InfiniteList from "../../../components/InfiniteList";
 import ResultItem from '../../../components/ResultItem'
 
-import { updateTitle } from '../../../utils'
+import { getImage, updateTitle } from '../../../utils'
 
 import './styles.scss'
 
@@ -237,7 +237,8 @@ export default class Value4Value extends React.PureComponent<IProps> {
 
         const pageData = pages.get(selectedPage)
         let {groupPages} = pageData
-        let {title, image, author, description, categories, id} = groupPages[index]
+        let {title, author, description, categories, id} = groupPages[index]
+        const image = getImage(groupPages[index])
 
         return (
             <div key={key}>

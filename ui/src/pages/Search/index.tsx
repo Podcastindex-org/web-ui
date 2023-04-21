@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import InfiniteList from "../../components/InfiniteList";
 import ResultItem from '../../components/ResultItem'
 
-import { cleanSearchQuery, encodeSearch, isValidURL, updateTitle } from '../../utils'
+import { cleanSearchQuery, encodeSearch, getImage, isValidURL, updateTitle } from '../../utils'
 
 import './styles.scss'
 
@@ -88,7 +88,8 @@ export default class Results extends React.PureComponent<IProps> {
     }
 
     renderItem(item, index: number) {
-        let {title, image, author, description, categories, id} = item
+        let {title, author, description, categories, id} = item
+        const image = getImage(item)
 
         return (
             <div key={index}>
