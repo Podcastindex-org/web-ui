@@ -58,11 +58,11 @@ export default class Value4Value extends React.PureComponent<IProps> {
         const {initialDisplay} = this.state
         this._isMounted = true
 
-        let results = (await this.getValue4ValuePodcasts()).feeds as Array<any>
+        let popular = (await this.getValue4ValuePodcasts(200)).feeds as Array<any>
 
         let pages = new Map<string, PageData>(
             [
-                [SpecialPages.POPULAR, {groupPages: results, displayCount: initialDisplay}],
+                [SpecialPages.POPULAR, {groupPages: popular, displayCount: initialDisplay}],
                 [SpecialPages.SYMBOL, {groupPages: [], displayCount: initialDisplay}],
                 [SpecialPages.NUMERIC, {groupPages: [], displayCount: initialDisplay}],
             ]
@@ -73,25 +73,40 @@ export default class Value4Value extends React.PureComponent<IProps> {
         pages.set(SpecialPages.OTHER, {groupPages: [], displayCount: initialDisplay})
 
         const allPages = []
-        results.forEach((value) => {
-            allPages.push(value)
-            const title = value.title
-            let startChar = SpecialPages.OTHER
-            if (title) {
-                startChar = title[0].toUpperCase()
-                // handle
-                if (!pages.has(startChar)) {
-                    if (SYMBOLS.includes(startChar)) {
-                        startChar = SpecialPages.SYMBOL
-                    } else if (NUMBERS.includes(startChar)) {
-                        startChar = SpecialPages.NUMERIC
-                    } else {
-                        startChar = SpecialPages.OTHER
+
+        let grandTotal = 0
+        let startAt = 1
+        while (true) {
+            let v4vData = (await this.getValue4ValuePodcastsPaginated(startAt, 1000))
+            const {status, feeds, total, nextStartAt} = v4vData
+            startAt = nextStartAt
+            grandTotal += total
+
+            if (status !== "true" || startAt === undefined) {
+                break
+            }
+
+            feeds.forEach((value) => {
+                allPages.push(value)
+                const title = value.title
+                let startChar = SpecialPages.OTHER
+                if (title) {
+                    startChar = title[0].toUpperCase()
+                    // handle
+                    if (!pages.has(startChar)) {
+                        if (SYMBOLS.includes(startChar)) {
+                            startChar = SpecialPages.SYMBOL
+                        } else if (NUMBERS.includes(startChar)) {
+                            startChar = SpecialPages.NUMERIC
+                        } else {
+                            startChar = SpecialPages.OTHER
+                        }
                     }
                 }
-            }
-            pages.get(startChar).groupPages.push(value)
-        })
+                pages.get(startChar).groupPages.push(value)
+            })
+        }
+
         pages.set(SpecialPages.ALL, {groupPages: allPages, displayCount: initialDisplay})
 
         const hash = this.getHash()
@@ -101,7 +116,7 @@ export default class Value4Value extends React.PureComponent<IProps> {
                 {
                     loading: false,
                     pages: pages,
-                    total: results.length,
+                    total: grandTotal,
                 },
                 () => {
                     this.updateSelectedPage(hash)
@@ -201,9 +216,18 @@ export default class Value4Value extends React.PureComponent<IProps> {
         })
     }
 
-    async getValue4ValuePodcasts() {
+    async getValue4ValuePodcasts(max: number) {
         // noinspection SpellCheckingInspection
-        let response = await fetch(`/api/podcasts/bytag?podcast-value`, {
+        let response = await fetch(`/api/podcasts/bytag?podcast-value&max=${max}`, {
+            // credentials: 'same-origin',
+            method: 'GET',
+        })
+        return await response.json()
+    }
+
+    async getValue4ValuePodcastsPaginated(startAt: number, max: number) {
+        // noinspection SpellCheckingInspection
+        let response = await fetch(`/api/podcasts/bytag?podcast-value&max=${max}&start_at=${startAt}`, {
             // credentials: 'same-origin',
             method: 'GET',
         })
@@ -406,11 +430,13 @@ export default class Value4Value extends React.PureComponent<IProps> {
                 <p>These podcasts are set up to receive Bitcoin payments in real-time over the Lightning network using
                     compatible <b><Link to="/apps">Podcasting 2.0 apps</Link></b>.</p>
 
-                <p>There are <b>{total}</b> Value 4 Value podcasts! Add yours by including the value block on your feed using <b><Link to="https://podcasterwallet.com/">podcasterwallet.com</Link></b></p>
+                <p>There are <b>{total}</b> Value 4 Value podcasts! Add yours by including the value block on your feed
+                    using <b><Link to="https://podcasterwallet.com/">podcasterwallet.com</Link></b></p>
 
                 <br/>
 
-                <p>Podcasts are grouped by the first character of the title and then displayed in sort order for that page.</p>
+                <p>Podcasts are grouped by the first character of the title and then displayed in sort order for that
+                    page.</p>
                 <p>The "Popular" page shows all podcasts in the "popularity" order returned from the API.</p>
                 <p>The "All" page shows all podcasts in sort order.</p>
 
