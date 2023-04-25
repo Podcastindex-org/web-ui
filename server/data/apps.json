@@ -1,5 +1,28 @@
 [
   {
+    "appName": "Audicy",
+    "appType": [
+      "podcast player",
+      "other",
+      "chat bot"
+    ],
+    "appUrl": "https://audicy.xyz",
+    "appIconUrl": "audicylogo.png",
+    "platforms": [
+      "Discord"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://audicy.xyz"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://audicy.xyz"
+      }
+    ]
+  },
+  {
     "appName": "chaptertool",
     "appType": [
       "app",
