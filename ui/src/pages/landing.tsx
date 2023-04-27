@@ -20,12 +20,12 @@ export default class Landing extends React.Component<IProps, IState> {
         loading: true,
         recentPodcasts: [],
         stats: {
-            feedCountTotal: '1,318,328',
-            feedCount3days: '81,919',
-            feedCount10days: '208,264',
-            feedCount30days: '303,007',
-            feedCount60days: '376,576',
-            feedCount90days: '607,991',
+            feedCountTotal: '-,---,---',
+            feedCount3days: '--,---',
+            feedCount10days: '---,---',
+            feedCount30days: '---,---',
+            feedCount60days: '---,---',
+            feedCount90days: '---,---',
         },
     }
     _isMounted = false
