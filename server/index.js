@@ -181,6 +181,26 @@ function writeThreadcapChunk(processedNodeId, threadcap, sentCommenters, res) {
     res.write(JSON.stringify(threadcapChunk) + '\n')
 }
 
+// ---------------------------------------------------------
+// --------- API to get remote interact url for comments ---
+// ---------------------------------------------------------
+app.use('/api/comments/remoteInteractUrlPattern', async (req, res) => {
+    const interactorAccount = req.query.interactorAccount;
+
+    console.log('Debug interactorAccount', interactorAccount);
+
+    const interactorInstanceHost = interactorAccount.split('@')[1];
+
+    const response = await fetch(`https://${interactorInstanceHost}/.well-known/webfinger?` + new URLSearchParams({resource:`acct:${interactorAccount}`}));
+    const parsedResponse = await response.json();
+
+    const linkOStatusSubscribe = parsedResponse.links.find((link) => link.rel === 'http://ostatus.org/schema/1.0/subscribe');
+    
+    res.send({
+        remoteInteractUrlPattern: linkOStatusSubscribe.template
+    })
+})
+
 // ------------------------------------------------
 // ---------- Static files for API data -----------
 // ------------------------------------------------
