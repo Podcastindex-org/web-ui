@@ -2378,7 +2378,10 @@
   },
   {
     "appName": "Spreaker from iHeart",
-    "appType": "hosting",
+    "appType": [
+      "hosting",
+      "podcast player"
+    ],
     "appUrl": "https://www.spreaker.com",
     "appIconUrl": "spreaker.png",
     "platforms": [
