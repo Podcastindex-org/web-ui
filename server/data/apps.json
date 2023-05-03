@@ -2375,5 +2375,27 @@
         "elementURL": "https://conshax.com"
       }
     ]
+  },
+  {
+    "appName": "Spreaker from iHeart",
+    "appType": [
+      "hosting",
+      "podcast player"
+    ],
+    "appUrl": "https://www.spreaker.com",
+    "appIconUrl": "spreaker.png",
+    "platforms": [
+      "Android",
+      "iOS",
+      "MacOS",
+      "Web",
+      "Windows"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://help.spreaker.com/en/articles/6886489-podcast-transcript"
+      }
+    ]
   }
 ]
