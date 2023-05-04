@@ -110,11 +110,10 @@ a,
             border: 1px solid lighten(#d6d6d6, 0.2);
             margin: 10px 10px;
             display: flex;
-            background: white;
+            background: var(--bg-color);
             flex-direction: column;
             border-radius: 4px;
             box-shadow: 0 0 9px 0 rgba(192, 192, 192, 0.5);
-            padding: 10px 0;
             .button-wrapper {
                 width: 100%;
                 .button {

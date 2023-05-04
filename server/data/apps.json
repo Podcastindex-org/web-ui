@@ -1,5 +1,28 @@
 [
   {
+    "appName": "Audicy",
+    "appType": [
+      "podcast player",
+      "other",
+      "chat bot"
+    ],
+    "appUrl": "https://audicy.xyz",
+    "appIconUrl": "audicylogo.png",
+    "platforms": [
+      "Discord"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://audicy.xyz"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://audicy.xyz"
+      }
+    ]
+  },
+  {
     "appName": "chaptertool",
     "appType": [
       "app",
@@ -1132,6 +1155,22 @@
       {
         "elementName": "Txt",
         "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Trailer",
+        "elementUrl": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "License",
+        "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
       }
     ]
   },
@@ -1191,6 +1230,22 @@
       },
       {
         "elementName": "Txt",
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Trailer",
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "License",
         "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
       }
     ]
@@ -2064,6 +2119,10 @@
       {
         "elementName": "Txt",
         "elementURL": "https://rssblue.com/help/podcast-metadata#txt-records"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://rssblue.com/blog/podping-is-live"
       }
     ]
   },
@@ -2314,6 +2373,28 @@
       {
         "elementName": "Value",
         "elementURL": "https://conshax.com"
+      }
+    ]
+  },
+  {
+    "appName": "Spreaker from iHeart",
+    "appType": [
+      "hosting",
+      "podcast player"
+    ],
+    "appUrl": "https://www.spreaker.com",
+    "appIconUrl": "spreaker.png",
+    "platforms": [
+      "Android",
+      "iOS",
+      "MacOS",
+      "Web",
+      "Windows"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://help.spreaker.com/en/articles/6886489-podcast-transcript"
       }
     ]
   }

@@ -23,6 +23,7 @@ interface IState {
 
 export default class TopBar extends React.PureComponent<IProps, IState> {
     static defaultProps = {}
+    wrapperRef: React.Ref<HTMLAnchorElement> = React.createRef();
 
     constructor(props: IProps) {
         super(props)
@@ -34,11 +35,34 @@ export default class TopBar extends React.PureComponent<IProps, IState> {
 
         this.onSearchChange = this.onSearchChange.bind(this)
         this.onSearchSubmit = this.onSearchSubmit.bind(this)
+        this.handleClickOutside = this.handleClickOutside.bind(this);
+    }
+
+    componentDidMount() {
+        document.addEventListener("mousedown", this.handleClickOutside);
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener("mousedown", this.handleClickOutside);
     }
 
     onSearchChange(evt: React.ChangeEvent<HTMLInputElement>) {
         evt.preventDefault()
-        this.setState({ search: evt.target.value })
+        this.setState({search: evt.target.value})
+    }
+
+    /**
+     * Alert if clicked on outside of element
+     */
+    handleClickOutside(event) {
+        // @ts-ignore
+        if (this.wrapperRef && !this.wrapperRef.current.contains(event.target)) {
+            setTimeout(() => {
+                this.setState({
+                    dropdownOpen: false,
+                })
+            }, 100)
+        }
     }
 
     onSearchSubmit(evt: React.ChangeEvent<HTMLFormElement>) {
@@ -54,7 +78,7 @@ export default class TopBar extends React.PureComponent<IProps, IState> {
     }
 
     render() {
-        const { search, dropdownOpen } = this.state
+        const {search, dropdownOpen} = this.state
         return (
             <nav className="topbar">
                 <Link className="topbar-brand" to="/">
@@ -65,7 +89,7 @@ export default class TopBar extends React.PureComponent<IProps, IState> {
                         alt="Brand logo"
                     />
                     <div className="topbar-title">
-                        <img src={BrandName} width={230} alt="Brand name" />
+                        <img src={BrandName} width={230} alt="Brand name"/>
                     </div>
                 </Link>
                 <div className="topbar-span">
@@ -96,6 +120,7 @@ export default class TopBar extends React.PureComponent<IProps, IState> {
                         </Button>
                     </div>
                     <a
+                        ref={this.wrapperRef}
                         href={null}
                         className="topbar-mobile-dropdown"
                         onClick={() =>

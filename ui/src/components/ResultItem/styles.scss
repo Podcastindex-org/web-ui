@@ -4,10 +4,8 @@
     --category-bg-color: #f3f3f3;
     --category-border-color: #cecece;
     --cover-art-border-color: lighten(#d6d6d6, 0.2);
-}
 
-@media (prefers-color-scheme: dark) {
-    :root {
+    &[data-theme="dark"] {
         --bg-color: #180e0e;
         --border-color: #505050;
         --category-bg-color: #302d2d;
@@ -43,6 +41,7 @@
     img {
         height: 140px;
         width: 140px;
+        object-fit: contain;
         border-radius: 10px;
         border: 1px solid var(--cover-art-border-color);
     }
@@ -140,11 +139,8 @@
     }
     .result-category {
         font-size: 14px;
-        background: #f3f3f3;
-        border: 1px solid #cecece;
         border-radius: 5px;
         margin: 3px;
-
         padding: 4px 12px;
     }
 }

@@ -1,9 +1,7 @@
 :root {
     --kpi-bg-color: #f3f3f3;
-}
 
-@media (prefers-color-scheme: dark) {
-    :root {
+    &[data-theme="dark"] {
         --kpi-bg-color: #302d2d;
     }
 }

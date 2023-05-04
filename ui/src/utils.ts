@@ -1,4 +1,5 @@
 import queryStringHelper from 'query-string'
+import NoImage from "../images/no-cover-art.png";
 
 export const updateTitle = (tile?: string) => {
     let newTitle = 'Podcastindex.org'
@@ -70,4 +71,15 @@ export const isValidURL = (urlString: string) => {
     } catch (_) {
         return false;
     }
+}
+
+/**
+ * Return the best image available
+ *
+ * If item doesn't contain an image, returns a placeholder image
+ *
+ * @param item the episode, item, or feed to get image for
+ */
+export const getImage = (item) => {
+    return item.artwork || item.image || item.feedImage || NoImage
 }

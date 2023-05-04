@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
+import ThemeButton from "./components/ThemeButton";
 import store, { history } from './state/store'
 import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'connected-react-router'
@@ -34,6 +35,7 @@ const Index: React.FC<MainProps> = ({ store, history }) => {
                     alt="Sidebar logo"
                 />
                 <Routes />
+                <ThemeButton/>
             </ConnectedRouter>
         </Provider>
     )
