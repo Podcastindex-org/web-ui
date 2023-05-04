@@ -1,5 +1,6 @@
 import * as React from 'react'
 import DOMPurify from 'dompurify'
+import Button from '../Button'
 
 import './styles.scss'
 
@@ -290,8 +291,8 @@ export default class Comments extends React.PureComponent<IProps, IState> {
     render() {
         return (
         <div className='comments-container'>
-            {!this.state.showComments && <button disabled={this.state.loadingComments} onClick={() => this.onClickShowComments()}>Show comments</button>}
-            {this.state.showComments && <button onClick={() => this.onClickHideComments()}>Hide comments</button>}
+            {!this.state.showComments && <Button disabled={this.state.loadingComments} onClick={() => this.onClickShowComments()}>Show comments</Button>}
+            {this.state.showComments && <Button onClick={() => this.onClickHideComments()}>Hide comments</Button>}
             {this.state.loadingComments && <p>Loading comments...</p>}
             {this.state.showComments && this.state.comments.map((comment) => <Comment key={comment.url} comment={comment}/>)}
         </div>
