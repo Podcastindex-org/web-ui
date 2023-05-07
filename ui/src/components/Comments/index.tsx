@@ -42,15 +42,42 @@ interface ICommentState {
 }
 
 class Comment extends React.PureComponent<ICommentProps, ICommentState> {
+    menuWrapperRef: React.Ref<HTMLDivElement> = React.createRef();
+    boundHandleMouseDown: (this: Document, ev: MouseEvent) => any;
+
     constructor(props) {
         super(props);
         this.state = {
             showMenu: false
         }
+
+        this.boundHandleMouseDown = this.handleMouseDown.bind(this);
     }
 
     onClickShowMenu() {
         this.setState({showMenu: !this.state.showMenu});
+    }
+
+    componentDidMount() {
+        document.addEventListener("mousedown", this.boundHandleMouseDown);
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener("mousedown", this.boundHandleMouseDown);
+    }
+
+    handleMouseDown(event: MouseEvent) {
+        this.closeMenuOnClickOutside(event);
+    }
+
+    closeMenuOnClickOutside(event: MouseEvent) {
+        // @ts-ignore
+        if (this.menuWrapperRef?.current && !this.menuWrapperRef.current.contains(event.target)) {
+            
+            this.setState({
+                showMenu: false,
+            })
+        }
     }
 
     render(): React.ReactNode {
@@ -73,11 +100,13 @@ class Comment extends React.PureComponent<ICommentProps, ICommentState> {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                         </svg>
                         { this.state.showMenu && 
-                            <CommentMenu 
-                                url={this.props.comment.url}
-                                commenterUrl={this.props.comment.attributedTo.url}
-                                commenterAccount={this.props.comment.attributedTo.account}
-                            />
+                            <div ref={this.menuWrapperRef}>
+                                <CommentMenu 
+                                    url={this.props.comment.url}
+                                    commenterUrl={this.props.comment.attributedTo.url}
+                                    commenterAccount={this.props.comment.attributedTo.account}
+                                />
+                            </div>
                         }
                     </button>
                 </summary>
