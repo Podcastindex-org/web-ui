@@ -129,18 +129,50 @@ export default class Comments extends React.PureComponent<IProps, IState> {
 
             const thisComponent = this;
 
+            let incompletePartialResponse: string = '';
+
             await reader.read().then(function processChunk({done, value}) {
+                /**
+                 * if everything goes right, value should be singe complete JSON encoded object,
+                 * but we have seen that a reverse proxy can mess this up.
+                 * Thus, we introduced '\n' as a delimiter, and we assume that value could be also be
+                 * fragments of one or more concatenated JSON objects.
+                 * e.g.:
+                 * '{"root":' - one incomplete JSON object
+                 * '{...}\n' - a complete JSON object (indicated by ending in \n)
+                 * '{...}\n{"root":' - complete JSON object followed by an incomplete JSON object
+                 * '}\n{"root":' - an final fragment of a JSON object followed by an incomplete JSON object
+                 */
                 if(done) {
                     thisComponent.setState({
                         loadingComments: false
                     });
                     return;
                 }
-                const parsedChunk = JSON.parse(new TextDecoder().decode(value));
-                
-                updateResponseBody(responseBody, parsedChunk);
 
+                const decodedValue = new TextDecoder().decode(value);
+                let partialResponses = decodedValue.split('\n');
+
+                if(partialResponses.length > 0) {
+                    partialResponses[0] = incompletePartialResponse + partialResponses[0];
+                    
+                    incompletePartialResponse = partialResponses[partialResponses.length-1];
+
+                    partialResponses = partialResponses.slice(0, -1);
+
+                    // normally, at this point partialResponses.length equals 1, but
+                    // if multiple chunks were buffered and delivered as one, it could be
+                    // > 1
+
+                    if(incompletePartialResponse || partialResponses.length > 1) {
+                        console.warn('Comments: Unexpected chunked responses from the comments API - a workaround is in place to ensure functional correctness, but performance is impacted.')
+                    }
+                }
+
+                const parsedPartialResponses = partialResponses.map((partialResponse) => JSON.parse(partialResponse));
                 
+                updateResponseBody(responseBody, parsedPartialResponses);
+
                 const stateToSet: any = {
                     showComments: true,
                 };
@@ -151,14 +183,16 @@ export default class Comments extends React.PureComponent<IProps, IState> {
                 return reader.read().then(processChunk);
             });
 
-            function updateResponseBody(responseBody, parsedChunk) {
-                responseBody.roots = responseBody.roots.concat(parsedChunk.roots);
-                for(let key in parsedChunk.nodes) {
-                    responseBody.nodes[key] = parsedChunk.nodes[key];
-                }
-                for(let key in parsedChunk.commenters) {
-                    responseBody.commenters[key] = parsedChunk.commenters[key];
-                }
+            function updateResponseBody(responseBody, parsedPartialResponses: Array<any>) {
+                parsedPartialResponses.forEach((parsedPartialResponse) => {
+                    responseBody.roots = responseBody.roots.concat(parsedPartialResponse.roots);
+                    for(let key in parsedPartialResponse.nodes) {
+                        responseBody.nodes[key] = parsedPartialResponse.nodes[key];
+                    }
+                    for(let key in parsedPartialResponse.commenters) {
+                        responseBody.commenters[key] = parsedPartialResponse.commenters[key];
+                    }
+                })
             }
         }
         else {

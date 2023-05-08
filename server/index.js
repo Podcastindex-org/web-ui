@@ -88,7 +88,13 @@ app.use('/api/recent/episodes', async (req, res) => {
 })
 
 app.use('/api/podcasts/bytag', async (req, res) => {
-    const response = await api.podcastsByTag()
+    let max = req.query.max
+    let start_at = req.query.start_at
+    const response = await api.custom('podcasts/bytag', {
+        'podcast-value': '',
+        'max': max,
+        'start_at': start_at,
+    })
     res.send(response)
 })
 
@@ -178,7 +184,7 @@ function writeThreadcapChunk(processedNodeId, threadcap, sentCommenters, res) {
         threadcapChunk.commenters[comment.attributedTo] = threadcap.commenters[comment.attributedTo];
     }
 
-    res.write(JSON.stringify(threadcapChunk))
+    res.write(JSON.stringify(threadcapChunk) + '\n')
 }
 
 // ------------------------------------------------

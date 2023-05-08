@@ -2,10 +2,8 @@
     --bg-color: #ffffff;
     --border-color: #d6d6d6;
     --cover-art-border-color: lighten(#d6d6d6, 0.2);
-}
 
-@media (prefers-color-scheme: dark) {
-    :root {
+    &[data-theme="dark"] {
         --bg-color: #180e0e;
         --border-color: #505050;
         --cover-art-border-color: var(--border-color);
@@ -36,8 +34,9 @@
     justify-content: center;
     padding: 15px 15px 15px 15px;
     img {
-        height: 140px;
+        max-height: 140px;
         width: 140px;
+        //object-fit: contain;
         border-radius: 10px;
         border: 1px solid var(--cover-art-border-color);
     }
@@ -71,14 +70,12 @@
 .episode-links {
     display: inline-flex;
     flex-direction: row;
+    gap: 5px;
 }
 
 .episode-link img, .episode-play-pause-mobile {
     width: 30px;
     height: 30px;
-}
-.episode-enclosure {
-    margin-left: 10px;
 }
 .episode-play-pause-mobile {
     display: none;

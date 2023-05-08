@@ -4,7 +4,7 @@ import ReactLoading from 'react-loading'
 import { Link } from 'react-router-dom'
 import Button from "../../components/Button"
 import ResultItem from "../../components/ResultItem"
-import { cleanSearchQuery, updateTitle } from '../../utils'
+import { cleanSearchQuery, getImage, updateTitle } from '../../utils'
 
 import './styles.scss'
 
@@ -213,7 +213,7 @@ export default class AddFeed extends React.PureComponent<IProps> {
                     <ResultItem
                         title={feedInfo.title}
                         author={feedInfo.author}
-                        image={feedInfo.image}
+                        image={getImage(feedInfo)}
                         description={feedInfo.description}
                         categories={feedInfo.categories}
                         id={feedInfo.id}
@@ -284,6 +284,7 @@ export default class AddFeed extends React.PureComponent<IProps> {
                     <Button
                         type="submit"
                         disabled={feed == "" || token == null}
+                        className="add-button"
                     >Add</Button>
                 </form>
 

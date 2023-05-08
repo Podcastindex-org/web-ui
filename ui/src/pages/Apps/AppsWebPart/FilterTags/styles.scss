@@ -1,10 +1,8 @@
 :root {
     --inactive-button-color: #c7c7c7;
     --inactive-button-hover-color: #b3b2b2;
-}
 
-@media (prefers-color-scheme: dark) {
-    :root {
+    &[data-theme="dark"] {
         --inactive-button-color: #808080;
         --inactive-button-hover-color: #505050;
     }

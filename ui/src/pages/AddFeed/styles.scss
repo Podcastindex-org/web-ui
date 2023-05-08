@@ -2,10 +2,8 @@
     --input-bg-color: #f7f7f7;
     --input-border-color: #d6d6d6;
     --input-placeholder-color: #b6b6b6;
-}
 
-@media (prefers-color-scheme: dark) {
-    :root {
+    &[data-theme="dark"] {
         --input-bg-color: #000000;
         --input-border-color: #303030;
         --input-placeholder-color: #969696;
@@ -97,6 +95,9 @@
             }
         }
 
+        .add-button {
+            margin-top: 5px;
+        }
     }
 
 }
