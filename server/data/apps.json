@@ -2316,5 +2316,22 @@
         "elementURL": "https://conshax.com"
       }
     ]
+  },
+  {
+    "appName": "Simplecast",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://simplecast.com",
+    "appIconUrl": "simplecast.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Txt",
+        "elementURL": "https://api.simplecast.com"
+      }
+    ]
   }
 ]
