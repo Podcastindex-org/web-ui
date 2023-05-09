@@ -2387,7 +2387,7 @@
     "platforms": [
       "Android",
       "iOS",
-      "MacOS",
+      "macOS",
       "Web",
       "Windows"
     ],
