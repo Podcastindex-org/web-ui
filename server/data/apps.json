@@ -2397,5 +2397,22 @@
         "elementURL": "https://help.spreaker.com/en/articles/6886489-podcast-transcript"
       }
     ]
+  },
+  {
+    "appName": "Simplecast",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://simplecast.com",
+    "appIconUrl": "simplecast.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Txt",
+        "elementURL": "https://help.simplecast.com/en/articles/7320145-rss-feed-ownership-verification"
+      }
+    ]
   }
 ]
