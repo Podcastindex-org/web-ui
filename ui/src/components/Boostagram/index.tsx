@@ -29,7 +29,7 @@ export default class Boostagram extends React.PureComponent<IProps> {
 
         this.setState({
             destinations: destinations,
-            senderName: localStorage.getItem('senderName'),
+            senderName: localStorage.getItem('senderName') || '',
         })
     }
 
