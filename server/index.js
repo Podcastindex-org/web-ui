@@ -133,7 +133,7 @@ app.use('/api/comments/byepisodeid', async (req, res) => {
 
     const socialInteract = response.episode.socialInteract && response.episode.socialInteract.filter((si) => si.protocol === 'activitypub');
 
-    if(socialInteract === undefined || socialInteract.length >= 0) {
+    if(socialInteract === undefined || socialInteract.length === 0) {
         // Bad requests sounds appropriate, as the client is only expected to call this API
         // when it validated upfront that the episode has a property socialInteract with activitypub protocol
         res.status(400).send('The episode does not contain a socialInteract property')
