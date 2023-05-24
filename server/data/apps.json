@@ -2414,5 +2414,22 @@
         "elementURL": "https://help.simplecast.com/en/articles/7320145-rss-feed-ownership-verification"
       }
     ]
+  },
+  {
+    "appName": "Musixmatch Podcasts",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://podcasts.musixmatch.com",
+    "appIconUrl": "musixmatch.svg",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://help.spreaker.com/en/articles/7136497-how-to-use-musixmatch-to-transcribe-your-podcast"
+      }
+    ]
   }
 ]
