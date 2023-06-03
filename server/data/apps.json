@@ -2431,5 +2431,70 @@
         "elementURL": "https://help.spreaker.com/en/articles/7136497-how-to-use-musixmatch-to-transcribe-your-podcast"
       }
     ]
+  },
+  {
+    "appName": "PeerTube",
+    "appType": [
+      "app",
+      "open source",
+      "hosting",
+      "video"
+    ],
+    "appUrl": "https://joinpeertube.org",
+    "appIconUrl": "peertube.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://github.com/Chocobozzz/PeerTube/pull/5487"
+      },
+      {
+        "elementName": "Boostagrams",
+        "elementURL": "https://github.com/dhk2/peertube-plugin-lightning/blob/master/CHANGELOG.md"
+      },
+      {
+        "elementName": "Live",
+        "elementURL": "https://github.com/Chocobozzz/PeerTube/pull/5487"
+      },
+      {
+        "elementName": "Sat Streaming",
+        "elementURL": "https://github.com/dhk2/peertube-plugin-lightning/blob/master/CHANGELOG.md"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://sepiasearch.org/"
+      },
+      {
+        "elementName": "Social Interact",
+        "elementURL": "https://github.com/Chocobozzz/PeerTube/pull/5487"
+      },
+
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://github.com/dhk2/peertube-plugin-lightning/blob/master/CHANGELOG.md"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://github.com/Chocobozzz/PeerTube/pull/5487"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://github.com/Chocobozzz/PeerTube/pull/5487"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://github.com/Chocobozzz/PeerTube/pull/5487"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://github.com/dhk2/peertube-plugin-lightning/blob/master/CHANGELOG.md"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://github.com/Chocobozzz/PeerTube/pull/5487"
+      }
+    ]
   }
 ]
