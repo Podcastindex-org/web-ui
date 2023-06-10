@@ -416,13 +416,25 @@
     "appIconUrl": "podcastguru.jpg",
     "platforms": [
       "Android",
-      "Web",
+      "macOS",
       "iOS"
     ],
     "supportedElements": [
       {
         "elementName": "Search",
         "elementURL": "https://twitter.com/podcastguru_app/status/1325834426346041347"
+      },
+      {
+        "elementName": "Boostagrams",
+        "elementURL": "https://twitter.com/podcastguru_app/status/1655685430761619459?s=20"
+      },
+      {
+        "elementName": "Live",
+        "elementURL": "https://twitter.com/podcastguru_app/status/1655685430761619459?s=20"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://twitter.com/podcastguru_app/status/1655685430761619459?s=20"
       },
       {
         "elementName": "Transcript",
