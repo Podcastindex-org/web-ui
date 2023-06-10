@@ -416,7 +416,7 @@
     "appIconUrl": "podcastguru.jpg",
     "platforms": [
       "Android",
-      "MacOS",
+      "macOS",
       "iOS"
     ],
     "supportedElements": [
