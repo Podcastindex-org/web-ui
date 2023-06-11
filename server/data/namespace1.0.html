@@ -27,600 +27,1307 @@
 
     <body>
     <article class="markdown-body">
-        <h1 id="rss-namespace-extension-for-podcasting-tag-specification">RSS Namespace Extension for Podcasting (Tag Specification)</h1>
-        <p>A wholistic RSS namespace for podcasting that is meant to synthesize the fragmented world of podcast namespaces. As elements are canonized, they will be added to this document so developers can begin implementation. The specifications below are considered locked and the team will prioritize backward compatibility. We are operating under the <a href="http://scripting.com/2017/05/09/rulesForStandardsmakers.html">Rules for Standards-Makers</a>.</p>
-        <p>The namespace for this extension is <code>https://podcastindex.org/namespace/1.0</code>. Clients which recognize this namespace must also recognize <code>https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md</code> as identical. The suggested tag prefix for use in XML is <code>podcast</code>, but clients should support alternate prefixes for this namespace. If your application generates RSS feeds and you implement one or more elements below, you will need to link this document in your XML:</p>
-        <pre><code class="language-xml">&lt;rss version="2.0" xmlns:podcast="https://podcastindex.org/namespace/1.0"&gt;</code></pre>
+        <h1 id="rss-namespace-extension-for-podcasting-tag-specification-">RSS Namespace Extension for Podcasting (Tag Specification)</h1>
+        <p>A wholistic RSS namespace for podcasting that is meant to synthesize the fragmented world of podcast namespaces. As
+            elements are canonized, they will be added to this document so developers can begin implementation. The
+            specifications below are considered locked and the team will prioritize backward compatibility. We are operating
+            under the <a href="http://scripting.com/2017/05/09/rulesForStandardsmakers.html">Rules for Standards-Makers</a>.</p>
+        <p>The namespace for this extension is <code>https://podcastindex.org/namespace/1.0</code>. Clients which recognize this namespace
+            must also recognize <code>https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md</code> as identical. The
+            suggested tag prefix for use in XML is <code>podcast</code>, but clients should support alternate prefixes for this namespace.
+            If your application generates RSS feeds and you implement one or more elements below, you will need to link this
+            document in your XML:</p>
+        <pre><code class="lang-xml">&lt;rss <span class="hljs-keyword">version</span>=<span class="hljs-string">"2.0"</span> xmln<span class="hljs-variable">s:podcast</span>=<span class="hljs-string">"https://podcastindex.org/namespace/1.0"</span>&gt;
+</code></pre>
+        <p><br><br></p>
+        <h1 id="table-of-contents">Table of Contents</h1>
+        <ul>
+            <li><a href="#transcript">Transcript</a></li>
+            <li><a href="#locked">Locked</a></li>
+            <li><a href="#funding">Funding</a></li>
+            <li><a href="#chapters">Chapters</a></li>
+            <li><a href="#soundbite">Soundbite</a></li>
+            <li><a href="#person">Person</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#season">Season</a></li>
+            <li><a href="#episode">Episode</a></li>
+            <li><a href="#trailer">Trailer</a></li>
+            <li><a href="#license">License</a></li>
+            <li><a href="#alternate-enclosure">Alternate Enclosure</a><ul>
+                <li><a href="#source">Source</a></li>
+                <li><a href="#integrity">Integrity</a></li>
+            </ul>
+            </li>
+            <li><a href="#guid">Guid</a></li>
+            <li><a href="#value">Value</a><ul>
+                <li><a href="#value-recipient">Value Recipient</a></li>
+            </ul>
+            </li>
+            <li><a href="#medium">Medium</a></li>
+            <li><a href="#images">Images</a></li>
+            <li><a href="#live-item">Live Item</a><ul>
+                <li><a href="#content-link">Content Link</a></li>
+            </ul>
+            </li>
+            <li><a href="#social-interact">Social Interact</a></li>
+            <li><a href="#block">Block</a></li>
+            <li><a href="#txt">Txt</a></li>
+            <li><a href="#remote-item">Remote Item</a></li>
+            <li><a href="#podroll">Podroll</a></li>
+            <li><a href="#update-frequency">Update Frequency</a></li>
+            <li><a href="#podping">Podping</a></li>
+            <li><a href="#value-time-split">Value Time Split</a></li>
+        </ul>
+        <p><br><br></p>
         <h1 id="podcast-tags">Podcast Tags</h1>
-        <p>Each tag below exists in the podcast namespace within the specified parent. All attributes are required unless explicitly specified as optional.</p>
-        <p>Anywhere the url of a hyper-text based resource is specified, it must be given as <code>https:</code> and not <code>http:</code>.</p>
-        <p><br><br><br><br></p>
+        <p>Each tag below exists in the podcast namespace within the specified parent. All attributes are required unless
+            explicitly specified as optional. Anywhere the url of a hyper-text based resource is specified, it must be given as
+            <code>https:</code> and not <code>http:</code>.</p>
+        <p><br><br><br><br><!-- Tag block --></p>
         <h2 id="transcript">Transcript</h2>
         <p><code>&lt;podcast:transcript&gt;</code><br><br>
-            This tag is used to link to a transcript or closed captions file. Multiple tags can be present for multiple transcript formats.</p>
+            This tag is used to link to a transcript or closed captions file. Multiple tags can be present for multiple
+            transcript formats.</p>
         <p>Detailed file format information and example files are <a href="../transcripts/transcripts.md">here</a>.</p>
         <h3 id="parent">Parent</h3>
         <p>&nbsp; <code>&lt;item&gt;</code></p>
         <h3 id="count">Count</h3>
         <p>&nbsp; Multiple</p>
-        <h3>Attributes</h3>
+        <h3 id="attributes">Attributes</h3>
         <ul>
             <li><p><strong>url (required):</strong> URL of the podcast transcript.</p>
             </li>
-            <li><p><strong>type (required):</strong> Mime type of the file such as <code>text/plain</code>, <code>text/html</code>, <code>text/vtt</code>, <code>application/json</code>, <code>application/x-subrip</code></p>
+            <li><p><strong>type (required):</strong> Mime type of the file such as <code>text/plain</code>, <code>text/html</code>, <code>text/vtt</code>, <code>application/json</code>,
+                <code>application/x-subrip</code></p>
             </li>
-            <li><p><strong>language (optional):</strong> The language of the linked transcript. If there is no language attribute given, the linked file is assumed to be the same language that is specified by the RSS <code>&lt;language&gt;</code> element.</p>
+            <li><p><strong>language (optional):</strong> The language of the linked transcript. If there is no language attribute given, the
+                linked file is assumed to be the same language that is specified by the RSS <code>&lt;language&gt;</code> element.</p>
             </li>
-            <li><p><strong>rel (optional):</strong> If the rel="captions" attribute is present, the linked file is considered to be a closed captions file, regardless of what the mime type is.  In that scenario, time codes are assumed to be present in the file in some capacity.</p>
+            <li><p><strong>rel (optional):</strong> If the rel=&quot;captions&quot; attribute is present, the linked file is considered to be a closed
+                captions file, regardless of what the mime type is.  In that scenario, time codes are assumed to be present in
+                the file in some capacity.</p>
             </li>
         </ul>
         <h3 id="examples">Examples</h3>
-        <pre><code class="language-xml">&lt;podcast:transcript url="https://example.com/episode1/transcript.html" type="text/html" /&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:transcript url="https://example.com/episode1/transcript.vtt" type="text/vtt" /&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:transcript url="https://example.com/episode1/transcript.json" type="application/json" language="es" rel="captions" /&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:transcript url="https://example.com/episode1/transcript.srt" type="application/x-subrip" rel="captions" /&gt;</code></pre>
-        <p><br><br><br><br></p>
+        <pre><code class="lang-xml">&lt;podcast:transcript url=<span class="hljs-string">"https://example.com/episode1/transcript.html"</span> <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"text/html"</span> /&gt;
+</code></pre>
+        <pre><code class="lang-xml">&lt;podcast:transcript url=<span class="hljs-string">"https://example.com/episode1/transcript.vtt"</span> <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"text/vtt"</span> /&gt;
+</code></pre>
+        <pre><code class="lang-xml">&lt;podcas<span class="hljs-variable">t:transcript</span>
+        url=<span class="hljs-string">"https://example.com/episode1/transcript.json"</span>
+        <span class="hljs-built_in">type</span>=<span class="hljs-string">"application/json"</span>
+        <span class="hljs-keyword">language</span>=<span class="hljs-string">"es"</span>
+        rel=<span class="hljs-string">"captions"</span>
+/&gt;
+</code></pre>
+        <pre><code class="lang-xml">&lt;podcast:transcript url=<span class="hljs-string">"https://example.com/episode1/transcript.srt"</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"application/x-subrip"</span> <span class="hljs-keyword">rel</span>=<span class="hljs-string">"captions"</span> /&gt;
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
         <h2 id="locked">Locked</h2>
         <p><code>&lt;podcast:locked&gt;</code><br><br>
-            This tag may be set to <code>yes</code> or <code>no</code>. The purpose is to tell other podcast platforms whether they are allowed to import this feed. A value of <code>yes</code> means that any attempt to import this feed into a new platform should be rejected.</p>
-        <h3 id="parent-1">Parent</h3>
+            This tag may be set to <code>yes</code> or <code>no</code>. The purpose is to tell other podcast hosting platforms whether they are
+            allowed to import this feed. A value of <code>yes</code> means that any attempt to import this feed into a new platform should
+            be rejected.</p>
+        <h3 id="parent">Parent</h3>
         <p>&nbsp; <code>&lt;channel&gt;</code></p>
-        <h3 id="count-1">Count</h3>
+        <h3 id="count">Count</h3>
         <p>&nbsp; Single</p>
         <h3 id="node-value">Node value</h3>
-        <p>&nbsp; The node value must be "yes" or "no".</p>
-        <h3 id="attributes-1">Attributes</h3>
+        <p>&nbsp; The node value must be &quot;yes&quot; or &quot;no&quot;.</p>
+        <h3 id="attributes">Attributes</h3>
         <ul>
-            <li><strong>owner (required):</strong> The owner attribute is an email address that can be used to verify ownership of this feed during move and import operations. This could be a public email or a virtual email address at the hosting provider that redirects to the owner's true email address. This is a critical element, and it is expected that podcast hosting providers (if not providing virtual addresses) will allow setting this element's value in their GUI with an emphasis to their users of how important it is to have this be a valid, working email address.</li>
+            <li><strong>owner (optional):</strong> The owner attribute is an email address that can be used to verify ownership of this feed
+                during move and import operations. This could be a public email or a virtual email address at the hosting
+                provider that redirects to the owner&#39;s true email address.</li>
         </ul>
-        <h3 id="examples-1">Examples</h3>
-        <pre><code class="language-xml">&lt;podcast:locked owner="email@example.com"&gt;yes&lt;/podcast:locked&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:locked owner="email@example.com"&gt;no&lt;/podcast:locked&gt;</code></pre>
-        <p><br><br><br><br></p>
+        <h3 id="examples">Examples</h3>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:locked</span>&gt;</span>yes<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:locked</span>&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml">&lt;podcast:<span class="hljs-built_in">locked</span> <span class="hljs-built_in">owner</span>=<span class="hljs-string">"email@example.com"</span>&gt;no&lt;/podcast:<span class="hljs-built_in">locked</span>&gt;
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
         <h2 id="funding">Funding</h2>
         <p><code>&lt;podcast:funding&gt;</code><br><br>
-            This tag lists possible donation/funding links for the podcast. The content of the tag is the recommended string to be used with the link.</p>
-        <h3 id="parent-2">Parent</h3>
+            This tag lists possible donation/funding links for the podcast. The content of the tag is the recommended string to
+            be used with the link.</p>
+        <h3 id="parent">Parent</h3>
         <p>&nbsp; <code>&lt;channel&gt;</code></p>
-        <h3 id="count-2">Count</h3>
+        <h3 id="count">Count</h3>
         <p>&nbsp; Multiple</p>
-        <h3 id="node-value-1">Node value</h3>
-        <p>&nbsp; This is a free form string supplied by the creator which they expect to be displayed in the app next to the link.  Please do not exceed <code>128 characters</code> for the node value or it may be
-            truncated by aggregators.</p>
-        <h3 id="attributes-2">Attributes</h3>
+        <h3 id="node-value">Node value</h3>
+        <p>&nbsp; This is a free form string supplied by the creator which they expect to be displayed in the app next to the
+            link.  Please do not exceed <code>128 characters</code> for the node value or it may be truncated by aggregators.</p>
+        <h3 id="attributes">Attributes</h3>
         <ul>
             <li><strong>url (required):</strong> The URL to be followed to fund the podcast.</li>
         </ul>
-        <h3 id="examples-2">Examples</h3>
-        <pre><code class="language-xml">&lt;podcast:funding url="https://www.example.com/donations"&gt;Support the show!&lt;/podcast:funding&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:funding url="https://www.example.com/members"&gt;Become a member!&lt;/podcast:funding&gt;</code></pre>
-        <p><br><br><br><br></p>
+        <h3 id="examples">Examples</h3>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:funding</span> <span class="hljs-attr">url</span>=<span class="hljs-string">"https://www.example.com/donations"</span>&gt;</span>Support the show!<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:funding</span>&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:funding</span> <span class="hljs-attr">url</span>=<span class="hljs-string">"https://www.example.com/members"</span>&gt;</span>Become a member!<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:funding</span>&gt;</span>
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
         <h2 id="chapters">Chapters</h2>
         <p><code>&lt;podcast:chapters&gt;</code><br><br>
-            Links to an external file (see example file) containing chapter data for the episode. See the <a href="https://github.com/Podcastindex-org/podcast-namespace/blob/main/chapters/jsonChapters.md">jsonChapters.md</a> file for a description of the chapter file syntax. And, see the <a href="https://github.com/Podcastindex-org/podcast-namespace/blob/main/chapters/example.json">example.json</a> example file for a real world example.</p>
-        <p>Benefits with this approach are that chapters do not require altering audio files, and the chapters can be edited after publishing, since they are a separate file that can be requested on playback (or cached with download). JSON chapter information also allows chapters to be displayed by a wider range of playback tools, including web browsers (which typically have no access to ID3 tags), thus greatly simplifying chapter support; and images can be retrieved on playback, rather than bloating the filesize of the audio. The data held is compatible with normal ID3 tags, thus requiring no additional work for the publisher.</p>
-        <h3 id="parent-3">Parent</h3>
+            Links to an external file (see example file) containing chapter data for the episode. See the [jsonChapters.md]
+            (<a href="https://github.com/Podcastindex-org/podcast-namespace/blob/main/chapters/jsonChapters.md">https://github.com/Podcastindex-org/podcast-namespace/blob/main/chapters/jsonChapters.md</a>) file for a description of
+            the chapter file syntax. And, see the <a href="https://github.
+com/Podcastindex-org/podcast-namespace/blob/main/chapters/example.json">example.json</a> example file for a real world example.</p>
+        <p>Benefits with this approach are that chapters do not require altering audio files, and the chapters can be edited
+            after publishing, since they are a separate file that can be requested on playback (or cached with download). JSON
+            chapter information also allows chapters to be displayed by a wider range of playback tools, including web browsers
+            (which typically have no access to ID3 tags), thus greatly simplifying chapter support; and images can be retrieved
+            on playback, rather than bloating the filesize of the audio. The data held is compatible with normal ID3 tags, thus
+            requiring no additional work for the publisher.</p>
+        <h3 id="parent">Parent</h3>
         <p>&nbsp; <code>&lt;item&gt;</code></p>
-        <h3 id="count-3">Count</h3>
+        <h3 id="count">Count</h3>
         <p>&nbsp; Single</p>
-        <h3 id="attributes-3">Attributes</h3>
+        <h3 id="attributes">Attributes</h3>
         <ul>
             <li><strong>url (required):</strong> The URL where the chapters file is located.</li>
-            <li><strong>type (required):</strong> Mime type of file - JSON prefered, 'application/json+chapters'.</li>
+            <li><strong>type (required):</strong> Mime type of file - JSON prefered, &#39;application/json+chapters&#39;.</li>
         </ul>
-        <h3 id="examples-3">Examples</h3>
-        <pre><code class="language-xml">&lt;podcast:chapters url="https://example.com/episode1/chapters.json" type="application/json+chapters" /&gt;</code></pre>
-        <p><br><br><br><br></p>
+        <h3 id="examples">Examples</h3>
+        <pre><code class="lang-xml">&lt;podcast:chapters url=<span class="hljs-string">"https://example.com/episode1/chapters.json"</span> <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"application/json+chapters"</span> /&gt;
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
         <h2 id="soundbite">Soundbite</h2>
         <p><code>&lt;podcast:soundbite&gt;</code><br><br>
-            Points to one or more soundbites within a podcast episode. The intended use includes episodes previews, discoverability, audiogram generation, episode highlights, etc. It should be assumed that the
-            audio/video source of the soundbite is the audio/video given in the item's <a href="https://cyber.harvard.edu/rss/rss.html#ltenclosuregtSubelementOfLtitemgt"><code>&lt;enclosure&gt;</code></a> element.</p>
-        <h3 id="parent-4">Parent</h3>
+            Points to one or more soundbites within a podcast episode. The intended use includes episodes previews,
+            discoverability, audiogram generation, episode highlights, etc. It should be assumed that the audio/video source of
+            the soundbite is the audio/video given in the item&#39;s <a href="https://cyber.harvard.edu/rss/rss.
+html#ltenclosuregtSubelementOfLtitemgt"><code>&lt;enclosure&gt;</code></a> element.</p>
+        <h3 id="parent">Parent</h3>
         <p>&nbsp; <code>&lt;item&gt;</code></p>
-        <h3 id="count-4">Count</h3>
+        <h3 id="count">Count</h3>
         <p>&nbsp; Multiple</p>
-        <h3 id="node-value-2">Node value</h3>
-        <p>&nbsp; This is a free form string from the podcast creator to specify a title for the soundbite.  If the podcaster does not provide a value for the soundbite title, then leave the value blank, and podcast apps can decide to use the episode title or some other placeholder value in its place.  Please do not exceed <code>128 characters</code>
-            for the node value or it may be truncated by aggregators.</p>
-        <h3 id="attributes-4">Attributes</h3>
+        <h3 id="node-value">Node value</h3>
+        <p>&nbsp; This is a free form string from the podcast creator to specify a title for the soundbite.  If the podcaster
+            does not provide a value for the soundbite title, then leave the value blank, and podcast apps can decide to use the
+            episode title or some other placeholder value in its place.  Please do not exceed <code>128 characters</code> for the node
+            value or it may be truncated by aggregators.</p>
+        <h3 id="attributes">Attributes</h3>
         <ul>
             <li><strong>startTime (required):</strong> The time where the soundbite begins</li>
             <li><strong>duration (required):</strong> How long is the soundbite (recommended between 15 and 120 seconds)</li>
         </ul>
-        <h3 id="examples-4">Examples</h3>
-        <pre><code class="language-xml">&lt;podcast:soundbite startTime="73.0" duration="60.0" /&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:soundbite startTime="1234.5" duration="42.25"&gt;Why the Podcast Namespace Matters&lt;/podcast:soundbite&gt;</code></pre>
-        <p><br><br><br><br></p>
+        <h3 id="examples">Examples</h3>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:soundbite</span> <span class="hljs-attr">startTime</span>=<span class="hljs-string">"73.0"</span> <span class="hljs-attr">duration</span>=<span class="hljs-string">"60.0"</span> /&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:soundbite</span> <span class="hljs-attr">startTime</span>=<span class="hljs-string">"1234.5"</span> <span class="hljs-attr">duration</span>=<span class="hljs-string">"42.25"</span>&gt;</span>Why the Podcast Namespace Matters<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:soundbite</span>&gt;</span>
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
         <h2 id="person">Person</h2>
         <p><code>&lt;podcast:person&gt;</code><br><br>
-            This element specifies a person of interest to the podcast.  It is primarily intended to identify people like hosts, co-hosts and guests.  Although, it is flexible enough to allow fuller credits to be
-            given using the roles and groups that are listed in the <a href="https://podcasttaxonomy.com/">Podcast Taxonomy Project</a></p>
-        <h3 id="parent-5">Parent</h3>
-        <p>&nbsp; <code>&lt;item&gt;</code> or <code>&lt;channel&gt;</code></p>
-        <h3 id="count-5">Count</h3>
+            This element specifies a person of interest to the podcast.  It is primarily intended to identify people like hosts,
+            co-hosts and guests.  Although, it is flexible enough to allow fuller credits to be given using the roles and groups
+            that are listed in the <a href="https://podcasttaxonomy.com/">Podcast Taxonomy Project</a></p>
+        <h3 id="parent">Parent</h3>
+        <p>&nbsp; <code>&lt;channel&gt;</code> (for a podcast) or <code>&lt;item&gt;</code> (for an individual episode)</p>
+        <p>It is suggested that <code>&lt;channel&gt;</code> is always populated, and <code>&lt;item&gt;</code> is populated where needed for an individual
+            episode. Where present, people information in <code>&lt;item&gt;</code> wholly replaces all information from the <code>&lt;channel&gt;</code>.</p>
+        <p>Publishers are expected to use the <code>podcast:person</code> element in the <code>&lt;channel&gt;</code> parent to set the <em>regular</em> people
+            involved in the podcast: the detail that would be expected to be seen in an overview of the show.</p>
+        <p>Publishers are expected to use the <code>podcast:person</code> in the <code>&lt;item&gt;</code> parent to <strong>replace</strong> all existing information
+            for an individual episode.</p>
+        <h4 id="for-example-_terry-and-june_">For example: <em>Terry and June</em></h4>
+        <p>The fictional podcast <em>Terry and June</em> is normally hosted by Terry Scott and June Whitfield. Within <code>&lt;channel&gt;</code>,
+            Terry Scott and June Whitfield are listed as the hosts. A podcast directory, or podcast app, should show Terry Scott
+            and June Whitfield as the hosts of this show.</p>
+        <p>For one episode, <em>Terry and June</em> was hosted by Reginald Marsh and June Whitfield (Terry was away). In this case,
+            the <code>&lt;item&gt;</code> for this episode should contain Reginald Marsh and June Whitfield as the hosts of this episode. A
+            podcast app, when playing this episode, should show only Reginald Marsh and June Whitfield as the hosts of this
+            episode. Because people information in <code>&lt;item&gt;</code> replaces all existing people information in <code>&lt;channel&gt;</code>, Terry Scott
+            should not be visible as a host of this episode.</p>
+        <h4 id="for-example-_big-daddy_">For example: <em>Big Daddy</em></h4>
+        <p>The fictional podcast <em>Big Daddy Interviews</em> is hosted by Big Daddy, a wrestler. Within <code>&lt;channel&gt;</code>, Big Daddy is
+            listed as the host. A podcast directory, or podcast app, should show Big Daddy as the host of this show.</p>
+        <p>For one episode, <em>Big Daddy Interviews</em> had a guest of Sid James. In this case, the <code>&lt;item&gt;</code> for this episode should
+            contain Sid James as a guest, <strong>and</strong> Big Daddy as the host of this episode. Because people information in <code>&lt;item&gt;</code>
+            replaces all existing people information in <code>&lt;channel&gt;</code>, Big Daddy should be re-stated as the host of this episode.</p>
+        <h3 id="count">Count</h3>
         <p>&nbsp; Multiple</p>
-        <h3 id="node-value-3">Node value</h3>
-        <p>&nbsp; This is the full name or alias of the person. This value cannot be blank.  Please do not exceed <code>128 characters</code> for the node value or it may be truncated by aggregators.</p>
-        <h3 id="attributes-5">Attributes</h3>
+        <h3 id="node-value">Node value</h3>
+        <p>&nbsp; This is the full name or alias of the person. This value cannot be blank.  Please do not exceed <code>128
+            characters</code> for the node value or it may be truncated by aggregators.</p>
+        <h3 id="attributes">Attributes</h3>
         <ul>
-            <li><strong>role:</strong> (optional) Used to identify what role the person serves on the show or episode. This should be a reference to an official role within the Podcast Taxonomy Project list (see below). If <code>role</code> is missing then "host" is assumed.</li>
-            <li><strong>group:</strong> (optional) This should be a reference to an official group within the Podcast Taxonomy Project list. If <code>group</code> is not present, then "cast" is assumed.</li>
+            <li><strong>role:</strong> (optional) Used to identify what role the person serves on the show or episode. This should be a
+                reference to an official role within the Podcast Taxonomy Project list (see below). If <code>role</code> is missing then
+                &quot;host&quot; is assumed.</li>
+            <li><strong>group:</strong> (optional) This should be a reference to an official group within the Podcast Taxonomy Project list.
+                If <code>group</code> is not present, then &quot;cast&quot; is assumed.</li>
             <li><strong>img:</strong> (optional) This is the url of a picture or avatar of the person.</li>
-            <li><strong>href:</strong> (optional) The url to a relevant resource of information about the person, such as a homepage or third-party profile platform.  Please see the <a href="https://github.com/Podcastindex-org/podcast-namespace/blob/main/example.xml">example feed</a> for possible choices of what to use here.</li>
+            <li><strong>href:</strong> (optional) The url to a relevant resource of information about the person, such as a homepage or
+                third-party profile platform. Please see the <a href="https://github.
+com/Podcastindex-org/podcast-namespace/blob/main/example.xml">example feed</a> for possible choices of what to use here.</li>
         </ul>
-        <p>The <code>role</code> and <code>group</code> attributes are case-insensitive.  So, "Host" is the same as "host", and "Cover Art Designer" is the same as "cover art designer".</p>
-        <p>The full taxonomy list is <a href="https://github.com/Podcastindex-org/podcast-namespace/blob/main/taxonomy.json">here</a> as a json file.</p>
-        <h3 id="examples-5">Examples</h3>
-        <pre><code class="language-xml">&lt;podcast:person href="https://example.com/johnsmith/blog" img="http://example.com/images/johnsmith.jpg"&gt;John Smith&lt;/podcast:person&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:person role="guest" href="https://www.imdb.com/name/nm0427852888/" img="http://example.com/images/janedoe.jpg"&gt;Jane Doe&lt;/podcast:person&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:person role="guest" href="https://www.wikipedia/alicebrown" img="http://example.com/images/alicebrown.jpg"&gt;Alice Brown&lt;/podcast:person&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:person group="writing" role="guest" href="https://www.wikipedia/alicebrown" img="http://example.com/images/alicebrown.jpg"&gt;Alice Brown&lt;/podcast:person&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:person group="visuals" role="Cover Art Designer" href="https://example.com/artist/beckysmith"&gt;Becky Smith&lt;/podcast:person&gt;</code></pre>
-        <p><br><br><br><br></p>
-        <h2>Location</h2>
+        <p>The <code>role</code> and <code>group</code> attributes are case-insensitive.  So, &quot;Host&quot; is the same as &quot;host&quot;, and &quot;Cover Art Designer&quot;
+            is the same as &quot;cover art designer&quot;.</p>
+        <p>The full taxonomy list is <a href="https://github.com/Podcastindex-org/podcast-namespace/blob/main/taxonomy.json">here</a> as a
+            json file.</p>
+        <h3 id="examples">Examples</h3>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:person</span>
+        <span class="hljs-attr">href</span>=<span class="hljs-string">"https://example.com/johnsmith/blog"</span>
+        <span class="hljs-attr">img</span>=<span class="hljs-string">"http://example.com/images/johnsmith.jpg"</span>
+&gt;</span>John Smith<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:person</span>&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:person</span>
+        <span class="hljs-attr">role</span>=<span class="hljs-string">"guest"</span>
+        <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.imdb.com/name/nm0427852888/"</span>
+        <span class="hljs-attr">img</span>=<span class="hljs-string">"http://example.com/images/janedoe.jpg"</span>
+&gt;</span>Jane Doe<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:person</span>&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:person</span>
+        <span class="hljs-attr">role</span>=<span class="hljs-string">"guest"</span>
+        <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.wikipedia/alicebrown"</span>
+        <span class="hljs-attr">img</span>=<span class="hljs-string">"http://example.com/images/alicebrown.jpg"</span>
+&gt;</span>Alice Brown<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:person</span>&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:person</span>
+        <span class="hljs-attr">group</span>=<span class="hljs-string">"writing"</span>
+        <span class="hljs-attr">role</span>=<span class="hljs-string">"guest"</span>
+        <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.wikipedia/alicebrown"</span>
+        <span class="hljs-attr">img</span>=<span class="hljs-string">"http://example.com/images/alicebrown.jpg"</span>
+&gt;</span>Alice Brown<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:person</span>&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:person</span>
+        <span class="hljs-attr">group</span>=<span class="hljs-string">"visuals"</span>
+        <span class="hljs-attr">role</span>=<span class="hljs-string">"Cover Art Designer"</span>
+        <span class="hljs-attr">href</span>=<span class="hljs-string">"https://example.com/artist/beckysmith"</span>
+&gt;</span>Becky Smith<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:person</span>&gt;</span>
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
+        <h2 id="location">Location</h2>
         <p><code>&lt;podcast:location&gt;</code><br><br>
-            This tag is intended to describe the location of editorial focus for a podcast's content (i.e. "what place is this podcast about?").  The tag has many use cases and is one of the more complex ones.  You
-            are <strong>highly encouraged</strong> to read the full <a href="https://github.com/Podcastindex-org/podcast-namespace/blob/main/location/location.md">implementation document</a> before starting to code for it.</p>
-        <h3 id="parent-6">Parent</h3>
+            This tag is intended to describe the location of editorial focus for a podcast&#39;s content (i.e. &quot;what place is this
+            podcast about?&quot;).  The tag has many use cases and is one of the more complex ones.  You are <strong>highly encouraged</strong> to
+            read the full <a href="https://github.
+com/Podcastindex-org/podcast-namespace/blob/main/location/location.md">implementation document</a> before starting to code for it.</p>
+        <h3 id="parent">Parent</h3>
         <p>&nbsp; <code>&lt;item&gt;</code> or <code>&lt;channel&gt;</code></p>
-        <h3 id="count-6">Count</h3>
+        <h3 id="count">Count</h3>
         <p>&nbsp; Single</p>
-        <h3 id="node-value-4">Node Value</h3>
-        <p>&nbsp; This is a free-form string meant to be a human readable location.  It may conform to conventional location verbiage (i.e. "Austin, TX"), but it shouldn't be depended on to be parseable in any specific
-            way.  This value cannot be blank.  Please do not exceed <code>128 characters</code> for the node value or it may be truncated by aggregators.</p>
-        <h3 id="attributes-6">Attributes</h3>
+        <h3 id="node-value">Node Value</h3>
+        <p>&nbsp; This is a free-form string meant to be a human readable location.  It may conform to conventional location
+            verbiage (i.e. &quot;Austin, TX&quot;), but it shouldn&#39;t be depended on to be parseable in any specific way.  This value
+            cannot be blank.  Please do not exceed <code>128 characters</code> for the node value or it may be truncated by aggregators.</p>
+        <h3 id="attributes">Attributes</h3>
         <ul>
-            <li><strong>geo:</strong> (recommended) This is a latitude and longitude given in "geo" notation (i.e. "geo:30.2672,97.7431").</li>
-            <li><strong>osm:</strong> (recommended) The Open Street Map identifier of this place, given using the OSM notation (i.e. "R113314")</li>
+            <li><strong>geo:</strong> (recommended) This is a latitude and longitude given in &quot;geo&quot; notation (i.e. &quot;geo:30.2672,97.7431&quot;).</li>
+            <li><strong>osm:</strong> (recommended) The Open Street Map identifier of this place, given using the OSM notation (i.e. &quot;R113314&quot;)</li>
         </ul>
-        <h3 id="examples-6">Examples</h3>
-        <pre><code class="language-xml">&lt;podcast:location geo="geo:30.2672,97.7431" osm="R113314"&gt;Austin, TX&lt;/podcast:location&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:location geo="geo:33.51601,-86.81455" osm="R6930627"&gt;Birmingham Civil Rights Museum&lt;/podcast:location&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:location geo="geo:-27.86159,153.3169" osm="W43678282"&gt;Dreamworld (Queensland)&lt;/podcast:location&gt;</code></pre>
-        <p><br><br><br><br></p>
+        <h3 id="examples">Examples</h3>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:location</span> <span class="hljs-attr">geo</span>=<span class="hljs-string">"geo:30.2672,97.7431"</span> <span class="hljs-attr">osm</span>=<span class="hljs-string">"R113314"</span>&gt;</span>Austin, TX<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:location</span>&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:location</span> <span class="hljs-attr">geo</span>=<span class="hljs-string">"geo:33.51601,-86.81455"</span> <span class="hljs-attr">osm</span>=<span class="hljs-string">"R6930627"</span>&gt;</span>Birmingham Civil Rights Museum<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:location</span>&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:location</span> <span class="hljs-attr">geo</span>=<span class="hljs-string">"geo:-27.86159,153.3169"</span> <span class="hljs-attr">osm</span>=<span class="hljs-string">"W43678282"</span>&gt;</span>Dreamworld (Queensland)<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:location</span>&gt;</span>
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
         <h2 id="season">Season</h2>
         <p><code>&lt;podcast:season&gt;</code><br><br>
-            This element allows for identifying which episodes in a podcast are part of a particular "season", with an optional season name attached.</p>
-        <h3 id="parent-7">Parent</h3>
+            This element allows for identifying which episodes in a podcast are part of a particular &quot;season&quot;, with an optional
+            season name attached.</p>
+        <h3 id="parent">Parent</h3>
         <p>&nbsp; <code>&lt;item&gt;</code></p>
-        <h3 id="count-7">Count</h3>
+        <h3 id="count">Count</h3>
         <p>&nbsp; Single</p>
-        <h3 id="node-value-5">Node Value</h3>
-        <p>&nbsp; The node value is an integer, and represents the season "number".  It is required.</p>
-        <h3 id="attributes-7">Attributes</h3>
+        <h3 id="node-value">Node Value</h3>
+        <p>&nbsp; The node value is an integer, and represents the season &quot;number&quot;.  It is required.</p>
+        <h3 id="attributes">Attributes</h3>
         <ul>
-            <li><strong>name:</strong> (optional) - This is the "name" of the season.  If this attribute is present, applications are free to <strong>not</strong> show the season number to the end user, and may use it simply for chronological sorting and grouping purposes.</li>
+            <li><strong>name:</strong> (optional) - This is the &quot;name&quot; of the season.  If this attribute is present, applications are free to
+                <strong>not</strong> show the season number to the end user, and may use it simply for chronological sorting and grouping
+                purposes.</li>
         </ul>
         <p>Please do not exceed <code>128 characters</code> for the name attribute.</p>
-        <h3 id="examples-7">Examples</h3>
-        <pre><code class="language-xml">&lt;podcast:season&gt;5&lt;/podcast:season&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:season name="Race for the Whitehouse 2020"&gt;3&lt;/podcast:season&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:season name="Egyptology: The 19th Century"&gt;1&lt;/podcast:season&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:season name="The Yearling - Chapter 3"&gt;3&lt;/podcast:season&gt;</code></pre>
-        <p><br><br><br><br></p>
+        <h3 id="examples">Examples</h3>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:season</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:season</span>&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:season</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Race for the Whitehouse 2020"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:season</span>&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:season</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Egyptology: The 19th Century"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:season</span>&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:season</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"The Yearling - Chapter 3"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:season</span>&gt;</span>
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
         <h2 id="episode">Episode</h2>
         <p><code>&lt;podcast:episode&gt;</code><br><br>
-            This element exists largely for compatibility with the <code>season</code> tag.  But, it also allows for a similar idea to what "name" functions as in that element.</p>
-        <h3 id="parent-8">Parent</h3>
+            This element exists largely for compatibility with the <code>season</code> tag.  But, it also allows for a similar idea to what
+            &quot;name&quot; functions as in that element.</p>
+        <h3 id="parent">Parent</h3>
         <p>&nbsp; <code>&lt;item&gt;</code></p>
-        <h3 id="count-8">Count</h3>
+        <h3 id="count">Count</h3>
         <p>&nbsp; Single</p>
-        <h3 id="node-value-6">Node Value</h3>
+        <h3 id="node-value">Node Value</h3>
         <p>&nbsp; The node value is a decimal number.  It is required.</p>
-        <h3 id="attributes-8">Attributes</h3>
+        <h3 id="attributes">Attributes</h3>
         <ul>
-            <li><strong>display:</strong> (optional) - If this attribute is present, podcast apps and aggregators are encouraged to show its value instead of the purely numerical node value.  This attribute is a string.</li>
+            <li><strong>display:</strong> (optional) - If this attribute is present, podcast apps and aggregators are encouraged to show its
+                value instead of the purely numerical node value.  This attribute is a string.</li>
         </ul>
-        <p>The episode numbers are decimal, so numbering such as <code>100.5</code> is acceptable if there was a special mini-episode published between two other episodes.  In that scenario, the number would help with proper
-            chronological sorting, while the <code>display</code> attribute could specify an alternate special "number" (a moniker) to display for the episode in a podcast player app UI.</p>
+        <p>The episode numbers are decimal, so numbering such as <code>100.5</code> is acceptable if there was a special mini-episode
+            published between two other episodes.  In that scenario, the number would help with proper chronological sorting,
+            while the <code>display</code> attribute could specify an alternate special &quot;number&quot; (a moniker) to display for the episode in
+            a podcast player app UI.</p>
         <p>Please do not exceed <code>32 characters</code> for the display attribute.</p>
-        <h3 id="examples-8">Examples</h3>
-        <pre><code class="language-xml">&lt;podcast:episode&gt;3&lt;/podcast:episode&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:episode&gt;315.5&lt;/podcast:episode&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:episode display="Ch.3"&gt;204&lt;/podcast:episode&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:episode display="Day 5"&gt;9&lt;/podcast:episode&gt;</code></pre>
-        <p><br><br><br><br></p>
+        <h3 id="examples">Examples</h3>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:episode</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:episode</span>&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:episode</span>&gt;</span>315.5<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:episode</span>&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml">&lt;podcas<span class="hljs-variable">t:episode</span> <span class="hljs-keyword">display</span>=<span class="hljs-string">"Ch.3"</span>&gt;<span class="hljs-number">204</span>&lt;/podcas<span class="hljs-variable">t:episode</span>&gt;
+</code></pre>
+        <pre><code class="lang-xml">&lt;podcas<span class="hljs-variable">t:episode</span> <span class="hljs-keyword">display</span>=<span class="hljs-string">"Day 5"</span>&gt;<span class="hljs-number">9</span>&lt;/podcas<span class="hljs-variable">t:episode</span>&gt;
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
         <h2 id="trailer">Trailer</h2>
         <p><code>&lt;podcast:trailer&gt;</code><br><br>
-            This element is used to define the location of an audio or video file to be used as a trailer for the entire podcast or a specific season.  There can be more than one trailer present in the channel of the
-            feed.  This element is basically just like an <a href="https://cyber.harvard.edu/rss/rss.html#ltenclosuregtSubelementOfLtitemgt"><code>&lt;enclosure&gt;</code></a> with the extra <code>pubdate</code> and <code>season</code> attributes added.</p>
-        <p>If there is more than one trailer tag present in the channel, the most recent one (according to its <code>pubdate</code>) should be chosen as the preview by default within podcast apps.</p>
-        <h3 id="parent-9">Parent</h3>
+            This element is used to define the location of an audio or video file to be used as a trailer for the entire podcast
+            or a specific season.  There can be more than one trailer present in the channel of the feed.  This element is
+            basically just like an <a href="https://cyber.harvard.edu/rss/rss.html#ltenclosuregtSubelementOfLtitemgt"><code>&lt;enclosure&gt;</code></a>
+            with the extra <code>pubdate</code> and <code>season</code> attributes added.</p>
+        <p>If there is more than one trailer tag present in the channel, the most recent one (according to its <code>pubdate</code>)
+            should be chosen as the preview by default within podcast apps.</p>
+        <h3 id="parent">Parent</h3>
         <p>&nbsp; <code>&lt;channel&gt;</code></p>
-        <h3 id="count-9">Count</h3>
+        <h3 id="count">Count</h3>
         <p>&nbsp; Multiple</p>
-        <h3 id="node-value-7">Node Value</h3>
-        <p>&nbsp; The node value is a string, which is the title of the trailer. It is required. Please do not exceed <code>128 characters</code> for the node value or it may be truncated by aggregators.</p>
-        <h3 id="attributes-9">Attributes</h3>
+        <h3 id="node-value">Node Value</h3>
+        <p>&nbsp; The node value is a string, which is the title of the trailer. It is required. Please do not exceed <code>128
+            characters</code> for the node value or it may be truncated by aggregators.</p>
+        <h3 id="attributes">Attributes</h3>
         <ul>
             <li><strong>url:</strong> (required) This is a url that points to the audio or video file to be played. This attribute is a string.</li>
             <li><strong>pubdate:</strong> (required) The date the trailer was published. This attribute is an RFC2822 formatted date string.</li>
             <li><strong>length:</strong> (recommended) The length of the file in bytes. This attribute is a number.</li>
             <li><strong>type:</strong> (recommended) The mime type of the file. This attribute is a string.</li>
-            <li><strong>season:</strong> (optional) If this attribute is present it specifies that this trailer is for a particular season number. This attribute is a number.</li>
+            <li><strong>season:</strong> (optional) If this attribute is present it specifies that this trailer is for a particular season
+                number. This attribute is a number.</li>
         </ul>
-        <p>If the <code>season</code> attribute is present, it must be a number that matches the format of the <code>&lt;podcast:season&gt;</code> tag.  So, for a podcast that has 3 published seasons, a new <code>&lt;podcast:trailer season="4"&gt;</code> tag can
-            be put in the channel to later be matched up with a <code>&lt;podcast:season&gt;4&lt;podcast:season&gt;</code> tag when it is published within a new <code>&lt;item&gt;</code>.</p>
-        <h4 id="examples-9">Examples</h4>
-        <pre><code class="language-xml">&lt;podcast:trailer pubdate="Thu, 01 Apr 2021 08:00:00 EST" url="https://example.org/trailers/teaser" length="12345678" type="audio/mp3"&gt;Coming April 1st, 2021&lt;/podcast:trailer&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:trailer pubdate="Thu, 01 Apr 2021 08:00:00 EST" url="https://example.org/trailers/season4teaser" length="12345678" type="video/mp4" season="4"&gt;Season 4: Race for the Whitehouse&lt;/podcast:trailer&gt;
+        <p>If the <code>season</code> attribute is present, it must be a number that matches the format of the <code>&lt;podcast:season&gt;</code> tag. So,
+            for a podcast that has 3 published seasons, a new <code>&lt;podcast:trailer season=&quot;4&quot;&gt;</code> tag can be put in the channel to
+            later be matched up with a <code>&lt;podcast:season&gt;4&lt;podcast:season&gt;</code> tag when it is published within a new <code>&lt;item&gt;</code>.</p>
+        <h4 id="examples">Examples</h4>
+        <pre><code class="lang-xml">&lt;podcas<span class="hljs-variable">t:trailer</span>
+        pubdate=<span class="hljs-string">"Thu, 01 Apr 2021 08:00:00 EST"</span>
+        url=<span class="hljs-string">"https://example.org/trailers/teaser"</span>
+        length=<span class="hljs-string">"12345678"</span>
+        <span class="hljs-built_in">type</span>=<span class="hljs-comment">"audio/mp3</span>
+<span class="hljs-comment">"&gt;Coming April 1st, 2021&lt;/podcast:trailer&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml">&lt;podcas<span class="hljs-variable">t:trailer</span>
+        pubdate=<span class="hljs-string">"Thu, 01 Apr 2021 08:00:00 EST"</span>
+        url=<span class="hljs-string">"https://example.org/trailers/season4teaser"</span>
+        length=<span class="hljs-string">"12345678"</span>
+        <span class="hljs-built_in">type</span>=<span class="hljs-string">"video/mp4"</span>
+        season=<span class="hljs-string">"4"</span>
+&gt;Season <span class="hljs-number">4</span>: Race <span class="hljs-keyword">for</span> the Whitehouse&lt;/podcas<span class="hljs-variable">t:trailer</span>&gt;
 
-(later matches with)
+(<span class="hljs-keyword">later</span> matches with)
 
-&lt;podcast:season name="Race for the Whitehouse"&gt;4&lt;/podcast:season&gt;</code></pre>
-        <p><br><br><br><br></p>
+&lt;podcas<span class="hljs-variable">t:season</span> name=<span class="hljs-string">"Race for the Whitehouse"</span>&gt;<span class="hljs-number">4</span>&lt;/podcas<span class="hljs-variable">t:season</span>&gt;
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
         <h2 id="license">License</h2>
         <p><code>&lt;podcast:license&gt;</code><br><br>
-            This element defines a license that is applied to the audio/video content of a single episode, or the audio/video of the podcast as a whole.  Custom licenses must always include a url attribute.  Implementors are encouraged
-            to read the license tag companion <a href="https://github.com/Podcastindex-org/podcast-namespace/blob/main/proposal-docs/license/license.md">document</a> for a more complete picture of what this tag is intended to accomplish.</p>
-        <h3 id="parent-10">Parent</h3>
+            This element defines a license that is applied to the audio/video content of a single episode, or the audio/video of
+            the podcast as a whole.  Custom licenses must always include a url attribute.  Implementors are encouraged to read
+            the license tag companion <a href="https://github.
+com/Podcastindex-org/podcast-namespace/blob/main/proposal-docs/license/license.md">document</a> for a more complete picture of
+            what this tag is intended to accomplish.</p>
+        <h3 id="parent">Parent</h3>
         <p>&nbsp; <code>&lt;channel&gt;</code> or <code>&lt;item&gt;</code></p>
-        <h3 id="count-10">Count</h3>
+        <h3 id="count">Count</h3>
         <p>&nbsp; Single</p>
-        <h3 id="node-value-8">Node Value</h3>
-        <p>&nbsp; The node value must be a lower-cased reference to a license "identifier" defined in the <a href="https://spdx.org/licenses/">SPDX License List</a> file if the license being used is a well-known, public license.  Or, if it is a custom license, it
-            must be a free form abbreviation of the name of the license as you reference it publicly. Please do not exceed <code>128 characters</code> for the node value or it may be truncated by aggregators.</p>
-        <h3 id="attributes-10">Attributes</h3>
+        <h3 id="node-value">Node Value</h3>
+        <p>&nbsp; The node value must be a lower-cased reference to a license &quot;identifier&quot; defined in the [SPDX License List]
+            (<a href="https://spdx.org/licenses/">https://spdx.org/licenses/</a>) file if the license being used is a well-known, public license.  Or, if it is a custom
+            license, it must be a free form abbreviation of the name of the license as you reference it publicly. Please do not
+            exceed <code>128 characters</code> for the node value or it may be truncated by aggregators.</p>
+        <h3 id="attributes">Attributes</h3>
         <ul>
-            <li><strong>url:</strong> (optional) This is a url that points to the full, legal language of the license being referenced.  This attribute is optional for well-known public licenses.  For new, or custom licenses it is required.</li>
+            <li><strong>url:</strong> (optional) This is a url that points to the full, legal language of the license being referenced.  This
+                attribute is optional for well-known public licenses.  For new, or custom licenses it is required.</li>
         </ul>
-        <h3 id="examples-10">Examples</h3>
-        <pre><code class="language-xml">&lt;podcast:license&gt;cc-by-4.0&lt;/podcast:license&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:license url="https://example.org/mypodcastlicense/full.pdf"&gt;my-podcast-license-v1&lt;/podcast:license&gt;</code></pre>
-        <p><br><br><br><br></p>
+        <h3 id="examples">Examples</h3>
+        <pre><code class="lang-xml">&lt;podcast:<span class="hljs-meta">license</span>&gt;cc-<span class="hljs-meta">by</span>-<span class="hljs-number">4.0</span>&lt;/podcast:<span class="hljs-meta">license</span>&gt;
+</code></pre>
+        <pre><code class="lang-xml">&lt;podcast:<span class="hljs-meta">license</span> url=<span class="hljs-string">"https://example.org/mypodcastlicense/full.pdf"</span>&gt;my-podcast-<span class="hljs-meta">license</span>-v<span class="hljs-number">1</span>&lt;/podcast:<span class="hljs-meta">license</span>&gt;
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
         <h2 id="alternate-enclosure">Alternate Enclosure</h2>
         <p><code>&lt;podcast:alternateEnclosure&gt;</code><br><br>
-            This element is meant to provide different versions of, or companion media to the main <a href="https://cyber.harvard.edu/rss/rss.html#ltenclosuregtSubelementOfLtitemgt"><code>&lt;enclosure&gt;</code></a> file.  This could be an audio only version of a video podcast to allow apps to switch back and forth between audio/video,
-            lower (or higher) bitrate versions for bandwidth constrained areas, alternative codecs for different device platforms, alternate URI schemes and download types such as IPFS or WebTorrent, commentary tracks or supporting source clips, etc.
-            This is a complex tag, so implementors are highly encouraged to read the companion <a href="https://github.com/Podcastindex-org/podcast-namespace/blob/main/proposal-docs/alternateEnclosure/alternateEnclosure.md">document</a> for a fuller understanding of how
-            this tag works and what it is capable of.</p>
-        <h3 id="parent-11">Parent</h3>
+            This element is meant to provide different versions of, or companion media to the main <a href="https://cyber.
+harvard.edu/rss/rss.html#ltenclosuregtSubelementOfLtitemgt"><code>&lt;enclosure&gt;</code></a> file.  This could be an audio only version of a video
+            podcast to allow apps to switch back and forth between audio/video, lower (or higher) bitrate versions for bandwidth
+            constrained areas, alternative codecs for different device platforms, alternate URI schemes and download types such
+            as IPFS or WebTorrent, commentary tracks or supporting source clips, etc.</p>
+        <p>This is a complex tag, so implementors are highly encouraged to read the companion <a href="https://github.
+com/Podcastindex-org/podcast-namespace/blob/main/proposal-docs/alternateEnclosure/alternateEnclosure.md">document</a> for a
+            fuller understanding of how this tag works and what it is capable of.</p>
+        <h3 id="parent">Parent</h3>
         <p>&nbsp; <code>&lt;item&gt;</code></p>
-        <h3 id="count-11">Count</h3>
+        <h3 id="count">Count</h3>
         <p>&nbsp; Multiple</p>
-        <h3 id="node-value-9">Node Value</h3>
-        <p>&nbsp; The node value must be one or more <code>&lt;podcast:source&gt;</code> elements that each define a uri where the media file can be downloaded or streamed.  A single, optional <code>&lt;podcast:integrity&gt;</code> element may also be included
-            to allow for file integrity checking.</p>
-        <h3 id="attributes-11">Attributes</h3>
+        <h3 id="node-value">Node Value</h3>
+        <p>&nbsp; The node value must be one or more <code>&lt;podcast:source&gt;</code> elements that each define a uri where the media file
+            can be downloaded or streamed.  A single, optional <code>&lt;podcast:integrity&gt;</code> element may also be included to allow for
+            file integrity checking.</p>
+        <h3 id="attributes">Attributes</h3>
         <ul>
             <li><strong>type:</strong> (required) Mime type of the media asset.</li>
-            <li><strong>length:</strong> (required) Length of the file in bytes.</li>
-            <li><strong>bitrate:</strong> (optional) Encoding bitrate of media asset.</li>
+            <li><strong>length:</strong> (recommended) Length of the file in bytes.</li>
+            <li><strong>bitrate:</strong> (optional) Average encoding bitrate of the media asset, expressed in bits per second.</li>
             <li><strong>height:</strong> (optional) Height of the media asset for video formats.</li>
-            <li><strong>lang:</strong> (optional) An <a href="https://en.wikipedia.org/wiki/BCP_47">IETF language tag (BCP 47)</a> code identifying the language of this media.</li>
-            <li><strong>title:</strong> (optional) A human-readable string identifying the name of the media asset. Should be limited to 32 characters for UX.</li>
-            <li><strong>rel:</strong> (optional) Provides a method of offering and/or grouping together different media elements. If not set, or set to "default", the media will be grouped with the enclosure and assumed to be an alternative to the enclosure's encoding/transport. This attribute can and should be the same for items with the same content encoded by different means. Should be limited to 32 characters for UX.</li>
-            <li><strong>codecs:</strong> (optional) An <a href="https://tools.ietf.org/html/rfc6381">RFC 6381</a> string specifying the codecs available in this media.</li>
-            <li><strong>default:</strong> (optional) Boolean specifying whether or not the given media is the same as the file from the enclosure element and should be the preferred media element. The primary reason to set this is to offer alternative transports for the enclosure. If not set, this should be assumed to be false.</li>
+            <li><strong>lang:</strong> (optional) An <a href="https://en.wikipedia.org/wiki/BCP_47">IETF language tag (BCP 47)</a> code identifying the
+                language of this media.</li>
+            <li><strong>title:</strong> (optional) A human-readable string identifying the name of the media asset. Should be limited to 32
+                characters for UX.</li>
+            <li><strong>rel:</strong> (optional) Provides a method of offering and/or grouping together different media elements. If not set,
+                or set to &quot;default&quot;, the media will be grouped with the enclosure and assumed to be an alternative to the
+                enclosure&#39;s encoding/transport. This attribute can and should be the same for items with the same content encoded
+                by different means. Should be limited to 32 characters for UX.</li>
+            <li><strong>codecs:</strong> (optional) An <a href="https://tools.ietf.org/html/rfc6381">RFC 6381</a> string specifying the codecs available
+                in this media.</li>
+            <li><strong>default:</strong> (optional) Boolean specifying whether or not the given media is the same as the file from the
+                enclosure element and should be the preferred media element. The primary reason to set this is to offer
+                alternative transports for the enclosure. If not set, this should be assumed to be false.</li>
         </ul>
-        <h3 id="examples-11">Examples</h3>
-        <pre><code class="language-xml">&lt;enclosure url="https://example.com/file-0.mp3" length="43200000" type="audio/mpeg" /&gt;
+        <h3 id="examples">Examples</h3>
+        <pre><code class="lang-xml">&lt;enclosure url=<span class="hljs-string">"https://example.com/file-0.mp3"</span> length=<span class="hljs-string">"43200000"</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"audio/mpeg"</span> /&gt;
 
-&lt;podcast:alternateEnclosure type="audio/mpeg" length="43200000" bitrate="128000" default="true" title="Standard"&gt;
-    &lt;podcast:source uri="https://example.com/file-0.mp3" /&gt;
-    &lt;podcast:source uri="ipfs://someRandomMpegFile" /&gt;
-&lt;/podcast:alternateEnclosure&gt;
+&lt;podcas<span class="hljs-variable">t:alternateEnclosure</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"audio/mpeg"</span> length=<span class="hljs-string">"43200000"</span> bitrate=<span class="hljs-string">"128000"</span> default=<span class="hljs-string">"true"</span> title=<span class="hljs-string">"Standard"</span>&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"https://example.com/file-0.mp3"</span> /&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"ipfs://someRandomMpegFile"</span> /&gt;
+&lt;/podcas<span class="hljs-variable">t:alternateEnclosure</span>&gt;
 
-&lt;podcast:alternateEnclosure type="audio/opus" length="32400000" bitrate="96000" title="High quality"&gt;
-    &lt;podcast:source uri="https://example.com/file-high.opus" /&gt;
-    &lt;podcast:source uri="ipfs://someRandomHighBitrateOpusFile" /&gt;
-&lt;/podcast:alternateEnclosure&gt;
+&lt;podcas<span class="hljs-variable">t:alternateEnclosure</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"audio/opus"</span> length=<span class="hljs-string">"32400000"</span> bitrate=<span class="hljs-string">"96000"</span> title=<span class="hljs-string">"High quality"</span>&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"https://example.com/file-high.opus"</span> /&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"ipfs://someRandomHighBitrateOpusFile"</span> /&gt;
+&lt;/podcas<span class="hljs-variable">t:alternateEnclosure</span>&gt;
 
-&lt;podcast:alternateEnclosure type="audio/aac" length="54000000" bitrate="160000" title="High quality AAC"&gt;
-    &lt;podcast:source uri="https://example.com/file-proprietary.aac" /&gt;
-    &lt;podcast:source uri="ipfs://someRandomProprietaryAACFile" /&gt;
-&lt;/podcast:alternateEnclosure&gt;
+&lt;podcas<span class="hljs-variable">t:alternateEnclosure</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"audio/aac"</span> length=<span class="hljs-string">"54000000"</span> bitrate=<span class="hljs-string">"160000"</span> title=<span class="hljs-string">"High quality AAC"</span>&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"https://example.com/file-proprietary.aac"</span> /&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"ipfs://someRandomProprietaryAACFile"</span> /&gt;
+&lt;/podcas<span class="hljs-variable">t:alternateEnclosure</span>&gt;
 
-&lt;podcast:alternateEnclosure type="audio/opus" length="5400000" bitrate="16000" title="Low bandwidth"&gt;
-    &lt;podcast:source uri="https://example.com/file-low.opus" /&gt;
-    &lt;podcast:source uri="ipfs://someRandomLowBitrateOpusFile" /&gt;
-&lt;/podcast:alternateEnclosure&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:alternateEnclosure type="audio/mpeg" length="2490970" bitrate="160707.74"&gt;
-    &lt;podcast:source uri="https://example.com/file-0.mp3" /&gt;
-    &lt;podcast:source uri="ipfs://QmdwGqd3d2gFPGeJNLLCshdiPert45fMu84552Y4XHTy4y" /&gt;
-    &lt;podcast:source uri="https://example.com/file-0.torrent" contentType="application/x-bittorrent" /&gt;
-    &lt;podcast:source uri="http://example.onion/file-0.mp3" /&gt;
-&lt;/podcast:alternateEnclosure&gt;
+&lt;podcas<span class="hljs-variable">t:alternateEnclosure</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"audio/opus"</span> length=<span class="hljs-string">"5400000"</span> bitrate=<span class="hljs-string">"16000"</span> title=<span class="hljs-string">"Low bandwidth"</span>&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"https://example.com/file-low.opus"</span> /&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"ipfs://someRandomLowBitrateOpusFile"</span> /&gt;
+&lt;/podcas<span class="hljs-variable">t:alternateEnclosure</span>&gt;
+</code></pre>
+        <pre><code class="lang-xml">&lt;podcas<span class="hljs-variable">t:alternateEnclosure</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"audio/mpeg"</span> length=<span class="hljs-string">"2490970"</span> bitrate=<span class="hljs-string">"160707.74"</span>&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"https://example.com/file-0.mp3"</span> /&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"ipfs://QmdwGqd3d2gFPGeJNLLCshdiPert45fMu84552Y4XHTy4y"</span> /&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"https://example.com/file-0.torrent"</span> contentType=<span class="hljs-string">"application/x-bittorrent"</span> /&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"http://example.onion/file-0.mp3"</span> /&gt;
+&lt;/podcas<span class="hljs-variable">t:alternateEnclosure</span>&gt;
 
-&lt;podcast:alternateEnclosure type="video/mp4" length="10562995" bitrate="681483.55" height="1080"&gt;
-    &lt;podcast:source uri="https://example.com/file-1080.mp4" /&gt;
-    &lt;podcast:source uri="ipfs://QmfQKJcp2xdByEt8mzWr1AJUhwvb9rdWPoacvdq2roDhgh" /&gt;
-    &lt;podcast:source uri="https://example.com/file-1080.torrent" contentType="application/x-bittorrent" /&gt;
-    &lt;podcast:source uri="http://example.onion/file-1080.mp4" /&gt;
-&lt;/podcast:alternateEnclosure&gt;</code></pre>
-        <p><br><br><br><br></p>
+&lt;podcas<span class="hljs-variable">t:alternateEnclosure</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"video/mp4"</span> length=<span class="hljs-string">"10562995"</span> bitrate=<span class="hljs-string">"681483.55"</span> height=<span class="hljs-string">"1080"</span>&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"https://example.com/file-1080.mp4"</span> /&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"ipfs://QmfQKJcp2xdByEt8mzWr1AJUhwvb9rdWPoacvdq2roDhgh"</span> /&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"https://example.com/file-1080.torrent"</span> contentType=<span class="hljs-string">"application/x-bittorrent"</span> /&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"http://example.onion/file-1080.mp4"</span> /&gt;
+&lt;/podcas<span class="hljs-variable">t:alternateEnclosure</span>&gt;
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
         <h2 id="source">Source</h2>
         <p><code>&lt;podcast:source&gt;</code><br><br>
-            This element defines a uri location for a <code>&lt;podcast:alternateEnclosure&gt;</code> media file.  It is meant to be used as a child of the <code>&lt;podcast:alternateEnclosure&gt;</code> element. At least one <code>&lt;podcast:source&gt;</code> element must be
-            present within every <code>&lt;podcast:alternateEnclosure&gt;</code> element.</p>
-        <h3 id="parent-12">Parent</h3>
+            This element defines a uri location for a <code>&lt;podcast:alternateEnclosure&gt;</code> media file.  It is meant to be used as a
+            child of the <code>&lt;podcast:alternateEnclosure&gt;</code> element. At least one <code>&lt;podcast:source&gt;</code> element must be present within
+            every <code>&lt;podcast:alternateEnclosure&gt;</code> element.</p>
+        <h3 id="parent">Parent</h3>
         <p>&nbsp; <code>&lt;podcast:alternateEnclosure&gt;</code></p>
-        <h3 id="count-12">Count</h3>
+        <h3 id="count">Count</h3>
         <p>&nbsp; Multiple</p>
-        <h3 id="attributes-12">Attributes</h3>
+        <h3 id="attributes">Attributes</h3>
         <ul>
             <li><strong>uri:</strong> (required) This is the uri where the media file resides.</li>
-            <li><strong>contentType:</strong> (optional) This is a string that declares the mime-type of the file. It is useful if the transport mechanism is different than the file being delivered, as is the case with a torrents.</li>
+            <li><strong>contentType:</strong> (optional) This is a string that declares the mime-type of the file. It is useful if the
+                transport mechanism is different than the file being delivered, as is the case with a torrents.</li>
         </ul>
-        <h3 id="examples-12">Examples</h3>
-        <pre><code class="language-xml">&lt;podcast:alternateEnclosure type="video/mp4" length="7924786" bitrate="511276.52" height="720"&gt;
-    &lt;podcast:source uri="https://example.com/file-720.mp4" /&gt;
-    &lt;podcast:source uri="ipfs://QmX33FYehk6ckGQ6g1D9D3FqZPix5JpKstKQKbaS8quUFb" /&gt;
-    &lt;podcast:source uri="https://example.com/file-720.torrent" contentType="application/x-bittorrent" /&gt;
-    &lt;podcast:source uri="http://example.onion/file-720.mp4" /&gt;
-&lt;/podcast:alternateEnclosure&gt;</code></pre>
-        <p><br><br><br><br></p>
+        <h3 id="examples">Examples</h3>
+        <pre><code class="lang-xml">&lt;podcas<span class="hljs-variable">t:alternateEnclosure</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"video/mp4"</span> length=<span class="hljs-string">"7924786"</span> bitrate=<span class="hljs-string">"511276.52"</span> height=<span class="hljs-string">"720"</span>&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"https://example.com/file-720.mp4"</span> /&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"ipfs://QmX33FYehk6ckGQ6g1D9D3FqZPix5JpKstKQKbaS8quUFb"</span> /&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"https://example.com/file-720.torrent"</span> contentType=<span class="hljs-string">"application/x-bittorrent"</span> /&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"http://example.onion/file-720.mp4"</span> /&gt;
+&lt;/podcas<span class="hljs-variable">t:alternateEnclosure</span>&gt;
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
         <h2 id="integrity">Integrity</h2>
         <p><code>&lt;podcast:integrity&gt;</code><br><br>
-            This element defines a method of verifying integrity of the media given either an <a href="https://www.w3.org/TR/SRI/">SRI-compliant integrity string</a> (preferred) or a base64 encoded PGP signature.  This element is optional within a
+            This element defines a method of verifying integrity of the media given either an [SRI-compliant integrity string]
+            (<a href="https://www.w3.org/TR/SRI/">https://www.w3.org/TR/SRI/</a>) (preferred) or a base64 encoded PGP signature.  This element is optional within a
             <code>&lt;podcast:alternateEnclosure&gt;</code> element.  It allows to ensure that the file has not been tampered with.</p>
-        <h3 id="parent-13">Parent</h3>
+        <h3 id="parent">Parent</h3>
         <p>&nbsp; <code>&lt;podcast:alternateEnclosure&gt;</code></p>
-        <h3 id="count-13">Count</h3>
+        <h3 id="count">Count</h3>
         <p>&nbsp; Single</p>
-        <h3 id="attributes-13">Attributes</h3>
+        <h3 id="attributes">Attributes</h3>
         <ul>
-            <li><strong>type:</strong> (required) Type of integrity, either "sri" or "pgp-signature".</li>
+            <li><strong>type:</strong> (required) Type of integrity, either &quot;sri&quot; or &quot;pgp-signature&quot;.</li>
             <li><strong>value:</strong> (required) Value of the sri string or base64 encoded pgp signature.</li>
         </ul>
-        <h3 id="examples-13">Examples</h3>
-        <pre><code class="language-xml">&lt;podcast:alternateEnclosure type="video/mp4" length="7924786" bitrate="511276.52" height="720"&gt;
-    &lt;podcast:source uri="https://example.com/file-720.mp4" /&gt;
-    &lt;podcast:source uri="ipfs://QmX33FYehk6ckGQ6g1D9D3FqZPix5JpKstKQKbaS8quUFb" /&gt;
-    &lt;podcast:integrity type="sri" value="sha384-ExVqijgYHm15PqQqdXfW95x+Rs6C+d6E/ICxyQOeFevnxNLR/wtJNrNYTjIysUBo" /&gt;
-&lt;/podcast:alternateEnclosure&gt;</code></pre>
-        <p><br><br><br><br></p>
+        <h3 id="examples">Examples</h3>
+        <pre><code class="lang-xml">&lt;podcas<span class="hljs-variable">t:alternateEnclosure</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"video/mp4"</span> length=<span class="hljs-string">"7924786"</span> bitrate=<span class="hljs-string">"511276.52"</span> height=<span class="hljs-string">"720"</span>&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"https://example.com/file-720.mp4"</span> /&gt;
+    &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"ipfs://QmX33FYehk6ckGQ6g1D9D3FqZPix5JpKstKQKbaS8quUFb"</span> /&gt;
+    &lt;podcas<span class="hljs-variable">t:integrity</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"sri"</span> value=<span class="hljs-string">"sha384-ExVqijgYHm15PqQqdXfW95x+Rs6C+d6E/ICxyQOeFevnxNLR/wtJNrNYTjIysUBo"</span> /&gt;
+&lt;/podcas<span class="hljs-variable">t:alternateEnclosure</span>&gt;
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
         <h2 id="guid">Guid</h2>
         <p><code>&lt;podcast:guid&gt;</code><br><br>
-            This element is used to declare a unique, global identifier for a podcast. The value is a UUIDv5, and is easily generated from the RSS feed url, with the <strong>protocol scheme and trailing slashes stripped off</strong>, combined with a unique "podcast" namespace which has a UUID of <code>ead4c236-bf58-58c6-a2c6-a6b28d128cb6</code>. Tools like <a href="https://www.uuidtools.com/v5">this one</a> can help generate these values by hand. Or, language libraries like <a href="https://github.com/sporkmonger/uuidtools">this one</a> in Ruby are widely available.</p>
-        <p>A podcast gets assigned a podcast:guid once in its lifetime using its current feed url (at the time of assignment) as the seed value. That GUID is then meant to follow the podcast from then on, for the duration of its life, even if the feed url changes. This means that when a podcast moves from one hosting platform to another, its podcast:guid should be discovered by the new host and imported into the new platform for inclusion into the feed.</p>
-        <p>Using this pattern, podcasts can maintain a consistent identity across the open RSS ecosystem without a central authority.</p>
+            This element is used to declare a unique, global identifier for a podcast. The value is a UUIDv5, and is easily
+            generated from the RSS feed url, with the <strong>protocol scheme and trailing slashes stripped off</strong>, combined with a
+            unique &quot;podcast&quot; namespace which has a UUID of <code>ead4c236-bf58-58c6-a2c6-a6b28d128cb6</code>. Tools like [this one]
+            (<a href="https://www.uuidtools.com/v5">https://www.uuidtools.com/v5</a>) can help generate these values by hand. Or, language libraries like [this one]
+            (<a href="https://github.com/sporkmonger/uuidtools">https://github.com/sporkmonger/uuidtools</a>) in Ruby are widely available. Specifically for podcasts, <a href="https://tools.rssblue.com/podcast-guid">this tool from
+                RSS Blue</a> can help generate a GUID by hand.</p>
+        <p>A podcast gets assigned a podcast:guid once in its lifetime using its current feed url (at the time of assignment)
+            as the seed value. That GUID is then meant to follow the podcast from then on, for the duration of its life, even if
+            the feed url changes. This means that when a podcast moves from one hosting platform to another, its podcast:guid
+            should be discovered by the new host and imported into the new platform for inclusion into the feed.</p>
+        <p>Using this pattern, podcasts can maintain a consistent identity across the open RSS ecosystem without a central
+            authority.</p>
         <p><strong>Tips:</strong></p>
         <ul>
-            <li>All podcasts in the Podcast Index have already been assigned a GUID; but if one exists in the RSS feed, that value is canonical.</li>
+            <li>All podcasts in the Podcast Index have already been assigned a GUID; but if one exists in the RSS feed, that value
+                is canonical.</li>
             <li>You can programmatically spot a GUID: it is 36 characters long, and contains four hyphen characters.</li>
-            <li>Be aware that Amazon Music also uses separate UUIDv5 identifiers within their podcast directory, which are calculated differently and unrelated to this specification. </li>
-            <li>The following regular expression (regex) will match a GUID:<pre><code class="language-re">[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}`</code></pre>
+            <li>Be aware that Amazon Music also uses separate UUIDv5 identifiers within their podcast directory, which are
+                calculated differently and unrelated to this specification. </li>
+            <li>The following regular expression (regex) will match a GUID:<pre><code class="lang-re">[<span class="hljs-number">0</span><span class="hljs-number">-9</span>a-fA-F]{<span class="hljs-number">8</span>}\-[<span class="hljs-number">0</span><span class="hljs-number">-9</span>a-fA-F]{<span class="hljs-number">4</span>}\-[<span class="hljs-number">0</span><span class="hljs-number">-9</span>a-fA-F]{<span class="hljs-number">4</span>}\-[<span class="hljs-number">0</span><span class="hljs-number">-9</span>a-fA-F]{<span class="hljs-number">4</span>}\-[<span class="hljs-number">0</span><span class="hljs-number">-9</span>a-fA-F]{<span class="hljs-number">12</span>}`
+</code></pre>
             </li>
         </ul>
-        <h3 id="parent-14">Parent</h3>
+        <h3 id="parent">Parent</h3>
         <p>&nbsp; <code>&lt;channel&gt;</code></p>
-        <h3 id="count-14">Count</h3>
+        <h3 id="count">Count</h3>
         <p>&nbsp; Single</p>
-        <h3 id="node-value-10">Node Value</h3>
+        <h3 id="node-value">Node Value</h3>
         <p>&nbsp; The node value is a UUIDv5 string.</p>
-        <h3 id="attributes-14">Attributes</h3>
-        <p>&nbsp; There are no attributes for this tag.</p>
-        <h3 id="examples-14">Examples</h3>
+        <h3 id="examples">Examples</h3>
         <p>Example GUID for feed url <code>mp3s.nashownotes.com/pc20rss.xml</code>:</p>
-        <pre><code class="language-xml">&lt;podcast:guid&gt;917393e3-1b1e-5cef-ace4-edaa54e1f810&lt;/podcast:guid&gt;</code></pre>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:guid</span>&gt;</span>917393e3-1b1e-5cef-ace4-edaa54e1f810<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:guid</span>&gt;</span>
+</code></pre>
         <p>Example GUID for feed url <code>podnews.net/rss</code>:</p>
-        <pre><code class="language-xml">&lt;podcast:guid&gt;9b024349-ccf0-5f69-a609-6b82873eab3c&lt;/podcast:guid&gt;</code></pre>
+        <pre><code class="lang-xml">&lt;podcast:guid&gt;<span class="hljs-number">9b024349</span>-ccf0-5f69-a609-6b82873eab3c&lt;/podcast:guid&gt;
+</code></pre>
         <h3 id="guid-enabled-fast-follow-share-links">Guid-enabled fast-follow share links</h3>
-        <p>&nbsp; The <code>podcast:guid</code> value above enables podcasters to produce a link that can share a podcast on a variety of different platforms.</p>
+        <p>&nbsp; The <code>podcast:guid</code> value above enables podcasters to produce a link that can share a podcast on a variety of
+            different platforms.</p>
         <p>&nbsp; The format of the link is <code>https://(a podcast website link)#fastfollow-(type):(a podcast guid)</code></p>
         <p>&nbsp; <code>type</code> is currently <code>podcast</code>, but may be extended in future.</p>
-        <p>&nbsp; A working example is <a href="https://podnews.net/podcast/i8xe9/listen#fastfollow-podcast:9b024349-ccf0-5f69-a609-6b82873eab3c">https://podnews.net/podcast/i8xe9/listen#fastfollow-podcast:9b024349-ccf0-5f69-a609-6b82873eab3c</a> or the QR code given below.</p>
-        <p>&nbsp; <img alt="podnews-qr" src="https://user-images.githubusercontent.com/231941/127796108-d819de43-6c0e-4c7b-9579-ed1f19989443.png"></p>
-        <p>&nbsp; When scanned on a mobile phone's camera app, this link will go to the specified podcast website. Behavior of this website is up to the creator: some may use a default homepage, others may sniff the useragent and open a default podcast app on a device. In the working example, above, an iPhone user may be taken to Apple Podcasts; an Android user may be taken to Google Podcasts; and another device will be given a page with a player.</p>
-        <p>&nbsp; When scanned on a QR code reader inside a podcast app, like <a href="https://curiocaster.com/">CurioCaster</a>, the app can parse the <code>podcast:guid</code> value from the URL, allowing the podcast to be opened within the application.</p>
-        <p><br><br><br><br></p>
+        <p>&nbsp; A working example is <a href="https://podnews.net/podcast/i8xe9/listen#fastfollow-podcast:9b024349-ccf0-5f69-a609">https://podnews.net/podcast/i8xe9/listen#fastfollow-podcast:9b024349-ccf0-5f69-a609</a>
+            -6b82873eab3c or the QR code given below.</p>
+        <p>&nbsp; <img src="https://user-images.githubusercontent.com/231941/127796108-d819de43-6c0e-4c7b-9579-ed1f19989443.png" alt="podnews-qr"></p>
+        <p>&nbsp; When scanned on a mobile phone&#39;s camera app, this link will go to the specified podcast website. Behavior of
+            this website is up to the creator: some may use a default homepage, others may sniff the useragent and open a
+            default podcast app on a device. In the working example, above, an iPhone user may be taken to Apple Podcasts; an
+            Android user may be taken to Google Podcasts; and another device will be given a page with a player.</p>
+        <p>&nbsp; When scanned on a QR code reader inside a podcast app, like <a href="https://curiocaster.com/">CurioCaster</a>, the app
+            can parse the <code>podcast:guid</code> value from the URL, allowing the podcast to be opened within the application.</p>
+        <p><br><br><br><br><!-- Tag block --></p>
         <h2 id="value">Value</h2>
         <p><code>&lt;podcast:value&gt;</code><br><br>
-            This element designates the cryptocurrency or payment layer that will be used, the transport method for transacting the payments, and a suggested amount denominated in the given cryptocurrency.</p>
-        <p>This element can exist at either the <code>&lt;channel&gt;</code> or <code>&lt;item&gt;</code> level.  When it exists at the <code>&lt;item&gt;</code> level, it should be treated as an "override" of whatever is defined at the <code>&lt;channel&gt;</code> level.</p>
-        <p>This is a complex tag, so implementors are HIGHLY encouraged to read the companion <a href="https://github.com/Podcastindex-org/podcast-namespace/blob/main/value/value.md">document</a> for a complete understanding of how
+            This element designates the cryptocurrency or payment layer that will be used, the transport method for transacting
+            the payments, and a suggested amount denominated in the given cryptocurrency.</p>
+        <p>This element can exist at either the <code>&lt;channel&gt;</code> or <code>&lt;item&gt;</code> level.  When it exists at the <code>&lt;item&gt;</code> level, it should
+            be treated as an &quot;override&quot; of whatever is defined at the <code>&lt;channel&gt;</code> level.</p>
+        <p>This is a complex tag, so implementors are HIGHLY encouraged to read the companion <a href="https://github.
+com/Podcastindex-org/podcast-namespace/blob/main/value/value.md">document</a> for a complete understanding of how
             this tag works and what it is capable of.</p>
-        <h3 id="parent-15">Parent</h3>
+        <h3 id="parent">Parent</h3>
         <p>&nbsp; <code>&lt;channel&gt;</code> or <code>&lt;item&gt;</code></p>
-        <h3 id="count-15">Count</h3>
+        <h3 id="count">Count</h3>
         <p>&nbsp; Single</p>
-        <h3 id="node-value-11">Node Value</h3>
+        <h3 id="node-value">Node Value</h3>
         <p>&nbsp; The node value must be one or more <code>&lt;podcast:valueRecipient&gt;</code> elements.</p>
-        <h3 id="attributes-15">Attributes</h3>
+        <h3 id="attributes">Attributes</h3>
         <ul>
             <li><strong>type:</strong> (required) This is the service slug of the cryptocurrency or protocol layer.</li>
             <li><strong>method:</strong> (required) This is the transport mechanism that will be used.</li>
             <li><strong>suggested:</strong> (optional) This is an optional suggestion on how much cryptocurrency to send with each payment.</li>
         </ul>
-        <h3 id="examples-15">Examples</h3>
-        <pre><code class="language-xml">&lt;podcast:value
-    type="lightning"
-    method="keysend"
-    suggested="0.00000005000"
-&gt;&lt;/podcast:value&gt;</code></pre>
-        <p><br><br><br><br></p>
+        <h3 id="examples">Examples</h3>
+        <pre><code class="lang-xml">&lt;podcast:<span class="hljs-keyword">value</span>
+    <span class="hljs-keyword">type</span>=<span class="hljs-string">"lightning"</span>
+    <span class="hljs-keyword">method</span>=<span class="hljs-string">"keysend"</span>
+    suggested=<span class="hljs-string">"0.00000005000"</span>
+&gt;&lt;/podcast:<span class="hljs-keyword">value</span>&gt;
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
         <h2 id="value-recipient">Value Recipient</h2>
         <p><code>&lt;podcast:valueRecipient&gt;</code><br><br>
-            The <code>valueRecipient</code> tag designates various destinations for payments to be sent to during consumption of the enclosed media.  Each recipient is considered to receive a "split" of the total payment according to the number of shares given
-            in the <code>split</code> attribute.</p>
+            The <code>valueRecipient</code> tag designates various destinations for payments to be sent to during consumption of the
+            enclosed media.  Each recipient is considered to receive a &quot;split&quot; of the total payment according to the number of
+            shares given in the <code>split</code> attribute.</p>
         <p>This element may only exist within a parent <code>&lt;podcast:value&gt;</code> element.</p>
         <p>There is no limit on how many <code>valueRecipient</code> elements can be present in a given <code>&lt;podcast:value&gt;</code> element.</p>
-        <p>This is a complex tag, so implementors are HIGHLY encouraged to read the companion <a href="https://github.com/Podcastindex-org/podcast-namespace/blob/main/value/value.md">document</a> for a complete understanding of how
-            this tag works and what it is capable of.</p>
-        <h3 id="parent-16">Parent</h3>
+        <p>This is a complex tag, so implementors are HIGHLY encouraged to read the companion <a href="https://github.
+com/Podcastindex-org/podcast-namespace/blob/main/value/value.md">document</a> for a complete understanding of how this tag works
+            and what it is capable of.</p>
+        <h3 id="parent">Parent</h3>
         <p>&nbsp; <code>&lt;podcast:value&gt;</code></p>
-        <h3 id="count-16">Count</h3>
+        <h3 id="count">Count</h3>
         <p>&nbsp; Multiple</p>
-        <h3 id="attributes-16">Attributes</h3>
+        <h3 id="attributes">Attributes</h3>
         <ul>
             <li><strong>name</strong> (recommended) A free-form string that designates who or what this recipient is.</li>
             <li><strong>customKey</strong> (optional) The name of a custom record key to send along with the payment.</li>
-            <li><strong>customValue</strong> (optional) A custom value to pass along with the payment. This is considered the value that belongs to the <code>customKey</code>.</li>
+            <li><strong>customValue</strong> (optional) A custom value to pass along with the payment. This is considered the value that
+                belongs to the <code>customKey</code>.</li>
             <li><strong>type</strong> (required) A slug that represents the type of receiving address that will receive the payment.</li>
             <li><strong>address</strong> (required) This denotes the receiving address of the payee.</li>
             <li><strong>split</strong> (required) The number of shares of the payment this recipient will receive.</li>
             <li><strong>fee</strong> (optional) If this attribute is not specified, it is assumed to be false.</li>
         </ul>
-        <h3 id="examples-16">Examples</h3>
-        <pre><code class="language-xml">&lt;podcast:value type="lightning" method="keysend" suggested="0.00000015000"&gt;
-  &lt;podcast:valueRecipient
-      name="Alice (Podcaster)"
-      type="node"
-      address="02d5c1bf8b940dc9cadca86d1b0a3c37fbe39cee4c7e839e33bef9174531d27f52"
-      split="40"
+        <h3 id="examples">Examples</h3>
+        <pre><code class="lang-xml">&lt;podcas<span class="hljs-variable">t:value</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"lightning"</span> method=<span class="hljs-string">"keysend"</span> suggested=<span class="hljs-string">"0.00000015000"</span>&gt;
+  &lt;podcas<span class="hljs-variable">t:valueRecipient</span>
+      name=<span class="hljs-string">"Alice (Podcaster)"</span>
+      <span class="hljs-built_in">type</span>=<span class="hljs-string">"node"</span>
+      address=<span class="hljs-string">"02d5c1bf8b940dc9cadca86d1b0a3c37fbe39cee4c7e839e33bef9174531d27f52"</span>
+      <span class="hljs-keyword">split</span>=<span class="hljs-string">"40"</span>
   /&gt;
-  &lt;podcast:valueRecipient
-      name="Bob (Podcaster)"
-      type="node"
-      address="032f4ffbbafffbe51726ad3c164a3d0d37ec27bc67b29a159b0f49ae8ac21b8508"
-      split="40"
+  &lt;podcas<span class="hljs-variable">t:valueRecipient</span>
+      name=<span class="hljs-string">"Bob (Podcaster)"</span>
+      <span class="hljs-built_in">type</span>=<span class="hljs-string">"node"</span>
+      address=<span class="hljs-string">"032f4ffbbafffbe51726ad3c164a3d0d37ec27bc67b29a159b0f49ae8ac21b8508"</span>
+      <span class="hljs-keyword">split</span>=<span class="hljs-string">"40"</span>
   /&gt;
-  &lt;podcast:valueRecipient
-      name="Carol (Producer)"
-      type="node"
-      address="02dd306e68c46681aa21d88a436fb35355a8579dd30201581cefa17cb179fc4c15"
-      split="15"
+  &lt;podcas<span class="hljs-variable">t:valueRecipient</span>
+      name=<span class="hljs-string">"Carol (Producer)"</span>
+      <span class="hljs-built_in">type</span>=<span class="hljs-string">"node"</span>
+      address=<span class="hljs-string">"02dd306e68c46681aa21d88a436fb35355a8579dd30201581cefa17cb179fc4c15"</span>
+      <span class="hljs-keyword">split</span>=<span class="hljs-string">"15"</span>
   /&gt;
-  &lt;podcast:valueRecipient
-      name="Hosting Provider"
-      type="node"
-      address="03ae9f91a0cb8ff43840e3c322c4c61f019d8c1c3cea15a25cfc425ac605e61a4a"
-      split="5"
-      fee="true"
+  &lt;podcas<span class="hljs-variable">t:valueRecipient</span>
+      name=<span class="hljs-string">"Hosting Provider"</span>
+      <span class="hljs-built_in">type</span>=<span class="hljs-string">"node"</span>
+      address=<span class="hljs-string">"03ae9f91a0cb8ff43840e3c322c4c61f019d8c1c3cea15a25cfc425ac605e61a4a"</span>
+      <span class="hljs-keyword">split</span>=<span class="hljs-string">"5"</span>
+      fee=<span class="hljs-string">"true"</span>
   /&gt;
-&lt;/podcast:value&gt;</code></pre>
-        <p><br><br><br><br></p>
+&lt;/podcas<span class="hljs-variable">t:value</span>&gt;
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
         <h2 id="medium">Medium</h2>
         <p><code>&lt;podcast:medium&gt;</code><br><br>
-            The <code>medium</code> tag tells the an application what the content contained within the feed IS, as opposed to what the content is ABOUT in the case of a category.  This allows a podcast app to
-            modify it's behavior or UI to give a better experience to the user for this content.  For example, if a podcast has <code>&lt;podcast:medium&gt;music&lt;/podcast:medium&gt;</code> an app may choose to
-            reset playback speed to 1x and adjust it's EQ settings to be better for music vs. spoken word.</p>
-        <p>Accepted medium names are curated within a list maintained by the community as new mediums are discovered over time. Newly proposed mediums should require some level of
-            justification to be added to this list. One may argue and/or prove use of a new medium even for only one application, should it prove different enough from existing mediums to have meaning.</p>
-        <h3 id="parent-17">Parent</h3>
+            The <code>medium</code> tag tells an application what the content contained within the feed IS, as opposed to what the
+            content is ABOUT in the case of a category.  This allows a podcast app to modify it&#39;s behavior or UI to give a
+            better experience to the user for this content.  For example, if a podcast has
+            <code>&lt;podcast:medium&gt;music&lt;/podcast:medium&gt;</code> an app may choose to reset playback speed to 1x and adjust it&#39;s EQ settings
+            to be better for music vs. spoken word.</p>
+        <p>Accepted medium names are curated within a list maintained by the community as new mediums are discovered over time.
+            Newly proposed mediums should require some level of justification to be added to this list. One may argue and/or
+            prove use of a new medium even for only one application, should it prove different enough from existing mediums to
+            have meaning.</p>
+        <h3 id="parent">Parent</h3>
         <p>&nbsp; <code>&lt;channel&gt;</code></p>
-        <h3 id="count-17">Count</h3>
+        <h3 id="count">Count</h3>
         <p>&nbsp; Single</p>
-        <h3 id="node-value-12">Node Value</h3>
+        <h3 id="node-value">Node Value</h3>
         <p>The node value is a string denoting one of the following possible values:</p>
         <ul>
-            <li><code>podcast</code> (default) - Describes a feed for a podcast show. If no <code>medium</code> tag is present in the channel, this medium is assumed.</li>
-            <li><code>music</code> - A feed of music organized into an "album" with each item a song within the album.</li>
-            <li><code>video</code> - Like a "podcast" but used in a more visual experience.  Something akin to a dedicated video channel like would be found on YouTube.</li>
-            <li><code>film</code> - Specific types of videos with one item per feed. This is different than a <code>video</code> medium because the content is considered to be cinematic; like a movie or documentary.</li>
+            <li><code>podcast</code> (default) - Describes a feed for a podcast show. If no <code>medium</code> tag is present in the channel, this
+                medium is assumed.</li>
+            <li><code>music</code> - A feed of music organized into an &quot;album&quot; with each item a song within the album.</li>
+            <li><code>video</code> - Like a &quot;podcast&quot; but used in a more visual experience.  Something akin to a dedicated video channel like
+                would be found on YouTube.</li>
+            <li><code>film</code> - Specific types of videos with one item per feed. This is different than a <code>video</code> medium because the
+                content is considered to be cinematic; like a movie or documentary.</li>
             <li><code>audiobook</code> - Specific types of audio with one item per feed, or where items represent chapters within the book.</li>
-            <li><code>newsletter</code> - Describes a feed of curated written articles.  Newsletter articles now sometimes have an spoken version audio enclosure attached.</li>
-            <li><code>blog</code> - Describes a feed of informally written articles.  Similar to <code>newsletter</code> but more informal as in a traditional blog platform style.</li>
+            <li><code>newsletter</code> - Describes a feed of curated written articles.  Newsletter articles now sometimes have an spoken
+                version audio enclosure attached.</li>
+            <li><code>blog</code> - Describes a feed of informally written articles.  Similar to <code>newsletter</code> but more informal as in a
+                traditional blog platform style.</li>
         </ul>
-        <h3 id="examples-17">Examples</h3>
-        <p>Example use for a "podcast":</p>
-        <pre><code class="language-xml">&lt;podcast:medium&gt;podcast&lt;/podcast:medium&gt;</code></pre>
-        <p>Example use for "music":</p>
-        <pre><code class="language-xml">&lt;podcast:medium&gt;music&lt;/podcast:medium&gt;</code></pre>
-        <p><br><br><br><br></p>
-        <h2>Images</h2>
-        <p><code>&lt;podcast:images&gt;</code><br><br>
-            This tag, when present, allows for specifying many different image sizes in a compact way at either the episode or channel level.  The syntax is borrowed from
-            the HTML5 <a href="https://html.spec.whatwg.org/multipage/images.html#srcset-attributes">srcset</a> syntax.  It allows for describing multiple image sources with width and
-            pixel hints directly in the attribute.  Although the HTML5 <code>srcset</code> attribute allows relative urls, absolute urls are required in this tag - since the feed url may not represent an appropriate base url for relativization.</p>
-        <h3 id="parent-18">Parent</h3>
-        <p>&nbsp; <code>&lt;channel&gt;</code> or <code>&lt;item&gt;</code></p>
-        <h3 id="count-18">Count</h3>
-        <p>&nbsp; Single</p>
-        <h3 id="attributes-17">Attributes</h3>
+        <h3 id="list-mediums">List Mediums</h3>
+        <p>In addition to the above mediums, each medium also has a counterpart &quot;list&quot; variant, where the original medium name
+            is suffixed by the letter &quot;L&quot; to indicate that it is a &quot;List&quot; of that type of content. For example, <code>podcast</code> would
+            become <code>podcastL</code>, <code>music</code> would become <code>musicL</code>, <code>audiobook</code> would become <code>audiobookL</code>, etc.</p>
+        <p>There is also a dedicated list medium for mixed content:</p>
         <ul>
-            <li><strong>srcset</strong> (required) A string that denotes each image url followed by a space and the pixel width, with each one separated by a comma.  See the example<pre><code>                  for a clear view of the syntax.</code></pre>
-            </li>
+            <li><code>mixed</code> - This list medium type describes a feed of <code>&lt;podcast:remoteItem&gt;</code>&#39;s that point to different remote medium
+                types.  For instance, a single list feed might point to music, podcast and audiobook items in other feeds.  An
+                example would be a personal consumption history feed.</li>
         </ul>
-        <h3 id="examples-18">Examples</h3>
+        <p>A &quot;list&quot; medium feed should not be expected to have regular <code>&lt;item&gt;</code>&#39;s,<code>&lt;podcast:liveItem&gt;</code>&#39;s, or any future
+            similar new item type. Rather, a &quot;List&quot; feed is intended to exclusively contain one or more <code>&lt;podcast:remoteItem&gt;</code>&#39;s,
+            allowing one to reference a feed by its <code>&lt;podcast:guid&gt;</code> and the guid of an item.</p>
+        <h3 id="examples">Examples</h3>
+        <p>Example use for a standard &quot;podcast&quot; feed:</p>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:medium</span>&gt;</span>podcast<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:medium</span>&gt;</span>
+</code></pre>
+        <p>Example use for a &quot;music&quot; feed:</p>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:medium</span>&gt;</span>music<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:medium</span>&gt;</span>
+</code></pre>
+        <p>Example use for a &quot;music&quot; playlist feed:</p>
+        <pre><code class="lang-xml">&lt;rss xmln<span class="hljs-variable">s:podcast</span>=<span class="hljs-string">"https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md"</span> xmln<span class="hljs-variable">s:itunes</span>=<span class="hljs-string">"http://www.itunes.com/dtds/podcast-1.0.dtd"</span> <span class="hljs-keyword">version</span>=<span class="hljs-string">"2.0"</span>&gt;
+    <span class="hljs-symbol">&lt;channel&gt;</span>
+        <span class="hljs-symbol">&lt;title&gt;</span>Picking the Hits <span class="hljs-number">2.0</span>!&lt;/title&gt;
+        <span class="hljs-symbol">&lt;description&gt;</span>All the hits played <span class="hljs-keyword">on</span> the Podcasting <span class="hljs-number">2.0</span> show.&lt;/description&gt;
+        <span class="hljs-symbol">&lt;link&gt;</span>http<span class="hljs-variable">s:</span>//podcastindex.org&lt;/link&gt;
+        <span class="hljs-symbol">&lt;language&gt;</span><span class="hljs-keyword">en</span>-US&lt;/<span class="hljs-keyword">language</span>&gt;
+        <span class="hljs-symbol">&lt;pubDate&gt;</span>Wed, <span class="hljs-number">07</span> Jun <span class="hljs-number">2023</span> <span class="hljs-number">04</span>:<span class="hljs-number">30</span>:<span class="hljs-number">38</span> GMT&lt;/pubDate&gt;
+        <span class="hljs-symbol">&lt;image&gt;</span>
+            <span class="hljs-symbol">&lt;url&gt;</span>http<span class="hljs-variable">s:</span>//example.<span class="hljs-keyword">com</span>/images/pci_avatar-massive.jpg&lt;/url&gt;
+        &lt;/image&gt;
+
+        &lt;podcas<span class="hljs-variable">t:guid</span>&gt;<span class="hljs-number">3</span>f2a8e4e-<span class="hljs-number">263</span><span class="hljs-keyword">a</span>-<span class="hljs-number">51</span>aa-<span class="hljs-number">9</span>d3d-<span class="hljs-number">0</span>d71f82a1564&lt;/podcas<span class="hljs-variable">t:guid</span>&gt;
+        &lt;podcas<span class="hljs-variable">t:medium</span>&gt;musicL&lt;/podcas<span class="hljs-variable">t:medium</span>&gt;
+        &lt;itune<span class="hljs-variable">s:image</span>&gt;http<span class="hljs-variable">s:</span>//example.<span class="hljs-keyword">com</span>/images/pci_avatar-massive.jpg&lt;/itune<span class="hljs-variable">s:image</span>&gt;
+
+        &lt;podcas<span class="hljs-variable">t:value</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"lightning"</span> method=<span class="hljs-string">"keysend"</span> suggested=<span class="hljs-string">"0.00000005000"</span>&gt;
+            &lt;podcas<span class="hljs-variable">t:valueRecipient</span> name=<span class="hljs-string">"podcaster"</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"node"</span> address=<span class="hljs-string">"036557ea56b3b86f08be31bcd2557cae8021b0e3a9413f0c0e52625c6696972e57"</span> <span class="hljs-keyword">split</span>=<span class="hljs-string">"99"</span> /&gt;
+            &lt;podcas<span class="hljs-variable">t:valueRecipient</span> name=<span class="hljs-string">"hosting company"</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"node"</span> address=<span class="hljs-string">"036557ea56b3b86f08be31bcd2557cae8021b0e3a9413f0c0e52625c6696972e57"</span> <span class="hljs-keyword">split</span>=<span class="hljs-string">"1"</span> /&gt;
+        &lt;/podcas<span class="hljs-variable">t:value</span>&gt;
+
+        &lt;podcas<span class="hljs-variable">t:remoteItem</span>
+                feedGuid=<span class="hljs-string">"ff519475-6e90-5231-91a0-37d092088d88"</span>
+                feedUrl=<span class="hljs-string">"https://media.rss.com/joemartinmusic/feed.xml"</span>
+                itemGuid=<span class="hljs-string">"e75771b1-e8d4-4133-9392-c579822247d9"</span>
+                medium=<span class="hljs-string">"music"</span>
+        /&gt;
+
+        &lt;podcas<span class="hljs-variable">t:remoteItem</span>
+                feedGuid=<span class="hljs-string">"47081700-bd65-511f-b535-f545f3cd660c"</span>
+                feedUrl=<span class="hljs-string">"https://player.wavlake.com/feed/d1ed0ec9-21a8-4eda-b2c9-b17c8019a7e8"</span>
+                itemGuid=<span class="hljs-string">"7b03666e-b323-499d-93a7-ca51ce627ffd"</span>
+                medium=<span class="hljs-string">"music"</span>
+        /&gt;
+
+       &lt;podcas<span class="hljs-variable">t:remoteItem</span>
+               feedGuid=<span class="hljs-string">"483dde8e-7e94-59a7-8eb0-2b0dc64a87bd"</span>
+               feedUrl=<span class="hljs-string">"https://player.wavlake.com/feed/1dd1bbd8-1084-4fdc-9788-dddaa62fbc6a"</span>
+               itemGuid=<span class="hljs-string">"8501fb64-a6a3-475a-8b10-9c746f0fe579"</span>
+               medium=<span class="hljs-string">"music"</span>
+       /&gt;
+
+       &lt;podcas<span class="hljs-variable">t:remoteItem</span>
+               feedGuid=<span class="hljs-string">"b40ffcf7-2c48-5cfe-8daa-b65d766b2c25"</span>
+               feedUrl=<span class="hljs-string">"https://www.wavlake.com/feed/92b04241-97f5-4ff7-be11-cf45f70812e7"</span>
+               itemGuid=<span class="hljs-string">"9a48aab8-6da6-4cc1-9951-5b049c333580"</span>
+               medium=<span class="hljs-string">"music"</span>
+       /&gt;
+    &lt;/channel&gt;
+&lt;/rss&gt;
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
+        <h2 id="images">Images</h2>
+        <p><code>&lt;podcast:images&gt;</code><br><br>
+            This tag, when present, allows for specifying many different image sizes in a compact way at either the episode or
+            channel level.  The syntax is borrowed from the HTML5 <a href="https://html.spec.whatwg.org/multipage/images.
+html#srcset-attributes">srcset</a> syntax.  It allows for describing multiple image sources with width and pixel hints directly
+            in the attribute.  Although the HTML5 <code>srcset</code> attribute allows relative urls, absolute urls are required in this
+            tag - since the feed url may not represent an appropriate base url for relativization.</p>
+        <h3 id="parent">Parent</h3>
+        <p>&nbsp; <code>&lt;channel&gt;</code> or <code>&lt;item&gt;</code></p>
+        <h3 id="count">Count</h3>
+        <p>&nbsp; Single</p>
+        <h3 id="attributes">Attributes</h3>
+        <ul>
+            <li><strong>srcset</strong> (required) A string that denotes each image url followed by a space and the pixel width, with each one
+                separated by a comma.  See the example for a clear view of the syntax.</li>
+        </ul>
+        <h3 id="examples">Examples</h3>
         <p>Example of specifying four different image sizes:</p>
-        <pre><code class="language-xml">&lt;podcast:images
-    srcset="https://example.com/images/ep1/pci_avatar-massive.jpg 1500w,
-            https://example.com/images/ep1/pci_avatar-middle.jpg 600w,
-            https://example.com/images/ep1/pci_avatar-small.jpg 300w,
-            https://example.com/images/ep1/pci_avatar-tiny.jpg 150w"
-/&gt;</code></pre>
-        <p><br><br><br><br></p>
+        <pre><code class="lang-xml">&lt;podcas<span class="hljs-variable">t:images</span>
+    srcset=<span class="hljs-comment">"https://example.com/images/ep1/pci_avatar-massive.jpg 1500w,</span>
+            http<span class="hljs-variable">s:</span>//example.<span class="hljs-keyword">com</span>/images/ep1/pci_avatar-middle.jpg <span class="hljs-number">600</span><span class="hljs-keyword">w</span>,
+            http<span class="hljs-variable">s:</span>//example.<span class="hljs-keyword">com</span>/images/ep1/pci_avatar-small.jpg <span class="hljs-number">300</span><span class="hljs-keyword">w</span>,
+            http<span class="hljs-variable">s:</span>//example.<span class="hljs-keyword">com</span>/images/ep1/pci_avatar-tiny.jpg <span class="hljs-number">150</span><span class="hljs-keyword">w</span><span class="hljs-comment">"</span>
+/&gt;
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
         <h2 id="live-item">Live Item</h2>
         <p><code>&lt;podcast:liveItem&gt;</code><br><br>
-            The <code>liveItem</code> tag is used for a feed to deliver a live audio or video stream to podcast apps.  It takes the same format as a standard <code>&lt;item&gt;</code> episode tag, and all tags that are
-            allowed as children of a normal <code>&lt;item&gt;</code> are also allowed as children of <code>&lt;podcast:liveItem&gt;</code>.  Note that "allowed" is not the same as "supported".  So, just like a normal <code>&lt;item&gt;</code>,
-            you cannot depend on all apps to support all tags within <code>&lt;podcast:liveItem&gt;</code>, especially when the function of the tag is not obvious.  For instance, including an <code>&lt;itunes:duration&gt;</code>
-            tag in a live item is probably a waste of time since apps will not know what to do with that value in the context of live media.</p>
-        <p>This tag will also make use of the <a href="https://podping.cloud">podping</a> notification network.  A podping notification SHOULD be sent out by the host when the live stream starts, to let
-            apps know.</p>
-        <h3 id="parent-19">Parent</h3>
+            The <code>liveItem</code> tag is used for a feed to deliver a live audio or video stream to podcast apps.  It takes the same
+            format as a standard <code>&lt;item&gt;</code> episode tag, and all tags that are allowed as children of a normal <code>&lt;item&gt;</code> are also
+            allowed as children of <code>&lt;podcast:liveItem&gt;</code>.  Note that &quot;allowed&quot; is not the same as &quot;supported&quot;.  So, just like a
+            normal <code>&lt;item&gt;</code>, you cannot depend on all apps to support all tags within <code>&lt;podcast:liveItem&gt;</code>, especially when the
+            function of the tag is not obvious.  For instance, including an <code>&lt;itunes:duration&gt;</code> tag in a live item is probably a
+            waste of time since apps will not know what to do with that value in the context of live media.</p>
+        <p>This tag will also make use of the <a href="https://podping.cloud">podping</a> notification network.  A podping notification
+            SHOULD be sent out by the host when the live stream starts, to let apps know.</p>
+        <h3 id="parent">Parent</h3>
         <p>&nbsp; <code>&lt;channel&gt;</code></p>
-        <h3 id="count-19">Count</h3>
+        <h3 id="count">Count</h3>
         <p>&nbsp; Multiple</p>
-        <h3 id="node-value-13">Node Value</h3>
+        <h3 id="node-value">Node Value</h3>
         <p>All tags that are valid as children of a standard <code>&lt;item&gt;</code> tag are also valid as children here.</p>
-        <p>When specifying the audio/video source, the <a href="#alternate-enclosure"><code>&lt;podcast:alternateEnclosure&gt;</code></a> tag is highly encouraged since it gives the broadest coverage of possible stream types and is
-            explicit in it's communication of what transport protocol and media codecs are being used.  In addition to <a href="#alternate-enclosure"><code>&lt;podcast:alternateEnclosure&gt;</code></a>, a standard <a href="https://cyber.harvard.edu/rss/rss.html#ltenclosuregtSubelementOfLtitemgt"><code>&lt;enclosure&gt;</code></a> should also
-            be given as a fallback to support podcast apps that don't yet implement <a href="#alternate-enclosure"><code>&lt;podcast:alternateEnclosure&gt;</code></a>. Regardless of which enclosure tag is used, feed owners must be conscious
-            of the fact that choosing a non-mainstream streaming protocol/codec will limit the number of apps that can play the content.  For that reason, it's highly recommended to use only the two most widely supported
-            protocols (mp3 and mp4/h.264) to ensure compatibility with the broadest number of apps on various platforms.  Choosing a streaming format that is outside of this narrow list might exclude many
-            apps from playing your content.  As broader adoption of HLS, Opus, etc. becomes apparent, this recommendation will change to include newer formats.</p>
-        <p>The <a href="#content-link"><code>&lt;podcast:contentLink&gt;</code></a> tag is also required to be present, to ensure that listeners have a fallback option in case their chosen app cannot play the given content stream directly.  In
-            most instances this will just be a link to an HTML page that can play the live stream.  Such a page can reside on the podcaster's own website, a page provided by their hosting company or a third party
-            platform they have chosen to use.  Podcasters who live stream to multiple platforms at once can also use the <a href="#content-link"><code>&lt;podcast:contentLink&gt;</code></a> tag to provide links to those other platforms.</p>
-        <p>A robust, well-written <code>&lt;podcast:liveItem&gt;</code> tag will include all three of:  <a href="#alternate-enclosure"><code>&lt;podcast:alternateEnclosure&gt;</code></a>, <a href="https://cyber.harvard.edu/rss/rss.html#ltenclosuregtSubelementOfLtitemgt"><code>&lt;enclosure&gt;</code></a>
+        <p>When specifying the audio/video source, the <a href="#alternate-enclosure"><code>&lt;podcast:alternateEnclosure&gt;</code></a> tag is highly
+            encouraged since it gives the broadest coverage of possible stream types and is explicit in it&#39;s communication of
+            what transport protocol and media codecs are being used. In addition to [<code>&lt;podcast:alternateEnclosure&gt;</code>]
+            (#alternate-enclosure), a standard <a href="https://cyber.harvard.edu/rss/rss.
+html#ltenclosuregtSubelementOfLtitemgt"><code>&lt;enclosure&gt;</code></a> should also be given as a fallback to support podcast apps that don&#39;t yet
+            implement <a href="#alternate-enclosure"><code>&lt;podcast:alternateEnclosure&gt;</code></a>. </p>
+        <p>Regardless of which enclosure tag is used, feed
+            owners must be conscious of the fact that choosing a non-mainstream streaming protocol/codec will limit the number
+            of apps that can play the content.  For that reason, it&#39;s highly recommended to use only the two most widely
+            supported protocols (mp3 and mp4/h.264) to ensure compatibility with the broadest number of apps on various
+            platforms.  Choosing a streaming format that is outside of this narrow list might exclude many apps from playing
+            your content.  As broader adoption of HLS, Opus, etc. becomes apparent, this recommendation will change to include
+            newer formats.</p>
+        <p>The <a href="#content-link"><code>&lt;podcast:contentLink&gt;</code></a> tag is also required to be present, to ensure that listeners have a
+            fallback option in case their chosen app cannot play the given content stream directly.  In most instances this will
+            just be a link to an HTML page that can play the live stream.  Such a page can reside on the podcaster&#39;s own website,
+            a page provided by their hosting company or a third party platform they have chosen to use.  Podcasters who live
+            stream to multiple platforms at once can also use the <a href="#content-link"><code>&lt;podcast:contentLink&gt;</code></a> tag to provide links
+            to those other platforms.</p>
+        <p>A robust, well-written <code>&lt;podcast:liveItem&gt;</code> tag will include all three of:  [<code>&lt;podcast:alternateEnclosure&gt;</code>]
+            (#alternate-enclosure), <a href="https://cyber.harvard.edu/rss/rss.html#ltenclosuregtSubelementOfLtitemgt"><code>&lt;enclosure&gt;</code></a>
             and <a href="#content-link"><code>&lt;podcast:contentLink&gt;</code></a> to ensure the broadest interopability with podcast apps.</p>
-        <p>The function of <code>&lt;guid&gt;</code> within a live item tag is the same as it is within a regular item.  If the <code>&lt;guid&gt;</code> of a <code>&lt;podcast:liveItem&gt;</code> changes, it MUST be considered a new stream by
-            podcast apps.</p>
-        <h3 id="attributes-18">Attributes</h3>
+        <p>The function of <code>&lt;guid&gt;</code> within a live item tag is the same as it is within a regular item.  If the <code>&lt;guid&gt;</code> of a
+            <code>&lt;podcast:liveItem&gt;</code> changes, it MUST be considered a new stream by podcast apps.</p>
+        <h3 id="attributes">Attributes</h3>
         <ul>
             <li><strong>status</strong> (required) A string that must be one of <code>pending</code>, <code>live</code> or <code>ended</code>.</li>
-            <li><strong>start</strong> (required) A string representing an ISO8601 timestamp that denotes the time when the stream is intended to start.</li>
-            <li><strong>end</strong> (required) A string representing an ISO8601 timestamp that denotes the time when the stream is intended to end.</li>
+            <li><strong>start</strong> (required) A string representing an ISO8601 timestamp that denotes the time when the stream is intended
+                to start.</li>
+            <li><strong>end</strong> (recommended) A string representing an ISO8601 timestamp that denotes the time when the stream is intended
+                to end.</li>
         </ul>
-        <p>The <code>start</code> and <code>end</code> attributes denote when the live stream "should" start and end.  But, real life dictates that those times might not be adhered to.  Apps are therefore encouraged
-            not to rely solely on those times as anything more than an approximation.  The canonical way to know if a stream has started is with the <code>status</code> attribute.  If <code>status</code> is "live" then
-            the stream has started.</p>
-        <h3 id="examples-19">Examples</h3>
+        <p>The <code>start</code> and <code>end</code> attributes denote when the live stream &quot;should&quot; start and end.  But, real life dictates that
+            those times might not be adhered to.  Apps are therefore encouraged not to rely solely on those times as anything
+            more than an approximation.  The canonical way to know if a stream has started is with the <code>status</code> attribute.  If
+            <code>status</code> is &quot;live&quot; then the stream has started.</p>
+        <h3 id="examples">Examples</h3>
         <p>A complete example:</p>
-        <pre><code class="language-xml">&lt;podcast:liveItem status="live" start="2021-09-26T07:30:00.000-0600" end="2021-09-26T09:30:00.000-0600"&gt;
-    &lt;title&gt;Podcasting 2.0 Live Show&lt;/title&gt;
-    &lt;description&gt;A look into the future of podcasting and how we get to Podcasting 2.0!&lt;/description&gt;
-    &lt;link&gt;https://example.com/podcast/live&lt;/link&gt;
-    &lt;guid isPermaLink="true"&gt;https://example.com/live&lt;/guid&gt;
-    &lt;author&gt;John Doe (john@example.com)&lt;/author&gt;
-    &lt;podcast:images srcset="https://example.com/images/live/pci_avatar-massive.jpg 1500w,
-        https://example.com/images/live/pci_avatar-middle.jpg 600w,
-        https://example.com/images/live/pci_avatar-small.jpg 300w,
-        https://example.com/images/live/pci_avatar-tiny.jpg 150w"
+        <pre><code class="lang-xml">&lt;podcas<span class="hljs-variable">t:liveItem</span> status=<span class="hljs-string">"live"</span> start=<span class="hljs-string">"2021-09-26T07:30:00.000-0600"</span> end=<span class="hljs-string">"2021-09-26T09:30:00.000-0600"</span>&gt;
+    <span class="hljs-symbol">&lt;title&gt;</span>Podcasting <span class="hljs-number">2.0</span> Live Show&lt;/title&gt;
+    <span class="hljs-symbol">&lt;description&gt;</span>A look into the future of podcasting <span class="hljs-built_in">and</span> how we <span class="hljs-built_in">get</span> <span class="hljs-keyword">to</span> Podcasting <span class="hljs-number">2.0</span>!&lt;/description&gt;
+    <span class="hljs-symbol">&lt;link&gt;</span>http<span class="hljs-variable">s:</span>//example.<span class="hljs-keyword">com</span>/podcast/live&lt;/link&gt;
+    &lt;guid isPermaLink=<span class="hljs-string">"true"</span>&gt;http<span class="hljs-variable">s:</span>//example.<span class="hljs-keyword">com</span>/live&lt;/guid&gt;
+    <span class="hljs-symbol">&lt;author&gt;</span>John Doe (john@example.<span class="hljs-keyword">com</span>)&lt;/author&gt;
+    &lt;podcas<span class="hljs-variable">t:images</span> srcset=<span class="hljs-comment">"https://example.com/images/live/pci_avatar-massive.jpg 1500w,</span>
+        http<span class="hljs-variable">s:</span>//example.<span class="hljs-keyword">com</span>/images/live/pci_avatar-middle.jpg <span class="hljs-number">600</span><span class="hljs-keyword">w</span>,
+        http<span class="hljs-variable">s:</span>//example.<span class="hljs-keyword">com</span>/images/live/pci_avatar-small.jpg <span class="hljs-number">300</span><span class="hljs-keyword">w</span>,
+        http<span class="hljs-variable">s:</span>//example.<span class="hljs-keyword">com</span>/images/live/pci_avatar-tiny.jpg <span class="hljs-number">150</span><span class="hljs-keyword">w</span><span class="hljs-comment">"</span>
     /&gt;
-    &lt;podcast:person href="https://www.podchaser.com/creators/adam-curry-107ZzmWE5f" img="https://example.com/images/adamcurry.jpg"&gt;Adam Curry&lt;/podcast:person&gt;
-    &lt;podcast:person role="guest" href="https://github.com/daveajones/" img="https://example.com/images/davejones.jpg"&gt;Dave Jones&lt;/podcast:person&gt;
-    &lt;podcast:person group="visuals" role="cover art designer" href="https://example.com/artist/beckysmith"&gt;Becky Smith&lt;/podcast:person&gt;
-    &lt;podcast:alternateEnclosure type="audio/mpeg" length="312" default="true"&gt;
-        &lt;podcast:source uri="https://example.com/pc20/livestream" /&gt;
-    &lt;/podcast:alternateEnclosure&gt;
-    &lt;enclosure url="https://example.com/pc20/livestream?format=.mp3" type="audio/mpeg" length="312" /&gt;
-    &lt;podcast:contentLink href="https://youtube.com/pc20/livestream"&gt;YouTube!&lt;/podcast:contentLink&gt;
-    &lt;podcast:contentLink href="https://twitch.com/pc20/livestream"&gt;Twitch!&lt;/podcast:contentLink&gt;
-    &lt;podcast:contentLink href="https://example.com/html/livestream"&gt;Listen Live!&lt;/podcast:contentLink&gt;
-&lt;/podcast:liveItem&gt;</code></pre>
+    &lt;podcas<span class="hljs-variable">t:person</span> href=<span class="hljs-string">"https://www.podchaser.com/creators/adam-curry-107ZzmWE5f"</span>
+                    img=<span class="hljs-string">"https://example.com/images/adamcurry.jpg"</span>&gt;Adam Curry&lt;/podcas<span class="hljs-variable">t:person</span>&gt;
+    &lt;podcas<span class="hljs-variable">t:person</span> role=<span class="hljs-string">"guest"</span> href=<span class="hljs-string">"https://github.com/daveajones/"</span>
+                    img=<span class="hljs-string">"https://example.com/images/davejones.jpg"</span>&gt;Dave Jones&lt;/podcas<span class="hljs-variable">t:person</span>&gt;
+    &lt;podcas<span class="hljs-variable">t:person</span> group=<span class="hljs-string">"visuals"</span> role=<span class="hljs-string">"cover art designer"</span>
+                    href=<span class="hljs-string">"https://example.com/artist/beckysmith"</span>&gt;Becky Smith&lt;/podcas<span class="hljs-variable">t:person</span>&gt;
+    &lt;podcas<span class="hljs-variable">t:alternateEnclosure</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"audio/mpeg"</span> length=<span class="hljs-string">"312"</span> default=<span class="hljs-string">"true"</span>&gt;
+        &lt;podcas<span class="hljs-variable">t:source</span> uri=<span class="hljs-string">"https://example.com/pc20/livestream"</span> /&gt;
+    &lt;/podcas<span class="hljs-variable">t:alternateEnclosure</span>&gt;
+    &lt;enclosure url=<span class="hljs-string">"https://example.com/pc20/livestream?format=.mp3"</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"audio/mpeg"</span> length=<span class="hljs-string">"312"</span> /&gt;
+    &lt;podcas<span class="hljs-variable">t:contentLink</span> href=<span class="hljs-string">"https://youtube.com/pc20/livestream"</span>&gt;YouTube!&lt;/podcas<span class="hljs-variable">t:contentLink</span>&gt;
+    &lt;podcas<span class="hljs-variable">t:contentLink</span> href=<span class="hljs-string">"https://twitch.com/pc20/livestream"</span>&gt;Twitch!&lt;/podcas<span class="hljs-variable">t:contentLink</span>&gt;
+    &lt;podcas<span class="hljs-variable">t:contentLink</span> href=<span class="hljs-string">"https://example.com/html/livestream"</span>&gt;Listen Live!&lt;/podcas<span class="hljs-variable">t:contentLink</span>&gt;
+&lt;/podcas<span class="hljs-variable">t:liveItem</span>&gt;
+</code></pre>
         <p>A bare bones example:</p>
-        <pre><code class="language-xml">&lt;podcast:liveItem status="live" start="2021-09-26T07:30:00.000-0600" end="2021-09-26T09:30:00.000-0600"&gt;
-    &lt;title&gt;Podcasting 2.0 Live Stream&lt;/title&gt;
-    &lt;guid&gt;e32b4890-983b-4ce5-8b46-f2d6bc1d8819&lt;/guid&gt;
-    &lt;enclosure url="https://example.com/pc20/livestream?format=.mp3" type="audio/mpeg" length="312" /&gt;
-    &lt;podcast:contentLink href="https://example.com/html/livestream"&gt;Listen Live!&lt;/podcast:contentLink&gt;
-&lt;/podcast:liveItem&gt;</code></pre>
-        <p><br><br><br><br></p>
+        <pre><code class="lang-xml">&lt;podcast:liveItem <span class="hljs-built_in">status</span>=<span class="hljs-string">"live"</span> start=<span class="hljs-string">"2021-09-26T07:30:00.000-0600"</span> end=<span class="hljs-string">"2021-09-26T09:30:00.000-0600"</span>&gt;
+    &lt;<span class="hljs-built_in">title</span>&gt;Podcasting <span class="hljs-number">2.0</span> Live Stream&lt;/<span class="hljs-built_in">title</span>&gt;
+    &lt;guid&gt;e32b4890-983b-4ce5-<span class="hljs-number">8b46</span>-f2d6bc1d8819&lt;/guid&gt;
+    &lt;enclosure url=<span class="hljs-string">"https://example.com/pc20/livestream?format=.mp3"</span> type=<span class="hljs-string">"audio/mpeg"</span> <span class="hljs-built_in">length</span>=<span class="hljs-string">"312"</span> /&gt;
+    &lt;podcast:contentLink href=<span class="hljs-string">"https://example.com/html/livestream"</span>&gt;Listen Live!&lt;/podcast:contentLink&gt;
+&lt;/podcast:liveItem&gt;
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
         <h2 id="content-link">Content Link</h2>
         <p><code>&lt;podcast:contentLink&gt;</code><br><br>
-            The <code>contentLink</code> tag is used to indicate that the content begin delivered by the parent element can be found at an external location
-            instead of, or in addition to, being delivered directly to the tag itself within an app.  In most instances it is used as a fallback link for the user
-            to use when the app itself can't handle a certain content delivery directly.</p>
-        <p>For instance, perhaps a podcast feed specifies a <code>&lt;podcast:liveItem&gt;</code> to deliver a live stream to apps.  The feed may also give a <code>&lt;podcast:contentLink&gt;</code>
-            pointing to YouTube and Twitch versions of the live stream as well, just in case the listener uses an app that doesn't fully support live streaming content.</p>
+            The <code>contentLink</code> tag is used to indicate that the content begin delivered by the parent element can be found at an
+            external location instead of, or in addition to, being delivered directly to the tag itself within an app.  In most
+            instances it is used as a fallback link for the user to use when the app itself can&#39;t handle a certain content
+            delivery directly.</p>
+        <p>For instance, perhaps a podcast feed specifies a <code>&lt;podcast:liveItem&gt;</code> to deliver a live stream to apps.  The feed
+            may also give a <code>&lt;podcast:contentLink&gt;</code> pointing to YouTube and Twitch versions of the live stream as well, just in
+            case the listener uses an app that doesn&#39;t fully support live streaming content.</p>
         <p>Currently this tag is only indicated for use in the <code>&lt;podcast:liveItem&gt;</code> tag.  In the future, its use will be expanded.</p>
-        <h3 id="parent-20">Parent</h3>
+        <h3 id="parent">Parent</h3>
         <p>&nbsp; <code>&lt;podcast:liveItem&gt;</code></p>
-        <h3 id="count-20">Count</h3>
+        <h3 id="count">Count</h3>
         <p>&nbsp; Multiple</p>
-        <h3 id="node-value-14">Node Value</h3>
-        <p>The node value is a free form string meant to explain to the user where this content link points and/or the nature of it's purpose.</p>
-        <h3 id="attributes-19">Attributes</h3>
+        <h3 id="node-value">Node Value</h3>
+        <p>The node value is a free form string meant to explain to the user where this content link points and/or the nature
+            of it&#39;s purpose.</p>
+        <h3 id="attributes">Attributes</h3>
         <ul>
             <li><strong>href</strong> (required) A string that is the uri pointing to content outside of the application.</li>
         </ul>
-        <h3 id="examples-20">Examples</h3>
-        <pre><code class="language-xml">&lt;podcast:contentLink href="https://youtube.com/blahblah/livestream"&gt;Live on YouTube!&lt;/podcast:contentLink&gt;</code></pre>
-        <pre><code class="language-xml">&lt;podcast:contentLink href="https://twitter.com/statuses/somepost"&gt;Chat on Twitter!&lt;/podcast:contentLink&gt;</code></pre>
+        <h3 id="examples">Examples</h3>
+        <pre><code class="lang-xml">&lt;podcas<span class="hljs-variable">t:contentLink</span> href=<span class="hljs-string">"https://youtube.com/blahblah/livestream"</span>&gt;Live <span class="hljs-keyword">on</span> YouTube!&lt;/podcas<span class="hljs-variable">t:contentLink</span>&gt;
+</code></pre>
+        <pre><code class="lang-xml">&lt;podcas<span class="hljs-variable">t:contentLink</span> href=<span class="hljs-string">"https://twitter.com/statuses/somepost"</span>&gt;Chat <span class="hljs-keyword">on</span> Twitter!&lt;/podcas<span class="hljs-variable">t:contentLink</span>&gt;
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
+        <h2 id="social-interact">Social Interact</h2>
+        <p><code>&lt;podcast:socialInteract&gt;</code><br><br>
+            The <code>socialInteract</code> tag allows a podcaster to attach the url of a &quot;root post&quot; of a comment thread to an episode.<br>This &quot;root post&quot; is treated as the canonical location of where the comments and discussion around this episode will
+            take place.  This can be thought of as the &quot;official&quot; social media comment space for this episode.  If a protocol
+            such as &quot;activitypub&quot; is used, or some other protocol that allows programmatic API access, these comments can be
+            directly pulled into the app, and replies can be posted back to the thread from the app itself.</p>
+        <p>If multiple <code>socialInteract</code> tags are given for an <code>&lt;item&gt;</code>, the <code>priority</code> attribute is strongly recommended to
+            give the app an indication as to which comments to display first.</p>
+        <p>This tag can also be used as a signal to platforms and apps that the podcaster does not want public comments shown
+            alongside this episode.  For this purpose a <code>protocol</code> value of &quot;disabled&quot; can be specified, with no other
+            attributes or node value present.</p>
+        <h3 id="parent">Parent</h3>
+        <p>&nbsp; <code>&lt;item&gt;</code></p>
+        <h3 id="count">Count</h3>
+        <p>&nbsp; Multiple</p>
+        <h3 id="attributes">Attributes</h3>
+        <ul>
+            <li><strong>uri</strong> (required) The uri/url of root post comment.</li>
+            <li><strong>protocol</strong> (required) The <a href="/socialprotocols.txt">protocol</a> in use for interacting with the comment root post.</li>
+            <li><strong>accountId</strong> (recommended) The account id (on the commenting platform) of the account that created this root post.</li>
+            <li><strong>accountUrl</strong> (optional) The public url (on the commenting platform) of the account that created this root post.</li>
+            <li><strong>priority</strong> (optional) When multiple socialInteract tags are present, this integer gives order of priority.  A
+                lower number means higher priority.</li>
+        </ul>
+        <p>Example (simple):</p>
+        <pre><code class="lang-xml">&lt;podcast:socialInteract
+        uri=<span class="hljs-string">"https://podcastindex.social/web/@dave/108013847520053258"</span>
+        protocol=<span class="hljs-string">"activitypub"</span>
+        accountId=<span class="hljs-string">"@dave"</span>
+/&gt;
+</code></pre>
+        <p>Example (complex):</p>
+        <pre><code class="lang-xml">&lt;podcast:socialInteract
+        priority=<span class="hljs-string">"1"</span>
+        uri=<span class="hljs-string">"https://podcastindex.social/web/@dave/108013847520053258"</span>
+        protocol=<span class="hljs-string">"activitypub"</span>
+        accountId=<span class="hljs-string">"@dave"</span>
+        accountUrl=<span class="hljs-string">"https://podcastindex.social/web/@dave"</span>
+/&gt;
+&lt;podcast:socialInteract
+        priority=<span class="hljs-string">"2"</span>
+        uri=<span class="hljs-string">"https://twitter.com/PodcastindexOrg/status/1507120226361647115"</span>
+        protocol=<span class="hljs-string">"twitter"</span>
+        accountId=<span class="hljs-string">"@podcastindexorg"</span>
+        accountUrl=<span class="hljs-string">"https://twitter.com/PodcastindexOrg"</span>
+/&gt;
+</code></pre>
+        <p>Example (disabled):</p>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:socialInteract</span> <span class="hljs-attr">protocol</span>=<span class="hljs-string">"disabled"</span> /&gt;</span>
+</code></pre>
+        <ul>
+            <li>For <strong>activitypub</strong>, Mastodon or Pleroma&#39;s posting API returns a URI (a fully-formed URL with a GUID in it), and a
+                URL (the HTML page where the comment lives). While both of these are acceptable values for the <code>uri</code> field
+                referenced in the <code>socialInteract</code> specification, we&#39;d recommend using the URI value.</li>
+        </ul>
+        <p><br><br><br><br><!-- Tag block --></p>
+        <h2 id="block">Block</h2>
+        <p><code>&lt;podcast:block&gt;</code><br><br>
+            This element allows a podcaster to express which platforms are allowed to publicly display this feed and its
+            contents. In its basic form, it is a direct drop-in replacement for the <code>&lt;itunes:block&gt;</code> tag, but allows for greater
+            flexibility by the inclusion of the <code>id</code> attribute and by including multiple copies of itself in the feed.</p>
+        <p>Platforms should not ingest a feed for public display/use if their slug exists in the <code>id</code> of a <code>yes</code> block tag, or
+            if an unbounded <code>yes</code> block tag exists (meaning block all public ingestion).  Conversely, if a platform finds their
+            slug in the <code>id</code> of a <code>no</code> block tag, they are free to ingest that feed for public display/usage.</p>
+        <p>In plain language, the sequence of discovery an ingesting platform should use is as follows:</p>
+        <ol>
+            <li>Does <code>&lt;podcast:block id=&quot;[myslug]&quot;&gt;no&lt;/podcast:block&gt;</code> exist in this feed?  Safe to ingest.</li>
+            <li>Does <code>&lt;podcast:block id=&quot;[myslug]&quot;&gt;yes&lt;/podcast:block&gt;</code> exist in this feed?  Do not ingest.</li>
+            <li>Does <code>&lt;podcast:block&gt;yes&lt;/podcast:block&gt;</code> exist in this feed?  Do not ingest.</li>
+        </ol>
+        <h3 id="parent">Parent</h3>
+        <p>&nbsp; <code>&lt;channel&gt;</code></p>
+        <h3 id="count">Count</h3>
+        <p>&nbsp; Multiple</p>
+        <h3 id="attributes">Attributes</h3>
+        <ul>
+            <li><strong>id</strong> (optional) A single entry from the <a href="https://github.
+com/Podcastindex-org/podcast-namespace/blob/main/serviceslugs.txt">service slug list</a>.</li>
+        </ul>
+        <h3 id="node-value">Node value</h3>
+        <p>&nbsp; The node value must be &quot;yes&quot; or &quot;no&quot;.</p>
+        <h3 id="examples">Examples</h3>
+        <pre><code class="lang-xml"><span class="hljs-comment">&lt;!-- This means "block everything" --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">podcast:block</span>&gt;</span>yes<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:block</span>&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml"><span class="hljs-comment">&lt;!-- This means "block nothing" (same as not present) --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">podcast:block</span>&gt;</span>no<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:block</span>&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml"><span class="hljs-comment">&lt;!-- This means "block only google and amazon" --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">podcast:block</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"google"</span>&gt;</span>yes<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:block</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">podcast:block</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"amazon"</span>&gt;</span>yes<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:block</span>&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml"><span class="hljs-comment">&lt;!-- This means "block every platform _except_ google and amazon" --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">podcast:block</span>&gt;</span>yes<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:block</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">podcast:block</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"google"</span>&gt;</span>no<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:block</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">podcast:block</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"amazon"</span>&gt;</span>no<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:block</span>&gt;</span>
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
+        <h2 id="txt">Txt</h2>
+        <p><code>&lt;podcast:txt&gt;</code><br><br>
+            This element holds free-form text and is modeled after the DNS &quot;<a href="https://en.wikipedia.org/wiki/TXT_record">TXT</a>&quot;
+            record.  It&#39;s meant to allow for usages that might be niche or otherwise not rise to the level of needing a
+            dedicated tag.  Just like TXT records in DNS allowed for new things like <a href="https://en.wikipedia.
+org/wiki/Sender_Policy_Framework#Implementation">SPF</a> to evolve, this tag can allow novel techniques to be created and
+            sandboxed without a formalization process.</p>
+        <h3 id="parent">Parent</h3>
+        <p>&nbsp; <code>&lt;channel&gt;</code> or <code>&lt;item&gt;</code></p>
+        <h3 id="count">Count</h3>
+        <p>&nbsp; Multiple</p>
+        <h3 id="attributes">Attributes</h3>
+        <ul>
+            <li><strong>purpose</strong> (optional)  A service specific string that will be used to denote what purpose this tag serves. This
+                could be something like &quot;example.com&quot; if it&#39;s a third party hosting platform needing to insert this data, or
+                something like &quot;verify&quot;, &quot;release&quot; or any other free form bit of info that is useful to the end consumer that
+                needs it. The free form nature of this tag requires that this attribute is also free formed. This value should not
+                exceed <code>128 characters</code>.</li>
+        </ul>
+        <h3 id="purposes">Purposes</h3>
+        <p>The following are a list of strings known to be in common use. This list is in no way exhaustive. As new purposes
+            come into common use, this list will be updated by the community to reflect that.</p>
+        <ul>
+            <li><code>verify</code> - The node value is expected to contain a string that is given by a third party platform to a podcaster
+                in order to prove that they are the owner of the feed and are in control of it. This is meant to replace the need
+                for emails to exist in feeds. See example section below.</li>
+        </ul>
+        <h3 id="node-value">Node value</h3>
+        <p>&nbsp;   This is a free form string. Please do not exceed <code>4000 characters</code> for the node value or it may be
+            truncated by aggregators.</p>
+        <h3 id="examples">Examples</h3>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:txt</span>&gt;</span>naj3eEZaWVVY9a38uhX8FekACyhtqP4JN<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:txt</span>&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:txt</span> <span class="hljs-attr">purpose</span>=<span class="hljs-string">"verify"</span>&gt;</span>S6lpp-7ZCn8-dZfGc-OoyaG<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:txt</span>&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:txt</span> <span class="hljs-attr">purpose</span>=<span class="hljs-string">"release"</span>&gt;</span>2022-10-26T04:45:30.742Z<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:txt</span>&gt;</span>
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
+        <h2 id="remote-item">Remote Item</h2>
+        <p><code>&lt;podcast:remoteItem&gt;</code><br><br>
+            This element provides a way to &quot;point&quot; to another feed or an <code>&lt;item&gt;</code> in another feed in order to obtain some sort
+            of data that the other feed or feed item has.  This allows a podcast app to know where to go and fetch the data
+            being requested.  What data is being requested is determined by the parent item.  For instance, if the parent item
+            is a <code>&lt;podcast:podroll&gt;</code> element, then the remote feed&#39;s <code>&lt;channel&gt;</code> metadata is needed.</p>
+        <p>Using the <code>feedGuid</code> attribute is the preferred way to address a remote feed since, but there are times when an app
+            may not have access to a list of resolvable <code>&lt;podcast:guid&gt;</code>&#39;s.  In that case, it can be beneficial to include the
+            <code>feedUrl</code> attribute for those cases as a fallback.  If both are present and the app is capable the <code>feedGuid</code> should
+            be resolved and used.</p>
+        <h3 id="parent">Parent</h3>
+        <p>&nbsp; <code>&lt;channel&gt;</code> or <code>&lt;podcast:podroll&gt;</code> or <code>&lt;podcast:valueTimeSplit&gt;</code></p>
+        <h3 id="count">Count</h3>
+        <p>&nbsp; Multiple</p>
+        <h3 id="attributes">Attributes</h3>
+        <ul>
+            <li><strong>feedGuid</strong> (required) The <code>&lt;podcast:guid&gt;</code> of the remote feed being pointed to.</li>
+            <li><strong>feedUrl</strong> (optional) The url of the remote feed being pointed to.</li>
+            <li><strong>itemGuid</strong> (optional) If this remote item element is intended to point to an <code>&lt;item&gt;</code> in the remote feed, this
+                attribute should contain the value of the <code>&lt;guid&gt;</code> of that <code>&lt;item&gt;</code>. </li>
+            <li><strong>medium</strong> (optional) If the feed being pointed to is not of medium type &#39;podcast&#39;, this attribute should contain
+                it&#39;s <code>&lt;podcast:medium&gt;</code> type from the <a href="#medium">list</a> of types available in this document. The reason this is
+                helpful is to give the app a heads up on what type of data this is expected to be since that may affect the way it
+                approaches fetch and display.</li>
+        </ul>
+        <h3 id="examples">Examples</h3>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:remoteItem</span> <span class="hljs-attr">feedGuid</span>=<span class="hljs-string">"917393e3-1b1e-5cef-ace4-edaa54e1f810"</span> /&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:remoteItem</span>
+    <span class="hljs-attr">feedGuid</span>=<span class="hljs-string">"917393e3-1b1e-5cef-ace4-edaa54e1f810"</span>
+    <span class="hljs-attr">itemGuid</span>=<span class="hljs-string">"asdf089j0-ep240-20230510"</span>
+/&gt;</span>
+</code></pre>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:remoteItem</span>
+    <span class="hljs-attr">feedGuid</span>=<span class="hljs-string">"917393e3-1b1e-5cef-ace4-edaa54e1f810"</span>
+    <span class="hljs-attr">feedUrl</span>=<span class="hljs-string">"https://feeds.example.org/917393e3-1b1e-5cef-ace4-edaa54e1f810/rss.xml"</span>
+    <span class="hljs-attr">itemGuid</span>=<span class="hljs-string">"asdf089j0-ep240-20230510"</span>
+    <span class="hljs-attr">medium</span>=<span class="hljs-string">"music"</span>
+/&gt;</span>
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
+        <h2 id="podroll">Podroll</h2>
+        <p><code>&lt;podcast:podroll&gt;</code><br><br>
+            This element allows for a podcaster to include references to one or more podcasts in it&#39;s <code>&lt;channel&gt;</code> as a way of
+            &quot;recommending&quot; other podcasts to their listener.</p>
+        <h3 id="parent">Parent</h3>
+        <p>&nbsp; <code>&lt;channel&gt;</code></p>
+        <h3 id="count">Count</h3>
+        <p>&nbsp; Single</p>
+        <h3 id="node-value">Node value</h3>
+        <p>&nbsp; The node value must be one or more <code>&lt;podcast:remoteItem&gt;</code> elements.</p>
+        <h3 id="example">Example</h3>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:podroll</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">podcast:remoteItem</span> <span class="hljs-attr">feedGuid</span>=<span class="hljs-string">"29cdca4a-32d8-56ba-b48b-09a011c5daa9"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">podcast:remoteItem</span> <span class="hljs-attr">feedGuid</span>=<span class="hljs-string">"396d9ae0-da7e-5557-b894-b606231fa3ea"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">podcast:remoteItem</span> <span class="hljs-attr">feedGuid</span>=<span class="hljs-string">"917393e3-1b1e-5cef-ace4-edaa54e1f810"</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:podroll</span>&gt;</span>
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
+        <h2 id="update-frequency">Update Frequency</h2>
+        <p><code>&lt;podcast:updateFrequency&gt;</code><br><br>
+            This element allows a podcaster to express their intended release schedule as structured data and text.</p>
+        <h3 id="parent">Parent</h3>
+        <p><code>&lt;channel&gt;</code></p>
+        <h3 id="count">Count</h3>
+        <p>Single</p>
+        <h3 id="node-value">Node value</h3>
+        <p>The node value is a free-form string, which might be displayed alongside other information about the podcast. Please
+            do not exceed <code>128 characters</code> for the node value or it may be truncated by aggregators.</p>
+        <h3 id="attributes">Attributes</h3>
+        <ul>
+            <li><strong>complete (optional):</strong> Boolean specifying if the podcast has no intention to release further episodes. If not
+                set, this should be assumed to be false.</li>
+            <li><strong>dtstart (optional):</strong> The <code>date</code> or <code>datetime</code> the recurrence rule begins as an [ISO8601-fornmatted]
+                (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString</a>) string. If the
+                <code>rrule</code> contains a value for <code>COUNT</code>, then this attribute is required. If the <code>rrule</code> contains a value for <code>UNTIL</code>,
+                then the value of this attribute must be formatted to the same date/datetime standard.</li>
+            <li><strong>rrule (recommended):</strong> A recurrence rule as defined in <a href="https://www.
+rfc-editor.org/rfc/rfc5545#section-3.3.10">iCalendar RFC 5545 Section 3.3.10</a>.</li>
+        </ul>
+        <h3 id="examples">Examples</h3>
+        <p>Recreating most of Apple Podcasts Connect’s “Update Frequency” values is easily achieved:</p>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:updateFrequency</span> <span class="hljs-attr">rrule</span>=<span class="hljs-string">"FREQ=DAILY"</span>&gt;</span>Daily<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:updateFrequency</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">podcast:updateFrequency</span> <span class="hljs-attr">rrule</span>=<span class="hljs-string">"FREQ=WEEKLY"</span>&gt;</span>Weekly<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:updateFrequency</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">podcast:updateFrequency</span> <span class="hljs-attr">rrule</span>=<span class="hljs-string">"FREQ=WEEKLY;INTERVAL=2"</span>&gt;</span>Biweekly<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:updateFrequency</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">podcast:updateFrequency</span> <span class="hljs-attr">rrule</span>=<span class="hljs-string">"FREQ=MONTHLY"</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:updateFrequency</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">podcast:updateFrequency</span> <span class="hljs-attr">rrule</span>=<span class="hljs-string">"FREQ=MONTHLY;INTERVAL=2"</span>&gt;</span>Bimonthly<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:updateFrequency</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">podcast:updateFrequency</span> <span class="hljs-attr">rrule</span>=<span class="hljs-string">"FREQ=MONTHLY"</span>&gt;</span>Monthly<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:updateFrequency</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">podcast:updateFrequency</span> <span class="hljs-attr">rrule</span>=<span class="hljs-string">"FREQ=YEARLY"</span>&gt;</span>Yearly<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:updateFrequency</span>&gt;</span>
+</code></pre>
+        <p>However, greater precision can be easily communicated:</p>
+        <pre><code class="lang-xml">&lt;podcas<span class="hljs-variable">t:updateFrequency</span> rrule=<span class="hljs-string">"FREQ=DAILY;INTERVAL=1;BYDAY=MO,TU,WE,TH,FR"</span>&gt;Every weekday&lt;/podcas<span class="hljs-variable">t:updateFrequency</span>&gt;
+
+&lt;podcas<span class="hljs-variable">t:updateFrequency</span> rrule=<span class="hljs-string">"FREQ=WEEKLY;BYDAY=MO,WE"</span>&gt;Every Monday <span class="hljs-built_in">and</span> Wednesday&lt;/podcas<span class="hljs-variable">t:updateFrequency</span>&gt;
+
+&lt;podcas<span class="hljs-variable">t:updateFrequency</span> rrule=<span class="hljs-string">"FREQ=WEEKLY;BYDAY=FR;BYMONTHDAY=13"</span>&gt;Every friday the <span class="hljs-number">13</span><span class="hljs-keyword">th</span>&lt;/podcas<span class="hljs-variable">t:updateFrequency</span>&gt;
+
+&lt;podcas<span class="hljs-variable">t:updateFrequency</span> rrule=<span class="hljs-string">"FREQ=YEARLY;BYDAY=+4TH;BYMONTH=11"</span>&gt;
+    Every year <span class="hljs-keyword">on</span> American Thanksgiving
+&lt;/podcas<span class="hljs-variable">t:updateFrequency</span>&gt;
+</code></pre>
+        <p>Limited-run podcasts can indicate when they’ll go on hiatus by setting an UNTIL date or a COUNT:</p>
+        <pre><code class="lang-xml">&lt;podcas<span class="hljs-variable">t:updateFrequency</span> rrule=<span class="hljs-string">"FREQ=WEEKLY;INTERVAL=2;BYDAY=MO;COUNT=10"</span> dtstart=<span class="hljs-string">"2023-08-28T00:00:00.000Z"</span>&gt;
+    Every other Monday <span class="hljs-keyword">for</span> <span class="hljs-number">10</span> episodes starting <span class="hljs-keyword">on</span> Aug <span class="hljs-number">28</span>, <span class="hljs-number">2023</span>
+&lt;/podcas<span class="hljs-variable">t:updateFrequency</span>&gt;
+
+&lt;podcas<span class="hljs-variable">t:updateFrequency</span> rrule=<span class="hljs-string">"FREQ=WEEKLY;UNTIL=2023-12-31T00:00:00.000Z;BYDAY=MO"</span>&gt;
+    Every Monday until Dec <span class="hljs-number">31</span>, <span class="hljs-number">2023</span>
+&lt;/podcas<span class="hljs-variable">t:updateFrequency</span>&gt;
+</code></pre>
+        <p>Podcasts currently on hiatus can indicate their intention to resume production by setting a DTSTART value in the future:</p>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">podcast:updateFrequency</span> <span class="hljs-attr">dtstart</span>=<span class="hljs-string">"2025-01-01T00:00:00.000Z"</span> <span class="hljs-attr">rrule</span>=<span class="hljs-string">"FREQ=WEEKLY"</span>&gt;</span>
+    Weekly, starting in 2025
+<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:updateFrequency</span>&gt;</span>
+</code></pre>
+        <p>Complete podcasts with no intention to release further episodes:</p>
+        <pre><code class="lang-xml">&lt;podcas<span class="hljs-variable">t:updateFrequency</span> <span class="hljs-built_in">complete</span>=<span class="hljs-string">"true"</span>&gt;That’s <span class="hljs-keyword">all</span> folks!&lt;/podcas<span class="hljs-variable">t:updateFrequency</span>&gt;
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
+        <h2 id="podping">Podping</h2>
+        <p><code>&lt;podcast:podping&gt;</code><br><br>
+            This element allows feed owners to signal to aggregators that the feed sends out
+            <a href="https://github.com/Podcastindex-org/podping"><code>Podping</code></a> notifications when changes are made to it, reducing the
+            need for frequent speculative feed polling.</p>
+        <h3 id="parent">Parent</h3>
+        <p>&nbsp; <code>&lt;channel&gt;</code></p>
+        <h3 id="count">Count</h3>
+        <p>&nbsp; Single</p>
+        <h2 id="examples">Examples</h2>
+        <pre><code class="lang-xml"> <span class="hljs-tag">&lt;<span class="hljs-name">podcast:podping</span> <span class="hljs-attr">usesPodping</span>=<span class="hljs-string">"true"</span>/&gt;</span>
+</code></pre>
+        <p><br><br><br><br><!-- Tag block --></p>
+        <h2 id="value-time-split">Value Time Split</h2>
+        <p><code>&lt;podcast:valueTimeSplit&gt;</code><br><br>
+            This element allows different value splits for a certain period of time. It is a combination of the concept of </p>
+        <p><podcast:soundbite> and <podcast:remoteItem> where a start time and a duration is supplied with alternative value
+            recipients. The alternative value recipients are not required to be remote, as the recipients may not have an RSS
+            feed/item of their own to reference.</p>
+        <p>The <code>&lt;podcast:valueTimeSplit&gt;</code> element allows time-based changes of value recipient information during playback of a
+            feed&#39;s enclosure content.</p>
+        <p>This can either contain one or more <code>&lt;podcast:valueRecipient&gt;</code> tags <em>or</em> exactly one <code>&lt;podcast:remoteItem&gt;</code> tag. If
+            a <code>&lt;podcast:remoteItem&gt;</code> tag is present, the <code>remotePercentage</code> attribute can be defined to control how much the
+            remote value block&#39;s <code>&lt;podcast:valueRecipient&gt;</code> tags will receive as a whole on top of the default, non-fee
+            <code>&lt;podcast:valueRecipient&gt;</code> tags.</p>
+        <p>If the remote value block contains any <code>&lt;podcast:valueTimeSplit&gt;</code> tags, they should be ignored even if the
+            <code>remoteStartTime</code> indicates it&#39;s in a position that would invoke them. When referencing a remote value block, only
+            the root level block splits should be used and any <code>&lt;podcast:valueTimeSplit&gt;</code> children are to be ignored.</p>
+        <p>Fees from the default <code>&lt;podcast:valueRecipient&gt;</code> tags should remain to be calculated before anything is taken out
+            from <code>&lt;podcast:valueTimeSplit&gt;</code>.</p>
+        <h3 id="parent">Parent</h3>
+        <p>&nbsp; <code>&lt;podcast:value&gt;</code></p>
+        <h3 id="count">Count</h3>
+        <p>&nbsp; Multiple</p>
+        <h3 id="node-value">Node Value</h3>
+        <p>&nbsp; A single <code>&lt;podcast:remoteItem&gt;</code> element OR one or more <code>&lt;podcast:valueRecipient&gt;</code> elements.</p>
+        <h3 id="attributes">Attributes</h3>
+        <ul>
+            <li><code>startTime</code> (required) - The time, in seconds, to stop using the currently active value recipient information and
+                start using the value recipient information contained in this element.</li>
+            <li><code>duration</code> (required) - How many seconds the playback app should use this element&#39;s value recipient information
+                before switching back to the value recipient information of the parent feed.</li>
+            <li><code>remoteStartTime</code> (optional) - The time in the remote item where the value split begins.  Allows the timestamp to
+                be set correctly in value metadata.  If not defined, defaults to 0.</li>
+            <li><code>remotePercentage</code> (optional) - The percentage of the payment the remote recipients will receive if a
+                <code>&lt;podcast:remoteItem&gt;</code> is present.  If not defined, defaults to 100.  If the value is less than 0, 0 is assumed.<br>If the value is greater than 100, 100 is assumed.</li>
+        </ul>
+        <h3 id="example-remote-item-">Example (Remote Item)</h3>
+        <pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">rss</span> <span class="hljs-attr">xmlns:podcast</span>=<span class="hljs-string">"https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md"</span> <span class="hljs-attr">version</span>=<span class="hljs-string">"2.0"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">channel</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Metal Showcase<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">description</span>&gt;</span>A great playlist of my favorite metal tracks.<span class="hljs-tag">&lt;/<span class="hljs-name">description</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">link</span>&gt;</span>https://example.com/rss-metal-showcase.xml<span class="hljs-tag">&lt;/<span class="hljs-name">link</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">language</span>&gt;</span>en<span class="hljs-tag">&lt;/<span class="hljs-name">language</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">pubDate</span>&gt;</span>Fri, 21 Apr 2023 18:56:30 -0500<span class="hljs-tag">&lt;/<span class="hljs-name">pubDate</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">podcast:medium</span>&gt;</span>music<span class="hljs-tag">&lt;/<span class="hljs-name">podcast:medium</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">item</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Special interview with Torcon VII<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">otherTagsHere</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">otherTagsHere</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">podcast:value</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"lightning"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"keysend"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">podcast:valueRecipient</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Alice (Podcaster)"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"node"</span> <span class="hljs-attr">address</span>=<span class="hljs-string">"02d5c1bf8b940dc9cadca86d1b0a3c37fbe39cee4c7e839e33bef9174531d27f52"</span> <span class="hljs-attr">split</span>=<span class="hljs-string">"95"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">podcast:valueRecipient</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Hosting Provider"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"node"</span> <span class="hljs-attr">address</span>=<span class="hljs-string">"03ae9f91a0cb8ff43840e3c322c4c61f019d8c1c3cea15a25cfc425ac605e61a4a"</span> <span class="hljs-attr">split</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">fee</span>=<span class="hljs-string">"true"</span> /&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">podcast:valueTimeSplit</span> <span class="hljs-attr">startTime</span>=<span class="hljs-string">"60"</span> <span class="hljs-attr">duration</span>=<span class="hljs-string">"237"</span> <span class="hljs-attr">remotePercentage</span>=<span class="hljs-string">"95"</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">podcast:remoteItem</span> <span class="hljs-attr">itemGuid</span>=<span class="hljs-string">"https://podcastindex.org/podcast/4148683#1"</span> <span class="hljs-attr">feedGuid</span>=<span class="hljs-string">"a94f5cc9-8c58-55fc-91fe-a324087a655b"</span> <span class="hljs-attr">medium</span>=<span class="hljs-string">"music"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">podcast:valueTimeSplit</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">podcast:valueTimeSplit</span> <span class="hljs-attr">startTime</span>=<span class="hljs-string">"330"</span> <span class="hljs-attr">duration</span>=<span class="hljs-string">"53"</span> <span class="hljs-attr">remoteStartTime</span>=<span class="hljs-string">"174"</span> <span class="hljs-attr">remotePercentage</span>=<span class="hljs-string">"95"</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-name">podcast:remoteItem</span> <span class="hljs-attr">itemGuid</span>=<span class="hljs-string">"https://podcastindex.org/podcast/4148683#3"</span> <span class="hljs-attr">feedGuid</span>=<span class="hljs-string">"a94f5cc9-8c58-55fc-91fe-a324087a655b"</span> <span class="hljs-attr">medium</span>=<span class="hljs-string">"music"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">podcast:valueTimeSplit</span>&gt;</span>
+         <span class="hljs-tag">&lt;/<span class="hljs-name">podcast:value</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">item</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">channel</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">rss</span>&gt;</span>
+</code></pre>
+        <h3 id="example-locally-specified-">Example (Locally Specified)</h3>
+        <pre><code class="lang-xml">&lt;rss xmln<span class="hljs-variable">s:podcast</span>=<span class="hljs-string">"https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md"</span> <span class="hljs-keyword">version</span>=<span class="hljs-string">"2.0"</span>&gt;
+   <span class="hljs-symbol">&lt;channel&gt;</span>
+      <span class="hljs-symbol">&lt;title&gt;</span>Cool Pod&lt;/title&gt;
+      <span class="hljs-symbol">&lt;description&gt;</span>This <span class="hljs-keyword">is</span> <span class="hljs-keyword">a</span> cool pod&lt;/description&gt;
+      <span class="hljs-symbol">&lt;link&gt;</span>http<span class="hljs-variable">s:</span>//example.<span class="hljs-keyword">com</span>/rss-cool-pod.xml&lt;/link&gt;
+      <span class="hljs-symbol">&lt;language&gt;</span><span class="hljs-keyword">en</span>&lt;/<span class="hljs-keyword">language</span>&gt;
+      <span class="hljs-symbol">&lt;pubDate&gt;</span>Fri, <span class="hljs-number">21</span> Apr <span class="hljs-number">2023</span> <span class="hljs-number">18</span>:<span class="hljs-number">56</span>:<span class="hljs-number">30</span> -<span class="hljs-number">0500</span>&lt;/pubDate&gt;
+      &lt;podcas<span class="hljs-variable">t:medium</span>&gt;podcast&lt;/podcas<span class="hljs-variable">t:medium</span>&gt;
+      <span class="hljs-symbol">&lt;item&gt;</span>
+         <span class="hljs-symbol">&lt;title&gt;</span>Adam Hates the word <span class="hljs-string">"pod"</span> (<span class="hljs-built_in">and</span> I <span class="hljs-keyword">do</span>, too)&lt;/title&gt;
+         <span class="hljs-symbol">&lt;otherTagsHere&gt;</span>...&lt;/otherTagsHere&gt;
+         &lt;podcas<span class="hljs-variable">t:value</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"lightning"</span> method=<span class="hljs-string">"keysend"</span>&gt;
+            &lt;podcas<span class="hljs-variable">t:valueRecipient</span> name=<span class="hljs-string">"Alice (Podcaster)"</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"node"</span> address=<span class="hljs-string">"02d5c1bf8b940dc9cadca86d1b0a3c37fbe39cee4c7e839e33bef9174531d27f52"</span> <span class="hljs-keyword">split</span>=<span class="hljs-string">"95"</span> /&gt;
+            &lt;podcas<span class="hljs-variable">t:valueRecipient</span> name=<span class="hljs-string">"Hosting Provider"</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"node"</span> address=<span class="hljs-string">"03ae9f91a0cb8ff43840e3c322c4c61f019d8c1c3cea15a25cfc425ac605e61a4a"</span> <span class="hljs-keyword">split</span>=<span class="hljs-string">"5"</span> fee=<span class="hljs-string">"true"</span> /&gt;
+
+            &lt;podcas<span class="hljs-variable">t:valueTimeSplit</span> startTime=<span class="hljs-string">"63"</span> duration=<span class="hljs-string">"388"</span>&gt;
+               &lt;podcas<span class="hljs-variable">t:valueRecipient</span> name=<span class="hljs-string">"Alice (Podcaster)"</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"node"</span> address=<span class="hljs-string">"02d5c1bf8b940dc9cadca86d1b0a3c37fbe39cee4c7e839e33bef9174531d27f52"</span> <span class="hljs-keyword">split</span>=<span class="hljs-string">"85"</span> /&gt;
+               &lt;podcas<span class="hljs-variable">t:valueRecipient</span> name=<span class="hljs-string">"Jimbob (Guest)"</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"node"</span> address=<span class="hljs-string">"02dd306e68c46681aa21d88a436fb35355a8579dd30201581cefa17cb179fc4c15"</span> <span class="hljs-keyword">split</span>=<span class="hljs-string">"10"</span> /&gt;
+            &lt;/podcas<span class="hljs-variable">t:valueTimeSplit</span>&gt;
+
+            &lt;podcas<span class="hljs-variable">t:valueTimeSplit</span> startTime=<span class="hljs-string">"367"</span> duration=<span class="hljs-string">"246"</span>&gt;
+               &lt;podcas<span class="hljs-variable">t:valueRecipient</span> name=<span class="hljs-string">"Alice (Podcaster)"</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"node"</span> address=<span class="hljs-string">"02d5c1bf8b940dc9cadca86d1b0a3c37fbe39cee4c7e839e33bef9174531d27f52"</span> <span class="hljs-keyword">split</span>=<span class="hljs-string">"85"</span> /&gt;
+               &lt;podcas<span class="hljs-variable">t:valueRecipient</span> name=<span class="hljs-string">"Bobjim (Guest)"</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"node"</span> address=<span class="hljs-string">"032f4ffbbafffbe51726ad3c164a3d0d37ec27bc67b29a159b0f49ae8ac21b8508"</span> <span class="hljs-keyword">split</span>=<span class="hljs-string">"10"</span> /&gt;
+            &lt;/podcas<span class="hljs-variable">t:valueTimeSplit</span>&gt;
+         &lt;/podcas<span class="hljs-variable">t:value</span>&gt;
+      &lt;/item&gt;
+   &lt;/channel&gt;
+&lt;/rss&gt;
+</code></pre>
 
     </article>
     </body>
