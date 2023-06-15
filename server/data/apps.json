@@ -734,23 +734,32 @@
       "podcast player",
       "open source"
     ],
-    "appUrl": "https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime",
+    "appUrl": "https://anytimeplayer.app",
     "appIconUrl": "anytimelogo.png",
     "platforms": [
-      "Android"
+      "Android",
+      "iOS"
     ],
     "supportedElements": [
       {
         "elementName": "Search",
-        "elementURL": "https://twitter.com/amugofjava/status/1364973551141466114"
+        "elementURL": "https://youtube.com/shorts/WmBPHlvOeGs?feature=share"
       },
       {
         "elementName": "Chapters",
-        "elementURL": "https://twitter.com/amugofjava/status/1364973551141466114"
+        "elementURL": "https://youtube.com/shorts/69jEtY3aQc0?feature=share"
       },
       {
         "elementName": "Funding",
-        "elementURL": "https://twitter.com/amugofjava/status/1364973551141466114"
+        "elementURL": "https://youtube.com/shorts/CflX9G0OmtI?feature=share"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://youtube.com/shorts/3a2tZ7g2TsY?feature=share"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://youtube.com/shorts/LjpHBE4V0xE?feature=share"
       }
     ]
   },
