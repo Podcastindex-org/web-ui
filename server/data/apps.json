@@ -2521,5 +2521,23 @@
         "elementURL": "https://github.com/Chocobozzz/PeerTube/pull/5487"
       }
     ]
+  },
+   {
+    "appName": "Turtlecast",
+    "appType": [
+      "app",
+      "podcast player",
+    ],
+    "appUrl": "https://play.google.com/store/apps/details?id=com.bluckapps.turtlecast",
+    "appIconUrl": "turtlecast.png",
+    "platforms": [
+      "Android"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://www.turtlecast.app"
+      }
+    ]
   }
 ]
