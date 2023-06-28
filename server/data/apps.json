@@ -1083,7 +1083,8 @@
     "appUrl": "https://Hubhopper.com",
     "appIconUrl": "hubhopper.png",
     "platforms": [
-      "Web", "Android"
+      "Web",
+      "Android"
     ],
     "supportedElements": [
       {
@@ -1935,8 +1936,8 @@
         "elementURL": "https://disctopia.com"
       },
       {
-        "elementName":"Funding",
-        "elementURL":"https://disctopia.com"
+        "elementName": "Funding",
+        "elementURL": "https://disctopia.com"
       },
       {
         "elementName": "Value",
@@ -2495,7 +2496,6 @@
         "elementName": "Social Interact",
         "elementURL": "https://github.com/Chocobozzz/PeerTube/pull/5487"
       },
-
       {
         "elementName": "Transcript",
         "elementURL": "https://github.com/dhk2/peertube-plugin-lightning/blob/master/CHANGELOG.md"
@@ -2522,7 +2522,7 @@
       }
     ]
   },
-   {
+  {
     "appName": "Turtlecast",
     "appType": [
       "app",
@@ -2536,7 +2536,7 @@
     "supportedElements": [
       {
         "elementName": "Search",
-        "elementURL": "https://www.turtlecast.app"
+        "elementURL": "https://www.turtlecast.app/"
       }
     ]
   }
