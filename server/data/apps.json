@@ -1818,6 +1818,22 @@
       {
         "elementName": "Txt",
         "elementURL": "https://changelog.rss.com/v23-2-2-257210"
+      },
+       {
+        "elementName": "Location",
+        "elementURL": "https://changelog.rss.com/v23-7-1-268871"
+      },
+       {
+        "elementName": "Season",
+        "elementURL": "https://changelog.rss.com/v23-7-1-268871"
+      },
+       {
+        "elementName": "Episode",
+        "elementURL": "https://changelog.rss.com/v23-7-1-268871"
+      },
+       {
+        "elementName": "License",
+        "elementURL": "https://changelog.rss.com/v23-7-1-268871"
       }
     ]
   },
