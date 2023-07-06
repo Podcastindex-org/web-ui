@@ -346,28 +346,36 @@
     ],
     "supportedElements": [
       {
-        "elementName": "Sat Streaming",
-        "elementURL": "https://twitter.com/fountain_app/status/1428355721301610503"
-      },
-      {
         "elementName": "Boostagrams",
         "elementURL": "https://twitter.com/fountain_app/status/1428355721301610503"
       },
       {
-        "elementName": "Value",
-        "elementURL": "https://twitter.com/MerryOscar/status/1420818281959677952"
+        "elementName": "Sat Streaming",
+        "elementURL": "https://twitter.com/fountain_app/status/1428355721301610503"
       },
       {
         "elementName": "Search",
         "elementURL": "https://twitter.com/fountain_app/status/1438166024478724098"
       },
       {
+        "elementName": "Value",
+        "elementURL": "https://twitter.com/MerryOscar/status/1420818281959677952"
+      },
+      {
         "elementName": "Chapters",
         "elementURL": "https://twitter.com/fountain_app/status/1438166024478724098"
       },
       {
+        "elementName": "Transcript",
+        "elementURL": "https://twitter.com/fountain_app/status/1663171268902879232"
+      },
+      {
         "elementName": "Person",
         "elementURL": "https://twitter.com/fountain_app/status/1504450017146417153"
+      },
+      {
+        "elementName": "Live",
+        "elementURL": "https://twitter.com/fountain_app/status/1663171268902879232"
       }
     ]
   },
