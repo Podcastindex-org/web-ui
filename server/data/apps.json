@@ -2563,5 +2563,90 @@
         "elementURL": "https://www.turtlecast.app/"
       }
     ]
-  }
+  },
+   {
+        "appName": "Podfans",
+        "appType": ["website", "podcast player"],
+        "appUrl": "https://podfans.fm",
+        "appIconUrl": "podfans.png",
+        "platforms": ["Web"],
+        "supportedElements": [
+            {
+                "elementName": "Funding",
+                "elementURL": "https://twitter.com/joinpodfans/status/1677226160185389056?s=20"
+            },
+            {
+                "elementName": "Chapters",
+                "elementURL": "https://twitter.com/joinpodfans/status/1639591674807500803?s=20"
+            },
+            {
+                "elementName": "Soundbite",
+                "elementURL": "https://twitter.com/joinpodfans/status/1677239340013944834?s=20"
+            },
+            {
+                "elementName": "Location",
+                "elementURL": "https://twitter.com/joinpodfans/status/1677247966073987072?s=20"
+            },
+            {
+                "elementName": "Trailer",
+                "elementURL": "https://twitter.com/joinpodfans/status/1677265500877848576?s=20"
+            },
+            {
+                "elementName": "License",
+                "elementURL": "https://twitter.com/joinpodfans/status/1677267388935307269?s=20"
+            },
+            {
+                "elementName": "Value",
+                "elementURL": "https://twitter.com/joinpodfans/status/1677275357450317832?s=20"
+            },
+            {
+                "elementName": "Alternate Enclosure",
+                "elementURL": "https://twitter.com/joinpodfans/status/1639598862536003584?s=20"
+            },
+            {
+                "elementName": "Boostagrams",
+                "elementURL": "https://twitter.com/joinpodfans/status/1677303053202882561?s=20"
+            },
+            {
+                "elementName": "Live",
+                "elementURL": "https://twitter.com/joinpodfans/status/1624114539695419392?s=20"
+            },
+            {
+                "elementName": "Sat Streaming",
+                "elementURL": "https://twitter.com/joinpodfans/status/1677302283107815426?s=20"
+            },
+            {
+                "elementName": "Search",
+                "elementURL": "https://twitter.com/joinpodfans/status/1677247968309653504?s=20"
+            },
+            {
+                "elementName": "Social Interact",
+                "elementURL": "https://twitter.com/joinpodfans/status/1677269921611366401?s=20"
+            },
+            {
+                "elementName": "Transcript",
+                "elementURL": "https://twitter.com/joinpodfans/status/1671892521902026752?s=20"
+            },
+            {
+                "elementName": "Locked",
+                "elementURL": "https://twitter.com/joinpodfans/status/1677224069035356162?s=20"
+            },
+            {
+                "elementName": "Podping",
+                "elementURL": "https://twitter.com/joinpodfans/status/1677271037791092736?s=20"
+            },
+            {
+                "elementName": "Person",
+                "elementURL": "https://twitter.com/joinpodfans/status/1677244181352251392?s=20"
+            },
+            {
+                "elementName": "GUID",
+                "elementURL": "https://twitter.com/joinpodfans/status/1677268263078600705?s=20"
+            },
+            {
+                "elementName": "Medium",
+                "elementURL": "https://twitter.com/joinpodfans/status/1618970078611136512?s=20"
+            }
+        ]
+    }
 ]
