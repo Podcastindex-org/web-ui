@@ -1200,6 +1200,18 @@
       {
         "elementName": "License",
         "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Soundbite",
+        "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Social Interact",
+        "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
       }
     ]
   },
@@ -1275,6 +1287,18 @@
       },
       {
         "elementName": "License",
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Soundbite",
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Social Interact",
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Medium",
         "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
       }
     ]
