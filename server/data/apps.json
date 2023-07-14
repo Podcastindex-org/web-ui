@@ -1519,15 +1519,55 @@
     "supportedElements": [
       {
         "elementName": "Transcript",
-        "elementURL": "https://twitter.com/CaptivateAudio"
+        "elementURL": "https://www.captivate.fm/podcasting-2-0"
       },
       {
         "elementName": "Podping",
-        "elementURL": "https://twitter.com/CaptivateAudio"
+        "elementURL": "https://www.captivate.fm/podcasting-2-0"
       },
       {
         "elementName": "OP3",
-        "elementURL": "https://help.captivate.fm/en/articles/3045914-captivate-feature-releases-changelog"
+        "elementURL": "https://help.captivate.fm/en/articles/3045914-captivate-feature-releases-changelog#:~:text=OP3"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://www.captivate.fm/podcasting-2-0"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://www.captivate.fm/podcasting-2-0"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://www.captivate.fm/podcasting-2-0"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://www.captivate.fm/podcasting-2-0"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://www.captivate.fm/podcasting-2-0"
+      },
+      {
+        "elementName": "License",
+        "elementURL": "https://www.captivate.fm/podcasting-2-0"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://www.captivate.fm/podcasting-2-0"
+      },
+      {
+        "elementName": "Txt",
+        "elementURL": "https://www.captivate.fm/podcasting-2-0"
+      },
+      {
+        "elementName": "Location",
+        "elementURL": "https://www.captivate.fm/podcasting-2-0"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://help.captivate.fm/en/articles/7064143-how-to-use-the-value-for-value-v4v-feature"
       }
     ]
   },
