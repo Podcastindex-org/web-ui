@@ -63,7 +63,7 @@ a,
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    &:hover {
+    &.open {
         background: lighten(#d6d6d6, 0.2);
     }
 }

@@ -122,7 +122,7 @@ export default class TopBar extends React.PureComponent<IProps, IState> {
                     <a
                         ref={this.wrapperRef}
                         href={null}
-                        className="topbar-mobile-dropdown"
+                        className={`topbar-mobile-dropdown ${dropdownOpen ? 'open' : ''}`}
                         onClick={() =>
                             this.setState({
                                 dropdownOpen: !dropdownOpen,
