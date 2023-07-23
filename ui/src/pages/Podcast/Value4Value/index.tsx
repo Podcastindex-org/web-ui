@@ -82,7 +82,7 @@ export default class Value4Value extends React.PureComponent<IProps> {
             startAt = nextStartAt
             grandTotal += total
 
-            if (status !== "true" || startAt === undefined) {
+            if (status !== "true" || startAt === undefined || !this._isMounted) {
                 break
             }
 
