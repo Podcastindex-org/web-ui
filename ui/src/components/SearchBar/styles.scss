@@ -20,7 +20,7 @@
     border-radius: 17px;
     height: 34px;
     margin: 0 15px;
-    padding: 0 15px;
+    padding: 0 0 0 15px;
     input {
         flex: 1;
         margin-left: 10px;
@@ -34,6 +34,8 @@
         border-bottom-style: hidden !important;
         background-color: transparent !important;
         color: var(--text-color);
+        width: 80%;
+        text-overflow: ellipsis;
     }
     ::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
@@ -62,5 +64,48 @@
 
     input:focus {
         outline: none !important;
+    }
+
+    .search-type-wrapper {
+        display: grid;
+        grid-template-areas: "select";
+        align-items: center;
+
+        &::after,
+        select {
+            grid-area: select;
+        }
+
+        &::after {
+            justify-self: end;
+            content: "";
+            width: 0.8em;
+            height: 0.5em;
+            background-color: var(--fg-main);
+            clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+            position: relative;
+            left: -15px;
+        }
+
+        select,
+        select::before,
+        select::after {
+            // A reset of styles, including removing the default dropdown arrow
+            appearance: none;
+            // Additional resets for further consistency
+            background-color: var(--button-background);
+            color: var(--fg-main);
+            border: none;
+            padding: 5px 15px;
+            margin: 0 5px 0 0;
+            width: 90px;
+            font-family: inherit;
+            font-size: 14px;
+            cursor: inherit;
+            line-height: inherit;
+            //outline: none;
+            //text-align: center;
+            border-radius: 17px;
+        }
     }
 }

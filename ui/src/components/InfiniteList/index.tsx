@@ -5,6 +5,11 @@ import Button from "../Button";
 
 import './styles.scss'
 
+export interface MakeVisibleItem {
+    field: string
+    value: number
+}
+
 interface IProps {
     data: Array<any>,
     itemRenderer: (value: any, index: number) => {},
@@ -13,6 +18,7 @@ interface IProps {
     initialDisplay?: number
     step?: number,
     itemsShown?: (value: number) => void
+    makeVisible?: MakeVisibleItem
 }
 
 export default class InfiniteList extends React.PureComponent<IProps> {
@@ -24,9 +30,12 @@ export default class InfiniteList extends React.PureComponent<IProps> {
         initialDisplay: 10,
         step: 10,
         itemsShown: null,
+        makeVisible: null,
     }
     state = {
         displayCount: 0,
+        scrolled: false,
+        validItem: false,
     }
     _isMounted = false
 
@@ -44,8 +53,21 @@ export default class InfiniteList extends React.PureComponent<IProps> {
     }
 
     componentDidUpdate(prevProps: Readonly<IProps>, prevState: Readonly<{}>, snapshot?: any): void {
-        if (this.props.data !== prevProps.data) {
+        const {makeVisible} = this.props
+        const prevMakeVisible = prevProps.makeVisible
+
+        if (
+            this.props !== prevProps
+        ) {
             this.load()
+        }
+
+        if (
+            !this.state.scrolled ||
+            makeVisible?.field !== prevMakeVisible?.field ||
+            makeVisible?.value !== prevMakeVisible?.value
+        ) {
+            this.makeItemVisible()
         }
     }
 
@@ -53,9 +75,38 @@ export default class InfiniteList extends React.PureComponent<IProps> {
         this._isMounted = false
     }
 
+    makeItemVisible() {
+        const {makeVisible} = this.props
+        if (makeVisible) {
+            const item = document.getElementById(makeVisible.value.toString())
+            if (item) {
+                item.scrollIntoView()
+                this.setState({
+                    scrolled: true
+                })
+            }
+        }
+    }
+
     load() {
         if (this._isMounted) {
-            let {data, initialDisplay} = this.props
+            let {data, initialDisplay, step, makeVisible} = this.props
+
+            // If item should be shown, make sure it is loaded initially
+            if (makeVisible) {
+                let visibleIndex = data.findIndex((item) => {
+                    return item[makeVisible.field] === makeVisible.value
+                })
+                if (visibleIndex >= 0) {
+                    initialDisplay = visibleIndex + 1 // add 1 since value is index and want total number of items
+                    initialDisplay += (step - initialDisplay % step) // make equal to step increment
+                    initialDisplay = initialDisplay > data.length ? data.length : initialDisplay
+                    this.setState({
+                        validItem: true
+                    })
+                }
+            }
+
             const displayCount = (data.length >= initialDisplay) ? initialDisplay : data.length
             this.updateDisplayCount(displayCount)
         }
@@ -110,16 +161,30 @@ export default class InfiniteList extends React.PureComponent<IProps> {
     }
 
     renderHeader() {
-        const {data, showButton} = this.props
-        const {displayCount} = this.state
+        const {data, showButton, makeVisible} = this.props
+        const {displayCount, validItem} = this.state
 
         const disabled = data.length == displayCount
+        let itemUnknown = false
+        if (makeVisible?.value >= 0) {
+            itemUnknown = !validItem
+        }
 
         if (showButton) {
             return (
                 <div className="infinite-list-header">
-                    <Button onClick={this.showAll} disabled={disabled} small={true}>Show All</Button>
-                    <p className="count">{displayCount} / {data.length}</p>
+                    <div className="infinite-list-count-info">
+                        <Button onClick={this.showAll} disabled={disabled} small={true}>Show All</Button>
+                        <p className="count">{displayCount} / {data.length}</p>
+                    </div>
+                    {
+                        itemUnknown ?
+                            <div className="infinite-list-item-unknown">
+                                <p>Unknown item {makeVisible.value}</p>
+                            </div>
+                            :
+                            <div/>
+                    }
                 </div>
             )
         } else {
