@@ -440,6 +440,7 @@ export default class Value4Value extends React.PureComponent<IProps> {
                 <p>The "Popular" page shows all podcasts in the "popularity" order returned from the API.</p>
                 <p>The "All" page shows all podcasts in sort order.</p>
 
+                <p><a href="https://stats.podcastindex.org/v4v">Value4Value Podcasting Ecosystem</a> stats</p>
                 <br/>
 
                 {this.renderPageLinks()}
