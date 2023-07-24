@@ -115,6 +115,12 @@ app.use('/api/podcasts/byfeedid', async (req, res) => {
     res.send(response)
 })
 
+app.use('/api/podcasts/byguid', async (req, res) => {
+    let guid = req.query.guid
+    const response = await api.custom('podcasts/byguid', {guid: guid})
+    res.send(response)
+})
+
 app.use('/api/podcasts/byfeedurl', async (req, res) => {
     let feedUrl = req.query.url
     const response = await api.podcastsByFeedUrl(feedUrl)

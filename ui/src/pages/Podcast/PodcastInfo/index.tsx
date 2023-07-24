@@ -1,3 +1,4 @@
+import { History } from "history";
 import * as React from 'react'
 import ReactLoading from 'react-loading'
 import EpisodesPlayer from "../../../components/EpisodesPlayer";
@@ -9,7 +10,7 @@ interface IProps {
     match: any
     result?: Object
     location: any
-    history?: any
+    history?: History
 }
 
 export default class PodcastInfo extends React.PureComponent<IProps> {
@@ -92,8 +93,20 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     }
 
     async fetchData(id) {
-        const result = (await this.getPodcastInfo(id)).feed
-        const episodes = (await this.getEpisodes(id))
+        let feedId = id
+        let result = (await this.getPodcastInfo(id)).feed
+        // when no items, returns array instead of object so check for that
+        if (result && result?.length === 0) {
+            const resultFeedGuid = (await this.getPodcastInfoGuid(id)).feed
+            if (resultFeedGuid && resultFeedGuid?.length === 0) {
+                // when no items, returns array instead of object so check for that
+            } else if (resultFeedGuid) {
+                result = resultFeedGuid
+                feedId = result.id
+                this.props.history.replace(`/podcast/${feedId}${this.props.location.search}`)
+            }
+        }
+        const episodes = (await this.getEpisodes(feedId))
         const episodeId = cleanSearchQuery(this.props.location.search, "episode")
 
         if (this._isMounted) {
@@ -109,6 +122,15 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     async getPodcastInfo(id: string) {
         // noinspection SpellCheckingInspection
         let response = await fetch(`/api/podcasts/byfeedid?id=${id}`, {
+            // credentials: 'same-origin',
+            method: 'GET',
+        })
+        return await response.json()
+    }
+
+    async getPodcastInfoGuid(guid: string) {
+        // noinspection SpellCheckingInspection
+        let response = await fetch(`/api/podcasts/byguid?guid=${guid}`, {
             // credentials: 'same-origin',
             method: 'GET',
         })
