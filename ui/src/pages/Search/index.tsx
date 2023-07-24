@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import ResultsEpisodes from "../../components/ResultsEpisodes";
 import ResultsFeeds from "../../components/ResultsFeeds";
 
-import { cleanSearchQuery, encodeSearch, isValidURL, updateTitle } from '../../utils'
+import { cleanSearchQuery, encodeSearch, isValidURL, titleizeString, updateTitle } from '../../utils'
 
 import './styles.scss'
 
@@ -127,17 +127,26 @@ export default class Results extends React.PureComponent<IProps> {
     }
 
     renderNoResults() {
-        const {query} = this.state
+        const {query, searchType} = this.state
 
         const isURL = isValidURL(query)
 
+        const noURLSearchType = searchType === "person" || searchType === "title"
         const noResults = 'No results for your search'
         updateTitle(noResults)
         return (
             <div className="results-page">
-                <p>{noResults}</p>
                 {
-                    isURL ?
+                    noURLSearchType ?
+                        <p>
+                            No results for your search term under type "{titleizeString(searchType)}", try
+                            searching <Link to={`/search?q=${query}&type=all`}>all data</Link>
+                        </p>
+                        :
+                        <p>{noResults}</p>
+                }
+                {
+                    isURL && !noURLSearchType ?
                         <p>
                             {`Add ${query} to index? `}
                             <Link
