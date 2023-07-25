@@ -106,7 +106,8 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
                 this.props.history.replace(`/podcast/${feedId}${this.props.location.search}`)
             }
         }
-        const episodes = (await this.getEpisodes(feedId))
+        const max = result.episodeCount || 1000
+        const episodes = (await this.getEpisodes(feedId, max))
         const episodeId = cleanSearchQuery(this.props.location.search, "episode")
 
         if (this._isMounted) {
@@ -137,9 +138,9 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         return await response.json()
     }
 
-    async getEpisodes(id: string) {
+    async getEpisodes(id: string, max: number = 1000) {
         // noinspection SpellCheckingInspection
-        let response = await fetch(`/api/episodes/byfeedid?id=${id}&max=100`, {
+        let response = await fetch(`/api/episodes/byfeedid?id=${id}&max=${max}`, {
             // credentials: 'same-origin',
             method: 'GET',
         })
