@@ -20,7 +20,8 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
             items: [],
             live: [],
         },
-        loading: true,
+        loadingFeed: true,
+        loadingEpisodes: true,
         episodeId: -1,
     }
     _isMounted = false
@@ -67,7 +68,8 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
 
         if (id !== prevProps.match.params.podcastId) {
             this.setState({
-                loading: true,
+                loadingFeed: true,
+                loadingEpisodes: true,
             })
             await this.fetchData(id)
         } else if (episodeId !== prevEpisodeId) {
@@ -106,6 +108,14 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
                 this.props.history.replace(`/podcast/${feedId}${this.props.location.search}`)
             }
         }
+
+        if (this._isMounted) {
+            this.setState({
+                loadingFeed: false,
+                result,
+            })
+        }
+
         const max = result.episodeCount || 1000
         const episodes = (await this.getEpisodes(feedId, max))
         const episodeId = cleanSearchQuery(this.props.location.search, "episode")
@@ -114,8 +124,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
             this.setState({
                 episodes,
                 episodeId: Number(episodeId),
-                loading: false,
-                result,
+                loadingEpisodes: false,
             })
         }
     }
@@ -195,13 +204,13 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     }
 
     render() {
-        const {loading, result, episodeId, episodes} = this.state
-        if ((result === undefined || result.length === 0) && !loading) {
+        const {loadingFeed, loadingEpisodes, result, episodeId, episodes} = this.state
+        if ((result === undefined || result.length === 0) && !loadingFeed) {
             const errorMessage = `Unknown podcast ID: ${this.props.match.params.podcastId}`
             updateTitle(errorMessage)
             return <div className="page-content">{errorMessage}</div>
         }
-        if (loading) {
+        if (loadingFeed) {
             updateTitle('Loading podcast ...')
             return (
                 <div className="loader-wrapper" style={{height: 300}}>
@@ -213,12 +222,19 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         return (
             <div className="page-content">
                 {this.renderHeader()}
-                <EpisodesPlayer
-                    podcast={result}
-                    episodes={episodes}
-                    selectedId={episodeId}
-                    onSelectedEpisodeChange={this.onSelectedEpisodeChange}
-                />
+                {
+                    loadingEpisodes ?
+                        <div className="loader-wrapper" style={{height: 300}}>
+                            <ReactLoading type="cylon" color="#e90000"/>
+                        </div>
+                        :
+                        <EpisodesPlayer
+                            podcast={result}
+                            episodes={episodes}
+                            selectedId={episodeId}
+                            onSelectedEpisodeChange={this.onSelectedEpisodeChange}
+                        />
+                }
             </div>
         )
     }
