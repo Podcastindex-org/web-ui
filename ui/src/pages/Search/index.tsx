@@ -119,7 +119,7 @@ export default class Results extends React.PureComponent<IProps> {
     async getPersonSearchResults(query: string) {
         query = encodeSearch(query)
         // noinspection SpellCheckingInspection
-        let response = await fetch(`/api/search/byperson?q=${query}`, {
+        let response = await fetch(`/api/search/byperson?q=${query}&max=1000`, {
             // credentials: 'same-origin',
             method: 'GET',
         })

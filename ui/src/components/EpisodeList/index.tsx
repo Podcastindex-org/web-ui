@@ -49,7 +49,7 @@ export default class EpisodeList extends React.PureComponent<IProps> {
         this.props.onEpisodePause()
     }
 
-    renderEpisode(item, index: number) {
+    renderEpisode(item, index: number, selected: boolean) {
         let {
             id,
             title,
@@ -79,6 +79,7 @@ export default class EpisodeList extends React.PureComponent<IProps> {
             <div key={index}>
                 <EpisodeItem
                     ref={this.episodeItems[index]}
+                    className={selected ? "selected-item" : ""}
                     id={id}
                     feedId={podcastId}
                     index={index}

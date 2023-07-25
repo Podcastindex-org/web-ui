@@ -28,13 +28,14 @@ export default class ResultsFeeds extends React.PureComponent<IProps> {
     async componentDidUpdate(prevProps) {
     }
 
-    renderItem(item, index: number) {
+    renderItem(item, index: number, selected: boolean) {
         let {title, author, description, categories, id} = item
         const image = getImage(item)
 
         return (
             <div key={index}>
                 <ResultItem
+                    className={selected ? "selected-item" : ""}
                     title={title}
                     author={author}
                     image={image}

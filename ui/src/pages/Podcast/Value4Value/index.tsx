@@ -251,7 +251,7 @@ export default class Value4Value extends React.PureComponent<IProps> {
         pages.set(selectedPage, {groupPages: groupPages, displayCount: count})
     }
 
-    renderItem(item, index: number) {
+    renderItem(item, index: number, selected: boolean) {
         let {selectedPage, pages} = this.state
         const key = `v4v-podcast-${selectedPage}-${index}`
 
@@ -267,6 +267,7 @@ export default class Value4Value extends React.PureComponent<IProps> {
         return (
             <div key={key}>
                 <ResultItem
+                    className={selected ? "selected-item" : ""}
                     title={title}
                     author={author}
                     image={image}

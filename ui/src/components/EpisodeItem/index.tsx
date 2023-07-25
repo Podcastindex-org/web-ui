@@ -30,6 +30,7 @@ interface IProps {
     startTime?: number
     onPlay?: any
     onPause?: any
+    className?: string
 }
 
 export default class EpisodeItem extends React.PureComponent<IProps> {
@@ -97,13 +98,14 @@ export default class EpisodeItem extends React.PureComponent<IProps> {
             datePublished,
             hasComments,
             startTime,
+            className,
         } = this.props
         const episodeLink = link
         const episodeEnclosure = enclosureUrl
         const episodeTranscript = transcriptUrl
 
         return (
-            <div className="episode" id={`${id}`}>
+            <div className={`episode ${className}`} id={`${id}`}>
                 <div className="episode-row">
                     <div className="episode-cover-art">
                         <img

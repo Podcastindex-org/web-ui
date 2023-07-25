@@ -12,7 +12,7 @@ export interface MakeVisibleItem {
 
 interface IProps {
     data: Array<any>,
-    itemRenderer: (value: any, index: number) => {},
+    itemRenderer: (value: any, index: number, selected: boolean) => {},
     className?: string,
     showButton?: boolean,
     initialDisplay?: number
@@ -193,7 +193,7 @@ export default class InfiniteList extends React.PureComponent<IProps> {
     }
 
     render() {
-        const {data, className, itemRenderer} = this.props
+        const {data, className, makeVisible, itemRenderer} = this.props
         let {displayCount} = this.state
         return (
             <div className={`${className} infinite-list`}>
@@ -207,7 +207,15 @@ export default class InfiniteList extends React.PureComponent<IProps> {
                     {
                         data.slice(0, displayCount).map(
                             (i: any, index) => {
-                                return itemRenderer(i, index)
+
+                                let selected = false
+                                if (makeVisible) {
+                                    if (i[makeVisible.field] == makeVisible.value) {
+                                        selected = true
+                                    }
+                                }
+
+                                return itemRenderer(i, index, selected)
                             }
                         )
                     }
