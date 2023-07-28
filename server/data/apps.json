@@ -2724,5 +2724,85 @@
                 "elementURL": "https://twitter.com/joinpodfans/status/1678797114363478017?s=20"
             }
         ]
-    }
+    },
+  {
+    "appName": "CastGarden",
+    "appType": [
+      "blockchain",
+      "hosting",
+      "open source",
+      "social links",
+      "website",
+      "video"
+    ],
+    "appUrl": "https://cast.garden",
+    "appIconUrl": "castgarden.png",
+    "platforms": [
+      "Hive",
+      "Mobile",
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
+        "elementName": "Block",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
+        "elementName": "Images",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
+        "elementName": "License",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
+        "elementName": "Live",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
+        "elementName": "Social Interact",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://cast.garden/about/instance"
+      }
+    ]
+  }
 ]
