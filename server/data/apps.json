@@ -2748,11 +2748,19 @@
         "elementURL": "https://cast.garden/about/instance"
       },
       {
+        "elementName": "Block",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
         "elementName": "Funding",
         "elementURL": "https://cast.garden/about/instance"
       },
       {
         "elementName": "GUID",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
+        "elementName": "Images",
         "elementURL": "https://cast.garden/about/instance"
       },
       {
