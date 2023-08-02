@@ -2804,5 +2804,40 @@
         "elementURL": "https://cast.garden/about/instance"
       }
     ]
+  },
+  {
+    "appName": "IPFS Podcasting",
+    "appType": [
+      "hosting",
+      "website", 
+      "video", 
+      "other"
+    ],
+    "appUrl": "https://ipfspodcasting.net",
+    "appIconUrl": "ipfspodcasting.png",
+    "tagline": "Decentralized Podcast Distribution over IPFS",
+    "platforms": [
+      "Web",
+      "Linux",
+      "Umbrel",
+      "Start9"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Locked",
+        "elementURL": "https://podcastindex.social/@cameron/105616634603559178"
+      },
+      {
+        "elementName": "Podping"
+      },
+      {
+        "elementName": "Video",
+        "elementURL": "https://podcastindex.social/@cameron/105639860916490393"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://podcastindex.social/@cameron/110701560454851246"
+      }
+    ]
   }
 ]
