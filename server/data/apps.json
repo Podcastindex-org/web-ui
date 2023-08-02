@@ -2808,6 +2808,7 @@
   {
     "appName": "IPFS Podcasting",
     "appType": [
+      "directory",
       "hosting",
       "website", 
       "video", 
