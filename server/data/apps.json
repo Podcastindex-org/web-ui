@@ -2806,6 +2806,47 @@
     ]
   },
   {
+    "appName": "Podpage",
+    "appType": [
+      "website"
+    ],
+    "appUrl": "https://www.podpage.com",
+    "appIconUrl": "podpage.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
+      },
+      {
+        "elementName": "Trailer",
+        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
+      }
+    ]
+  },
+  {
     "appName": "IPFS Podcasting",
     "appType": [
       "directory",
