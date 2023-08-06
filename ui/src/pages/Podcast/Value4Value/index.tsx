@@ -80,11 +80,11 @@ export default class Value4Value extends React.PureComponent<IProps> {
             let v4vData = (await this.getValue4ValuePodcastsPaginated(startAt, 1000))
             const {status, feeds, total, nextStartAt} = v4vData
             startAt = nextStartAt
-            grandTotal += total
 
             if (status !== "true" || startAt === undefined || !this._isMounted) {
                 break
             }
+            grandTotal += total
 
             feeds.forEach((value) => {
                 allPages.push(value)
@@ -416,14 +416,7 @@ export default class Value4Value extends React.PureComponent<IProps> {
             updateTitle(noResults)
             return <div className="v4v">{noResults}</div>
         }
-        if (loading) {
-            updateTitle('Loading Value 4 Value podcasts ...')
-            return (
-                <div className="loader-wrapper" style={{height: 300}}>
-                    <ReactLoading type="cylon" color="#e90000"/>
-                </div>
-            )
-        }
+
         updateTitle(`Value 4 Value Podcasts`)
         return (
             <div className="v4v">
@@ -431,7 +424,7 @@ export default class Value4Value extends React.PureComponent<IProps> {
                 <p>These podcasts are set up to receive Bitcoin payments in real-time over the Lightning network using
                     compatible <b><Link to="/apps">Podcasting 2.0 apps</Link></b>.</p>
 
-                <p>There are <b>{total}</b> Value 4 Value podcasts! Add yours by including the value block on your feed
+                <p>There are <b>{total.toLocaleString()}</b> Value 4 Value podcasts! Add yours by including the value block on your feed
                     using <b><Link to="https://podcasterwallet.com/">podcasterwallet.com</Link></b></p>
 
                 <br/>
@@ -444,9 +437,17 @@ export default class Value4Value extends React.PureComponent<IProps> {
                 <p><a href="https://stats.podcastindex.org/v4v">Value4Value Podcasting Ecosystem</a> stats</p>
                 <br/>
 
-                {this.renderPageLinks()}
-
-                {this.renderResults()}
+                {
+                    loading ?
+                        <div className="loader-wrapper" style={{height: 300}}>
+                            <ReactLoading type="cylon" color="#e90000"/>
+                        </div>
+                        :
+                        <div>
+                            {this.renderPageLinks()}
+                            {this.renderResults()}
+                        </div>
+                }
             </div>
         )
     }
