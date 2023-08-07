@@ -1,13 +1,13 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom'
-import { history } from '../../state/store'
-
-import Button from '../Button'
-import Searchbar from '../SearchBar'
 import BrandIcon from '../../../images/brand-icon.svg'
 import BrandName from '../../../images/brand-text.svg'
 import MenuIcon from '../../../images/menu.svg'
+import { history } from '../../state/store'
 import { cleanSearchQuery, encodeSearch } from '../../utils'
+
+import Button from '../Button'
+import Searchbar from '../SearchBar'
 
 import './styles.scss'
 
@@ -18,37 +18,71 @@ interface IProps {
 
 interface IState {
     search: string
+    searchType: string
     dropdownOpen: boolean
 }
 
 export default class TopBar extends React.PureComponent<IProps, IState> {
+    state = {
+        search: "",
+        searchType: "all",
+        dropdownOpen: false,
+    }
     static defaultProps = {}
     wrapperRef: React.Ref<HTMLAnchorElement> = React.createRef();
+    unlisten = undefined
 
     constructor(props: IProps) {
         super(props)
 
-        this.state = {
-            search: cleanSearchQuery(props.history.location.search),
-            dropdownOpen: false,
-        }
-
         this.onSearchChange = this.onSearchChange.bind(this)
+        this.onSearchTypeChange = this.onSearchTypeChange.bind(this)
         this.onSearchSubmit = this.onSearchSubmit.bind(this)
         this.handleClickOutside = this.handleClickOutside.bind(this);
     }
 
+    updateSearchArgs() {
+        const {history} = this.props
+        const search = cleanSearchQuery(history.location.search)
+        let searchType = cleanSearchQuery(history.location.search, "type").toLowerCase()
+        if (searchType === "") {
+            searchType = "all"
+        }
+
+        this.setState({
+            search: search,
+            searchType: searchType,
+        })
+    }
+
     componentDidMount() {
+        this.updateSearchArgs()
+        this.unlisten = this.props.history.listen(() => this.updateSearchArgs())
         document.addEventListener("mousedown", this.handleClickOutside);
     }
 
     componentWillUnmount() {
+        this.unlisten()
         document.removeEventListener("mousedown", this.handleClickOutside);
     }
 
     onSearchChange(evt: React.ChangeEvent<HTMLInputElement>) {
         evt.preventDefault()
         this.setState({search: evt.target.value})
+    }
+
+    onSearchTypeChange(evt: React.ChangeEvent<HTMLSelectElement>) {
+        evt.preventDefault()
+        const {searchType} = this.state
+        const newSearchType = evt.target.value.toLowerCase()
+
+        this.setState({
+            searchType: newSearchType
+        }, () => {
+            if (searchType !== newSearchType) {
+                this.triggerSearch()
+            }
+        })
     }
 
     /**
@@ -66,19 +100,23 @@ export default class TopBar extends React.PureComponent<IProps, IState> {
     }
 
     onSearchSubmit(evt: React.ChangeEvent<HTMLFormElement>) {
-        const {search} = this.state
-        if (!search) {
-            history.push(`/search`)
-        } else {
-            // let cleanQuery = this.state.search.replace('%','');
-            let cleanQuery = encodeSearch(search)
-            history.push(`/search?q=${cleanQuery}`)
-        }
+        this.triggerSearch()
         evt.preventDefault()
     }
 
+    triggerSearch() {
+        const {search, searchType} = this.state
+        let cleanSearchType = encodeSearch(searchType)
+        if (search) {
+            // let cleanQuery = this.state.search.replace('%','');
+            let cleanQuery = encodeSearch(search)
+            history.push(`/search?q=${cleanQuery}&type=${cleanSearchType}`)
+        }
+    }
+
     render() {
-        const {search, dropdownOpen} = this.state
+        const {search, searchType, dropdownOpen} = this.state
+
         return (
             <nav className="topbar">
                 <Link className="topbar-brand" to="/">
@@ -95,7 +133,9 @@ export default class TopBar extends React.PureComponent<IProps, IState> {
                 <div className="topbar-span">
                     <Searchbar
                         search={search}
+                        searchType={searchType}
                         onSearchChange={this.onSearchChange}
+                        onSearchTypeChange={this.onSearchTypeChange}
                         onSearchSubmit={this.onSearchSubmit}
                     />
                 </div>
@@ -122,7 +162,7 @@ export default class TopBar extends React.PureComponent<IProps, IState> {
                     <a
                         ref={this.wrapperRef}
                         href={null}
-                        className="topbar-mobile-dropdown"
+                        className={`topbar-mobile-dropdown ${dropdownOpen ? 'open' : ''}`}
                         onClick={() =>
                             this.setState({
                                 dropdownOpen: !dropdownOpen,

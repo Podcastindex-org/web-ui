@@ -70,14 +70,25 @@ app.use('/namespace/1.0', async (req, res) => {
 // ------------------------------------------------
 
 app.use('/api/search/byterm', async (req, res) => {
-    let term = req.query.q
-    const response = await api.searchByTerm(term)
+    const response = await api.custom('search/byterm', req.query)
     res.send(response)
 })
 
 app.use('/api/search/bytitle', async (req, res) => {
     let term = req.query.q
     const response = await api.custom('search/bytitle', {q: term})
+    res.send(response)
+})
+
+app.use('/api/search/music/byterm', async (req, res) => {
+    let term = req.query.q
+    const response = await api.custom('search/music/byterm', {q: term})
+    res.send(response)
+})
+
+app.use('/api/search/byperson', async (req, res) => {
+    let person = req.query.q
+    const response = await api.searchEpisodesByPerson(person)
     res.send(response)
 })
 
@@ -101,6 +112,12 @@ app.use('/api/podcasts/bytag', async (req, res) => {
 app.use('/api/podcasts/byfeedid', async (req, res) => {
     let feedId = req.query.id
     const response = await api.podcastsByFeedId(feedId)
+    res.send(response)
+})
+
+app.use('/api/podcasts/byguid', async (req, res) => {
+    let guid = req.query.guid
+    const response = await api.custom('podcasts/byguid', {guid: guid})
     res.send(response)
 })
 

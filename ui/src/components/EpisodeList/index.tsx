@@ -1,7 +1,7 @@
 import * as React from 'react'
-import EpisodeItem from '../EpisodeItem'
-import InfiniteList from '../InfiniteList'
 import { fixURL, getImage } from '../../utils'
+import EpisodeItem from '../EpisodeItem'
+import InfiniteList, { MakeVisibleItem } from '../InfiniteList'
 
 const he = require('he')
 
@@ -10,6 +10,8 @@ interface IProps {
     podcast: any
     episodes: Array<Object>
     playingEpisode: Object
+    makeVisible?: MakeVisibleItem
+    initialDisplay?: number
     onEpisodePlay: Function
     onEpisodePause: Function
 }
@@ -28,10 +30,10 @@ export default class EpisodeList extends React.PureComponent<IProps> {
     }
 
     async componentDidUpdate(prevProps) {
-        const { episodes, playingEpisode } = this.props
+        const {episodes, playingEpisode} = this.props
 
         this.episodeItems.forEach((episodeItem, index) => {
-            episodeItem.current.setPlaying(
+            episodeItem.current?.setPlaying(
                 playingEpisode == episodes[index]
             )
         })
@@ -47,7 +49,7 @@ export default class EpisodeList extends React.PureComponent<IProps> {
         this.props.onEpisodePause()
     }
 
-    renderEpisode(item, index: number) {
+    renderEpisode(item, index: number, selected: boolean) {
         let {
             id,
             title,
@@ -58,13 +60,15 @@ export default class EpisodeList extends React.PureComponent<IProps> {
             datePublished,
             value,
             socialInteract,
-            startTime
+            startTime,
+            feedId
         } = item
         let {podcast} = this.props
         // try to use episode image, fall back to feed images
         const image = getImage(item) || getImage(podcast)
         enclosureUrl = fixURL(enclosureUrl)
         description = he.decode(description)
+        const podcastId = podcast.id || feedId
 
         // create a reference to the generated EpisodeItem if one doesn't already exist
         if (index >= this.episodeItems.length) {
@@ -75,7 +79,9 @@ export default class EpisodeList extends React.PureComponent<IProps> {
             <div key={index}>
                 <EpisodeItem
                     ref={this.episodeItems[index]}
+                    className={selected ? "selected-item" : ""}
                     id={id}
+                    feedId={podcastId}
                     index={index}
                     title={title}
                     image={image}
@@ -95,13 +101,15 @@ export default class EpisodeList extends React.PureComponent<IProps> {
     }
 
     render() {
-        const { title, episodes } = this.props
+        const {title, episodes, makeVisible, initialDisplay} = this.props
 
         return (
             <div className="episodes-list">
                 <h2 className="episode-header">{title}</h2>
                 <InfiniteList
                     data={episodes}
+                    makeVisible={makeVisible}
+                    initialDisplay={initialDisplay}
                     itemRenderer={this.renderEpisode}
                 />
             </div>

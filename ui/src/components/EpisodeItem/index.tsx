@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link } from "react-router-dom";
 import { getISODate, getPrettyDate, truncateString } from '../../utils'
 
 import Value from '../Value'
@@ -9,11 +10,13 @@ import PauseLogo from '../../../images/pause-circle.svg'
 import EarthLogo from '../../../images/earth.svg'
 import DownloadLogo from '../../../images/download-outline.svg'
 import TranscriptLogo from '../../../images/transcript.svg'
+import LinkLogo from '../../../images/link.svg'
 
 import './styles.scss'
 
 interface IProps {
     id: number,
+    feedId: number,
     index?: number
     title?: string
     image?: any
@@ -27,6 +30,7 @@ interface IProps {
     startTime?: number
     onPlay?: any
     onPause?: any
+    className?: string
 }
 
 export default class EpisodeItem extends React.PureComponent<IProps> {
@@ -83,6 +87,7 @@ export default class EpisodeItem extends React.PureComponent<IProps> {
     render() {
         const {
             id,
+            feedId,
             title,
             image,
             link,
@@ -93,13 +98,14 @@ export default class EpisodeItem extends React.PureComponent<IProps> {
             datePublished,
             hasComments,
             startTime,
+            className,
         } = this.props
         const episodeLink = link
         const episodeEnclosure = enclosureUrl
         const episodeTranscript = transcriptUrl
 
         return (
-            <div className="episode">
+            <div className={`episode ${className}`} id={`${id}`}>
                 <div className="episode-row">
                     <div className="episode-cover-art">
                         <img
@@ -168,7 +174,17 @@ export default class EpisodeItem extends React.PureComponent<IProps> {
                                 </a>
                                 : ""
                             }
-                            
+
+                            <Link
+                                className="episode-id-link"
+                                to={`/podcast/${feedId}?episode=${id}`}
+                                title="Episode Link on Podcast Index"
+                            >
+                                <img
+                                    alt={`Link to ${title} on Podcast Index`}
+                                    src={LinkLogo}/>
+                            </Link>
+
                             <img
                                 alt="Play/pause episode"
                                 className="episode-play-pause-mobile"

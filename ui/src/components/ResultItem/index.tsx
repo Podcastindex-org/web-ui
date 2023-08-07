@@ -13,6 +13,7 @@ interface IProps {
     categories?: any
     image?: any
     id?: string
+    className?: string
 }
 
 export default class ResultItem extends React.PureComponent<IProps> {
@@ -48,10 +49,10 @@ export default class ResultItem extends React.PureComponent<IProps> {
     }
 
     render() {
-        const {title, description, author, categories, image, id} = this.props
+        const {title, description, author, categories, image, id, className} = this.props
         // const { open } = this.state
         return (
-            <div className="result">
+            <div className={`result ${className}`}>
                 <div className="result-row">
                     <div className="result-cover-art">
                         <Link to={`/podcast/${id}`}>

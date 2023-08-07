@@ -162,7 +162,14 @@ export default class Player extends React.Component<IProps> {
                     header={
                         <div className="player-info">
                             <div className="player-show-title">
-                                <p title={episode.title}>{episode.title}</p>
+                                <p title={episode.title}>
+                                    <Link
+                                        to={`/podcast/${episode.feedId}?episode=${episode.id}`}
+                                        title={episode.title}
+                                    >
+                                        {episode.title}
+                                    </Link>
+                                </p>
                             </div>
                             <div className="player-podcast-name">
                                 {episode.feedTitle !== undefined ? (

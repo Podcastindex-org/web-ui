@@ -82,7 +82,7 @@ export default class Value4Value extends React.PureComponent<IProps> {
             startAt = nextStartAt
             grandTotal += total
 
-            if (status !== "true" || startAt === undefined) {
+            if (status !== "true" || startAt === undefined || !this._isMounted) {
                 break
             }
 
@@ -251,7 +251,7 @@ export default class Value4Value extends React.PureComponent<IProps> {
         pages.set(selectedPage, {groupPages: groupPages, displayCount: count})
     }
 
-    renderItem(item, index: number) {
+    renderItem(item, index: number, selected: boolean) {
         let {selectedPage, pages} = this.state
         const key = `v4v-podcast-${selectedPage}-${index}`
 
@@ -267,6 +267,7 @@ export default class Value4Value extends React.PureComponent<IProps> {
         return (
             <div key={key}>
                 <ResultItem
+                    className={selected ? "selected-item" : ""}
                     title={title}
                     author={author}
                     image={image}
@@ -440,6 +441,7 @@ export default class Value4Value extends React.PureComponent<IProps> {
                 <p>The "Popular" page shows all podcasts in the "popularity" order returned from the API.</p>
                 <p>The "All" page shows all podcasts in sort order.</p>
 
+                <p><a href="https://stats.podcastindex.org/v4v">Value4Value Podcasting Ecosystem</a> stats</p>
                 <br/>
 
                 {this.renderPageLinks()}

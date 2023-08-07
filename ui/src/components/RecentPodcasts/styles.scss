@@ -59,6 +59,7 @@
         &:hover {
             background: rgba(#d6d6d6, 0.4);
         }
+        z-index: 5000;
     }
     .player-nav-arrows-left {
         top: 50%;
@@ -139,7 +140,7 @@
             justify-self: center;
         }
     }
-    z-index: 99999;
+    z-index: 4000;
 }
 
 @media only screen and (max-width: 520px) {
@@ -156,6 +157,9 @@
                 width: 300px;
             }
         }
+    }
+    .player-nav-arrows {
+        height: 340px;
     }
     .player-cover-art {
         display: inline-flex;
