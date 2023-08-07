@@ -2556,6 +2556,7 @@
     "appUrl": "https://joinpeertube.org",
     "appIconUrl": "peertube.png",
     "platforms": [
+      "Fediverse",
       "Web"
     ],
     "supportedElements": [
@@ -2738,6 +2739,7 @@
     "appUrl": "https://cast.garden",
     "appIconUrl": "castgarden.png",
     "platforms": [
+      "Fediverse",
       "Hive",
       "Mobile",
       "Web"
