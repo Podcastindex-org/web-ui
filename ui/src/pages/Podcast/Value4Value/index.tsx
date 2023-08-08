@@ -36,7 +36,8 @@ interface IProps {
 export default class Value4Value extends React.PureComponent<IProps> {
     state = {
         results: [],
-        loading: true,
+        loadingPopular: true,
+        loadingAll: true,
         selectedPage: null,
         pages: new Map<string, PageData>(),
         total: 0,
@@ -57,6 +58,7 @@ export default class Value4Value extends React.PureComponent<IProps> {
     async componentDidMount(): Promise<void> {
         const {initialDisplay} = this.state
         this._isMounted = true
+        const hash = this.getHash()
 
         let popular = (await this.getValue4ValuePodcasts(200)).feeds as Array<any>
 
@@ -71,6 +73,20 @@ export default class Value4Value extends React.PureComponent<IProps> {
             pages.set(value, {groupPages: [], displayCount: initialDisplay})
         })
         pages.set(SpecialPages.OTHER, {groupPages: [], displayCount: initialDisplay})
+        pages.set(SpecialPages.ALL, {groupPages: [], displayCount: initialDisplay})
+
+        if (this._isMounted) {
+            this.setState(
+                {
+                    loadingPopular: false,
+                    pages: pages,
+                    total: popular.length,
+                },
+                () => {
+                    this.updateSelectedPage(hash)
+                }
+            )
+        }
 
         const allPages = []
 
@@ -109,13 +125,10 @@ export default class Value4Value extends React.PureComponent<IProps> {
 
         pages.set(SpecialPages.ALL, {groupPages: allPages, displayCount: initialDisplay})
 
-        const hash = this.getHash()
-
         if (this._isMounted) {
             this.setState(
                 {
-                    loading: false,
-                    pages: pages,
+                    loadingAll: false,
                     total: grandTotal,
                 },
                 () => {
@@ -204,7 +217,7 @@ export default class Value4Value extends React.PureComponent<IProps> {
             let {groupPages, displayCount} = pageData
 
             if (groupPages) {
-                if (groupPages.length < initialDisplay)
+                if (0 < groupPages.length && groupPages.length < initialDisplay)
                     displayCount = groupPages.length
             }
 
@@ -374,10 +387,25 @@ export default class Value4Value extends React.PureComponent<IProps> {
     }
 
     renderResults() {
-        let {selectedPage, pages} = this.state
+        let {selectedPage} = this.state
+        const {pages, loadingPopular, loadingAll, total} = this.state
 
         if (selectedPage === null) {
             selectedPage = SpecialPages.POPULAR
+        }
+
+        if (selectedPage === SpecialPages.POPULAR && loadingPopular) {
+            return (
+                <div className="loader-wrapper" style={{height: 300}}>
+                    <ReactLoading type="cylon" color="#e90000"/>
+                </div>
+            )
+        } else if (selectedPage !== SpecialPages.POPULAR && loadingAll) {
+            return (
+                <div className="loader-wrapper" style={{height: 300}}>
+                    <ReactLoading type="cylon" color="#e90000"/>
+                </div>
+            )
         }
 
         const pageData = pages.get(selectedPage)
@@ -410,11 +438,20 @@ export default class Value4Value extends React.PureComponent<IProps> {
     }
 
     render() {
-        const {loading, total} = this.state
-        if (total === 0 && !loading) {
+        const {loadingPopular, loadingAll, total} = this.state
+        if (total === 0 && !loadingPopular && !loadingAll) {
             const noResults = 'No Value 4 Value podcasts found'
             updateTitle(noResults)
             return <div className="v4v">{noResults}</div>
+        }
+
+        let totalString = total.toLocaleString()
+        if (!loadingPopular && loadingAll){
+            totalString = `${total.toLocaleString()}+`
+        }
+
+        if (loadingPopular || loadingAll){
+            totalString = `${totalString} (loading)`
         }
 
         updateTitle(`Value 4 Value Podcasts`)
@@ -424,7 +461,7 @@ export default class Value4Value extends React.PureComponent<IProps> {
                 <p>These podcasts are set up to receive Bitcoin payments in real-time over the Lightning network using
                     compatible <b><Link to="/apps">Podcasting 2.0 apps</Link></b>.</p>
 
-                <p>There are <b>{total.toLocaleString()}</b> Value 4 Value podcasts! Add yours by including the value block on your feed
+                <p>There are <b>{totalString}</b> Value 4 Value podcasts! Add yours by including the value block on your feed
                     using <b><Link to="https://podcasterwallet.com/">podcasterwallet.com</Link></b></p>
 
                 <br/>
@@ -437,17 +474,8 @@ export default class Value4Value extends React.PureComponent<IProps> {
                 <p><a href="https://stats.podcastindex.org/v4v">Value4Value Podcasting Ecosystem</a> stats</p>
                 <br/>
 
-                {
-                    loading ?
-                        <div className="loader-wrapper" style={{height: 300}}>
-                            <ReactLoading type="cylon" color="#e90000"/>
-                        </div>
-                        :
-                        <div>
-                            {this.renderPageLinks()}
-                            {this.renderResults()}
-                        </div>
-                }
+                {this.renderPageLinks()}
+                {this.renderResults()}
             </div>
         )
     }
