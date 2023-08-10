@@ -45,6 +45,7 @@ export default class ResultsEpisodes extends React.PureComponent<IProps> {
                     podcast={podcast}
                     episodes={{items: episodes}}
                     initialDisplay={initialDisplay}
+                    episodesTitle="Episode Results"
                 />
             </div>
         )
