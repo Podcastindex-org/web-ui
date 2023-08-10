@@ -100,7 +100,7 @@ export default class Value4Value extends React.PureComponent<IProps> {
             if (status !== "true" || startAt === undefined || !this._isMounted) {
                 break
             }
-            grandTotal += total
+            grandTotal = total // total reports the total for all feeds
 
             feeds.forEach((value) => {
                 allPages.push(value)
