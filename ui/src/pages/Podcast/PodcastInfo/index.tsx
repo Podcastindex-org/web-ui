@@ -204,7 +204,14 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
     }
 
     render() {
-        const {loadingFeed, loadingEpisodes, result, episodeId, episodes} = this.state
+        const {
+            loadingFeed,
+            loadingEpisodes,
+            result,
+            episodeId,
+            episodes,
+        } = this.state
+        const {medium} = result
         if ((result === undefined || result.length === 0) && !loadingFeed) {
             const errorMessage = `Unknown podcast ID: ${this.props.match.params.podcastId}`
             updateTitle(errorMessage)
@@ -219,6 +226,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
             )
         }
 
+        const episodesTitle = medium === "music" ? "Tracks" : "Episodes"
         return (
             <div className="page-content">
                 {this.renderHeader()}
@@ -233,6 +241,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
                             episodes={episodes}
                             selectedId={episodeId}
                             onSelectedEpisodeChange={this.onSelectedEpisodeChange}
+                            episodesTitle={episodesTitle}
                         />
                 }
             </div>

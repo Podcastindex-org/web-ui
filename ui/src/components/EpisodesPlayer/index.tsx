@@ -19,9 +19,15 @@ interface IProps {
     }
     initialDisplay?: number
     onSelectedEpisodeChange?: (episodeId: number) => void
+    liveTitle?: string
+    episodesTitle?: string
 }
 
 export default class EpisodesPlayer extends React.PureComponent<IProps> {
+    static defaultProps = {
+        liveTitle: "Live Now!",
+        episodesTitle: "Episodes",
+    }
     state = {
         selectedEpisode: undefined,
         selectedEpisodeIsLive: false,
@@ -161,7 +167,14 @@ export default class EpisodesPlayer extends React.PureComponent<IProps> {
     }
 
     renderEpisodes() {
-        const {podcast, episodes, selectedId, initialDisplay} = this.props
+        const {
+            podcast,
+            episodes,
+            selectedId,
+            initialDisplay,
+            episodesTitle,
+            liveTitle
+        } = this.props
         const {playingEpisode, selectedEpisodeIsLive} = this.state
         const {medium} = podcast
 
@@ -191,7 +204,7 @@ export default class EpisodesPlayer extends React.PureComponent<IProps> {
             <>
                 {episodes.live?.length > 0 ? (
                     <EpisodeList
-                        title="Live Now!"
+                        title={liveTitle}
                         podcast={podcast}
                         episodes={sortedLiveEpisodes}
                         playingEpisode={playingEpisode}
@@ -202,7 +215,7 @@ export default class EpisodesPlayer extends React.PureComponent<IProps> {
                     />
                 ) : ''}
                 <EpisodeList
-                    title="Episodes"
+                    title={episodesTitle}
                     podcast={podcast}
                     episodes={sortedEpisodes}
                     playingEpisode={playingEpisode}
