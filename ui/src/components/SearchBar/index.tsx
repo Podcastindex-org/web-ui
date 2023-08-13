@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from "react";
 import SearchIcon from '../../../images/search.svg'
 import './styles.scss'
 
@@ -13,30 +13,48 @@ interface IProps {
 
 export default class Searchbar extends React.Component<IProps> {
     static defaultProps = {}
+    searchInputRef = React.createRef<HTMLInputElement>()
 
     constructor(props: IProps) {
         super(props)
+
+        this.onSubmit = this.onSubmit.bind(this);
+    }
+
+    onSubmit(evt: React.ChangeEvent<HTMLFormElement>) {
+        const {onSearchSubmit} = this.props
+        if (onSearchSubmit !== null) {
+            onSearchSubmit(evt)
+        }
+        // this will remove focus of the input form and close the keyboard on mobile
+        this.searchInputRef.current.blur()
+        evt.preventDefault()
     }
 
     render() {
-        const { search, searchType, onSearchChange, onSearchTypeChange, onSearchSubmit } = this.props
+        const {search, searchType, onSearchChange, onSearchTypeChange} = this.props
         let cleanSearchType = searchType || ""
-        if (cleanSearchType === "")
-        {
+        if (cleanSearchType === "") {
             cleanSearchType = "all"
         }
         cleanSearchType = cleanSearchType.toLowerCase()
 
+        // noinspection SpellCheckingInspection
+        const inputProps = {
+            enterkeyhint: "done" // not recognized by typescript so set here and append to input, lowercase to avoid react error in console
+        }
         return (
-            <form className="topbar-search" onSubmit={onSearchSubmit}>
-                <img height={18} width={18} src={SearchIcon} alt="" />
+            <form className="topbar-search" onSubmit={this.onSubmit}>
+                <img height={18} width={18} src={SearchIcon} alt=""/>
                 <input
+                    ref={this.searchInputRef}
                     id="search"
                     type="text"
                     value={search}
                     placeholder="Search for podcasts or music"
                     onChange={onSearchChange}
                     autoComplete="off"
+                    {...inputProps}
                 />
                 <div className="search-type-wrapper">
                     <select
