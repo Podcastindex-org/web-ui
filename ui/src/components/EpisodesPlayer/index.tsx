@@ -97,7 +97,7 @@ export default class EpisodesPlayer extends React.PureComponent<IProps> {
                 selectedEpisodeIsLive: liveEpisode
             },
             () => {
-                if (onSelectedEpisodeChange) {
+                if (onSelectedEpisodeChange && newSelectedEpisode !== undefined) {
                     onSelectedEpisodeChange(newSelectedEpisode.id)
                 }
             })
