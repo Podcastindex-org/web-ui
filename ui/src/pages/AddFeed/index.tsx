@@ -193,12 +193,16 @@ export default class AddFeed extends React.PureComponent<IProps> {
         const {feedInfo, feed, result} = this.state
         if (feedInfo === undefined) {
             return this.renderLoading("feed-info")
-        } else if (feedInfo === null) {
+        } else if (feedInfo === null || feedInfo?.length === 0) {
             const {feedId} = result
             return (
                 <div className="add-result podcast-fail">
                     <h3>Result</h3>
-                    <p>Feed {feed} already exists</p>
+                    <p>Feed {feed} already exists but unable to get data.</p>
+                    <p>It is possible this feed has previously been added but was removed for some reason.</p>
+                    <p>
+                        Please email <a href="mailto:info@podcastindex.org"> info@podcastindex.org </a> if you believe the feed should be restored. Please include the feed URL in the email.
+                    </p>
                     <p>View feed page for <Link
                         to={`/podcast/${feedId}`}
                     >
