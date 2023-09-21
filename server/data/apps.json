@@ -1312,6 +1312,55 @@
     ]
   },
   {
+    "appName": "Podcast Mirror by Blubrry",
+    "appType": [
+      "website"
+    ],
+    "appUrl": "https://www.podcastmirror.com/",
+    "appIconUrl": "podcastmirror.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Funding",
+        "elementURL": "https://www.podcastmirror.com/podcasting-2-0-documentation/"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://www.podcastmirror.com/podcasting-2-0-documentation/"
+      },
+      {
+        "elementName": "Live",
+        "elementURL": "https://www.podcastmirror.com/podcasting-2-0-documentation/"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://www.podcastmirror.com/podcasting-2-0-documentation/"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://www.podcastmirror.com/podcasting-2-0-documentation/"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://www.podcastmirror.com/podcasting-2-0-documentation/"
+      },
+      {
+        "elementName": "Txt",
+        "elementURL": "https://www.podcastmirror.com/podcasting-2-0-documentation/"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://www.podcastmirror.com/podcasting-2-0-documentation/"
+      },
+       {
+        "elementName": "OP3",
+        "elementURL": "https://www.podcastmirror.com/podcasting-2-0-documentation/"
+      }
+    ]
+  },
+  {
     "appName": "Podnews podcast",
     "appType": [
       "website"
