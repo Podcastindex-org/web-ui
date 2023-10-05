@@ -376,6 +376,18 @@
       {
         "elementName": "Live",
         "elementURL": "https://twitter.com/fountain_app/status/1663171268902879232"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://fountainpodcasts.substack.com/p/fountain-08-music-podcasts-beta-player"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://fountain.fm"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://fountain.fm"
       }
     ]
   },
