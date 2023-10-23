@@ -58,6 +58,13 @@ export default class Results extends React.PureComponent<IProps> {
             searchType = "all"
         }
 
+        // check if id may have been entered
+        const number = Number(query)
+        let firstResult = null
+        if (!isNaN(number) && searchType !== "person"){
+            firstResult = await (await this.getFeedById(query))?.feed
+        }
+
         let results = []
         if (query) {
             switch (searchType) {
@@ -75,6 +82,11 @@ export default class Results extends React.PureComponent<IProps> {
                     results = await (await this.getTermSearchResults(query, true)).feeds as Array<any>
             }
         }
+
+        if (firstResult) {
+            results.unshift(firstResult)
+        }
+
         if (this._isMounted) {
             this.setState({
                 loading: false,
@@ -83,6 +95,16 @@ export default class Results extends React.PureComponent<IProps> {
                 results,
             })
         }
+    }
+
+    async getFeedById(query: string) {
+        query = encodeSearch(query)
+        // noinspection SpellCheckingInspection
+        let response = await fetch(`/api/podcasts/byfeedid?id=${query}`, {
+            // credentials: 'same-origin',
+            method: 'GET',
+        })
+        return await response.json()
     }
 
     async getTermSearchResults(query: string, similar: boolean = false) {
