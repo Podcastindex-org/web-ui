@@ -3016,5 +3016,52 @@
         "elementURL": "https://lnbeats.com"
       }
     ]
+  },
+  {
+    "appName": "Music Side Project",
+    "appType": [
+      "hosting",
+      "website"
+    ],
+    "appUrl": "https://musicsideproject.com",
+    "appIconUrl": "msp.png",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://musicsideproject.com"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://musicsideproject.com"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://musicsideproject.com"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://musicsideproject.com"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://musicsideproject.com"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://musicsideproject.com"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://musicsideproject.com"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://musicsideproject.com"
+      }
+    ]
   }
 ]
