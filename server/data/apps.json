@@ -3063,5 +3063,95 @@
         "elementURL": "https://musicsideproject.com"
       }
     ]
+  },
+  {
+    "appName": "Sovereign Feeds",
+    "appType": [
+      "hosting",
+      "website"
+    ],
+    "appUrl": "https://sovereignfeeds.com",
+    "appIconUrl": "sf.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Block",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Images",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "License",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Live",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Location",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "OP3",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Social Interact",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Txt",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Wallet switching",
+        "elementURL": "https://sovereignfeeds.com"
+      }
+    ]
   }
 ]
