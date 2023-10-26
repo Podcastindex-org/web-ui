@@ -3153,5 +3153,52 @@
         "elementURL": "https://sovereignfeeds.com"
       }
     ]
+  },
+  {
+    "appName": "The Split Kit",
+    "appType": [
+      "app",
+      "website"
+    ],
+    "appUrl": "https://www.thesplitkit.com",
+    "appIconUrl": "split-kit.png",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Boostagrams",
+        "elementURL": "https://www.thesplitkit.com"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://www.thesplitkit.com"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://www.thesplitkit.com"
+      },
+      {
+        "elementName": "Live",
+        "elementURL": "https://www.thesplitkit.com"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://www.thesplitkit.com"
+      },
+      {
+        "elementName": "Sat Streaming",
+        "elementURL": "https://www.thesplitkit.com"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://www.thesplitkit.com"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://www.thesplitkit.com"
+      }
+    ]
   }
 ]
