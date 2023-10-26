@@ -2956,5 +2956,57 @@
         "elementURL": "https://podcastindex.social/@cameron/110701560454851246"
       }
     ]
+  },
+  {
+    "appName": "LNBeats",
+    "appType": [
+      "app",
+      "music player",
+      "website"
+    ],
+    "appUrl": "https://lnbeats.com",
+    "appIconUrl": "lnbeats.png",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Boostagrams",
+        "elementURL": "https://lnbeats.com"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://lnbeats.com"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://lnbeats.com"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://lnbeats.com"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://lnbeats.com"
+      },
+      {
+        "elementName": "Sat Streaming",
+        "elementURL": "https://lnbeats.com"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://lnbeats.com"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://lnbeats.com"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://lnbeats.com"
+      }
+    ]
   }
 ]
