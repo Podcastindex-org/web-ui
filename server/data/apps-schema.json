@@ -35,6 +35,7 @@
               "social links",
               "node hosting",
               "podcast player",
+              "music player",
               "video",
               "sn-network",
               "blockchain",
@@ -129,7 +130,8 @@
             "OP3",
             "Images",
             "License",
-            "Txt"
+            "Txt",
+            "Wallet Switching"
           ]
         },
         "elementURL": {

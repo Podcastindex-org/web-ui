@@ -2305,6 +2305,14 @@
       {
         "elementName": "Podping",
         "elementURL": "https://rssblue.com/blog/podping-is-live"
+      },
+      {
+        "elementName": "Wallet Switching",
+        "elementURL": "https://rssblue.com/help/music-shows"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://rssblue.com/help/music-shows"
       }
     ]
   },
@@ -2950,6 +2958,250 @@
       {
         "elementName": "Value",
         "elementURL": "https://podcastindex.social/@cameron/110701560454851246"
+      }
+    ]
+  },
+  {
+    "appName": "LNBeats",
+    "appType": [
+      "app",
+      "music player",
+      "website"
+    ],
+    "appUrl": "https://lnbeats.com",
+    "appIconUrl": "lnbeats.png",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Boostagrams",
+        "elementURL": "https://lnbeats.com"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://lnbeats.com"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://lnbeats.com"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://lnbeats.com"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://lnbeats.com"
+      },
+      {
+        "elementName": "Sat Streaming",
+        "elementURL": "https://lnbeats.com"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://lnbeats.com"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://lnbeats.com"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://lnbeats.com"
+      },
+      {
+        "elementName": "Wallet Switching",
+        "elementURL": "https://lnbeats.com"
+      }
+    ]
+  },
+  {
+    "appName": "Music Side Project",
+    "appType": [
+      "hosting",
+      "website"
+    ],
+    "appUrl": "https://musicsideproject.com",
+    "appIconUrl": "msp.png",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://musicsideproject.com"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://musicsideproject.com"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://musicsideproject.com"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://musicsideproject.com"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://musicsideproject.com"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://musicsideproject.com"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://musicsideproject.com"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://musicsideproject.com"
+      }
+    ]
+  },
+  {
+    "appName": "Sovereign Feeds",
+    "appType": [
+      "hosting",
+      "website"
+    ],
+    "appUrl": "https://sovereignfeeds.com",
+    "appIconUrl": "sf.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Block",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Images",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "License",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Live",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Location",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "OP3",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Social Interact",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Txt",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://sovereignfeeds.com"
+      },
+      {
+        "elementName": "Wallet Switching",
+        "elementURL": "https://sovereignfeeds.com"
+      }
+    ]
+  },
+  {
+    "appName": "The Split Kit",
+    "appType": [
+      "app",
+      "website"
+    ],
+    "appUrl": "https://www.thesplitkit.com",
+    "appIconUrl": "split-kit.png",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Boostagrams",
+        "elementURL": "https://www.thesplitkit.com"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://www.thesplitkit.com"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://www.thesplitkit.com"
+      },
+      {
+        "elementName": "Live",
+        "elementURL": "https://www.thesplitkit.com"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://www.thesplitkit.com"
+      },
+      {
+        "elementName": "Sat Streaming",
+        "elementURL": "https://www.thesplitkit.com"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://www.thesplitkit.com"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://www.thesplitkit.com"
+      },
+      {
+        "elementName": "Wallet Switching",
+        "elementURL": "https://www.thesplitkit.com"
       }
     ]
   }
