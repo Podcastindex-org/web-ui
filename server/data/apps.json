@@ -2711,102 +2711,110 @@
     ]
   },
    {
-        "appName": "Podfans",
-        "appType": ["website", "podcast player"],
-        "appUrl": "https://podfans.fm",
-        "appIconUrl": "podfans.png",
-        "platforms": ["Web"],
-        "supportedElements": [
-            {
-                "elementName": "Funding",
-                "elementURL": "https://twitter.com/joinpodfans/status/1677226160185389056?s=20"
-            },
-            {
-                "elementName": "Chapters",
-                "elementURL": "https://twitter.com/joinpodfans/status/1639591674807500803?s=20"
-            },
-            {
-                "elementName": "Soundbite",
-                "elementURL": "https://twitter.com/joinpodfans/status/1677239340013944834?s=20"
-            },
-            {
-                "elementName": "Location",
-                "elementURL": "https://twitter.com/joinpodfans/status/1678788168877850625?s=20"
-            },
-            {
-                "elementName": "Trailer",
-                "elementURL": "https://twitter.com/joinpodfans/status/1677265500877848576?s=20"
-            },
-            {
-                "elementName": "License",
-                "elementURL": "https://twitter.com/joinpodfans/status/1677267388935307269?s=20"
-            },
-            {
-                "elementName": "Value",
-                "elementURL": "https://twitter.com/joinpodfans/status/1677275357450317832?s=20"
-            },
-            {
-                "elementName": "Alternate Enclosure",
-                "elementURL": "https://twitter.com/joinpodfans/status/1639598862536003584?s=20"
-            },
-            {
-                "elementName": "Boostagrams",
-                "elementURL": "https://twitter.com/joinpodfans/status/1677303053202882561?s=20"
-            },
-            {
-                "elementName": "Live",
-                "elementURL": "https://twitter.com/joinpodfans/status/1624114539695419392?s=20"
-            },
-            {
-                "elementName": "Sat Streaming",
-                "elementURL": "https://twitter.com/joinpodfans/status/1677302283107815426?s=20"
-            },
-            {
-                "elementName": "Search",
-                "elementURL": "https://twitter.com/joinpodfans/status/1677247968309653504?s=20"
-            },
-            {
-                "elementName": "Social Interact",
-                "elementURL": "https://twitter.com/joinpodfans/status/1677269921611366401?s=20"
-            },
-            {
-                "elementName": "Transcript",
-                "elementURL": "https://twitter.com/joinpodfans/status/1671892521902026752?s=20"
-            },
-            {
-                "elementName": "Locked",
-                "elementURL": "https://twitter.com/joinpodfans/status/1677224069035356162?s=20"
-            },
-            {
-                "elementName": "Podping",
-                "elementURL": "https://twitter.com/joinpodfans/status/1677271037791092736?s=20"
-            },
-            {
-                "elementName": "Person",
-                "elementURL": "https://twitter.com/joinpodfans/status/1677244181352251392?s=20"
-            },
-            {
-                "elementName": "GUID",
-                "elementURL": "https://twitter.com/joinpodfans/status/1677268263078600705?s=20"
-            },
-            {
-                "elementName": "Medium",
-                "elementURL": "https://twitter.com/joinpodfans/status/1618970078611136512?s=20"
-            },
-            {
-                "elementName": "Images",
-                "elementURL": "https://twitter.com/joinpodfans/status/1678790180101128194?s=20"
-            },
-            {
-                "elementName": "Season",
-                "elementURL": "https://twitter.com/joinpodfans/status/1678797109045219329?s=20"
-            },
-            {
-                "elementName": "Episode",
-                "elementURL": "https://twitter.com/joinpodfans/status/1678797114363478017?s=20"
-            }
-        ]
-    },
+    "appName": "Podfans",
+    "appType": ["app", "website", "podcast player"],
+    "appUrl": "https://podfans.fm",
+    "appIconUrl": "podfans.png",
+    "platforms": ["Web", "Mobile", "iOS", "Android", "macOS", "Windows", "Linux"],
+    "supportedElements": [
+       {
+          "elementName": "Funding",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c3544d76f0e40f8b49dba"
+        },
+        {
+          "elementName": "Chapters",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c35b3d76f0e40f8b49e32"
+        },
+        {
+          "elementName": "Soundbite",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c366fd76f0e40f8b49ea7"
+        },
+        {
+          "elementName": "Location",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=64e91e344cd9fbbb290c69d7"
+        },
+        {
+          "elementName": "Trailer",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c38add76f0e40f8b49ff0"
+        },
+        {
+          "elementName": "License",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c391ad76f0e40f8b4a019"
+        },
+        {
+          "elementName": "Value",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653cf749f78f2e7f4d92608b"
+        },
+        {
+          "elementName": "Alternate Enclosure",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c3971d76f0e40f8b4a036"
+        },
+        {
+          "elementName": "Boostagrams",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653cf7a4f78f2e7f4d9260bd"
+        },
+        {
+          "elementName": "Live",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c3aa9d76f0e40f8b4a0bb"
+        },
+        {
+          "elementName": "Sat Streaming",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653cf8f8f78f2e7f4d92615a"
+        },
+        {
+          "elementName": "Search",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653cf852f78f2e7f4d92611c"
+        },
+        {
+          "elementName": "Social Interact",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c3bedd76f0e40f8b4a10f"
+        },
+        {
+          "elementName": "Transcript",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c341bd76f0e40f8b49d04"
+        },
+        {
+          "elementName": "Locked",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=64e9143b4cd9fbbb290c687b"
+        },
+        {
+          "elementName": "Podping",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c3e29d76f0e40f8b4a17a"
+        },
+        {
+          "elementName": "Person",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c3724d76f0e40f8b49ee3"
+        },
+        {
+          "elementName": "GUID",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c39e4d76f0e40f8b4a086"
+        },
+        {
+          "elementName": "Medium",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c3a60d76f0e40f8b4a091"
+        },
+        {
+          "elementName": "Images",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=64e91bb54cd9fbbb290c69ab"
+        },
+        {
+          "elementName": "Season",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=64e917774cd9fbbb290c6934"
+        },
+        {
+          "elementName": "Podroll",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c3d24d76f0e40f8b4a15d"
+        },
+        {
+          "elementName": "Wallet Switching",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=64e53d9277fb744ab27183f9"
+        },
+        {
+          "elementName": "Episode",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=64e917774cd9fbbb290c6934"
+        }
+    ]
+  },
   {
     "appName": "CastGarden",
     "appType": [
