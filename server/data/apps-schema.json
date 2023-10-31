@@ -125,6 +125,7 @@
             "GUID",
             "Medium",
             "Live",
+            "Live Boosts",
             "Block",
             "Social Interact",
             "OP3",
@@ -132,7 +133,8 @@
             "License",
             "Txt",
             "Wallet Switching",
-            "Podroll"
+            "Podroll",
+            "Value Time Split"
           ]
         },
         "elementURL": {
