@@ -3238,5 +3238,94 @@
         "elementURL": "https://www.thesplitkit.com"
       }
     ]
-  }
+  },
+  {
+    "appName": "Podhome",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://www.podhome.fm/",
+    "appIconUrl": "podhome.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "GUID",
+        "elementURL": "https://www.podhome.fm/docs/podcasting-2-0"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://www.podhome.fm/docs/chapters"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://www.podhome.fm/docs/transcripts"
+      },
+      {
+        "elementName": "Soundbite",
+        "elementURL": "https://www.podhome.fm/docs/clips"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://www.podhome.fm/docs/podcasting-2-0"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://www.podhome.fm/docs/podcasting-2-0"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://www.podhome.fm/docs/people"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://www.podhome.fm/docs/podcasting-2-0"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://www.podhome.fm/docs/podcasting-2-0"
+      },
+      {
+        "elementName": "Trailer",
+        "elementURL": "https://www.podhome.fm/docs/podcasting-2-0"
+      },
+      {
+        "elementName": "License",
+        "elementURL": "https://www.podhome.fm/docs/podcasting-2-0"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://www.podhome.fm/docs/podcasting-2-0"
+      },
+      {
+        "elementName": "Images",
+        "elementURL": "https://www.podhome.fm/docs/podcasting-2-0"
+      },
+      {
+        "elementName": "Txt",
+        "elementURL": "https://www.podhome.fm/docs/podcasting-2-0"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://www.podhome.fm/docs/podcasting-2-0"
+      },
+      {
+        "elementName": "Podroll",
+        "elementURL": "https://www.podhome.fm/docs/podcasting-2-0"
+      },
+      {
+        "elementName": "Update Frequency",
+        "elementURL": "https://www.podhome.fm/docs/podcasting-2-0"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://www.podhome.fm/docs/use-value-4-value"
+      },
+      {
+        "elementName": "Value Time Split",
+        "elementURL": "https://www.podhome.fm/docs/use-value-4-value"
+      }
+    ]
+  }  
 ]
