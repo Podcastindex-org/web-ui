@@ -291,6 +291,10 @@
         "elementURL": "https://twitter.com/Podverse/status/1521198937742487553"
       },
       {
+        "elementName": "Live Boosts",
+        "elementURL": "https://podcastindex.social/@mitch/111478284693903974"
+      },
+      {
         "elementName": "Sat Streaming",
         "elementURL": "https://podcastindex.social/@podverse/109536384776878713"
       },
@@ -313,6 +317,10 @@
       {
         "elementName": "Value",
         "elementURL": "https://twitter.com/Podverse/status/1324729288281632771?s=20"
+      },
+      {
+        "elementName": "Video",
+        "elementURL": "https://podverse.fm/es/membership"
       }
     ]
   },
