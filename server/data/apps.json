@@ -2876,6 +2876,18 @@
         {
           "elementName": "Episode",
           "elementURL": "https://podfans.fm/feedback?tab=changelog&id=64e917774cd9fbbb290c6934"
+        },
+        {
+          "elementName": "Video",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog"
+        },
+        {
+          "elementName": "Value Time Split",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog"
+        },
+        {
+          "elementName": "Update Frequency",
+          "elementURL": "https://podfans.fm/feedback?tab=changelog"
         }
     ]
   },
