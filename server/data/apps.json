@@ -287,12 +287,24 @@
         "elementURL": "https://twitter.com/Podverse/status/1325734448608899072?s=20"
       },
       {
+        "elementName": "GUID",
+        "elementURL": "https://podverse.fm/es/membership"
+      },
+      {
         "elementName": "Live",
         "elementURL": "https://twitter.com/Podverse/status/1521198937742487553"
       },
       {
         "elementName": "Live Boosts",
         "elementURL": "https://podcastindex.social/@mitch/111478284693903974"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://podverse.fm/es/membership"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://podverse.fm/es/membership"
       },
       {
         "elementName": "Sat Streaming",
@@ -320,6 +332,14 @@
       },
       {
         "elementName": "Video",
+        "elementURL": "https://podverse.fm/es/membership"
+      },
+      {
+        "elementName": "Value Time Split",
+        "elementURL": "https://podverse.fm/es/membership"
+      },
+      {
+        "elementName": "Wallet Switching",
         "elementURL": "https://podverse.fm/es/membership"
       }
     ]
