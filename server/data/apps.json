@@ -2807,119 +2807,119 @@
     ]
   },
    {
-    "appName": "Podfans",
+    "appName": "TrueFans",
     "appType": ["app", "website", "podcast player"],
-    "appUrl": "https://podfans.fm",
+    "appUrl": "https://truefans.fm",
     "appIconUrl": "podfans.png",
     "platforms": ["Web", "Mobile", "iOS", "Android", "macOS", "Windows", "Linux"],
     "supportedElements": [
        {
           "elementName": "Funding",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c3544d76f0e40f8b49dba"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3544d76f0e40f8b49dba"
         },
         {
           "elementName": "Chapters",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c35b3d76f0e40f8b49e32"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c35b3d76f0e40f8b49e32"
         },
         {
           "elementName": "Soundbite",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c366fd76f0e40f8b49ea7"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c366fd76f0e40f8b49ea7"
         },
         {
           "elementName": "Location",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=64e91e344cd9fbbb290c69d7"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=64e91e344cd9fbbb290c69d7"
         },
         {
           "elementName": "Trailer",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c38add76f0e40f8b49ff0"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c38add76f0e40f8b49ff0"
         },
         {
           "elementName": "License",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c391ad76f0e40f8b4a019"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c391ad76f0e40f8b4a019"
         },
         {
           "elementName": "Value",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653cf749f78f2e7f4d92608b"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653cf749f78f2e7f4d92608b"
         },
         {
           "elementName": "Alternate Enclosure",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c3971d76f0e40f8b4a036"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3971d76f0e40f8b4a036"
         },
         {
           "elementName": "Boostagrams",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653cf7a4f78f2e7f4d9260bd"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653cf7a4f78f2e7f4d9260bd"
         },
         {
           "elementName": "Live",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c3aa9d76f0e40f8b4a0bb"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3aa9d76f0e40f8b4a0bb"
         },
         {
           "elementName": "Sat Streaming",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653cf8f8f78f2e7f4d92615a"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653cf8f8f78f2e7f4d92615a"
         },
         {
           "elementName": "Search",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653cf852f78f2e7f4d92611c"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653cf852f78f2e7f4d92611c"
         },
         {
           "elementName": "Social Interact",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c3bedd76f0e40f8b4a10f"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3bedd76f0e40f8b4a10f"
         },
         {
           "elementName": "Transcript",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c341bd76f0e40f8b49d04"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c341bd76f0e40f8b49d04"
         },
         {
           "elementName": "Locked",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=64e9143b4cd9fbbb290c687b"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=64e9143b4cd9fbbb290c687b"
         },
         {
           "elementName": "Podping",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c3e29d76f0e40f8b4a17a"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3e29d76f0e40f8b4a17a"
         },
         {
           "elementName": "Person",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c3724d76f0e40f8b49ee3"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3724d76f0e40f8b49ee3"
         },
         {
           "elementName": "GUID",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c39e4d76f0e40f8b4a086"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c39e4d76f0e40f8b4a086"
         },
         {
           "elementName": "Medium",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c3a60d76f0e40f8b4a091"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3a60d76f0e40f8b4a091"
         },
         {
           "elementName": "Images",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=64e91bb54cd9fbbb290c69ab"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=64e91bb54cd9fbbb290c69ab"
         },
         {
           "elementName": "Season",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=64e917774cd9fbbb290c6934"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=64e917774cd9fbbb290c6934"
         },
         {
           "elementName": "Podroll",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=653c3d24d76f0e40f8b4a15d"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3d24d76f0e40f8b4a15d"
         },
         {
           "elementName": "Wallet Switching",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=64e53d9277fb744ab27183f9"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=64e53d9277fb744ab27183f9"
         },
         {
           "elementName": "Episode",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog&id=64e917774cd9fbbb290c6934"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=64e917774cd9fbbb290c6934"
         },
         {
           "elementName": "Video",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog"
         },
         {
           "elementName": "Value Time Split",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog"
         },
         {
           "elementName": "Update Frequency",
-          "elementURL": "https://podfans.fm/feedback?tab=changelog"
+          "elementURL": "https://truefans.fm/feedback?tab=changelog"
         }
     ]
   },
