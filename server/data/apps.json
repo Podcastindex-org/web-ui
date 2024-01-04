@@ -1589,6 +1589,7 @@
     "appUrl": "https://castopod.org/",
     "appIconUrl": "castopod.png",
     "platforms": [
+      "Fediverse",
       "Web"
     ],
     "supportedElements": [
