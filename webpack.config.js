@@ -13,6 +13,11 @@ module.exports = env => ({
         port: 9001,
         historyApiFallback: true,
         proxy: {
+            '/': {
+                changeOrigin: true,
+                target: 'http://localhost:5001',
+                pathRewrite: { '^/': '/' },
+            },
             '/api': {
                 changeOrigin: true,
                 target: 'http://localhost:5001',
@@ -22,8 +27,16 @@ module.exports = env => ({
                 changeOrigin: true,
                 target: 'http://localhost:5001',
                 pathRewrite: { '^/namespace': '/namespace' },
+            },
+            '/podcast': {
+                changeOrigin: true,
+                target: 'http://localhost:5001',
+                pathRewrite: { '^/podcast': '/podcast' },
             }
         },
+        writeToDisk: (filePath) => {
+            return /\.html$|\.ejs$/.test(filePath);
+        }
     },
     entry: './ui/src/index.tsx',
     output: {
@@ -101,7 +114,8 @@ module.exports = env => ({
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, './ui/public', 'index.html'),
+            template: path.resolve(__dirname, './ui/public', 'index.ejs.html'),
+            filename: path.resolve(__dirname, './server/views', 'index.ejs'),
             minify: {
                 removeComments: true,
                 removeRedundantAttributes: true,
