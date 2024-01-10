@@ -300,7 +300,7 @@ app.use('/podcast/:podcastid(\\d+)', async (req, res) => {
 
         if (response?.episode?.id) {
             const { feedTitle, title, description, image } = response.episode
-            const textDescription = description.replaceAll(/<\/?[^>]+(>|$)/gi, '').replaceAll(/[\r\n]/g, ' ')
+            const textDescription = description.replace(new RegExp('<\/?[^>]+(>|$)', 'gi'), '').replace(new RegExp('[\r\n]', 'g'), ' ')
 
             params.title = feedTitle + ' | ' + title
             params.description = textDescription
@@ -312,7 +312,7 @@ app.use('/podcast/:podcastid(\\d+)', async (req, res) => {
 
         if (response?.feed?.id) {
             const { title, description, image } = response.feed
-            const textDescription = description.replaceAll(/<\/?[^>]+(>|$)/gi, '').replaceAll(/[\r\n]/g, ' ')
+            const textDescription = description.replace(new RegExp('<\/?[^>]+(>|$)', 'gi'), '').replace(new RegExp('[\r\n]', 'g'), ' ')
 
             params.title = title
             params.description = textDescription
