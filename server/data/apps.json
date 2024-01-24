@@ -1304,6 +1304,10 @@
       {
         "elementName": "Block",
         "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+          "elementName": "Value Time Split",
+          "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
       }
     ]
   },
@@ -1404,6 +1408,10 @@
       {
         "elementName": "Block",
         "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
+      },
+      {
+          "elementName": "Value Time Split",
+          "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
       }
     ]
   },
