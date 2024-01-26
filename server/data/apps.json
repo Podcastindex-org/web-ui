@@ -1171,7 +1171,8 @@
     "appUrl": "https://Hubhopper.com",
     "appIconUrl": "hubhopper.png",
     "platforms": [
-      "Web", "Android"
+      "Web",
+      "Android"
     ],
     "supportedElements": [
       {
@@ -1306,8 +1307,8 @@
         "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
       },
       {
-          "elementName": "Value Time Split",
-          "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+        "elementName": "Value Time Split",
+        "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
       }
     ]
   },
@@ -1410,8 +1411,8 @@
         "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
       },
       {
-          "elementName": "Value Time Split",
-          "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
+        "elementName": "Value Time Split",
+        "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
       }
     ]
   },
@@ -1458,7 +1459,7 @@
         "elementName": "Medium",
         "elementURL": "https://www.podcastmirror.com/podcasting-2-0-documentation/"
       },
-       {
+      {
         "elementName": "OP3",
         "elementURL": "https://www.podcastmirror.com/podcasting-2-0-documentation/"
       },
@@ -2065,23 +2066,23 @@
         "elementName": "Txt",
         "elementURL": "https://changelog.rss.com/v23-2-2-257210"
       },
-       {
+      {
         "elementName": "Location",
         "elementURL": "https://changelog.rss.com/v23-7-1-268871"
       },
-       {
+      {
         "elementName": "Season",
         "elementURL": "https://changelog.rss.com/v23-7-1-268871"
       },
-       {
+      {
         "elementName": "Episode",
         "elementURL": "https://changelog.rss.com/v23-7-1-268871"
       },
-       {
+      {
         "elementName": "License",
         "elementURL": "https://changelog.rss.com/v23-7-1-268871"
       },
-       {
+      {
         "elementName": "Live",
         "elementURL": "https://help.rss.com/en/support/solutions/articles/44002493451-live-streaming-of-a-podcast-via-the-live-item-tag-lit-"
       }
@@ -2201,8 +2202,8 @@
         "elementURL": "https://disctopia.com"
       },
       {
-        "elementName":"Funding",
-        "elementURL":"https://disctopia.com"
+        "elementName": "Funding",
+        "elementURL": "https://disctopia.com"
       },
       {
         "elementName": "Value",
@@ -2770,7 +2771,6 @@
         "elementName": "Social Interact",
         "elementURL": "https://github.com/Chocobozzz/PeerTube/pull/5487"
       },
-
       {
         "elementName": "Transcript",
         "elementURL": "https://github.com/dhk2/peertube-plugin-lightning/blob/master/CHANGELOG.md"
@@ -2815,121 +2815,152 @@
       }
     ]
   },
-   {
+  {
     "appName": "TrueFans",
-    "appType": ["app", "website", "podcast player"],
+    "appType": [
+      "app",
+      "website",
+      "podcast player"
+    ],
     "appUrl": "https://truefans.fm",
     "appIconUrl": "podfans.png",
-    "platforms": ["Web", "Mobile", "iOS", "Android", "macOS", "Windows", "Linux"],
+    "platforms": [
+      "Web",
+      "Mobile",
+      "iOS",
+      "Android",
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
     "supportedElements": [
-       {
-          "elementName": "Funding",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3544d76f0e40f8b49dba"
-        },
-        {
-          "elementName": "Chapters",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c35b3d76f0e40f8b49e32"
-        },
-        {
-          "elementName": "Soundbite",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c366fd76f0e40f8b49ea7"
-        },
-        {
-          "elementName": "Location",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=64e91e344cd9fbbb290c69d7"
-        },
-        {
-          "elementName": "Trailer",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c38add76f0e40f8b49ff0"
-        },
-        {
-          "elementName": "License",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c391ad76f0e40f8b4a019"
-        },
-        {
-          "elementName": "Value",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653cf749f78f2e7f4d92608b"
-        },
-        {
-          "elementName": "Alternate Enclosure",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3971d76f0e40f8b4a036"
-        },
-        {
-          "elementName": "Boostagrams",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653cf7a4f78f2e7f4d9260bd"
-        },
-        {
-          "elementName": "Live",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3aa9d76f0e40f8b4a0bb"
-        },
-        {
-          "elementName": "Sat Streaming",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653cf8f8f78f2e7f4d92615a"
-        },
-        {
-          "elementName": "Search",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653cf852f78f2e7f4d92611c"
-        },
-        {
-          "elementName": "Social Interact",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3bedd76f0e40f8b4a10f"
-        },
-        {
-          "elementName": "Transcript",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c341bd76f0e40f8b49d04"
-        },
-        {
-          "elementName": "Locked",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=64e9143b4cd9fbbb290c687b"
-        },
-        {
-          "elementName": "Podping",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3e29d76f0e40f8b4a17a"
-        },
-        {
-          "elementName": "Person",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3724d76f0e40f8b49ee3"
-        },
-        {
-          "elementName": "GUID",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c39e4d76f0e40f8b4a086"
-        },
-        {
-          "elementName": "Medium",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3a60d76f0e40f8b4a091"
-        },
-        {
-          "elementName": "Images",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=64e91bb54cd9fbbb290c69ab"
-        },
-        {
-          "elementName": "Season",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=64e917774cd9fbbb290c6934"
-        },
-        {
-          "elementName": "Podroll",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3d24d76f0e40f8b4a15d"
-        },
-        {
-          "elementName": "Wallet Switching",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=64e53d9277fb744ab27183f9"
-        },
-        {
-          "elementName": "Episode",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog&id=64e917774cd9fbbb290c6934"
-        },
-        {
-          "elementName": "Video",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog"
-        },
-        {
-          "elementName": "Value Time Split",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog"
-        },
-        {
-          "elementName": "Update Frequency",
-          "elementURL": "https://truefans.fm/feedback?tab=changelog"
-        }
+      {
+        "elementName": "Funding",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3544d76f0e40f8b49dba"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c35b3d76f0e40f8b49e32"
+      },
+      {
+        "elementName": "Soundbite",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c366fd76f0e40f8b49ea7"
+      },
+      {
+        "elementName": "Location",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=64e91e344cd9fbbb290c69d7"
+      },
+      {
+        "elementName": "Trailer",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c38add76f0e40f8b49ff0"
+      },
+      {
+        "elementName": "License",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c391ad76f0e40f8b4a019"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653cf749f78f2e7f4d92608b"
+      },
+      {
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3971d76f0e40f8b4a036"
+      },
+      {
+        "elementName": "Boostagrams",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653cf7a4f78f2e7f4d9260bd"
+      },
+      {
+        "elementName": "Live",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3aa9d76f0e40f8b4a0bb"
+      },
+      {
+        "elementName": "Sat Streaming",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653cf8f8f78f2e7f4d92615a"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653cf852f78f2e7f4d92611c"
+      },
+      {
+        "elementName": "Social Interact",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3bedd76f0e40f8b4a10f"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c341bd76f0e40f8b49d04"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=64e9143b4cd9fbbb290c687b"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3e29d76f0e40f8b4a17a"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3724d76f0e40f8b49ee3"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c39e4d76f0e40f8b4a086"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3a60d76f0e40f8b4a091"
+      },
+      {
+        "elementName": "Images",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=64e91bb54cd9fbbb290c69ab"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=64e917774cd9fbbb290c6934"
+      },
+      {
+        "elementName": "Podroll",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3d24d76f0e40f8b4a15d"
+      },
+      {
+        "elementName": "Wallet Switching",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=64e53d9277fb744ab27183f9"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog&id=64e917774cd9fbbb290c6934"
+      },
+      {
+        "elementName": "Video",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog"
+      },
+      {
+        "elementName": "Value Time Split",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog"
+      },
+      {
+        "elementName": "Update Frequency",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog"
+      }
+    ]
+  },
+  {
+    "appName": "Apple Podcasts",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "appUrl": "https://apps.apple.com/us/app/apple-podcasts/id525463029",
+    "appIconUrl": "applepodcasts.jpg",
+    "platforms": [
+      "iOS",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://twitter.com/GoPodfriend/status/1316847938828742656"
+      }
     ]
   },
   {
@@ -3059,8 +3090,8 @@
     "appType": [
       "directory",
       "hosting",
-      "website", 
-      "video", 
+      "website",
+      "video",
       "other"
     ],
     "appUrl": "https://ipfspodcasting.net",
@@ -3424,5 +3455,5 @@
         "elementURL": "https://www.podhome.fm/docs/use-value-4-value"
       }
     ]
-  }  
+  }
 ]
