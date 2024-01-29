@@ -3459,7 +3459,8 @@
   {
     "appName": "Overhaul FM",
     "appType": [
-      "Podcast Player"
+      "app",
+      "podcast player"
     ],
     "appUrl": "https://Onelink.to/x8u7u4",
     "appIconUrl": "overhaulfm.png",
