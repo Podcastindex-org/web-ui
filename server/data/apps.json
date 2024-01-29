@@ -3455,5 +3455,28 @@
         "elementURL": "https://www.podhome.fm/docs/use-value-4-value"
       }
     ]
+  },
+  {
+    "appName": "Overhaul FM",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "appUrl": "https://Onelink.to/x8u7u4",
+    "appIconUrl": "overhaulfm.png",
+    "platforms": [
+      "Android",
+      "iOS"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Episode",
+        "elementURL": "https://www.overhaul.fm"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://www.overhaul.fm"
+      }
+    ]
   }
 ]
