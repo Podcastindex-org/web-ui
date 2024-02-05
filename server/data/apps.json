@@ -2423,6 +2423,18 @@
       {
         "elementName": "Search",
         "elementURL": "https://rssblue.com/help/music-shows"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://rssblue.com/help/episode-metadata#season-and-episode-numbers"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://rssblue.com/help/episode-metadata#season-and-episode-numbers"
+      },
+      {
+        "elementName": "Live",
+        "elementURL": "https://rssblue.com/help/livestreams"
       }
     ]
   },
