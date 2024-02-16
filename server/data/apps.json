@@ -3491,5 +3491,35 @@
         "elementURL": "https://www.overhaul.fm"
       }
     ]
+  },
+  {
+    "appName": "PodcastAI",
+    "appType": [
+      "hosting",
+      "website"
+    ],
+    "appUrl": "https://podcastai.com",
+    "appIconUrl": "podcastai.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://podcastai.com"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://podcastai.com"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://podcastai.com"
+      },
+      {
+        "elementName": "Trailer",
+        "elementUrl": "https://podcastai.com"
+      }
+    ]
   }
 ]
