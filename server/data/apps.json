@@ -1641,6 +1641,18 @@
       {
         "elementName": "OP3",
         "elementURL": "https://blog.castopod.org/value-your-analytics-data-with-op3-an-open-source-and-trusted-third-party/"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://code.castopod.org/adaures/castopod/-/releases/v1.10.0"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://code.castopod.org/adaures/castopod/-/releases/v1.10.0"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://code.castopod.org/adaures/castopod/-/releases/v1.10.0"
       }
     ]
   },
