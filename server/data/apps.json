@@ -1049,8 +1049,7 @@
       "iOS",
       "Android",
       "macOS",
-      "Windows",
-      "Linux"
+      "Windows"
     ],
     "supportedElements": [
       {
