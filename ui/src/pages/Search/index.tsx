@@ -63,6 +63,10 @@ export default class Results extends React.PureComponent<IProps> {
         let firstResult = null
         if (!isNaN(number) && searchType !== "person"){
             firstResult = await (await this.getFeedById(query))?.feed
+            // check if a feed object. When query isn't a valid ID, returns list instead of empty object
+            if (firstResult.id === undefined){
+                firstResult = null
+            }
         }
 
         let results = []

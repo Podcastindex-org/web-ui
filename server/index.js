@@ -16,12 +16,14 @@ const USER_AGENT = `Podcastindex.org-web/${packageJson.version}`;
 // NOTE: This server will work as a reverse proxy.
 const api = require('podcast-index-api')(
     process.env.API_KEY,
-    process.env.API_SECRET
+    process.env.API_SECRET,
+    process.env.API_USER_AGENT
 )
 
 const apiAdd = require('podcast-index-api')(
     process.env.API_ADD_KEY,
-    process.env.API_ADD_SECRET
+    process.env.API_ADD_SECRET,
+    process.env.API_USER_AGENT
 )
 
 app.set("view engine", "ejs")
