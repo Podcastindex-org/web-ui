@@ -219,9 +219,13 @@ app.use('/api/comments/remoteInteractUrlPattern', async (req, res) => {
 
     console.log('Debug interactorAccount', interactorAccount);
 
-    const interactorInstanceHost = interactorAccount.split('@')[1];
+    let splitIndex = 1
+    if (interactorAccount.startsWith('@')) {
+        splitIndex = 2
+    }
+    const interactorInstanceHost = interactorAccount.split('@')[splitIndex];
 
-    const response = await fetch(`https://${interactorInstanceHost}/.well-known/webfinger?` + new URLSearchParams({resource:`acct:${interactorAccount}`}));
+    const response = await fetch(`https://${interactorInstanceHost}/.well-known/webfinger?` + new URLSearchParams({resource:`acct:${interactorAccount.substring(splitIndex-1)}`}));
     const parsedResponse = await response.json();
 
     const linkOStatusSubscribe = parsedResponse.links.find((link) => link.rel === 'http://ostatus.org/schema/1.0/subscribe');
