@@ -2682,6 +2682,28 @@
     ]
   },
   {
+    "appName": "Episodes.fm",
+    "appType": [
+      "podcast player",
+      "website"
+    ],
+    "appUrl": "https://episodes.fm",
+    "appIconUrl": "episodesfm.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "OP3",
+        "elementURL": "https://nathangathright.com/introducing-episodesfm/"
+      },
+      {
+        "elementName": "Live",
+        "elementURL": "https://nathangathright.com/introducing-episodesfm/"
+      }
+    ]
+  },
+  {
     "appName": "Conshax",
     "appType": [
       "podcaster wallet",
