@@ -3541,5 +3541,42 @@
         "elementUrl": "https://podcastai.com"
       }
     ]
+  },
+  {
+    "appName": "Podigee",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://podigee.com",
+    "appIconUrl": "podigee.svg",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://www.podigee.com/en/podcast-transcriptions"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://www.podigee.com/en/podcast-transcriptions"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://www.podigee.com/en/podcast-transcriptions"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://www.podigee.com/en/podcast-transcriptions"
+      },
+      {
+        "elementName": "Trailer",
+        "elementURL": "https://www.podigee.com/en/podcast-transcriptions"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://www.podigee.com/en/podcast-transcriptions"
+      }
+    ]
   }
 ]
