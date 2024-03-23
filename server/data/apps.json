@@ -3508,7 +3508,7 @@
       {
         "elementName": "Live",
         "elementURL": "https://www.podhome.fm/docs/live-podcasting"
-      }      
+      }
     ]
   },
   {
@@ -3598,6 +3598,71 @@
       {
         "elementName": "GUID",
         "elementURL": "https://www.podigee.com/en/podcast-transcriptions"
+      }
+    ]
+  },
+  {
+    "appName": "Oncetold",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://oncetold.us",
+    "appIconUrl": "oncetold.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "GUID",
+        "elementURL": "https://oncetold.us"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://oncetold.us"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://oncetold.us"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://oncetold.us"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://oncetold.us"
+      },
+      {
+        "elementName": "OP3",
+        "elementURL": "https://oncetold.us"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://oncetold.us"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://oncetold.us"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://oncetold.us"
+      },
+      {
+        "elementName": "Trailer",
+        "elementURL": "https://oncetold.us"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://oncetold.us"
+      },
+      {
+        "elementName": "Podroll",
+        "elementURL": "https://oncetold.us"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://oncetold.us"
       }
     ]
   }
