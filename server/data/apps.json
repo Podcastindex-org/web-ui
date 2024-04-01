@@ -2103,7 +2103,6 @@
   {
     "appName": "gpodder",
     "appType": [
-      "sn-network",
       "open source"
     ],
     "appUrl": "https://gpodder.net/",
@@ -2112,14 +2111,6 @@
       "Web"
     ],
     "supportedElements": [
-      {
-        "elementName": "Sn-Network",
-        "elementURL": "https://gpodder.net/"
-      },
-      {
-        "elementName": "Synchronize",
-        "elementURL": "https://gpodder.net/"
-      },
       {
         "elementName": "Search",
         "elementURL": "https://gpodder.net/"
@@ -2139,10 +2130,6 @@
     "supportedElements": [
       {
         "elementName": "Search",
-        "elementURL": "https://fyyd.de"
-      },
-      {
-        "elementName": "Sn-Network",
         "elementURL": "https://fyyd.de"
       }
     ]
