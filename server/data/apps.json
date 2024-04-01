@@ -3550,5 +3550,35 @@
         "elementURL": "https://oncetold.us"
       }
     ]
+  },
+  {
+    "appName": "Seriously Simple Podcasting",
+    "appType": [
+      "wordpress plugin"
+    ],
+    "appUrl": "https://wordpress.org/plugins/seriously-simple-podcasting/",
+    "appIconUrl": "seriouslysimplepodcasting.png",
+    "platforms": [
+      "Wordpress",
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Locked",
+        "elementURL": "https://castos.com/introducing-podcast-2-0-support/"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://castos.com/introducing-podcast-2-0-support/"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://castos.com/introducing-podcast-2-0-support/"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://support.castos.com/article/281-podcast-2-0-transcript-tag-in-seriously-simple-podcasting"
+      }
+    ]
   }
 ]
