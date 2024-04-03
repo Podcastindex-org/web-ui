@@ -3665,5 +3665,46 @@
         "elementURL": "https://oncetold.us"
       }
     ]
+  },
+  {
+    "appName": "Metacast",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "Listen, read, bookmark, and share podcasts.",
+    "appUrl": "https://metacast.app",
+    "appIconUrl": "metacast.png",
+    "platforms": [
+      "Android",
+      "iOS",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://metacast.app"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://metacast.app"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://metacast.app"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://metacast.app"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://metacast.app"
+      },
+      {
+        "elementName": "Images",
+        "elementURL": "https://metacast.app"
+      }
+    ]
   }
 ]
