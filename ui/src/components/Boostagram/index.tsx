@@ -73,6 +73,7 @@ export default class Boostagram extends React.PureComponent<IProps> {
                 name: undefined,
                 message: this.state.boostagram,
                 sender_name: this.state.senderName,
+                episode_guid: episode?.guid,
             }
         }
 
