@@ -23,6 +23,23 @@
     ]
   },
   {
+    "appName": "Ausha",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://www.ausha.co/",
+    "appIconUrl": "aushalogo.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://www.ausha.co/blog/productlove-transcription-ausha/"
+      }
+    ]
+  },
+  {
     "appName": "chaptertool",
     "appType": [
       "app",
