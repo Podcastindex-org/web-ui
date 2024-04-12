@@ -1,5 +1,43 @@
 [
   {
+    "appName": "Pocket Casts",
+    "appType": [
+      "podcast player",
+      "app"
+    ],
+    "appUrl": "https://pocketcasts.com",
+    "appIconUrl": "pocketcasts.png",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android", 
+      "Windows",
+      "macOS"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://pocketcasts.com/podcast-player/"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://pocketcasts.com/podcast-player/"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://pocketcasts.com/podcast-player/"
+      },
+      {
+        "elementName": "Synchronize",
+        "elementURL": "https://pocketcasts.com/podcast-player/"
+      },
+      {
+        "elementName": "Images",
+        "elementURL": "https://pocketcasts.com/podcast-player/"
+      }
+    ]
+  },
+  {
     "appName": "Audicy",
     "appType": [
       "podcast player",
