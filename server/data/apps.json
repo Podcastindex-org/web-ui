@@ -3,10 +3,11 @@
     "appName": "Pocket Casts",
     "appType": [
       "podcast player",
-      "app"
+      "app",
+      "open source"
     ],
     "appUrl": "https://pocketcasts.com",
-    "appIconUrl": "pocketcasts.png",
+    "appIconUrl": "pocketCasts.png",
     "platforms": [
       "Web",
       "iOS",
