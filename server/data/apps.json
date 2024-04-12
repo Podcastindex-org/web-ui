@@ -1,5 +1,79 @@
 [
   {
+    "appName": "Pocket Casts",
+    "appType": [
+      "podcast player",
+      "app"
+    ],
+    "appUrl": "https://pocketcasts.com",
+    "appIconUrl": "pocketcasts.png",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android", 
+      "Windows",
+      "macOS"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://pocketcasts.com/podcast-player/"
+      },
+      {
+        "elementName": "Playback queue",
+        "elementURL": "https://pocketcasts.com/podcast-player/"
+      },
+      {
+        "elementName": "Sonos & Alexa support",
+        "elementURL": "https://pocketcasts.com/podcast-player/"
+      },
+      {
+        "elementName": "Cross Device Sync",
+        "elementURL": "https://pocketcasts.com/podcast-player/"
+      },
+      {
+        "elementName": "Discovery",
+        "elementURL": "https://pocketcasts.com/podcast-player/"
+      },
+      {
+        "elementName": "Episode Search",
+        "elementURL": "https://pocketcasts.com/podcast-player/"
+      },
+      {
+        "elementName": "Android Auto and CarPlay",
+        "elementURL": "https://pocketcasts.com/podcast-player/"
+      },
+      {
+        "elementName": "Trim Silence",
+        "elementURL": "https://pocketcasts.com/podcast-player/"
+      },
+      {
+        "elementName": "Airplay and Chromecast",
+        "elementURL": "https://pocketcasts.com/podcast-player/"
+      },
+      {
+        "elementName": "Chapter Support",
+        "elementURL": "https://pocketcasts.com/podcast-player/"
+      },
+      {
+        "elementName": "Apple Watch",
+        "elementURL": "https://pocketcasts.com/podcast-player/"
+      },
+      {
+        "elementName": "Themes",
+        "elementURL": "https://pocketcasts.com/podcast-player/"
+      },
+      {
+        "elementName": "Smart Storage",
+        "elementURL": "https://pocketcasts.com/podcast-player/"
+      },
+      {
+        "elementName": Variable Speed Playback",
+        "elementURL": "https://pocketcasts.com/podcast-player/"
+      }
+    ]
+  },
+  {
     "appName": "Audicy",
     "appType": [
       "podcast player",
