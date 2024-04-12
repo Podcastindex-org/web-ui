@@ -20,55 +20,19 @@
         "elementURL": "https://pocketcasts.com/podcast-player/"
       },
       {
-        "elementName": "Playback queue",
+        "elementName": "Chapters",
         "elementURL": "https://pocketcasts.com/podcast-player/"
       },
       {
-        "elementName": "Sonos & Alexa support",
+        "elementName": "Episode",
         "elementURL": "https://pocketcasts.com/podcast-player/"
       },
       {
-        "elementName": "Cross Device Sync",
+        "elementName": "Synchronize",
         "elementURL": "https://pocketcasts.com/podcast-player/"
       },
       {
-        "elementName": "Discovery",
-        "elementURL": "https://pocketcasts.com/podcast-player/"
-      },
-      {
-        "elementName": "Episode Search",
-        "elementURL": "https://pocketcasts.com/podcast-player/"
-      },
-      {
-        "elementName": "Android Auto and CarPlay",
-        "elementURL": "https://pocketcasts.com/podcast-player/"
-      },
-      {
-        "elementName": "Trim Silence",
-        "elementURL": "https://pocketcasts.com/podcast-player/"
-      },
-      {
-        "elementName": "Airplay and Chromecast",
-        "elementURL": "https://pocketcasts.com/podcast-player/"
-      },
-      {
-        "elementName": "Chapter Support",
-        "elementURL": "https://pocketcasts.com/podcast-player/"
-      },
-      {
-        "elementName": "Apple Watch",
-        "elementURL": "https://pocketcasts.com/podcast-player/"
-      },
-      {
-        "elementName": "Themes",
-        "elementURL": "https://pocketcasts.com/podcast-player/"
-      },
-      {
-        "elementName": "Smart Storage",
-        "elementURL": "https://pocketcasts.com/podcast-player/"
-      },
-      {
-        "elementName": "Variable Speed Playback",
+        "elementName": "Images",
         "elementURL": "https://pocketcasts.com/podcast-player/"
       }
     ]
