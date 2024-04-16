@@ -17,23 +17,11 @@
     ],
     "supportedElements": [
       {
-        "elementName": "Search",
-        "elementURL": "https://pocketcasts.com/podcast-player/"
-      },
-      {
         "elementName": "Chapters",
-        "elementURL": "https://pocketcasts.com/podcast-player/"
+        "elementURL": "https://blog.pocketcasts.com/2024/04/16/artwork-and-chapters/"
       },
       {
-        "elementName": "Episode",
-        "elementURL": "https://pocketcasts.com/podcast-player/"
-      },
-      {
-        "elementName": "Synchronize",
-        "elementURL": "https://pocketcasts.com/podcast-player/"
-      },
-      {
-        "elementName": "Images",
+        "elementName": "Podping",
         "elementURL": "https://pocketcasts.com/podcast-player/"
       }
     ]
