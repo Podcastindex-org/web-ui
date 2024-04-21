@@ -3505,19 +3505,31 @@
     ],
     "supportedElements": [
       {
-        "elementName": "Transcript",
-        "elementURL": "https://podcastai.com"
-      },
-      {
-        "elementName": "Season",
-        "elementURL": "https://podcastai.com"
+        "elementName": "Alternate Enclosure",
+        "elementUrl": "https://podcastai.com"
       },
       {
         "elementName": "Episode",
         "elementURL": "https://podcastai.com"
       },
       {
+        "elementName": "GUID",
+        "elementUrl": "https://podcastai.com"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://podcastai.com"
+      },
+      {
         "elementName": "Trailer",
+        "elementUrl": "https://podcastai.com"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://podcastai.com"
+      },
+      {
+        "elementName": "Video",
         "elementUrl": "https://podcastai.com"
       }
     ]
