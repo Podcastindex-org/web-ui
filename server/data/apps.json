@@ -9,6 +9,7 @@
     "appUrl": "https://pocketcasts.com",
     "appIconUrl": "pocketCasts.png",
     "platforms": [
+      "Mobile",
       "Web",
       "iOS",
       "Android", 
@@ -96,6 +97,7 @@
     "platforms": [
       "Android",
       "iOS",
+      "Mobile",
       "Web"
     ],
     "supportedElements": [
@@ -153,6 +155,7 @@
     "appIconUrl": "podcastaddict.png",
     "platforms": [
       "Android",
+      "Mobile",
       "Web"
     ],
     "supportedElements": [
@@ -315,6 +318,7 @@
       "Android",
       "F-Droid",
       "iOS",
+      "Mobile",
       "Web"
     ],
     "supportedElements": [
@@ -402,6 +406,7 @@
     "appIconUrl": "fathom.png",
     "platforms": [
       "iOS",
+      "Mobile",
       "Web"
     ],
     "supportedElements": [
@@ -422,6 +427,7 @@
     "platforms": [
       "iOS",
       "Android",
+      "Mobile",
       "Web"
     ],
     "supportedElements": [
@@ -528,6 +534,7 @@
     "appIconUrl": "podcastguru.jpg",
     "platforms": [
       "Android",
+      "Mobile",
       "macOS",
       "iOS"
     ],
@@ -609,6 +616,7 @@
     "platforms": [
       "iOS",
       "Android",
+      "Mobile",
       "macOS",
       "Windows",
       "Linux"
@@ -637,6 +645,7 @@
     "appUrl": "https://podcastrepublic.net",
     "appIconUrl": "podcastrepublic.jpg",
     "platforms": [
+      "Mobile",
       "Android"
     ],
     "supportedElements": [
@@ -678,6 +687,7 @@
     "appUrl": "https://breez.technology/",
     "appIconUrl": "breez.png",
     "platforms": [
+      "Mobile",
       "Android",
       "iOS"
     ],
@@ -714,6 +724,7 @@
     "appUrl": "https://www.antennapod.org",
     "appIconUrl": "antennapod.png",
     "platforms": [
+      "Mobile",
       "Android",
       "F-Droid"
     ],
@@ -873,6 +884,7 @@
     "appUrl": "https://anytimeplayer.app",
     "appIconUrl": "anytimelogo.png",
     "platforms": [
+      "Mobile",
       "Android",
       "iOS"
     ],
@@ -934,6 +946,7 @@
     "appUrl": "https://podlp.com/",
     "appIconUrl": "podlp.png",
     "platforms": [
+      "Mobile",
       "KaiOS"
     ],
     "supportedElements": [
@@ -1007,6 +1020,7 @@
     "appUrl": "https://github.com/stonega/tsacdop",
     "appIconUrl": "tsacdop.png",
     "platforms": [
+      "Mobile",
       "Android",
       "F-Droid"
     ],
@@ -1036,6 +1050,7 @@
     "platforms": [
       "Android",
       "iOS",
+      "Mobile",
       "Web"
     ],
     "supportedElements": [
@@ -1055,6 +1070,7 @@
     "appUrl": "https://codeberg.org/y20k/escapepod",
     "appIconUrl": "escapepod.png",
     "platforms": [
+      "Mobile",
       "Android",
       "F-Droid"
     ],
@@ -1076,6 +1092,7 @@
     "appIconUrl": "kasts.png",
     "platforms": [
       "Linux",
+      "Mobile",
       "Android"
     ],
     "supportedElements": [
@@ -1094,6 +1111,7 @@
     "appUrl": "https://getzion.com",
     "appIconUrl": "n2n2.png",
     "platforms": [
+      "Mobile",
       "iOS",
       "Android",
       "macOS",
@@ -1126,6 +1144,7 @@
       "macOS",
       "Linux",
       "BSD",
+      "Mobile",
       "Sailfish OS"
     ],
     "supportedElements": [
@@ -1219,6 +1238,7 @@
     "appUrl": "https://Hubhopper.com",
     "appIconUrl": "hubhopper.png",
     "platforms": [
+      "Mobile",
       "Web",
       "Android"
     ],
@@ -1952,6 +1972,7 @@
     "appUrl": "https://satoshis.stream/",
     "appIconUrl": "satoshisstream-bot.png",
     "platforms": [
+      "Mobile",
       "iOS",
       "Android",
       "Web"
@@ -2248,6 +2269,7 @@
     "appIconUrl": "disctopia.png",
     "tagLine": "A Podcaster's Paradise.",
     "platforms": [
+      "Mobile",
       "Web",
       "iOS",
       "Android"
@@ -2402,6 +2424,7 @@
     "appUrl": "https://podvine.com",
     "appIconUrl": "podvine.png",
     "platforms": [
+      "Mobile",
       "Web",
       "iOS",
       "Android"
@@ -2632,6 +2655,7 @@
     "appUrl": "https://play.google.com/store/apps/details?id=allen.town.focus.podcast",
     "appIconUrl": "FocusPodcast.png",
     "platforms": [
+      "Mobile",
       "Android"
     ],
     "supportedElements": [
@@ -2779,6 +2803,7 @@
     "appUrl": "https://www.spreaker.com",
     "appIconUrl": "spreaker.png",
     "platforms": [
+      "Mobile",
       "Android",
       "iOS",
       "macOS",
@@ -2900,6 +2925,7 @@
     "appUrl": "https://play.google.com/store/apps/details?id=com.bluckapps.turtlecast",
     "appIconUrl": "turtlecast.png",
     "platforms": [
+      "Mobile",
       "Android"
     ],
     "supportedElements": [
@@ -3569,6 +3595,7 @@
     "appIconUrl": "overhaulfm.png",
     "platforms": [
       "Android",
+      "Mobile",
       "iOS"
     ],
     "supportedElements": [
