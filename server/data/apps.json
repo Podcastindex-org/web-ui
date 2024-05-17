@@ -3781,5 +3781,27 @@
         "elementURL": "https://metacast.app"
       }
     ]
+  },
+  {
+    "appName": "PodRocket",
+    "appType": [
+      "website",
+      "podcast discovery service"
+    ],
+    "appUrl": "https://podrocket.ai",
+    "appIconUrl": "podrocket.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://podrocket.ai"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://podrocket.ai"
+      }
+    ]
   }
 ]
