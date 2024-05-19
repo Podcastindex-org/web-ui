@@ -5,6 +5,7 @@
     "user-agent-app": "www",
     "license": "MIT",
     "private": true,
+    "packageManager": "yarn@3.4.1",
     "dependencies": {
         "@hcaptcha/react-hcaptcha": "^0.3.9",
         "@types/dompurify": "^2.4.0",
