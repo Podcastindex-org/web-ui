@@ -247,17 +247,6 @@ export default class Landing extends React.Component<IProps, IState> {
                                 </Button>
                             </form>
                         </div>
-                        <div className="tally-coin">
-                            <h4>Tallycoin</h4>
-                            <Button
-                                big
-                                primary
-                                slim
-                                href="https://tallycoin.app/@podcastindex/support-podcastindex-t5x9vv/"
-                            >
-                                Donate Bitcoin
-                            </Button>
-                        </div>
                         {/*<div className="sphinx-chat">*/}
                         {/*    <h4>Sphinx Chat</h4>*/}
                         {/*    <SphinxChat />*/}
