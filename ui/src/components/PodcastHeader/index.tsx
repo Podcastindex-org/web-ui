@@ -5,6 +5,7 @@ import Value from '../Value'
 import NoImage from '../../../images/no-cover-art.png'
 import { truncateString } from '../../utils'
 import RSSLogo from "../../../images/feed.svg";
+import EpisodesFMLogo from "../../../images/episodesfm.svg";
 import PodcastAPLogo from "../../../images/podcastap.svg";
 import DonationPage from "../../../images/donation-page.svg";
 import EarthLogo from "../../../images/earth.svg";
@@ -18,6 +19,7 @@ interface IProps {
     categories?: any
     image?: any
     id?: string
+    itunesId?: string
     feedURL?: string
     podcastURL?: string
     donationPageURL?: string
@@ -81,7 +83,7 @@ export default class PodcastHeader extends React.PureComponent<IProps, PodState>
     }
 
     render() {
-        const {title, description, author, categories, image, id, feedURL, donationPageURL, podcastURL, value} = this.props
+        const {title, description, author, categories, image, id, feedURL, donationPageURL, podcastURL, value, itunesId} = this.props
         const splitTotal = value && value.destinations ? value && value.destinations.reduce((total, d) => total + parseInt(d.split, 10), 0): null
 
         if(value && value.destinations && value.destinations.length > 1 && value.destinations[(value.destinations.length - 1)].name.toLowerCase() === "podcastindex.org") {
@@ -151,6 +153,16 @@ export default class PodcastHeader extends React.PureComponent<IProps, PodState>
                                     <img src={LightningLogo}/>
                                 </a>
                                 : ""
+                            }
+                            {itunesId ?
+                                <a
+                                    href={`https://episodes.fm/${itunesId}`}
+                                    title="Follow in your podcast app"
+                                    target="_blank"
+                                >
+                                    <img src={EpisodesFMLogo} />
+                                </a>
+                                : ''
                             }
                             <a
                                 href={`https://podcastap.com/feed/${id}`}
