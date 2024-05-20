@@ -247,6 +247,17 @@ export default class Landing extends React.Component<IProps, IState> {
                                 </Button>
                             </form>
                         </div>
+                        <div className="conshax">
+                            <h4>Conshax</h4>
+                            <Button
+                                big
+                                primary
+                                slim
+                                href="https://conshax.app/support/917393e3-1b1e-5cef-ace4-edaa54e1f810"
+                            >
+                                Donate Bitcoin
+                            </Button>
+                        </div>
                         {/*<div className="sphinx-chat">*/}
                         {/*    <h4>Sphinx Chat</h4>*/}
                         {/*    <SphinxChat />*/}
