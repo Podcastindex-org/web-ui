@@ -2166,6 +2166,10 @@
       {
         "elementName": "Live",
         "elementURL": "https://help.rss.com/en/support/solutions/articles/44002493451-live-streaming-of-a-podcast-via-the-live-item-tag-lit-"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://changelog.rss.com/v24-3-1-287932"
       }
     ]
   },
