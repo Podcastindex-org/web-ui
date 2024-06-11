@@ -747,7 +747,8 @@
     "appName": "CurioCaster",
     "appType": [
       "app",
-      "podcast player"
+      "podcast player",
+      "open source"
     ],
     "tagLine": "The Best Podcast Player in Texas",
     "appUrl": "https://curiocaster.com/",
@@ -3255,7 +3256,8 @@
     "appType": [
       "app",
       "music player",
-      "website"
+      "website",
+      "open source"
     ],
     "appUrl": "https://lnbeats.com",
     "appIconUrl": "lnbeats.png",
