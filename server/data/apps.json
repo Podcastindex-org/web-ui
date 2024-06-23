@@ -1,5 +1,33 @@
 [
   {
+    "appName": "Pocket Casts",
+    "appType": [
+      "podcast player",
+      "app",
+      "open source"
+    ],
+    "appUrl": "https://pocketcasts.com",
+    "appIconUrl": "pocketCasts.png",
+    "platforms": [
+      "Mobile",
+      "Web",
+      "iOS",
+      "Android",
+      "Windows",
+      "macOS"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://blog.pocketcasts.com/2024/04/16/artwork-and-chapters/"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://pocketcasts.com/podcast-player/"
+      }
+    ]
+  },
+  {
     "appName": "Audicy",
     "appType": [
       "podcast player",
@@ -19,6 +47,23 @@
       {
         "elementName": "Episode",
         "elementURL": "https://audicy.xyz"
+      }
+    ]
+  },
+  {
+    "appName": "Ausha",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://www.ausha.co/",
+    "appIconUrl": "aushalogo.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://www.ausha.co/blog/productlove-transcription-ausha/"
       }
     ]
   },
@@ -85,6 +130,7 @@
     "appIconUrl": "podcastaddict.png",
     "platforms": [
       "Android",
+      "Mobile",
       "Web"
     ],
     "supportedElements": [
@@ -196,6 +242,10 @@
       {
         "elementName": "Locked",
         "elementURL": "https://blog.libsyn.com/2022/01/20/welcome-to-the-new-libsyn/"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://five.libsynsupport.com/hc/en-us/articles/23578752830363-Add-Your-Own-Episode-Transcript"
       }
     ]
   },
@@ -243,6 +293,7 @@
       "Android",
       "F-Droid",
       "iOS",
+      "Mobile",
       "Web"
     ],
     "supportedElements": [
@@ -330,6 +381,7 @@
     "appIconUrl": "fathom.png",
     "platforms": [
       "iOS",
+      "Mobile",
       "Web"
     ],
     "supportedElements": [
@@ -350,6 +402,7 @@
     "platforms": [
       "iOS",
       "Android",
+      "Mobile",
       "Web"
     ],
     "supportedElements": [
@@ -456,6 +509,7 @@
     "appIconUrl": "podcastguru.jpg",
     "platforms": [
       "Android",
+      "Mobile",
       "macOS",
       "iOS"
     ],
@@ -537,6 +591,7 @@
     "platforms": [
       "iOS",
       "Android",
+      "Mobile",
       "macOS",
       "Windows",
       "Linux"
@@ -565,6 +620,7 @@
     "appUrl": "https://podcastrepublic.net",
     "appIconUrl": "podcastrepublic.jpg",
     "platforms": [
+      "Mobile",
       "Android"
     ],
     "supportedElements": [
@@ -606,6 +662,7 @@
     "appUrl": "https://breez.technology/",
     "appIconUrl": "breez.png",
     "platforms": [
+      "Mobile",
       "Android",
       "iOS"
     ],
@@ -642,6 +699,7 @@
     "appUrl": "https://www.antennapod.org",
     "appIconUrl": "antennapod.png",
     "platforms": [
+      "Mobile",
       "Android",
       "F-Droid"
     ],
@@ -664,7 +722,8 @@
     "appName": "CurioCaster",
     "appType": [
       "app",
-      "podcast player"
+      "podcast player",
+      "open source"
     ],
     "tagLine": "The Best Podcast Player in Texas",
     "appUrl": "https://curiocaster.com/",
@@ -801,6 +860,7 @@
     "appUrl": "https://anytimeplayer.app",
     "appIconUrl": "anytimelogo.png",
     "platforms": [
+      "Mobile",
       "Android",
       "iOS"
     ],
@@ -836,6 +896,7 @@
     "appUrl": "https://podlp.com/",
     "appIconUrl": "podlp.png",
     "platforms": [
+      "Mobile",
       "KaiOS"
     ],
     "supportedElements": [
@@ -909,6 +970,7 @@
     "appUrl": "https://github.com/stonega/tsacdop",
     "appIconUrl": "tsacdop.png",
     "platforms": [
+      "Mobile",
       "Android",
       "F-Droid"
     ],
@@ -938,6 +1000,7 @@
     "platforms": [
       "Android",
       "iOS",
+      "Mobile",
       "Web"
     ],
     "supportedElements": [
@@ -957,6 +1020,7 @@
     "appUrl": "https://codeberg.org/y20k/escapepod",
     "appIconUrl": "escapepod.png",
     "platforms": [
+      "Mobile",
       "Android",
       "F-Droid"
     ],
@@ -978,6 +1042,7 @@
     "appIconUrl": "kasts.png",
     "platforms": [
       "Linux",
+      "Mobile",
       "Android"
     ],
     "supportedElements": [
@@ -996,6 +1061,7 @@
     "appUrl": "https://getzion.com",
     "appIconUrl": "n2n2.png",
     "platforms": [
+      "Mobile",
       "iOS",
       "Android",
       "macOS",
@@ -1028,6 +1094,7 @@
       "macOS",
       "Linux",
       "BSD",
+      "Mobile",
       "Sailfish OS"
     ],
     "supportedElements": [
@@ -1121,6 +1188,7 @@
     "appUrl": "https://Hubhopper.com",
     "appIconUrl": "hubhopper.png",
     "platforms": [
+      "Mobile",
       "Web",
       "Android"
     ],
@@ -1854,6 +1922,7 @@
     "appUrl": "https://satoshis.stream/",
     "appIconUrl": "satoshisstream-bot.png",
     "platforms": [
+      "Mobile",
       "iOS",
       "Android",
       "Web"
@@ -2047,6 +2116,10 @@
       {
         "elementName": "Live",
         "elementURL": "https://help.rss.com/en/support/solutions/articles/44002493451-live-streaming-of-a-podcast-via-the-live-item-tag-lit-"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://changelog.rss.com/v24-3-1-287932"
       }
     ]
   },
@@ -2137,6 +2210,7 @@
     "appIconUrl": "disctopia.png",
     "tagLine": "A Podcaster's Paradise.",
     "platforms": [
+      "Mobile",
       "Web",
       "iOS",
       "Android"
@@ -2469,6 +2543,7 @@
     "appUrl": "https://play.google.com/store/apps/details?id=allen.town.focus.podcast",
     "appIconUrl": "FocusPodcast.png",
     "platforms": [
+      "Mobile",
       "Android"
     ],
     "supportedElements": [
@@ -2616,6 +2691,7 @@
     "appUrl": "https://www.spreaker.com",
     "appIconUrl": "spreaker.png",
     "platforms": [
+      "Mobile",
       "Android",
       "iOS",
       "macOS",
@@ -2737,6 +2813,7 @@
     "appUrl": "https://play.google.com/store/apps/details?id=com.bluckapps.turtlecast",
     "appIconUrl": "turtlecast.png",
     "platforms": [
+      "Mobile",
       "Android"
     ],
     "supportedElements": [
@@ -3062,7 +3139,8 @@
     "appType": [
       "app",
       "music player",
-      "website"
+      "website",
+      "open source"
     ],
     "appUrl": "https://lnbeats.com",
     "appIconUrl": "lnbeats.png",
@@ -3406,6 +3484,7 @@
     "appIconUrl": "overhaulfm.png",
     "platforms": [
       "Android",
+      "Mobile",
       "iOS"
     ],
     "supportedElements": [
@@ -3432,19 +3511,31 @@
     ],
     "supportedElements": [
       {
-        "elementName": "Transcript",
-        "elementURL": "https://podcastai.com"
-      },
-      {
-        "elementName": "Season",
-        "elementURL": "https://podcastai.com"
+        "elementName": "Alternate Enclosure",
+        "elementUrl": "https://podcastai.com"
       },
       {
         "elementName": "Episode",
         "elementURL": "https://podcastai.com"
       },
       {
+        "elementName": "GUID",
+        "elementUrl": "https://podcastai.com"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://podcastai.com"
+      },
+      {
         "elementName": "Trailer",
+        "elementUrl": "https://podcastai.com"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://podcastai.com"
+      },
+      {
+        "elementName": "Video",
         "elementUrl": "https://podcastai.com"
       }
     ]
@@ -3578,6 +3669,77 @@
       {
         "elementName": "Transcript",
         "elementURL": "https://support.castos.com/article/281-podcast-2-0-transcript-tag-in-seriously-simple-podcasting"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://support.castos.com/article/276-enable-disable-podping"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://support.castos.com/article/408-seriously-simple-podcasting-settings-overview#Feed-Details-Settings-_WDlJ"
+      }
+    ]
+  },
+  {
+    "appName": "Metacast",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "Listen, read, bookmark, and share podcasts.",
+    "appUrl": "https://metacast.app",
+    "appIconUrl": "metacast.png",
+    "platforms": [
+      "Android",
+      "iOS",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://metacast.app"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://metacast.app"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://metacast.app"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://metacast.app"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://metacast.app"
+      },
+      {
+        "elementName": "Images",
+        "elementURL": "https://metacast.app"
+      }
+    ]
+  },
+  {
+    "appName": "PodRocket",
+    "appType": [
+      "website",
+      "directory"
+    ],
+    "appUrl": "https://podrocket.ai",
+    "appIconUrl": "podrocket.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://podrocket.ai"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://podrocket.ai"
       }
     ]
   }

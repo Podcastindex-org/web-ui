@@ -247,13 +247,13 @@ export default class Landing extends React.Component<IProps, IState> {
                                 </Button>
                             </form>
                         </div>
-                        <div className="tally-coin">
-                            <h4>Tallycoin</h4>
+                        <div className="conshax">
+                            <h4>Conshax</h4>
                             <Button
                                 big
                                 primary
                                 slim
-                                href="https://tallycoin.app/@podcastindex/support-podcastindex-t5x9vv/"
+                                href="https://conshax.app/support/917393e3-1b1e-5cef-ace4-edaa54e1f810"
                             >
                                 Donate Bitcoin
                             </Button>

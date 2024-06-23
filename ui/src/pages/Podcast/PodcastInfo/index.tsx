@@ -176,6 +176,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
             link,
             url,
             funding,
+            itunesId,
         } = result
         const image = getImage(result)
         let podcastURL = fixURL(link)
@@ -196,6 +197,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
                 categories={categories}
                 value={value}
                 id={id}
+                itunesId={itunesId}
                 podcastURL={podcastURL}
                 donationPageURL={donationPageURL}
                 feedURL={feedURL}
