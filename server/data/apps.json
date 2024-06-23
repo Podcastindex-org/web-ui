@@ -3645,7 +3645,8 @@
   {
     "appName": "Seriously Simple Podcasting",
     "appType": [
-      "wordpress plugin"
+      "wordpress plugin",
+      "open source"
     ],
     "appUrl": "https://wordpress.org/plugins/seriously-simple-podcasting/",
     "appIconUrl": "seriouslysimplepodcasting.png",
