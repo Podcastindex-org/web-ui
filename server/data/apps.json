@@ -3121,6 +3121,10 @@
         "elementURL": "https://peakd.com/hive-148441/@agorise/hive-tube-now-supports-chapters-and-storyboards"
       },
       {
+        "elementName": "Episode",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
         "elementName": "Funding",
         "elementURL": "https://cast.garden/about/instance"
       },
@@ -3137,7 +3141,15 @@
         "elementURL": "https://cast.garden/about/instance"
       },
       {
+        "elementName": "Live Boosts",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
         "elementName": "Live",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
+        "elementName": "Location",
         "elementURL": "https://cast.garden/about/instance"
       },
       {
@@ -3157,7 +3169,15 @@
         "elementURL": "https://cast.garden/about/instance"
       },
       {
+        "elementName": "Podroll",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
         "elementName": "Search",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
+        "elementName": "Season",
         "elementURL": "https://cast.garden/about/instance"
       },
       {
@@ -3165,11 +3185,35 @@
         "elementURL": "https://cast.garden/about/instance"
       },
       {
+        "elementName": "Synchronize",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
         "elementName": "Transcript",
         "elementURL": "https://cast.garden/about/instance"
       },
       {
+        "elementName": "Txt",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
+        "elementName": "Update Frequency",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
+        "elementName": "Value Time Split",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
         "elementName": "Value",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
+        "elementName": "Video",
+        "elementURL": "https://cast.garden/about/instance"
+      },
+      {
+        "elementName": "Wallet Switching",
         "elementURL": "https://cast.garden/about/instance"
       }
     ]
