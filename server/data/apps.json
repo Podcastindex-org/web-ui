@@ -715,10 +715,6 @@
       {
         "elementName": "Chapters",
         "elementURL": "https://github.com/AntennaPod/AntennaPod/pull/5630"
-      },
-      {
-        "elementName": "Synchronize",
-        "elementURL": "https://github.com/AntennaPod/AntennaPod/pull/706"
       }
     ]
   },
@@ -1053,10 +1049,6 @@
       {
         "elementName": "Search",
         "elementURL": "https://www.plasma-mobile.org/2021/07/20/plasma-mobile-gear-21-07"
-      },
-      {
-        "elementName": "Synchronize",
-        "elementURL": "https://apps.kde.org/kasts/"
       }
     ]
   },
@@ -3076,10 +3068,6 @@
       },
       {
         "elementName": "Social Interact",
-        "elementURL": "https://cast.garden/about/instance"
-      },
-      {
-        "elementName": "Synchronize",
         "elementURL": "https://cast.garden/about/instance"
       },
       {
