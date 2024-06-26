@@ -1054,33 +1054,6 @@
     ]
   },
   {
-    "appName": "Zion",
-    "appType": [
-      "app",
-      "open source"
-    ],
-    "appUrl": "https://getzion.com",
-    "appIconUrl": "n2n2.png",
-    "platforms": [
-      "Mobile",
-      "iOS",
-      "Android",
-      "macOS",
-      "Windows",
-      "Linux"
-    ],
-    "supportedElements": [
-      {
-        "elementName": "Value",
-        "elementURL": "https://getzion.com"
-      },
-      {
-        "elementName": "Search",
-        "elementURL": "https://getzion.com"
-      }
-    ]
-  },
-  {
     "appName": "gpodder",
     "appType": [
       "app",
