@@ -3760,5 +3760,22 @@
         "elementURL": "https://podrocket.ai"
       }
     ]
-  }
+  },
+  {
+    "appName": "Cooler Podcast player",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://www.cooler.fm",
+    "appIconUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/d4/46/84/d4468412-bd62-342b-c280-7779f6d3220c/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/246x0w.webp",
+    "platforms": [
+      "iOS"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://www.cooler.fm"
+      }
+    ]
+  }  
 ]
