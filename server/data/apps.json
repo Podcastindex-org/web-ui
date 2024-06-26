@@ -1043,7 +1043,8 @@
     "platforms": [
       "Linux",
       "Mobile",
-      "Android"
+      "Android",
+      "Windows"
     ],
     "supportedElements": [
       {
