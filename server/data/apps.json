@@ -1098,7 +1098,6 @@
     "appIconUrl": "gpodder.png",
     "platforms": [
       "Windows",
-      "Windows",
       "macOS",
       "Linux",
       "BSD",
