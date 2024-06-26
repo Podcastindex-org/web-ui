@@ -12,7 +12,7 @@
       "Mobile",
       "Web",
       "iOS",
-      "Android", 
+      "Android",
       "Windows",
       "macOS"
     ],
@@ -83,31 +83,6 @@
       {
         "elementName": "Chapters",
         "elementURL": "https://mtillmann.github.io/chaptertool/"
-      }
-    ]
-  },
-  {
-    "appName": "Moonbeam",
-    "appType": [
-      "app",
-      "podcast player"
-    ],
-    "appUrl": "https://www.moonbeam.fm/",
-    "appIconUrl": "moonbeam_logo.png",
-    "platforms": [
-      "Android",
-      "iOS",
-      "Mobile",
-      "Web"
-    ],
-    "supportedElements": [
-      {
-        "elementName": "Podping",
-        "elementURL": "https://www.moonbeam.fm/"
-      },
-      {
-        "elementName": "Funding",
-        "elementURL": "https://www.moonbeam.fm/"
       }
     ]
   },
@@ -909,32 +884,6 @@
       {
         "elementName": "Person",
         "elementURL": "https://youtube.com/shorts/LjpHBE4V0xE?feature=share"
-      }
-    ]
-  },
-  {
-    "appName": "CastCoverage",
-    "appType": [
-      "app",
-      "podcast player"
-    ],
-    "appUrl": "http://castcoverage.com",
-    "appIconUrl": "castcoverage.png",
-    "platforms": [
-      "Web"
-    ],
-    "supportedElements": [
-      {
-        "elementName": "Search",
-        "elementURL": "http://castcoverage.com"
-      },
-      {
-        "elementName": "Transcript",
-        "elementURL": "http://castcoverage.com"
-      },
-      {
-        "elementName": "Chapters",
-        "elementURL": "http://castcoverage.com"
       }
     ]
   },
@@ -2181,7 +2130,6 @@
   {
     "appName": "gpodder",
     "appType": [
-      "sn-network",
       "open source"
     ],
     "appUrl": "https://gpodder.net/",
@@ -2190,14 +2138,6 @@
       "Web"
     ],
     "supportedElements": [
-      {
-        "elementName": "Sn-Network",
-        "elementURL": "https://gpodder.net/"
-      },
-      {
-        "elementName": "Synchronize",
-        "elementURL": "https://gpodder.net/"
-      },
       {
         "elementName": "Search",
         "elementURL": "https://gpodder.net/"
@@ -2217,10 +2157,6 @@
     "supportedElements": [
       {
         "elementName": "Search",
-        "elementURL": "https://fyyd.de"
-      },
-      {
-        "elementName": "Sn-Network",
         "elementURL": "https://fyyd.de"
       }
     ]
@@ -2351,29 +2287,6 @@
     ]
   },
   {
-    "appName": "usocial",
-    "appType": [
-      "website",
-      "open source"
-    ],
-    "appUrl": "http://usocial.me",
-    "appIconUrl": "usocial.png",
-    "platforms": [
-      "Umbrel",
-      "Citadel"
-    ],
-    "supportedElements": [
-      {
-        "elementName": "Value",
-        "elementURL": "https://usocial.me/"
-      },
-      {
-        "elementName": "Search",
-        "elementURL": "https://usocial.me/"
-      }
-    ]
-  },
-  {
     "appName": "BoostCLI",
     "appType": [
       "app",
@@ -2420,36 +2333,6 @@
       {
         "elementName": "Sat Streaming",
         "elementURL": "https://dwvisser.github.io/v4v_exchange/"
-      }
-    ]
-  },
-  {
-    "appName": "Podvine",
-    "appType": [
-      "hosting",
-      "podcast player",
-      "app"
-    ],
-    "appUrl": "https://podvine.com",
-    "appIconUrl": "podvine.png",
-    "platforms": [
-      "Mobile",
-      "Web",
-      "iOS",
-      "Android"
-    ],
-    "supportedElements": [
-      {
-        "elementName": "Search",
-        "elementURL": "https://podvine.com/search?="
-      },
-      {
-        "elementName": "Transcript",
-        "elementURL": "https://podvine.com"
-      },
-      {
-        "elementName": "GUID",
-        "elementURL": "https://podvine.com"
       }
     ]
   },
@@ -3804,6 +3687,45 @@
       {
         "elementName": "Value",
         "elementURL": "https://oncetold.us"
+      }
+    ]
+  },
+  {
+    "appName": "Seriously Simple Podcasting",
+    "appType": [
+      "wordpress plugin",
+      "open source"
+    ],
+    "appUrl": "https://wordpress.org/plugins/seriously-simple-podcasting/",
+    "appIconUrl": "seriouslysimplepodcasting.png",
+    "platforms": [
+      "Wordpress",
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Locked",
+        "elementURL": "https://castos.com/introducing-podcast-2-0-support/"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://castos.com/introducing-podcast-2-0-support/"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://castos.com/introducing-podcast-2-0-support/"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://support.castos.com/article/281-podcast-2-0-transcript-tag-in-seriously-simple-podcasting"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://support.castos.com/article/276-enable-disable-podping"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://support.castos.com/article/408-seriously-simple-podcasting-settings-overview#Feed-Details-Settings-_WDlJ"
       }
     ]
   },
