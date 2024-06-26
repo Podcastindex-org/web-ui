@@ -5,6 +5,7 @@ const app = express() // create express app
 const { makeThreadcap, InMemoryCache, updateThreadcap, makeRateLimitedFetcher } = require('threadcap');
 const fetch = require('node-fetch');
 const packageJson = require('../package.json');
+const ejs = require('ejs')
 
 // Gets the .env variables
 require('dotenv').config()
@@ -15,13 +16,18 @@ const USER_AGENT = `Podcastindex.org-web/${packageJson.version}`;
 // NOTE: This server will work as a reverse proxy.
 const api = require('podcast-index-api')(
     process.env.API_KEY,
-    process.env.API_SECRET
+    process.env.API_SECRET,
+    process.env.API_USER_AGENT
 )
 
 const apiAdd = require('podcast-index-api')(
     process.env.API_ADD_KEY,
-    process.env.API_ADD_SECRET
+    process.env.API_ADD_SECRET,
+    process.env.API_USER_AGENT
 )
+
+app.set("view engine", "ejs")
+app.set("views", "./server/views")
 
 app.use((req, res, next) => {
 
@@ -213,9 +219,13 @@ app.use('/api/comments/remoteInteractUrlPattern', async (req, res) => {
 
     console.log('Debug interactorAccount', interactorAccount);
 
-    const interactorInstanceHost = interactorAccount.split('@')[1];
+    let splitIndex = 1
+    if (interactorAccount.startsWith('@')) {
+        splitIndex = 2
+    }
+    const interactorInstanceHost = interactorAccount.split('@')[splitIndex];
 
-    const response = await fetch(`https://${interactorInstanceHost}/.well-known/webfinger?` + new URLSearchParams({resource:`acct:${interactorAccount}`}));
+    const response = await fetch(`https://${interactorInstanceHost}/.well-known/webfinger?` + new URLSearchParams({resource:`acct:${interactorAccount.substring(splitIndex-1)}`}));
     const parsedResponse = await response.json();
 
     const linkOStatusSubscribe = parsedResponse.links.find((link) => link.rel === 'http://ostatus.org/schema/1.0/subscribe');
@@ -259,11 +269,89 @@ app.use('/api/apps', async (req, res) => {
 app.use('/api/images', express.static('./server/assets'))
 
 // ------------------------------------------------
+// ---------- Pages with Open Graph tags ----------
+// ------------------------------------------------
+
+app.use('/apps', (req, res) => {
+    res.render('index', {
+        'title': 'Apps',
+        'path': req.originalUrl,
+    })
+})
+
+app.use('/add', (req, res) => {
+    res.render('index', {
+        'title': 'Add Feed',
+        'path': req.originalUrl,
+    })
+})
+
+
+app.use('/podcast/value4value', (req, res) => {
+    res.render('index', {
+        'title': 'Value 4 Value Podcasts',
+        'description': 'These podcasts are set up to receive Bitcoin payments in real-time over the Lightning network using compatible Podcasting 2.0 apps.',
+        'path': req.originalUrl,
+    })
+})
+
+app.use('/podcast/:podcastid(\\d+)', async (req, res) => {
+    const params = {
+        'title': 'Podcast', // default title
+        'path': req.originalUrl,
+    }
+
+    if (req.query.episode) { // /podcast/41504?episode=15576217793
+        const response = await api.episodesById(req.query.episode)
+
+        if (response?.episode?.id) {
+            const { feedTitle, title, description, image } = response.episode
+            const textDescription = description.replace(new RegExp('<\/?[^>]+(>|$)', 'gi'), '').replace(new RegExp('[\r\n]', 'g'), ' ')
+
+            params.title = feedTitle + ' | ' + title
+            params.description = textDescription
+            params.image = image
+        }
+    }
+    else if (req.params.podcastid) { // /podcast/41504
+        const response = await api.podcastsByFeedId(req.params.podcastid)
+
+        if (response?.feed?.id) {
+            const { title, description, image } = response.feed
+            const textDescription = description.replace(new RegExp('<\/?[^>]+(>|$)', 'gi'), '').replace(new RegExp('[\r\n]', 'g'), ' ')
+
+            params.title = title
+            params.description = textDescription
+            params.image = image
+        }
+    }
+
+    res.render('index', params)
+})
+
+app.use('/search', (req, res) => {
+    res.render('index', {
+        'title': 'Search',
+        'path': req.originalUrl,
+    })
+})
+
+app.use('/stats', (req, res) => {
+    res.render('index', {
+        'title': 'Stats',
+        'path': req.originalUrl,
+    })
+})
+
+// ------------------------------------------------
 // ---------- Static content for client -----------
 // ------------------------------------------------
 
 app.use(express.static('./server/www'))
-app.get('*', (req, res) => res.sendFile(path.resolve('server', 'www', 'index.html')))
+
+app.get('*', (req, res) => {
+    res.render('index', {})
+})
 
 // ------------------------------------------------
 

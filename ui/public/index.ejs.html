@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!--
+        //
+        // This file is used by Webpack to generate the actual EJS template in `views/index.ejs`
+        //
+        -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!-- Style dependencies -->
         <!-- <link href="https://unpkg.com/normalize.css@^7.0.0" rel="stylesheet" /> -->
-        <title>Podcastindex.org</title>
-        <meta name="title" content="Podcastindex.org">
-        <meta name="description" content="The Podcast Index is here to preserve, protect and extend the open, independent podcasting ecosystem.">
+        <title><%= (locals.title ? locals.title + ' | ' : '') + 'Podcastindex.org' %></title>
+
+        <meta name="title" content="<%= (locals.title ? locals.title + ' | ' : '') + 'Podcastindex.org' %>">
+        <meta name="description" content="<%= (locals.description || 'The Podcast Index is here to preserve, protect and extend the open, independent podcasting ecosystem.') %>">
+
+        <meta name="twitter:title" content="<%= (locals.title ? locals.title + ' | ' : '') + 'Podcastindex.org' %>">
+        <meta name="twitter:description" content="<%= (locals.description || 'The Podcast Index is here to preserve, protect and extend the open, independent podcasting ecosystem.') %>">
+        <meta name="twitter:site" content="@PodcastindexOrg">
+        <meta name="twitter:url" content="https://podcastindex.org<%= (locals.path || '/') %>">
+        <meta name="twitter:image" content="<%= locals.image || 'https://podcastindex.org/android-chrome-256x256.png' %>">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <meta property="og:title" content="<%= (locals.title ? locals.title + ' | ' : '') + 'Podcastindex.org' %>">
+        <meta property="og:description" content="<%= (locals.description || 'The Podcast Index is here to preserve, protect and extend the open, independent podcasting ecosystem.') %>">
+        <meta property="og:site_name" content="Podcastindex.org">
+        <meta property="og:url" content="https://podcastindex.org<%= (locals.path || '/') %>">
+        <meta property="og:image" content="<%= locals.image || 'https://podcastindex.org/android-chrome-256x256.png' %>">
+        <meta property="og:image:width" content="256">
+        <meta property="og:image:height" content="256">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="https://podcastindex.org/">
-        <meta property="og:title" content="Podcastindex.org">
-        <meta property="og:description" content="The Podcast Index is here to preserve, protect and extend the open, independent podcasting ecosystem.">
-        <meta property="twitter:url" content="https://podcastindex.org/">
-        <meta property="twitter:title" content="Podcastindex.org">
-        <meta property="twitter:description" content="The Podcast Index is here to preserve, protect and extend the open, independent podcasting ecosystem.">
     </head>
 
     <body>
