@@ -3777,5 +3777,35 @@
         "elementURL": "https://www.cooler.fm"
       }
     ]
-  }  
+  }, {
+    "appName": "Alitu",
+    "appType": [
+      "hosting",
+      "website",
+      "other"
+    ],
+    "appUrl": "https://alitu.com/",
+    "appIconUrl": "alitu.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Season",
+        "elementURL": "https://alitu.com/"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://alitu.com/"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://alitu.com/"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://alitu.com/"
+      }
+    ]
+  } 
 ]
