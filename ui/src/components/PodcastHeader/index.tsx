@@ -6,7 +6,6 @@ import NoImage from '../../../images/no-cover-art.png'
 import { truncateString } from '../../utils'
 import RSSLogo from "../../../images/feed.svg";
 import EpisodesFMLogo from "../../../images/episodesfm.svg";
-import PodcastAPLogo from "../../../images/podcastap.svg";
 import DonationPage from "../../../images/donation-page.svg";
 import EarthLogo from "../../../images/earth.svg";
 import LightningLogo from "../../../images/lightning.svg"
@@ -164,13 +163,6 @@ export default class PodcastHeader extends React.PureComponent<IProps, PodState>
                                 </a>
                                 : ''
                             }
-                            <a
-                                href={`https://podcastap.com/feed/${id}`}
-                                title="Follow on Activity Pub via Podcast AP"
-                                target="_blank"
-                            >
-                                <img src={PodcastAPLogo} />
-                            </a>
                             {feedURL ?
                                 <Button small={true} onClick={this.copyClicked}>{ this.state.copyMessage }</Button>
                                 : ""
