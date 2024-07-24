@@ -3807,5 +3807,45 @@
         "elementURL": "https://alitu.com/"
       }
     ]
-  } 
+  },
+  {
+    "appName": "Pinepods",
+    "appType": [
+      "open source",
+      "app",
+      "podcast player",
+      "self-hosted"
+    ],
+    "appUrl": "https://pinepods.online",
+    "appIconUrl": "pinepods.png",
+    "platforms": [
+      "Web",
+      "macOS",
+      "Windows",
+      "Linux",
+      "Docker"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Person",
+        "elementURL": "https://www.pinepods.online/docs/Features/Person"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://www.pinepods.online/docs/Features/Transcript"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://www.pinepods.online/docs/Features/Search"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://www.pinepods.online/docs/Features/Funding"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://www.pinepods.online/docs/Features/Chapters"
+      },
+    ]
+  }
 ]
