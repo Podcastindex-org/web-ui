@@ -2515,13 +2515,15 @@
     "appName": "FocusPodcast",
     "appType": [
       "app",
-      "podcast player"
+      "podcast player",
+      "open source"
     ],
     "appUrl": "https://play.google.com/store/apps/details?id=allen.town.focus.podcast",
     "appIconUrl": "FocusPodcast.png",
     "platforms": [
       "Mobile",
-      "Android"
+      "Android",
+      "F-Droid"
     ],
     "supportedElements": [
       {
