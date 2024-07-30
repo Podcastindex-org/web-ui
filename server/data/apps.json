@@ -3822,8 +3822,7 @@
       "Web",
       "macOS",
       "Windows",
-      "Linux",
-      "Docker"
+      "Linux"
     ],
     "supportedElements": [
       {
