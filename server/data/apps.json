@@ -2643,25 +2643,6 @@
     ]
   },
   {
-    "appName": "Conshax",
-    "appType": [
-      "podcaster wallet",
-      "website"
-    ],
-    "tagLine": "Stats for your Sats",
-    "appUrl": "https://conshax.com",
-    "appIconUrl": "conshax.png",
-    "platforms": [
-      "Web"
-    ],
-    "supportedElements": [
-      {
-        "elementName": "Value",
-        "elementURL": "https://conshax.com"
-      }
-    ]
-  },
-  {
     "appName": "Spreaker from iHeart",
     "appType": [
       "hosting",
