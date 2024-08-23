@@ -58,14 +58,23 @@ export default class Results extends React.PureComponent<IProps> {
             searchType = "all"
         }
 
-        // check if id may have been entered
+        // check if id or guid may have been entered
         const number = Number(query)
-        let firstResult = null
-        if (!isNaN(number) && searchType !== "person"){
-            firstResult = await (await this.getFeedById(query))?.feed
+        let feedIdResult = null
+        let guidResult = null
+        if (query && searchType !== "person"){
+            if (!isNaN(number)) {
+                feedIdResult = await (await this.getFeedById(query))?.feed
+                // check if a feed object. When query isn't a valid ID, returns list instead of empty object
+                if (feedIdResult.id === undefined) {
+                    feedIdResult = null
+                }
+            }
+            // check if guid if no feed returned
+            guidResult = await (await this.getPodcastInfoGuid(query))?.feed
             // check if a feed object. When query isn't a valid ID, returns list instead of empty object
-            if (firstResult.id === undefined){
-                firstResult = null
+            if (guidResult.id === undefined){
+                guidResult = null
             }
         }
 
@@ -87,8 +96,11 @@ export default class Results extends React.PureComponent<IProps> {
             }
         }
 
-        if (firstResult) {
-            results.unshift(firstResult)
+        if (guidResult) {
+            results.unshift(guidResult)
+        }
+        if (feedIdResult) {
+            results.unshift(feedIdResult)
         }
 
         if (this._isMounted) {
@@ -105,6 +117,15 @@ export default class Results extends React.PureComponent<IProps> {
         query = encodeSearch(query)
         // noinspection SpellCheckingInspection
         let response = await fetch(`/api/podcasts/byfeedid?id=${query}`, {
+            // credentials: 'same-origin',
+            method: 'GET',
+        })
+        return await response.json()
+    }
+
+    async getPodcastInfoGuid(guid: string) {
+        // noinspection SpellCheckingInspection
+        let response = await fetch(`/api/podcasts/byguid?guid=${guid}`, {
             // credentials: 'same-origin',
             method: 'GET',
         })
