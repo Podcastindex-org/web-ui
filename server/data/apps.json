@@ -3841,6 +3841,26 @@
     ]
   },
   {
+    "appName": "PlaydioCast: Podcast Radio",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "appUrl": "https://apps.apple.com/app/apple-podcasts/id858974970",
+    "appIconUrl": "applepodcasts.jpg",
+    "platforms": [
+      "iOS",
+      "Mobile",
+      "macOS",
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://playdiocast.com"
+      }
+    ]
+  },
+  {
     "appName": "Pinepods",
     "appType": [
       "open source",
