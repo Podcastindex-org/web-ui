@@ -1581,6 +1581,51 @@
     ]
   },
   {
+    "appName": "Digilore",
+    "appType": [
+      "app",
+      "podcast player",
+      "video"
+    ],
+    "appUrl": "https://apps.apple.com/us/app/digilore/id6633130387",
+    "appIconUrl": "digilore.png",
+    "platforms": [
+      "macOS",
+      "iOS",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://apps.apple.com/us/app/digilore/id6633130387"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://apps.apple.com/us/app/digilore/id6633130387"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://apps.apple.com/us/app/digilore/id6633130387"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://apps.apple.com/us/app/digilore/id6633130387"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://apps.apple.com/us/app/digilore/id6633130387"
+      },
+      {
+        "elementName": "Video",
+        "elementURL": "https://apps.apple.com/us/app/digilore/id6633130387"
+      },
+      {
+        "elementName": "Live",
+        "elementURL": "https://apps.apple.com/us/app/digilore/id6633130387"
+      }
+    ]
+  },
+  {
     "appName": "Castopod",
     "appType": [
       "hosting",
