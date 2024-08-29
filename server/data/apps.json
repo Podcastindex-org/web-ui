@@ -3851,7 +3851,7 @@
     "platforms": [
       "iOS",
       "Mobile",
-      "macOS",
+      "macOS"
     ],
     "supportedElements": [
       {
