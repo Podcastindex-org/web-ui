@@ -28,6 +28,53 @@
     ]
   },
   {
+    "appName": "AiPodNav",
+    "appType": [
+      "podcast player",
+      "website",
+      "directory",
+      "other"
+    ],
+    "appUrl": "https://www.aipodnav.com/",
+    "appIconUrl": "AIPodNav.png",
+    "platforms": [
+        "Mobile",
+        "Web",
+        "Windows",
+        "macOS"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "directory",
+        "elementURL": "https://www.aipodnav.com/home"
+      },
+      {
+        "elementName": "charts",
+        "elementURL": "https://www.aipodnav.com/discover/best-podcasts"
+      },
+      {
+        "elementName": "mind map",
+        "elementURL": "https://www.aipodnav.com/"
+      },
+      {
+        "elementName": "summary",
+        "elementURL": "https://www.aipodnav.com/discover/new-ai-podcast-summary"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://www.aipodnav.com/discover/new-podcast-transcript"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://www.aipodnav.com/"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://www.aipodnav.com/discover/new-podcast-episode"
+      }
+    ]
+  },
+  {
     "appName": "Audicy",
     "appType": [
       "podcast player",
