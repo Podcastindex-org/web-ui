@@ -28,6 +28,33 @@
     ]
   },
   {
+    "appName": "AiPodNav",
+    "appType": [
+      "podcast player",
+      "website",
+      "directory",
+      "other"
+    ],
+    "appUrl": "https://www.aipodnav.com/",
+    "appIconUrl": "AIPodNav.png",
+    "platforms": [
+        "Mobile",
+        "Web",
+        "Windows",
+        "macOS"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://www.aipodnav.com/discover/new-podcast-transcript"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://www.aipodnav.com/"
+      }
+    ]
+  },
+  {
     "appName": "Audicy",
     "appType": [
       "podcast player",
