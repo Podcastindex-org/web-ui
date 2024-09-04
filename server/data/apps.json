@@ -1502,6 +1502,7 @@
     "appUrl": "https://podcastindex.org",
     "appIconUrl": "podcastindex.jpg",
     "platforms": [
+      "Fediverse",
       "Web"
     ],
     "supportedElements": [
