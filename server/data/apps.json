@@ -897,7 +897,8 @@
     "appIconUrl": "podlp.png",
     "platforms": [
       "Mobile",
-      "KaiOS"
+      "KaiOS",
+      "Cloud Phone"
     ],
     "supportedElements": [
       {
@@ -919,6 +920,26 @@
       {
         "elementName": "Alternate Enclosure",
         "elementURL": "https://podlp.com/"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://blog.podlp.com/posts/podlp-podcast-index/"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://x.com/PodLP_App/status/1488678686870044674"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://blog.podlp.com/posts/podlp-podcast-index/"
+      },
+      {
+        "elementName": "Images",
+        "elementURL": "https://x.com/PodLP_App/status/1472961945854566401"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://podlp.com"
       }
     ]
   },
