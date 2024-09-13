@@ -1,10 +1,10 @@
 import queryStringHelper from 'query-string'
-import NoImage from "../images/no-cover-art.png";
+import NoImage from '../images/no-cover-art.png'
 
 export const updateTitle = (tile?: string) => {
     let newTitle = 'Podcastindex.org'
     if (tile !== undefined)
-        newTitle = tile + " | " + newTitle
+        newTitle = tile + ' | ' + newTitle
     document.title = newTitle
 }
 
@@ -12,7 +12,7 @@ export const encodeSearch = (searchString: string): string => {
     return encodeURIComponent(searchString)
 }
 
-export const cleanSearchQuery = (queryString: string, field: string = "q"): string => {
+export const cleanSearchQuery = (queryString: string, field: string = 'q'): string => {
     let params = queryStringHelper.parse(queryString)
     let queryAr = params[field] as string
     if (!queryAr) {
@@ -66,10 +66,10 @@ export const fixURL = (url: string) => {
 
 export const isValidURL = (urlString: string) => {
     try {
-        let url = new URL(urlString);
-        return url.protocol === "http:" || url.protocol === "https:";
+        let url = new URL(urlString)
+        return url.protocol === 'http:' || url.protocol === 'https:'
     } catch (_) {
-        return false;
+        return false
     }
 }
 
@@ -82,4 +82,20 @@ export const isValidURL = (urlString: string) => {
  */
 export const getImage = (item) => {
     return item.artwork || item.image || item.feedImage || NoImage
+}
+
+/**
+ * Encodes text to URL safe base64
+ *
+ * Based on example from https://developer.mozilla.org/en-US/docs/Glossary/Base64#the_unicode_problem
+ *
+ * @param text the text to encode
+ * @return the base 64 encoded text
+ */
+export const encodeURLSafeBase64 = (text: string): string => {
+    const binString = Array.from(new TextEncoder().encode(text), (byte) =>
+        String.fromCodePoint(byte),
+    ).join('')
+    // since episodes.fm doesn't need trailing =, remove them
+    return btoa(binString).replace(/=+$/, '');
 }

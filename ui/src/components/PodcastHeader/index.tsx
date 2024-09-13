@@ -3,7 +3,7 @@ import Button from "../Button";
 
 import Value from '../Value'
 import NoImage from '../../../images/no-cover-art.png'
-import { truncateString } from '../../utils'
+import { encodeURLSafeBase64, truncateString } from '../../utils'
 import RSSLogo from "../../../images/feed.svg";
 import EpisodesFMLogo from "../../../images/episodesfm.svg";
 import DonationPage from "../../../images/donation-page.svg";
@@ -153,9 +153,13 @@ export default class PodcastHeader extends React.PureComponent<IProps, PodState>
                                 </a>
                                 : ""
                             }
-                            {itunesId ?
+                            {itunesId || feedURL ?
                                 <a
-                                    href={`https://episodes.fm/${itunesId}`}
+                                    href={
+                                        `https://episodes.fm/${
+                                            itunesId ? itunesId : encodeURLSafeBase64(feedURL)
+                                        }`
+                                    }
                                     title="Follow in your podcast app"
                                     target="_blank"
                                 >
