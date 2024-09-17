@@ -24,6 +24,10 @@
       {
         "elementName": "Podping",
         "elementURL": "https://pocketcasts.com/podcast-player/"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://support.pocketcasts.com/knowledge-base/episode-transcripts/"
       }
     ]
   },
