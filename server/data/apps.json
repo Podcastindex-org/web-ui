@@ -3860,6 +3860,59 @@
     ]
   },
   {
+    "appName": "PodToo",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://podtoo.com",
+    "appIconUrl": "podtoo.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Locked",
+        "elementURL": "https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags"
+      },
+      {
+        "elementName": "Txt",
+        "elementURL": "https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags"
+      },
+      {
+        "elementName": "Location",
+        "elementURL": "https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags"
+      },
+      {
+        "elementName": "Images",
+        "elementURL": "https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags"
+      },
+      {
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags"
+      },
+      {
+        "elementName": "Update Frequency",
+        "elementURL": "https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags"
+      },
+      {
+        "elementName": "Social Interact",
+        "elementURL": "https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags"
+      },
+      {
+        "elementName":"Podping",
+        "elementURL":"https://podcastindex.social/@russell/113165128969015505"
+      }
+    ]
+  },
+  {
     "appName": "Cooler Podcast player",
     "appType": [
       "app"
