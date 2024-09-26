@@ -1905,6 +1905,10 @@
       {
         "elementName": "Txt",
         "elementURL": "https://transistor.fm/changelog/verification-code"
+      },
+      {
+        "elementName": "Podroll",
+        "elementURL": "https://transistor.fm/changelog/podroll/"
       }
     ]
   },
