@@ -750,6 +750,10 @@
       {
         "elementName": "Chapters",
         "elementURL": "https://github.com/AntennaPod/AntennaPod/pull/5630"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://github.com/AntennaPod/AntennaPod/pull/7186"
       }
     ]
   },
