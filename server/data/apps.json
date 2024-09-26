@@ -4021,5 +4021,70 @@
         "elementURL": "https://www.pinepods.online/docs/Features/Chapters"
       }
     ]
+  },
+  {
+    "appName": "iono.fm",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://iono.fm",
+    "appIconUrl": "ionofm.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "GUID",
+        "elementURL": "https://support.iono.fm/docs/podcast-2-support"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://support.iono.fm/docs/podcast-2-support"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://support.iono.fm/docs/podcast-2-support"
+      },
+      {
+        "elementName": "Podroll",
+        "elementURL": "https://support.iono.fm/docs/podcast-2-support"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://support.iono.fm/docs/podcast-2-support"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://support.iono.fm/docs/podcast-2-support"
+      },
+      {
+        "elementName": "Update Frequency",
+        "elementURL": "https://support.iono.fm/docs/podcast-2-support"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://support.iono.fm/docs/podcast-2-support"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://support.iono.fm/docs/podcast-2-support"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://support.iono.fm/docs/podcast-2-support"
+      },
+      {
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://support.iono.fm/docs/podcast-2-support"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://support.iono.fm/docs/podcast-2-support"
+      },
+      {
+        "elementName": "OP3",
+        "elementURL": "https://support.iono.fm/docs/podcast-2-support"
+      }
+    ]
   }
 ]
