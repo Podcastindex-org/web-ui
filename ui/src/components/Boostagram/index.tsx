@@ -92,6 +92,9 @@ export default class Boostagram extends React.PureComponent<IProps> {
 
         if (webln) {
             this.throwConfetti()
+
+            // fee destinations are calculated as percentages of the donation amount
+            // i.e. (split / 100) * satAmount
             for (const dest of feesDestinations) {
                 let feeRecord = getBaseRecord()
 
@@ -121,9 +124,13 @@ export default class Boostagram extends React.PureComponent<IProps> {
                 }
             }
 
+            // non-fee destinations are calculated as shares of the remaining amount after fees are taken out
+            // i.e. (split / sum(all splits)) * runningTotal
+            let splitsTotal = splitsDestinations.reduce((sum, dest) => sum + dest.split, 0)
+
             for (const dest of splitsDestinations) {
                 let record = getBaseRecord()
-                let amount = Math.round((dest.split / 100) * runningTotal)
+                let amount = Math.round((dest.split / splitsTotal) * runningTotal)
                 record.name = dest.name
                 record.value_msat = amount * 1000
                 if (amount >= 1) {
