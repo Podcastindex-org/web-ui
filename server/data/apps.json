@@ -3638,6 +3638,10 @@
       {
         "elementName": "Search",
         "elementURL": "https://www.overhaul.fm"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://podnews.net/press-release/overhaul-fm-good-bad-ugly"
       }
     ]
   },
