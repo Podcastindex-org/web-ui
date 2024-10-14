@@ -3892,6 +3892,48 @@
     ]
   },
   {
+    "appName": "Pods-Blitz",
+    "appType": [
+      "hosting",
+      "open source"
+    ],
+    "appUrl": "https://pods.blitz.org/",
+    "appIconUrl": "pods-blitz.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Funding",
+        "elementURL": "https://docs.pods-blitz.org"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://docs.pods-blitz.org"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://docs.pods-blitz.org"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://docs.pods-blitz.org"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://docs.pods-blitz.org"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://docs.pods-blitz.org"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://docs.pods-blitz.org"
+      }
+    ]
+  },
+  {
     "appName": "PodToo",
     "appType": [
       "hosting"
