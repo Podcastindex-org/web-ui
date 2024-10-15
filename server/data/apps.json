@@ -42,10 +42,10 @@
     "appUrl": "https://www.aipodnav.com/",
     "appIconUrl": "AIPodNav.png",
     "platforms": [
-        "Mobile",
-        "Web",
-        "Windows",
-        "macOS"
+      "Mobile",
+      "Web",
+      "Windows",
+      "macOS"
     ],
     "supportedElements": [
       {
@@ -3981,8 +3981,8 @@
         "elementURL": "https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags"
       },
       {
-        "elementName":"Podping",
-        "elementURL":"https://podcastindex.social/@russell/113165128969015505"
+        "elementName": "Podping",
+        "elementURL": "https://podcastindex.social/@russell/113165128969015505"
       }
     ]
   },
@@ -4002,7 +4002,8 @@
         "elementURL": "https://www.cooler.fm"
       }
     ]
-  }, {
+  },
+  {
     "appName": "Alitu",
     "appType": [
       "hosting",
@@ -4158,6 +4159,27 @@
       {
         "elementName": "OP3",
         "elementURL": "https://support.iono.fm/docs/podcast-2-support"
+      }
+    ]
+  },
+  {
+    "appName": "unde",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "appUrl": "https://unde.pixelcode.ro/store",
+    "appIconUrl": "unde.png",
+    "platforms": [
+      "Android",
+      "Mobile",
+      "iOS",
+      "macOS"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://unde.pixelcode.ro/store"
       }
     ]
   }
