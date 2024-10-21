@@ -2538,7 +2538,8 @@
     "appType": [
       "hosting",
       "website",
-      "open source"
+      "open source",
+      "self-hosted"
     ],
     "appUrl": "https://bitbadger.solutions/open-source/myweblog",
     "appIconUrl": "myweblog.png",
