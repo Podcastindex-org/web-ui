@@ -4161,5 +4161,25 @@
         "elementURL": "https://support.iono.fm/docs/podcast-2-support"
       }
     ]
+  },
+  {
+    "appName": "unde",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "appUrl": "https://unde.pixelcode.ro",
+    "appIconUrl": "unde.png",
+    "platforms": [
+      "Android",
+      "Mobile",
+      "iOS"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://unde.pixelcode.ro"
+      }
+    ]
   }
 ]
