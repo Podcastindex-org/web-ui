@@ -77,6 +77,35 @@ export default class Boostagram extends React.PureComponent<IProps> {
             }
         }
 
+        const sendPayment = async (dest, amount, customRecords) => {
+            if (dest.type == 'lnaddress') {
+                const [username, hostname] = dest.address.split('@')
+
+                // load their well-known to find the lnurl callback address
+                let inforesp = await fetch(`https://${hostname}/.well-known/lnurlp/${username}`)
+                const info = await inforesp.json()
+
+                // request an invoice from the callback
+                let params = new URLSearchParams({
+                    amount: (amount * 1000).toString(),
+                    comment: customRecords['7629169'] || "", // dump tlv into comment for now
+                })
+
+                let invoiceresp = await fetch(info.callback + `?${params.toString()}`)
+                const invoice = await invoiceresp.json()
+
+                // pay invoice
+                await webln.sendPayment(invoice.pr)
+            }
+            else {
+                await webln.keysend({
+                    destination: dest.address,
+                    amount: amount,
+                    customRecords: customRecords,
+                })
+            }
+        }
+
         let feesDestinations = destinations.filter((v) => v.fee)
         let splitsDestinations = destinations.filter((v) => !v.fee)
         let runningTotal = this.state.satAmount
@@ -113,11 +142,7 @@ export default class Boostagram extends React.PureComponent<IProps> {
                     }
 
                     try {
-                        await webln.keysend({
-                            destination: dest.address,
-                            amount: amount,
-                            customRecords: customRecords,
-                        })
+                        await sendPayment(dest, amount, customRecords)
                     } catch (err) {
                         alert(`error with  ${dest.name}:  ${err.message}`)
                     }
@@ -140,11 +165,7 @@ export default class Boostagram extends React.PureComponent<IProps> {
                     }
 
                     try {
-                        await webln.keysend({
-                            destination: dest.address,
-                            amount: amount,
-                            customRecords: customRecords,
-                        })
+                        await sendPayment(dest, amount, customRecords)
                     } catch (err) {
                         alert(`error with  ${dest.name}:  ${err.message}`)
                     }
