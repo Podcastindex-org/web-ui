@@ -77,6 +77,45 @@ export default class Boostagram extends React.PureComponent<IProps> {
             }
         }
 
+        const sendPayment = async (dest, amount, boostInfo, customRecords) => {
+            if (dest.type == 'lnaddress') {
+                const [username, hostname] = dest.address.split('@')
+
+                // load their well-known to find the lnurl callback address
+                let inforesp = await fetch(`https://${hostname}/.well-known/lnurlp/${username}`)
+                const info = await inforesp.json()
+
+                let comment = ""
+
+                if (boostInfo.message != "") {
+                    comment += `${boostInfo.message}\n`
+                }
+
+                comment += `From ${boostInfo.sender_name} for ${boostInfo.podcast} - ${boostInfo.episode}`
+
+                // request an invoice from the callback
+                let params = new URLSearchParams({
+                    amount: (amount * 1000).toString(),
+                    comment: comment,
+                })
+
+                let invoiceresp = await fetch(info.callback + `?${params.toString()}`)
+                const invoice = await invoiceresp.json()
+
+                // pay invoice
+                await webln.sendPayment(invoice.pr)
+            }
+            else {
+                customRecords['7629169'] = JSON.stringify(boostInfo)
+
+                await webln.keysend({
+                    destination: dest.address,
+                    amount: amount,
+                    customRecords: customRecords,
+                })
+            }
+        }
+
         let feesDestinations = destinations.filter((v) => v.fee)
         let splitsDestinations = destinations.filter((v) => !v.fee)
         let runningTotal = this.state.satAmount
@@ -106,18 +145,14 @@ export default class Boostagram extends React.PureComponent<IProps> {
                     feeRecord.name = dest.name
                     feeRecord.value_msat = amount * 1000
 
-                    let customRecords = { '7629169': JSON.stringify(feeRecord) }
+                    let customRecords = {}
 
                     if (dest.customKey) {
                         customRecords[dest.customKey] = dest.customValue
                     }
 
                     try {
-                        await webln.keysend({
-                            destination: dest.address,
-                            amount: amount,
-                            customRecords: customRecords,
-                        })
+                        await sendPayment(dest, amount, feeRecord, customRecords)
                     } catch (err) {
                         alert(`error with  ${dest.name}:  ${err.message}`)
                     }
@@ -134,17 +169,13 @@ export default class Boostagram extends React.PureComponent<IProps> {
                 record.name = dest.name
                 record.value_msat = amount * 1000
                 if (amount >= 1) {
-                    let customRecords = { '7629169': JSON.stringify(record) }
+                    let customRecords = {}
                     if (dest.customKey) {
                         customRecords[dest.customKey] = dest.customValue
                     }
 
                     try {
-                        await webln.keysend({
-                            destination: dest.address,
-                            amount: amount,
-                            customRecords: customRecords,
-                        })
+                        await sendPayment(dest, amount, record, customRecords)
                     } catch (err) {
                         alert(`error with  ${dest.name}:  ${err.message}`)
                     }
