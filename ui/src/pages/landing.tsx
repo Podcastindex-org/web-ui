@@ -156,56 +156,43 @@ export default class Landing extends React.Component<IProps, IState> {
                     </p>
                     <h3>Developer? Join the fun!</h3>
                     <p>
-                        Sign up for an account and get API keys at:{' '}
-                        <a href="https://api.podcastindex.org/signup">
-                            https://api.podcastindex.org
-                        </a>
+                        <strong>API Documentation</strong> is <a target="_blank" href="https://podcastindex-org.github.io/docs-api/">online here</a>.
                     </p>
                     <p>
-                        Download our full podcast database as a sqlite3 file HTTP <a href="https://public.podcastindex.org/podcastindex_feeds.db.tgz">here</a>.
+                        <strong>Get API keys</strong> by <a href="https://api.podcastindex.org/signup">signing up for an account</a>
                     </p>
                     <p>
-                        API Documentation is{' '}
-                        <a
-                            target="_blank"
-                            href="https://podcastindex-org.github.io/docs-api/"
-                        >
-                            here
-                        </a>
-                        .
+                        <strong>Download the full podcast index</strong> as <a href="https://public.podcastindex.org/podcastindex_feeds.db.tgz">a sqlite3 file</a>.{' '}
+                        Query the entire database on your desktop using <a href="https://sqlitebrowser.org">DB Browser for SQLite</a> or similar.{' '}
+                        The file is produced Saturdays at 22:00 UTC (and uploaded a few hours later).
                     </p>
                     <p>
-                        We build in the open. Get active in the{' '}
+                        <strong>We build in the open.</strong> Get active in the{' '}
                         <a href="https://github.com/Podcastindex-org">
                             Github repos
                         </a>
                         .
                     </p>
                     <p>
-                        We have a Mastodon server for collaboration. Join it
+                        <strong>We have a Mastodon server for collaboration.</strong> Join it
                         here:{' '}
                         <a href="https://podcastindex.social/invite/hfcQYbjq">
                             Podcastindex.social
                         </a>
                     </p>
                     <p>
-                        Follow us on{' '}
-                        {/*the blog:{' '}*/}
-                        {/*<a href="https://blog.podcastindex.org/">*/}
-                        {/*    blog.podcastindex.org*/}
-                        {/*</a>{' '}*/}
-                        {/*or on{' '}*/}
-                        <a href="https://twitter.com/PodcastindexOrg">
-                            Twitter
+                        <strong>Follow us</strong> on{' '}
+                        <a href="https://x.com/PodcastindexOrg">
+                            X - @podcastindexorg
                         </a>
                         {' '} or{' '}
                         <a href="https://podcastindex.social/">
-                            Mastodon
+                            our Mastodon server
                         </a>
                         .
                     </p>
                     <p>
-                        Shoot us an email at:{' '}
+                        <strong>Shoot us an email</strong> at:{' '}
                         <a href="mailto:info@podcastindex.org">
                             info@podcastindex.org
                         </a>
@@ -214,7 +201,7 @@ export default class Landing extends React.Component<IProps, IState> {
                 <div id="donate" className="info-section">
                     <h3>Help us out...</h3>
                     <p>
-                        None of this is free. If you get any value from this
+                        <strong>None of this is free.</strong> If you get any value from this
                         project, or if you just believe in it and want to help
                         us out with hosting fees and paying the bills, a
                         donation of any amount would be great.
