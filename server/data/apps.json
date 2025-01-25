@@ -69,10 +69,10 @@
     "appUrl": "https://www.aipodnav.com/",
     "appIconUrl": "AIPodNav.png",
     "platforms": [
-        "Mobile",
-        "Web",
-        "Windows",
-        "macOS"
+      "Mobile",
+      "Web",
+      "Windows",
+      "macOS"
     ],
     "supportedElements": [
       {
@@ -4013,8 +4013,8 @@
         "elementURL": "https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags"
       },
       {
-        "elementName":"Podping",
-        "elementURL":"https://podcastindex.social/@russell/113165128969015505"
+        "elementName": "Podping",
+        "elementURL": "https://podcastindex.social/@russell/113165128969015505"
       }
     ]
   },
@@ -4034,7 +4034,8 @@
         "elementURL": "https://www.cooler.fm"
       }
     ]
-  }, {
+  },
+  {
     "appName": "Alitu",
     "appType": [
       "hosting",
@@ -4210,6 +4211,40 @@
       {
         "elementName": "Search",
         "elementURL": "https://unde.pixelcode.ro"
+      }
+    ]
+  },
+  {
+    "appName": "Jellypod",
+    "appType": [
+      "hosting",
+      "website"
+    ],
+    "appUrl": "https://jellypod.ai",
+    "appIconUrl": "jellypod.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Episode",
+        "elementURL": "https://jellypod.ai/podcast-2-support"
+      },
+      {
+        "elementName": "GUID",
+        "elementUrl": "https://jellypod.ai/podcast-2-support"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://jellypod.ai/podcast-2-support"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://jellypod.ai/podcast-2-support"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://jellypod.ai/podcast-2-support"
       }
     ]
   }
