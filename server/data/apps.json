@@ -69,10 +69,10 @@
     "appUrl": "https://www.aipodnav.com/",
     "appIconUrl": "AIPodNav.png",
     "platforms": [
-        "Mobile",
-        "Web",
-        "Windows",
-        "macOS"
+      "Mobile",
+      "Web",
+      "Windows",
+      "macOS"
     ],
     "supportedElements": [
       {
@@ -4013,8 +4013,8 @@
         "elementURL": "https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags"
       },
       {
-        "elementName":"Podping",
-        "elementURL":"https://podcastindex.social/@russell/113165128969015505"
+        "elementName": "Podping",
+        "elementURL": "https://podcastindex.social/@russell/113165128969015505"
       }
     ]
   },
@@ -4034,7 +4034,8 @@
         "elementURL": "https://www.cooler.fm"
       }
     ]
-  }, {
+  },
+  {
     "appName": "Alitu",
     "appType": [
       "hosting",
@@ -4212,5 +4213,21 @@
         "elementURL": "https://unde.pixelcode.ro"
       }
     ]
+  },
+  {
+    "appName": "Cardo",
+    "appType": [
+      "app",
+      "podcast player",
+      "open source"
+    ],
+    "appUrl": "https://cardo-podcast.github.io",
+    "appIconUrl": "cardo.svg",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "supportedElements": []
   }
 ]
