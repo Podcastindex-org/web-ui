@@ -4240,7 +4240,7 @@
     "appUrl": "https://www.podferry.com/",
     "appIconUrl": "podferry.png",
     "platforms": [
-      "Web",
+      "Web"
     ],
     "supportedElements": [
       {
