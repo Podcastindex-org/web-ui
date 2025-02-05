@@ -4229,5 +4229,28 @@
       "Linux"
     ],
     "supportedElements": []
+  },
+  {
+    "appName": "PodFerry",
+    "appType": [
+      "app",
+      "podcast player",
+      "website"
+    ],
+    "appUrl": "https://www.podferry.com/",
+    "appIconUrl": "podferry.png",
+    "platforms": [
+      "Web",
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://www.podferry.com/player"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://www.podferry.com/dashboard/player"
+      }
+    ]
   }
 ]
