@@ -1,5 +1,37 @@
 [
   {
+    "appName": "Podcatcher",
+    "appType": [
+      "podcast player",
+      "app"
+    ],
+    "appUrl": "https://podcatcher.net",
+    "appIconUrl": "podcatcher.png",
+    "platforms": [
+      "Mobile",
+      "Web",
+      "iOS"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://podcatcher.net"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://podcatcher.net"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://podcatcher.net"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://podcatcher.net"
+      }
+    ]
+  },
+  {
     "appName": "PodExtra.AI",
     "appType": [
       "podcast player",
