@@ -1443,7 +1443,8 @@
     "appType": [
       "wordpress plugin",
       "hosting",
-      "open source"
+      "open source",
+      "self-hosted"
     ],
     "appUrl": "https://blubrry.com/services/powerpress-plugin/",
     "appIconUrl": "powerpress.png",
@@ -1765,7 +1766,8 @@
     "appName": "Castopod",
     "appType": [
       "hosting",
-      "open source"
+      "open source",
+      "self-hosted"
     ],
     "appUrl": "https://castopod.org/",
     "appIconUrl": "castopod.png",
@@ -2286,9 +2288,10 @@
     ]
   },
   {
-    "appName": "gpodder",
+    "appName": "gpodder.net",
     "appType": [
-      "open source"
+      "open source",
+      "self-hosted"
     ],
     "appUrl": "https://gpodder.net/",
     "appIconUrl": "gpodder.png",
@@ -2902,6 +2905,7 @@
     "appType": [
       "app",
       "open source",
+      "self-hosted",
       "hosting",
       "video"
     ],
