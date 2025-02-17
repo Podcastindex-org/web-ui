@@ -3722,12 +3722,21 @@
     "appUrl": "https://podcastai.com",
     "appIconUrl": "podcastai.png",
     "platforms": [
-      "Web"
+      "Web",
+      "Mobile"
     ],
     "supportedElements": [
       {
-        "elementName": "Alternate Enclosure",
-        "elementUrl": "https://podcastai.com"
+        "elementName": "GUID",
+        "elementURL": "https://podcastai.com"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://podcastai.com"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://podcastai.com"
       },
       {
         "elementName": "Episode",
@@ -3750,7 +3759,19 @@
         "elementURL": "https://podcastai.com"
       },
       {
+        "elementName": "Alternate Enclosure",
+        "elementUrl": "https://podcastai.com"
+      },
+      {
         "elementName": "Video",
+        "elementUrl": "https://podcastai.com"
+      },
+      {
+        "elementName": "OP3",
+        "elementUrl": "https://podcastai.com"
+      },
+      {
+        "elementName": "Search",
         "elementUrl": "https://podcastai.com"
       }
     ]
