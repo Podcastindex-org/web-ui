@@ -4343,5 +4343,44 @@
         "elementURL": "https://www.podferry.com/dashboard/player"
       }
     ]
+  },
+  {
+    "appName": "wherever.audio",
+    "appType": [
+      "app",
+      "podcast player",
+      "website"
+    ],
+    "appUrl": "https://wherever.audio/",
+    "appIconUrl": "wherever.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "GUID",
+        "elementURL": "https://wherever.audio/"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://wherever.audio/"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://wherever.audio/"
+      },
+      {
+        "elementName": "Podroll",
+        "elementURL": "https://wherever.audio/"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://wherever.audio/"
+      },
+      {
+        "elementName": "Live",
+        "elementURL": "https://wherever.audio/"
+      }
+    ]
   }
 ]
