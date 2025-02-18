@@ -4272,6 +4272,40 @@
     ]
   },
   {
+    "appName": "Jellypod",
+    "appType": [
+      "hosting",
+      "website"
+    ],
+    "appUrl": "https://jellypod.ai",
+    "appIconUrl": "jellypod.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Episode",
+        "elementURL": "https://jellypod.ai/podcast-2-support"
+      },
+      {
+        "elementName": "GUID",
+        "elementUrl": "https://jellypod.ai/podcast-2-support"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://jellypod.ai/podcast-2-support"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://jellypod.ai/podcast-2-support"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://jellypod.ai/podcast-2-support"
+      }
+    ]
+  },
+  {
     "appName": "Cardo",
     "appType": [
       "app",
