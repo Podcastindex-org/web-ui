@@ -186,7 +186,7 @@ export default class Landing extends React.Component<IProps, IState> {
                             X - @podcastindexorg
                         </a>
                         {' '} or{' '}
-                        <a href="https://podcastindex.social/">
+                        <a href="https://podcastindex.social/public/local/">
                             our Mastodon server
                         </a>
                         .
