@@ -4382,5 +4382,34 @@
         "elementURL": "https://wherever.audio/"
       }
     ]
+  },
+  {
+    "appName": "Audiomeans",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://www.audiomeans.fr/",
+    "appIconUrl": "audiomeans.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://www.audiomeans.fr/"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://www.audiomeans.fr/"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://www.audiomeans.fr/"
+      },
+      {
+        "elementName": "Txt",
+        "elementURL": "https://www.audiomeans.fr/"
+      }
+    ]
   }
 ]
