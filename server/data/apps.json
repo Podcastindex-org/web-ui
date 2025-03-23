@@ -4411,5 +4411,42 @@
         "elementURL": "https://www.audiomeans.fr/"
       }
     ]
+  },
+  {
+    "appName": "Bubbl",
+    "appType": [
+      "app",
+      "podcast player",
+      "podcast search engine",
+      "podcast digests"
+    ],
+    "appUrl": "https://bubbl.fm",
+    "appIconUrl": "bubbl.png",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://bubbl.fm"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://bubbl.fm"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://bubbl.fm"
+      },
+      {
+        "elementName": "Live",
+        "elementURL": "https://bubbl.fm"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://bubbl.fm"
+      }
+    ]
   }
 ]
