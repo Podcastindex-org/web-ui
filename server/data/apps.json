@@ -4417,8 +4417,8 @@
     "appType": [
       "app",
       "podcast player",
-      "podcast search engine",
-      "podcast digests"
+      "chat bot",
+      "other"
     ],
     "appUrl": "https://bubbl.fm",
     "appIconUrl": "bubbl.png",
