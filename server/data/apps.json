@@ -87,6 +87,9 @@
       {
         "elementName": "Transcript",
         "elementURL": "https://support.pocketcasts.com/knowledge-base/episode-transcripts/"
+      },
+      {
+        "elementName": "Funding"
       }
     ]
   },
