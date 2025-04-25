@@ -4452,5 +4452,29 @@
         "elementURL": "https://bubbl.fm"
       }
     ]
+  },
+  {
+    "appName": "pods.bg",
+    "appType": [
+      "website",
+      "podcast player",
+      "directory",
+      "other"
+    ],
+    "appUrl": "https://pods.bg",
+    "appIconUrl": "https://pods.bg/icon.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://pods.bg"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://pods.bg/episodes"
+      }
+    ]
   }
 ]
