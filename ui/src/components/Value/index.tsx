@@ -33,13 +33,22 @@ export default class Value extends React.PureComponent<IProps, PodState> {
       destinations.pop();
     }
 
+    // list of old node addresses for alby and fountain
+    const knownDeadNodes = {
+      "030a58b8653d32b99200a2334cfe913e51dc7d155aa0116c176657a4f1722677a3": "Alby",
+      "0332d57355d673e217238ce3e4be8491aa6b2a13f95494133ee243e57df1653ace": "Fountain",
+      "03bc290b26637eb8f25de69fca83c85c014796aa03d90bf0d4c03c18947e12127d": "Fountain"
+    }
+
     return (
       <div className="podcast-value">
         <h4>Value for Value via {titleizeString(model.type)}</h4>
         <ul>
           {destinations.map(dest => (
             <li key={dest.name}>
-              <progress value={dest.split} max={splitTotal} title={dest.address}></progress> <a target="_blank" href={"https://amboss.space/node/" + dest.address}>{dest.name}</a>
+              <progress value={dest.split} max={splitTotal} title={dest.address}></progress>
+              {knownDeadNodes[dest.address] && <span title={`This ${knownDeadNodes[dest.address]} wallet is no longer active. If this is your feed, please update it with a new wallet address.`}>⚠️</span>}
+              <a target="_blank" href={"https://amboss.space/node/" + dest.address}>{dest.name}</a>
             </li>
           ))}
         </ul>
