@@ -77,14 +77,38 @@ export default class Boostagram extends React.PureComponent<IProps> {
             }
         }
 
-        const sendPayment = async (dest, amount, boostInfo, customRecords) => {
+        const resolveLnAddress = async (dest) => {
+            const [username, hostname] = dest.address.split('@')
+
+            // check if it's a keysend address
+            try {
+                const resp = await fetch(`https://${hostname}/.well-known/keysend/${username}`)
+                const info = await resp.json()
+
+                if (info) {
+                    return {
+                        address: info.pubkey,
+                        customKey: info.customData?.[0]?.customKey,
+                        customValue: info.customData?.[0]?.customValue,
+                    }
+                }
+            } catch (err) {}
+
+            // assume it's an lnurl address
+            const resp = await fetch(`https://${hostname}/.well-known/lnurlp/${username}`)
+            const info = await resp.json()
+
+            return {
+                callback: info.callback,
+            }
+        }
+
+        const sendPayment = async (dest, amount, boostInfo) => {
             if (dest.type == 'lnaddress') {
-                const [username, hostname] = dest.address.split('@')
+                dest = await resolveLnAddress(dest)
+            }
 
-                // load their well-known to find the lnurl callback address
-                let inforesp = await fetch(`https://${hostname}/.well-known/lnurlp/${username}`)
-                const info = await inforesp.json()
-
+            if (dest.callback) { // lnurl
                 let comment = ""
 
                 if (boostInfo.message != "") {
@@ -99,13 +123,19 @@ export default class Boostagram extends React.PureComponent<IProps> {
                     comment: comment,
                 })
 
-                let invoiceresp = await fetch(info.callback + `?${params.toString()}`)
+                let invoiceresp = await fetch(dest.callback + `?${params.toString()}`)
                 const invoice = await invoiceresp.json()
 
                 // pay invoice
                 await webln.sendPayment(invoice.pr)
             }
-            else {
+            else { // keysend
+                let customRecords = {}
+
+                if (dest.customKey) {
+                    customRecords[dest.customKey] = dest.customValue
+                }
+
                 customRecords['7629169'] = JSON.stringify(boostInfo)
 
                 await webln.keysend({
@@ -140,19 +170,15 @@ export default class Boostagram extends React.PureComponent<IProps> {
                 let amount = Math.round(
                     (dest.split / 100) * this.state.satAmount
                 )
+
                 if (amount) {
                     runningTotal -= amount
+
                     feeRecord.name = dest.name
                     feeRecord.value_msat = amount * 1000
 
-                    let customRecords = {}
-
-                    if (dest.customKey) {
-                        customRecords[dest.customKey] = dest.customValue
-                    }
-
                     try {
-                        await sendPayment(dest, amount, feeRecord, customRecords)
+                        await sendPayment(dest, amount, feeRecord)
                     } catch (err) {
                         alert(`error with  ${dest.name}:  ${err.message}`)
                     }
@@ -166,16 +192,13 @@ export default class Boostagram extends React.PureComponent<IProps> {
             for (const dest of splitsDestinations) {
                 let record = getBaseRecord()
                 let amount = Math.round((dest.split / splitsTotal) * runningTotal)
+
                 record.name = dest.name
                 record.value_msat = amount * 1000
-                if (amount >= 1) {
-                    let customRecords = {}
-                    if (dest.customKey) {
-                        customRecords[dest.customKey] = dest.customValue
-                    }
 
-                    try {
-                        await sendPayment(dest, amount, record, customRecords)
+                if (amount >= 1) {
+                   try {
+                        await sendPayment(dest, amount, record)
                     } catch (err) {
                         alert(`error with  ${dest.name}:  ${err.message}`)
                     }
