@@ -559,6 +559,10 @@
       {
         "elementName": "GUID",
         "elementURL": "https://fountain.fm"
+      },
+      {
+        "elementName": "Publisher",
+        "elementURL": "https://fountain.fm"
       }
     ]
   },
@@ -873,6 +877,10 @@
       },
       {
         "elementName": "Alternate Enclosure",
+        "elementURL": "https://curiocaster.com/"
+      },
+      {
+        "elementName": "Chat",
         "elementURL": "https://curiocaster.com/"
       }
     ]
@@ -3119,6 +3127,10 @@
       },
       {
         "elementName": "Update Frequency",
+        "elementURL": "https://truefans.fm/feedback?tab=changelog"
+      },
+      {
+        "elementName": "Publisher",
         "elementURL": "https://truefans.fm/feedback?tab=changelog"
       }
     ]
