@@ -3,10 +3,10 @@ root = true
 [*]
 charset = utf-8
 end_of_line = lf
-indent_size = 4
+indent_size = 2
 indent_style = space
 insert_final_newline = true
-tab_width = 4
+tab_width = 2
 
 [{*.ats,*.cts,*.mts,*.ts,*.tsx}]
 ij_typescript_spaces_within_imports = true
