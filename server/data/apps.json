@@ -206,55 +206,6 @@
     ]
   },
   {
-    "appName": "Podfriend",
-    "appType": ["app", "podcast player", "open source"],
-    "appUrl": "https://www.podfriend.com",
-    "appIconUrl": "podfriend.jpg",
-    "platforms": ["Windows", "Web"],
-    "supportedElements": [
-      {
-        "elementName": "Transcript",
-        "elementURL": "https://twitter.com/GoPodfriend/status/1316847938828742656"
-      },
-      {
-        "elementName": "Funding",
-        "elementURL": "https://twitter.com/GoPodfriend/status/1318663369684123648"
-      },
-      {
-        "elementName": "Chapters",
-        "elementURL": "https://twitter.com/adamcurry/status/1323417144378445831"
-      },
-      {
-        "elementName": "Search",
-        "elementURL": "https://twitter.com/GoPodfriend/status/1316847938828742656"
-      },
-      {
-        "elementName": "Location",
-        "elementURL": "https://twitter.com/GoPodfriend/status/1343952962662629376"
-      },
-      {
-        "elementName": "Person",
-        "elementURL": "https://twitter.com/adamcurry/status/1348787383324577793"
-      },
-      {
-        "elementName": "Value",
-        "elementURL": "https://twitter.com/GoPodfriend/status/1378079735234838531"
-      },
-      {
-        "elementName": "Sat Streaming",
-        "elementURL": "https://twitter.com/GoPodfriend/status/1378079735234838531"
-      },
-      {
-        "elementName": "Social Interact",
-        "elementURL": "https://twitter.com/PodcastindexOrg/status/1497630426457911304"
-      },
-      {
-        "elementName": "Podroll",
-        "elementURL": "https://www.podfriend.com/"
-      }
-    ]
-  },
-  {
     "appName": "Libsyn",
     "appType": ["hosting"],
     "appUrl": "https://libsyn.com/",
