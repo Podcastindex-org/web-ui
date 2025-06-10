@@ -4132,6 +4132,30 @@
       {
         "elementName": "Transcript",
         "elementURL": "https://alitu.com/"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://alitu.com/"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://alitu.com/"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://alitu.com/"
+      },
+      {
+        "elementName": "Txt",
+        "elementURL": "https://alitu.com/"
+      },
+      {
+        "elementName": "Location",
+        "elementURL": "https://alitu.com/"
+      },
+      {
+        "elementName": "License",
+        "elementURL": "https://alitu.com/"
       }
     ]
   },
