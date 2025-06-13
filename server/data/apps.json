@@ -3822,7 +3822,7 @@
   },
   {
     "appName": "ProxyFeed.io",
-    "appType": ["rss proxy"],
+    "appType": ["website", "rss proxy"],
     "appUrl": "https://proxyfeed.io",
     "appIconUrl": "proxyfeed-icon.png",
     "platforms": ["Web"],
