@@ -1238,7 +1238,7 @@
   },
   {
     "appName": "Podcast Mirror by Blubrry",
-    "appType": ["website"],
+    "appType": ["website", "rss proxy"],
     "appUrl": "https://www.podcastmirror.com/",
     "appIconUrl": "podcastmirror.png",
     "platforms": ["Web"],
@@ -2460,7 +2460,7 @@
   },
   {
     "appName": "TrueFans",
-    "appType": ["app", "website", "podcast player"],
+    "appType": ["app", "website", "podcast player", "rss proxy"],
     "appUrl": "https://truefans.fm",
     "appIconUrl": "truefans.jpg",
     "platforms": [
