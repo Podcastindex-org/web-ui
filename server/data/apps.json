@@ -3785,5 +3785,26 @@
         "elementURL": "https://pods.bg/episodes"
       }
     ]
+  },
+  {
+    "appName": "Podcast Details",
+    "appType": ["website", "directory", "other"],
+    "appUrl": "https://podcastdetails.com/",
+    "appIconUrl": "podcastdetails.png",
+    "platforms": ["Web"],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://mastodon.social/@Barredo/114319997011031657"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://mastodon.social/@Barredo/114460671643132290"
+      },
+      {
+        "elementName": "Podroll",
+        "elementURL": "https://mastodon.social/@Barredo/114366371374056508"
+      }
+    ]
   }
 ]
