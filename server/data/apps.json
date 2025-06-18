@@ -3806,5 +3806,18 @@
         "elementURL": "https://mastodon.social/@Barredo/114366371374056508"
       }
     ]
+  },
+  {
+    "appName": "Spotify for Creators",
+    "appType": ["hosting"],
+    "appUrl": "https://creators.spotify.com/",
+    "appIconUrl": "spotifyforcreators.png",
+    "platforms": ["Mobile", "Web", "iOS", "Android", "Windows", "macOS"],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://support.spotify.com/us/creators/article/transcripts/"
+      }
+    ]
   }
 ]
