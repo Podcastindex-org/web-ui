@@ -3819,5 +3819,18 @@
         "elementURL": "https://support.spotify.com/us/creators/article/transcripts/"
       }
     ]
+  },
+  {
+    "appName": "ProxyFeed.io",
+    "appType": ["website", "rss proxy"],
+    "appUrl": "https://proxyfeed.io",
+    "appIconUrl": "proxyfeed-icon.png",
+    "platforms": ["Web"],
+    "supportedElements": [
+      {
+        "elementName": "Funding",
+        "elementURL": "https://proxyfeed.io"
+      }
+    ]
   }
 ]
