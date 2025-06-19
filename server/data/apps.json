@@ -329,6 +329,19 @@
     ]
   },
   {
+    "appName": "Castro",
+    "appType": ["app", "podcast player"],
+    "appUrl": "https://castro.fm",
+    "appIconUrl": "castro.jpg",
+    "platforms": ["iOS", "Mobile"],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://castro.fm/blog/transcript-tag-release"
+      }
+    ]
+  },
+  {
     "appName": "Fathom",
     "appType": ["app", "podcast player"],
     "appUrl": "https://fathom.fm",
