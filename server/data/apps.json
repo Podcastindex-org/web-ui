@@ -3837,7 +3837,7 @@
     "appName": "ProxyFeed.io",
     "appType": ["website", "rss proxy"],
     "appUrl": "https://proxyfeed.io",
-    "appIconUrl": "proxyfeed-icon.png",
+    "appIconUrl": "proxyfeed-io.png",
     "platforms": ["Web"],
     "supportedElements": [
       {
