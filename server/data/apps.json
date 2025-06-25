@@ -3849,5 +3849,18 @@
         "elementURL": "https://proxyfeed.io"
       }
     ]
+  },
+  {
+    "appName": "RadioPort",
+    "appType": ["app"],
+    "appUrl": "https://apps.apple.com/us/app/radio-port/id6740069253",
+    "platforms": ["iOS"],
+    "appIconUrl": "radioport.png",
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://www.radioport.app/"
+      }
+    ]
   }
 ]
