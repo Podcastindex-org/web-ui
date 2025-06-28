@@ -315,10 +315,6 @@
         "elementURL": "https://twitter.com/Podverse/status/1324729288281632771?s=20"
       },
       {
-        "elementName": "Video",
-        "elementURL": "https://podverse.fm/es/membership"
-      },
-      {
         "elementName": "Value Time Split",
         "elementURL": "https://podverse.fm/es/membership"
       },
@@ -1433,10 +1429,6 @@
         "elementURL": "https://apps.apple.com/us/app/digilore/id6633130387"
       },
       {
-        "elementName": "Video",
-        "elementURL": "https://apps.apple.com/us/app/digilore/id6633130387"
-      },
-      {
         "elementName": "Live",
         "elementURL": "https://apps.apple.com/us/app/digilore/id6633130387"
       }
@@ -2473,7 +2465,7 @@
   },
   {
     "appName": "TrueFans",
-    "appType": ["app", "website", "podcast player", "rss proxy"],
+    "appType": ["app", "website", "podcast player", "rss proxy", "video"],
     "appUrl": "https://truefans.fm",
     "appIconUrl": "truefans.jpg",
     "platforms": [
@@ -2582,10 +2574,6 @@
       {
         "elementName": "Episode",
         "elementURL": "https://truefans.fm/feedback?tab=changelog&id=64e917774cd9fbbb290c6934"
-      },
-      {
-        "elementName": "Video",
-        "elementURL": "https://truefans.fm/feedback?tab=changelog"
       },
       {
         "elementName": "Value Time Split",
@@ -2725,10 +2713,6 @@
         "elementURL": "https://cast.garden/about/instance"
       },
       {
-        "elementName": "Video",
-        "elementURL": "https://cast.garden/about/instance"
-      },
-      {
         "elementName": "Wallet Switching",
         "elementURL": "https://cast.garden/about/instance"
       }
@@ -2785,10 +2769,6 @@
       },
       {
         "elementName": "Podping"
-      },
-      {
-        "elementName": "Video",
-        "elementURL": "https://podcastindex.social/@cameron/105639860916490393"
       },
       {
         "elementName": "Value",
@@ -3136,7 +3116,7 @@
   },
   {
     "appName": "PodcastAI",
-    "appType": ["hosting", "website"],
+    "appType": ["hosting", "website", "video"],
     "appUrl": "https://podcastai.com",
     "appIconUrl": "podcastai.png",
     "platforms": ["Web", "Mobile"],
@@ -3175,10 +3155,6 @@
       },
       {
         "elementName": "Alternate Enclosure",
-        "elementUrl": "https://podcastai.com"
-      },
-      {
-        "elementName": "Video",
         "elementUrl": "https://podcastai.com"
       },
       {
