@@ -3333,18 +3333,22 @@
   {
     "appName": "Metacast",
     "appType": ["app", "podcast player"],
-    "tagLine": "Listen, read, bookmark, and share podcasts.",
+    "tagLine": "Podcast app with transcripts. Listen, read, bookmark, and share podcasts.",
     "appUrl": "https://metacast.app",
     "appIconUrl": "metacast.png",
-    "platforms": ["Android", "iOS", "Mobile"],
+    "platforms": ["Android", "iOS", "Mobile", "Web"],
     "supportedElements": [
       {
         "elementName": "Transcript",
-        "elementURL": "https://metacast.app"
+        "elementURL": "https://metacast.app/changelog/web-2025.04.08"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://metacast.app/blog/product/podcast-episode-chapters-in-metacast-podcast-app"
       },
       {
         "elementName": "Search",
-        "elementURL": "https://metacast.app"
+        "elementURL": "https://metacast.app/search"
       },
       {
         "elementName": "Season",
@@ -3353,6 +3357,10 @@
       {
         "elementName": "Episode",
         "elementURL": "https://metacast.app"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://metacast.app/changelog/web-2025.04.03"
       },
       {
         "elementName": "GUID",
