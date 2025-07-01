@@ -315,11 +315,7 @@
         "elementURL": "https://twitter.com/Podverse/status/1324729288281632771?s=20"
       },
       {
-        "elementName": "Value Time Split",
-        "elementURL": "https://podverse.fm/es/membership"
-      },
-      {
-        "elementName": "Wallet Switching",
+        "elementName": "Wallet Switching (VTS)",
         "elementURL": "https://podverse.fm/es/membership"
       }
     ]
@@ -374,11 +370,7 @@
         "elementURL": "https://twitter.com/MerryOscar/status/1420818281959677952"
       },
       {
-        "elementName": "Value Time Split",
-        "elementURL": "https://fountainpodcasts.substack.com/p/fountain-08-music-podcasts-beta-player"
-      },
-      {
-        "elementName": "Wallet Switching",
+        "elementName": "Wallet Switching (VTS)",
         "elementURL": "https://fountainpodcasts.substack.com/p/fountain-08-music-podcasts-beta-player"
       },
       {
@@ -460,11 +452,7 @@
         "elementURL": "https://twitter.com/podcastguru_app/status/1325834426346041347"
       },
       {
-        "elementName": "Value Time Split",
-        "elementURL": "https://podcastguru.io/podcasts/podcasting-is-changing/"
-      },
-      {
-        "elementName": "Wallet Switching",
+        "elementName": "Wallet Switching (VTS)",
         "elementURL": "https://podcastguru.io/podcasts/podcasting-is-changing/"
       },
       {
@@ -889,11 +877,7 @@
         "elementURL": "https://itunes.apple.com/us/app/castamatic-podcast-player/id966632553"
       },
       {
-        "elementName": "Value Time Split",
-        "elementURL": "https://itunes.apple.com/us/app/castamatic-podcast-player/id966632553"
-      },
-      {
-        "elementName": "Wallet Switching",
+        "elementName": "Wallet Switching (VTS)",
         "elementURL": "https://itunes.apple.com/us/app/castamatic-podcast-player/id966632553"
       }
     ]
@@ -1179,7 +1163,7 @@
         "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
       },
       {
-        "elementName": "Value Time Split",
+        "elementName": "Wallet Switching (VTS)",
         "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
       }
     ]
@@ -1276,7 +1260,7 @@
         "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
       },
       {
-        "elementName": "Value Time Split",
+        "elementName": "Wallet Switching (VTS)",
         "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
       }
     ]
@@ -2145,7 +2129,7 @@
         "elementURL": "https://rssblue.com/blog/podping-is-live"
       },
       {
-        "elementName": "Wallet Switching",
+        "elementName": "Wallet Switching (VTS)",
         "elementURL": "https://rssblue.com/help/music-shows"
       },
       {
@@ -2604,16 +2588,12 @@
         "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3d24d76f0e40f8b4a15d"
       },
       {
-        "elementName": "Wallet Switching",
+        "elementName": "Wallet Switching (VTS)",
         "elementURL": "https://truefans.fm/feedback?tab=changelog&id=64e53d9277fb744ab27183f9"
       },
       {
         "elementName": "Episode",
         "elementURL": "https://truefans.fm/feedback?tab=changelog&id=64e917774cd9fbbb290c6934"
-      },
-      {
-        "elementName": "Value Time Split",
-        "elementURL": "https://truefans.fm/feedback?tab=changelog"
       },
       {
         "elementName": "Update Frequency",
@@ -2741,15 +2721,11 @@
         "elementURL": "https://cast.garden/about/instance"
       },
       {
-        "elementName": "Value Time Split",
-        "elementURL": "https://cast.garden/about/instance"
-      },
-      {
         "elementName": "Value",
         "elementURL": "https://cast.garden/about/instance"
       },
       {
-        "elementName": "Wallet Switching",
+        "elementName": "Wallet Switching (VTS)",
         "elementURL": "https://cast.garden/about/instance"
       }
     ]
@@ -2856,7 +2832,7 @@
         "elementURL": "https://lnbeats.com"
       },
       {
-        "elementName": "Wallet Switching",
+        "elementName": "Wallet Switching (VTS)",
         "elementURL": "https://lnbeats.com"
       }
     ]
@@ -2990,7 +2966,7 @@
         "elementURL": "https://sovereignfeeds.com"
       },
       {
-        "elementName": "Wallet Switching",
+        "elementName": "Wallet Switching (VTS)",
         "elementURL": "https://sovereignfeeds.com"
       }
     ]
@@ -3035,7 +3011,7 @@
         "elementURL": "https://www.thesplitkit.com"
       },
       {
-        "elementName": "Wallet Switching",
+        "elementName": "Wallet Switching (VTS)",
         "elementURL": "https://www.thesplitkit.com"
       }
     ]
@@ -3120,7 +3096,7 @@
         "elementURL": "https://www.podhome.fm/docs/use-value-4-value"
       },
       {
-        "elementName": "Value Time Split",
+        "elementName": "Wallet Switching (VTS)",
         "elementURL": "https://www.podhome.fm/docs/use-value-4-value"
       },
       {
