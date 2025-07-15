@@ -249,7 +249,7 @@
         "elementURL": "https://twitter.com/PodcastAddict/status/1319645267335933954"
       },
       {
-        "elementName": "Live",
+        "elementName": "Live Item",
         "elementURL": "https://podcastaddict.com/changelog/2023_1#section2"
       },
       {
@@ -360,7 +360,7 @@
         "elementURL": "https://podverse.fm/es/membership"
       },
       {
-        "elementName": "Live",
+        "elementName": "Live Item",
         "elementURL": "https://twitter.com/Podverse/status/1521198937742487553"
       },
       {
@@ -492,7 +492,7 @@
         "elementURL": "https://twitter.com/fountain_app/status/1504450017146417153"
       },
       {
-        "elementName": "Live",
+        "elementName": "Live Item",
         "elementURL": "https://twitter.com/fountain_app/status/1663171268902879232"
       },
       {
@@ -588,7 +588,7 @@
         "elementURL": "https://twitter.com/podcastguru_app/status/1655685430761619459?s=20"
       },
       {
-        "elementName": "Live",
+        "elementName": "Live Item",
         "elementURL": "https://twitter.com/podcastguru_app/status/1655685430761619459?s=20"
       },
       {
@@ -803,7 +803,7 @@
         "elementURL": "https://curiocaster.com/"
       },
       {
-        "elementName": "Live",
+        "elementName": "Live Item",
         "elementURL": "https://curiocaster.com/"
       },
       {
@@ -1049,7 +1049,7 @@
         "elementURL": "https://itunes.apple.com/us/app/castamatic-podcast-player/id966632553"
       },
       {
-        "elementName": "Live",
+        "elementName": "Live Item",
         "elementURL": "https://itunes.apple.com/us/app/castamatic-podcast-player/id966632553"
       },
       {
@@ -1360,7 +1360,7 @@
         "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
       },
       {
-        "elementName": "Live",
+        "elementName": "Live Item",
         "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
       },
       {
@@ -1465,7 +1465,7 @@
         "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
       },
       {
-        "elementName": "Live",
+        "elementName": "Live Item",
         "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
       },
       {
@@ -1559,7 +1559,7 @@
         "elementURL": "https://www.podcastmirror.com/podcasting-2-0-documentation/"
       },
       {
-        "elementName": "Live",
+        "elementName": "Live Item",
         "elementURL": "https://www.podcastmirror.com/podcasting-2-0-documentation/"
       },
       {
@@ -1749,7 +1749,7 @@
         "elementURL": "https://apps.apple.com/us/app/digilore/id6633130387"
       },
       {
-        "elementName": "Live",
+        "elementName": "Live Item",
         "elementURL": "https://apps.apple.com/us/app/digilore/id6633130387"
       }
     ]
@@ -2266,7 +2266,7 @@
         "elementURL": "https://changelog.rss.com/v23-7-1-268871"
       },
       {
-        "elementName": "Live",
+        "elementName": "Live Item",
         "elementURL": "https://help.rss.com/en/support/solutions/articles/44002493451-live-streaming-of-a-podcast-via-the-live-item-tag-lit-"
       },
       {
@@ -2561,7 +2561,7 @@
         "elementURL": "https://rssblue.com/help/episode-metadata#season-and-episode-numbers"
       },
       {
-        "elementName": "Live",
+        "elementName": "Live Item",
         "elementURL": "https://rssblue.com/help/livestreams"
       }
     ]
@@ -2826,7 +2826,7 @@
         "elementURL": "https://nathangathright.com/introducing-episodesfm/"
       },
       {
-        "elementName": "Live",
+        "elementName": "Live Item",
         "elementURL": "https://nathangathright.com/introducing-episodesfm/"
       }
     ]
@@ -2917,7 +2917,7 @@
         "elementURL": "https://github.com/dhk2/peertube-plugin-lightning/blob/master/CHANGELOG.md"
       },
       {
-        "elementName": "Live",
+        "elementName": "Live Item",
         "elementURL": "https://github.com/Chocobozzz/PeerTube/pull/5487"
       },
       {
@@ -3036,7 +3036,7 @@
         "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653cf7a4f78f2e7f4d9260bd"
       },
       {
-        "elementName": "Live",
+        "elementName": "Live Item",
         "elementURL": "https://truefans.fm/feedback?tab=changelog&id=653c3aa9d76f0e40f8b4a0bb"
       },
       {
@@ -3181,7 +3181,7 @@
         "elementURL": "https://cast.garden/about/instance"
       },
       {
-        "elementName": "Live",
+        "elementName": "Live Item",
         "elementURL": "https://cast.garden/about/instance"
       },
       {
@@ -3465,7 +3465,7 @@
         "elementURL": "https://sovereignfeeds.com"
       },
       {
-        "elementName": "Live",
+        "elementName": "Live Item",
         "elementURL": "https://sovereignfeeds.com"
       },
       {
@@ -3549,7 +3549,7 @@
         "elementURL": "https://www.thesplitkit.com"
       },
       {
-        "elementName": "Live",
+        "elementName": "Live Item",
         "elementURL": "https://www.thesplitkit.com"
       },
       {
@@ -3662,7 +3662,7 @@
         "elementURL": "https://www.podhome.fm/docs/use-value-4-value"
       },
       {
-        "elementName": "Live",
+        "elementName": "Live Item",
         "elementURL": "https://www.podhome.fm/docs/live-podcasting"
       }
     ]
@@ -4407,7 +4407,7 @@
         "elementURL": "https://wherever.audio/"
       },
       {
-        "elementName": "Live",
+        "elementName": "Live Item",
         "elementURL": "https://wherever.audio/"
       }
     ]
@@ -4469,7 +4469,7 @@
         "elementURL": "https://bubbl.fm"
       },
       {
-        "elementName": "Live",
+        "elementName": "Live Item",
         "elementURL": "https://bubbl.fm"
       },
       {
