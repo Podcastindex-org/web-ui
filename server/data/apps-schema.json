@@ -136,7 +136,10 @@
             "Podroll",
             "Update Frequency",
             "Chat",
-            "Publisher"
+            "Publisher",
+            "Content Link",
+            "Remote Item",
+            "Image"
           ]
         },
         "elementURL": {
