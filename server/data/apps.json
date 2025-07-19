@@ -4561,7 +4561,11 @@
     "supportedElements": [
       {
         "elementName": "Funding",
-        "elementURL": "https://proxyfeed.io"
+        "elementURL": "https://proxyfeed.io/guide"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://proxyfeed.io/guide"
       }
     ]
   },
