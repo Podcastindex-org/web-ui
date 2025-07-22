@@ -1004,6 +1004,31 @@
       }
     ]
   },
+   {
+    "appName": "Doerfel-Verse App",
+    "appType": ["music web player", "PWA"],
+    "appUrl": "https://re.podtards.com",
+    "appIconUrl": "doerfelverse.png",
+    "platforms": ["Web"],
+    "supportedElements": [
+      {
+        "elementName": "Funding",
+        "elementURL": "https://re.podtards.com"
+      },
+      {
+        "elementName": "PodRoll",
+        "elementURL": "https://re.podtards.com"
+      },
+      {
+        "elementName": "Remote Items",
+        "elementURL": "https://re.podtards.com"
+      },
+      {
+        "elementName": "Publisher",
+        "elementURL": "https://re.podtards.com"
+      }
+    ]
+  }
   {
     "appName": "Castamatic",
     "appType": [
