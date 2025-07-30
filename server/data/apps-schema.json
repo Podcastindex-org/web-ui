@@ -124,19 +124,21 @@
             "Trailer",
             "GUID",
             "Medium",
-            "Live",
+            "Live Item",
             "Live Boosts",
             "Block",
             "Social Interact",
             "OP3",
-            "Images",
             "License",
             "Txt",
             "Wallet Switching (VTS)",
             "Podroll",
             "Update Frequency",
             "Chat",
-            "Publisher"
+            "Publisher",
+            "Content Link",
+            "Remote Item",
+            "Image"
           ]
         },
         "elementURL": {
