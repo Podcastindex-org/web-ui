@@ -4370,7 +4370,15 @@
       {
         "elementName": "GUID",
         "elementUrl": "https://getonda.app/"
-      }
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://getonda.app/"
+      },
+      {
+        "elementName": "Images",
+        "elementURL": "https://getonda.app/"
+      },
     ]
   },  
   {
