@@ -4347,6 +4347,33 @@
     ]
   },
   {
+    "appName": "Onda: AI Podcast Note Taker",
+    "appType": [
+      "app",
+      "podcast player",
+      "note taker"
+    ],
+    "appUrl": "https://getonda.app/",
+    "appIconUrl": "onda.png",
+    "platforms": [
+      "iOS"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Episode",
+        "elementURL": "https://getonda.app/"
+      },      
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://getonda.app/"
+      },
+      {
+        "elementName": "GUID",
+        "elementUrl": "https://getonda.app/"
+      }
+    ]
+  },  
+  {
     "appName": "Cardo",
     "appType": [
       "app",
