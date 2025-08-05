@@ -4362,14 +4362,14 @@
       {
         "elementName": "Episode",
         "elementURL": "https://getonda.app/"
-      },      
+      },
       {
         "elementName": "Transcript",
         "elementURL": "https://getonda.app/"
       },
       {
         "elementName": "GUID",
-        "elementUrl": "https://getonda.app/"
+        "elementURL": "https://getonda.app/"
       },
       {
         "elementName": "Search",
@@ -4380,7 +4380,7 @@
         "elementURL": "https://getonda.app/"
       }
     ]
-  },  
+  },
   {
     "appName": "Cardo",
     "appType": [
