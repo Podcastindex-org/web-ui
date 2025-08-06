@@ -4350,8 +4350,7 @@
     "appName": "Onda: AI Podcast Note Taker",
     "appType": [
       "app",
-      "podcast player",
-      "note taker"
+      "podcast player"
     ],
     "appUrl": "https://getonda.app/",
     "appIconUrl": "onda.png",
