@@ -5,7 +5,7 @@ import Value from '../Value'
 import NoImage from '../../../images/no-cover-art.png'
 import { encodeURLSafeBase64, truncateString } from '../../utils'
 import RSSLogo from "../../../images/feed.svg";
-import EpisodesFMLogo from "../../../images/episodesfm.svg";
+import PodlinkLogo from "../../../images/podlink.svg";
 import DonationPage from "../../../images/donation-page.svg";
 import EarthLogo from "../../../images/earth.svg";
 import LightningLogo from "../../../images/lightning.svg"
@@ -156,14 +156,14 @@ export default class PodcastHeader extends React.PureComponent<IProps, PodState>
                             {itunesId || feedURL ?
                                 <a
                                     href={
-                                        `https://episodes.fm/${
+                                        `https://pod.link/${
                                             itunesId ? itunesId : encodeURLSafeBase64(feedURL)
                                         }`
                                     }
                                     title="Follow in your podcast app"
                                     target="_blank"
                                 >
-                                    <img src={EpisodesFMLogo} />
+                                    <img src={PodlinkLogo} />
                                 </a>
                                 : ''
                             }
