@@ -2827,24 +2827,29 @@
     ]
   },
   {
-    "appName": "Episodes.fm",
+    "appName": "Podlink",
     "appType": [
+      "directory",
       "podcast player",
       "website"
     ],
-    "appUrl": "https://episodes.fm",
-    "appIconUrl": "episodesfm.svg",
+    "appUrl": "https://pod.link",
+    "appIconUrl": "podlink.svg",
     "platforms": [
       "Web"
     ],
     "supportedElements": [
       {
         "elementName": "OP3",
-        "elementURL": "https://nathangathright.com/introducing-episodesfm/"
+        "elementURL": "https://help.podlink.com/article/9-sorting"
+      },
+      {
+        "elementName": "search",
+        "elementURL": "https://help.podlink.com/article/4-searching"
       },
       {
         "elementName": "Live Item",
-        "elementURL": "https://nathangathright.com/introducing-episodesfm/"
+        "elementURL": "https://help.podlink.com/article/14-live"
       }
     ]
   },
