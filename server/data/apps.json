@@ -4586,5 +4586,34 @@
         "elementURL": "https://www.radioport.app/"
       }
     ]
+  },
+  {
+    "appName": "Skimr",
+    "appType": [
+      "app"
+    ],
+    "appUrl": "https://apps.apple.com/us/app/skimr-ai-podcast-assistant/id6744159946",
+    "platforms": [
+      "iOS"
+    ],
+    "appIconUrl": "skimr.png",
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://skimr.app"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://skimr.app"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://skimr.app"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://skimr.app"
+      }
+    ]
   }
 ]
