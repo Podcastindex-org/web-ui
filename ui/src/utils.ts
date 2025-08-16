@@ -96,6 +96,6 @@ export const encodeURLSafeBase64 = (text: string): string => {
     const binString = Array.from(new TextEncoder().encode(text), (byte) =>
         String.fromCodePoint(byte),
     ).join('')
-    // since episodes.fm doesn't need trailing =, remove them
+    // since Podlink doesn't need trailing =, remove them
     return btoa(binString).replace(/=+$/, '');
 }
