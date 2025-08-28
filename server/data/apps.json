@@ -3676,7 +3676,8 @@
  {
     "appName": "Podhome Podcast Player",
     "appType": [
-      "hosting"
+      "app",
+      "podcast player"
     ],
     "appUrl": "https://www.podhome.fm/app",
     "appIconUrl": "podhome.png",
