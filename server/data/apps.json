@@ -3673,6 +3673,69 @@
       }
     ]
   },
+ {
+    "appName": "Podhome Podcast Player",
+    "appType": [
+      "hosting"
+    ],
+    "appUrl": "https://www.podhome.fm/app",
+    "appIconUrl": "podhome.png",
+    "platforms": [
+      "Android",
+      "Mobile",
+      "iOS"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "GUID",
+        "elementURL": "https://www.podhome.fm/app"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://www.podhome.fm/app"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://www.podhome.fm/app"
+      },
+      {
+        "elementName": "Soundbite",
+        "elementURL": "https://www.podhome.fm/app"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://www.podhome.fm/app"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://www.podhome.fm/app"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://www.podhome.fm/app"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://www.podhome.fm/app"
+      },
+      {
+        "elementName": "Trailer",
+        "elementURL": "https://www.podhome.fm/app"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://www.podhome.fm/app"
+      },
+      {
+        "elementName": "Podroll",
+        "elementURL": "https://www.podhome.fm/app"
+      },
+      {
+        "elementName": "Live Item",
+        "elementURL": "https://www.podhome.fm/app"
+      }
+    ]
+  },  
   {
     "appName": "Overhaul FM",
     "appType": [
