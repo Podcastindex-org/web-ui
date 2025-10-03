@@ -25,6 +25,19 @@ export default class Value extends React.PureComponent<IProps, PodState> {
     super(props);
   }
 
+  getLink(dest: any): string {
+    if (dest.type === "lnaddress") {
+      const match = dest.address.toLowerCase().match(/^([a-z0-9._-]+)@([a-z0-9.-]+)$/);
+
+      if (match) {
+        const [ _, username, domain ] = match;
+        return "https://" + domain + "/.well-known/lnurlp/" + username;
+      }
+    }
+
+    return "https://amboss.space/node/" + dest.address;
+  }
+
   render() {
     const { destinations, model } = this.props
     const splitTotal = destinations ? destinations.reduce((total, d) => total + parseInt(d.split, 10), 0) : null
@@ -48,7 +61,7 @@ export default class Value extends React.PureComponent<IProps, PodState> {
             <li key={dest.name}>
               <progress value={dest.split} max={splitTotal} title={dest.address}></progress>
               {knownDeadNodes[dest.address] && <span title={`This ${knownDeadNodes[dest.address]} wallet is no longer active. If this is your feed, please update it with a new wallet address.`}>⚠️</span>}
-              <a target="_blank" href={"https://amboss.space/node/" + dest.address}>{dest.name}</a>
+              <a target="_blank" href={this.getLink(dest)}>{dest.name}</a>
             </li>
           ))}
         </ul>
