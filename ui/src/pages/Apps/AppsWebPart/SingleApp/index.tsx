@@ -44,6 +44,7 @@ function SingleApp(app) {
                     .sort((a, b) => (a > b ? 1 : -1))
                     .map((platform, j) => {
                         const hideNAAppPlatformOnMobile = platform === 'N/A'
+                        const platformLink = app.platformLinks?.[platform]
 
                         return (
                             <span
@@ -55,7 +56,17 @@ function SingleApp(app) {
                                 key={`${j}`}
                             >
                                 {j > 0 && ', '}
-                                {platform}
+                                {platformLink ? (
+                                    <a
+                                        href={platformLink} 
+                                        target="_blank" 
+                                        title={`${app.appName} for ${platform}`}
+                                    >
+                                        {platform}
+                                    </a>
+                                ) : (
+                                    platform
+                                )}
                             </span>
                         )
                     })}

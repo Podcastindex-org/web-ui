@@ -12,6 +12,9 @@
       "Web",
       "iOS"
     ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/podcatcher-podcast-app/id6736467324"
+    },
     "supportedElements": [
       {
         "elementName": "Chapters",
@@ -75,6 +78,10 @@
       "Windows",
       "macOS"
     ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=au.com.shiftyjelly.pocketcasts",
+      "iOS": "https://apps.apple.com/app/pocket-casts-podcast-player/id414834813"
+    },
     "supportedElements": [
       {
         "elementName": "Chapters",
@@ -231,6 +238,9 @@
       "Mobile",
       "Web"
     ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.bambuna.podcastaddict"
+    },
     "supportedElements": [
       {
         "elementName": "Transcript",
@@ -338,6 +348,11 @@
       "Mobile",
       "Web"
     ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.podverse",
+      "F-Droid": "https://f-droid.org/en/packages/com.podverse.fdroid/",
+      "iOS": "https://apps.apple.com/app/podverse/id1390888454"
+    },
     "supportedElements": [
       {
         "elementName": "Alternate Enclosure",
@@ -417,6 +432,9 @@
       "iOS",
       "Mobile"
     ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/castro-podcast-player-app/id1080840241"
+    },
     "supportedElements": [
       {
         "elementName": "Transcript",
@@ -437,6 +455,9 @@
       "Mobile",
       "Web"
     ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/fathom-podcast-player/id1591828121"
+    },
     "supportedElements": [
       {
         "elementName": "Chapters",
@@ -458,6 +479,10 @@
       "Mobile",
       "Web"
     ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=fm.fountain.apps",
+      "iOS": "https://apps.apple.com/app/fountain-podcast-player/id1576394424"
+    },
     "supportedElements": [
       {
         "elementName": "Boostagrams",
@@ -566,6 +591,10 @@
       "macOS",
       "iOS"
     ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.reallybadapps.podcastguru",
+      "iOS": "https://apps.apple.com/app/podcast-guru-app-player/id1535235039"
+    },
     "supportedElements": [
       {
         "elementName": "Search",
@@ -676,6 +705,9 @@
       "Mobile",
       "Android"
     ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.itunestoppodcastplayer.app"
+    },
     "supportedElements": [
       {
         "elementName": "Chapters",
@@ -694,6 +726,9 @@
     "platforms": [
       "iOS"
     ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/hypercatcher/id1504734405"
+    },
     "supportedElements": [
       {
         "elementName": "Chapters",
@@ -719,6 +754,10 @@
       "Android",
       "iOS"
     ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.breez.client",
+      "iOS": "https://apps.apple.com/app/breez-lightning-client-pos/id1463604142"
+    },
     "supportedElements": [
       {
         "elementName": "Chapters",
@@ -756,6 +795,10 @@
       "Android",
       "F-Droid"
     ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=de.danoeh.antennapod",
+      "F-Droid": "https://f-droid.org/packages/de.danoeh.antennapod/"
+    },
     "supportedElements": [
       {
         "elementName": "Search",
@@ -923,8 +966,14 @@
     "platforms": [
       "Mobile",
       "Android",
-      "iOS"
+      "iOS",
+      "F-Droid"
     ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime",
+      "F-Droid": "https://f-droid.org/en/packages/uk.me.amugofjava.anytime/",
+      "iOS": "https://apps.apple.com/app/anytime-podcast-player/id1582300839"
+    },
     "supportedElements": [
       {
         "elementName": "Search",
@@ -961,6 +1010,9 @@
       "KaiOS",
       "Cloud Phone"
     ],
+    "platformLinks": {
+      "KaiOS": "https://www.kaiostech.com/store/apps/?bundle_id=com.podlp.podlp"
+    },
     "supportedElements": [
       {
         "elementName": "Person",
@@ -1032,6 +1084,9 @@
     "platforms": [
       "iOS"
     ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/castamatic-podcast-player/id966632553"
+    },
     "supportedElements": [
       {
         "elementName": "Boostagrams",
@@ -1138,6 +1193,10 @@
       "Mobile",
       "Web"
     ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.tmsoft.playapod",
+      "iOS": "https://apps.apple.com/app/playapod/id1246857049"
+    },
     "supportedElements": [
       {
         "elementName": "Search",
@@ -1159,6 +1218,9 @@
       "Android",
       "F-Droid"
     ],
+    "platformLinks": {
+      "F-Droid": "https://f-droid.org/packages/org.y20k.escapepod/"
+    },
     "supportedElements": [
       {
         "elementName": "Search",
@@ -1179,8 +1241,13 @@
       "Linux",
       "Mobile",
       "Android",
-      "Windows"
+      "Windows",
+      "F-Droid"
     ],
+    "platformLinks": {
+      "F-Droid": "https://community.kde.org/Android/FDroid",
+      "Linux": "appstream://org.kde.kasts"
+    },
     "supportedElements": [
       {
         "elementName": "Search",
@@ -1304,6 +1371,9 @@
       "Web",
       "Android"
     ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.hubhopper"
+    },
     "supportedElements": [
       {
         "elementName": "GUID",
@@ -1744,6 +1814,9 @@
       "iOS",
       "Mobile"
     ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/digilore/id6633130387"
+    },
     "supportedElements": [
       {
         "elementName": "Transcript",
@@ -2389,6 +2462,10 @@
       "iOS",
       "Android"
     ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.disctopia.android",
+      "iOS": "https://apps.apple.com/app/disctopia-music-podcasts/id1162011563"
+    },
     "supportedElements": [
       {
         "elementName": "Search",
@@ -2731,6 +2808,10 @@
       "Android",
       "F-Droid"
     ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=allen.town.focus.podcast",
+      "F-Droid": "https://f-droid.org/en/packages/allen.town.focus.podcast/"
+    },
     "supportedElements": [
       {
         "elementName": "Search",
@@ -2757,6 +2838,9 @@
     "platforms": [
       "iOS"
     ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/apple-store/id414419105"
+    },
     "supportedElements": [
       {
         "elementName": "Person",
@@ -2869,6 +2953,10 @@
       "Web",
       "Windows"
     ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.spreaker.android",
+      "iOS": "https://apps.apple.com/app/spreaker-podcasts/id388449677"
+    },
     "supportedElements": [
       {
         "elementName": "Podping",
@@ -2992,6 +3080,9 @@
       "Mobile",
       "Android"
     ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.bluckapps.turtlecast"
+    },
     "supportedElements": [
       {
         "elementName": "Search",
@@ -3020,6 +3111,10 @@
       "Windows",
       "Linux"
     ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/truefans-fm/id6747340246",
+      "Android": "https://play.google.com/store/apps/details?id=fm.truefans.twa"
+    },
     "supportedElements": [
       {
         "elementName": "Funding",
@@ -3136,6 +3231,10 @@
       "Mobile",
       "macOS"
     ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/apple-podcasts/id525463029",
+      "macOS": "https://apps.apple.com/app/apple-podcasts/id525463029"
+    },
     "supportedElements": [
       {
         "elementName": "Transcript",
@@ -3315,6 +3414,10 @@
       "Umbrel",
       "Start9"
     ],
+    "platformLinks": {
+      "Umbrel": "https://apps.umbrel.com/app/ipfs-podcasting",
+      "Start9": "https://marketplace.start9.com/ipfs-podcasting"
+    },
     "supportedElements": [
       {
         "elementName": "Locked",
@@ -3686,6 +3789,10 @@
       "Mobile",
       "iOS"
     ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.podhome.player",
+      "iOS": "https://apps.apple.com/app/podhome-podcast-player/id6736411073"
+    },
     "supportedElements": [
       {
         "elementName": "GUID",
@@ -3750,6 +3857,10 @@
       "Mobile",
       "iOS"
     ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.podcastoverhaul.app",
+      "iOS": "https://apps.apple.com/app/overhaul-fm-podcast-player/id1554984316"
+    },
     "supportedElements": [
       {
         "elementName": "Episode",
@@ -3993,6 +4104,10 @@
       "Mobile",
       "Web"
     ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=app.metacast.podcast.player",
+      "iOS": "https://apps.apple.com/app/metacast-podcast-app/id6462012536"
+    },
     "supportedElements": [
       {
         "elementName": "Transcript",
@@ -4151,6 +4266,9 @@
     "platforms": [
       "iOS"
     ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/cooler-podcast-player/id6466344514"
+    },
     "supportedElements": [
       {
         "elementName": "Search",
@@ -4242,6 +4360,9 @@
       "Mobile",
       "macOS"
     ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/podcast-app-playdiocast/id858974970"
+    },
     "supportedElements": [
       {
         "elementName": "Search",
@@ -4366,6 +4487,10 @@
       "Mobile",
       "iOS"
     ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=pixelcode.unde.app",
+      "iOS": "https://apps.apple.com/app/unde-radio-podcasts/id6449674833"
+    },
     "supportedElements": [
       {
         "elementName": "Search",
@@ -4418,6 +4543,9 @@
     "platforms": [
       "iOS"
     ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/onda-ai-podcast-note-taker/id6743153167"
+    },
     "supportedElements": [
       {
         "elementName": "Episode",
@@ -4656,6 +4784,10 @@
       "Windows",
       "macOS"
     ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/spotify-for-podcasters/id1056182234",
+      "Android": "https://play.google.com/store/apps/details?id=fm.anchor.android"
+    },
     "supportedElements": [
       {
         "elementName": "Transcript",
@@ -4694,6 +4826,9 @@
     "platforms": [
       "iOS"
     ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/radio-port/id6740069253"
+    },
     "appIconUrl": "radioport.png",
     "supportedElements": [
       {
@@ -4711,6 +4846,9 @@
     "platforms": [
       "iOS"
     ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/skimr-ai-podcast-player/id6744159946"
+    },
     "appIconUrl": "skimr.png",
     "supportedElements": [
       {
