@@ -4718,5 +4718,37 @@
         "elementURL": "https://skimr.app"
       }
     ]
+  },
+  {
+    "appName": "PodRank",
+    "appType": [
+      "podcast player",
+      "app",
+      "directory"
+    ],
+    "appUrl": "https://podrank.co",
+    "appIconUrl": "podrank.png",
+    "platforms": [
+      "iOS"
+    ],
+    "tagLine": "save time and know before you listen.",
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://podrank.co/features/ai-powered-search"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://podrank.co/features/rss-subscriptions"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://podrank.co/features/ai-insights"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://podrank.co/features/ai-insights"
+      }
+    ]
   }
 ]
