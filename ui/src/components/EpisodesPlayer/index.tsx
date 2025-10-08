@@ -7,6 +7,7 @@ interface IProps {
     episodes?: {
         items: Array<any>,
         live?: Array<any>,
+        upcoming?: Array<any>,
     }
     selectedId?: number
     podcast?: {
@@ -20,12 +21,14 @@ interface IProps {
     initialDisplay?: number
     onSelectedEpisodeChange?: (episodeId: number) => void
     liveTitle?: string
+    upcomingTitle?: string
     episodesTitle?: string
 }
 
 export default class EpisodesPlayer extends React.PureComponent<IProps> {
     static defaultProps = {
         liveTitle: "Live Now!",
+        upcomingTitle: "Upcoming Episodes",
         episodesTitle: "Episodes",
     }
     state = {
@@ -173,7 +176,8 @@ export default class EpisodesPlayer extends React.PureComponent<IProps> {
             selectedId,
             initialDisplay,
             episodesTitle,
-            liveTitle
+            liveTitle,
+            upcomingTitle
         } = this.props
         const {playingEpisode, selectedEpisodeIsLive} = this.state
         const {medium} = podcast
@@ -200,6 +204,12 @@ export default class EpisodesPlayer extends React.PureComponent<IProps> {
             return a.startTime < b.startTime ? 1 : -1
         })
 
+        let sortedUpcomingEpisodes = episodes.upcoming
+        // sort upcoming episodes with earliest first
+        sortedUpcomingEpisodes?.sort((a, b) => {
+            return a.startTime < b.startTime ? -1 : 1
+        })
+
         return (
             <>
                 {episodes.live?.length > 0 ? (
@@ -209,6 +219,18 @@ export default class EpisodesPlayer extends React.PureComponent<IProps> {
                         episodes={sortedLiveEpisodes}
                         playingEpisode={playingEpisode}
                         makeVisible={selectedEpisodeIsLive ? makeVisible : null}
+                        initialDisplay={initialDisplay}
+                        onEpisodePlay={this.onEpisodePlay}
+                        onEpisodePause={this.onEpisodePause}
+                    />
+                ) : ''}
+                {episodes.upcoming?.length > 0 ? (
+                    <EpisodeList
+                        title={upcomingTitle}
+                        podcast={podcast}
+                        episodes={sortedUpcomingEpisodes}
+                        playingEpisode={playingEpisode}
+                        makeVisible={null}
                         initialDisplay={initialDisplay}
                         onEpisodePlay={this.onEpisodePlay}
                         onEpisodePause={this.onEpisodePause}

@@ -19,6 +19,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         episodes: {
             items: [],
             live: [],
+            upcoming: [],
         },
         loadingFeed: true,
         loadingEpisodes: true,
@@ -155,11 +156,15 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
         })
 
         const episodes = await response.json()
+        const currentTimestamp = Math.floor(Date.now() / 1000)
 
         return {
             items: episodes.items,
             live: episodes.liveItems.filter(
                 item => item.status === 'live'
+            ),
+            upcoming: episodes.liveItems.filter(
+                item => item.startTime > currentTimestamp && item.status !== 'live'
             ),
         }
     }
