@@ -94,6 +94,51 @@
         },
         "tagLine": {
           "type": "string"
+        },
+        "platformLinks": {
+          "type": "object",
+          "description": "Platform-specific download/store links",
+          "properties": {
+            "iOS": {
+              "type": "string",
+              "format": "uri",
+              "description": "Apple Store URL"
+            },
+            "Android": {
+              "type": "string",
+              "format": "uri",
+              "description": "Google Play Store URL"
+            },
+            "macOS": {
+              "type": "string",
+              "format": "uri",
+              "description": "Mac App Store URL"
+            },
+            "Windows": {
+              "type": "string",
+              "format": "uri",
+              "description": "Microsoft Store URL"
+            },
+            "Web": {
+              "type": "string",
+              "format": "uri",
+              "description": "Web application URL"
+            },
+            "F-Droid": {
+              "type": "string",
+              "format": "uri",
+              "description": "F-Droid repository URL"
+            },
+            "Linux": {
+              "type": "string",
+              "format": "uri",
+              "description": "Linux distribution URL"
+            }
+          },
+          "additionalProperties": {
+            "type": "string",
+            "format": "uri"
+          }
         }
       }
     },
