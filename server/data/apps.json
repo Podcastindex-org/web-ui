@@ -1157,13 +1157,15 @@
       "podcast player",
       "open source"
     ],
-    "appUrl": "https://github.com/stonega/tsacdop",
+    "appUrl": "https://github.com/lojcs/tsacdop",
     "appIconUrl": "tsacdop.png",
     "platforms": [
       "Mobile",
-      "Android",
       "F-Droid"
     ],
+    "platformLinks": {
+      "F-Droid": "https://f-droid.org/es/packages/dev.lojcs.tsacdop/"
+    },
     "supportedElements": [
       {
         "elementName": "Search",
