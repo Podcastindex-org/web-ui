@@ -1274,6 +1274,9 @@
       "Mobile",
       "Sailfish OS"
     ],
+    "platformLinks": {
+      "Linux": "appstream://org.gpodder.gpodder"
+    },
     "supportedElements": [
       {
         "elementName": "Search",
