@@ -1320,6 +1320,9 @@
       "Mobile",
       "Sailfish OS"
     ],
+    "platformLinks": {
+      "Linux": "appstream://org.gpodder.gpodder"
+    },
     "supportedElements": [
       {
         "elementName": "Search",
@@ -1582,6 +1585,9 @@
       "Wordpress",
       "Web"
     ],
+    "platformLinks": {
+      "Wordpress": "https://wordpress.org/plugins/powerpress/"
+    },
     "supportedElements": [
       {
         "elementName": "Transcript",
@@ -2286,11 +2292,14 @@
       "wordpress plugin",
       "open source"
     ],
-    "appUrl": "https://publisher.podlove.org",
+    "appUrl": "https://podlove.org/podlove-podcast-publisher",
     "appIconUrl": "podlove-publisher.png",
     "platforms": [
       "Wordpress"
     ],
+    "platformLinks": {
+      "Wordpress": "https://wordpress.org/plugins/podlove-podcasting-plugin-for-wordpress/"
+    },
     "supportedElements": [
       {
         "elementName": "Transcript",
@@ -4438,6 +4447,9 @@
       "Windows",
       "Linux"
     ],
+    "platformLinks": {
+      "Linux": "appstream://com.gooseberrydevelopment.pinepods"
+    },
     "supportedElements": [
       {
         "elementName": "Person",
@@ -4635,6 +4647,9 @@
       "macOS",
       "Linux"
     ],
+    "platformLinks": {
+      "Linux": "https://cardo-podcast.github.io/#downloads"
+    },
     "supportedElements": [
       {
         "elementName": "Search",
