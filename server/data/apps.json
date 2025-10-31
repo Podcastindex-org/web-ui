@@ -1,4 +1,46 @@
-[
+[  {
+    "appName": "Up Next",
+    "appType": [
+      "podcast player",
+      "app"
+    ],
+    "appUrl": "https://extremelysuccessfulapps.com",
+    "appIconUrl": "UpNext.png",
+    "platforms": ["iOS"],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/us/app/up-next-podcast-client/id6477821584"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://extremelysuccessfulapps.com"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://extremelysuccessfulapps.com"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://extremelysuccessfulapps.com"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://extremelysuccessfulapps.com"
+      },
+       {
+        "elementName": "Person",
+        "elementURL": "https://extremelysuccessfulapps.com"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://extremelysuccessfulapps.com"
+      },
+      {
+        "elementName": "Social Interact",
+        "elementURL": "https://extremelysuccessfulapps.com"
+      }
+    ]
+  },
   {
     "appName": "Podcatcher",
     "appType": [
@@ -31,6 +73,10 @@
       {
         "elementName": "Transcript",
         "elementURL": "https://podcatcher.net"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://www.podextra.ai/home"
       }
     ]
   },
