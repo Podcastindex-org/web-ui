@@ -3297,6 +3297,10 @@
       {
         "elementName": "Transcript",
         "elementURL": "https://podcasters.apple.com/support/5316-transcripts-on-apple-podcasts"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://podcasters.apple.com/support/5545-enhance-episodes-with-chapters-links-more"
       }
     ]
   },
