@@ -4967,5 +4967,85 @@
         "elementURL": "https://podrank.co/features/ai-insights"
       }
     ]
+  },
+  {
+    "appName": "V4V Music",
+    "appType": [
+      "music player",
+      "app",
+      "website"
+    ],
+    "appUrl": "https://v4vmusic.com/",
+    "appIconUrl": "v4vmusic.png",
+    "platforms": [
+      "Mobile",
+      "Web"
+    ],
+    "platformLinks": {
+      "Mobile": "https://v4vmusic.com/",
+      "Web": "https://v4vmusic.com/"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Boostagrams",
+        "elementURL": "https://v4vmusic.com/"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://v4vmusic.com/"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://v4vmusic.com/"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://v4vmusic.com/"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://v4vmusic.com/"
+      },
+      {
+        "elementName": "Live Boosts",
+        "elementURL": "https://v4vmusic.com/"
+      },
+      {
+        "elementName": "Live Item",
+        "elementURL": "https://v4vmusic.com/"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://v4vmusic.com/"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://v4vmusic.com/"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://v4vmusic.com/"
+      },
+      {
+        "elementName": "Podroll",
+        "elementURL": "https://v4vmusic.com/"
+      },
+      {
+        "elementName": "Remote Item",
+        "elementURL": "https://v4vmusic.com/"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://v4vmusic.com/"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://v4vmusic.com/"
+      },
+      {
+        "elementName": "Wallet Switching (VTS)",
+        "elementURL": "https://v4vmusic.com/"
+      }
+    ]
   }
 ]
