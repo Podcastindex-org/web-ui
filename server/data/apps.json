@@ -1108,7 +1108,7 @@
     "appUrl": "https://itdv.podtards.com/",
     "appIconUrl": "doerfelverse.png",
     "platforms": [
-      "Web"
+      "Web",
       "Mobile"   
     ],
     "supportedElements": [
