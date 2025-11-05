@@ -3306,7 +3306,8 @@
     "platforms": [
       "iOS",
       "Mobile",
-      "macOS"
+      "macOS",
+      "Web"
     ],
     "platformLinks": {
       "iOS": "https://apps.apple.com/app/apple-podcasts/id525463029",
