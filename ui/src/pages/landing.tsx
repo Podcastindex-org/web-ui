@@ -5,6 +5,7 @@ import Button from '../components/Button'
 import RecentPodcasts from '../components/RecentPodcasts'
 import { updateTitle } from '../utils'
 import StatsCard from './Stats/StatsCard'
+import { authenticatedFetch } from '../utils/auth'
 
 import './styles.scss'
 
@@ -61,10 +62,11 @@ export default class Landing extends React.Component<IProps, IState> {
     }
 
     async getRecentEpisodes() {
-        let response = await fetch(`/api/recent/episodes?max=7`, {
+        let response = await authenticatedFetch(`/api/recent/episodes?max=7`, {
             credentials: 'same-origin',
             method: 'GET',
         })
+
         return await response.json()
     }
 

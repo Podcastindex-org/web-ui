@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { authenticatedFetch } from '../../utils/auth'
 
 import './styles.scss'
 
@@ -80,7 +81,7 @@ class CommentMenu extends React.PureComponent<ICommentMenuProps, ICommentMenuSta
         let remoteInteractUrlPattern = localStorage.getItem('commentsRemoteInteractUrlPattern');
 
         if(!remoteInteractUrlPattern) {
-            const response = await fetch('/api/comments/remoteInteractUrlPattern?' + new URLSearchParams({
+            const response = await authenticatedFetch('/api/comments/remoteInteractUrlPattern?' + new URLSearchParams({
                 interactorAccount: interactorAccount
             }));
 

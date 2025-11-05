@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import SingleApp from './SingleApp'
 import FilterTags from './FilterTags'
+import { authenticatedFetch } from '../../../utils/auth'
 
 import './styles.scss'
 

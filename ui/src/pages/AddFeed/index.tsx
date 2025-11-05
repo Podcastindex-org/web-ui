@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import Button from "../../components/Button"
 import ResultItem from "../../components/ResultItem"
 import { cleanSearchQuery, getImage, updateTitle } from '../../utils'
+import { authenticatedFetch } from '../../utils/auth'
 
 import './styles.scss'
 
@@ -104,7 +105,7 @@ export default class AddFeed extends React.PureComponent<IProps> {
     async addFeed(feed: string) {
         let result = null
         // noinspection SpellCheckingInspection
-        await fetch(`/api/add/byfeedurl?url=${feed}`, {
+        await authenticatedFetch(`/api/add/byfeedurl?url=${feed}`, {
             method: 'GET',
         })
             .then(res => res.text())
@@ -121,7 +122,7 @@ export default class AddFeed extends React.PureComponent<IProps> {
     async getPodcastInfo(feed: string) {
         let result = null
         // noinspection SpellCheckingInspection
-        await fetch(`/api/podcasts/byfeedurl?url=${feed}`, {
+        await authenticatedFetch(`/api/podcasts/byfeedurl?url=${feed}`, {
             method: 'GET',
         })
             .then(res => res.text())
