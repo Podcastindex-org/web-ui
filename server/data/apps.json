@@ -3299,7 +3299,10 @@
     "appName": "Apple Podcasts",
     "appType": [
       "app",
-      "podcast player"
+      "podcast player",
+      "directory",
+      "hosting",
+      "website"
     ],
     "appUrl": "https://apps.apple.com/us/app/apple-podcasts/id525463029",
     "appIconUrl": "applepodcasts.jpg",
