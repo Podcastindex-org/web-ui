@@ -91,6 +91,18 @@ app.use('/namespace/1.0', async (req, res) => {
 })
 
 // ------------------------------------------------
+// ---------- LNAddress for Podcastindex ----------
+// ------------------------------------------------
+
+app.get('/.well-known/keysend/podcastindex', (req, res) => {
+  res.redirect('https://getalby.com/.well-known/keysend/podcastindex')
+})
+
+app.get('/.well-known/lnurlp/podcastindex', (req, res) => {
+  res.redirect('https://getalby.com/.well-known/lnurlp/podcastindex')
+})
+
+// ------------------------------------------------
 // ------------ Reverse proxy for API -------------
 // ------------------------------------------------
 
