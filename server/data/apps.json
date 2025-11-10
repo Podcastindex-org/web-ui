@@ -5072,5 +5072,36 @@
         "elementURL": "https://v4vmusic.com/"
       }
     ]
+  },
+  {
+    "appName": "PodBean",
+    "appType": [
+      "hosting",
+      "podcast player",
+      "app"
+    ],
+    "tagLine": "Your Podcast Hosting and Monetizing Platform",
+    "appUrl": "https://www.podbean.com",
+    "appIconUrl": "podbean.webp",
+    "platforms": [
+      "Web",
+      "Mobile",
+      "iOS",
+      "Android"
+    ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/podbean-podcast-app-player/id973361050",
+      "Android": "https://play.google.com/store/apps/details?id=com.podbean.app.podcast"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://blog.podbean.com/podbean-adds-podcast-chapters/"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://blog.podbean.com/podcast-transcription-and-you-how-transcripts-can-help-your-podcast/"
+      }
+    ]
   }
 ]
