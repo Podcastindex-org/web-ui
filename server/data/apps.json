@@ -339,6 +339,10 @@
         "elementURL": "https://blog.libsyn.com/2022/01/20/welcome-to-the-new-libsyn/"
       },
       {
+        "elementName": "OP3",
+        "elementURL": "https://help.libsynsupport.com/hc/en-us/articles/360041220231-Adding-a-URL-Prepend-or-Prefix-to-Your-Show"
+      },
+      {
         "elementName": "Transcript",
         "elementURL": "https://five.libsynsupport.com/hc/en-us/articles/23578752830363-Add-Your-Own-Episode-Transcript"
       }
@@ -1384,6 +1388,10 @@
       {
         "elementName": "Person",
         "elementURL": "https://www.buzzsprout.com/"
+      },
+      {
+        "elementName": "OP3",
+        "elementURL": "https://www.buzzsprout.com/help/198-prefix"
       },
       {
         "elementName": "Podroll",
@@ -2441,6 +2449,10 @@
         "elementURL": "https://changelog.rss.com/v24-3-1-287932"
       },
       {
+        "elementName": "OP3",
+        "elementURL": "https://help.rss.com/en/support/solutions/articles/44002346379-how-to-add-prefixes-podtrac-op3-magellan-etc-to-your-podcast"
+      },
+      {
         "elementName": "Podroll",
         "elementURL": "https://changelog.rss.com/v24-6-1-294338"
       }
@@ -3036,6 +3048,10 @@
     },
     "supportedElements": [
       {
+        "elementName": "OP3",
+        "elementURL": "https://help.spreaker.com/en/articles/4877816-how-to-add-a-third-party-prefix-to-your-rss-feed"
+      },
+      {
         "elementName": "Podping",
         "elementURL": "https://podnews.net/update/transcripts-launch-in-apple-podcasts"
       },
@@ -3056,6 +3072,10 @@
       "Web"
     ],
     "supportedElements": [
+      {
+        "elementName": "OP3",
+        "elementURL": "https://help.simplecast.com/hc/en-us/articles/21953546559901-How-to-Add-an-Analytics-Prefix-URL-to-your-RSS-Feed"
+      },
       {
         "elementName": "Txt",
         "elementURL": "https://help.simplecast.com/en/articles/7320145-rss-feed-ownership-verification"
@@ -3835,6 +3855,10 @@
       {
         "elementName": "Txt",
         "elementURL": "https://www.podhome.fm/docs/podcasting-2-0"
+      },
+      {
+        "elementName": "OP3",
+        "elementURL": "https://podhome.fm/docs/how-to-add-an-analytics-prefix-url-to-your-podcast"
       },
       {
         "elementName": "Podping",
