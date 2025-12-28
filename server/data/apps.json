@@ -706,6 +706,18 @@
       {
         "elementName": "Podroll",
         "elementURL": "https://podcastguru.io"
+      },
+      {
+        "elementName": "Video",
+        "elementURL": "https://podcastguru.io"
+      },
+      {
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://podcastguru.io"
+      },
+      {
+        "elementName": "Remote Item",
+        "elementURL": "https://podcastguru.io"
       }
     ]
   },
