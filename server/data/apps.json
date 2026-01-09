@@ -453,60 +453,72 @@
     },
     "supportedElements": [
       {
+        "elementName": "Video",
+        "elementURL": "https://blog.fountain.fm/p/video-podcasts"
+      },
+      {
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://blog.fountain.fm/p/video-podcasts"
+      },
+      {
         "elementName": "Boostagrams",
-        "elementURL": "https://twitter.com/fountain_app/status/1428355721301610503"
+        "elementURL": "https://fountain.fm/features"
       },
       {
         "elementName": "Sat Streaming",
-        "elementURL": "https://twitter.com/fountain_app/status/1428355721301610503"
+        "elementURL": "https://fountain.fm/features"
       },
       {
         "elementName": "Search",
-        "elementURL": "https://twitter.com/fountain_app/status/1438166024478724098"
+        "elementURL": "https://fountain.fm/features"
       },
       {
         "elementName": "Value",
-        "elementURL": "https://twitter.com/MerryOscar/status/1420818281959677952"
+        "elementURL": "https://fountain.fm/features"
       },
       {
         "elementName": "Wallet Switching (VTS)",
-        "elementURL": "https://fountainpodcasts.substack.com/p/fountain-08-music-podcasts-beta-player"
+        "elementURL": "https://fountain.fm/features"
       },
       {
         "elementName": "Chapters",
-        "elementURL": "https://twitter.com/fountain_app/status/1438166024478724098"
+        "elementURL": "https://fountain.fm/features"
       },
       {
         "elementName": "Transcript",
-        "elementURL": "https://twitter.com/fountain_app/status/1663171268902879232"
+        "elementURL": "https://fountain.fm/features"
       },
       {
         "elementName": "Person",
-        "elementURL": "https://twitter.com/fountain_app/status/1504450017146417153"
+        "elementURL": "https://fountain.fm/features"
       },
       {
         "elementName": "Live Item",
-        "elementURL": "https://twitter.com/fountain_app/status/1663171268902879232"
+        "elementURL": "https://fountain.fm/features"
       },
       {
         "elementName": "Live Boosts",
-        "elementURL": "https://twitter.com/fountain_app/status/1663171268902879232"
+        "elementURL": "https://fountain.fm/features"
       },
       {
         "elementName": "Medium",
-        "elementURL": "https://fountainpodcasts.substack.com/p/fountain-08-music-podcasts-beta-player"
+        "elementURL": "https://fountain.fm/features"
       },
       {
         "elementName": "Episode",
-        "elementURL": "https://fountain.fm"
+        "elementURL": "https://fountain.fm/features"
       },
       {
         "elementName": "GUID",
-        "elementURL": "https://fountain.fm"
+        "elementURL": "https://fountain.fm/features"
       },
       {
         "elementName": "Publisher",
-        "elementURL": "https://fountain.fm"
+        "elementURL": "https://fountain.fm/features"
+      },
+      {
+        "elementName": "Remote Item",
+        "elementURL": "https://fountain.fm/features"
       }
     ]
   },
