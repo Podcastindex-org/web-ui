@@ -3392,31 +3392,6 @@
     ]
   },
   {
-    "appName": "Overhaul FM",
-    "appType": ["app", "podcast player"],
-    "appUrl": "https://Onelink.to/x8u7u4",
-    "appIconUrl": "overhaulfm.png",
-    "platforms": ["Android", "Mobile", "iOS"],
-    "platformLinks": {
-      "Android": "https://play.google.com/store/apps/details?id=com.podcastoverhaul.app",
-      "iOS": "https://apps.apple.com/app/overhaul-fm-podcast-player/id1554984316"
-    },
-    "supportedElements": [
-      {
-        "elementName": "Episode",
-        "elementURL": "https://www.overhaul.fm"
-      },
-      {
-        "elementName": "Search",
-        "elementURL": "https://www.overhaul.fm"
-      },
-      {
-        "elementName": "Transcript",
-        "elementURL": "https://podnews.net/press-release/overhaul-fm-good-bad-ugly"
-      }
-    ]
-  },
-  {
     "appName": "PodcastAI",
     "appType": ["hosting", "website", "video"],
     "appUrl": "https://podcastai.com",
