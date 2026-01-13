@@ -1783,27 +1783,27 @@
     "supportedElements": [
       {
         "elementName": "Locked",
-        "elementURL": "https://twitter.com/transistorfm"
+        "elementURL": "https://transistor.fm/changelog/podcast-lock"
       },
       {
         "elementName": "Funding",
-        "elementURL": "https://twitter.com/transistorfm"
+        "elementURL": "https://transistor.fm/changelog/"
       },
       {
         "elementName": "Podping",
-        "elementURL": "https://twitter.com/transistorfm"
+        "elementURL": "https://transistor.fm/changelog/"
       },
       {
         "elementName": "Transcript",
-        "elementURL": "https://twitter.com/transistorfm"
+        "elementURL": "https://transistor.fm/changelog/transcripts/"
       },
       {
         "elementName": "Chapters",
-        "elementURL": "https://twitter.com/transistorfm"
+        "elementURL": "https://transistor.fm/changelog/chapters-in-episodes/"
       },
       {
         "elementName": "Person",
-        "elementURL": "https://twitter.com/TransistorFM/status/1575920428068937728"
+        "elementURL": "https://transistor.fm/changelog/people/"
       },
       {
         "elementName": "OP3",
