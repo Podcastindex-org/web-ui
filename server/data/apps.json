@@ -98,23 +98,6 @@
     ]
   },
   {
-    "appName": "PodExtra.AI",
-    "appType": ["podcast player", "website", "directory", "other"],
-    "appUrl": "https://www.podextra.ai",
-    "appIconUrl": "podextra.png",
-    "platforms": ["Mobile", "Web", "Windows", "macOS"],
-    "supportedElements": [
-      {
-        "elementName": "Transcript",
-        "elementURL": "https://www.podextra.ai/latest-ai-processed-episodes"
-      },
-      {
-        "elementName": "Chapters",
-        "elementURL": "https://www.podextra.ai/home"
-      }
-    ]
-  },
-  {
     "appName": "Pocket Casts",
     "appType": ["podcast player", "app", "open source"],
     "appUrl": "https://pocketcasts.com",
