@@ -98,23 +98,6 @@
     ]
   },
   {
-    "appName": "PodExtra.AI",
-    "appType": ["podcast player", "website", "directory", "other"],
-    "appUrl": "https://www.podextra.ai",
-    "appIconUrl": "podextra.png",
-    "platforms": ["Mobile", "Web", "Windows", "macOS"],
-    "supportedElements": [
-      {
-        "elementName": "Transcript",
-        "elementURL": "https://www.podextra.ai/latest-ai-processed-episodes"
-      },
-      {
-        "elementName": "Chapters",
-        "elementURL": "https://www.podextra.ai/home"
-      }
-    ]
-  },
-  {
     "appName": "Pocket Casts",
     "appType": ["podcast player", "app", "open source"],
     "appUrl": "https://pocketcasts.com",
@@ -689,7 +672,7 @@
     "supportedElements": [
       {
         "elementName": "Chapters",
-        "elementURL": "https://hypercatcher.com/2020/11/how-to-create-podcast-chapters-as-a-listener/"
+        "elementURL": "https://hypercatcher.com"
       },
       {
         "elementName": "Search",
@@ -810,39 +793,6 @@
       {
         "elementName": "Chat",
         "elementURL": "https://curiocaster.com/"
-      }
-    ]
-  },
-  {
-    "appName": "mp.money",
-    "appType": ["app"],
-    "appUrl": "https://cryptostream.online/",
-    "appIconUrl": "mpmoney.jpg",
-    "platforms": ["Web"],
-    "supportedElements": [
-      {
-        "elementName": "Value",
-        "elementURL": "https://cryptostream.online/"
-      },
-      {
-        "elementName": "Chapters",
-        "elementURL": "https://cryptostream.online/"
-      },
-      {
-        "elementName": "Transcript",
-        "elementURL": "https://cryptostream.online/"
-      },
-      {
-        "elementName": "Funding",
-        "elementURL": "https://cryptostream.online/"
-      },
-      {
-        "elementName": "Search",
-        "elementURL": "https://cryptostream.online/"
-      },
-      {
-        "elementName": "Alternate Enclosure",
-        "elementURL": "https://cryptostream.online/"
       }
     ]
   },
@@ -1170,7 +1120,7 @@
       },
       {
         "elementName": "Locked",
-        "elementURL": "https://www.buzzsprout.com/blog/podcast-locking"
+        "elementURL": "https://www.buzzsprout.com/help/223-lock-tag"
       },
       {
         "elementName": "Funding",
@@ -1833,27 +1783,27 @@
     "supportedElements": [
       {
         "elementName": "Locked",
-        "elementURL": "https://twitter.com/transistorfm"
+        "elementURL": "https://transistor.fm/changelog/podcast-lock"
       },
       {
         "elementName": "Funding",
-        "elementURL": "https://twitter.com/transistorfm"
+        "elementURL": "https://transistor.fm/changelog/"
       },
       {
         "elementName": "Podping",
-        "elementURL": "https://twitter.com/transistorfm"
+        "elementURL": "https://transistor.fm/changelog/"
       },
       {
         "elementName": "Transcript",
-        "elementURL": "https://twitter.com/transistorfm"
+        "elementURL": "https://transistor.fm/changelog/transcripts/"
       },
       {
         "elementName": "Chapters",
-        "elementURL": "https://twitter.com/transistorfm"
+        "elementURL": "https://transistor.fm/changelog/chapters-in-episodes/"
       },
       {
         "elementName": "Person",
-        "elementURL": "https://twitter.com/TransistorFM/status/1575920428068937728"
+        "elementURL": "https://transistor.fm/changelog/people/"
       },
       {
         "elementName": "OP3",
@@ -2649,7 +2599,7 @@
       },
       {
         "elementName": "Txt",
-        "elementURL": "https://help.simplecast.com/en/articles/7320145-rss-feed-ownership-verification"
+        "elementURL": "https://help.simplecast.com/hc/articles/21953515857437-RSS-Feed-Ownership-Verification"
       }
     ]
   },
@@ -3442,31 +3392,6 @@
     ]
   },
   {
-    "appName": "Overhaul FM",
-    "appType": ["app", "podcast player"],
-    "appUrl": "https://Onelink.to/x8u7u4",
-    "appIconUrl": "overhaulfm.png",
-    "platforms": ["Android", "Mobile", "iOS"],
-    "platformLinks": {
-      "Android": "https://play.google.com/store/apps/details?id=com.podcastoverhaul.app",
-      "iOS": "https://apps.apple.com/app/overhaul-fm-podcast-player/id1554984316"
-    },
-    "supportedElements": [
-      {
-        "elementName": "Episode",
-        "elementURL": "https://www.overhaul.fm"
-      },
-      {
-        "elementName": "Search",
-        "elementURL": "https://www.overhaul.fm"
-      },
-      {
-        "elementName": "Transcript",
-        "elementURL": "https://podnews.net/press-release/overhaul-fm-good-bad-ugly"
-      }
-    ]
-  },
-  {
     "appName": "PodcastAI",
     "appType": ["hosting", "website", "video"],
     "appUrl": "https://podcastai.com",
@@ -3767,7 +3692,7 @@
       },
       {
         "elementName": "Chapters",
-        "elementURL": "https://podcastindex.social/@russell/114465137886560906"
+        "elementURL": "https://podtoo.com"
       },
       {
         "elementName": "Transcript",
@@ -3799,7 +3724,7 @@
       },
       {
         "elementName": "Podping",
-        "elementURL": "https://podcastindex.social/@russell/113165128969015505"
+        "elementURL": "https://podtoo.com"
       }
     ]
   },
