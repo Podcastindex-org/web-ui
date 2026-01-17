@@ -1,0 +1,43 @@
+name: Links
+
+on:
+  repository_dispatch:
+  workflow_dispatch:
+  schedule:
+    - cron: "00 07 * * 6"
+
+jobs:
+  linkChecker:
+    runs-on: ubuntu-latest
+#    permissions:
+#      issues: write                # required for peter-evans/create-issue-from-file
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Link Checker
+        id: lychee
+        uses: lycheeverse/lychee-action@a8c4c7cb88f0c7386610c35eb25108e448569cb0  # for v2.7.0
+        with:
+          fail: false
+          args: |
+            --exclude-path _old --no-progress
+#            --exclude-all-private
+#            --base-url https://podcastindex.org
+#            --root-dir "$(pwd)"
+#            --verbose './**/*.md' './**/*.html' './**/*.rst' './**/*.json' # './**/*.tsx'
+#            -include-verbatim --include-wikilinks --include-fragments
+#            --suggest      # Suggest link replacements for broken links, using a web archive
+#            --user-agent "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0"
+#            --exclude json-schema.org/draft-07/schema --exclude yyy.com
+#            --remap 'https://lychee\.cli\.rs/(.*)/ file://'$PWD'/dist/$1/index.html'
+#            folder1/
+#            folder2/
+# https://lychee.cli.rs/guides/cli/
+
+#      - name: Create Issue From File
+#        if: steps.lychee.outputs.exit_code != 0
+#        uses: peter-evans/create-issue-from-file@v5
+#        with:
+#          title: Link Checker Report
+#          content-filepath: ./lychee/out.md
+#          labels: report, automated issue
