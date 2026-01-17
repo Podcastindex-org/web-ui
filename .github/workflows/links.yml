@@ -21,12 +21,13 @@ jobs:
           fail: false
           args: |
             --exclude-path _old --no-progress
-            --verbose './**/*.md' './**/*.html' './**/*.json' # './**/*.tsx'
             --exclude-all-private
             --base-url https://podcastindex.org
+            './**/*.md' './**/*.html' './**/*.json' # './**/*.tsx'
 
+#            --accept '100..=103,200..=299'
 #            --root-dir "$(pwd)"
-#            -include-verbatim --include-wikilinks --include-fragments
+#            --include-verbatim --include-wikilinks --include-fragments
 #            --suggest      # Suggest link replacements for broken links, using a web archive
 #            --user-agent "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0"
 # https://lychee.cli.rs/guides/cli/
