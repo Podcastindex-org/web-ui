@@ -191,35 +191,6 @@
     ]
   },
   {
-    "appName": "Caproni",
-    "appType": ["hosting"],
-    "appUrl": "https://caproni.fm/en",
-    "appIconUrl": "caproni.png",
-    "platforms": ["Web"],
-    "supportedElements": [
-      {
-        "elementName": "Locked",
-        "elementURL": "https://twitter.com/gaburieru4649/status/1481293512435974146"
-      },
-      {
-        "elementName": "Transcript",
-        "elementURL": "https://twitter.com/gaburieru4649/status/1481293512435974146"
-      },
-      {
-        "elementName": "Funding",
-        "elementURL": "https://twitter.com/gaburieru4649/status/1481293512435974146"
-      },
-      {
-        "elementName": "Location",
-        "elementURL": "https://twitter.com/gaburieru4649/status/1481293512435974146"
-      },
-      {
-        "elementName": "Podping",
-        "elementURL": "https://twitter.com/gaburieru4649/status/1481293512435974146"
-      }
-    ]
-  },
-  {
     "appName": "Podcast Addict",
     "appType": ["app", "podcast player"],
     "tagLine": "How podcasters share URLs, images, and videos during their podcasts.",
@@ -405,22 +376,6 @@
       {
         "elementName": "Transcript",
         "elementURL": "https://castro.fm/blog/transcript-tag-release"
-      }
-    ]
-  },
-  {
-    "appName": "Fathom",
-    "appType": ["app", "podcast player"],
-    "appUrl": "https://fathom.fm",
-    "appIconUrl": "fathom.png",
-    "platforms": ["iOS", "Mobile", "Web"],
-    "platformLinks": {
-      "iOS": "https://apps.apple.com/app/fathom-podcast-player/id1591828121"
-    },
-    "supportedElements": [
-      {
-        "elementName": "Chapters",
-        "elementURL": "https://hello.fathom.fm"
       }
     ]
   },
@@ -1836,7 +1791,7 @@
       },
       {
         "elementName": "Podping",
-        "elementURL": "https://podcastindex.social/@dave/115301133039673311"
+        "elementURL": "https://podcasting20.substack.com/p/podping"
       }
     ]
   },
@@ -1921,13 +1876,13 @@
     "appName": "Alby",
     "appType": ["node hosting", "podcaster wallet"],
     "tagLine": "The simplest way to receive boostagrams from your listeners",
-    "appUrl": "https://getalby.com/podcast-wallet",
+    "appUrl": "https://getalby.com/",
     "appIconUrl": "alby.png",
     "platforms": ["Web"],
     "supportedElements": [
       {
         "elementName": "Value",
-        "elementURL": "https://blog.getalby.com/bitcoin-payments-for-podcasters-with-alby/"
+        "elementURL": "https://blog.getalby.com/bitcoin-payments-for-podcasters-with-alby/?_from=PI"
       }
     ]
   },
@@ -2118,22 +2073,9 @@
     ]
   },
   {
-    "appName": "MediaVault",
-    "appType": ["app", "podcast player", "open source"],
-    "appUrl": "https://github.com/walkero-gr/mediavault",
-    "appIconUrl": "mediavault.png",
-    "platforms": ["AmigaOS 4"],
-    "supportedElements": [
-      {
-        "elementName": "Search",
-        "elementURL": "https://twitter.com/gsokianos/status/1445459459397070848"
-      }
-    ]
-  },
-  {
     "appName": "PodBrowser",
     "appType": ["app", "open source"],
-    "appUrl": "http://podbrowser.org",
+    "appUrl": "https://sources.vsta.org:7100/browser/home?_from=PI",
     "appIconUrl": "podcastindex.jpg",
     "tagLine": "Lean and mean player, all about finding/playing podcasts.",
     "platforms": ["Web"],
@@ -2178,7 +2120,7 @@
       },
       {
         "elementName": "Transcript",
-        "elementURL": "https://disctopia.prowly.com/210652-disctopia-implements-transcription-feature-for-all-users"
+        "elementURL": "https://disctopia.com/insights/disctopia-releases-audio-to-text-transcription-tool/"
       },
       {
         "elementName": "Medium",
@@ -2445,7 +2387,7 @@
   {
     "appName": "FocusPodcast",
     "appType": ["app", "podcast player", "open source"],
-    "appUrl": "https://play.google.com/store/apps/details?id=allen.town.focus.podcast",
+    "appUrl": "https://github.com/allentown521/FocusPodcast",
     "appIconUrl": "FocusPodcast.png",
     "platforms": ["Mobile", "Android", "F-Droid"],
     "platformLinks": {
@@ -2455,15 +2397,15 @@
     "supportedElements": [
       {
         "elementName": "Search",
-        "elementURL": "http://focus.hk.cn"
+        "elementURL": "https://github.com/allentown521/FocusPodcast"
       },
       {
         "elementName": "Funding",
-        "elementURL": "http://focus.hk.cn"
+        "elementURL": "https://github.com/allentown521/FocusPodcast"
       },
       {
         "elementName": "Chapters",
-        "elementURL": "http://focus.hk.cn"
+        "elementURL": "https://github.com/allentown521/FocusPodcast"
       }
     ]
   },
@@ -3731,7 +3673,7 @@
   {
     "appName": "Cooler Podcast player",
     "appType": ["app"],
-    "appUrl": "https://cooler.fm",
+    "appUrl": "https://cooler.fm?_from=PI",
     "appIconUrl": "cooler.webp",
     "platforms": ["iOS"],
     "platformLinks": {
@@ -3740,7 +3682,7 @@
     "supportedElements": [
       {
         "elementName": "Search",
-        "elementURL": "https://cooler.fm"
+        "elementURL": "https://cooler.fm?_from=PI"
       }
     ]
   },
@@ -4242,19 +4184,19 @@
     "supportedElements": [
       {
         "elementName": "Search",
-        "elementURL": "https://podrank.co/features/ai-powered-search"
+        "elementURL": "https://wwww.podrank.co/features/ai-powered-search"
       },
       {
         "elementName": "Episode",
-        "elementURL": "https://podrank.co/features/rss-subscriptions"
+        "elementURL": "https://wwww.podrank.co/features/rss-subscriptions"
       },
       {
         "elementName": "Transcript",
-        "elementURL": "https://podrank.co/features/ai-insights"
+        "elementURL": "https://wwww.podrank.co/features/ai-insights"
       },
       {
         "elementName": "Chapters",
-        "elementURL": "https://podrank.co/features/ai-insights"
+        "elementURL": "https://wwww.podrank.co/features/ai-insights"
       }
     ]
   },
