@@ -1,0 +1,18 @@
+version: 2
+updates:
+
+  - package-ecosystem: "github-actions"
+    directory: "/"              # Looks for workflow files under .github/
+    schedule:
+      interval: "weekly"        # Check for updates to GitHub Actions every week
+#      day: "sunday"
+#      timezone: "UTC"
+#    groups:
+#      all-actions:
+#        patterns: [ "*" ]
+#    open-pull-requests-limit: 5
+#    commit-message:
+#      prefix: "actions"
+#    labels:
+#      - "dependencies"
+#      - "github-actions"
