@@ -13,10 +13,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
-        
+
       - name: Validate JSON
         uses: dsanders11/json-schema-validate-action@79b2d95a446a0d786f7f244ae7764f8370ff3657 # v1.4.0
-         with:
+        with:
           schema: ./server/data/apps-schema.json
           files: ./server/data/apps.json
 
