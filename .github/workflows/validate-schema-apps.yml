@@ -3,8 +3,12 @@ name: Validate JSONs
 on:
   push:
     branches: [ master ]
+    paths:
+      - 'server/data/**.json'
   pull_request:
     branches: [ master ]
+    paths:
+      - 'server/data/**.json'
   workflow_dispatch:
 
 jobs:
