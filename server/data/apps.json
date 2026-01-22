@@ -3971,7 +3971,7 @@
     "supportedElements": [
       {
         "elementName": "Chapters",
-        "elementURL": "https://www.podferry.com/player"
+        "elementURL": "https://www.podferry.com/player/preview"
       },
       {
         "elementName": "Search",
@@ -4046,23 +4046,23 @@
     "supportedElements": [
       {
         "elementName": "Transcript",
-        "elementURL": "https://bubbl.fm"
+        "elementURL": "https://www.bubbl.fm/"
       },
       {
         "elementName": "Chapters",
-        "elementURL": "https://bubbl.fm"
+        "elementURL": "https://www.bubbl.fm/"
       },
       {
         "elementName": "Search",
-        "elementURL": "https://bubbl.fm"
+        "elementURL": "https://www.bubbl.fm/"
       },
       {
         "elementName": "Live Item",
-        "elementURL": "https://bubbl.fm"
+        "elementURL": "https://www.bubbl.fm/"
       },
       {
         "elementName": "Episode",
-        "elementURL": "https://bubbl.fm"
+        "elementURL": "https://www.bubbl.fm/"
       }
     ]
   },
