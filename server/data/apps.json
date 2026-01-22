@@ -2090,11 +2090,11 @@
     "supportedElements": [
       {
         "elementName": "Chapters",
-        "elementURL": "http://sources.vsta.org:7100/browser/timeline?c=791cb1e4a67ce9eb&y=a"
+        "elementURL": "https://sources.vsta.org:7100/browser/timeline?c=791cb1e4a67ce9eb&y=a"
       },
       {
         "elementName": "Search",
-        "elementURL": "http://sources.vsta.org:7100/browser/timeline?c=fdd2747d496fa15f&y=a"
+        "elementURL": "https://sources.vsta.org:7100/browser/timeline?c=fdd2747d496fa15f&y=a"
       }
     ]
   },
