@@ -3697,8 +3697,7 @@
     },
     "supportedElements": [
       {
-        "elementName": "Search",
-        "elementURL": "https://cooler.fm?_from=PI"
+        "elementName": "Search"
       }
     ]
   },
@@ -4053,24 +4052,19 @@
     "platforms": ["Web", "Mobile"],
     "supportedElements": [
       {
-        "elementName": "Transcript",
-        "elementURL": "https://www.bubbl.fm/"
+        "elementName": "Transcript"
       },
       {
-        "elementName": "Chapters",
-        "elementURL": "https://www.bubbl.fm/"
+        "elementName": "Chapters"
       },
       {
-        "elementName": "Search",
-        "elementURL": "https://www.bubbl.fm/"
+        "elementName": "Search"
       },
       {
-        "elementName": "Live Item",
-        "elementURL": "https://www.bubbl.fm/"
+        "elementName": "Live Item"
       },
       {
-        "elementName": "Episode",
-        "elementURL": "https://www.bubbl.fm/"
+        "elementName": "Episode"
       }
     ]
   },
@@ -4173,20 +4167,16 @@
     "appIconUrl": "skimr.png",
     "supportedElements": [
       {
-        "elementName": "Transcript",
-        "elementURL": "https://skimr.app"
+        "elementName": "Transcript"
       },
       {
-        "elementName": "Chapters",
-        "elementURL": "https://skimr.app"
+        "elementName": "Chapters"
       },
       {
-        "elementName": "Search",
-        "elementURL": "https://skimr.app"
+        "elementName": "Search"
       },
       {
-        "elementName": "Episode",
-        "elementURL": "https://skimr.app"
+        "elementName": "Episode"
       }
     ]
   },
@@ -4284,8 +4274,7 @@
         "elementURL": "https://v4vmusic.com/"
       },
       {
-        "elementName": "Wallet Switching (VTS)",
-        "elementURL": "https://v4vmusic.com/"
+        "elementName": "Wallet Switching (VTS)"
       }
     ]
   },
