@@ -179,13 +179,17 @@
   },
   {
     "appName": "chaptertool",
-    "appType": ["app", "open source", "other"],
+    "appType": ["app", "open source", "self-hosted", "other"],
     "appUrl": "https://mtillmann.github.io/chaptertool/",
     "appIconUrl": "chaptertool.png",
     "platforms": ["Web"],
     "supportedElements": [
       {
         "elementName": "Chapters",
+        "elementURL": "https://mtillmann.github.io/chaptertool/"
+      },
+      {
+        "elementName": "Location",
         "elementURL": "https://mtillmann.github.io/chaptertool/"
       }
     ]
