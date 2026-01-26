@@ -1815,23 +1815,23 @@
     "supportedElements": [
       {
         "elementName": "Transcript",
-        "elementURL": "https://beamly.com/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
+        "elementURL": "https://beamly.com/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss:~:text=added%20support%20to%20the%20following%20Podcast%202%2E0"
       },
       {
         "elementName": "Soundbite",
-        "elementURL": "https://beamly.com/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
+        "elementURL": "https://beamly.com/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss:~:text=added%20support%20to%20the%20following%20Podcast%202%2E0"
       },
       {
         "elementName": "Person",
-        "elementURL": "https://beamly.com/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
+        "elementURL": "https://beamly.com/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss:~:text=added%20support%20to%20the%20following%20Podcast%202%2E0"
       },
       {
         "elementName": "Season",
-        "elementURL": "https://beamly.com/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
+        "elementURL": "https://beamly.com/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss:~:text=added%20support%20to%20the%20following%20Podcast%202%2E0"
       },
       {
         "elementName": "Episode",
-        "elementURL": "https://beamly.com/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss"
+        "elementURL": "https://beamly.com/exploring-the-new-standard-for-podcast-rss-feeds/#podcastpage-rss:~:text=added%20support%20to%20the%20following%20Podcast%202%2E0"
       },
       {
         "elementName": "OP3",
@@ -2147,8 +2147,7 @@
         "elementURL": "https://rssblue.com/help/podcast-metadata#lightning-node"
       },
       {
-        "elementName": "Medium",
-        "elementURL": "https://rssblue.com/help/podcast-metadata#medium"
+        "elementName": "Medium"
       },
       {
         "elementName": "OP3",

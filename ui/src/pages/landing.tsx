@@ -99,7 +99,7 @@ export default class Landing extends React.Component<IProps, IState> {
                         {/*        className="subscribe-badge"*/}
                         {/*        title="Subscribe"*/}
                         {/*        target="_blank"*/}
-                        {/*        href="http://mp3s.nashownotes.com/pc20rss.xml"*/}
+                        {/*        href="https://feeds.podcastindex.org/pc20.xml"*/}
                         {/*    >*/}
                         {/*        <img src={RSSLogo} />*/}
                         {/*    </a>*/}
@@ -176,7 +176,7 @@ export default class Landing extends React.Component<IProps, IState> {
                     <p>
                         <strong>We have a Mastodon server for collaboration.</strong> Join it
                         here:{' '}
-                        <a href="https://podcastindex.social/invite/hfcQYbjq">
+                        <a href="https://podcastindex.social/about">
                             Podcastindex.social
                         </a>
                     </p>
