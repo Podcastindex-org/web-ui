@@ -36,36 +36,29 @@
     "appIconUrl": "UpNext.png",
     "platforms": ["iOS"],
     "platformLinks": {
-      "iOS": "https://apps.apple.com/us/app/up-next-podcast-client/id6477821584"
+      "iOS": "https://apps.apple.com/app/up-next-podcast-client/id6477821584"
     },
     "supportedElements": [
       {
-        "elementName": "Chapters",
-        "elementURL": "https://extremelysuccessfulapps.com"
+        "elementName": "Chapters"
       },
       {
-        "elementName": "Episode",
-        "elementURL": "https://extremelysuccessfulapps.com"
+        "elementName": "Episode"
       },
       {
-        "elementName": "Search",
-        "elementURL": "https://extremelysuccessfulapps.com"
+        "elementName": "Search"
       },
       {
-        "elementName": "Funding",
-        "elementURL": "https://extremelysuccessfulapps.com"
+        "elementName": "Funding"
       },
       {
-        "elementName": "Person",
-        "elementURL": "https://extremelysuccessfulapps.com"
+        "elementName": "Person"
       },
       {
-        "elementName": "GUID",
-        "elementURL": "https://extremelysuccessfulapps.com"
+        "elementName": "GUID"
       },
       {
-        "elementName": "Social Interact",
-        "elementURL": "https://extremelysuccessfulapps.com"
+        "elementName": "Social Interact"
       }
     ]
   },
@@ -80,20 +73,17 @@
     },
     "supportedElements": [
       {
-        "elementName": "Chapters",
-        "elementURL": "https://podcatcher.net"
+        "elementName": "Chapters"
       },
       {
-        "elementName": "Episode",
-        "elementURL": "https://podcatcher.net"
+        "elementName": "Episode"
       },
       {
         "elementName": "Search",
         "elementURL": "https://podcatcher.net"
       },
       {
-        "elementName": "Transcript",
-        "elementURL": "https://podcatcher.net"
+        "elementName": "Transcript"
       }
     ]
   },
@@ -142,8 +132,7 @@
         "elementURL": "https://aipodnav.com/discover/new-podcast-transcript"
       },
       {
-        "elementName": "Chapters",
-        "elementURL": "https://aipodnav.com/"
+        "elementName": "Chapters"
       }
     ]
   },
@@ -155,12 +144,10 @@
     "platforms": ["Discord"],
     "supportedElements": [
       {
-        "elementName": "Search",
-        "elementURL": "https://audicy.xyz"
+        "elementName": "Search"
       },
       {
-        "elementName": "Episode",
-        "elementURL": "https://audicy.xyz"
+        "elementName": "Episode"
       }
     ]
   },
@@ -190,7 +177,7 @@
       },
       {
         "elementName": "Location",
-        "elementURL": "https://mtillmann.github.io/chaptertool/"
+        "elementURL": "https://github.com/Mtillmann/chaptertool/commit/a7732f5e4a175afed5ba07b5f85473e5d8529cc8"
       }
     ]
   },
@@ -513,8 +500,7 @@
         "elementURL": "https://podcastguru.io/podcasts/podcasting-is-changing/"
       },
       {
-        "elementName": "GUID",
-        "elementURL": "https://podcastguru.io"
+        "elementName": "GUID"
       },
       {
         "elementName": "Live Boosts",
@@ -565,20 +551,16 @@
         "elementURL": "https://twitter.com/podcastguru_app/status/1697630654333116839"
       },
       {
-        "elementName": "Podroll",
-        "elementURL": "https://podcastguru.io"
+        "elementName": "Podroll"
       },
       {
-        "elementName": "Video",
-        "elementURL": "https://podcastguru.io"
+        "elementName": "Video"
       },
       {
-        "elementName": "Alternate Enclosure",
-        "elementURL": "https://podcastguru.io"
+        "elementName": "Alternate Enclosure"
       },
       {
-        "elementName": "Remote Item",
-        "elementURL": "https://podcastguru.io"
+        "elementName": "Remote Item"
       }
     ]
   },
@@ -630,12 +612,10 @@
     },
     "supportedElements": [
       {
-        "elementName": "Chapters",
-        "elementURL": "https://hypercatcher.com"
+        "elementName": "Chapters"
       },
       {
-        "elementName": "Search",
-        "elementURL": "https://hypercatcher.com"
+        "elementName": "Search"
       }
     ]
   },
@@ -714,44 +694,35 @@
     "platforms": ["Web", "Mobile"],
     "supportedElements": [
       {
-        "elementName": "Boostagrams",
-        "elementURL": "https://curiocaster.com/"
+        "elementName": "Boostagrams"
       },
       {
-        "elementName": "Sat Streaming",
-        "elementURL": "https://curiocaster.com/"
+        "elementName": "Sat Streaming"
       },
       {
-        "elementName": "Value",
-        "elementURL": "https://curiocaster.com/"
+        "elementName": "Value"
       },
       {
-        "elementName": "Live Item",
-        "elementURL": "https://curiocaster.com/"
+        "elementName": "Live Item"
       },
       {
-        "elementName": "Chapters",
-        "elementURL": "https://curiocaster.com/"
+        "elementName": "Chapters"
       },
       {
-        "elementName": "Transcript",
-        "elementURL": "https://curiocaster.com/"
+        "elementName": "Transcript"
       },
       {
-        "elementName": "Funding",
-        "elementURL": "https://curiocaster.com/"
+        "elementName": "Funding"
       },
       {
         "elementName": "Search",
         "elementURL": "https://curiocaster.com/"
       },
       {
-        "elementName": "Alternate Enclosure",
-        "elementURL": "https://curiocaster.com/"
+        "elementName": "Alternate Enclosure"
       },
       {
-        "elementName": "Chat",
-        "elementURL": "https://curiocaster.com/"
+        "elementName": "Chat"
       }
     ]
   },
@@ -781,11 +752,11 @@
       },
       {
         "elementName": "Funding",
-        "elementURL": "https://twitter.com/ivypodcasts/status/1376280859620339719"
+        "elementURL": "https://x.com/ivypodcasts/status/1376280859620339719"
       },
       {
         "elementName": "Person",
-        "elementURL": "https://twitter.com/ivypodcasts/status/1376280859620339719"
+        "elementURL": "https://x.com/ivypodcasts/status/1376280859620339719"
       }
     ]
   },
@@ -850,8 +821,7 @@
         "elementURL": "https://twitter.com/PodLP_App/status/1466805341597827079?s=20"
       },
       {
-        "elementName": "Alternate Enclosure",
-        "elementURL": "https://podlp.com/"
+        "elementName": "Alternate Enclosure"
       },
       {
         "elementName": "Search",
@@ -866,8 +836,7 @@
         "elementURL": "https://blog.podlp.com/posts/podlp-podcast-index/"
       },
       {
-        "elementName": "Season",
-        "elementURL": "https://podlp.com"
+        "elementName": "Season"
       }
     ]
   },
@@ -879,28 +848,22 @@
     "platforms": ["Web", "Mobile"],
     "supportedElements": [
       {
-        "elementName": "Funding",
-        "elementURL": "https://itdv.podtards.com/"
+        "elementName": "Funding"
       },
       {
-        "elementName": "Podroll",
-        "elementURL": "https://itdv.podtards.com/"
+        "elementName": "Podroll"
       },
       {
-        "elementName": "Publisher",
-        "elementURL": "https://itdv.podtards.com/"
+        "elementName": "Publisher"
       },
       {
-        "elementName": "Boostagrams",
-        "elementURL": "https://itdv.podtards.com/"
+        "elementName": "Boostagrams"
       },
       {
-        "elementName": "GUID",
-        "elementURL": "https://itdv.podtards.com/"
+        "elementName": "GUID"
       },
       {
-        "elementName": "Value",
-        "elementURL": "https://itdv.podtards.com/"
+        "elementName": "Value"
       }
     ]
   },
@@ -915,64 +878,50 @@
     },
     "supportedElements": [
       {
-        "elementName": "Boostagrams",
-        "elementURL": "https://apps.apple.com/app/castamatic-podcast-player/id966632553"
+        "elementName": "Boostagrams"
       },
       {
-        "elementName": "Value",
-        "elementURL": "https://apps.apple.com/app/castamatic-podcast-player/id966632553"
+        "elementName": "Value"
       },
       {
-        "elementName": "Funding",
-        "elementURL": "https://apps.apple.com/app/castamatic-podcast-player/id966632553"
+        "elementName": "Funding"
       },
       {
         "elementName": "Chapters",
         "elementURL": "https://castamatic.com/#features"
       },
       {
-        "elementName": "Search",
-        "elementURL": "https://apps.apple.com/app/castamatic-podcast-player/id966632553"
+        "elementName": "Search"
       },
       {
-        "elementName": "Sat Streaming",
-        "elementURL": "https://apps.apple.com/app/castamatic-podcast-player/id966632553"
+        "elementName": "Sat Streaming"
       },
       {
-        "elementName": "Alternate Enclosure",
-        "elementURL": "https://apps.apple.com/app/castamatic-podcast-player/id966632553"
+        "elementName": "Alternate Enclosure"
       },
       {
-        "elementName": "GUID",
-        "elementURL": "https://apps.apple.com/app/castamatic-podcast-player/id966632553"
+        "elementName": "GUID"
       },
       {
-        "elementName": "Live Item",
-        "elementURL": "https://apps.apple.com/app/castamatic-podcast-player/id966632553"
+        "elementName": "Live Item"
       },
       {
-        "elementName": "Live Boosts",
-        "elementURL": "https://apps.apple.com/app/castamatic-podcast-player/id966632553"
+        "elementName": "Live Boosts"
       },
       {
-        "elementName": "Podping",
-        "elementURL": "https://apps.apple.com/app/castamatic-podcast-player/id966632553"
+        "elementName": "Podping"
       },
       {
-        "elementName": "Search",
-        "elementURL": "https://apps.apple.com/app/castamatic-podcast-player/id966632553"
+        "elementName": "Search"
       },
       {
-        "elementName": "Transcript",
-        "elementURL": "https://apps.apple.com/app/castamatic-podcast-player/id966632553"
+        "elementName": "Transcript"
       },
       {
-        "elementName": "Value",
-        "elementURL": "https://apps.apple.com/app/castamatic-podcast-player/id966632553"
+        "elementName": "Value"
       },
       {
-        "elementName": "Wallet Switching (VTS)",
-        "elementURL": "https://apps.apple.com/app/castamatic-podcast-player/id966632553"
+        "elementName": "Wallet Switching (VTS)"
       }
     ]
   },
@@ -1061,8 +1010,7 @@
     },
     "supportedElements": [
       {
-        "elementName": "Search",
-        "elementURL": "https://gpodder.github.io/"
+        "elementName": "Search"
       }
     ]
   },
@@ -1082,24 +1030,20 @@
         "elementURL": "https://www.buzzsprout.com/help/223-lock-tag"
       },
       {
-        "elementName": "Funding",
-        "elementURL": "https://www.buzzsprout.com/"
+        "elementName": "Funding"
       },
       {
         "elementName": "Chapters",
         "elementURL": "https://twitter.com/buzzsprout/status/1324425781330796545"
       },
       {
-        "elementName": "Soundbite",
-        "elementURL": "https://www.buzzsprout.com/"
+        "elementName": "Soundbite"
       },
       {
-        "elementName": "Podping",
-        "elementURL": "https://www.buzzsprout.com/"
+        "elementName": "Podping"
       },
       {
-        "elementName": "Person",
-        "elementURL": "https://www.buzzsprout.com/"
+        "elementName": "Person"
       },
       {
         "elementName": "OP3",
@@ -1119,24 +1063,19 @@
     "platforms": ["Web"],
     "supportedElements": [
       {
-        "elementName": "Transcript",
-        "elementURL": "https://redcircle.com"
+        "elementName": "Transcript"
       },
       {
-        "elementName": "Locked",
-        "elementURL": "https://redcircle.com"
+        "elementName": "Locked"
       },
       {
-        "elementName": "Funding",
-        "elementURL": "https://redcircle.com"
+        "elementName": "Funding"
       },
       {
-        "elementName": "Podping",
-        "elementURL": "https://redcircle.com"
+        "elementName": "Podping"
       },
       {
-        "elementName": "GUID",
-        "elementURL": "https://redcircle.com"
+        "elementName": "GUID"
       }
     ]
   },
@@ -1151,16 +1090,13 @@
     },
     "supportedElements": [
       {
-        "elementName": "GUID",
-        "elementURL": "https://hubhopper.com"
+        "elementName": "GUID"
       },
       {
-        "elementName": "Season",
-        "elementURL": "https://hubhopper.com"
+        "elementName": "Season"
       },
       {
-        "elementName": "Trailer",
-        "elementURL": "https://hubhopper.com"
+        "elementName": "Trailer"
       }
     ]
   },
@@ -1172,20 +1108,16 @@
     "platforms": ["Web"],
     "supportedElements": [
       {
-        "elementName": "Funding",
-        "elementURL": "https://podnews.net/podcasts"
+        "elementName": "Funding"
       },
       {
-        "elementName": "Person",
-        "elementURL": "https://podnews.net/podcasts"
+        "elementName": "Person"
       },
       {
-        "elementName": "Podroll",
-        "elementURL": "https://podnews.net/podcasts"
+        "elementName": "Podroll"
       },
       {
-        "elementName": "Search",
-        "elementURL": "https://podnews.net"
+        "elementName": "Search"
       }
     ]
   },
@@ -1459,16 +1391,13 @@
     "platforms": ["Web"],
     "supportedElements": [
       {
-        "elementName": "Transcript",
-        "elementURL": "https://podnews.net/rss"
+        "elementName": "Transcript"
       },
       {
-        "elementName": "Person",
-        "elementURL": "https://podnews.net/rss"
+        "elementName": "Person"
       },
       {
-        "elementName": "Locked",
-        "elementURL": "https://podnews.net/rss"
+        "elementName": "Locked"
       }
     ]
   },
@@ -1480,36 +1409,29 @@
     "platforms": ["Fediverse", "Web"],
     "supportedElements": [
       {
-        "elementName": "Transcript",
-        "elementURL": "https://podcastindex.org"
+        "elementName": "Transcript"
       },
       {
-        "elementName": "Locked",
-        "elementURL": "https://podcastindex.org"
+        "elementName": "Locked"
       },
       {
-        "elementName": "Funding",
-        "elementURL": "https://podcastindex.org"
+        "elementName": "Funding"
       },
       {
-        "elementName": "Chapters",
-        "elementURL": "https://podcastindex.org"
+        "elementName": "Chapters"
       },
       {
-        "elementName": "Soundbite",
-        "elementURL": "https://podcastindex.org"
+        "elementName": "Soundbite"
       },
       {
-        "elementName": "Value",
-        "elementURL": "https://podcastindex.org"
+        "elementName": "Value"
       },
       {
         "elementName": "Search",
         "elementURL": "https://podcastindex.org"
       },
       {
-        "elementName": "Social Interact",
-        "elementURL": "https://podcastindex.org"
+        "elementName": "Social Interact"
       }
     ]
   },
@@ -1553,7 +1475,7 @@
   {
     "appName": "Digilore",
     "appType": ["app", "podcast player", "video"],
-    "appUrl": "https://apps.apple.com/us/app/digilore/id6633130387",
+    "appUrl": "https://apps.apple.com/app/digilore/id6633130387",
     "appIconUrl": "digilore.png",
     "platforms": ["macOS", "iOS", "Mobile"],
     "platformLinks": {
@@ -1561,28 +1483,22 @@
     },
     "supportedElements": [
       {
-        "elementName": "Transcript",
-        "elementURL": "https://apps.apple.com/us/app/digilore/id6633130387"
+        "elementName": "Transcript"
       },
       {
-        "elementName": "Funding",
-        "elementURL": "https://apps.apple.com/us/app/digilore/id6633130387"
+        "elementName": "Funding"
       },
       {
-        "elementName": "Chapters",
-        "elementURL": "https://apps.apple.com/us/app/digilore/id6633130387"
+        "elementName": "Chapters"
       },
       {
-        "elementName": "Search",
-        "elementURL": "https://apps.apple.com/us/app/digilore/id6633130387"
+        "elementName": "Search"
       },
       {
-        "elementName": "Value",
-        "elementURL": "https://apps.apple.com/us/app/digilore/id6633130387"
+        "elementName": "Value"
       },
       {
-        "elementName": "Live Item",
-        "elementURL": "https://apps.apple.com/us/app/digilore/id6633130387"
+        "elementName": "Live Item"
       }
     ]
   },
@@ -1819,40 +1735,32 @@
         "elementURL": "https://justcast.zendesk.com/hc/en-us/articles/4407906495892-Chapter-Markers"
       },
       {
-        "elementName": "Soundbite",
-        "elementUrl": "https://www.justcast.com/"
+        "elementName": "Soundbite"
       },
       {
         "elementName": "Value",
         "elementURL": "https://twitter.com/thejustcast/status/1435271788523450373"
       },
       {
-        "elementName": "Trailer",
-        "elementUrl": "https://www.justcast.com/"
+        "elementName": "Trailer"
       },
       {
-        "elementName": "Podping",
-        "elementUrl": "https://www.justcast.com/"
+        "elementName": "Podping"
       },
       {
-        "elementName": "Location",
-        "elementUrl": "https://www.justcast.com/"
+        "elementName": "Location"
       },
       {
-        "elementName": "Person",
-        "elementUrl": "https://www.justcast.com/"
+        "elementName": "Person"
       },
       {
-        "elementName": "Funding",
-        "elementUrl": "https://www.justcast.com/"
+        "elementName": "Funding"
       },
       {
-        "elementName": "Locked",
-        "elementUrl": "https://www.justcast.com/"
+        "elementName": "Locked"
       },
       {
-        "elementName": "Season",
-        "elementUrl": "https://www.justcast.com/"
+        "elementName": "Season"
       }
     ]
   },
@@ -2119,16 +2027,13 @@
     },
     "supportedElements": [
       {
-        "elementName": "Search",
-        "elementURL": "https://disctopia.com"
+        "elementName": "Search"
       },
       {
-        "elementName": "Locked",
-        "elementURL": "https://disctopia.com"
+        "elementName": "Locked"
       },
       {
-        "elementName": "Funding",
-        "elementURL": "https://disctopia.com"
+        "elementName": "Funding"
       },
       {
         "elementName": "Value",
@@ -2139,16 +2044,13 @@
         "elementURL": "https://disctopia.com/insights/disctopia-releases-audio-to-text-transcription-tool/"
       },
       {
-        "elementName": "Medium",
-        "elementURL": "https://disctopia.com"
+        "elementName": "Medium"
       },
       {
-        "elementName": "Trailer",
-        "elementURL": "https://disctopia.com"
+        "elementName": "Trailer"
       },
       {
-        "elementName": "Alternate Enclosure",
-        "elementURL": "https://disctopia.com"
+        "elementName": "Alternate Enclosure"
       }
     ]
   },
@@ -2160,20 +2062,16 @@
     "platforms": ["Web", "Hive"],
     "supportedElements": [
       {
-        "elementName": "Locked",
-        "elementURL": "https://3speak.tv/"
+        "elementName": "Locked"
       },
       {
-        "elementName": "Funding",
-        "elementURL": "https://3speak.tv/"
+        "elementName": "Funding"
       },
       {
-        "elementName": "Value",
-        "elementURL": "https://3speak.tv/"
+        "elementName": "Value"
       },
       {
-        "elementName": "Person",
-        "elementURL": "https://3speak.tv/"
+        "elementName": "Person"
       }
     ]
   },
@@ -2206,12 +2104,10 @@
     "platforms": ["Web"],
     "supportedElements": [
       {
-        "elementName": "Value",
-        "elementURL": "https://dwvisser.github.io/v4v_exchange/"
+        "elementName": "Value"
       },
       {
-        "elementName": "Sat Streaming",
-        "elementURL": "https://dwvisser.github.io/v4v_exchange/"
+        "elementName": "Sat Streaming"
       }
     ]
   },
@@ -2412,23 +2308,20 @@
     },
     "supportedElements": [
       {
-        "elementName": "Search",
-        "elementURL": "https://github.com/allentown521/FocusPodcast"
+        "elementName": "Search"
       },
       {
-        "elementName": "Funding",
-        "elementURL": "https://github.com/allentown521/FocusPodcast"
+        "elementName": "Funding"
       },
       {
-        "elementName": "Chapters",
-        "elementURL": "https://github.com/allentown521/FocusPodcast"
+        "elementName": "Chapters"
       }
     ]
   },
   {
     "appName": "iCatcher! Podcast Player",
     "appType": ["app", "podcast player"],
-    "appUrl": "https://apps.apple.com/app/apple-store/id414419105",
+    "appUrl": "https://joeisanerd.com"",
     "appIconUrl": "icatcher.webp",
     "platforms": ["iOS"],
     "platformLinks": {
@@ -2436,16 +2329,13 @@
     },
     "supportedElements": [
       {
-        "elementName": "Person",
-        "elementURL": "https://joeisanerd.com"
+        "elementName": "Person"
       },
       {
-        "elementName": "Chapters",
-        "elementURL": "https://joeisanerd.com"
+        "elementName": "Chapters"
       },
       {
-        "elementName": "Transcript",
-        "elementURL": "https://joeisanerd.com"
+        "elementName": "Transcript"
       }
     ]
   },
@@ -2634,7 +2524,7 @@
   {
     "appName": "Turtlecast",
     "appType": ["app", "podcast player"],
-    "appUrl": "https://play.google.com/store/apps/details?id=com.bluckapps.turtlecast",
+    "appUrl": "https://aurelian.audio/",
     "appIconUrl": "turtlecast.png",
     "platforms": ["Mobile", "Android"],
     "platformLinks": {
@@ -2779,7 +2669,7 @@
       "website",
       "video"
     ],
-    "appUrl": "https://apps.apple.com/us/app/apple-podcasts/id525463029",
+    "appUrl": "https://apps.apple.com/app/apple-podcasts/id525463029",
     "appIconUrl": "applepodcasts.jpg",
     "platforms": ["iOS", "Mobile", "macOS", "Web"],
     "platformLinks": {
@@ -2816,96 +2706,75 @@
     "platforms": ["Fediverse", "Hive", "Mobile", "Web"],
     "supportedElements": [
       {
-        "elementName": "Alternate Enclosure",
-        "elementURL": "https://blurt.media/about/instance"
+        "elementName": "Alternate Enclosure"
       },
       {
-        "elementName": "Block",
-        "elementURL": "https://blurt.media/about/instance"
+        "elementName": "Block"
       },
       {
         "elementName": "Chapters",
         "elementURL": "https://peakd.com/hive-148441/@agorise/hive-tube-now-supports-chapters-and-storyboards"
       },
       {
-        "elementName": "Episode",
-        "elementURL": "https://blurt.media/about/instancee"
+        "elementName": "Episode"
       },
       {
-        "elementName": "Funding",
-        "elementURL": "https://blurt.media/about/instance"
+        "elementName": "Funding"
       },
       {
-        "elementName": "GUID",
-        "elementURL": "https://blurt.media/about/instance"
+        "elementName": "GUID"
       },
       {
-        "elementName": "License",
-        "elementURL": "https://blurt.media/about/instance"
+        "elementName": "License"
       },
       {
-        "elementName": "Live Boosts",
-        "elementURL": "https://blurt.media/about/instance"
+        "elementName": "Live Boosts"
       },
       {
-        "elementName": "Live Item",
-        "elementURL": "https://blurt.media/about/instance"
+        "elementName": "Live Item"
       },
       {
-        "elementName": "Location",
-        "elementURL": "https://blurt.media/about/instance"
+        "elementName": "Location"
       },
       {
-        "elementName": "Locked",
-        "elementURL": "https://blurt.media/about/instance"
+        "elementName": "Locked"
       },
       {
-        "elementName": "Medium",
-        "elementURL": "https://blurt.media/about/instance"
+        "elementName": "Medium"
       },
       {
-        "elementName": "Person",
-        "elementURL": "https://blurt.media/about/instance"
+        "elementName": "Person"
       },
       {
-        "elementName": "Podping",
-        "elementURL": "https://blurt.media/about/instance"
+        "elementName": "Podping"
       },
       {
-        "elementName": "Podroll",
-        "elementURL": "https://blurt.media/about/instance"
+        "elementName": "Podroll"
       },
       {
         "elementName": "Search",
         "elementURL": "https://blurt.media/about/instance"
       },
       {
-        "elementName": "Season",
-        "elementURL": "https://blurt.media/about/instance"
+        "elementName": "Season"
       },
       {
-        "elementName": "Social Interact",
-        "elementURL": "https://blurt.media/about/instance"
+        "elementName": "Social Interact"
       },
       {
-        "elementName": "Transcript",
-        "elementURL": "https://blurt.media/about/instance"
+        "elementName": "Transcript"
       },
       {
-        "elementName": "Txt",
-        "elementURL": "https://blurt.media/about/instance"
+        "elementName": "Txt"
       },
       {
-        "elementName": "Update Frequency",
-        "elementURL": "https://blurt.media/about/instance"
+        "elementName": "Update Frequency"
       },
       {
-        "elementName": "Value",
-        "elementURL": "https://blurt.media/about/instance"
+        "elementName": "Value"
       },
       {
-        "elementName": "Wallet Switching (VTS)",
-        "elementURL": "https://blurt.media/about/instance"
+        "elementName": "Wallet Switching (VTS)"
       }
     ]
   },
@@ -2980,47 +2849,37 @@
     "supportedElements": [
       {
         "elementName": "Boostagrams",
-        "elementURL": "https://lnbeats.com"
       },
       {
         "elementName": "Chapters",
-        "elementURL": "https://lnbeats.com"
       },
       {
         "elementName": "Episode",
-        "elementURL": "https://lnbeats.com"
       },
       {
-        "elementName": "GUID",
-        "elementURL": "https://lnbeats.com"
+        "elementName": "GUID"
       },
       {
-        "elementName": "Medium",
-        "elementURL": "https://lnbeats.com"
+        "elementName": "Medium"
       },
       {
-        "elementName": "Remote Item",
-        "elementURL": "https://lnbeats.com"
+        "elementName": "Remote Item"
       },
       {
-        "elementName": "Sat Streaming",
-        "elementURL": "https://lnbeats.com"
+        "elementName": "Sat Streaming"
       },
       {
         "elementName": "Search",
         "elementURL": "https://lnbeats.com"
       },
       {
-        "elementName": "Season",
-        "elementURL": "https://lnbeats.com"
+        "elementName": "Season"
       },
       {
-        "elementName": "Transcript",
-        "elementURL": "https://lnbeats.com"
+        "elementName": "Transcript"
       },
       {
-        "elementName": "Wallet Switching (VTS)",
-        "elementURL": "https://lnbeats.com"
+        "elementName": "Wallet Switching (VTS)"
       }
     ]
   },
@@ -3032,36 +2891,28 @@
     "platforms": ["Web", "Mobile"],
     "supportedElements": [
       {
-        "elementName": "Chapters",
-        "elementURL": "https://musicsideproject.com"
+        "elementName": "Chapters"
       },
       {
-        "elementName": "Episode",
-        "elementURL": "https://musicsideproject.com"
+        "elementName": "Episode"
       },
       {
-        "elementName": "GUID",
-        "elementURL": "https://musicsideproject.com"
+        "elementName": "GUID"
       },
       {
-        "elementName": "Medium",
-        "elementURL": "https://musicsideproject.com"
+        "elementName": "Medium"
       },
       {
-        "elementName": "Podping",
-        "elementURL": "https://musicsideproject.com"
+        "elementName": "Podping"
       },
       {
-        "elementName": "Season",
-        "elementURL": "https://musicsideproject.com"
+        "elementName": "Season"
       },
       {
-        "elementName": "Transcript",
-        "elementURL": "https://musicsideproject.com"
+        "elementName": "Transcript"
       },
       {
-        "elementName": "Value",
-        "elementURL": "https://musicsideproject.com"
+        "elementName": "Value"
       }
     ]
   },
@@ -3073,84 +2924,64 @@
     "platforms": ["Web"],
     "supportedElements": [
       {
-        "elementName": "Alternate Enclosure",
-        "elementURL": "https://sovereignfeeds.com"
+        "elementName": "Alternate Enclosure"
       },
       {
-        "elementName": "Block",
-        "elementURL": "https://sovereignfeeds.com"
+        "elementName": "Block"
       },
       {
-        "elementName": "Chapters",
-        "elementURL": "https://sovereignfeeds.com"
+        "elementName": "Chapters"
       },
       {
-        "elementName": "Funding",
-        "elementURL": "https://sovereignfeeds.com"
+        "elementName": "Funding"
       },
       {
-        "elementName": "GUID",
-        "elementURL": "https://sovereignfeeds.com"
+        "elementName": "GUID"
       },
       {
-        "elementName": "License",
-        "elementURL": "https://sovereignfeeds.com"
+        "elementName": "License"
       },
       {
-        "elementName": "Live Item",
-        "elementURL": "https://sovereignfeeds.com"
+        "elementName": "Live Item"
       },
       {
-        "elementName": "Location",
-        "elementURL": "https://sovereignfeeds.com"
+        "elementName": "Location"
       },
       {
-        "elementName": "Locked",
-        "elementURL": "https://sovereignfeeds.com"
+        "elementName": "Locked"
       },
       {
-        "elementName": "Medium",
-        "elementURL": "https://sovereignfeeds.com"
+        "elementName": "Medium"
       },
       {
-        "elementName": "OP3",
-        "elementURL": "https://sovereignfeeds.com"
+        "elementName": "OP3"
       },
       {
-        "elementName": "Person",
-        "elementURL": "https://sovereignfeeds.com"
+        "elementName": "Person"
       },
       {
-        "elementName": "Podping",
-        "elementURL": "https://sovereignfeeds.com"
+        "elementName": "Podping"
       },
       {
-        "elementName": "Podroll",
-        "elementURL": "https://sovereignfeeds.com"
+        "elementName": "Podroll"
       },
       {
-        "elementName": "Search",
-        "elementURL": "https://sovereignfeeds.com"
+        "elementName": "Search"
       },
       {
-        "elementName": "Social Interact",
-        "elementURL": "https://sovereignfeeds.com"
+        "elementName": "Social Interact"
       },
       {
-        "elementName": "Transcript",
-        "elementURL": "https://sovereignfeeds.com"
+        "elementName": "Transcript"
       },
       {
-        "elementName": "Txt",
-        "elementURL": "https://sovereignfeeds.com"
+        "elementName": "Txt"
       },
       {
-        "elementName": "Value",
-        "elementURL": "https://sovereignfeeds.com"
+        "elementName": "Value"
       },
       {
-        "elementName": "Wallet Switching (VTS)",
-        "elementURL": "https://sovereignfeeds.com"
+        "elementName": "Wallet Switching (VTS)"
       }
     ]
   },
@@ -3162,40 +2993,31 @@
     "platforms": ["Web", "Mobile"],
     "supportedElements": [
       {
-        "elementName": "Boostagrams",
-        "elementURL": "https://www.thesplitkit.com"
+        "elementName": "Boostagrams"
       },
       {
-        "elementName": "Chapters",
-        "elementURL": "https://www.thesplitkit.com"
+        "elementName": "Chapters"
       },
       {
-        "elementName": "GUID",
-        "elementURL": "https://www.thesplitkit.com"
+        "elementName": "GUID"
       },
       {
-        "elementName": "Live Item",
-        "elementURL": "https://www.thesplitkit.com"
+        "elementName": "Live Item"
       },
       {
-        "elementName": "Medium",
-        "elementURL": "https://www.thesplitkit.com"
+        "elementName": "Medium"
       },
       {
-        "elementName": "Sat Streaming",
-        "elementURL": "https://www.thesplitkit.com"
+        "elementName": "Sat Streaming"
       },
       {
-        "elementName": "Search",
-        "elementURL": "https://www.thesplitkit.com"
+        "elementName": "Search"
       },
       {
-        "elementName": "Value",
-        "elementURL": "https://www.thesplitkit.com"
+        "elementName": "Value"
       },
       {
-        "elementName": "Wallet Switching (VTS)",
-        "elementURL": "https://www.thesplitkit.com"
+        "elementName": "Wallet Switching (VTS)"
       }
     ]
   },
@@ -3300,52 +3122,40 @@
     },
     "supportedElements": [
       {
-        "elementName": "GUID",
-        "elementURL": "https://www.podhome.fm/app"
+        "elementName": "GUID"
       },
       {
-        "elementName": "Chapters",
-        "elementURL": "https://www.podhome.fm/app"
+        "elementName": "Chapters"
       },
       {
-        "elementName": "Transcript",
-        "elementURL": "https://www.podhome.fm/app"
+        "elementName": "Transcript"
       },
       {
-        "elementName": "Soundbite",
-        "elementURL": "https://www.podhome.fm/app"
+        "elementName": "Soundbite"
       },
       {
-        "elementName": "Funding",
-        "elementURL": "https://www.podhome.fm/app"
+        "elementName": "Funding"
       },
       {
-        "elementName": "Person",
-        "elementURL": "https://www.podhome.fm/app"
+        "elementName": "Person"
       },
       {
-        "elementName": "Season",
-        "elementURL": "https://www.podhome.fm/app"
+        "elementName": "Season"
       },
       {
-        "elementName": "Episode",
-        "elementURL": "https://www.podhome.fm/app"
+        "elementName": "Episode"
       },
       {
-        "elementName": "Trailer",
-        "elementURL": "https://www.podhome.fm/app"
+        "elementName": "Trailer"
       },
       {
-        "elementName": "Podping",
-        "elementURL": "https://www.podhome.fm/app"
+        "elementName": "Podping"
       },
       {
-        "elementName": "Podroll",
-        "elementURL": "https://www.podhome.fm/app"
+        "elementName": "Podroll"
       },
       {
-        "elementName": "Live Item",
-        "elementURL": "https://www.podhome.fm/app"
+        "elementName": "Live Item"
       }
     ]
   },
@@ -3357,48 +3167,37 @@
     "platforms": ["Web", "Mobile"],
     "supportedElements": [
       {
-        "elementName": "GUID",
-        "elementURL": "https://podcastai.com"
+        "elementName": "GUID"
       },
       {
-        "elementName": "Transcript",
-        "elementURL": "https://podcastai.com"
+        "elementName": "Transcript"
       },
       {
-        "elementName": "Season",
-        "elementURL": "https://podcastai.com"
+        "elementName": "Season"
       },
       {
-        "elementName": "Episode",
-        "elementURL": "https://podcastai.com"
+        "elementName": "Episode"
       },
       {
-        "elementName": "GUID",
-        "elementUrl": "https://podcastai.com"
+        "elementName": "GUID"
       },
       {
-        "elementName": "Season",
-        "elementURL": "https://podcastai.com"
+        "elementName": "Season"
       },
       {
-        "elementName": "Trailer",
-        "elementUrl": "https://podcastai.com"
+        "elementName": "Trailer"
       },
       {
-        "elementName": "Transcript",
-        "elementURL": "https://podcastai.com"
+        "elementName": "Transcript"
       },
       {
-        "elementName": "Alternate Enclosure",
-        "elementUrl": "https://podcastai.com"
+        "elementName": "Alternate Enclosure"
       },
       {
-        "elementName": "OP3",
-        "elementUrl": "https://podcastai.com"
+        "elementName": "OP3"
       },
       {
-        "elementName": "Search",
-        "elementUrl": "https://podcastai.com"
+        "elementName": "Search"
       }
     ]
   },
@@ -3414,24 +3213,19 @@
         "elementURL": "https://www.podigee.com/en/podcast-transcriptions/"
       },
       {
-        "elementName": "Chapters",
-        "elementURL": "https://www.podigee.com/"
+        "elementName": "Chapters"
       },
       {
-        "elementName": "Episode",
-        "elementURL": "https://www.podigee.com/"
+        "elementName": "Episode"
       },
       {
-        "elementName": "Season",
-        "elementURL": "https://www.podigee.com/"
+        "elementName": "Season"
       },
       {
-        "elementName": "Trailer",
-        "elementURL": "https://www.podigee.com/"
+        "elementName": "Trailer"
       },
       {
-        "elementName": "GUID",
-        "elementURL": "https://www.podigee.com/"
+        "elementName": "GUID"
       },
       {
         "elementName": "Podping",
@@ -3455,56 +3249,43 @@
     "platforms": ["Web"],
     "supportedElements": [
       {
-        "elementName": "GUID",
-        "elementURL": "https://oncetold.com/"
+        "elementName": "GUID"
       },
       {
-        "elementName": "Chapters",
-        "elementURL": "https://oncetold.com/"
+        "elementName": "Chapters"
       },
       {
-        "elementName": "Transcript",
-        "elementURL": "https://oncetold.com/"
+        "elementName": "Transcript"
       },
       {
-        "elementName": "Funding",
-        "elementURL": "https://oncetold.com/"
+        "elementName": "Funding"
       },
       {
-        "elementName": "Locked",
-        "elementURL": "https://oncetold.com/"
+        "elementName": "Locked"
       },
       {
-        "elementName": "OP3",
-        "elementURL": "https://oncetold.com/"
+        "elementName": "OP3"
       },
       {
-        "elementName": "Person",
-        "elementURL": "https://oncetold.com/"
+        "elementName": "Person"
       },
       {
-        "elementName": "Season",
-        "elementURL": "https://oncetold.com/"
+        "elementName": "Season"
       },
       {
-        "elementName": "Episode",
-        "elementURL": "https://oncetold.com/"
+        "elementName": "Episode"
       },
       {
-        "elementName": "Trailer",
-        "elementURL": "https://oncetold.com/"
+        "elementName": "Trailer"
       },
       {
-        "elementName": "Podping",
-        "elementURL": "https://oncetold.com/"
+        "elementName": "Podping"
       },
       {
-        "elementName": "Podroll",
-        "elementURL": "https://oncetold.com/"
+        "elementName": "Podroll"
       },
       {
-        "elementName": "Value",
-        "elementURL": "https://oncetold.com/"
+        "elementName": "Value"
       }
     ]
   },
@@ -3566,20 +3347,17 @@
         "elementURL": "https://metacast.app/search"
       },
       {
-        "elementName": "Season",
-        "elementURL": "https://metacast.app"
+        "elementName": "Season"
       },
       {
-        "elementName": "Episode",
-        "elementURL": "https://metacast.app"
+        "elementName": "Episode"
       },
       {
         "elementName": "Person",
         "elementURL": "https://metacast.app/changelog/web-2025.04.03"
       },
       {
-        "elementName": "GUID",
-        "elementURL": "https://metacast.app"
+        "elementName": "GUID"
       }
     ]
   },
@@ -3591,49 +3369,43 @@
     "platforms": ["Web"],
     "supportedElements": [
       {
-        "elementName": "Search",
-        "elementURL": "https://www.podrocket.ai/"
+        "elementName": "Search"
       },
       {
-        "elementName": "Episode",
-        "elementURL": "https://www.podrocket.ai/"
+        "elementName": "Episode"
       }
     ]
   },
   {
     "appName": "Pods-Blitz",
-    "appType": ["hosting", "open source"],
+    "appType": ["hosting", "open source", "self-hosted"],
     "appUrl": "https://pods-blitz.org/",
     "appIconUrl": "pods-blitz.png",
-    "platforms": ["Web"],
+    "platforms": ["Web", "Linux"],
+    "platformLinks": {
+      "Linux": "https://docs.pods-blitz.org/"
+    },
     "supportedElements": [
       {
-        "elementName": "Funding",
-        "elementURL": "https://docs.pods-blitz.org"
+        "elementName": "Funding"
       },
       {
-        "elementName": "GUID",
-        "elementURL": "https://docs.pods-blitz.org"
+        "elementName": "GUID"
       },
       {
-        "elementName": "Locked",
-        "elementURL": "https://docs.pods-blitz.org"
+        "elementName": "Locked"
       },
       {
-        "elementName": "Transcript",
-        "elementURL": "https://docs.pods-blitz.org"
+        "elementName": "Transcript"
       },
       {
-        "elementName": "Chapters",
-        "elementURL": "https://docs.pods-blitz.org"
+        "elementName": "Chapters"
       },
       {
-        "elementName": "Episode",
-        "elementURL": "https://docs.pods-blitz.org"
+        "elementName": "Episode"
       },
       {
-        "elementName": "Season",
-        "elementURL": "https://docs.pods-blitz.org"
+        "elementName": "Season"
       }
     ]
   },
@@ -3681,8 +3453,7 @@
         "elementURL": "https://podtoo.com/blog/enhance_your_podcast_with_podtoo_supported_podcast_2_0_tags"
       },
       {
-        "elementName": "Podping",
-        "elementURL": "https://podtoo.com"
+        "elementName": "Podping"
       }
     ]
   },
@@ -3709,67 +3480,53 @@
     "platforms": ["Web"],
     "supportedElements": [
       {
-        "elementName": "Season",
-        "elementURL": "https://alitu.com/"
+        "elementName": "Season"
       },
       {
-        "elementName": "Episode",
-        "elementURL": "https://alitu.com/"
+        "elementName": "Episode"
       },
       {
-        "elementName": "Person",
-        "elementURL": "https://alitu.com/"
+        "elementName": "Person"
       },
       {
-        "elementName": "Locked",
-        "elementURL": "https://alitu.com/"
+        "elementName": "Locked"
       },
       {
-        "elementName": "Transcript",
-        "elementURL": "https://alitu.com/"
+        "elementName": "Transcript"
       },
       {
-        "elementName": "Funding",
-        "elementURL": "https://alitu.com/"
+        "elementName": "Funding"
       },
       {
-        "elementName": "GUID",
-        "elementURL": "https://alitu.com/"
+        "elementName": "GUID"
       },
       {
-        "elementName": "Medium",
-        "elementURL": "https://alitu.com/"
+        "elementName": "Medium"
       },
       {
-        "elementName": "Txt",
-        "elementURL": "https://alitu.com/"
+        "elementName": "Txt"
       },
       {
-        "elementName": "Location",
-        "elementURL": "https://alitu.com/"
+        "elementName": "Location"
       },
       {
-        "elementName": "License",
-        "elementURL": "https://alitu.com/"
+        "elementName": "License"
       },
       {
-        "elementName": "Podping",
-        "elementURL": "https://alitu.com/"
+        "elementName": "Podping"
       },
       {
-        "elementName": "Update Frequency",
-        "elementURL": "https://alitu.com/"
+        "elementName": "Update Frequency"
       },
       {
-        "elementName": "Chapters",
-        "elementURL": "https://alitu.com/"
+        "elementName": "Chapters"
       }
     ]
   },
   {
     "appName": "PlaydioCast: Podcast Radio",
     "appType": ["app", "podcast player"],
-    "appUrl": "https://apps.apple.com/app/apple-podcasts/id858974970",
+    "appUrl": "https://playdiocast.com",
     "appIconUrl": "playdioCast.png",
     "platforms": ["iOS", "Mobile", "macOS"],
     "platformLinks": {
@@ -3777,8 +3534,7 @@
     },
     "supportedElements": [
       {
-        "elementName": "Search",
-        "elementURL": "https://playdiocast.com"
+        "elementName": "Search"
       }
     ]
   },
@@ -3887,8 +3643,7 @@
     },
     "supportedElements": [
       {
-        "elementName": "Search",
-        "elementURL": "https://unde.pixelcode.ro"
+        "elementName": "Search"
       }
     ]
   },
@@ -3932,24 +3687,19 @@
     },
     "supportedElements": [
       {
-        "elementName": "Episode",
-        "elementURL": "https://getonda.app/"
+        "elementName": "Episode"
       },
       {
-        "elementName": "Transcript",
-        "elementURL": "https://getonda.app/"
+        "elementName": "Transcript"
       },
       {
-        "elementName": "GUID",
-        "elementURL": "https://getonda.app/"
+        "elementName": "GUID"
       },
       {
-        "elementName": "Search",
-        "elementURL": "https://getonda.app/"
+        "elementName": "Search"
       },
       {
-        "elementName": "Image",
-        "elementURL": "https://getonda.app/"
+        "elementName": "Image"
       }
     ]
   },
@@ -3965,7 +3715,7 @@
     "supportedElements": [
       {
         "elementName": "Search",
-        "elementURL": "https://cardo-podcast.github.io/"
+        "elementURL": "https://github.com/cardo-podcast/cardo/releases/tag/1.11.1"
       }
     ]
   },
@@ -3977,8 +3727,7 @@
     "platforms": ["Web"],
     "supportedElements": [
       {
-        "elementName": "Chapters",
-        "elementURL": "https://www.podferry.com/player/preview"
+        "elementName": "Chapters"
       },
       {
         "elementName": "Search",
@@ -3994,28 +3743,22 @@
     "platforms": ["Web"],
     "supportedElements": [
       {
-        "elementName": "GUID",
-        "elementURL": "https://wherever.audio/"
+        "elementName": "GUID"
       },
       {
-        "elementName": "Transcript",
-        "elementURL": "https://wherever.audio/"
+        "elementName": "Transcript"
       },
       {
-        "elementName": "Chapters",
-        "elementURL": "https://wherever.audio/"
+        "elementName": "Chapters"
       },
       {
-        "elementName": "Podroll",
-        "elementURL": "https://wherever.audio/"
+        "elementName": "Podroll"
       },
       {
-        "elementName": "Funding",
-        "elementURL": "https://wherever.audio/"
+        "elementName": "Funding"
       },
       {
-        "elementName": "Live Item",
-        "elementURL": "https://wherever.audio/"
+        "elementName": "Live Item"
       }
     ]
   },
@@ -4027,20 +3770,16 @@
     "platforms": ["Web"],
     "supportedElements": [
       {
-        "elementName": "Transcript",
-        "elementURL": "https://www.audiomeans.fr/"
+        "elementName": "Transcript"
       },
       {
-        "elementName": "Chapters",
-        "elementURL": "https://www.audiomeans.fr/"
+        "elementName": "Chapters"
       },
       {
-        "elementName": "Person",
-        "elementURL": "https://www.audiomeans.fr/"
+        "elementName": "Person"
       },
       {
-        "elementName": "Txt",
-        "elementURL": "https://www.audiomeans.fr/"
+        "elementName": "Txt"
       }
     ]
   },
@@ -4143,7 +3882,7 @@
   {
     "appName": "RadioPort",
     "appType": ["app"],
-    "appUrl": "https://apps.apple.com/us/app/radio-port/id6740069253",
+    "appUrl": "https://www.radioport.app/",
     "platforms": ["iOS"],
     "platformLinks": {
       "iOS": "https://apps.apple.com/app/radio-port/id6740069253"
@@ -4151,8 +3890,7 @@
     "appIconUrl": "radioport.png",
     "supportedElements": [
       {
-        "elementName": "Search",
-        "elementURL": "https://www.radioport.app/"
+        "elementName": "Search"
       }
     ]
   },
@@ -4218,60 +3956,46 @@
     },
     "supportedElements": [
       {
-        "elementName": "Boostagrams",
-        "elementURL": "https://v4vmusic.com/"
+        "elementName": "Boostagrams"
       },
       {
-        "elementName": "Chapters",
-        "elementURL": "https://v4vmusic.com/"
+        "elementName": "Chapters"
       },
       {
-        "elementName": "Episode",
-        "elementURL": "https://v4vmusic.com/"
+        "elementName": "Episode"
       },
       {
-        "elementName": "Funding",
-        "elementURL": "https://v4vmusic.com/"
+        "elementName": "Funding"
       },
       {
-        "elementName": "GUID",
-        "elementURL": "https://v4vmusic.com/"
+        "elementName": "GUID"
       },
       {
-        "elementName": "Live Boosts",
-        "elementURL": "https://v4vmusic.com/"
+        "elementName": "Live Boosts"
       },
       {
-        "elementName": "Live Item",
-        "elementURL": "https://v4vmusic.com/"
+        "elementName": "Live Item"
       },
       {
-        "elementName": "Medium",
-        "elementURL": "https://v4vmusic.com/"
+        "elementName": "Medium"
       },
       {
-        "elementName": "Person",
-        "elementURL": "https://v4vmusic.com/"
+        "elementName": "Person"
       },
       {
-        "elementName": "Podping",
-        "elementURL": "https://v4vmusic.com/"
+        "elementName": "Podping"
       },
       {
-        "elementName": "Podroll",
-        "elementURL": "https://v4vmusic.com/"
+        "elementName": "Podroll"
       },
       {
-        "elementName": "Remote Item",
-        "elementURL": "https://v4vmusic.com/"
+        "elementName": "Remote Item"
       },
       {
-        "elementName": "Season",
-        "elementURL": "https://v4vmusic.com/"
+        "elementName": "Season"
       },
       {
-        "elementName": "Value",
-        "elementURL": "https://v4vmusic.com/"
+        "elementName": "Value"
       },
       {
         "elementName": "Wallet Switching (VTS)"
