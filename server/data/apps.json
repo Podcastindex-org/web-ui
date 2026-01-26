@@ -2848,13 +2848,13 @@
     "platforms": ["Web", "Mobile"],
     "supportedElements": [
       {
-        "elementName": "Boostagrams",
+        "elementName": "Boostagrams"
       },
       {
-        "elementName": "Chapters",
+        "elementName": "Chapters"
       },
       {
-        "elementName": "Episode",
+        "elementName": "Episode"
       },
       {
         "elementName": "GUID"
