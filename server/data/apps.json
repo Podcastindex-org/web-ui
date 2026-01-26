@@ -2321,7 +2321,7 @@
   {
     "appName": "iCatcher! Podcast Player",
     "appType": ["app", "podcast player"],
-    "appUrl": "https://joeisanerd.com"",
+    "appUrl": "https://joeisanerd.com",
     "appIconUrl": "icatcher.webp",
     "platforms": ["iOS"],
     "platformLinks": {
