@@ -35,7 +35,7 @@ The reason to build a custom express server for serving React and other data is 
 
 ### CORS
 
-The custom express server also is used to [reverse proxy](https://en.wikipedia.org/wiki/Reverse_proxy#:~:text=In%20computer%20networks%2C%20a%20reverse,the%20reverse%20proxy%20server%20itself.) requests through the same domain to prevent [CORS](https://developer.mozilla.org/docs/Web/HTTP/Guides/CORS) issues. Using the same domain to server up the UI content and to send api requests prevents CORS issues in modern browsers.
+The custom express server also is used to [reverse proxy](https://en.wikipedia.org/wiki/Reverse_proxy) requests through the same domain to prevent [CORS](https://developer.mozilla.org/docs/Web/HTTP/Guides/CORS) issues. Using the same domain to server up the UI content and to send api requests prevents CORS issues in modern browsers.
 
 ## Getting Started
 

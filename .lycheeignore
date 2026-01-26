@@ -1,2 +1,8 @@
 # Apple redirects to https://apps.apple.com/us/
 https://apps.apple.com/
+# podnews.net/listen redirects to https://podnews.net/podcast/i8xe9/listen?utm_source=podnews.net&utm_medium=email&utm_campaign=podnews.net:2022-03-21
+https://podnews.net/listen
+# Redirects to https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md
+https://podcastindex.org/namespace/1.0
+# OLD Archive
+http://www.itunes.com/dtds/podcast-1.0.dtd
