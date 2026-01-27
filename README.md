@@ -39,13 +39,26 @@ The custom express server also is used to [reverse proxy](https://en.wikipedia.o
 
 ## Getting Started
 
+### Summary
+```bash
+git clone https://github.com/Podcastindex-org/web-ui.git && cd "$(basename "$_" .git)"
+cp .env-example .environments/.env.development   # Generate a .env for development 
+# Generate a new .env for production
+sed s/NODE_ENV=development/NODE_ENV=production/ .env-example > .environments/.env.production
+nvm use                                          # Use .nvmrc Node.js version
+corepack -v                                      # Check version and instalattion
+export COREPACK_ENABLE_DOWNLOAD_PROMPT=0         # Disable download prompt
+corepack enable                                  # Enable dependency
+export NODE_OPTIONS=--openssl-legacy-provider    # For node 20 (testing)
+```
 ### Set .env
 
-You should see a `.env-example` file. Copy this and remove the `-example`. The file `.env` is ignored by GIT and is needed to set the `API_KEY`, `API_SECRET`, `API_ADD_KEY` and `API_ADD_SECRET` variables
+You should see a `.env-example` file. Copy this into `.environments/` and change the `-example` to `.development` and/or `.production`.
+The files `.env-*` should be on `.gitignore` and are needed to set the `API_KEY`, `API_SECRET`, `API_ADD_KEY` and `API_ADD_SECRET` variables.
 
 ### Starting the dev server
 
-In order to have the UI hot reload for development, we utilized `webpack-dev-server` this allows for easier debugging, etc. In order for the dev-server to connect to the API, you must first have set the `.env` file variables and have started the server with `yarn start`
+In order to have the UI hot reload for development, we utilized `webpack-dev-server` this allows for easier debugging, etc. In order for the dev-server to connect to the API, you must first have set the `.env-*` file variables and have started the server with `yarn start`
 
 ```zsh
 # Install dependencies
@@ -60,9 +73,9 @@ yarn start
 
 ## Running production
 
-To start the server, simply run after setting the `.env` file
+To start the server, simply run after setting the `.environments/.env.production` file.
 
-**Note**: Make sure to set `NODE_ENV=production` in the `.env` file
+**Note**: Make sure to set `NODE_ENV=production` in the `.env.production` file.
 
 The below script will compile the code and then start the node server.
 
@@ -72,10 +85,12 @@ npm start
 ```
 
 ## Tech List
-
+- [Node.js](https://nodejs.org): ([v16.20.2](https://github.com/Marzal/web-ui/blob/master/.nvmrc))
 - [Express](https://expressjs.com/)
 - [React](https://react.dev/)
+- [Corepack](https://github.com/nodejs/corepack)
 - [Webpack](https://webpack.js.org/)
+  - [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) 
 
 ## TODO
 
