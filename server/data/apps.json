@@ -372,7 +372,7 @@
   },
   {
     "appName": "Fountain",
-    "appType": ["app", "podcast player"],
+    "appType": ["app", "podcast player", "hosting"],
     "appUrl": "https://www.fountain.fm",
     "appIconUrl": "fountain.png",
     "platforms": ["iOS", "Android", "Mobile", "Web"],
