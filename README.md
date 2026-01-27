@@ -45,6 +45,7 @@ git clone https://github.com/Podcastindex-org/web-ui.git && cd "$(basename "$_" 
 cp .env-example .environments/.env.development   # Generate a .env for development 
 # Generate a new .env for production
 sed s/NODE_ENV=development/NODE_ENV=production/ .env-example > .environments/.env.production
+nvm use                                          # Use .nvmrc Node.js version
 corepack -v                                      # Check version and instalattion
 export COREPACK_ENABLE_DOWNLOAD_PROMPT=0         # Disable download prompt
 corepack enable                                  # Enable dependency
@@ -84,7 +85,7 @@ npm start
 ```
 
 ## Tech List
-- [Node.js](https://nodejs.org): (v14?)
+- [Node.js](https://nodejs.org): ([v16.20.2](https://github.com/Marzal/web-ui/blob/master/.nvmrc))
 - [Express](https://expressjs.com/)
 - [React](https://react.dev/)
 - [Corepack](https://github.com/nodejs/corepack)
