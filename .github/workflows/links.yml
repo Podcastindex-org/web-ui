@@ -25,7 +25,7 @@ jobs:
             --base-url https://podcastindex.org
             --remap 'https://developer.mozilla.org/docs/Web/HTTP/Guides/CORS https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS'
             --include-verbatim --include-wikilinks --include-fragments
-            './**/*.md' './**/*.html' './**/*.json' # './**/*.tsx'
+            './**/*.md' './**/*.tsx' './**/*.json' './ui/**/*.html'
 
 #            --accept '100..=103,200..=299'
 #            --root-dir "$(pwd)"

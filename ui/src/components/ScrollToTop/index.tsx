@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 
-// from https://stackoverflow.com/questions/36904185/react-router-scroll-to-top-on-every-transition+&cd=1&hl=en&ct=clnk&gl=us
+// from https://stackoverflow.com/questions/36904185/react-router-scroll-to-top-on-every-transition
 
 function ScrollToTop({history}) {
     useEffect(() => {
