@@ -1,5 +1,6 @@
-# Apple redirects to https://apps.apple.com/us/
+# Languages redirects /us/,en...
 https://apps.apple.com/
+https://nodejs.org/
 # podnews.net/listen redirects to https://podnews.net/podcast/i8xe9/listen?utm_source=podnews.net&utm_medium=email&utm_campaign=podnews.net:2022-03-21
 https://podnews.net/listen
 # Redirects to https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md
@@ -8,3 +9,9 @@ https://podcastindex.org/namespace/1.0
 http://www.itunes.com/dtds/podcast-1.0.dtd
 # TSX
 https://amboss.space/node/
+# lychee does not understand search fragments
+.*:~:text=.*
+# Paypal works with this
+https://www.paypal.com/cgi-bin/webscr
+# GitHub redirect
+https://github.com/Podcastindex-org/web-ui.git
