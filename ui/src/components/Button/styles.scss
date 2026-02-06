@@ -57,15 +57,14 @@
     }
 }
 
-a,
-.button {
+.podcastIndexAppList a{
     text-decoration: none !important;
 }
 
+//TODO check if it should be input.button or .button input
 input,
 .button {
     outline: 0;
     border-spacing: 0;
     border-width: 0;
-    text-decoration: none !important;
 }
