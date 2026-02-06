@@ -93,6 +93,10 @@ a:hover {
     color: var(--link-hover-color);
 }
 
+a:not([href]) {
+    color: var(--dimmed-color);
+}
+
 .landing-graphic {
     opacity: 0.75;
     top: 120px;
