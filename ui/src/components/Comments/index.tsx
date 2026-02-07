@@ -4,6 +4,7 @@ import Button from '../Button'
 
 import './styles.scss'
 import CommentMenu from '../CommentMenu'
+import { authenticatedFetch } from '../../utils/auth'
 
 interface IProps {
     id: number,
@@ -176,7 +177,7 @@ export default class Comments extends React.PureComponent<IProps, IState> {
                 loadingComments: true
             });
 
-            const response = await fetch('/api/comments/byepisodeid?' + new URLSearchParams({id: String(this.props.id) }));
+            const response = await authenticatedFetch('/api/comments/byepisodeid?' + new URLSearchParams({id: String(this.props.id) }));
 
             const reader = response.body.getReader();
 

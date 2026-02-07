@@ -6,6 +6,7 @@ import InfiniteList from "../../../components/InfiniteList";
 import ResultItem from '../../../components/ResultItem'
 
 import { getImage, updateTitle } from '../../../utils'
+import { authenticatedFetch } from '../../../utils/auth'
 
 import './styles.scss'
 
@@ -231,7 +232,7 @@ export default class Value4Value extends React.PureComponent<IProps> {
 
     async getValue4ValuePodcasts(max: number) {
         // noinspection SpellCheckingInspection
-        let response = await fetch(`/api/podcasts/bytag?podcast-value&max=${max}`, {
+        let response = await authenticatedFetch(`/api/podcasts/bytag?podcast-value&max=${max}`, {
             // credentials: 'same-origin',
             method: 'GET',
         })
@@ -240,7 +241,7 @@ export default class Value4Value extends React.PureComponent<IProps> {
 
     async getValue4ValuePodcastsPaginated(startAt: number, max: number) {
         // noinspection SpellCheckingInspection
-        let response = await fetch(`/api/podcasts/bytag?podcast-value&max=${max}&start_at=${startAt}`, {
+        let response = await authenticatedFetch(`/api/podcasts/bytag?podcast-value&max=${max}&start_at=${startAt}`, {
             // credentials: 'same-origin',
             method: 'GET',
         })

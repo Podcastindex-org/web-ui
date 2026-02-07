@@ -5,6 +5,7 @@ import ResultsEpisodes from "../../components/ResultsEpisodes";
 import ResultsFeeds from "../../components/ResultsFeeds";
 
 import { cleanSearchQuery, encodeSearch, isValidURL, titleizeString, updateTitle } from '../../utils'
+import { authenticatedFetch } from '../../utils/auth'
 
 import './styles.scss'
 
@@ -116,7 +117,7 @@ export default class Results extends React.PureComponent<IProps> {
     async getFeedById(query: string) {
         query = encodeSearch(query)
         // noinspection SpellCheckingInspection
-        let response = await fetch(`/api/podcasts/byfeedid?id=${query}`, {
+        let response = await authenticatedFetch(`/api/podcasts/byfeedid?id=${query}`, {
             // credentials: 'same-origin',
             method: 'GET',
         })
@@ -125,7 +126,7 @@ export default class Results extends React.PureComponent<IProps> {
 
     async getPodcastInfoGuid(guid: string) {
         // noinspection SpellCheckingInspection
-        let response = await fetch(`/api/podcasts/byguid?guid=${guid}`, {
+        let response = await authenticatedFetch(`/api/podcasts/byguid?guid=${guid}`, {
             // credentials: 'same-origin',
             method: 'GET',
         })
@@ -136,7 +137,7 @@ export default class Results extends React.PureComponent<IProps> {
         query = encodeSearch(query)
         const similarParam = similar ? "&similar" : ""
         // noinspection SpellCheckingInspection
-        let response = await fetch(`/api/search/byterm?q=${query}${similarParam}`, {
+        let response = await authenticatedFetch(`/api/search/byterm?q=${query}${similarParam}`, {
             // credentials: 'same-origin',
             method: 'GET',
         })
@@ -146,7 +147,7 @@ export default class Results extends React.PureComponent<IProps> {
     async getTitleSearchResults(query: string) {
         query = encodeSearch(query)
         // noinspection SpellCheckingInspection
-        let response = await fetch(`/api/search/bytitle?q=${query}`, {
+        let response = await authenticatedFetch(`/api/search/bytitle?q=${query}`, {
             // credentials: 'same-origin',
             method: 'GET',
         })
@@ -156,7 +157,7 @@ export default class Results extends React.PureComponent<IProps> {
     async getMusicTermSearchResults(query: string) {
         query = encodeSearch(query)
         // noinspection SpellCheckingInspection
-        let response = await fetch(`/api/search/music/byterm?q=${query}`, {
+        let response = await authenticatedFetch(`/api/search/music/byterm?q=${query}`, {
             // credentials: 'same-origin',
             method: 'GET',
         })
@@ -166,7 +167,7 @@ export default class Results extends React.PureComponent<IProps> {
     async getPersonSearchResults(query: string) {
         query = encodeSearch(query)
         // noinspection SpellCheckingInspection
-        let response = await fetch(`/api/search/byperson?q=${query}&max=1000`, {
+        let response = await authenticatedFetch(`/api/search/byperson?q=${query}&max=1000`, {
             // credentials: 'same-origin',
             method: 'GET',
         })

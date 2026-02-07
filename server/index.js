@@ -11,11 +11,13 @@ const {
 const fetch = require('node-fetch')
 const packageJson = require('../package.json')
 const ejs = require('ejs')
+const { createPowMiddleware } = require('./middleware/index')
 
 // Gets the .env variables
 require('dotenv').config()
 
 const USER_AGENT = `Podcastindex.org-web/${packageJson.version}`
+const POW_DIFFICULTY = parseInt(process.env.POW_DIFFICULTY, 10) || 0;
 
 // Utilizing the node repo from comster/podcast-index-api :)
 // NOTE: This server will work as a reverse proxy.
@@ -80,6 +82,11 @@ app.use((req, res, next) => {
   next()
 })
 
+const powMiddleware = createPowMiddleware({
+  difficulty: POW_DIFFICULTY
+})
+
+
 // ------------------------------------------------
 // ---------- Static files for namespace ----------
 // ------------------------------------------------
@@ -106,36 +113,42 @@ app.get('/.well-known/lnurlp/podcastindex', (req, res) => {
 // ------------ Reverse proxy for API -------------
 // ------------------------------------------------
 
-app.use('/api/search/byterm', async (req, res) => {
+app.get('/api/auth/config', (req, res) => {
+  res.json({
+    powDifficulty: POW_DIFFICULTY
+  })
+})
+
+app.use('/api/search/byterm', powMiddleware, async (req, res) => {
   const response = await api.custom('search/byterm', req.query)
   res.send(response)
 })
 
-app.use('/api/search/bytitle', async (req, res) => {
+app.use('/api/search/bytitle', powMiddleware, async (req, res) => {
   let term = req.query.q
   const response = await api.custom('search/bytitle', { q: term })
   res.send(response)
 })
 
-app.use('/api/search/music/byterm', async (req, res) => {
+app.use('/api/search/music/byterm', powMiddleware, async (req, res) => {
   let term = req.query.q
   const response = await api.custom('search/music/byterm', { q: term })
   res.send(response)
 })
 
-app.use('/api/search/byperson', async (req, res) => {
+app.use('/api/search/byperson', powMiddleware, async (req, res) => {
   let person = req.query.q
   const response = await api.searchEpisodesByPerson(person)
   res.send(response)
 })
 
-app.use('/api/recent/episodes', async (req, res) => {
+app.use('/api/recent/episodes', powMiddleware, async (req, res) => {
   let max = req.query.max
   const response = await api.recentEpisodes(max)
   res.send(response)
 })
 
-app.use('/api/podcasts/bytag', async (req, res) => {
+app.use('/api/podcasts/bytag', powMiddleware, async (req, res) => {
   let max = req.query.max
   let start_at = req.query.start_at
   const response = await api.custom('podcasts/bytag', {
@@ -146,32 +159,32 @@ app.use('/api/podcasts/bytag', async (req, res) => {
   res.send(response)
 })
 
-app.use('/api/podcasts/byfeedid', async (req, res) => {
+app.use('/api/podcasts/byfeedid', powMiddleware, async (req, res) => {
   let feedId = req.query.id
   const response = await api.podcastsByFeedId(feedId)
   res.send(response)
 })
 
-app.use('/api/podcasts/byguid', async (req, res) => {
+app.use('/api/podcasts/byguid', powMiddleware, async (req, res) => {
   let guid = req.query.guid
   const response = await api.custom('podcasts/byguid', { guid: guid })
   res.send(response)
 })
 
-app.use('/api/podcasts/byfeedurl', async (req, res) => {
+app.use('/api/podcasts/byfeedurl', powMiddleware, async (req, res) => {
   let feedUrl = req.query.url
   const response = await api.podcastsByFeedUrl(feedUrl)
   res.send(response)
 })
 
-app.use('/api/episodes/byfeedid', async (req, res) => {
+app.use('/api/episodes/byfeedid', powMiddleware, async (req, res) => {
   let feedId = req.query.id
   let max = req.query.max
   const response = await api.episodesByFeedId(feedId, null, max)
   res.send(response)
 })
 
-app.use('/api/add/byfeedurl', async (req, res) => {
+app.use('/api/add/byfeedurl', powMiddleware, async (req, res) => {
   let feedUrl = req.query.url
   const response = await apiAdd.addByFeedUrl(feedUrl)
   res.send(response)
@@ -180,7 +193,7 @@ app.use('/api/add/byfeedurl', async (req, res) => {
 // ------------------------------------------------
 // ------------ API to get comments for episode ---
 // ------------------------------------------------
-app.use('/api/comments/byepisodeid', async (req, res) => {
+app.use('/api/comments/byepisodeid', powMiddleware, async (req, res) => {
   let episodeId = req.query.id
   const response = await api.episodesById(episodeId, false)
 
@@ -263,7 +276,7 @@ function writeThreadcapChunk(processedNodeId, threadcap, sentCommenters, res) {
 // ---------------------------------------------------------
 // --------- API to get remote interact url for comments ---
 // ---------------------------------------------------------
-app.use('/api/comments/remoteInteractUrlPattern', async (req, res) => {
+app.use('/api/comments/remoteInteractUrlPattern', powMiddleware, async (req, res) => {
   const interactorAccount = req.query.interactorAccount
 
   console.log('Debug interactorAccount', interactorAccount)

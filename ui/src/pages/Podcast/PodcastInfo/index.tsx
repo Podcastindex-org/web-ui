@@ -4,6 +4,7 @@ import ReactLoading from 'react-loading'
 import EpisodesPlayer from "../../../components/EpisodesPlayer";
 import PodcastHeader from '../../../components/PodcastHeader'
 import { cleanSearchQuery, fixURL, getImage, updateTitle } from '../../../utils'
+import { authenticatedFetch } from '../../../utils/auth'
 import './styles.scss'
 
 interface IProps {
@@ -132,7 +133,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
 
     async getPodcastInfo(id: string) {
         // noinspection SpellCheckingInspection
-        let response = await fetch(`/api/podcasts/byfeedid?id=${id}`, {
+        let response = await authenticatedFetch(`/api/podcasts/byfeedid?id=${id}`, {
             // credentials: 'same-origin',
             method: 'GET',
         })
@@ -141,7 +142,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
 
     async getPodcastInfoGuid(guid: string) {
         // noinspection SpellCheckingInspection
-        let response = await fetch(`/api/podcasts/byguid?guid=${guid}`, {
+        let response = await authenticatedFetch(`/api/podcasts/byguid?guid=${guid}`, {
             // credentials: 'same-origin',
             method: 'GET',
         })
@@ -150,7 +151,7 @@ export default class PodcastInfo extends React.PureComponent<IProps> {
 
     async getEpisodes(id: string, max: number = 1000) {
         // noinspection SpellCheckingInspection
-        let response = await fetch(`/api/episodes/byfeedid?id=${id}&max=${max}`, {
+        let response = await authenticatedFetch(`/api/episodes/byfeedid?id=${id}&max=${max}`, {
             // credentials: 'same-origin',
             method: 'GET',
         })
