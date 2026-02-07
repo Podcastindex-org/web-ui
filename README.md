@@ -50,7 +50,7 @@ nvm use                                          # If you want to use .nvmrc Nod
 corepack -v                                      # Check version and instalattion
 export COREPACK_ENABLE_DOWNLOAD_PROMPT=0         # Disable download prompt
 corepack enable                                  # Enable dependency
-For node 20, or any >16 apply workaournd
+#For node 20, or any >16 apply workaournd
 node -v | grep v16 || export NODE_OPTIONS=--openssl-legacy-provider
 ```
 ### Set .env
