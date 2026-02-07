@@ -17,11 +17,6 @@
     cursor: pointer;
 }
 
-a,
-.topbar-brand {
-    text-decoration: none !important;
-}
-
 .topbar-title {
     display: inline-flex;
     flex-direction: row;
@@ -53,6 +48,7 @@ a,
     a:visited,
     a:active{
         color: var(--fg-main);
+        text-decoration: none !important;
     }
 }
 
@@ -80,9 +76,9 @@ a,
 }
 
 @media only screen and (max-width: 980px) {
-    .topbar {
+    //.topbar {
         //padding: 23px 15px;
-    }
+    //}
     .topbar-brand {
         width: 40px;
     }
