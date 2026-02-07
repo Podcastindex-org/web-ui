@@ -11,6 +11,7 @@ module.exports = env => ({
         contentBase: path.join(__dirname, './server/www'),
         compress: true,
         port: 9001,
+        host: '0.0.0.0',
         historyApiFallback: true,
         proxy: {
             '/': {
