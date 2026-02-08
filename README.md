@@ -71,6 +71,8 @@ yarn install
 
 # Start dev server
 yarn run dev
+# Or if you are using docker (to bind to 0.0.0.0 instead of loopback)
+# yarn run dev:docker
 
 # Start the node server in another terminal window.
 yarn run start
