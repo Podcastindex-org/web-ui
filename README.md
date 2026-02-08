@@ -42,46 +42,55 @@ The custom express server also is used to [reverse proxy](https://en.wikipedia.o
 ### Summary
 ```bash
 git clone https://github.com/Podcastindex-org/web-ui.git && cd "$(basename "$_" .git)"
-cp .env-example .environments/.env.development   # Generate a .env for development 
+cp .env-example .environments/.env.development # Generate a .env for development
+cp .env-example .env # Generate a .env for yarn/npm start 
 # Generate a new .env for production
 sed s/NODE_ENV=development/NODE_ENV=production/ .env-example > .environments/.env.production
-nvm use                                          # Use .nvmrc Node.js version
+nvm use                                          # If you want to use .nvmrc Node.js version
 corepack -v                                      # Check version and instalattion
 export COREPACK_ENABLE_DOWNLOAD_PROMPT=0         # Disable download prompt
 corepack enable                                  # Enable dependency
-export NODE_OPTIONS=--openssl-legacy-provider    # For node 20 (testing)
+#For node 20, or any >16 apply workaournd
+node -v | grep v16 || export NODE_OPTIONS=--openssl-legacy-provider
 ```
 ### Set .env
 
-You should see a `.env-example` file. Copy this into `.environments/` and change the `-example` to `.development` and/or `.production`.
-The files `.env-*` should be on `.gitignore` and are needed to set the `API_KEY`, `API_SECRET`, `API_ADD_KEY` and `API_ADD_SECRET` variables.
+You should see a `.env-example` file. Copy this into:
+- `.env`. For `yarn start `
+- `.environments/` and change the `-example` to `.development` and/or `.production`.
+
+The files `.env*` should be on `.gitignore` and are needed to set the `API_KEY`, `API_SECRET`, `API_ADD_KEY` and `API_ADD_SECRET` variables.
 
 ### Starting the dev server
 
-In order to have the UI hot reload for development, we utilized `webpack-dev-server` this allows for easier debugging, etc. In order for the dev-server to connect to the API, you must first have set the `.env-*` file variables and have started the server with `yarn start`
+In order to have the UI hot reload for development, we utilized `webpack-dev-server` this allows for easier debugging, etc. In order for the dev-server to connect to the API, you must first have set the `.env*` file variables and have started the server with `yarn start`
 
 ```zsh
 # Install dependencies
 yarn install
 
 # Start dev server
-yarn dev
+yarn run dev
 
 # Start the node server in another terminal window.
-yarn start
+yarn run start
 ```
 
 ## Running production
 
-To start the server, simply run after setting the `.environments/.env.production` file.
+To start the server, simply run after setting the `.environments/.env.production` and `.env` files.
 
-**Note**: Make sure to set `NODE_ENV=production` in the `.env.production` file.
+**Note**: Make sure to set `NODE_ENV=production` in `.env.production` and `.env` files.
 
 The below script will compile the code and then start the node server.
 
 ```zsh
 npm run build
 npm start
+```
+Or use:
+```zsh
+yarn run production
 ```
 
 ## Tech List
@@ -90,7 +99,8 @@ npm start
 - [React](https://react.dev/)
 - [Corepack](https://github.com/nodejs/corepack)
 - [Webpack](https://webpack.js.org/)
-  - [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) 
+  - [webpack-dev-server](https://webpack.js.org/configuration/dev-server/)
+  - [dotenv-webpack](https://webpack.js.org/plugins/environment-plugin/#dotenvplugin)
 
 ## TODO
 
