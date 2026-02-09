@@ -80,6 +80,7 @@
     },
     "scripts": {
         "dev": "webpack-dev-server --env.file=development --mode development --devtool inline-source-map",
+        "dev:docker": "yarn run dev --host=0.0.0.0",
         "build": "webpack",
         "production": "NODE_ENV='production' && webpack --env.file=production --mode production && node server",
         "start": "node server",
