@@ -3795,9 +3795,10 @@
     "appName": "RadioPort",
     "appType": ["app"],
     "appUrl": "https://www.radioport.app/",
-    "platforms": ["iOS"],
+    "platforms": ["iOS", "Web"],
     "platformLinks": {
-      "iOS": "https://apps.apple.com/app/radio-port/id6740069253"
+      "iOS": "https://apps.apple.com/app/radio-port/id6740069253",
+      "Web": "https://www.radioport.app/podcast"
     },
     "appIconUrl": "radioport.png",
     "supportedElements": [
