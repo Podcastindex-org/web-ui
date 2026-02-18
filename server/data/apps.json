@@ -796,12 +796,14 @@
   },
   {
     "appName": "PodLP",
+    "tagLine": "The leading podcast app for flip phones",
     "appType": ["app", "podcast player"],
     "appUrl": "https://podlp.com/",
     "appIconUrl": "podlp.png",
-    "platforms": ["Mobile", "KaiOS", "Cloud Phone"],
+    "platforms": ["Mobile", "KaiOS", "Cloud Phone", "Android"],
     "platformLinks": {
-      "KaiOS": "https://www.kaiostech.com/store/apps/?bundle_id=com.podlp.podlp"
+      "KaiOS": "https://www.kaiostech.com/store/apps/?bundle_id=com.podlp.podlp",
+      "Android": "https://apk.podlp.app"
     },
     "supportedElements": [
       {
@@ -837,6 +839,12 @@
       },
       {
         "elementName": "Season"
+      },
+      {
+        "elementName": "Podroll"
+      },
+      {
+        "elementName": "Chapters"
       }
     ]
   },
