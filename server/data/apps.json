@@ -2000,7 +2000,8 @@
         "elementURL": "https://changelog.rss.com/v24-6-1-294338"
       },
       {
-        "elementName": "Remote Item"
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://changelog.rss.com/v26-2-1-331741"
       }
     ]
   },
