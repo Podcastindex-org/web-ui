@@ -847,6 +847,9 @@
       },
       {
         "elementName": "Chapters"
+      },
+      {
+        "elementName": "Remote Item"
       }
     ]
   },
@@ -3116,6 +3119,9 @@
       },
       {
         "elementName": "Live Item"
+      },
+      {
+        "elementName": "Remote Item"
       }
     ]
   },
@@ -3975,9 +3981,6 @@
       },
       {
         "elementName": "Wallet Switching (VTS)"
-      },
-      {
-        "elementName": "Remote Item"
       }
     ]
   },
