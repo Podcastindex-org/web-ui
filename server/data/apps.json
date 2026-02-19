@@ -117,6 +117,9 @@
       {
         "elementName": "Podroll",
         "elementURL": "https://blog.pocketcasts.com/2025/05/29/recommendations/"
+      },
+      {
+        "elementName": "Remote Item"
       }
     ]
   },
@@ -446,8 +449,7 @@
         "elementURL": "https://fountain.fm/features"
       },
       {
-        "elementName": "Remote Item",
-        "elementURL": "https://fountain.fm/features"
+        "elementName": "Remote Item"
       }
     ]
   },
@@ -864,6 +866,9 @@
       },
       {
         "elementName": "Value"
+      },
+      {
+        "elementName": "Remote Item"
       }
     ]
   },
@@ -1052,6 +1057,9 @@
       {
         "elementName": "Podroll",
         "elementURL": "https://www.buzzsprout.com/help/191-podroll"
+      },
+      {
+        "elementName": "Remote Item"
       }
     ]
   },
@@ -1118,6 +1126,9 @@
       },
       {
         "elementName": "Search"
+      },
+      {
+        "elementName": "Remote Item"
       }
     ]
   },
@@ -1219,6 +1230,9 @@
       {
         "elementName": "Wallet Switching (VTS)",
         "elementURL": "https://blubrry.com/support/media-hosting-documentation/blubrry-dashboard-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Remote Item"
       }
     ]
   },
@@ -1323,6 +1337,9 @@
       {
         "elementName": "Wallet Switching (VTS)",
         "elementURL": "https://blubrry.com/support/powerpress-documentation/powerpress-podcasting-2-0-features/"
+      },
+      {
+        "elementName": "Remote Item"
       }
     ]
   },
@@ -1380,6 +1397,9 @@
       {
         "elementName": "Block",
         "elementURL": "https://www.podcastmirror.com/podcasting-2-0-documentation/"
+      },
+      {
+        "elementName": "Remote Item"
       }
     ]
   },
@@ -1699,6 +1719,9 @@
       {
         "elementName": "Podroll",
         "elementURL": "https://transistor.fm/changelog/podroll/"
+      },
+      {
+        "elementName": "Remote Item"
       }
     ]
   },
@@ -1967,6 +1990,9 @@
       {
         "elementName": "Podroll",
         "elementURL": "https://changelog.rss.com/v24-6-1-294338"
+      },
+      {
+        "elementName": "Remote Item"
       }
     ]
   },
@@ -2538,7 +2564,7 @@
   },
   {
     "appName": "TrueFans",
-    "appType": ["app", "website", "podcast player", "rss proxy", "video"],
+    "appType": ["app", "website", "podcast player", "rss proxy", "video", "hosting"],
     "appUrl": "https://truefans.fm",
     "appIconUrl": "truefans.jpg",
     "platforms": [
@@ -2655,6 +2681,9 @@
       {
         "elementName": "Publisher",
         "elementURL": "https://truefans.fm/feedback?tab=changelog"
+      },
+      {
+        "elementName": "Remote Item"
       }
     ]
   },
@@ -2894,6 +2923,9 @@
       },
       {
         "elementName": "Wallet Switching (VTS)"
+      },
+      {
+        "elementName": "Remote Item"
       }
     ]
   },
@@ -3019,6 +3051,9 @@
       {
         "elementName": "Live Item",
         "elementURL": "https://www.podhome.fm/docs/live-podcasting"
+      },
+      {
+        "elementName": "Remote Item"
       }
     ]
   },
@@ -3150,6 +3185,9 @@
       {
         "elementName": "Podroll",
         "elementURL": "https://www.linkedin.com/posts/marcel-go_podcast-apps-podcasting-20-activity-7373681353294524416-8reS"
+      },
+      {
+        "elementName": "Remote Item"
       }
     ]
   },
@@ -3198,6 +3236,9 @@
       },
       {
         "elementName": "Value"
+      },
+      {
+        "elementName": "Remote Item"
       }
     ]
   },
@@ -3540,6 +3581,9 @@
       {
         "elementName": "OP3",
         "elementURL": "https://support.iono.fm/docs/podcast-2-support"
+      },
+      {
+        "elementName": "Remote Item"
       }
     ]
   },
@@ -3671,6 +3715,9 @@
       },
       {
         "elementName": "Live Item"
+      },
+      {
+        "elementName": "Remote Item"
       }
     ]
   },
@@ -3754,6 +3801,9 @@
       {
         "elementName": "Podroll",
         "elementURL": "https://mastodon.social/@Barredo/114366371374056508"
+      },
+      {
+        "elementName": "Remote Item"
       }
     ]
   },
@@ -3912,6 +3962,9 @@
       },
       {
         "elementName": "Wallet Switching (VTS)"
+      },
+      {
+        "elementName": "Remote Item"
       }
     ]
   },
