@@ -4009,7 +4009,7 @@
   {
     "appName": "mp3chapters",
     "appType": ["app", "open source", "self-hosted", "other"],
-    "tagLine": "Your Podcast Hosting and Monetizing Platform",
+    "tagLine": "Online tool for exporting mp3 ID3 chapters to Podcasting 2.0 JSON",
     "appUrl": "https://mp3chapters.github.io/",
     "appIconUrl": "mp3chapters.png",
     "platforms": ["Web"],
