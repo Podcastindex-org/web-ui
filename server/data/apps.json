@@ -4005,5 +4005,22 @@
         "elementURL": "https://blog.podbean.com/podcast-transcription-and-you-how-transcripts-can-help-your-podcast/"
       }
     ]
+  },
+  {
+    "appName": "mp3chapters",
+    "appType": ["app", "open source", "self-hosted", "other"],
+    "tagLine": "Your Podcast Hosting and Monetizing Platform",
+    "appUrl": "https://mp3chapters.github.io/",
+    "appIconUrl": "mp3chapters.png",
+    "platforms": ["Web"],
+    "platformLinks": {
+      "Web": "https://mp3chapters.github.io/s"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://github.com/mp3chapters/mp3chapters.github.io"
+      }
+    ]
   }
 ]
