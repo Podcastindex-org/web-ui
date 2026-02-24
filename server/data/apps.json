@@ -4005,5 +4005,22 @@
         "elementURL": "https://blog.podbean.com/podcast-transcription-and-you-how-transcripts-can-help-your-podcast/"
       }
     ]
+  },
+  {
+    "appName": "mp3chapters",
+    "appType": ["app", "open source", "self-hosted", "other"],
+    "tagLine": "Online tool for exporting mp3 ID3 chapters to Podcasting 2.0 JSON",
+    "appUrl": "https://mp3chapters.github.io/",
+    "appIconUrl": "mp3chapters.png",
+    "platforms": ["Web"],
+    "platformLinks": {
+      "Web": "https://mp3chapters.github.io/s"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://github.com/mp3chapters/mp3chapters.github.io"
+      }
+    ]
   }
 ]
