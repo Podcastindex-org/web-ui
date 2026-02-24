@@ -9,6 +9,8 @@ function SingleApp(app) {
                 <div className="podcastIndexAppIcon">
                     <img
                         src={`${document.location.origin}/api/images/${app.appIconUrl}`}
+                        alt=''
+                        {...(app.tagLine ? { title: `${app.tagLine}` } : {})}
                     ></img>
                 </div>
                 <div className="podcastIndexAppTitleAndType">
