@@ -2896,6 +2896,7 @@
     "appType": ["hosting", "open source", "website"],
     "appUrl": "https://sovereignfeeds.com",
     "appIconUrl": "sf.png",
+    "tagLine": "Own your feed, own your life.",
     "platforms": ["Web"],
     "supportedElements": [
       {
@@ -2968,7 +2969,7 @@
     "appType": ["app", "open source", "website"],
     "appUrl": "https://www.thesplitkit.com",
     "appIconUrl": "split-kit.png",
-    "tagLine": "Own your feed, own your life.",
+    "tagLine": "Empower Your Projects with Lightning Network Boostagrams.",    
     "platforms": ["Web", "Mobile"],
     "supportedElements": [
       {
