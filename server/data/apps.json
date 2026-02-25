@@ -92,6 +92,7 @@
     "appType": ["podcast player", "app", "open source"],
     "appUrl": "https://pocketcasts.com",
     "appIconUrl": "pocketCasts.png",
+    "tagLine": "Pocket Casts provides next-level listening, search and discovery tools.",
     "platforms": ["Mobile", "Web", "iOS", "Android", "Windows", "macOS"],
     "platformLinks": {
       "Android": "https://play.google.com/store/apps/details?id=au.com.shiftyjelly.pocketcasts",
@@ -172,6 +173,7 @@
     "appType": ["app", "open source", "self-hosted", "other"],
     "appUrl": "https://mtillmann.github.io/chaptertool/",
     "appIconUrl": "chaptertool.png",
+    "tagLine": "Manage chapters for podcasts, webvtt, youtube, mkv and ffmpeg.",
     "platforms": ["Web"],
     "supportedElements": [
       {
@@ -284,6 +286,7 @@
     "appType": ["app", "open source", "podcast player", "video"],
     "appUrl": "https://podverse.fm",
     "appIconUrl": "podverse.jpg",
+    "tagLine": "Share created clips, highlights, playlists, and chapters, sync your queue and history to all devices, and create backups with Podverse Premium.",
     "platforms": ["Android", "F-Droid", "iOS", "Mobile", "Web"],
     "platformLinks": {
       "Android": "https://play.google.com/store/apps/details?id=com.podverse",
@@ -458,6 +461,7 @@
     "appType": ["browser extension", "podcast player", "open source"],
     "appUrl": "https://chromewebstore.google.com/detail/podstation-podcast-player/bpcagekijmfcocgjlnnhpdogbplajjfn",
     "appIconUrl": "podstation.jpg",
+    "tagLine": "Web podcast aggregator for Chrome.",
     "platforms": ["Chrome"],
     "supportedElements": [
       {
@@ -659,6 +663,7 @@
     "appType": ["app", "podcast player", "open source"],
     "appUrl": "https://antennapod.org/",
     "appIconUrl": "antennapod.png",
+    "tagLine": "The app is open-source and you can subscribe to any RSS feed. Built by volunteers without commercial interest, so it respects your privacy while giving you full control.",
     "platforms": ["Mobile", "Android", "F-Droid"],
     "platformLinks": {
       "Android": "https://play.google.com/store/apps/details?id=de.danoeh.antennapod",
@@ -690,7 +695,7 @@
   {
     "appName": "CurioCaster",
     "appType": ["app", "podcast player", "open source"],
-    "tagLine": "The Best Podcast Player in Texas",
+    "tagLine": "The Best Podcast Player in Texas.",
     "appUrl": "https://curiocaster.com/",
     "appIconUrl": "curiocaster.png",
     "platforms": ["Web", "Mobile"],
@@ -767,6 +772,7 @@
     "appType": ["app", "podcast player", "open source"],
     "appUrl": "https://anytimeplayer.app",
     "appIconUrl": "anytimelogo.png",
+    "tagLine": "The easy to use open-source podcast player for mobile and tablet.",
     "platforms": ["Mobile", "Android", "iOS", "F-Droid"],
     "platformLinks": {
       "Android": "https://play.google.com/store/apps/details?id=uk.me.amugofjava.anytime",
@@ -798,7 +804,7 @@
   },
   {
     "appName": "PodLP",
-    "tagLine": "The leading podcast app for flip phones",
+    "tagLine": "The leading podcast app for flip phones.",
     "appType": ["app", "podcast player"],
     "appUrl": "https://podlp.com/",
     "appIconUrl": "podlp.png",
@@ -946,6 +952,7 @@
     "appType": ["app", "podcast player", "open source"],
     "appUrl": "https://github.com/lojcs/tsacdop",
     "appIconUrl": "tsacdop.png",
+    "tagLine": "A clean, simply beautiful, and friendly app.",
     "platforms": ["Mobile", "F-Droid"],
     "platformLinks": {
       "F-Droid": "https://f-droid.org/es/packages/dev.lojcs.tsacdop/"
@@ -987,6 +994,7 @@
     "appType": ["app", "podcast player", "open source"],
     "appUrl": "https://codeberg.org/y20k/escapepod",
     "appIconUrl": "escapepod.png",
+    "tagLine": "A simple and lightweight app for listening to podcasts.",
     "platforms": ["Mobile", "Android", "F-Droid"],
     "platformLinks": {
       "F-Droid": "https://f-droid.org/packages/org.y20k.escapepod/"
@@ -1003,6 +1011,7 @@
     "appType": ["app", "podcast player", "open source"],
     "appUrl": "https://apps.kde.org/kasts/",
     "appIconUrl": "kasts.png",
+    "tagLine": "A convergent podcast application that looks good on desktop and mobile.",
     "platforms": ["Linux", "Mobile", "Android", "Windows", "F-Droid"],
     "platformLinks": {
       "F-Droid": "https://community.kde.org/Android/FDroid",
@@ -1020,6 +1029,7 @@
     "appType": ["app", "podcast player", "open source"],
     "appUrl": "https://gpodder.github.io/",
     "appIconUrl": "gpodder.png",
+    "tagLine": "Media aggregator and podcast client.",
     "platforms": ["Windows", "macOS", "Linux", "BSD", "Mobile", "Sailfish OS"],
     "platformLinks": {
       "Linux": "appstream://org.gpodder.gpodder"
@@ -1252,6 +1262,7 @@
     "appType": ["wordpress plugin", "hosting", "open source", "self-hosted"],
     "appUrl": "https://blubrry.com/services/powerpress-plugin/",
     "appIconUrl": "powerpress.png",
+    "tagLine": "No. 1 Podcasting plugin for WordPress.",
     "platforms": ["Wordpress", "Web"],
     "platformLinks": {
       "Wordpress": "https://wordpress.org/plugins/powerpress/"
@@ -1437,6 +1448,7 @@
     "appType": ["directory", "open source"],
     "appUrl": "https://podcastindex.org",
     "appIconUrl": "podcastindex.jpg",
+    "tagLine": "The PI is here to preserve, protect and extend the open, independent podcasting ecosystem.",
     "platforms": ["Fediverse", "Web"],
     "supportedElements": [
       {
@@ -1538,6 +1550,7 @@
     "appType": ["hosting", "open source", "self-hosted"],
     "appUrl": "https://castopod.org/",
     "appIconUrl": "castopod.png",
+    "tagLine": "Free and open-source hosting platform made for podcasters.",
     "platforms": ["Fediverse", "Web"],
     "supportedElements": [
       {
@@ -1815,7 +1828,7 @@
   {
     "appName": "Satoshis.Stream ",
     "appType": ["node hosting"],
-    "tagLine": "Receive value as a podcaster without running your own node",
+    "tagLine": "Receive value as a podcaster without running your own node.",
     "appUrl": "https://satoshis.stream/",
     "appIconUrl": "satoshisstream-bot.png",
     "platforms": ["Mobile", "iOS", "Android", "Web"],
@@ -1829,7 +1842,7 @@
   {
     "appName": "Alby",
     "appType": ["node hosting", "podcaster wallet"],
-    "tagLine": "The simplest way to receive boostagrams from your listeners",
+    "tagLine": "The simplest way to receive boostagrams from your listeners.",
     "appUrl": "https://getalby.com/",
     "appIconUrl": "alby.png",
     "platforms": ["Web"],
@@ -1878,6 +1891,7 @@
     "appType": ["wordpress plugin", "open source"],
     "appUrl": "https://podlove.org/podlove-podcast-publisher/",
     "appIconUrl": "podlove-publisher.png",
+    "tagLine": "The one and only next generation podcast publishing system.",
     "platforms": ["Wordpress"],
     "platformLinks": {
       "Wordpress": "https://wordpress.org/plugins/podlove-podcasting-plugin-for-wordpress/"
@@ -2017,6 +2031,7 @@
     "appType": ["open source", "self-hosted"],
     "appUrl": "https://gpodder.net/",
     "appIconUrl": "gpodder.png",
+    "tagLine": "Discover and track your podcasts.",
     "platforms": ["Web"],
     "supportedElements": [
       {
@@ -2251,6 +2266,7 @@
     "appType": ["hosting", "website", "open source", "self-hosted"],
     "appUrl": "https://bitbadger.solutions/open-source/myweblog/",
     "appIconUrl": "myweblog.png",
+    "tagLine": "Lightweight, low-configuration, lightning-fast multi-tenant blogging and podcasting platform.",
     "platforms": ["Web", "Mobile"],
     "supportedElements": [
       {
@@ -2342,6 +2358,7 @@
     "appType": ["app", "podcast player", "open source"],
     "appUrl": "https://github.com/allentown521/FocusPodcast",
     "appIconUrl": "FocusPodcast.png",
+    "tagLine": "Quality podcast management and playback application.",
     "platforms": ["Mobile", "Android", "F-Droid"],
     "platformLinks": {
       "Android": "https://play.google.com/store/apps/details?id=allen.town.focus.podcast",
@@ -2510,6 +2527,7 @@
     "appType": ["app", "open source", "self-hosted", "hosting", "video"],
     "appUrl": "https://joinpeertube.org",
     "appIconUrl": "peertube.png",
+    "tagLine": "ActivityPub-federated video streaming platform using P2P directly in your web browser.",
     "platforms": ["Fediverse", "Web"],
     "supportedElements": [
       {
@@ -2950,6 +2968,7 @@
     "appType": ["app", "open source", "website"],
     "appUrl": "https://www.thesplitkit.com",
     "appIconUrl": "split-kit.png",
+    "tagLine": "Own your feed, own your life.",
     "platforms": ["Web", "Mobile"],
     "supportedElements": [
       {
@@ -3266,6 +3285,7 @@
     "appType": ["wordpress plugin", "open source"],
     "appUrl": "https://wordpress.org/plugins/seriously-simple-podcasting/",
     "appIconUrl": "seriouslysimplepodcasting.png",
+    "tagLine": "Podcasting the way it's meant to be. No mess, no fuss - just you and your content taking over the world.",
     "platforms": ["Wordpress", "Web"],
     "supportedElements": [
       {
@@ -3515,6 +3535,7 @@
     "appType": ["open source", "app", "podcast player", "self-hosted"],
     "appUrl": "https://www.pinepods.online/",
     "appIconUrl": "pinepods.png",
+    "tagLine": "Lightning-fast Rust-powered podcast server with seamless sync across all devices. Self-hosted, open source, and built for performance.",
     "platforms": ["Web", "macOS", "Windows", "Linux"],
     "platformLinks": {
       "Linux": "appstream://com.gooseberrydevelopment.pinepods"
@@ -3683,6 +3704,7 @@
     "appType": ["app", "podcast player", "open source"],
     "appUrl": "https://cardo-podcast.github.io",
     "appIconUrl": "cardo.svg",
+    "tagLine": "Listen to your podcasts 🎙️ on desktop 💻.Lightweight 🪶, fast ⚡. Sync using nextcloud or gpodder.",
     "platforms": ["Windows", "macOS", "Linux"],
     "platformLinks": {
       "Linux": "https://cardo-podcast.github.io/#downloads"
@@ -4009,9 +4031,9 @@
   {
     "appName": "mp3chapters",
     "appType": ["app", "open source", "self-hosted", "other"],
-    "tagLine": "Online tool for exporting mp3 ID3 chapters to Podcasting 2.0 JSON",
     "appUrl": "https://mp3chapters.github.io/",
     "appIconUrl": "mp3chapters.png",
+    "tagLine": "Online tool for exporting mp3 ID3 chapters to Podcasting 2.0 JSON.",
     "platforms": ["Web"],
     "platformLinks": {
       "Web": "https://mp3chapters.github.io/s"
