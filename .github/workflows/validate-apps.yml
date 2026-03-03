@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Validate JSON
-        uses: nhalstead/validate-json-action@0.1.3
+        uses: nhalstead/validate-json-action@v0.1.10
         with:
           # Relative file path under the repository of a JSON schema file to validate the other JSON files with.
           schema: server/data/apps-schema.json
