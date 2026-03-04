@@ -24,7 +24,7 @@ jobs:
             --exclude-all-private
             --base-url https://podcastindex.org
             --remap 'https://developer.mozilla.org/docs/Web/HTTP/Guides/CORS https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS'
-            --include-verbatim --include-wikilinks --include-fragments
+            --include-verbatim --include-fragments #--include-wikilinks
             './**/*.md' './**/*.tsx' './**/*.json' './ui/**/*.html'
 
 #            --accept '100..=103,200..=299'
