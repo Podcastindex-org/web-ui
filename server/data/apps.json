@@ -2718,6 +2718,9 @@
       },
       {
         "elementName": "Remote Item"
+      },
+      {
+        "elementName": "Txt"
       }
     ]
   },
