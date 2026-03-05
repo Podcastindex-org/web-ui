@@ -16,7 +16,7 @@ jobs:
 
       - name: Link Checker
         id: lychee
-        uses: lycheeverse/lychee-action@a8c4c7cb88f0c7386610c35eb25108e448569cb0  # for v2.7.0
+        uses: lycheeverse/lychee-action@8646ba30535128ac92d33dfc9133794bfdd9b411  # for v2.8.0
         with:
           fail: false
           args: |
@@ -24,9 +24,9 @@ jobs:
             --exclude-all-private
             --base-url https://podcastindex.org
             --remap 'https://developer.mozilla.org/docs/Web/HTTP/Guides/CORS https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS'
-            --include-verbatim --include-wikilinks --include-fragments
+            --include-verbatim --include-fragments
             './**/*.md' './**/*.tsx' './**/*.json' './ui/**/*.html'
-
+#--include-wikilinks
 #            --accept '100..=103,200..=299'
 #            --root-dir "$(pwd)"
 #            --suggest      # Suggest link replacements for broken links, using a web archive
