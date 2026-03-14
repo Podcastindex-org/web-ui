@@ -3357,6 +3357,25 @@
       }
     ]
   },
+  {
+    "appName": "Nuotit",
+    "appType": ["music player", "app", "podcast player"],
+    "appUrl": "https://nuotit.org",
+    "appIconUrl": "nuotit_logo.png",
+    "tagLine": "Premium sound quality for your Podcasts and Audio in iOS and iPad",
+    "platforms": ["iOS", "Mobile","iPad OS"],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/nuotit-podcasts-and-audio/id6503049956"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Transcript"        
+      },
+      {
+        "elementName": "Chapters"
+      }
+    ]
+  },  
   {
     "appName": "PodRocket",
     "appType": ["website", "directory"],
