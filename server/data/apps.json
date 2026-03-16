@@ -4069,7 +4069,7 @@
       },
       {
         "elementName": "License",
-        "elementURL": "https://prestocast.com/changelog#v2026-03-10"
+        "elementURL": "https://prestocast.com/changelog#v2026-03-16"
       },
       {
         "elementName": "Trailer",
@@ -4106,6 +4106,10 @@
       },
       {
         "elementName": "Episode"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://prestocast.com/changelog#v2026-03-16"
       }
     ]
   }
