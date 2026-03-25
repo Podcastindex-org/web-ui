@@ -3760,7 +3760,7 @@
     "appType": ["app", "podcast player", "website"],
     "appUrl": "https://wherever.audio/",
     "appIconUrl": "wherever.png",
-    "platforms": ["Web"],
+    "platforms": ["Web", "Android", "iOS"],
     "supportedElements": [
       {
         "elementName": "GUID"
