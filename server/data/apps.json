@@ -2968,6 +2968,35 @@
     ]
   },
   {
+    "appName": "The Podcast App",
+    "appType": ["app", "podcast player"],
+    "tagLine": "Free, ad-free podcast player with AI cross-episode search for iOS and Android.",
+    "appUrl": "https://thepodcastapp.dev",
+    "appIconUrl": "thepodcastapp.png",
+    "platforms": ["iOS", "Android", "Mobile"],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/the-podcast-app/id6754806244",
+      "Android": "https://play.google.com/store/apps/details?id=com.magnolia.thepodcastapp"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Search"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Transcript"
+      }
+    ]
+  },
+  {
     "appName": "The Split Kit",
     "appType": ["app", "open source", "website"],
     "appUrl": "https://www.thesplitkit.com",
