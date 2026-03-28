@@ -3538,6 +3538,10 @@
         "elementURL": "https://thepodcastapp.dev/podcast-app-with-episode-notes-chapters"
       },
       {
+        "elementName": "Funding",
+        "elementURL": "https://thepodcastapp.dev/podcast-app-with-funding-support"
+      },
+      {
         "elementName": "GUID",
         "elementURL": "https://thepodcastapp.dev/podcast-app-with-guid-support"
       },
@@ -3546,8 +3550,16 @@
         "elementURL": "https://thepodcastapp.dev/video-podcasts"
       },
       {
+        "elementName": "Person",
+        "elementURL": "https://thepodcastapp.dev/podcast-app-with-host-guest-info"
+      },
+      {
         "elementName": "Podping",
         "elementURL": "https://thepodcastapp.dev/podcast-app-with-podping"
+      },
+      {
+        "elementName": "Podroll",
+        "elementURL": "https://thepodcastapp.dev/podcast-app-with-podroll"
       },
       {
         "elementName": "Search",
@@ -3562,8 +3574,16 @@
         "elementURL": "https://thepodcastapp.dev/podcast-app-with-highlight-clips"
       },
       {
+        "elementName": "Trailer",
+        "elementURL": "https://thepodcastapp.dev/podcast-app-with-trailer-support"
+      },
+      {
         "elementName": "Transcript",
         "elementURL": "https://thepodcastapp.dev/podcast-app-with-transcripts"
+      },
+      {
+        "elementName": "Update Frequency",
+        "elementURL": "https://thepodcastapp.dev/podcast-app-with-smart-polling"
       },
       {
         "elementName": "Video",
