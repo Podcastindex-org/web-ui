@@ -1854,10 +1854,11 @@
     ]
   },
   {
-    "appName": "Podcastpage.io",
-    "appType": ["website"],
+    "appName": "Beamly",
+    "appType": ["website", "hosting"],
     "appUrl": "https://beamly.com/",
-    "appIconUrl": "podcastpage.png",
+    "appIconUrl": "beamly.png",
+    "tagLine": "Publish public and private podcasts with native video support",
     "platforms": ["Web"],
     "supportedElements": [
       {
