@@ -549,6 +549,9 @@
       },
       {
         "elementName": "Remote Item"
+      },
+      {
+        "elementName": "Content Link"
       }
     ]
   },
