@@ -4168,5 +4168,25 @@
         "elementURL": "https://prestocast.com/changelog#v2026-03-22"
       }
     ]
+  },
+  {
+    "appName": "Podio",
+    "appType": ["podcast player", "app"],
+    "tagLine": "Top rated FM radio and podcasts player app",
+    "appUrl": "https://www.podio.info",
+    "appIconUrl": "podio.png",
+    "platforms": ["iOS", "Android"],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/id6478092334",
+      "Android": "https://play.google.com/store/apps/details?id=radio.fm.live.online.podcasts.player.free.podio"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Episode"
+      }
+    ]
   }
 ]
