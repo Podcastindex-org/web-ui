@@ -4173,7 +4173,7 @@
     "appName": "Podio",
     "appType": ["podcast player", "app"],
     "tagLine": "Top rated FM radio and podcasts player app",
-    "appUrl": "https://yourdomain.com",
+    "appUrl": "https://www.podio.info",
     "appIconUrl": "podio.png",
     "platforms": ["iOS", "Android"],
     "platformLinks": {
