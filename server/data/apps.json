@@ -4168,5 +4168,24 @@
         "elementURL": "https://prestocast.com/changelog#v2026-03-22"
       }
     ]
+  },
+  {
+    "appName": "Car Curious",
+    "appType": ["website"],
+    "tagLine": "Smart annotations and searchable transcripts for automotive podcasts",
+    "appUrl": "https://getcarcurious.com",
+    "appIconUrl": "carcurious.png",
+    "platforms": ["Web"],
+    "supportedElements": [
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Search"
+      },
+      {
+        "elementName": "Episode"
+      }
+    ]
   }
 ]
