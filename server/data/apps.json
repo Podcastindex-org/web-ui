@@ -4182,8 +4182,10 @@
     },
     "supportedElements": [
       {
-        "elementName": "Chapters",
-        "elementURL": "https://yourdomain.com/help/chapters"
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Episode"
       }
     ]
   }
