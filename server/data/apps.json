@@ -4187,5 +4187,39 @@
         "elementName": "Episode"
       }
     ]
-  }
+  },
+   {
+    "appName": "RadaRadio",
+    "appType": ["app", "hosting", "website", "podcast player", "radio player"],
+    "appUrl": "https://radaradio.com.com",
+    "appIconUrl": "radaradio.png",
+    "platforms": ["Web", "Mobile"],
+    "platformLinks": {
+        "Web": "https://radaradio.com/",
+        "Android": "https://play.google.com/store/apps/details?id=com.radaradio.app",
+        "iOS": "https://apps.apple.com/app/radaradio-fm-radio-podcast/id6761927629"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://radaradio.com/podcast?sort=popular"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "Podping"
+      },
+      {
+        "elementName": "Season"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://radaradio.com/podcast?search=podcastindex"
+      }
+    ]
+  },
 ]
