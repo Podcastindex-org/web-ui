@@ -4187,5 +4187,20 @@
         "elementName": "Episode"
       }
     ]
-  }
+  },
+    {
+      "appName": "DIXO OnChain",
+      "appType": ["hosting", "app"],
+      "appUrl": "https://onchain.dixo.com",
+      "appIconUrl": "dixoonchain.png",
+      "tagLine": "Podcast hosting with on-chain listener rewards on Base.",
+      "platforms": ["Web"],
+      "supportedElements": [
+        { "elementName": "Value" },
+        { "elementName": "Funding" },
+        { "elementName": "Transcript" },
+        { "elementName": "Chapters" }
+      ]
+    }
+  ]
 ]
