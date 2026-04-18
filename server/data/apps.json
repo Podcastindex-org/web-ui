@@ -4196,10 +4196,9 @@
       "tagLine": "Podcast hosting with on-chain listener rewards on Base.",
       "platforms": ["Web"],
       "supportedElements": [
-        { "elementName": "Value" },
-        { "elementName": "Funding" },
-        { "elementName": "Transcript" },
-        { "elementName": "Chapters" }
+         { "elementName": "Value" },
+         { "elementName": "Funding" },
+         { "elementName": "Guid" }
       ]
     }
   ]
