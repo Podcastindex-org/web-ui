@@ -4187,5 +4187,127 @@
         "elementName": "Episode"
       }
     ]
+  },
+    {
+    "appName": "RadaRadio",
+    "appType": ["podcast player", "app", "radio player", "website"],
+    "appUrl": "https://radaradio.com",
+    "appIconUrl": "radaradio.png",
+    "tagLine": "Global live radio stations & all podcasts in one app. Listen now!",
+    "platforms": ["Mobile", "Web", "iOS", "Android"],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.radaradio.app",
+      "iOS": "https://apps.apple.com/us/app/radaradio-fm-radio-podcast/id6761927629",
+      "Web": "https://radaradio.com",
+      "Mobile": "https://radaradio.com"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Funding",
+        "elementURL": "https://radaradio.com/en/about"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://radaradio.com/podcast"
+      },
+      {
+        "elementName": "Soundbite",
+        "elementURL": "https://radaradio.com/podcast?page=2"
+      },
+      {
+        "elementName": "Location",
+        "elementURL": "https://radaradio.com/podcast?page=3"
+      },
+      {
+        "elementName": "Trailer",
+        "elementURL": "https://radaradio.com/podcast?page=4"
+      },
+      {
+        "elementName": "License",
+        "elementURL": "https://radaradio.com/podcast?page=5"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://radaradio.com/podcast?page=6"
+      },
+      {
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://radaradio.com/podcast?page=7"
+      },
+      {
+        "elementName": "Boostagrams",
+        "elementURL": "https://radaradio.com/podcast?page=8"
+      },
+      {
+        "elementName": "Live Item",
+        "elementURL": "https://radaradio.com/podcast?page=9"
+      },
+      {
+        "elementName": "Sat Streaming",
+        "elementURL": "https://radaradio.com/podcast?page=10"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://radaradio.com/en/podcast?q=podcastindex"
+      },
+      {
+        "elementName": "Social Interact",
+        "elementURL": "https://radaradio.com/en/podcast?q=podcastindex"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://radaradio.com/en/podcast?q=podcastindex"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://radaradio.com/en/podcast?q=podcastindex"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://radaradio.com/en/podcast?q=podcastindex"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://radaradio.com/en/podcast?q=podcastindex"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://radaradio.com/en/podcast?q=podcastindex"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://radaradio.com/en/podcast?q=podcastindex"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://radaradio.com/en/podcast?q=podcastindex"
+      },
+      {
+        "elementName": "Podroll",
+        "elementURL": "https://radaradio.com/en/podcast?q=podcastindex"
+      },
+      {
+        "elementName": "Wallet Switching (VTS)",
+        "elementURL": "https://radaradio.com/en/podcast?q=podcastindex"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://radaradio.com/en/podcast?q=podcastindex"
+      },
+      {
+        "elementName": "Update Frequency",
+        "elementURL": "https://radaradio.com/en/podcast?q=podcastindex"
+      },
+      {
+        "elementName": "Publisher",
+        "elementURL": "https://radaradio.com/en/podcast?q=podcastindex"
+      },
+      {
+        "elementName": "Remote Item"
+      },
+      {
+        "elementName": "Txt"
+      }
+    ]
   }
 ]
