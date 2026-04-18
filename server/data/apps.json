@@ -4192,7 +4192,7 @@
     "appName": "RadaRadio",
     "appType": ["podcast player", "app", "radio player", "website"],
     "appUrl": "https://radaradio.com",
-    "appIconUrl": "https://cdn.radaradio.com/radaradio.png",
+    "appIconUrl": "radaradio.png",
     "tagLine": "Global live radio stations & all podcasts in one app. Listen now!",
     "platforms": ["Mobile", "Web", "iOS", "Android"],
     "platformLinks": {
