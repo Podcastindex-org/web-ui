@@ -4213,10 +4213,6 @@
         "elementURL": "https://stablekraft.app"
       },
       {
-        "elementName": "Transcript",
-        "elementURL": "https://stablekraft.app"
-      },
-      {
         "elementName": "Medium",
         "elementURL": "https://stablekraft.app"
       },
@@ -4226,14 +4222,6 @@
       },
       {
         "elementName": "Remote Item",
-        "elementURL": "https://stablekraft.app"
-      },
-      {
-        "elementName": "Podroll",
-        "elementURL": "https://stablekraft.app"
-      },
-      {
-        "elementName": "OP3",
         "elementURL": "https://stablekraft.app"
       },
       {
@@ -4270,10 +4258,6 @@
         "elementURL": "https://itdv.podtards.com"
       },
       {
-        "elementName": "OP3",
-        "elementURL": "https://itdv.podtards.com"
-      },
-      {
         "elementName": "Remote Item",
         "elementURL": "https://itdv.podtards.com"
       },
@@ -4292,7 +4276,6 @@
     "appType": [
       "hosting",
       "website",
-      "app"
     ],
     "appUrl": "https://new.musicsideproject.com",
     "appIconUrl": "msp2.png",
@@ -4332,10 +4315,6 @@
       },
       {
         "elementName": "GUID",
-        "elementURL": "https://new.musicsideproject.com"
-      },
-      {
-        "elementName": "Locked",
         "elementURL": "https://new.musicsideproject.com"
       },
       {
