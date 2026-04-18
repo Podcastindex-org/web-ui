@@ -4191,7 +4191,7 @@
    {
     "appName": "RadaRadio",
     "appType": ["app", "hosting", "website", "podcast player", "radio player"],
-    "appUrl": "https://radaradio.com.com",
+    "appUrl": "https://radaradio.com/",
     "appIconUrl": "radaradio.png",
     "platforms": ["Web", "Mobile"],
     "platformLinks": {
