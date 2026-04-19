@@ -4194,7 +4194,8 @@
       "music player",
       "podcast player",
       "app",
-      "website"
+      "website",
+      "open source"
     ],
     "appUrl": "https://stablekraft.app",
     "appIconUrl": "stablekraft.png",
@@ -4229,7 +4230,8 @@
     "appType": [
       "music player",
       "app",
-      "website"
+      "website",
+      "open source"
     ],
     "appUrl": "https://itdv.podtards.com",
     "appIconUrl": "itdv.jpg",
@@ -4263,7 +4265,8 @@
     "appName": "MSP 2.0",
     "appType": [
       "hosting",
-      "website"
+      "website",
+      "open source"
     ],
     "appUrl": "https://new.musicsideproject.com",
     "appIconUrl": "msp2.png",
