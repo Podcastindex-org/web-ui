@@ -4187,5 +4187,131 @@
         "elementName": "Episode"
       }
     ]
+  },
+  {
+    "appName": "Stablekraft",
+    "appType": [
+      "music player",
+      "podcast player",
+      "app",
+      "website",
+      "open source"
+    ],
+    "appUrl": "https://stablekraft.app",
+    "appIconUrl": "stablekraft.png",
+    "tagLine": "Music discovery & streaming from podcast feeds with V4V payments",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Remote Item"
+      },
+      {
+        "elementName": "Podping"
+      }
+    ]
+  },
+  {
+    "appName": "Into The Doerfel-Verse",
+    "appType": [
+      "music player",
+      "app",
+      "website",
+      "open source"
+    ],
+    "appUrl": "https://itdv.podtards.com",
+    "appIconUrl": "itdv.jpg",
+    "tagLine": "Lightning-powered music platform for independent artists",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value"
+      },
+      {
+        "elementName": "Boostagrams"
+      },
+      {
+        "elementName": "Person"
+      },
+      {
+        "elementName": "Remote Item"
+      },
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "GUID"
+      }
+    ]
+  },
+  {
+    "appName": "MSP 2.0",
+    "appType": [
+      "hosting",
+      "website",
+      "open source"
+    ],
+    "appUrl": "https://new.musicsideproject.com",
+    "appIconUrl": "msp2.png",
+    "tagLine": "Podcasting 2.0 RSS feed editor for albums & publishers",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Person"
+      },
+      {
+        "elementName": "Value"
+      },
+      {
+        "elementName": "Funding"
+      },
+      {
+        "elementName": "Season"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Publisher"
+      },
+      {
+        "elementName": "Txt"
+      },
+      {
+        "elementName": "Image"
+      },
+      {
+        "elementName": "OP3"
+      }
+    ]
   }
 ]
