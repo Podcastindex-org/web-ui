@@ -4187,5 +4187,23 @@
         "elementName": "Episode"
       }
     ]
-  }
+  },
+    {
+      "appName": "DIXO OnChain",
+      "appType": ["hosting", "app"],
+      "appUrl": "https://onchain.dixo.com",
+      "appIconUrl": "dixoonchain.png",
+      "tagLine": "Podcast hosting with on-chain listener rewards on Base.",
+      "platforms": ["Web"],
+      "supportedElements": [
+         { "elementName": "Value",
+           "elementURL": "https://onchain.dixo.com/tokenomics"
+         },
+         { "elementName": "Funding",
+           "elementURL": "https://onchain.dixo.com/pitches/seed"
+         },
+         { "elementName": "Guid" }
+      ]
+    }
+  ]
 ]
