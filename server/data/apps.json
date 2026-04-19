@@ -4205,22 +4205,22 @@
     ],
     "supportedElements": [
       {
-        "elementName": "Value",
+        "elementName": "Value"
       },
       {
-        "elementName": "Chapters",
+        "elementName": "Chapters"
       },
       {
-        "elementName": "Medium",
+        "elementName": "Medium"
       },
       {
-        "elementName": "GUID",
+        "elementName": "GUID"
       },
       {
-        "elementName": "Remote Item",
+        "elementName": "Remote Item"
       },
       {
-        "elementName": "Podping",
+        "elementName": "Podping"
       }
     ]
   },
@@ -4240,22 +4240,22 @@
     ],
     "supportedElements": [
       {
-        "elementName": "Value",
+        "elementName": "Value"
       },
       {
-        "elementName": "Boostagrams",
+        "elementName": "Boostagrams"
       },
       {
-        "elementName": "Person",
+        "elementName": "Person"
       },
       {
-        "elementName": "Remote Item",
+        "elementName": "Remote Item"
       },
       {
-        "elementName": "Medium",
+        "elementName": "Medium"
       },
       {
-        "elementName": "GUID",
+        "elementName": "GUID"
       }
     ]
   },
@@ -4274,40 +4274,40 @@
     ],
     "supportedElements": [
       {
-        "elementName": "Person",
+        "elementName": "Person"
       },
       {
-        "elementName": "Value",
+        "elementName": "Value"
       },
       {
-        "elementName": "Funding",
+        "elementName": "Funding"
       },
       {
-        "elementName": "Season",
+        "elementName": "Season"
       },
       {
-        "elementName": "Episode",
+        "elementName": "Episode"
       },
       {
-        "elementName": "Transcript",
+        "elementName": "Transcript"
       },
       {
-        "elementName": "Medium",
+        "elementName": "Medium"
       },
       {
-        "elementName": "GUID",
+        "elementName": "GUID"
       },
       {
-        "elementName": "Publisher",
+        "elementName": "Publisher"
       },
       {
-        "elementName": "Txt",
+        "elementName": "Txt"
       },
       {
-        "elementName": "Image",
+        "elementName": "Image"
       },
       {
-        "elementName": "OP3",
+        "elementName": "OP3"
       }
     ]
   }
