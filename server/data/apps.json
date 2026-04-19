@@ -4206,27 +4206,21 @@
     "supportedElements": [
       {
         "elementName": "Value",
-        "elementURL": "https://stablekraft.app"
       },
       {
         "elementName": "Chapters",
-        "elementURL": "https://stablekraft.app"
       },
       {
         "elementName": "Medium",
-        "elementURL": "https://stablekraft.app"
       },
       {
         "elementName": "GUID",
-        "elementURL": "https://stablekraft.app"
       },
       {
         "elementName": "Remote Item",
-        "elementURL": "https://stablekraft.app"
       },
       {
         "elementName": "Podping",
-        "elementURL": "https://stablekraft.app"
       }
     ]
   },
@@ -4247,27 +4241,21 @@
     "supportedElements": [
       {
         "elementName": "Value",
-        "elementURL": "https://itdv.podtards.com"
       },
       {
         "elementName": "Boostagrams",
-        "elementURL": "https://itdv.podtards.com"
       },
       {
         "elementName": "Person",
-        "elementURL": "https://itdv.podtards.com"
       },
       {
         "elementName": "Remote Item",
-        "elementURL": "https://itdv.podtards.com"
       },
       {
         "elementName": "Medium",
-        "elementURL": "https://itdv.podtards.com"
       },
       {
         "elementName": "GUID",
-        "elementURL": "https://itdv.podtards.com"
       }
     ]
   },
@@ -4287,51 +4275,39 @@
     "supportedElements": [
       {
         "elementName": "Person",
-        "elementURL": "https://new.musicsideproject.com"
       },
       {
         "elementName": "Value",
-        "elementURL": "https://new.musicsideproject.com"
       },
       {
         "elementName": "Funding",
-        "elementURL": "https://new.musicsideproject.com"
       },
       {
         "elementName": "Season",
-        "elementURL": "https://new.musicsideproject.com"
       },
       {
         "elementName": "Episode",
-        "elementURL": "https://new.musicsideproject.com"
       },
       {
         "elementName": "Transcript",
-        "elementURL": "https://new.musicsideproject.com"
       },
       {
         "elementName": "Medium",
-        "elementURL": "https://new.musicsideproject.com"
       },
       {
         "elementName": "GUID",
-        "elementURL": "https://new.musicsideproject.com"
       },
       {
         "elementName": "Publisher",
-        "elementURL": "https://new.musicsideproject.com"
       },
       {
         "elementName": "Txt",
-        "elementURL": "https://new.musicsideproject.com"
       },
       {
         "elementName": "Image",
-        "elementURL": "https://new.musicsideproject.com"
       },
       {
         "elementName": "OP3",
-        "elementURL": "https://new.musicsideproject.com"
       }
     ]
   }
