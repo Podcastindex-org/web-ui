@@ -4187,5 +4187,39 @@
         "elementName": "Episode"
       }
     ]
+  },
+  {
+    "appName": "Skipper",
+    "appType": ["app", "podcast player"],
+    "tagLine": "Auto-skip podcast ads, with CarPlay support",
+    "appUrl": "https://earsay.app/",
+    "appIconUrl": "skipper.png",
+    "platforms": ["iOS", "iPad OS", "macOS", "Mobile"],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/us/app/skipper-auto-skip-podcast-ads/id6757127240"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Season"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Social Interact"
+      },
+      {
+        "elementName": "Update Frequency"
+      },
+      {
+        "elementName": "Funding"
+      }
+    ]
   }
 ]
