@@ -4187,5 +4187,28 @@
         "elementName": "Episode"
       }
     ]
+  },
+  {
+    "appName": "PodTyper",
+    "appType": ["website"],
+    "tagLine": "Paste a podcast URL, get a full transcript in minutes.",
+    "appUrl": "https://www.podtyper.com",
+    "appIconUrl": "podtyper.png",
+    "platforms": ["Web", "Mobile"],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://www.podtyper.com/blog/how-to-transcribe-a-podcast"
+      },
+      {
+        "elementName": "Search"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Person"
+      }
+    ]
   }
 ]
