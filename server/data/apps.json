@@ -4187,5 +4187,24 @@
         "elementName": "Episode"
       }
     ]
+  },
+  {
+    "appName": "boxcast",
+    "appType": ["app", "podcast player", "open source"],
+    "appUrl": "https://play.google.com/store/apps/details?id=cx.aswin.boxcast",
+    "appIconUrl": "boxcast.png",
+    "tagLine": "Experience podcasts with boxcast, a fluid and distraction-free player built for those who value clean design and absolute transparency.",
+    "platforms": ["Android", "Mobile"],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=cx.aswin.boxcast"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Funding"
+      },
+      {
+        "elementName": "Value"
+      }
+    ]
   }
 ]
