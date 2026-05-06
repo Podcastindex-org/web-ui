@@ -335,6 +335,17 @@ app.use('/api/apps', async (req, res) => {
   })
 })
 
+app.use('/api/datasets', async (req, res) => {
+  fs.readFile('./server/data/public_datasets.json', 'utf8', (err, data) => {
+    if (err) {
+      res.status(500).send({})
+      return
+    }
+    res.set('Content-Type', 'application/json')
+    res.send(data)
+  })
+})
+
 app.use('/api/images', express.static('./server/assets'))
 
 // ------------------------------------------------
