@@ -428,6 +428,15 @@ app.use('/stats', (req, res) => {
   })
 })
 
+app.use('/datasets', (req, res) => {
+  res.render('index', {
+    title: 'Datasets',
+    description:
+      'Open datasets generated and published by the Podcast Index project.',
+    path: req.originalUrl,
+  })
+})
+
 // ------------------------------------------------
 // ---------- Static content for client -----------
 // ------------------------------------------------
