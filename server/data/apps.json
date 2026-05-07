@@ -38,29 +38,36 @@
     "platformLinks": {
       "iOS": "https://apps.apple.com/app/up-next-podcast-client/id6477821584"
     },
-    "supportedElements": [
-      {
-        "elementName": "Chapters"
-      },
-      {
-        "elementName": "Episode"
-      },
-      {
-        "elementName": "Search"
-      },
-      {
-        "elementName": "Funding"
-      },
-      {
-        "elementName": "Person"
-      },
-      {
-        "elementName": "GUID"
-      },
-      {
-        "elementName": "Social Interact"
-      }
-    ]
+"supportedElements": [
+  { "elementName": "Alternate Enclosure" },
+  { "elementName": "Block" },
+  { "elementName": "Chapters" },
+  { "elementName": "Chat" },
+  { "elementName": "Content Link" },
+  { "elementName": "Episode" },
+  { "elementName": "Funding" },
+  { "elementName": "GUID" },
+  { "elementName": "Image" },
+  { "elementName": "License" },
+  { "elementName": "Live Item" },
+  { "elementName": "Location" },
+  { "elementName": "Locked" },
+  { "elementName": "Medium" },
+  { "elementName": "Person" },
+  { "elementName": "Podping" },
+  { "elementName": "Podroll" },
+  { "elementName": "Publisher" },
+  { "elementName": "Remote Item" },
+  { "elementName": "Season" },
+  { "elementName": "Social Interact" },
+  { "elementName": "Soundbite" },
+  { "elementName": "Trailer" },
+  { "elementName": "Transcript" },
+  { "elementName": "Txt" },
+  { "elementName": "Update Frequency" },
+  { "elementName": "Value" },
+  { "elementName": "Wallet Switching (VTS)" }
+]
   },
   {
     "appName": "Podcatcher",
