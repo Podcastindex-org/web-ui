@@ -82,6 +82,7 @@
     color: var(--text-color);
     line-height: 1.5;
     margin: 14px 0 24px;
+    max-width: 70ch;
 }
 
 .datasets-section-list {
@@ -137,6 +138,7 @@
 .dataset-card-description {
     line-height: 1.55;
     margin: 0;
+    max-width: 70ch;
 }
 
 .datasets-loading,
