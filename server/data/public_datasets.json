@@ -12,7 +12,7 @@
                     "name": "All live feeds — SQLite",
                     "url": "https://public.podcastindex.org/podcastindex_feeds.db.tgz",
                     "format": "tar.gz (SQLite)",
-                    "cadence": "daily",
+                    "cadence": "weekly",
                     "description": "Every feed currently being polled, with title, URL, owner, iTunes ID, host, language, categories, generator, and lastest-episode timestamps. The most heavily used artifact downstream — most third-party mirrors of the Podcast Index data start here."
                 },
                 {
@@ -48,14 +48,14 @@
                     "url": "https://public.podcastindex.org/recommendations_video.json",
                     "format": "JSON",
                     "cadence": "daily",
-                    "description": "The same recommendation graph, filtered to feeds whose <itunes:type> or content profile marks them as video."
+                    "description": "The same recommendation graph, filtered to feeds whose <podcast:medium> or content profile marks them as video."
                 },
                 {
                     "name": "Recommendations — music only",
                     "url": "https://public.podcastindex.org/recommendations_music.json",
                     "format": "JSON",
                     "cadence": "daily",
-                    "description": "The same recommendation graph, filtered to music-medium feeds (<podcast:medium>music)."
+                    "description": "The same recommendation graph, filtered to feeds whose <podcast:medium> or content profile marks them as music."
                 },
                 {
                     "name": "Value-enabled feeds — CSV",

@@ -18,7 +18,7 @@ const SectionBlock: React.FunctionComponent<IProps> = ({ section }) => {
         <section id={section.id} className="datasets-section">
             <h2 className="datasets-section-title">{section.name}</h2>
             <p className="datasets-section-description">{section.description}</p>
-            <div className="datasets-section-grid">
+            <div className="datasets-section-list">
                 {section.datasets.map((dataset) => (
                     <DatasetCard key={dataset.url} dataset={dataset} />
                 ))}
