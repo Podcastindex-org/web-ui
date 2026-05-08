@@ -1,29 +1,29 @@
 {
     "title": "Public Data",
     "tagline": "Open datasets generated and published by the Podcast Index project.",
-    "intro": "Podcast Index produces a number of public data exports — full feed catalogs, recommendation lists, value-block dumps, activity stats, and infrastructure pointers — all served as static files under public.podcastindex.org and a few sibling subdomains. They are free to mirror and use; please don't hammer them in tight loops, and prefer the SQLite/CSV catalog dumps over live API scraping when you need bulk data.",
+    "intro": "Podcast Index produces a number of public data exports - full feed catalogs, recommendation lists, value-block dumps, activity stats, and infrastructure pointers - all served as static files under public.podcastindex.org and a few sibling subdomains. They are free to mirror and use; please don't hammer them in tight loops, and prefer the SQLite/CSV catalog dumps over live API scraping when you need bulk data.",
     "sections": [
         {
             "id": "catalog",
             "name": "Catalog snapshots",
-            "description": "Full feed catalogs. The SQLite dumps are the canonical bulk artifacts — load them directly with sqlite3 or any client.",
+            "description": "Full feed catalogs. The SQLite dumps are the canonical bulk artifacts - load them directly with sqlite3 or any client.",
             "datasets": [
                 {
-                    "name": "All live feeds — SQLite",
+                    "name": "All live feeds - SQLite",
                     "url": "https://public.podcastindex.org/podcastindex_feeds.db.tgz",
                     "format": "tar.gz (SQLite)",
                     "cadence": "weekly",
-                    "description": "Every feed currently being polled, with title, URL, owner, iTunes ID, host, language, categories, generator, and lastest-episode timestamps. The most heavily used artifact downstream — most third-party mirrors of the Podcast Index data start here."
+                    "description": "Every feed currently being polled, with title, URL, owner, iTunes ID, host, language, categories, generator, and lastest-episode timestamps. The most heavily used artifact downstream - most third-party mirrors of the Podcast Index data start here."
                 },
                 {
-                    "name": "Dead feeds — CSV (id only)",
+                    "name": "Dead feeds - CSV (id only)",
                     "url": "https://public.podcastindex.org/podcastindex_dead_feeds.csv",
                     "format": "CSV",
                     "cadence": "daily",
                     "description": "Lightweight CSV of dead feed IDs and the ID of the feed they duplicate (if any). Use this if you only need to reconcile your own list of feeds against the dead set."
                 },
                 {
-                    "name": "Problematic feeds — CSV",
+                    "name": "Problematic feeds - CSV",
                     "url": "https://public.podcastindex.org/podcastindex_problematic_feeds.csv",
                     "format": "CSV",
                     "cadence": "daily",
@@ -37,28 +37,28 @@
             "description": "Curated and computed lists derived from podcast 2.0 tags and feed metadata.",
             "datasets": [
                 {
-                    "name": "Recommendations — all media",
+                    "name": "Recommendations - all media",
                     "url": "https://public.podcastindex.org/recommendations.json",
                     "format": "JSON",
                     "cadence": "daily",
                     "description": "Show recommendations mined from <podcast:podroll> tags across the whole index, ranked by mention count."
                 },
                 {
-                    "name": "Recommendations — video only",
+                    "name": "Recommendations - video only",
                     "url": "https://public.podcastindex.org/recommendations_video.json",
                     "format": "JSON",
                     "cadence": "daily",
                     "description": "The same recommendation graph, filtered to feeds whose <podcast:medium> or content profile marks them as video."
                 },
                 {
-                    "name": "Recommendations — music only",
+                    "name": "Recommendations - music only",
                     "url": "https://public.podcastindex.org/recommendations_music.json",
                     "format": "JSON",
                     "cadence": "daily",
                     "description": "The same recommendation graph, filtered to feeds whose <podcast:medium> or content profile marks them as music."
                 },
                 {
-                    "name": "Value-enabled feeds — CSV",
+                    "name": "Value-enabled feeds - CSV",
                     "url": "https://public.podcastindex.org/valueEnabledFeeds.csv",
                     "format": "CSV",
                     "cadence": "daily",
@@ -79,14 +79,14 @@
             "description": "Time-series counts and rolling new-feed reports.",
             "datasets": [
                 {
-                    "name": "24-hour feed report — HTML",
+                    "name": "24-hour feed report - HTML",
                     "url": "https://public.podcastindex.org/24hourFeedReport.html",
                     "format": "HTML",
                     "cadence": "daily",
                     "description": "Human-readable daily report: counts of new feeds added in the last 24 hours, top generators, hour-by-hour add rate, and keyword-based scoring of the new-arrival mix."
                 },
                 {
-                    "name": "Newly-added feeds (last 24h) — CSV",
+                    "name": "Newly-added feeds (last 24h) - CSV",
                     "url": "https://public.podcastindex.org/newlyAddedFeeds24hours.csv",
                     "format": "CSV",
                     "cadence": "daily",
@@ -104,7 +104,7 @@
                     "url": "https://stats.podcastindex.org/daily_counts.json",
                     "format": "JSON",
                     "cadence": "daily",
-                    "description": "Day-bucketed aggregate counts with a longer retention window than the hourly file — better for long-term trend lines."
+                    "description": "Day-bucketed aggregate counts with a longer retention window than the hourly file - better for long-term trend lines."
                 }
             ]
         },
@@ -121,7 +121,7 @@
                     "description": "Plain-text list of Hive blockchain RPC nodes that have recently passed a health check. Consumed by Podping listeners that need a working node to subscribe to."
                 },
                 {
-                    "name": "Live tracking firehose — current window",
+                    "name": "Live tracking firehose - current window",
                     "url": "https://tracking.podcastindex.org/current",
                     "format": "JSON",
                     "cadence": "every few minutes",
