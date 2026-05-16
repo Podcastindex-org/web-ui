@@ -2721,6 +2721,27 @@
       },
       {
         "elementName": "Txt"
+      },
+      {
+        "elementName": "Block"
+      },
+      {
+        "elementName": "Chat"
+      },
+      {
+        "elementName": "Video"
+      },
+      {
+        "elementName": "Image"
+      },
+      {
+        "elementName": "Live Boosts"
+      },
+      {
+        "elementName": "OP3"
+      },
+      {
+        "elementName": "Content Link"
       }
     ]
   },
