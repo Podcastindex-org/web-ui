@@ -4200,6 +4200,7 @@
     "appType": [
       "music player",
       "podcast player",
+      "video",
       "app",
       "website",
       "open source"
@@ -4229,6 +4230,24 @@
       },
       {
         "elementName": "Podping"
+      },
+      {
+        "elementName": "Video"
+      },
+      {
+        "elementName": "Publisher"
+      },
+      {
+        "elementName": "Wallet Switching (VTS)"
+      },
+      {
+        "elementName": "Boostagrams"
+      },
+      {
+        "elementName": "Search"
+      },
+      {
+        "elementName": "Txt"
       }
     ]
   },
@@ -4236,6 +4255,7 @@
     "appName": "Into The Doerfel-Verse",
     "appType": [
       "music player",
+      "video",
       "app",
       "website",
       "open source"
@@ -4255,9 +4275,6 @@
         "elementName": "Boostagrams"
       },
       {
-        "elementName": "Person"
-      },
-      {
         "elementName": "Remote Item"
       },
       {
@@ -4265,6 +4282,15 @@
       },
       {
         "elementName": "GUID"
+      },
+      {
+        "elementName": "Video"
+      },
+      {
+        "elementName": "Publisher"
+      },
+      {
+        "elementName": "Funding"
       }
     ]
   },
@@ -4273,6 +4299,7 @@
     "appType": [
       "hosting",
       "website",
+      "app",
       "open source"
     ],
     "appUrl": "https://new.musicsideproject.com",
@@ -4280,8 +4307,17 @@
     "tagLine": "Podcasting 2.0 RSS feed editor for albums & publishers",
     "platforms": [
       "Web",
-      "Mobile"
+      "Mobile",
+      "macOS",
+      "Windows",
+      "Linux"
     ],
+    "platformLinks": {
+      "Web": "https://new.musicsideproject.com",
+      "macOS": "https://github.com/ChadFarrow/MSP-2.0-Desktop-App/releases",
+      "Windows": "https://github.com/ChadFarrow/MSP-2.0-Desktop-App/releases",
+      "Linux": "https://github.com/ChadFarrow/MSP-2.0-Desktop-App/releases"
+    },
     "supportedElements": [
       {
         "elementName": "Person"
@@ -4318,6 +4354,12 @@
       },
       {
         "elementName": "OP3"
+      },
+      {
+        "elementName": "Podping"
+      },
+      {
+        "elementName": "Video"
       }
     ]
   },
@@ -4325,6 +4367,7 @@
     "appName": "Boost Me Bitch",
     "appType": [
       "podcast player",
+      "music player",
       "app",
       "website",
       "open source"
@@ -4348,6 +4391,21 @@
       },
       {
         "elementName": "Remote Item"
+      },
+      {
+        "elementName": "Search"
+      },
+      {
+        "elementName": "Image"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Season"
+      },
+      {
+        "elementName": "Live Item"
       }
     ]
   },
