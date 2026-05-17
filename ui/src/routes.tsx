@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom'
 import ScrollToTop from "./components/ScrollToTop";
 import AddFeed from "./pages/AddFeed";
 import Apps from './pages/Apps'
+import Datasets from './pages/Datasets'
 import DonationThankYou from './pages/Donations'
 
 import Landing from './pages/landing'
@@ -23,6 +24,7 @@ const Routes: React.FunctionComponent = () => (
             />
             <Route path="/thankyou" component={DonationThankYou}/>
             <Route exact path="/stats" render={() => <Stats/>}/>
+            <Route exact path="/datasets" component={Datasets}/>
 
             <Route path="/podcast" component={Podcast}/>
 
