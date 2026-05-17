@@ -4313,5 +4313,38 @@
         "elementName": "OP3"
       }
     ]
+  },
+  {
+    "appName": "Boost Me Bitch",
+    "appType": [
+      "podcast player",
+      "app",
+      "website",
+      "open source"
+    ],
+    "appUrl": "https://boostmebitch.vercel.app",
+    "appIconUrl": "boostmebitch.png",
+    "tagLine": "Search. Listen. Boost. — V4V podcast player with Nostr-published boosts",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value"
+      },
+      {
+        "elementName": "Boostagrams"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Remote Item"
+      },
+      {
+        "elementName": "Social Interact"
+      }
+    ]
   }
 ]
