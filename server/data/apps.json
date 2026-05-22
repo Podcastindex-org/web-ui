@@ -4213,5 +4213,66 @@
         "elementName": "Value"
       }
     ]
+  },
+  {
+    "appName": "MinusPod",
+    "appType": ["self-hosted", "rss proxy", "open source", "other"],
+    "appUrl": "https://github.com/ttlequals0/MinusPod",
+    "appIconUrl": "minuspod.png",
+    "tagLine": "Self-hosted server that strips ads from podcasts before playback.",
+    "platforms": ["Linux"],
+    "supportedElements": [
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Funding"
+      },
+      {
+        "elementName": "Locked"
+      },
+      {
+        "elementName": "Podroll"
+      },
+      {
+        "elementName": "License"
+      },
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "Person"
+      },
+      {
+        "elementName": "Update Frequency"
+      },
+      {
+        "elementName": "Season"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Trailer"
+      },
+      {
+        "elementName": "Image"
+      },
+      {
+        "elementName": "Social Interact"
+      },
+      {
+        "elementName": "Value"
+      },
+      {
+        "elementName": "Txt"
+      },
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Chapters"
+      }
+    ]
   }
 ]
