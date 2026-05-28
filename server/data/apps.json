@@ -4213,5 +4213,37 @@
         "elementName": "Value"
       }
     ]
+  },
+  {
+    "appName": "MillionPodcasts",
+    "appType": ["app", "directory"],
+    "appUrl": "https://www.millionpodcasts.com/",
+    "platforms": ["Web", "mobile"],
+    "platformLinks": {
+      "Web": "https://www.millionpodcasts.com/"
+
+    },
+    "appIconUrl": "millionpodcasts.png",
+    "supportedElements": [
+      {
+        "elementName": "Search"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Image"
+      },
+      {
+        "elementName": "Image"
+      },
+      {
+        "elementName": "Update Frequency"
+      },   
+      {
+        "elementName": "txt"
+      }
+
+    ]
   }
 ]
