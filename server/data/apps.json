@@ -4213,5 +4213,23 @@
         "elementName": "Value"
       }
     ]
+  },
+  {
+    "appName": "OpenAir",
+    "appType": ["app", "podcast player", "open source"],
+    "tagLine": "OpenAir is a free and open source podcast app for exploring and enjoying the vast world of podcasts.",
+    "appUrl": "https://openair-podcast.github.io/openair-website/",
+    "appIconUrl": "openair.png",
+    "platforms": ["Mobile", "Android", "Linux", "Windows"],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.liquidhive.openair",
+      "Linux": "https://github.com/OpenAir-Podcast/OpenAir/releases",
+      "Windows": "https://github.com/OpenAir-Podcast/OpenAir/releases"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Medium"
+      }
+    ]
   }
 ]
