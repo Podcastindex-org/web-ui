@@ -4229,6 +4229,9 @@
     "supportedElements": [
       {
         "elementName": "Medium"
+      },
+      {
+        "elementName": "Search"
       }
     ]
   }
