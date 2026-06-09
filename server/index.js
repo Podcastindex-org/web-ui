@@ -335,6 +335,17 @@ app.use('/api/apps', async (req, res) => {
   })
 })
 
+app.use('/api/datasets', async (req, res) => {
+  fs.readFile('./server/data/public_datasets.json', 'utf8', (err, data) => {
+    if (err) {
+      res.status(500).send({})
+      return
+    }
+    res.set('Content-Type', 'application/json')
+    res.send(data)
+  })
+})
+
 app.use('/api/images', express.static('./server/assets'))
 
 // ------------------------------------------------
@@ -413,6 +424,15 @@ app.use('/search', (req, res) => {
 app.use('/stats', (req, res) => {
   res.render('index', {
     title: 'Stats',
+    path: req.originalUrl,
+  })
+})
+
+app.use('/datasets', (req, res) => {
+  res.render('index', {
+    title: 'Datasets',
+    description:
+      'Open datasets generated and published by the Podcast Index project.',
     path: req.originalUrl,
   })
 })
