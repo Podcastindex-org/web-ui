@@ -4224,6 +4224,220 @@
     ]
   },
   {
+    "appName": "Stablekraft",
+    "appType": [
+      "music player",
+      "podcast player",
+      "video",
+      "app",
+      "website",
+      "open source"
+    ],
+    "appUrl": "https://stablekraft.app",
+    "appIconUrl": "stablekraft.png",
+    "tagLine": "Music discovery & streaming from podcast feeds with V4V payments",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Remote Item"
+      },
+      {
+        "elementName": "Podping"
+      },
+      {
+        "elementName": "Video"
+      },
+      {
+        "elementName": "Publisher"
+      },
+      {
+        "elementName": "Wallet Switching (VTS)"
+      },
+      {
+        "elementName": "Boostagrams"
+      },
+      {
+        "elementName": "Search"
+      },
+      {
+        "elementName": "Txt"
+      }
+    ]
+  },
+  {
+    "appName": "Into The Doerfel-Verse",
+    "appType": [
+      "music player",
+      "video",
+      "app",
+      "website",
+      "open source"
+    ],
+    "appUrl": "https://itdv.podtards.com",
+    "appIconUrl": "itdv.jpg",
+    "tagLine": "Lightning-powered music platform for independent artists",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value"
+      },
+      {
+        "elementName": "Boostagrams"
+      },
+      {
+        "elementName": "Remote Item"
+      },
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Video"
+      },
+      {
+        "elementName": "Publisher"
+      },
+      {
+        "elementName": "Funding"
+      }
+    ]
+  },
+  {
+    "appName": "MSP 2.0",
+    "appType": [
+      "hosting",
+      "website",
+      "app",
+      "open source"
+    ],
+    "appUrl": "https://new.musicsideproject.com",
+    "appIconUrl": "msp2.png",
+    "tagLine": "Podcasting 2.0 RSS feed editor for albums & publishers",
+    "platforms": [
+      "Web",
+      "Mobile",
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "platformLinks": {
+      "Web": "https://new.musicsideproject.com",
+      "macOS": "https://github.com/ChadFarrow/MSP-2.0-Desktop-App/releases",
+      "Windows": "https://github.com/ChadFarrow/MSP-2.0-Desktop-App/releases",
+      "Linux": "https://github.com/ChadFarrow/MSP-2.0-Desktop-App/releases"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Person"
+      },
+      {
+        "elementName": "Value"
+      },
+      {
+        "elementName": "Funding"
+      },
+      {
+        "elementName": "Season"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Publisher"
+      },
+      {
+        "elementName": "Txt"
+      },
+      {
+        "elementName": "Image"
+      },
+      {
+        "elementName": "OP3"
+      },
+      {
+        "elementName": "Podping"
+      },
+      {
+        "elementName": "Video"
+      }
+    ]
+  },
+  {
+    "appName": "Boost Me Bitch",
+    "appType": [
+      "podcast player",
+      "music player",
+      "app",
+      "website",
+      "open source"
+    ],
+    "appUrl": "https://boostmebitch.vercel.app",
+    "appIconUrl": "boostmebitch.png",
+    "tagLine": "Search. Listen. Boost. — V4V podcast player with Nostr-published boosts",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value"
+      },
+      {
+        "elementName": "Boostagrams"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Remote Item"
+      },
+      {
+        "elementName": "Search"
+      },
+      {
+        "elementName": "Image"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Season"
+      },
+      {
+        "elementName": "Live Item"
+      }
+    ]
+  },
+  {
     "appName": "boxcast",
     "appType": ["app", "podcast player", "open source"],
     "appUrl": "https://play.google.com/store/apps/details?id=cx.aswin.boxcast",
