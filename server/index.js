@@ -110,6 +110,50 @@ app.get('/.well-known/lnurlp/podcastindex', (req, res) => {
 })
 
 // ------------------------------------------------
+// ------ Web Bot Auth key directory (JWKS) -------
+// ------------------------------------------------
+//
+// Publishes the PUBLIC Ed25519 key(s) the Aggrivator crawler uses to sign its
+// requests, so Cloudflare and other verifiers can confirm a signed request
+// really comes from us (Web Bot Auth / RFC 9421 HTTP Message Signatures).
+//
+// The body is served from server/data/http-message-signatures-directory.json so
+// that adding/rotating a key is a content edit, not a code change. The exact
+// media type below is mandatory — verifiers reject application/json.
+//
+// TODO(ops): replace the REPLACE_ME placeholder values in that JSON file with
+// the real JWKS produced on the signing server. Never put private key material
+// (a "d" member) in that file. The `kid` must match the crawler's advertised
+// keyid.
+//
+// CDN/WAF: this endpoint must be reachable by automated clients with no bot
+// challenge, redirect, or auth. The app applies no such gating to this path
+// (the POW middleware only guards /api/*), but if Cloudflare (or any WAF) is in
+// front of the site, ensure this exact path is allowed through unchallenged.
+app.get('/.well-known/http-message-signatures-directory', (req, res) => {
+  fs.readFile(
+    './server/data/http-message-signatures-directory.json',
+    'utf8',
+    (err, data) => {
+      if (err) {
+        res.status(500).json({ error: 'key directory unavailable' })
+        return
+      }
+      // Use setHeader (raw Node) rather than res.set/res.type so Express does
+      // not append "; charset=utf-8" — verifiers expect this media type exactly.
+      res.setHeader(
+        'Content-Type',
+        'application/http-message-signatures-directory+json'
+      )
+      res.setHeader('Cache-Control', 'public, max-age=3600')
+      // Send a Buffer, not a string: res.send() force-appends "; charset=utf-8"
+      // to the Content-Type for string bodies, which we must avoid here.
+      res.send(Buffer.from(data))
+    }
+  )
+})
+
+// ------------------------------------------------
 // ------------ Reverse proxy for API -------------
 // ------------------------------------------------
 
@@ -452,6 +496,11 @@ app.get('*', (req, res) => {
 const PORT = process.env.PORT || 333
 
 // start express server on port 5001 (default)
-app.listen(PORT, () => {
-  console.log(`server started on port ${PORT}`)
-})
+// Only listen when run directly, so the app can be imported by tests.
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`server started on port ${PORT}`)
+  })
+}
+
+module.exports = app
