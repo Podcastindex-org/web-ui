@@ -4110,13 +4110,15 @@
   },
   {
     "appName": "PrestoCast",
-    "appType": ["app", "website", "hosting"],
+    "appType": ["app", "website", "hosting", "podcast player"],
     "appUrl": "https://prestocast.com/",
     "appIconUrl": "PrestoCast.png",
     "tagLine": "Send audio notes. Get a podcast.",
-    "platforms": ["Web", "Mobile"],
+    "platforms": ["Web", "Mobile", "iOS", "Android"],
     "platformLinks": {
-      "Web": "https://prestocast.com/"
+      "Web": "https://prestocast.com/",
+      "iOS": "https://prestocast.com/apple",
+      "Android": "https://play.google.com/store/apps/details?id=com.prestocast.app"
     },
     "supportedElements": [
       {
@@ -4161,7 +4163,12 @@
         "elementURL": "https://prestocast.com/changelog#v2026-03-12"
       },
       {
-        "elementName": "Locked"
+        "elementName": "Locked",
+        "elementURL": "https://prestocast.com/changelog#v2026.04.09"
+      },
+      {
+        "elementName": "Block",
+        "elementURL": "https://prestocast.com/changelog#v2026-05-14"
       },
       {
         "elementName": "Episode"
