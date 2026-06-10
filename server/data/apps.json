@@ -4496,6 +4496,10 @@
       },
       {
         "elementName": "Wallet Switching (VTS)"
+      }
+    ]
+  },
+  {
     "appName": "OpenAir",
     "appType": ["app", "podcast player", "open source"],
     "tagLine": "OpenAir is a free and open source podcast app for exploring and enjoying the vast world of podcasts.",
