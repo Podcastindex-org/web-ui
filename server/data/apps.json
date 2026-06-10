@@ -1,5 +1,21 @@
 [
   {
+    "appName": "BaitoCast",
+    "appType": ["app", "podcast player"],
+    "tagLine": "A podcast player for iPhone and iPad with offline listening, travel playlists, CarPlay, and iCloud sync.",
+    "appUrl": "https://apps.apple.com/app/baitocast/id6759489017",
+    "appIconUrl": "baitocast.png",
+    "platforms": ["iOS", "Mobile", "iPad OS"],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/baitocast/id6759489017"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Search"
+      }
+    ]
+  },
+  {
     "appName": "PodChapters",
     "appType": ["hosting", "app", "other"],
     "tagLine": "Add podcast chapters that drive engagement in seconds!",
