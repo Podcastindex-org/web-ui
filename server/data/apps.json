@@ -3,7 +3,7 @@
     "appName": "BaitoCast",
     "appType": ["app", "podcast player"],
     "tagLine": "A podcast player for iPhone and iPad with offline listening, travel playlists, CarPlay, and iCloud sync.",
-    "appUrl": "https://apps.apple.com/app/baitocast/id6759489017",
+    "appUrl": "https://www.ithurbide.ch/baitocast.html",
     "appIconUrl": "baitocast.png",
     "platforms": ["iOS", "Mobile", "iPad OS"],
     "platformLinks": {
