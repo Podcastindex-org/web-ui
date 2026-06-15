@@ -4453,6 +4453,39 @@
       },
       {
         "elementName": "Value"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Person"
+      },
+      {
+        "elementName": "Location"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Locked"
+      },
+      {
+        "elementName": "License"
+      },
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "Trailer"
+      },
+      {
+        "elementName": "Podroll"
       }
     ]
   },
