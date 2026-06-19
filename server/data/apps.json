@@ -4476,5 +4476,18 @@
         "elementName": "Search"
       }
     ]
+  },
+  {
+    "appName": "Argo",
+    "appType": ["app"],
+    "tagLine": "Create Podcasting 2.0 chapter files — timecodes, links and images",
+    "appUrl": "https://getargo.app",
+    "appIconUrl": "argo.png",
+    "platforms": ["macOS"],
+    "supportedElements": [
+      {
+        "elementName": "Chapters"
+      }
+    ]
   }
 ]
