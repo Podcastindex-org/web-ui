@@ -4476,5 +4476,41 @@
         "elementName": "Search"
       }
     ]
+  },
+  {
+    "appName": "Bòcan Music",
+    "appType": ["music player", "podcast player", "app", "open source"],
+    "appUrl": "https://bocan.app",
+    "appIconUrl": "bocan.png",
+    "tagLine": "A local music library, podcast, and subsonic client for macOS",
+    "platforms": [
+      "macOS"
+    ],
+    "platformLinks": {
+      "macOS": "https://github.com/bocan/bocan-music/releases"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Person",
+        "elementURL": "https://github.com/bocan/bocan-music/releases/tag/v1.11.0"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://github.com/bocan/bocan-music/releases/tag/v1.11.0"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://github.com/bocan/bocan-music/releases/tag/v1.11.0"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://github.com/bocan/bocan-music/releases/tag/v1.11.0"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://github.com/bocan/bocan-music/releases/tag/v1.11.0"
+      }
+    ]
   }
+ 
 ]
