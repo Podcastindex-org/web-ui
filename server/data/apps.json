@@ -4509,6 +4509,10 @@
       {
         "elementName": "Chapters",
         "elementURL": "https://github.com/bocan/bocan-music/releases/tag/v1.11.0"
+      },
+      {
+        "elementName": "Podroll",
+        "elementURL": "https://github.com/bocan/bocan-music/releases/tag/v1.12.0"
       }
     ]
   }
