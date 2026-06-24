@@ -4506,6 +4506,49 @@
     ]
   },
   {
+    "appName": "BowlAfterBowl",
+    "appType": ["app", "podcast player", "open source"],
+    "tagLine": "May Your Bowls Burn Ever Brighter",
+    "appUrl": "https://bowlafterbowl.com",
+    "appIconUrl": "bowlafterbowl.png",
+    "platforms": ["Web", "Mobile"],
+    "supportedElements": [
+      {
+        "elementName": "Alternate Enclosure"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Chat"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Live Item"
+      },
+      {
+        "elementName": "Person"
+      },
+      {
+        "elementName": "Podroll"
+      },
+      {
+        "elementName": "Remote Item"
+      },
+      {
+        "elementName": "Value"
+      },
+      {
+        "elementName": "Wallet Switching (VTS)"
+      }
+    ]
+  },
+  {
     "appName": "OpenAir",
     "appType": ["app", "podcast player", "open source"],
     "tagLine": "OpenAir is a free and open source podcast app for exploring and enjoying the vast world of podcasts.",
