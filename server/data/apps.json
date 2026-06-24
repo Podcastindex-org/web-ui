@@ -4440,7 +4440,7 @@
   {
     "appName": "boxcast",
     "appType": ["app", "podcast player", "open source"],
-    "appUrl": "https://play.google.com/store/apps/details?id=cx.aswin.boxcast",
+    "appUrl": "https://github.com/ashwkun/box.cast.android",
     "appIconUrl": "boxcast.png",
     "tagLine": "Experience podcasts with boxcast, a fluid and distraction-free player built for those who value clean design and absolute transparency.",
     "platforms": ["Android", "Mobile"],
@@ -4453,6 +4453,39 @@
       },
       {
         "elementName": "Value"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Person"
+      },
+      {
+        "elementName": "Location"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Locked"
+      },
+      {
+        "elementName": "License"
+      },
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "Trailer"
+      },
+      {
+        "elementName": "Podroll"
       }
     ]
   },
