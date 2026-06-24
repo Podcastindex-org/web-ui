@@ -886,36 +886,6 @@
     ]
   },
   {
-    "appName": "Doerfel-Verse App",
-    "appType": ["app", "music player", "website"],
-    "appUrl": "https://itdv.podtards.com/",
-    "appIconUrl": "doerfelverse.png",
-    "platforms": ["Web", "Mobile"],
-    "supportedElements": [
-      {
-        "elementName": "Funding"
-      },
-      {
-        "elementName": "Podroll"
-      },
-      {
-        "elementName": "Publisher"
-      },
-      {
-        "elementName": "Boostagrams"
-      },
-      {
-        "elementName": "GUID"
-      },
-      {
-        "elementName": "Value"
-      },
-      {
-        "elementName": "Remote Item"
-      }
-    ]
-  },
-  {
     "appName": "Castamatic",
     "appType": ["app", "podcast player"],
     "appUrl": "https://castamatic.com/",
@@ -2910,39 +2880,6 @@
     ]
   },
   {
-    "appName": "Music Side Project",
-    "appType": ["hosting", "website"],
-    "appUrl": "https://musicsideproject.com",
-    "appIconUrl": "msp.png",
-    "platforms": ["Web", "Mobile"],
-    "supportedElements": [
-      {
-        "elementName": "Chapters"
-      },
-      {
-        "elementName": "Episode"
-      },
-      {
-        "elementName": "GUID"
-      },
-      {
-        "elementName": "Medium"
-      },
-      {
-        "elementName": "Podping"
-      },
-      {
-        "elementName": "Season"
-      },
-      {
-        "elementName": "Transcript"
-      },
-      {
-        "elementName": "Value"
-      }
-    ]
-  },
-  {
     "appName": "Sovereign Feeds",
     "appType": ["hosting", "open source", "website"],
     "appUrl": "https://sovereignfeeds.com",
@@ -4346,18 +4283,17 @@
       "app",
       "open source"
     ],
-    "appUrl": "https://new.musicsideproject.com",
+    "appUrl": "https://musicsideproject.com",
     "appIconUrl": "msp2.png",
     "tagLine": "Podcasting 2.0 RSS feed editor for albums & publishers",
     "platforms": [
       "Web",
-      "Mobile",
       "macOS",
       "Windows",
       "Linux"
     ],
     "platformLinks": {
-      "Web": "https://new.musicsideproject.com",
+      "Web": "https://musicsideproject.com",
       "macOS": "https://github.com/ChadFarrow/MSP-2.0-Desktop-App/releases",
       "Windows": "https://github.com/ChadFarrow/MSP-2.0-Desktop-App/releases",
       "Linux": "https://github.com/ChadFarrow/MSP-2.0-Desktop-App/releases"
