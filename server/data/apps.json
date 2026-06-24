@@ -1,5 +1,21 @@
 [
   {
+    "appName": "BaitoCast",
+    "appType": ["app", "podcast player"],
+    "tagLine": "A podcast player for iPhone and iPad with offline listening, travel playlists, CarPlay, and iCloud sync.",
+    "appUrl": "https://www.ithurbide.ch/baitocast.html",
+    "appIconUrl": "baitocast.png",
+    "platforms": ["iOS", "Mobile", "iPad OS"],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/baitocast/id6759489017"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Search"
+      }
+    ]
+  },
+  {
     "appName": "PodChapters",
     "appType": ["hosting", "app", "other"],
     "tagLine": "Add podcast chapters that drive engagement in seconds!",
@@ -4440,7 +4456,7 @@
   {
     "appName": "boxcast",
     "appType": ["app", "podcast player", "open source"],
-    "appUrl": "https://play.google.com/store/apps/details?id=cx.aswin.boxcast",
+    "appUrl": "https://github.com/ashwkun/box.cast.android",
     "appIconUrl": "boxcast.png",
     "tagLine": "Experience podcasts with boxcast, a fluid and distraction-free player built for those who value clean design and absolute transparency.",
     "platforms": ["Android", "Mobile"],
@@ -4453,6 +4469,39 @@
       },
       {
         "elementName": "Value"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Person"
+      },
+      {
+        "elementName": "Location"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Locked"
+      },
+      {
+        "elementName": "License"
+      },
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "Trailer"
+      },
+      {
+        "elementName": "Podroll"
       }
     ]
   },
@@ -4515,6 +4564,19 @@
         "elementURL": "https://github.com/bocan/bocan-music/releases/tag/v1.12.0"
       }
     ]
+  },
+  {
+    "appName": "Argo",
+    "appType": ["app"],
+    "tagLine": "Create Podcasting 2.0 chapter files — timecodes, links and images",
+    "appUrl": "https://getargo.app",
+    "appIconUrl": "argo.png",
+    "platforms": ["macOS"],
+    "supportedElements": [
+      {
+        "elementName": "Chapters"
+      }
+    ]
   }
- 
+
 ]
