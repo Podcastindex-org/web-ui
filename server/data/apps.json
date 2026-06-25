@@ -4513,6 +4513,41 @@
         "elementName": "Chapters"
       }
     ]
+  },
+  {
+    "appName": "PulsarCast",
+    "appType": ["app", "podcast player"],
+    "tagLine": "A modern, fast podcast player with chapters, transcripts, CarPlay, Apple Watch, a web player and AI.",
+    "appUrl": "https://pulsarcast.com",
+    "appIconUrl": "pulsarcast.png",
+    "platforms": [
+      "iOS",
+      "iPad OS",
+      "Android",
+      "Web",
+      "Mobile"
+    ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/id6775487376",
+      "Android": "https://play.google.com/store/apps/details?id=com.pulsarcast.app"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Season"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Search"
+      }
+    ]
   }
 
 ]
