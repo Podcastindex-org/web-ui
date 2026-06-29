@@ -1,5 +1,21 @@
 [
   {
+    "appName": "BaitoCast",
+    "appType": ["app", "podcast player"],
+    "tagLine": "A podcast player for iPhone and iPad with offline listening, travel playlists, CarPlay, and iCloud sync.",
+    "appUrl": "https://www.ithurbide.ch/baitocast.html",
+    "appIconUrl": "baitocast.png",
+    "platforms": ["iOS", "Mobile", "iPad OS"],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/baitocast/id6759489017"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Search"
+      }
+    ]
+  },
+  {
     "appName": "PodChapters",
     "appType": ["hosting", "app", "other"],
     "tagLine": "Add podcast chapters that drive engagement in seconds!",
@@ -863,36 +879,6 @@
       },
       {
         "elementName": "Chapters"
-      },
-      {
-        "elementName": "Remote Item"
-      }
-    ]
-  },
-  {
-    "appName": "Doerfel-Verse App",
-    "appType": ["app", "music player", "website"],
-    "appUrl": "https://itdv.podtards.com/",
-    "appIconUrl": "doerfelverse.png",
-    "platforms": ["Web", "Mobile"],
-    "supportedElements": [
-      {
-        "elementName": "Funding"
-      },
-      {
-        "elementName": "Podroll"
-      },
-      {
-        "elementName": "Publisher"
-      },
-      {
-        "elementName": "Boostagrams"
-      },
-      {
-        "elementName": "GUID"
-      },
-      {
-        "elementName": "Value"
       },
       {
         "elementName": "Remote Item"
@@ -2732,6 +2718,27 @@
       },
       {
         "elementName": "Txt"
+      },
+      {
+        "elementName": "Block"
+      },
+      {
+        "elementName": "Chat"
+      },
+      {
+        "elementName": "Video"
+      },
+      {
+        "elementName": "Image"
+      },
+      {
+        "elementName": "Live Boosts"
+      },
+      {
+        "elementName": "OP3"
+      },
+      {
+        "elementName": "Content Link"
       }
     ]
   },
@@ -2869,39 +2876,6 @@
       },
       {
         "elementName": "Wallet Switching (VTS)"
-      }
-    ]
-  },
-  {
-    "appName": "Music Side Project",
-    "appType": ["hosting", "website"],
-    "appUrl": "https://musicsideproject.com",
-    "appIconUrl": "msp.png",
-    "platforms": ["Web", "Mobile"],
-    "supportedElements": [
-      {
-        "elementName": "Chapters"
-      },
-      {
-        "elementName": "Episode"
-      },
-      {
-        "elementName": "GUID"
-      },
-      {
-        "elementName": "Medium"
-      },
-      {
-        "elementName": "Podping"
-      },
-      {
-        "elementName": "Season"
-      },
-      {
-        "elementName": "Transcript"
-      },
-      {
-        "elementName": "Value"
       }
     ]
   },
@@ -4110,13 +4084,15 @@
   },
   {
     "appName": "PrestoCast",
-    "appType": ["app", "website", "hosting"],
+    "appType": ["app", "website", "hosting", "podcast player"],
     "appUrl": "https://prestocast.com/",
     "appIconUrl": "PrestoCast.png",
     "tagLine": "Send audio notes. Get a podcast.",
-    "platforms": ["Web", "Mobile"],
+    "platforms": ["Web", "Mobile", "iOS", "Android"],
     "platformLinks": {
-      "Web": "https://prestocast.com/"
+      "Web": "https://prestocast.com/",
+      "iOS": "https://prestocast.com/apple",
+      "Android": "https://play.google.com/store/apps/details?id=com.prestocast.app"
     },
     "supportedElements": [
       {
@@ -4161,7 +4137,12 @@
         "elementURL": "https://prestocast.com/changelog#v2026-03-12"
       },
       {
-        "elementName": "Locked"
+        "elementName": "Locked",
+        "elementURL": "https://prestocast.com/changelog#v2026.04.09"
+      },
+      {
+        "elementName": "Block",
+        "elementURL": "https://prestocast.com/changelog#v2026-05-14"
       },
       {
         "elementName": "Episode"
@@ -4196,9 +4177,222 @@
     ]
   },
   {
+    "appName": "Stablekraft",
+    "appType": [
+      "music player",
+      "podcast player",
+      "video",
+      "app",
+      "website",
+      "open source"
+    ],
+    "appUrl": "https://stablekraft.app",
+    "appIconUrl": "stablekraft.png",
+    "tagLine": "Music discovery & streaming from podcast feeds with V4V payments",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Remote Item"
+      },
+      {
+        "elementName": "Podping"
+      },
+      {
+        "elementName": "Video"
+      },
+      {
+        "elementName": "Publisher"
+      },
+      {
+        "elementName": "Wallet Switching (VTS)"
+      },
+      {
+        "elementName": "Boostagrams"
+      },
+      {
+        "elementName": "Search"
+      },
+      {
+        "elementName": "Txt"
+      }
+    ]
+  },
+  {
+    "appName": "Into The Doerfel-Verse",
+    "appType": [
+      "music player",
+      "video",
+      "app",
+      "website",
+      "open source"
+    ],
+    "appUrl": "https://itdv.podtards.com",
+    "appIconUrl": "itdv.jpg",
+    "tagLine": "PC 2.0 music player for all things Doerfel-Verse",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value"
+      },
+      {
+        "elementName": "Boostagrams"
+      },
+      {
+        "elementName": "Remote Item"
+      },
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Video"
+      },
+      {
+        "elementName": "Publisher"
+      },
+      {
+        "elementName": "Funding"
+      }
+    ]
+  },
+  {
+    "appName": "MSP 2.0",
+    "appType": [
+      "hosting",
+      "website",
+      "app",
+      "open source"
+    ],
+    "appUrl": "https://musicsideproject.com",
+    "appIconUrl": "msp2.png",
+    "tagLine": "Podcasting 2.0 RSS feed editor for albums & publishers",
+    "platforms": [
+      "Web",
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "platformLinks": {
+      "Web": "https://musicsideproject.com",
+      "macOS": "https://github.com/ChadFarrow/MSP-2.0-Desktop-App/releases",
+      "Windows": "https://github.com/ChadFarrow/MSP-2.0-Desktop-App/releases",
+      "Linux": "https://github.com/ChadFarrow/MSP-2.0-Desktop-App/releases"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Person"
+      },
+      {
+        "elementName": "Value"
+      },
+      {
+        "elementName": "Funding"
+      },
+      {
+        "elementName": "Season"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Publisher"
+      },
+      {
+        "elementName": "Txt"
+      },
+      {
+        "elementName": "Image"
+      },
+      {
+        "elementName": "OP3"
+      },
+      {
+        "elementName": "Podping"
+      },
+      {
+        "elementName": "Video"
+      }
+    ]
+  },
+  {
+    "appName": "Boost Me Bitch",
+    "appType": [
+      "podcast player",
+      "music player",
+      "app",
+      "website",
+      "open source"
+    ],
+    "appUrl": "https://boostmebitch.com",
+    "appIconUrl": "boostmebitch.png",
+    "tagLine": "Search. Listen. Boost. — V4V podcast player with Nostr-published boosts",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value"
+      },
+      {
+        "elementName": "Boostagrams"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Remote Item"
+      },
+      {
+        "elementName": "Search"
+      },
+      {
+        "elementName": "Image"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Season"
+      },
+      {
+        "elementName": "Live Item"
+      }
+    ]
+  },
+  {
     "appName": "boxcast",
     "appType": ["app", "podcast player", "open source"],
-    "appUrl": "https://play.google.com/store/apps/details?id=cx.aswin.boxcast",
+    "appUrl": "https://github.com/ashwkun/box.cast.android",
     "appIconUrl": "boxcast.png",
     "tagLine": "Experience podcasts with boxcast, a fluid and distraction-free player built for those who value clean design and absolute transparency.",
     "platforms": ["Android", "Mobile"],
@@ -4211,6 +4405,147 @@
       },
       {
         "elementName": "Value"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Person"
+      },
+      {
+        "elementName": "Location"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Locked"
+      },
+      {
+        "elementName": "License"
+      },
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "Trailer"
+      },
+      {
+        "elementName": "Podroll"
+      }
+    ]
+  },
+  {
+    "appName": "OpenAir",
+    "appType": ["app", "podcast player", "open source"],
+    "tagLine": "OpenAir is a free and open source podcast app for exploring and enjoying the vast world of podcasts.",
+    "appUrl": "https://openair-podcast.github.io/openair-website/",
+    "appIconUrl": "openair.png",
+    "platforms": ["Mobile", "Android", "Linux", "Windows"],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.liquidhive.openair",
+      "Linux": "https://github.com/OpenAir-Podcast/OpenAir/releases",
+      "Windows": "https://github.com/OpenAir-Podcast/OpenAir/releases"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "Search"
+      }
+    ]
+  },
+  {
+    "appName": "Bòcan Music",
+    "appType": ["music player", "podcast player", "app", "open source"],
+    "appUrl": "https://bocan.app",
+    "appIconUrl": "bocan.png",
+    "tagLine": "A local music library, podcast, and subsonic client for macOS",
+    "platforms": [
+      "macOS"
+    ],
+    "platformLinks": {
+      "macOS": "https://github.com/bocan/bocan-music/releases"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Person",
+        "elementURL": "https://github.com/bocan/bocan-music/releases/tag/v1.11.0"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://github.com/bocan/bocan-music/releases/tag/v1.11.0"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://github.com/bocan/bocan-music/releases/tag/v1.11.0"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://github.com/bocan/bocan-music/releases/tag/v1.11.0"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://github.com/bocan/bocan-music/releases/tag/v1.11.0"
+      },
+      {
+        "elementName": "Podroll",
+        "elementURL": "https://github.com/bocan/bocan-music/releases/tag/v1.12.0"
+      }
+    ]
+  },
+  {
+    "appName": "Argo",
+    "appType": ["app"],
+    "tagLine": "Create Podcasting 2.0 chapter files — timecodes, links and images",
+    "appUrl": "https://getargo.app",
+    "appIconUrl": "argo.png",
+    "platforms": ["macOS"],
+    "supportedElements": [
+      {
+        "elementName": "Chapters"
+      }
+    ]
+  },
+  {
+    "appName": "PulsarCast",
+    "appType": ["app", "podcast player"],
+    "tagLine": "A modern, fast podcast player with chapters, transcripts, CarPlay, Apple Watch, a web player and AI.",
+    "appUrl": "https://pulsarcast.com",
+    "appIconUrl": "pulsarcast.png",
+    "platforms": [
+      "iOS",
+      "iPad OS",
+      "Android",
+      "Web",
+      "Mobile"
+    ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/id6775487376",
+      "Android": "https://play.google.com/store/apps/details?id=com.pulsarcast.app"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Season"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Search"
       }
     ]
   },
