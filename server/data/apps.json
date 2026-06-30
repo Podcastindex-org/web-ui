@@ -2986,7 +2986,7 @@
     "appType": ["app", "open source", "website"],
     "appUrl": "https://www.thesplitkit.com",
     "appIconUrl": "split-kit.png",
-    "tagLine": "Empower Your Projects with Lightning Network Boostagrams.",    
+    "tagLine": "Empower Your Projects with Lightning Network Boostagrams.",
     "platforms": ["Web", "Mobile"],
     "supportedElements": [
       {
@@ -3383,13 +3383,13 @@
     },
     "supportedElements": [
       {
-        "elementName": "Transcript"        
+        "elementName": "Transcript"
       },
       {
         "elementName": "Chapters"
       }
     ]
-  },   
+  },
   {
     "appName": "PodRocket",
     "appType": ["website", "directory"],
@@ -4552,20 +4552,25 @@
   {
     "appName": "Podtopia",
     "appType": ["app", "podcast player"],
+    "tagLine": "A native podcasting experience built from the ground up for listeners who care about quality",
     "appUrl": "https://www.hacfapps.com/apps/podtopia",
     "appIconUrl": "podtopia.png",
-    "tagLine": "A native podcasting experience built from the ground up for listeners who care about quality",
-    "platforms": ["Android", "Mobile"],
+    "platforms": [
+      "Android",
+      "Mobile"
+    ],
     "platformLinks": {
+      "iOS": "https://apps.apple.com/app/id6775487376",
       "Android": "https://play.google.com/store/apps/details?id=com.hacfapps.podtopia"
     },
     "supportedElements": [
       {
-        "elementName": "Search"
+        "elementName": "Episode"
       },
       {
-        "elementName": "Episode"
+        "elementName": "Search"
       }
     ]
-  },
+  }
+
 ]
