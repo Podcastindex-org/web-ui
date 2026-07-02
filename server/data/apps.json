@@ -4548,6 +4548,22 @@
         "elementName": "Search"
       }
     ]
+  },
+  {
+    "appName": "PodSized",
+    "appType": ["podcast player", "app"],
+    "tagLine": "AI-powered podcast summaries — get the key ideas from any episode in minutes with structured summaries, outlines, audio overviews, and transcripts.",
+    "appUrl": "https://podsized.io",
+    "appIconUrl": "podsized.png",
+    "platforms": ["iOS", "Android", "Mobile"],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/us/app/podsized-ai-podcast-summaries/id6737673525",
+      "Android": "https://play.google.com/store/apps/details?id=io.podsized.android"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Search"
+      }
+    ]
   }
-
 ]
