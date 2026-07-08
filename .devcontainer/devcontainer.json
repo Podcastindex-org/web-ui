@@ -1,0 +1,32 @@
+{
+  "name": "podcastindex-web-ui",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-16-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+  "forwardPorts": [9001, 5001],
+  "portsAttributes": {
+    "9001": {
+      "label": "webpack-dev-server (UI)",
+      "onAutoForward": "openPreview"
+    },
+    "5001": {
+      "label": "express API server",
+      "onAutoForward": "notify"
+    }
+  },
+  "containerEnv": {
+    "COREPACK_ENABLE_DOWNLOAD_PROMPT": "0"
+  },
+  "postCreateCommand": "sudo corepack enable && corepack prepare yarn@3.4.1 --activate && { [ -f .env ] || cp .env-example .env; } && { [ -f .environments/.env.development ] || cp .env-example .environments/.env.development; } && yarn install",
+  "remoteUser": "node"
+}
