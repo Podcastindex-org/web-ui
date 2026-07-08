@@ -1,6 +1,11 @@
 {
   "name": "podcastindex-web-ui",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:1-16-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  },
   "customizations": {
     "vscode": {
       "extensions": [
