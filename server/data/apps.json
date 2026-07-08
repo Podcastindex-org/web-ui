@@ -1,5 +1,21 @@
 [
   {
+    "appName": "Hilite",
+    "appType": ["hosting", "app"],
+    "tagLine": "AI-powered podcast creation — record, edit, enhance, and publish faster with transcripts, show notes, and audio cleanup.",
+    "appUrl": "https://www.hellohilite.com/",
+    "appIconUrl": "hilite.png",
+    "platforms": ["Web"],
+    "platformLinks": {
+      "Web": "https://app.hellohilite.com/login"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Transcript"
+      }
+    ]
+  },
+  {
     "appName": "BaitoCast",
     "appType": ["app", "podcast player"],
     "tagLine": "A podcast player for iPhone and iPad with offline listening, travel playlists, CarPlay, and iCloud sync.",
