@@ -9,11 +9,7 @@
     "platformLinks": {
       "Web": "https://app.hellohilite.com/login"
     },
-    "supportedElements": [
-      {
-        "elementName": "Transcript"
-      }
-    ]
+    "supportedElements": []
   },
   {
     "appName": "BaitoCast",
