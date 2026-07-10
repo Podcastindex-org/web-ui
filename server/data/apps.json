@@ -4548,6 +4548,24 @@
         "elementName": "Search"
       }
     ]
+  },
+  {
+    "appName": "ZeroAds",
+    "appType": [
+      "website",
+      "rss proxy"
+    ],
+    "tagLine": "A cloud service that gives you ad-free versions of your podcasts as private RSS feeds you can add to any podcast app.",
+    "appUrl": "https://zeroads.ai/",
+    "appIconUrl": "zeroads.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search"
+      }
+    ]
   }
 
 ]
