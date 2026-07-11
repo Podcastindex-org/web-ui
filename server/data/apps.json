@@ -12,7 +12,7 @@
     "supportedElements": [
       { "elementName": "Search", "elementURL": "https://soundcarrot.com/search/" },
       { "elementName": "Episode" },
-      { "elementName": "Season" },
+      { "elementName": "Season" }
     ]
   },
   {
