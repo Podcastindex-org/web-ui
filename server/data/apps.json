@@ -1,30 +1,18 @@
 [
   {
     "appName": "SoundCarrot",
-    "appType": ["directory", "website","podcast player"],
-    "appIconUrl": "soundcarrot.png",
+    "appType": ["directory", "podcast player", "website"],
+    "tagLine": "Curated children's podcast discovery. Verified awesome, 0% boring.",
     "appUrl": "https://soundcarrot.com",
-    "platforms": ["Web","Mobile"],
-    "supportedElements": [],
-    "tagLine": "A curated, family-made podcast discovery platform for kids.",
+    "appIconUrl": "soundcarrot.png",
+    "platforms": ["Web", "Mobile"],
     "platformLinks": {
       "Web": "https://soundcarrot.com"
-    }
-  },
-  {
-    "appName": "BaitoCast",
-    "appType": ["app", "podcast player"],
-    "tagLine": "A podcast player for iPhone and iPad with offline listening, travel playlists, CarPlay, and iCloud sync.",
-    "appUrl": "https://www.ithurbide.ch/baitocast.html",
-    "appIconUrl": "baitocast.png",
-    "platforms": ["iOS", "Mobile", "iPad OS"],
-    "platformLinks": {
-      "iOS": "https://apps.apple.com/app/baitocast/id6759489017"
     },
     "supportedElements": [
-      {
-        "elementName": "Search"
-      }
+      { "elementName": "Search", "elementURL": "https://soundcarrot.com/search/" },
+      { "elementName": "Episode" },
+      { "elementName": "Season" },
     ]
   },
   {
