@@ -1,5 +1,17 @@
 [
   {
+    "appName": "SoundCarrot",
+    "appType": ["directory", "website","podcast player"],
+    "appIconUrl": "soundcarrot.png",
+    "appUrl": "https://soundcarrot.com",
+    "platforms": ["Web","Mobile"],
+    "supportedElements": [],
+    "tagLine": "A curated, family-made podcast discovery platform for kids.",
+    "platformLinks": {
+      "Web": "https://soundcarrot.com"
+    }
+  },
+  {
     "appName": "BaitoCast",
     "appType": ["app", "podcast player"],
     "tagLine": "A podcast player for iPhone and iPad with offline listening, travel playlists, CarPlay, and iCloud sync.",
