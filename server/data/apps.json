@@ -4579,9 +4579,6 @@
   "tagLine": "The easiest way to discover, organize, and prepare podcasts for Toniebox Creative-Tonies and Yoto Make Your Own cards.",
   "supportedElements": [
     {
-      "elementName": "Podcast"
-    },
-    {
       "elementName": "Episode"
     },
     {
