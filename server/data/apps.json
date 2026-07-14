@@ -4564,6 +4564,30 @@
         "elementName": "Search"
       }
     ]
-  }
+  },
+  {
+  "appName": "LittleCast",
+  "appType": [
+    "app",
+    "podcast player"
+  ],
+  "appUrl": "https://littlecast.app",
+  "appIconUrl": "https://littlecast.app/littlecast-icon.png",
+  "platforms": [
+    "iOS"
+  ],
+  "tagLine": "The easiest way to discover, organize, and prepare podcasts for Toniebox Creative-Tonies and Yoto Make Your Own cards.",
+  "supportedElements": [
+    {
+      "elementName": "Podcast"
+    },
+    {
+      "elementName": "Episode"
+    },
+    {
+      "elementName": "Search"
+    }
+  ]
+}
 
 ]
