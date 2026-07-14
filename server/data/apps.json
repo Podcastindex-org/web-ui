@@ -1,5 +1,21 @@
 [
   {
+    "appName": "RadioShake",
+    "appType": ["app", "podcast player"],
+    "tagLine": "Free Android radio + podcast player with built-in song ID. No account, no tracking.",
+    "appUrl": "https://radioshake.media",
+    "appIconUrl": "radioshake.png",
+    "platforms": ["Android", "Mobile"],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.radioshake"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Search"
+      }
+    ]
+  },
+  {
     "appName": "SoundCarrot",
     "appType": ["directory", "podcast player", "website"],
     "tagLine": "Curated children's podcast discovery. Verified awesome, 0% boring.",
