@@ -4549,19 +4549,22 @@
   {
     "appName": "PulsarCast",
     "appType": ["app", "podcast player"],
-    "tagLine": "A modern, fast podcast player with chapters, transcripts, CarPlay, Apple Watch, a web player and AI.",
+    "tagLine": "A fast, private podcast player across Apple, Android, and the web. No ads or third-party trackers.",
     "appUrl": "https://pulsarcast.com",
     "appIconUrl": "pulsarcast.png",
     "platforms": [
       "iOS",
       "iPad OS",
       "Android",
+      "macOS",
       "Web",
       "Mobile"
     ],
     "platformLinks": {
-      "iOS": "https://apps.apple.com/app/id6775487376",
-      "Android": "https://play.google.com/store/apps/details?id=com.pulsarcast.app"
+      "iOS": "https://apps.apple.com/app/pulsarcast/id6775487376",
+      "Android": "https://play.google.com/store/apps/details?id=com.pulsarcast.app",
+      "macOS": "https://apps.apple.com/app/pulsarcast/id6775487376",
+      "Web": "https://pulsarcast.com/app"
     },
     "supportedElements": [
       {
