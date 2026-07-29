@@ -1,5 +1,27 @@
 [
   {
+    "appName": "Podknow",
+    "appType": ["app", "podcast player"],
+    "tagLine": "European podcast player for iPhone and iPad, developed in Germany. On-device AI for transcripts, chapters and summaries — no account, no tracking.",
+    "appUrl": "https://podknow.eu",
+    "appIconUrl": "Podknow.png",
+    "platforms": ["iOS", "iPad OS", "Mobile"],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/id6765773542"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Search"
+      }
+    ]
+  },
+  {
     "appName": "RadioShake",
     "appType": ["app", "podcast player"],
     "tagLine": "Free Android radio + podcast player with built-in song ID. No account, no tracking.",
