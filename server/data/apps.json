@@ -4605,6 +4605,47 @@
         "elementName": "Search"
       }
     ]
+  },
+  {
+    "appName": "Sovereigncast",
+    "appType": ["hosting", "app", "open source", "self-hosted"],
+    "tagLine": "Self-hosted Bitcoin Podcasting 2.0 production suite: hosting, planning, community and Value4Value in one open-source app.",
+    "appUrl": "https://sovereigncast.space",
+    "appIconUrl": "sovereigncast.png",
+    "platforms": ["Web", "Linux"],
+    "platformLinks": {
+      "Web": "https://sovereigncast.space"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://gitlab.com/nodesignal/podcasting_tools/-/blob/main/README.md"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://gitlab.com/nodesignal/podcasting_tools/-/blob/main/README.md"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://gitlab.com/nodesignal/podcasting_tools/-/blob/main/README.md"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://gitlab.com/nodesignal/podcasting_tools/-/blob/main/README.md"
+      },
+      {
+        "elementName": "Boostagrams",
+        "elementURL": "https://gitlab.com/nodesignal/podcasting_tools/-/blob/main/README.md"
+      },
+      {
+        "elementName": "Sat Streaming",
+        "elementURL": "https://gitlab.com/nodesignal/podcasting_tools/-/blob/main/README.md"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://gitlab.com/nodesignal/podcasting_tools/-/blob/main/README.md"
+      }
+    ]
   }
 
 ]
