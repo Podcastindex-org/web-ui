@@ -2863,15 +2863,15 @@
         "elementURL": "https://www.podpage.com/updates/podcasting-20/"
       },
       {
+        "elementName": "Chapters",
+        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
+      },
+      {
         "elementName": "Funding",
         "elementURL": "https://www.podpage.com/updates/podcasting-20/"
       },
       {
         "elementName": "Person",
-        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
-      },
-      {
-        "elementName": "Trailer",
         "elementURL": "https://www.podpage.com/updates/podcasting-20/"
       },
       {
@@ -2884,6 +2884,30 @@
       },
       {
         "elementName": "GUID",
+        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
+      },
+      {
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
+      },
+      {
+        "elementName": "Trailer",
+        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
+      },
+      {
+        "elementName": "Podroll",
+        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
+      },
+      {
+        "elementName": "Remote Item",
+        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
+      },
+      {
+        "elementName": "Search",
         "elementURL": "https://www.podpage.com/updates/podcasting-20/"
       }
     ]
