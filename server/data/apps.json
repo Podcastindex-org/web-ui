@@ -1936,7 +1936,27 @@
       },
       {
         "elementName": "OP3",
-        "elementURL": "https://beamly.com/product-update-integrations-zapier-senja/"
+        "elementURL": "https://beamly.com/features/"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://beamly.com/features/"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://beamly.com/features/"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://beamly.com/features/"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://beamly.com/features/"
+      },
+      {
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://beamly.com/features/"
       }
     ]
   },
