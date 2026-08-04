@@ -266,27 +266,32 @@ app.use('/api/comments/byepisodeid', powMiddleware, async (req, res) => {
 
   const sentCommenters = {}
 
-  const threadcap = await makeThreadcap(socialInteract[0].uri, {
-    userAgent,
-    cache,
-    fetcher,
-  })
+  try {
+    const threadcap = await makeThreadcap(socialInteract[0].uri, {
+      userAgent,
+      cache,
+      fetcher,
+    })
 
-  const callbacks = {
-    onEvent: (e) => {
-      if (e.kind === 'node-processed' && e.part === 'replies') {
-        writeThreadcapChunk(e.nodeId, threadcap, sentCommenters, res)
-      }
-    },
+    const callbacks = {
+      onEvent: (e) => {
+        if (e.kind === 'node-processed' && e.part === 'replies') {
+          writeThreadcapChunk(e.nodeId, threadcap, sentCommenters, res)
+        }
+      },
+    }
+
+    await updateThreadcap(threadcap, {
+      updateTime: new Date().toISOString(),
+      userAgent,
+      cache,
+      fetcher,
+      callbacks,
+    })
+  } catch (error) {
+    console.error('Error fetching ActivityPub comments:', error)
+    res.status(500).send('Error fetching ActivityPub comments')
   }
-
-  await updateThreadcap(threadcap, {
-    updateTime: new Date().toISOString(),
-    userAgent,
-    cache,
-    fetcher,
-    callbacks,
-  })
 
   res.end()
 })
