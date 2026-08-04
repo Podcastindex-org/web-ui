@@ -2980,7 +2980,8 @@
     },
     "supportedElements": [
       {
-        "elementName": "Chapters"
+        "elementName": "Chapters",
+        "elementURL": "https://thepodcastapp.dev/compare"
       },
       {
         "elementName": "Episode"
@@ -2992,7 +2993,29 @@
         "elementName": "GUID"
       },
       {
-        "elementName": "Transcript"
+        "elementName": "Transcript",
+        "elementURL": "https://thepodcastapp.dev/compare"
+      },
+      {
+        "elementName": "Funding"
+      },
+      {
+        "elementName": "Person"
+      },
+      {
+        "elementName": "Podroll"
+      },
+      {
+        "elementName": "Soundbite"
+      },
+      {
+        "elementName": "Alternate Enclosure"
+      },
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "Update Frequency"
       }
     ]
   },
