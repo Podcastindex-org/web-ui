@@ -1,5 +1,29 @@
 [
   {
+    "appName": "PodFetch",
+    "appType": [
+      "app",
+      "open source",
+      "self-hosted",
+      "podcast player"
+    ],
+    "tagLine": "Self-hosted podcast server with automatic downloads and GPodder sync",
+    "appUrl": "https://github.com/SamTV12345/PodFetch",
+    "appIconUrl": "podfetch.png",
+    "platforms": [
+      "Web"
+    ],
+    "platformLinks": {
+      "Web": "https://github.com/SamTV12345/PodFetch"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://github.com/SamTV12345/PodFetch"
+      }
+    ]
+  },
+  {
     "appName": "Podknow",
     "appType": ["app", "podcast player"],
     "tagLine": "European podcast player for iPhone and iPad, developed in Germany. On-device AI for transcripts, chapters and summaries — no account, no tracking.",
