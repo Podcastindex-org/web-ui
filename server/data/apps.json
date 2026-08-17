@@ -4699,6 +4699,33 @@
         "elementName": "Search"
       }
     ]
+  },
+  {
+    "appName": "Podli",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "Podcast player for iPhone and Android with search, offline downloads, CarPlay and Android Auto, no ads or tracking",
+    "appUrl": "https://podli.appgrid.eu/",
+    "appIconUrl": "podli.png",
+    "platforms": [
+      "iOS",
+      "Android",
+      "Mobile"
+    ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/id6788171878",
+      "Android": "https://play.google.com/store/apps/details?id=eu.appgrid.podli"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Search"
+      },
+      {
+        "elementName": "Podroll"
+      }
+    ]
   }
 
 ]
