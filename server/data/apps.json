@@ -800,6 +800,42 @@
     ]
   },
   {
+    "appName": "XMRPod",
+    "appType": ["app", "podcast player", "open source"],
+    "appUrl": "https://github.com/XMRChat/XMRPod",
+    "appIconUrl": "xmrpod.png",
+    "tagLine": "Open-source Android podcast player with Monero tipping support for creators on XMRChat.",
+    "platforms": ["Mobile", "Android"],
+    "platformLinks": {
+      "Android": "https://github.com/XMRChat/XMRPod/releases"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Search"
+      },
+      {
+        "elementName": "Funding"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Social Interact"
+      },
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Boostagrams",
+        "elementURL": "https://github.com/XMRChat/XMRPod#monero-tipping"
+      },
+      {
+        "elementName": "Live Boosts",
+        "elementURL": "https://github.com/XMRChat/XMRPod#monero-tipping"
+      }
+    ]
+  },
+  {
     "appName": "CurioCaster",
     "appType": ["app", "podcast player", "open source"],
     "tagLine": "The Best Podcast Player in Texas.",
