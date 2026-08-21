@@ -805,9 +805,10 @@
     "appUrl": "https://github.com/XMRChat/XMRPod",
     "appIconUrl": "xmrpod.png",
     "tagLine": "Open-source Android podcast player with Monero tipping support for creators on XMRChat.",
-    "platforms": ["Mobile", "Android"],
+    "platforms": ["Mobile", "Android", "F-Droid"],
     "platformLinks": {
-      "Android": "https://github.com/XMRChat/XMRPod/releases"
+      "Android": "https://github.com/XMRChat/XMRPod/releases",
+      "F-Droid": "https://f-droid.org/packages/com.xmrchat.xmrpod/"
     },
     "supportedElements": [
       {
@@ -824,14 +825,6 @@
       },
       {
         "elementName": "Transcript"
-      },
-      {
-        "elementName": "Boostagrams",
-        "elementURL": "https://github.com/XMRChat/XMRPod#monero-tipping"
-      },
-      {
-        "elementName": "Live Boosts",
-        "elementURL": "https://github.com/XMRChat/XMRPod#monero-tipping"
       }
     ]
   },
