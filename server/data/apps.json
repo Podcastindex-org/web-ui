@@ -4307,11 +4307,14 @@
   },
   {
     "appName": "Car Curious",
-    "appType": ["website"],
+    "appType": ["website", "podcast player", "app"],
     "tagLine": "Smart annotations and searchable transcripts for automotive podcasts",
     "appUrl": "https://getcarcurious.com",
     "appIconUrl": "carcurious.png",
-    "platforms": ["Web"],
+    "platforms": ["Web", "iOS"],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/us/app/car-curious/id6785778025"
+    },
     "supportedElements": [
       {
         "elementName": "Transcript"
