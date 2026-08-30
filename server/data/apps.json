@@ -1,5 +1,27 @@
 [
   {
+    "appName": "Attunex",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "Follow people, not just podcasts: every guest appearance in one feed, with episodes readable via on-device transcripts and AI summaries. No account, no tracking.",
+    "appUrl": "https://attunex.app",
+    "appIconUrl": "Attunex.png",
+    "platforms": [
+      "iOS",
+      "Mobile"
+    ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/us/app/attunex-podcast-player/id6786431074"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Transcript"
+      }
+    ]
+  },
+  {
     "appName": "PodFetch",
     "appType": [
       "app",
