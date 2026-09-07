@@ -58,6 +58,13 @@
                     "description": "The same recommendation graph, filtered to feeds whose <podcast:medium> or content profile marks them as music."
                 },
                 {
+                    "name": "Podcast locations",
+                    "url": "https://public.podcastindex.org/locations.json",
+                    "format": "JSON",
+                    "cadence": "daily",
+                    "description": "All live feeds carrying a <podcast:location> tag, with the place name, rel type (subject or creator), OpenStreetMap object ID, ISO country code, and latitude/longitude from the tag."
+                },
+                {
                     "name": "Value-enabled feeds - CSV",
                     "url": "https://public.podcastindex.org/valueEnabledFeeds.csv",
                     "format": "CSV",
