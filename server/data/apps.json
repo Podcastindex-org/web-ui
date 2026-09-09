@@ -4769,6 +4769,40 @@
         "elementName": "Podroll"
       }
     ]
+  },
+  {
+    "appName": "Parasocial",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "A podcast player for iPhone, iPad and Mac by Super Simple. Listening to podcasts should be a joy.",
+    "appUrl": "https://parasocial.fm",
+    "appIconUrl": "parasocial.png",
+    "platforms": [
+      "iOS",
+      "iPad OS",
+      "macOS",
+      "Mobile"
+    ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/id6792017587",
+      "macOS": "https://apps.apple.com/app/id6792017587"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Podping"
+      },
+      {
+        "elementName": "Search"
+      }
+    ]
   }
 
 
