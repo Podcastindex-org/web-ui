@@ -4608,6 +4608,18 @@
       },
       {
         "elementName": "Podroll"
+      },
+      {
+        "elementName": "Season"
+      },
+      {
+        "elementName": "Update Frequency"
+      },
+      {
+        "elementName": "Video"
+      },
+      {
+        "elementName": "Search"
       }
     ]
   },
