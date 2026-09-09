@@ -4560,14 +4560,14 @@
     ]
   },
   {
-    "appName": "boxcast",
+    "appName": "boxlore",
     "appType": ["app", "podcast player", "open source"],
-    "appUrl": "https://github.com/ashwkun/box.cast.android",
-    "appIconUrl": "boxcast.png",
-    "tagLine": "Experience podcasts with boxcast, a fluid and distraction-free player built for those who value clean design and absolute transparency.",
+    "appUrl": "https://github.com/boxcreate/boxlore",
+    "appIconUrl": "boxlore.png",
+    "tagLine": "Experience podcasts with boxlore, a fluid and distraction-free player built for those who value clean design and absolute transparency.",
     "platforms": ["Android", "Mobile"],
     "platformLinks": {
-      "Android": "https://play.google.com/store/apps/details?id=cx.aswin.boxcast"
+      "Android": "https://play.google.com/store/apps/details?id=cx.aswin.boxlore"
     },
     "supportedElements": [
       {
@@ -4608,6 +4608,18 @@
       },
       {
         "elementName": "Podroll"
+      },
+      {
+        "elementName": "Season"
+      },
+      {
+        "elementName": "Update Frequency"
+      },
+      {
+        "elementName": "Video"
+      },
+      {
+        "elementName": "Search"
       }
     ]
   },
