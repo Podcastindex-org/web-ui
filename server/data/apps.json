@@ -4801,18 +4801,6 @@
       },
       {
         "elementName": "Search"
-      },
-      {
-        "elementName": "Season"
-      },
-      {
-        "elementName": "Episode"
-      },
-      {
-        "elementName": "GUID"
-      },
-      {
-        "elementName": "Trailer"
       }
     ]
   }
