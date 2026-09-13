@@ -50,7 +50,8 @@ export default class Value extends React.PureComponent<IProps, PodState> {
     const knownDeadNodes = {
       "030a58b8653d32b99200a2334cfe913e51dc7d155aa0116c176657a4f1722677a3": "Alby",
       "0332d57355d673e217238ce3e4be8491aa6b2a13f95494133ee243e57df1653ace": "Fountain",
-      "03bc290b26637eb8f25de69fca83c85c014796aa03d90bf0d4c03c18947e12127d": "Fountain"
+      "03bc290b26637eb8f25de69fca83c85c014796aa03d90bf0d4c03c18947e12127d": "Fountain",
+      "03ae9f91a0cb8ff43840e3c322c4c61f019d8c1c3cea15a25cfc425ac605e61a4a": "Podcast Index",
     }
 
     return (
