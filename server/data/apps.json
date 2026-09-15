@@ -4844,6 +4844,30 @@
         "elementName": "Search"
       }
     ]
+  },
+  {
+    "appName": "Podtastic",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "Independent RSS-first player with on-device transcription and AI summaries. Jump to Video time-syncs a show's audio and video versions.",
+    "appUrl": "https://podtastic.app",
+    "appIconUrl": "Podtastic.png",
+    "platforms": [
+      "iOS",
+      "Android",
+      "Mobile"
+    ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/us/app/podtastic/id6761050924",
+      "Android": "https://play.google.com/store/apps/details?id=app.podtastic"
+    },
+    "supportedElements": [
+      {
+        "elementName": "GUID"
+      }
+    ]
   }
 
 
