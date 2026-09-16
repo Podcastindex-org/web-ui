@@ -29,10 +29,10 @@
         "elementName": "Funding"
       },
       {
-        "elementName": "Guid"
+        "elementName": "GUID"
       },
       {
-        "elementName": "txt"
+        "elementName": "Txt"
       }
     ]
   },
