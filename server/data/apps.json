@@ -1,5 +1,42 @@
 [
   {
+    "appName": "Podcini.A",
+    "appType": ["app", "podcast player"],
+    "tagLine": "Your premier podcast/media instrument, open-source, no ads, no tracking, now extensible, capable of handling external sources",
+    "appUrl": "https://github.com/XilinJia/Podcini.A",
+    "appIconUrl": "Podcini.png",
+    "platforms": ["Android"],
+    "platformLinks": {
+      "f-droid": "https://f-droid.org/en/packages/ac.mdiq.Podcini.A/"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Search"
+      },
+      {
+        "elementName": "Image"
+      },
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "Funding"
+      },
+      {
+        "elementName": "Guid"
+      },
+      {
+        "elementName": "txt"
+      }
+    ]
+  },
+  {
     "appName": "Attunex",
     "appType": [
       "app",
