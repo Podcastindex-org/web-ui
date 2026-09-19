@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const Dotenv = require('dotenv-webpack');
 
+const proxyTarget = process.env.PROXY_TARGET || 'http://localhost:5001';
+
 module.exports = env => ({
     watch: false,
     mode: 'production',
@@ -15,22 +17,22 @@ module.exports = env => ({
         proxy: {
             '/': {
                 changeOrigin: true,
-                target: 'http://localhost:5001',
+                target: proxyTarget,
                 pathRewrite: { '^/': '/' },
             },
             '/api': {
                 changeOrigin: true,
-                target: 'http://localhost:5001',
+                target: proxyTarget,
                 pathRewrite: { '^/api': '/api' },
             },
             '/namespace': {
                 changeOrigin: true,
-                target: 'http://localhost:5001',
+                target: proxyTarget,
                 pathRewrite: { '^/namespace': '/namespace' },
             },
             '/podcast': {
                 changeOrigin: true,
-                target: 'http://localhost:5001',
+                target: proxyTarget,
                 pathRewrite: { '^/podcast': '/podcast' },
             }
         },

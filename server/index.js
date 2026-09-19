@@ -110,6 +110,50 @@ app.get('/.well-known/lnurlp/podcastindex', (req, res) => {
 })
 
 // ------------------------------------------------
+// ------ Web Bot Auth key directory (JWKS) -------
+// ------------------------------------------------
+//
+// Publishes the PUBLIC Ed25519 key(s) the Aggrivator crawler uses to sign its
+// requests, so Cloudflare and other verifiers can confirm a signed request
+// really comes from us (Web Bot Auth / RFC 9421 HTTP Message Signatures).
+//
+// The body is served from server/data/http-message-signatures-directory.json so
+// that adding/rotating a key is a content edit, not a code change. The exact
+// media type below is mandatory — verifiers reject application/json.
+//
+// TODO(ops): replace the REPLACE_ME placeholder values in that JSON file with
+// the real JWKS produced on the signing server. Never put private key material
+// (a "d" member) in that file. The `kid` must match the crawler's advertised
+// keyid.
+//
+// CDN/WAF: this endpoint must be reachable by automated clients with no bot
+// challenge, redirect, or auth. The app applies no such gating to this path
+// (the POW middleware only guards /api/*), but if Cloudflare (or any WAF) is in
+// front of the site, ensure this exact path is allowed through unchallenged.
+app.get('/.well-known/http-message-signatures-directory', (req, res) => {
+  fs.readFile(
+    './server/data/http-message-signatures-directory.json',
+    'utf8',
+    (err, data) => {
+      if (err) {
+        res.status(500).json({ error: 'key directory unavailable' })
+        return
+      }
+      // Use setHeader (raw Node) rather than res.set/res.type so Express does
+      // not append "; charset=utf-8" — verifiers expect this media type exactly.
+      res.setHeader(
+        'Content-Type',
+        'application/http-message-signatures-directory+json'
+      )
+      res.setHeader('Cache-Control', 'public, max-age=3600')
+      // Send a Buffer, not a string: res.send() force-appends "; charset=utf-8"
+      // to the Content-Type for string bodies, which we must avoid here.
+      res.send(Buffer.from(data))
+    }
+  )
+})
+
+// ------------------------------------------------
 // ------------ Reverse proxy for API -------------
 // ------------------------------------------------
 
@@ -222,27 +266,32 @@ app.use('/api/comments/byepisodeid', powMiddleware, async (req, res) => {
 
   const sentCommenters = {}
 
-  const threadcap = await makeThreadcap(socialInteract[0].uri, {
-    userAgent,
-    cache,
-    fetcher,
-  })
+  try {
+    const threadcap = await makeThreadcap(socialInteract[0].uri, {
+      userAgent,
+      cache,
+      fetcher,
+    })
 
-  const callbacks = {
-    onEvent: (e) => {
-      if (e.kind === 'node-processed' && e.part === 'replies') {
-        writeThreadcapChunk(e.nodeId, threadcap, sentCommenters, res)
-      }
-    },
+    const callbacks = {
+      onEvent: (e) => {
+        if (e.kind === 'node-processed' && e.part === 'replies') {
+          writeThreadcapChunk(e.nodeId, threadcap, sentCommenters, res)
+        }
+      },
+    }
+
+    await updateThreadcap(threadcap, {
+      updateTime: new Date().toISOString(),
+      userAgent,
+      cache,
+      fetcher,
+      callbacks,
+    })
+  } catch (error) {
+    console.error('Error fetching ActivityPub comments:', error)
+    res.status(500).send('Error fetching ActivityPub comments')
   }
-
-  await updateThreadcap(threadcap, {
-    updateTime: new Date().toISOString(),
-    userAgent,
-    cache,
-    fetcher,
-    callbacks,
-  })
 
   res.end()
 })
@@ -335,6 +384,17 @@ app.use('/api/apps', async (req, res) => {
   })
 })
 
+app.use('/api/datasets', async (req, res) => {
+  fs.readFile('./server/data/public_datasets.json', 'utf8', (err, data) => {
+    if (err) {
+      res.status(500).send({})
+      return
+    }
+    res.set('Content-Type', 'application/json')
+    res.send(data)
+  })
+})
+
 app.use('/api/images', express.static('./server/assets'))
 
 // ------------------------------------------------
@@ -417,6 +477,15 @@ app.use('/stats', (req, res) => {
   })
 })
 
+app.use('/datasets', (req, res) => {
+  res.render('index', {
+    title: 'Datasets',
+    description:
+      'Open datasets generated and published by the Podcast Index project.',
+    path: req.originalUrl,
+  })
+})
+
 // ------------------------------------------------
 // ---------- Static content for client -----------
 // ------------------------------------------------
@@ -432,6 +501,11 @@ app.get('*', (req, res) => {
 const PORT = process.env.PORT || 333
 
 // start express server on port 5001 (default)
-app.listen(PORT, () => {
-  console.log(`server started on port ${PORT}`)
-})
+// Only listen when run directly, so the app can be imported by tests.
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`server started on port ${PORT}`)
+  })
+}
+
+module.exports = app

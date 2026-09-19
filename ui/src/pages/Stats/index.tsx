@@ -86,6 +86,9 @@ export default class Card extends React.Component<IProps> {
                     last60={overallStats.feedCount60days}
                     last90={overallStats.feedCount90days}
                 />
+                <div style={{ textAlign: 'center' }}>
+                    Get an <a href="https://public.podcastindex.org/24hourFeedReport.html">overview of all new feeds</a> over the last 24 hours.
+                </div>
             </div>
         )
     }

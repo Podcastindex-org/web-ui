@@ -148,9 +148,7 @@ export default class TopBar extends React.PureComponent<IProps, IState> {
                     >
                         <Button link href="/apps">Apps</Button>
                         <Button link href="/podcast/value4value">Value 4 Value</Button>
-                        <Button link href="/stats">
-                            Stats
-                        </Button>
+                        <Button link href="/datasets">Datasets</Button>
                         <Button link href="/add">Add</Button>
                         <Button href="https://podcastindex-org.github.io/docs-api/">
                             Docs

@@ -85,6 +85,7 @@
         "production": "NODE_ENV='production' && webpack --env.file=production --mode production && node server",
         "start": "node server",
         "test": "react-scripts test --env=jsdom",
+        "test:server": "node server/test/well-known-signing-directory.test.js",
         "eject": "react-scripts eject",
         "flow": "flow",
         "format": "prettier --write 'src/**/*.js'",
