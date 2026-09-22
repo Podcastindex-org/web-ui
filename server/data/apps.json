@@ -3131,7 +3131,7 @@
   {
     "appName": "The Podcast App",
     "appType": ["app", "podcast player"],
-    "tagLine": "Free, ad-free podcast player with AI cross-episode search for iOS and Android.",
+    "tagLine": "Podcast player for iOS and Android. Does not insert ads; Smart Ad-Skip on supported shows; AI search across your listening history.",
     "appUrl": "https://thepodcastapp.dev",
     "appIconUrl": "thepodcastapp.png",
     "platforms": ["iOS", "Android", "Mobile"],
@@ -3142,7 +3142,7 @@
     "supportedElements": [
       {
         "elementName": "Chapters",
-        "elementURL": "https://thepodcastapp.dev/compare"
+        "elementURL": "https://thepodcastapp.dev/open-podcasting"
       },
       {
         "elementName": "Episode"
@@ -3155,7 +3155,7 @@
       },
       {
         "elementName": "Transcript",
-        "elementURL": "https://thepodcastapp.dev/compare"
+        "elementURL": "https://thepodcastapp.dev/open-podcasting"
       },
       {
         "elementName": "Funding"
