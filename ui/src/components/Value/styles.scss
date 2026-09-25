@@ -40,6 +40,17 @@
     background-color: var(--color-primary);
     border-radius: .25rem;
   }
+
+  .lnaddress-details {
+    margin-left: .35rem;
+    font-size: .85em;
+    opacity: .65;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 @media only screen and (max-width: 767px) {
