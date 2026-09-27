@@ -4844,6 +4844,32 @@
         "elementName": "Search"
       }
     ]
+  },
+  {
+    "appName": "Bard",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "A podcast player made exclusively for fiction podcasts, audio drama, and actual play.",
+    "appUrl": "https://playbard.fm",
+    "appIconUrl": "bard.png",
+    "platforms": [
+      "iOS",
+      "Web",
+      "Mobile"
+    ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/id6760264469"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Search"
+      }
+    ]
   }
 
 
