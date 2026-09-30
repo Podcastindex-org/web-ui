@@ -4729,7 +4729,7 @@
     "podcast player"
   ],
   "appUrl": "https://littlecast.app",
-  "appIconUrl": "https://littlecast.app/img/littlecast-icon.png",
+  "appIconUrl": "littlecast-icon.png",
   "platforms": [
     "iOS"
   ],
