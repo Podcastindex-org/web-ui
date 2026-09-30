@@ -1,5 +1,40 @@
 [
   {
+    "appName": "podtunes",
+    "appType": [
+      "music player",
+      "app",
+      "website",
+      "directory"
+    ],
+    "tagLine": "Modern music discovery and streaming platform for Podcasting 2.0 & Value4Value.",
+    "appUrl": "https://podtunes.app",
+    "appIconUrl": "podtunes.png",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "platformLinks": {
+      "Web": "https://podtunes.app"
+    },
+    "supportedElements": [
+      { "elementName": "Value" },
+      { "elementName": "Boostagrams" },
+      { "elementName": "Funding" },
+      { "elementName": "GUID" },
+      { "elementName": "Medium" },
+      { "elementName": "Person" },
+      { "elementName": "Publisher" },
+      { "elementName": "Episode" },
+      { "elementName": "Search" },
+      { "elementName": "Podping" },
+      { "elementName": "OP3" },
+      { "elementName": "Remote Item" },
+      { "elementName": "Image" },
+      { "elementName": "Txt" }
+    ]
+  },
+  {
     "appName": "Attunex",
     "appType": [
       "app",
