@@ -1,5 +1,31 @@
 [
   {
+    "appName": "Graspd",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "AI companion for nonfiction podcasts — discuss, capture, remember.",
+    "appUrl": "https://graspd.app",
+    "appIconUrl": "graspd.png",
+    "platforms": [
+      "Web",
+      "Android"
+    ],
+    "platformLinks": {
+      "Web": "https://graspd.app",
+      "Android": "https://play.google.com/store/apps/details?id=app.graspd"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Person"
+      }
+    ]
+  },
+  {
     "appName": "Attunex",
     "appType": [
       "app",
