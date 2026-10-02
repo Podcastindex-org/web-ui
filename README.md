@@ -1,5 +1,7 @@
 # PodcastIndex Web UI
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Podcastindex-org/web-ui)
+
 Podcast Web UI is a project that houses the code for the React app and express server for [podcastindex.org](https://podcastindex.org/).
 
 - Landing page for PodcastIndex.
@@ -38,6 +40,17 @@ The reason to build a custom express server for serving React and other data is 
 The custom express server also is used to [reverse proxy](https://en.wikipedia.org/wiki/Reverse_proxy) requests through the same domain to prevent [CORS](https://developer.mozilla.org/docs/Web/HTTP/Guides/CORS) issues. Using the same domain to server up the UI content and to send api requests prevents CORS issues in modern browsers.
 
 ## Getting Started
+
+### Codespaces / Dev Containers
+
+Open this repo in [GitHub Codespaces](https://codespaces.new/Podcastindex-org/web-ui) or in VS Code with the [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers) extension and the environment is set up for you: `.env` and `.environments/.env.development` are seeded from `.env-example`, dependencies are installed, and ports `9001` (UI) and `5001` (API) are forwarded automatically. Then, in two terminals:
+
+```zsh
+yarn run dev    # Terminal 1: webpack dev server
+yarn run start  # Terminal 2: node/express server
+```
+
+The seeded `.env` files use placeholder values, so the app boots, but you'll still need real `API_KEY`/`API_SECRET` values for full functionality (see below).
 
 ### Summary
 ```bash
