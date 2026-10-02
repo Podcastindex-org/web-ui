@@ -1,5 +1,131 @@
 [
   {
+    "appName": "Graspd",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "AI companion for nonfiction podcasts — discuss, capture, remember.",
+    "appUrl": "https://graspd.app",
+    "appIconUrl": "graspd.png",
+    "platforms": [
+      "Web",
+      "Android"
+    ],
+    "platformLinks": {
+      "Web": "https://graspd.app",
+      "Android": "https://play.google.com/store/apps/details?id=app.graspd"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Person"
+      }
+    ]
+  },
+  {
+    "appName": "Attunex",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "Follow people, not just podcasts: every guest appearance in one feed, with episodes readable via on-device transcripts and AI summaries. No account, no tracking.",
+    "appUrl": "https://attunex.app",
+    "appIconUrl": "Attunex.png",
+    "platforms": [
+      "iOS",
+      "Mobile"
+    ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/us/app/attunex-podcast-player/id6786431074"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Transcript"
+      }
+    ]
+  },
+  {
+    "appName": "PodFetch",
+    "appType": [
+      "app",
+      "open source",
+      "self-hosted",
+      "podcast player"
+    ],
+    "tagLine": "Self-hosted podcast server with automatic downloads and GPodder sync",
+    "appUrl": "https://github.com/SamTV12345/PodFetch",
+    "appIconUrl": "podfetch.png",
+    "platforms": [
+      "Web"
+    ],
+    "platformLinks": {
+      "Web": "https://github.com/SamTV12345/PodFetch"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://github.com/SamTV12345/PodFetch"
+      }
+    ]
+  },
+  {
+    "appName": "Podknow",
+    "appType": ["app", "podcast player"],
+    "tagLine": "European podcast player for iPhone and iPad, developed in Germany. On-device AI for transcripts, chapters and summaries — no account, no tracking.",
+    "appUrl": "https://podknow.eu",
+    "appIconUrl": "Podknow.png",
+    "platforms": ["iOS", "iPad OS", "Mobile"],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/id6765773542"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Search"
+      }
+    ]
+  },
+  {
+    "appName": "RadioShake",
+    "appType": ["app", "podcast player"],
+    "tagLine": "Free Android radio + podcast player with built-in song ID. No account, no tracking.",
+    "appUrl": "https://radioshake.media",
+    "appIconUrl": "radioshake.png",
+    "platforms": ["Android", "Mobile"],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.radioshake"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Search"
+      }
+    ]
+  },
+  {
+    "appName": "SoundCarrot",
+    "appType": ["directory", "podcast player", "website"],
+    "tagLine": "Curated children's podcast discovery. Verified awesome, 0% boring.",
+    "appUrl": "https://soundcarrot.com",
+    "appIconUrl": "soundcarrot.png",
+    "platforms": ["Web", "Mobile"],
+    "platformLinks": {
+      "Web": "https://soundcarrot.com"
+    },
+    "supportedElements": [
+      { "elementName": "Search", "elementURL": "https://soundcarrot.com/search/" },
+      { "elementName": "Episode" },
+      { "elementName": "Season" }
+    ]
+  },
+  {
     "appName": "BaitoCast",
     "appType": ["app", "podcast player"],
     "tagLine": "A podcast player for iPhone and iPad with offline listening, travel playlists, CarPlay, and iCloud sync.",
@@ -122,6 +248,9 @@
       "iOS": "https://apps.apple.com/app/pocket-casts-podcast-player/id414834813"
     },
     "supportedElements": [
+      {
+        "elementName": "Alternate Enclosure"
+      },
       {
         "elementName": "Chapters",
         "elementURL": "https://blog.pocketcasts.com/2024/04/16/artwork-and-chapters/"
@@ -719,6 +848,35 @@
     ]
   },
   {
+    "appName": "XMRPod",
+    "appType": ["app", "podcast player", "open source"],
+    "appUrl": "https://github.com/XMRChat/XMRPod",
+    "appIconUrl": "xmrpod.png",
+    "tagLine": "Open-source Android podcast player with Monero tipping support for creators on XMRChat.",
+    "platforms": ["Mobile", "Android", "F-Droid"],
+    "platformLinks": {
+      "Android": "https://github.com/XMRChat/XMRPod/releases",
+      "F-Droid": "https://f-droid.org/packages/com.xmrchat.xmrpod/"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Search"
+      },
+      {
+        "elementName": "Funding"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Social Interact"
+      },
+      {
+        "elementName": "Transcript"
+      }
+    ]
+  },
+  {
     "appName": "CurioCaster",
     "appType": ["app", "podcast player", "open source"],
     "tagLine": "The Best Podcast Player in Texas.",
@@ -879,36 +1037,6 @@
       },
       {
         "elementName": "Chapters"
-      },
-      {
-        "elementName": "Remote Item"
-      }
-    ]
-  },
-  {
-    "appName": "Doerfel-Verse App",
-    "appType": ["app", "music player", "website"],
-    "appUrl": "https://itdv.podtards.com/",
-    "appIconUrl": "doerfelverse.png",
-    "platforms": ["Web", "Mobile"],
-    "supportedElements": [
-      {
-        "elementName": "Funding"
-      },
-      {
-        "elementName": "Podroll"
-      },
-      {
-        "elementName": "Publisher"
-      },
-      {
-        "elementName": "Boostagrams"
-      },
-      {
-        "elementName": "GUID"
-      },
-      {
-        "elementName": "Value"
       },
       {
         "elementName": "Remote Item"
@@ -1909,7 +2037,27 @@
       },
       {
         "elementName": "OP3",
-        "elementURL": "https://beamly.com/product-update-integrations-zapier-senja/"
+        "elementURL": "https://beamly.com/features/"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://beamly.com/features/"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://beamly.com/features/"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://beamly.com/features/"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://beamly.com/features/"
+      },
+      {
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://beamly.com/features/"
       }
     ]
   },
@@ -2816,15 +2964,15 @@
         "elementURL": "https://www.podpage.com/updates/podcasting-20/"
       },
       {
+        "elementName": "Chapters",
+        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
+      },
+      {
         "elementName": "Funding",
         "elementURL": "https://www.podpage.com/updates/podcasting-20/"
       },
       {
         "elementName": "Person",
-        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
-      },
-      {
-        "elementName": "Trailer",
         "elementURL": "https://www.podpage.com/updates/podcasting-20/"
       },
       {
@@ -2837,6 +2985,30 @@
       },
       {
         "elementName": "GUID",
+        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
+      },
+      {
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
+      },
+      {
+        "elementName": "Trailer",
+        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
+      },
+      {
+        "elementName": "Podroll",
+        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
+      },
+      {
+        "elementName": "Remote Item",
+        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://www.podpage.com/updates/podcasting-20/"
+      },
+      {
+        "elementName": "Search",
         "elementURL": "https://www.podpage.com/updates/podcasting-20/"
       }
     ]
@@ -2906,39 +3078,6 @@
       },
       {
         "elementName": "Wallet Switching (VTS)"
-      }
-    ]
-  },
-  {
-    "appName": "Music Side Project",
-    "appType": ["hosting", "website"],
-    "appUrl": "https://musicsideproject.com",
-    "appIconUrl": "msp.png",
-    "platforms": ["Web", "Mobile"],
-    "supportedElements": [
-      {
-        "elementName": "Chapters"
-      },
-      {
-        "elementName": "Episode"
-      },
-      {
-        "elementName": "GUID"
-      },
-      {
-        "elementName": "Medium"
-      },
-      {
-        "elementName": "Podping"
-      },
-      {
-        "elementName": "Season"
-      },
-      {
-        "elementName": "Transcript"
-      },
-      {
-        "elementName": "Value"
       }
     ]
   },
@@ -3018,7 +3157,7 @@
   {
     "appName": "The Podcast App",
     "appType": ["app", "podcast player"],
-    "tagLine": "Free, ad-free podcast player with AI cross-episode search for iOS and Android.",
+    "tagLine": "Podcast player for iOS and Android. Does not insert ads; Smart Ad-Skip on supported shows; AI search across your listening history.",
     "appUrl": "https://thepodcastapp.dev",
     "appIconUrl": "thepodcastapp.png",
     "platforms": ["iOS", "Android", "Mobile"],
@@ -3028,7 +3167,8 @@
     },
     "supportedElements": [
       {
-        "elementName": "Chapters"
+        "elementName": "Chapters",
+        "elementURL": "https://thepodcastapp.dev/open-podcasting"
       },
       {
         "elementName": "Episode"
@@ -3040,7 +3180,29 @@
         "elementName": "GUID"
       },
       {
-        "elementName": "Transcript"
+        "elementName": "Transcript",
+        "elementURL": "https://thepodcastapp.dev/open-podcasting"
+      },
+      {
+        "elementName": "Funding"
+      },
+      {
+        "elementName": "Person"
+      },
+      {
+        "elementName": "Podroll"
+      },
+      {
+        "elementName": "Soundbite"
+      },
+      {
+        "elementName": "Alternate Enclosure"
+      },
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "Update Frequency"
       }
     ]
   },
@@ -4306,7 +4468,7 @@
     ],
     "appUrl": "https://itdv.podtards.com",
     "appIconUrl": "itdv.jpg",
-    "tagLine": "Lightning-powered music platform for independent artists",
+    "tagLine": "PC 2.0 music player for all things Doerfel-Verse",
     "platforms": [
       "Web",
       "Mobile"
@@ -4346,18 +4508,17 @@
       "app",
       "open source"
     ],
-    "appUrl": "https://new.musicsideproject.com",
+    "appUrl": "https://musicsideproject.com",
     "appIconUrl": "msp2.png",
     "tagLine": "Podcasting 2.0 RSS feed editor for albums & publishers",
     "platforms": [
       "Web",
-      "Mobile",
       "macOS",
       "Windows",
       "Linux"
     ],
     "platformLinks": {
-      "Web": "https://new.musicsideproject.com",
+      "Web": "https://musicsideproject.com",
       "macOS": "https://github.com/ChadFarrow/MSP-2.0-Desktop-App/releases",
       "Windows": "https://github.com/ChadFarrow/MSP-2.0-Desktop-App/releases",
       "Linux": "https://github.com/ChadFarrow/MSP-2.0-Desktop-App/releases"
@@ -4416,7 +4577,7 @@
       "website",
       "open source"
     ],
-    "appUrl": "https://boostmebitch.vercel.app",
+    "appUrl": "https://boostmebitch.com",
     "appIconUrl": "boostmebitch.png",
     "tagLine": "Search. Listen. Boost. — V4V podcast player with Nostr-published boosts",
     "platforms": [
@@ -4454,14 +4615,14 @@
     ]
   },
   {
-    "appName": "boxcast",
+    "appName": "boxlore",
     "appType": ["app", "podcast player", "open source"],
-    "appUrl": "https://github.com/ashwkun/box.cast.android",
-    "appIconUrl": "boxcast.png",
-    "tagLine": "Experience podcasts with boxcast, a fluid and distraction-free player built for those who value clean design and absolute transparency.",
+    "appUrl": "https://github.com/boxcreate/boxlore",
+    "appIconUrl": "boxlore.png",
+    "tagLine": "Experience podcasts with boxlore, a fluid and distraction-free player built for those who value clean design and absolute transparency.",
     "platforms": ["Android", "Mobile"],
     "platformLinks": {
-      "Android": "https://play.google.com/store/apps/details?id=cx.aswin.boxcast"
+      "Android": "https://play.google.com/store/apps/details?id=cx.aswin.boxlore"
     },
     "supportedElements": [
       {
@@ -4502,6 +4663,18 @@
       },
       {
         "elementName": "Podroll"
+      },
+      {
+        "elementName": "Season"
+      },
+      {
+        "elementName": "Update Frequency"
+      },
+      {
+        "elementName": "Video"
+      },
+      {
+        "elementName": "Search"
       }
     ]
   },
@@ -4577,6 +4750,153 @@
         "elementName": "Chapters"
       }
     ]
+  },
+  {
+    "appName": "PulsarCast",
+    "appType": ["app", "podcast player"],
+    "tagLine": "A fast, private podcast player across Apple, Android, and the web. No ads or third-party trackers.",
+    "appUrl": "https://pulsarcast.com",
+    "appIconUrl": "pulsarcast.png",
+    "platforms": [
+      "iOS",
+      "iPad OS",
+      "Android",
+      "macOS",
+      "Web",
+      "Mobile"
+    ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/pulsarcast/id6775487376",
+      "Android": "https://play.google.com/store/apps/details?id=com.pulsarcast.app",
+      "macOS": "https://apps.apple.com/app/pulsarcast/id6775487376",
+      "Web": "https://pulsarcast.com/app"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Season"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Search"
+      }
+    ]
+  },
+  {
+  "appName": "LittleCast",
+  "appType": [
+    "app",
+    "podcast player"
+  ],
+  "appUrl": "https://littlecast.app",
+  "appIconUrl": "littlecast-icon.png",
+  "platforms": [
+    "iOS"
+  ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/id6760935326"
+   },   
+  "tagLine": "The easiest way to discover, organize, and prepare podcasts for Toniebox Creative-Tonies and Yoto Make Your Own cards.",
+  "supportedElements": [
+    {
+      "elementName": "Search"
+    }
+  ]
+},
+  {
+    "appName": "Podli",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "Podcast player for iPhone and Android with search, offline downloads, CarPlay and Android Auto, no ads or tracking",
+    "appUrl": "https://podli.appgrid.eu/",
+    "appIconUrl": "podli.png",
+    "platforms": [
+      "iOS",
+      "Android",
+      "Mobile"
+    ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/id6788171878",
+      "Android": "https://play.google.com/store/apps/details?id=eu.appgrid.podli"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Search"
+      },
+      {
+        "elementName": "Podroll"
+      }
+    ]
+  },
+  {
+    "appName": "Parasocial",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "A podcast player for iPhone, iPad and Mac by Super Simple. Listening to podcasts should be a joy.",
+    "appUrl": "https://parasocial.fm",
+    "appIconUrl": "parasocial.png",
+    "platforms": [
+      "iOS",
+      "iPad OS",
+      "macOS",
+      "Mobile"
+    ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/id6792017587",
+      "macOS": "https://apps.apple.com/app/id6792017587"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Podping"
+      },
+      {
+        "elementName": "Search"
+      }
+    ]
+  },
+  {
+    "appName": "Bard",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "A podcast player made exclusively for fiction podcasts, audio drama, and actual play.",
+    "appUrl": "https://playbard.fm",
+    "appIconUrl": "bard.png",
+    "platforms": [
+      "iOS",
+      "Web",
+      "Mobile"
+    ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/id6760264469"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Search"
+      }
+    ]
   }
+
 
 ]

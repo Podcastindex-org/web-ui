@@ -1,0 +1,35 @@
+services:
+  init:
+    image: node:16
+    command: [ "bash", "-c", "corepack enable && yarn install" ]
+    volumes:
+      - .:/app
+    working_dir: /app
+
+  dev:
+    image: node:16
+    command: [ "yarn", "run", "dev:docker"]
+    environment:
+      - PROXY_TARGET=http://server:5001
+    ports:
+      - "9001:9001"
+    volumes:
+      - .:/app
+    working_dir: /app
+    depends_on:
+      init:
+        condition: service_completed_successfully
+    restart: on-failure
+
+  server:
+    image: node:16
+    command: [ "yarn", "run", "start" ]
+    # ports:
+    #   - "5001:5001"
+    volumes:
+      - .:/app
+    working_dir: /app
+    depends_on:
+      init:
+        condition: service_completed_successfully
+    restart: on-failure
