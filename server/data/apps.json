@@ -4223,55 +4223,72 @@
     "platforms": ["Linux"],
     "supportedElements": [
       {
-        "elementName": "GUID"
+        "elementName": "GUID",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=MinusPod%20mints%20its%20own%20podcast%3Aguid%20rather%20than%20reusing"
       },
       {
-        "elementName": "Funding"
+        "elementName": "Funding",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Afunding"
       },
       {
-        "elementName": "Locked"
+        "elementName": "Locked",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Alocked"
       },
       {
-        "elementName": "Podroll"
+        "elementName": "Podroll",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Apodroll"
       },
       {
-        "elementName": "License"
+        "elementName": "License",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Alicense"
       },
       {
-        "elementName": "Medium"
+        "elementName": "Medium",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Amedium"
       },
       {
-        "elementName": "Person"
+        "elementName": "Person",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Aperson"
       },
       {
-        "elementName": "Update Frequency"
+        "elementName": "Update Frequency",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3AupdateFrequency"
       },
       {
-        "elementName": "Season"
+        "elementName": "Season",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Aseason"
       },
       {
-        "elementName": "Episode"
+        "elementName": "Episode",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Aepisode"
       },
       {
-        "elementName": "Trailer"
+        "elementName": "Trailer",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Atrailer"
       },
       {
-        "elementName": "Image"
+        "elementName": "Image",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Aimage"
       },
       {
-        "elementName": "Social Interact"
+        "elementName": "Social Interact",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3AsocialInteract"
       },
       {
-        "elementName": "Value"
+        "elementName": "Value",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Avalue"
       },
       {
-        "elementName": "Txt"
+        "elementName": "Txt",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Atxt%20%28general"
       },
       {
-        "elementName": "Transcript"
+        "elementName": "Transcript",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Atranscript"
       },
       {
-        "elementName": "Chapters"
+        "elementName": "Chapters",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=MinusPod%20serves%20its%20own%20chapters%20JSON"
       }
     ]
   }
