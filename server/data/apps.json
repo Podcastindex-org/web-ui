@@ -4847,6 +4847,84 @@
         "elementName": "Search"
       }
     ]
+  },
+  {
+    "appName": "MinusPod",
+    "appType": ["self-hosted", "rss proxy", "open source", "other"],
+    "appUrl": "https://github.com/ttlequals0/MinusPod",
+    "appIconUrl": "minuspod.png",
+    "tagLine": "Self-hosted server that strips ads from podcasts before playback.",
+    "platforms": ["Linux"],
+    "supportedElements": [
+      {
+        "elementName": "GUID",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=MinusPod%20mints%20its%20own%20podcast%3Aguid%20rather%20than%20reusing"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Afunding"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Alocked"
+      },
+      {
+        "elementName": "Podroll",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Apodroll"
+      },
+      {
+        "elementName": "License",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Alicense"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Amedium"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Aperson"
+      },
+      {
+        "elementName": "Update Frequency",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3AupdateFrequency"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Aseason"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Aepisode"
+      },
+      {
+        "elementName": "Trailer",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Atrailer"
+      },
+      {
+        "elementName": "Image",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Aimage"
+      },
+      {
+        "elementName": "Social Interact",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3AsocialInteract"
+      },
+      {
+        "elementName": "Value",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Avalue"
+      },
+      {
+        "elementName": "Txt",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Atxt%20%28general"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=podcast%3Atranscript"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=MinusPod%20serves%20its%20own%20chapters%20JSON"
+      }
+    ]
   }
 
 
