@@ -4925,7 +4925,23 @@
         "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=MinusPod%20serves%20its%20own%20chapters%20JSON"
       }
     ]
-  }
-
-
+  },
+  {
+  "appName": "MOCA Player",
+  "appType": ["app", "podcast player"],
+  "tagLine": "Podcast Listening, Done Differently.",
+  "appUrl": "https://mocaplayer.com",
+  "appIconUrl": "mocaplayer.png",
+  "platforms": ["Web", "iOS", "Android"],
+  "platformLinks": {
+    "Web": "https://mocaplayer.com",
+    "iOS": "https://apps.apple.com/app/id6739147637",
+    "Android": "https://play.google.com/store/apps/details?id=com.mocaware.mocaplayer"
+  },
+  "supportedElements": [
+    {
+      "elementName": "Search"
+    }
+  ]
+}
 ]
