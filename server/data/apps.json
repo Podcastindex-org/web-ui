@@ -4925,6 +4925,29 @@
         "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=MinusPod%20serves%20its%20own%20chapters%20JSON"
       }
     ]
+  },
+  {
+    "appName": "Spool",
+    "appType": [
+      "podcast player",
+      "app"
+    ],
+    "appUrl": "https://spoolcast.ca",
+    "appIconUrl": "spool.png",
+    "tagLine": "Podcasts on your terms: curate your queue, trim the silences, clip the best moments and add any feed by URL.",
+    "platforms": [
+      "Mobile",
+      "iOS",
+      "iPad OS"
+    ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/id6809485942"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Chapters"
+      }
+    ]
   }
 
 
