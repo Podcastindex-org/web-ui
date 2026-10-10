@@ -1,5 +1,31 @@
 [
   {
+    "appName": "GuestVine",
+    "appType": [
+      "website",
+      "directory",
+      "other"
+    ],
+    "tagLine": "Follow a person, not a show: every podcast guest appearance as a private RSS feed or email, built on the Podcast Index.",
+    "appUrl": "https://guestvine.fm",
+    "appIconUrl": "guestvine.png",
+    "platforms": [
+      "Web"
+    ],
+    "platformLinks": {
+      "Web": "https://guestvine.fm"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Person",
+        "elementURL": "https://guestvine.fm/p/rory-sutherland"
+      },
+      {
+        "elementName": "Search"
+      }
+    ]
+  },
+  {
     "appName": "Graspd",
     "appType": [
       "app",
