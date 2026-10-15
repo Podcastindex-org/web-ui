@@ -4946,6 +4946,18 @@
     "supportedElements": [
       {
         "elementName": "Chapters"
+      },
+      {
+        "elementName": "Funding"
+      },
+      {
+        "elementName": "Person"
+      },
+      {
+        "elementName": "Season"
+      },
+      {
+        "elementName": "Episode"
       }
     ]
   }
