@@ -1,5 +1,35 @@
 [
   {
+    "appName": "Podcasts Tracker",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "Podcast player for Android and iOS: up to 5x speed, volume boost, transcripts, chapters, Android Auto and Chromecast.",
+    "appUrl": "https://jonathanantoine.com/podcast.html",
+    "appIconUrl": "podcaststracker.png",
+    "platforms": [
+      "Mobile",
+      "Android",
+      "iOS"
+    ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.jonathanantoine.Podcasts",
+      "iOS": "https://apps.apple.com/app/podcasts-tracker/id1450382384"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Podroll"
+      }
+    ]
+  },
+  {
     "appName": "Graspd",
     "appType": [
       "app",
