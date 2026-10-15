@@ -17,7 +17,8 @@
     },
     "supportedElements": [
       {
-        "elementName": "Search"
+        "elementName": "Search",
+        "elementURL": "https://alarmcast.app/privacy/#:~:text=Podcast%20search%20%28sent%20to%20Apple%20and%20to%20Podcast%20Index%29"
       }
     ]
   },
