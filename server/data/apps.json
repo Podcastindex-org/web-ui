@@ -1,5 +1,28 @@
 [
   {
+    "appName": "Alarmcast",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "Podcast alarm clock for Android. Wakes you with your podcast instead of a beep, and lets you keep listening once you are up.",
+    "appUrl": "https://alarmcast.app",
+    "appIconUrl": "alarmcast.png",
+    "platforms": [
+      "Android",
+      "Mobile"
+    ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.alarmcast.app"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://alarmcast.app/privacy/#:~:text=Podcast%20search%20%28sent%20to%20Apple%20and%20to%20Podcast%20Index%29"
+      }
+    ]
+  },
+  {
     "appName": "Graspd",
     "appType": [
       "app",
