@@ -4983,6 +4983,45 @@
         "elementName": "Episode"
       }
     ]
+  },
+  {
+    "appName": "TrimPlayer",
+    "appType": [
+      "app",
+      "podcast player",
+      "open source"
+    ],
+    "appUrl": "https://trimplayer.com",
+    "appIconUrl": "trimplayer.png",
+    "tagLine": "Open-source AntennaPod fork that automatically skips the intros, ads and outros that repeat across a show's episodes.",
+    "platforms": [
+      "Mobile",
+      "Android"
+    ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.trimplayer"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://github.com/yonatanholdings/TrimPlayer/blob/main/net/discovery/src/main/java/de/danoeh/antennapod/net/discovery/PodcastIndexPodcastSearcher.java"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://github.com/yonatanholdings/TrimPlayer/blob/main/model/src/main/java/de/danoeh/antennapod/model/feed/FeedFunding.java"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://github.com/yonatanholdings/TrimPlayer/blob/main/parser/feed/src/main/java/de/danoeh/antennapod/parser/feed/PodcastIndexChapterParser.java"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://github.com/yonatanholdings/TrimPlayer/tree/main/parser/transcript/src/main/java/de/danoeh/antennapod/parser/transcript"
+      },
+      {
+        "elementName": "Social Interact"
+      }
+    ]
   }
 
 
