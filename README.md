@@ -96,7 +96,7 @@ yarn run production
 ```
 
 ## Tech List
-- [Node.js](https://nodejs.org): ([v22.23.4](https://github.com/Podcastindex-org/web-ui/blob/master/.nvmrc))
+- [Node.js](https://nodejs.org): ([v24.22.1](https://github.com/Podcastindex-org/web-ui/blob/master/.nvmrc))
 - [Express](https://expressjs.com/)
 - [React](https://react.dev/)
 - [Corepack](https://github.com/nodejs/corepack)
