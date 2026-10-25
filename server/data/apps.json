@@ -4589,6 +4589,52 @@
     ]
   },
   {
+    "appName": "Boost Me Buddy",
+    "appType": [
+      "podcast player",
+      "music player",
+      "app",
+      "website",
+      "open source"
+    ],
+    "appUrl": "https://boostmebuddy.com",
+    "appIconUrl": "boostmebuddy.png",
+    "tagLine": "Search. Listen. Boost. — family-friendly V4V podcast player with Nostr-published boosts",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value"
+      },
+      {
+        "elementName": "Boostagrams"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Remote Item"
+      },
+      {
+        "elementName": "Search"
+      },
+      {
+        "elementName": "Image"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Season"
+      },
+      {
+        "elementName": "Live Item"
+      }
+    ]
+  },
+  {
     "appName": "boxlore",
     "appType": ["app", "podcast player", "open source"],
     "appUrl": "https://github.com/boxcreate/boxlore",
