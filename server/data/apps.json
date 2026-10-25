@@ -4566,25 +4566,149 @@
         "elementName": "Boostagrams"
       },
       {
+        "elementName": "Sat Streaming"
+      },
+      {
+        "elementName": "Wallet Switching (VTS)"
+      },
+      {
+        "elementName": "Live Item"
+      },
+      {
+        "elementName": "Live Boosts"
+      },
+      {
         "elementName": "GUID"
       },
       {
         "elementName": "Remote Item"
       },
       {
-        "elementName": "Search"
+        "elementName": "Medium"
       },
       {
-        "elementName": "Image"
+        "elementName": "Publisher"
+      },
+      {
+        "elementName": "Podroll"
+      },
+      {
+        "elementName": "Txt"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Funding"
+      },
+      {
+        "elementName": "Social Interact"
+      },
+      {
+        "elementName": "Video"
+      },
+      {
+        "elementName": "Alternate Enclosure"
+      },
+      {
+        "elementName": "Podping"
+      },
+      {
+        "elementName": "Search"
       },
       {
         "elementName": "Episode"
       },
       {
         "elementName": "Season"
+      }
+    ]
+  },
+  {
+    "appName": "Boost Me Buddy",
+    "appType": [
+      "podcast player",
+      "music player",
+      "app",
+      "website",
+      "open source"
+    ],
+    "appUrl": "https://boostmebuddy.com",
+    "appIconUrl": "boostmebuddy.png",
+    "tagLine": "Search. Listen. Boost. — family-friendly V4V podcast player with Nostr-published boosts",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value"
+      },
+      {
+        "elementName": "Boostagrams"
+      },
+      {
+        "elementName": "Sat Streaming"
+      },
+      {
+        "elementName": "Wallet Switching (VTS)"
       },
       {
         "elementName": "Live Item"
+      },
+      {
+        "elementName": "Live Boosts"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Remote Item"
+      },
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "Publisher"
+      },
+      {
+        "elementName": "Podroll"
+      },
+      {
+        "elementName": "Txt"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Funding"
+      },
+      {
+        "elementName": "Social Interact"
+      },
+      {
+        "elementName": "Video"
+      },
+      {
+        "elementName": "Alternate Enclosure"
+      },
+      {
+        "elementName": "Podping"
+      },
+      {
+        "elementName": "Search"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Season"
       }
     ]
   },
