@@ -4566,25 +4566,64 @@
         "elementName": "Boostagrams"
       },
       {
+        "elementName": "Sat Streaming"
+      },
+      {
+        "elementName": "Wallet Switching (VTS)"
+      },
+      {
+        "elementName": "Live Item"
+      },
+      {
+        "elementName": "Live Boosts"
+      },
+      {
         "elementName": "GUID"
       },
       {
         "elementName": "Remote Item"
       },
       {
-        "elementName": "Search"
+        "elementName": "Medium"
       },
       {
-        "elementName": "Image"
+        "elementName": "Publisher"
+      },
+      {
+        "elementName": "Podroll"
+      },
+      {
+        "elementName": "Txt"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Funding"
+      },
+      {
+        "elementName": "Social Interact"
+      },
+      {
+        "elementName": "Video"
+      },
+      {
+        "elementName": "Alternate Enclosure"
+      },
+      {
+        "elementName": "Podping"
+      },
+      {
+        "elementName": "Search"
       },
       {
         "elementName": "Episode"
       },
       {
         "elementName": "Season"
-      },
-      {
-        "elementName": "Live Item"
       }
     ]
   },
@@ -4612,25 +4651,64 @@
         "elementName": "Boostagrams"
       },
       {
+        "elementName": "Sat Streaming"
+      },
+      {
+        "elementName": "Wallet Switching (VTS)"
+      },
+      {
+        "elementName": "Live Item"
+      },
+      {
+        "elementName": "Live Boosts"
+      },
+      {
         "elementName": "GUID"
       },
       {
         "elementName": "Remote Item"
       },
       {
-        "elementName": "Search"
+        "elementName": "Medium"
       },
       {
-        "elementName": "Image"
+        "elementName": "Publisher"
+      },
+      {
+        "elementName": "Podroll"
+      },
+      {
+        "elementName": "Txt"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Funding"
+      },
+      {
+        "elementName": "Social Interact"
+      },
+      {
+        "elementName": "Video"
+      },
+      {
+        "elementName": "Alternate Enclosure"
+      },
+      {
+        "elementName": "Podping"
+      },
+      {
+        "elementName": "Search"
       },
       {
         "elementName": "Episode"
       },
       {
         "elementName": "Season"
-      },
-      {
-        "elementName": "Live Item"
       }
     ]
   },
