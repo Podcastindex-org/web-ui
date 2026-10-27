@@ -19,6 +19,30 @@
       {
         "elementName": "Search",
         "elementURL": "https://alarmcast.app/privacy/#:~:text=Podcast%20search%20%28sent%20to%20Apple%20and%20to%20Podcast%20Index%29"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://alarmcast.app/#:~:text=any%20support%20links%20in%20its%20feed"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://alarmcast.app/#:~:text=the%20transcript%20when%20the%20show%20publishes%20one"
+      },
+      {
+        "elementName": "Podroll",
+        "elementURL": "https://alarmcast.app/#:~:text=lists%20the%20shows%20it%20recommends"
+      },
+      {
+        "elementName": "Trailer",
+        "elementURL": "https://alarmcast.app/#:~:text=can%20play%20its%20trailer%20first"
+      },
+      {
+        "elementName": "Update Frequency",
+        "elementURL": "https://alarmcast.app/#:~:text=shows%20when%20new%20episodes%20come%20out"
+      },
+      {
+        "elementName": "Block",
+        "elementURL": "https://alarmcast.app/#:~:text=leave%20out%20any%20show%20that%20asks%20not%20to%20be%20listed"
       }
     ]
   },
