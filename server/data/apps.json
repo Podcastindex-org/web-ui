@@ -5134,7 +5134,25 @@
         "elementName": "Episode"
       }
     ]
+  },
+  {
+    "appName": "FreeRadio",
+    "appType": [
+      "app",
+      "website",
+      "podcast player"
+    ],
+    "tagLine": "Free radio stations from around the world, plus podcasts and videocasts, in the browser. No account needed; favorites and follows stay on your device.",
+    "appUrl": "https://freeradio.app",
+    "appIconUrl": "freeradio.png",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search"
+      }
+    ]
   }
-
-
 ]
