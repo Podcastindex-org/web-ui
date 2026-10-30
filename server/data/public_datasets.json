@@ -118,49 +118,49 @@
         {
             "id": "lookalikes",
             "name": "Lookalike feeds",
-            "description": "Pairs of live feeds that look very much like each other because they share episodes: a show copied to another host, a host migration, a same-owner mirror, or the same feed listed twice. A pair is included when the two feeds share at least 3 episode guids and at least 50% of the smaller side's newest 50 episodes. When they share no guids at all, episodes also count as shared if they have the same title, were published within 48 hours of each other and differ in length by at most 10 seconds (this catches shows re-published with fresh guids); such pairs carry the signal matched_by_titles and a confidence of at most 0.75. Pairs where both feeds are PeerTube channel feeds are left out: PeerTube federation mirrors a channel onto many instances by design. Each pair carries a likely label, a 0-1 confidence and the signals behind it. Labels are likely classifications for you to verify, not determinations. host_migration: the owner moved (redirect or itunes:new-feed-url, a shared Apple id, or the old feed went quiet under the same owner). same_owner_mirror: both feeds publishing and serving the same audio files (at least one shared episode with the identical audio URL), or with related author/owner names and the same owner email. duplicate_listing: the same feed under several urls on one host with the same podcast:guid (dropped once the Index merges them). copy: the likely original is still publishing while another feed carries its episodes with the audio re-hosted elsewhere (or made longer by inserted ads), usually under a different author or owner and its own or no Apple id. The feed's website link is not used as evidence: copies often point it back at the original. unclear: shared episodes, conflicting signals. Confidence starts at a base per label (duplicate 0.80, migration 0.55, mirror 0.50, copy 0.50, unclear 0.30) and moves 0.10 per supporting signal (copy: at most 0.75 unless the episodes are longer than the original's, then -0.15 for each of a related author/owner name or matching owner email), clamped to 0.05-0.95. Feed A is the likely original: the older Apple id, else the feed whose copies of the shared episodes we stored first, else the lower feed id (original_basis says which). Owner emails are reduced to their domain. The signals column lists every signal that fired.",
+            "description": "Pairs of live feeds that share episodes: a show copied to another host, a host move, a same-owner mirror, or one feed listed twice. Each pair has a likely label and a 0-1 confidence for you to verify, not a verdict; how it works is explained on the backlog summary page.",
             "datasets": [
                 {
-                    "name": "Lookalike feeds - backlog baseline",
+                    "name": "Backlog - CSV",
                     "url": "https://public.podcastindex.org/lookalike_feeds_backlog.csv",
                     "format": "CSV",
                     "cadence": "one-time",
-                    "description": "Published once: every lookalike pair that was already live when the report started, the starting point for the daily files."
+                    "description": "Every pair that already existed when the report started. Published once."
                 },
                 {
-                    "name": "Lookalike feeds - backlog summary (HTML)",
+                    "name": "Backlog summary - HTML",
                     "url": "https://public.podcastindex.org/lookalike_feeds_backlog.html",
                     "format": "HTML",
                     "cadence": "one-time",
-                    "description": "A readable overview of the backlog: pair counts by likely label and copy confidence, and the most popular shows with a likely copy at confidence 0.85 or higher, with links to both feeds in the Index and on Apple."
+                    "description": "Readable overview: counts by label, the most popular shows with a likely copy, and how the matching works."
                 },
                 {
-                    "name": "Lookalike feeds - all known pairs",
+                    "name": "All known pairs - CSV",
                     "url": "https://public.podcastindex.org/lookalike_feeds_all.csv",
                     "format": "CSV",
                     "cadence": "daily",
-                    "description": "Cumulative list of every pair currently known, with its current label. detected_on is when the pair was first reported; last_checked is the last time it was re-evaluated."
+                    "description": "Every pair currently known, with its current label."
                 },
                 {
-                    "name": "Lookalike feeds - today's new and changed pairs",
+                    "name": "Latest day - CSV",
                     "url": "https://public.podcastindex.org/lookalike_feeds_daily.csv",
                     "format": "CSV",
                     "cadence": "daily",
-                    "description": "Every pair that changed on the latest run date (changed_on): first detected (change=new), its likely label changed (change=label_changed, with previous_label), or the feed shown as the likely original flipped (change=original_changed). Feeds created in roughly the last 7 days are re-checked each day so a feed parsed late is still caught."
+                    "description": "Pairs that were new or changed on the latest run."
                 },
                 {
-                    "name": "Lookalike feeds - dated daily CSVs",
+                    "name": "Each day - dated CSV",
                     "url": "https://public.podcastindex.org/lookalike_feeds_2026-10-30.csv",
                     "format": "CSV",
                     "cadence": "daily",
-                    "description": "One file per run date, named lookalike_feeds_YYYY-MM-DD.csv (UTC), with the same rows as that day's daily CSV. A day's file is never changed by later runs, so you can fetch any past date to walk back through the history; a date with no run has no file. The link is an example; replace the date."
+                    "description": "One file per day, named lookalike_feeds_YYYY-MM-DD.csv (UTC), never changed later. Change the date to walk back."
                 },
                 {
-                    "name": "Lookalike feeds - today's report (HTML)",
+                    "name": "Latest day - HTML",
                     "url": "https://public.podcastindex.org/lookalike_feeds_daily.html",
                     "format": "HTML",
                     "cadence": "daily",
-                    "description": "The same rows as today's CSV as a readable page, copies first, with links to both feeds in the Index and on Apple."
+                    "description": "The latest day's pairs as a readable page, likely copies first."
                 }
             ]
         },
