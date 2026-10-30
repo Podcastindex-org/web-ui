@@ -92,6 +92,27 @@ const publicOnlyAgent = new https.Agent({ lookup: publicOnlyLookup })
 const HOSTNAME_PATTERN =
   /^(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z](?:[a-z0-9-]{0,61}[a-z0-9])?$/i
 
+// Express 4 doesn't catch errors from async route handlers, and on Node 15+
+// an unhandled rejection crashes the whole server. Wrap async handlers so a
+// failed API call becomes an error response in the API's own shape.
+function asyncHandler(handler) {
+  return (req, res, next) =>
+    Promise.resolve(handler(req, res, next)).catch((error) => {
+      console.error(`Error handling ${req.originalUrl}:`, error)
+      if (res.headersSent) {
+        res.end()
+        return
+      }
+      // podcast-index-api rejects with { message, code } for API errors
+      const isApiError =
+        Number.isInteger(error?.code) && error.code >= 400 && error.code < 600
+      res.status(isApiError ? error.code : 502).json({
+        status: 'false',
+        description: isApiError ? error.message : 'Request failed.',
+      })
+    })
+}
+
 // Utilizing the node repo from comster/podcast-index-api :)
 // NOTE: This server will work as a reverse proxy.
 const api = require('podcast-index-api')(
@@ -236,36 +257,36 @@ app.get('/api/auth/config', (req, res) => {
   })
 })
 
-app.use('/api/search/byterm', powMiddleware, async (req, res) => {
+app.use('/api/search/byterm', powMiddleware, asyncHandler(async (req, res) => {
   const response = await api.custom('search/byterm', req.query)
   res.send(response)
-})
+}))
 
-app.use('/api/search/bytitle', powMiddleware, async (req, res) => {
+app.use('/api/search/bytitle', powMiddleware, asyncHandler(async (req, res) => {
   let term = req.query.q
   const response = await api.custom('search/bytitle', { q: term })
   res.send(response)
-})
+}))
 
-app.use('/api/search/music/byterm', powMiddleware, async (req, res) => {
+app.use('/api/search/music/byterm', powMiddleware, asyncHandler(async (req, res) => {
   let term = req.query.q
   const response = await api.custom('search/music/byterm', { q: term })
   res.send(response)
-})
+}))
 
-app.use('/api/search/byperson', powMiddleware, async (req, res) => {
+app.use('/api/search/byperson', powMiddleware, asyncHandler(async (req, res) => {
   let person = req.query.q
   const response = await api.searchEpisodesByPerson(person)
   res.send(response)
-})
+}))
 
-app.use('/api/recent/episodes', powMiddleware, async (req, res) => {
+app.use('/api/recent/episodes', powMiddleware, asyncHandler(async (req, res) => {
   let max = req.query.max
   const response = await api.recentEpisodes(max)
   res.send(response)
-})
+}))
 
-app.use('/api/podcasts/bytag', powMiddleware, async (req, res) => {
+app.use('/api/podcasts/bytag', powMiddleware, asyncHandler(async (req, res) => {
   let max = req.query.max
   let start_at = req.query.start_at
   const response = await api.custom('podcasts/bytag', {
@@ -274,43 +295,43 @@ app.use('/api/podcasts/bytag', powMiddleware, async (req, res) => {
     start_at: start_at,
   })
   res.send(response)
-})
+}))
 
-app.use('/api/podcasts/byfeedid', powMiddleware, async (req, res) => {
+app.use('/api/podcasts/byfeedid', powMiddleware, asyncHandler(async (req, res) => {
   let feedId = req.query.id
   const response = await api.podcastsByFeedId(feedId)
   res.send(response)
-})
+}))
 
-app.use('/api/podcasts/byguid', powMiddleware, async (req, res) => {
+app.use('/api/podcasts/byguid', powMiddleware, asyncHandler(async (req, res) => {
   let guid = req.query.guid
   const response = await api.custom('podcasts/byguid', { guid: guid })
   res.send(response)
-})
+}))
 
-app.use('/api/podcasts/byfeedurl', powMiddleware, async (req, res) => {
+app.use('/api/podcasts/byfeedurl', powMiddleware, asyncHandler(async (req, res) => {
   let feedUrl = req.query.url
   const response = await api.podcastsByFeedUrl(feedUrl)
   res.send(response)
-})
+}))
 
-app.use('/api/episodes/byfeedid', powMiddleware, async (req, res) => {
+app.use('/api/episodes/byfeedid', powMiddleware, asyncHandler(async (req, res) => {
   let feedId = req.query.id
   let max = req.query.max
   const response = await api.episodesByFeedId(feedId, null, max)
   res.send(response)
-})
+}))
 
-app.use('/api/add/byfeedurl', powMiddleware, async (req, res) => {
+app.use('/api/add/byfeedurl', powMiddleware, asyncHandler(async (req, res) => {
   let feedUrl = req.query.url
   const response = await apiAdd.addByFeedUrl(feedUrl)
   res.send(response)
-})
+}))
 
 // ------------------------------------------------
 // ------------ API to get comments for episode ---
 // ------------------------------------------------
-app.use('/api/comments/byepisodeid', powMiddleware, async (req, res) => {
+app.use('/api/comments/byepisodeid', powMiddleware, asyncHandler(async (req, res) => {
   let episodeId = req.query.id
   const response = await api.episodesById(episodeId, false)
 
@@ -367,7 +388,7 @@ app.use('/api/comments/byepisodeid', powMiddleware, async (req, res) => {
   }
 
   res.end()
-})
+}))
 
 function writeThreadcapChunk(processedNodeId, threadcap, sentCommenters, res) {
   const threadcapChunk = {}
@@ -398,7 +419,7 @@ function writeThreadcapChunk(processedNodeId, threadcap, sentCommenters, res) {
 // ---------------------------------------------------------
 // --------- API to get remote interact url for comments ---
 // ---------------------------------------------------------
-app.use('/api/comments/remoteInteractUrlPattern', powMiddleware, async (req, res) => {
+app.use('/api/comments/remoteInteractUrlPattern', powMiddleware, asyncHandler(async (req, res) => {
   const interactorAccount = req.query.interactorAccount
 
   console.log('Debug interactorAccount', interactorAccount)
@@ -439,7 +460,7 @@ app.use('/api/comments/remoteInteractUrlPattern', powMiddleware, async (req, res
     console.error('Error fetching webfinger for interactor account:', error)
     res.status(502).send('Unable to look up interactor account')
   }
-})
+}))
 
 // ------------------------------------------------
 // ---------- Static files for API data -----------
@@ -518,34 +539,40 @@ app.use('/podcast/:podcastid(\\d+)', async (req, res) => {
     path: req.originalUrl,
   }
 
-  if (req.query.episode) {
-    // /podcast/41504?episode=15576217793
-    const response = await api.episodesById(req.query.episode)
+  // If the lookup fails, render the page with the default tags; the UI loads
+  // the podcast itself.
+  try {
+    if (req.query.episode) {
+      // /podcast/41504?episode=15576217793
+      const response = await api.episodesById(req.query.episode)
 
-    if (response?.episode?.id) {
-      const { feedTitle, title, description, image } = response.episode
-      const textDescription = description
-        .replace(new RegExp('</?[^>]+(>|$)', 'gi'), '')
-        .replace(new RegExp('[\r\n]', 'g'), ' ')
+      if (response?.episode?.id) {
+        const { feedTitle, title, description, image } = response.episode
+        const textDescription = description
+          .replace(new RegExp('</?[^>]+(>|$)', 'gi'), '')
+          .replace(new RegExp('[\r\n]', 'g'), ' ')
 
-      params.title = feedTitle + ' | ' + title
-      params.description = textDescription
-      params.image = image
+        params.title = feedTitle + ' | ' + title
+        params.description = textDescription
+        params.image = image
+      }
+    } else if (req.params.podcastid) {
+      // /podcast/41504
+      const response = await api.podcastsByFeedId(req.params.podcastid)
+
+      if (response?.feed?.id) {
+        const { title, description, image } = response.feed
+        const textDescription = description
+          .replace(new RegExp('</?[^>]+(>|$)', 'gi'), '')
+          .replace(new RegExp('[\r\n]', 'g'), ' ')
+
+        params.title = title
+        params.description = textDescription
+        params.image = image
+      }
     }
-  } else if (req.params.podcastid) {
-    // /podcast/41504
-    const response = await api.podcastsByFeedId(req.params.podcastid)
-
-    if (response?.feed?.id) {
-      const { title, description, image } = response.feed
-      const textDescription = description
-        .replace(new RegExp('</?[^>]+(>|$)', 'gi'), '')
-        .replace(new RegExp('[\r\n]', 'g'), ' ')
-
-      params.title = title
-      params.description = textDescription
-      params.image = image
-    }
+  } catch (error) {
+    console.error(`Error looking up page tags for ${req.originalUrl}:`, error)
   }
 
   res.render('index', params)

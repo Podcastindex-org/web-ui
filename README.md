@@ -50,9 +50,9 @@ nvm use                                          # If you want to use .nvmrc Nod
 corepack -v                                      # Check version and instalattion
 export COREPACK_ENABLE_DOWNLOAD_PROMPT=0         # Disable download prompt
 corepack enable                                  # Enable dependency
-#For node 20, or any >16 apply workaournd
-node -v | grep v16 || export NODE_OPTIONS=--openssl-legacy-provider
 ```
+
+The `dev`, `build` and `production` scripts run webpack with `NODE_OPTIONS=--openssl-legacy-provider`, because webpack 4 hashes with MD4, which OpenSSL 3 (Node 17+) disables by default. If you run webpack directly, set it yourself.
 ### Set .env
 
 You should see a `.env-example` file. Copy this into:
@@ -96,7 +96,7 @@ yarn run production
 ```
 
 ## Tech List
-- [Node.js](https://nodejs.org): ([v16.20.2](https://github.com/Marzal/web-ui/blob/master/.nvmrc))
+- [Node.js](https://nodejs.org): ([v24.22.1](https://github.com/Podcastindex-org/web-ui/blob/master/.nvmrc))
 - [Express](https://expressjs.com/)
 - [React](https://react.dev/)
 - [Corepack](https://github.com/nodejs/corepack)

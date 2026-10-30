@@ -79,13 +79,13 @@
         "webpack-dev-server": "^3.10.3"
     },
     "scripts": {
-        "dev": "webpack-dev-server --env.file=development --mode development --devtool inline-source-map",
+        "dev": "NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server --env.file=development --mode development --devtool inline-source-map",
         "dev:docker": "yarn run dev --host=0.0.0.0",
-        "build": "webpack",
-        "production": "NODE_ENV='production' && webpack --env.file=production --mode production && node server",
-        "start": "node server",
+        "build": "NODE_OPTIONS=--openssl-legacy-provider webpack",
+        "production": "NODE_ENV='production' && NODE_OPTIONS=--openssl-legacy-provider webpack --env.file=production --mode production && node --unhandled-rejections=warn server",
+        "start": "node --unhandled-rejections=warn server",
         "test": "react-scripts test --env=jsdom",
-        "test:server": "node server/test/well-known-signing-directory.test.js",
+        "test:server": "node server/test/well-known-signing-directory.test.js && node server/test/async-handler-errors.test.js",
         "eject": "react-scripts eject",
         "flow": "flow",
         "format": "prettier --write 'src/**/*.js'",
