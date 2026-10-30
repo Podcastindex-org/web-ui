@@ -1,5 +1,33 @@
 [
   {
+    "appName": "Shuttle Podcasts",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "Simple podcast player for Android. Clean, fast, no account needed.",
+    "appUrl": "https://shuttlepodcasts.app",
+    "appIconUrl": "shuttlepodcasts.png",
+    "platforms": [
+      "Android",
+      "Mobile"
+    ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.simplecityapps.shuttle.podcasts"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Search"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "GUID"
+      }
+    ]
+  },
+  {
     "appName": "Alarmcast",
     "appType": [
       "app",
