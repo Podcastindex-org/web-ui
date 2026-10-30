@@ -8,6 +8,9 @@ const {
   updateThreadcap,
   makeRateLimitedFetcher,
 } = require('threadcap')
+const dns = require('dns')
+const https = require('https')
+const net = require('net')
 const fetch = require('node-fetch')
 const packageJson = require('../package.json')
 const ejs = require('ejs')
@@ -18,6 +21,76 @@ require('dotenv').config()
 
 const USER_AGENT = `Podcastindex.org-web/${packageJson.version}`
 const POW_DIFFICULTY = parseInt(process.env.POW_DIFFICULTY, 10) || 0;
+
+// ---------------------------------------------------------
+// --------- Hardening for fetches to untrusted hosts ------
+// ---------------------------------------------------------
+// Responses from remote servers are never decompressed (avoids feeding
+// attacker-controlled Brotli/gzip data to zlib, see CVE-2026-111497), and
+// webfinger lookups may only reach public addresses (no SSRF to localhost
+// or the internal network).
+
+// Fetcher for threadcap: same as node-fetch, but without decompression
+const uncompressedFetch = (url, opts = {}) =>
+  fetch(url, { ...opts, compress: false })
+
+const blockedAddresses = new net.BlockList()
+for (const [prefix, bits] of [
+  ['0.0.0.0', 8],
+  ['10.0.0.0', 8],
+  ['100.64.0.0', 10],
+  ['127.0.0.0', 8],
+  ['169.254.0.0', 16],
+  ['172.16.0.0', 12],
+  ['192.0.0.0', 24],
+  ['192.168.0.0', 16],
+  ['198.18.0.0', 15],
+  ['224.0.0.0', 4],
+  ['240.0.0.0', 4],
+]) {
+  blockedAddresses.addSubnet(prefix, bits, 'ipv4')
+}
+for (const [prefix, bits] of [
+  ['::', 128],
+  ['::1', 128],
+  // No ::ffff:0:0/96 rule: BlockList checks IPv4-mapped IPv6 addresses
+  // against the IPv4 rules above, and that rule would match every IPv4 address
+  ['64:ff9b::', 96],
+  ['fc00::', 7],
+  ['fe80::', 10],
+  ['ff00::', 8],
+]) {
+  blockedAddresses.addSubnet(prefix, bits, 'ipv6')
+}
+
+// dns.lookup wrapper that refuses private/reserved addresses. Checked at
+// connect time, so a hostname can't pass validation and then re-resolve
+// (DNS rebinding) to an internal address.
+function publicOnlyLookup(hostname, options, callback) {
+  dns.lookup(hostname, options, (err, address, family) => {
+    if (err) return callback(err)
+    const addresses = Array.isArray(address) ? address : [{ address, family }]
+    const blocked = addresses.some((a) =>
+      blockedAddresses.check(
+        a.address,
+        a.family === 6 || a.family === 'IPv6' ? 'ipv6' : 'ipv4'
+      )
+    )
+    if (blocked) {
+      return callback(
+        new Error(`Refusing to connect to non-public address for ${hostname}`)
+      )
+    }
+    callback(null, address, family)
+  })
+}
+
+const publicOnlyAgent = new https.Agent({ lookup: publicOnlyLookup })
+
+// A DNS hostname with a dot and an alphabetic TLD: rejects IP literals,
+// ports, "localhost" and anything else that isn't a plain domain name.
+const HOSTNAME_PATTERN =
+  /^(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z](?:[a-z0-9-]{0,61}[a-z0-9])?$/i
 
 // Utilizing the node repo from comster/podcast-index-api :)
 // NOTE: This server will work as a reverse proxy.
@@ -258,7 +331,7 @@ app.use('/api/comments/byepisodeid', powMiddleware, async (req, res) => {
 
   const userAgent = USER_AGENT
   const cache = new InMemoryCache()
-  const fetcher = makeRateLimitedFetcher(fetch)
+  const fetcher = makeRateLimitedFetcher(uncompressedFetch)
 
   // Disable buffering in the nginx server so that the delivery of
   // chunks are not delayed
@@ -330,27 +403,42 @@ app.use('/api/comments/remoteInteractUrlPattern', powMiddleware, async (req, res
 
   console.log('Debug interactorAccount', interactorAccount)
 
+  if (typeof interactorAccount !== 'string') {
+    res.status(400).send('Invalid interactorAccount')
+    return
+  }
+
   let splitIndex = 1
   if (interactorAccount.startsWith('@')) {
     splitIndex = 2
   }
   const interactorInstanceHost = interactorAccount.split('@')[splitIndex]
+  if (!interactorInstanceHost || !HOSTNAME_PATTERN.test(interactorInstanceHost)) {
+    res.status(400).send('Invalid interactorAccount')
+    return
+  }
 
-  const response = await fetch(
-    `https://${interactorInstanceHost}/.well-known/webfinger?` +
-      new URLSearchParams({
-        resource: `acct:${interactorAccount.substring(splitIndex - 1)}`,
-      })
-  )
-  const parsedResponse = await response.json()
+  try {
+    const response = await fetch(
+      `https://${interactorInstanceHost}/.well-known/webfinger?` +
+        new URLSearchParams({
+          resource: `acct:${interactorAccount.substring(splitIndex - 1)}`,
+        }),
+      { agent: publicOnlyAgent, compress: false }
+    )
+    const parsedResponse = await response.json()
 
-  const linkOStatusSubscribe = parsedResponse.links.find(
-    (link) => link.rel === 'http://ostatus.org/schema/1.0/subscribe'
-  )
+    const linkOStatusSubscribe = parsedResponse.links.find(
+      (link) => link.rel === 'http://ostatus.org/schema/1.0/subscribe'
+    )
 
-  res.send({
-    remoteInteractUrlPattern: linkOStatusSubscribe.template,
-  })
+    res.send({
+      remoteInteractUrlPattern: linkOStatusSubscribe.template,
+    })
+  } catch (error) {
+    console.error('Error fetching webfinger for interactor account:', error)
+    res.status(502).send('Unable to look up interactor account')
+  }
 })
 
 // ------------------------------------------------
