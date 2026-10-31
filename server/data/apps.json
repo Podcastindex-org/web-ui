@@ -1,5 +1,40 @@
 [
   {
+    "appName": "Shuttle Podcasts",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "A podcast player with no ads in the app. Smart Skip jumps past ad breaks; offline downloads, Android Auto, CarPlay and a web player at shuttlepodcasts.app.",
+    "appUrl": "https://shuttlepodcasts.app",
+    "appIconUrl": "shuttlepodcasts.png",
+    "platforms": [
+      "Android",
+      "iOS",
+      "Web",
+      "Mobile"
+    ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.simplecityapps.shuttle.podcasts",
+      "iOS": "https://testflight.apple.com/join/NPweyc2T",
+      "Web": "https://shuttlepodcasts.app"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://shuttlepodcasts.app/press#:~:text=finds%20shows%20through%20the%20Podcast%20Index"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://shuttlepodcasts.app/press#:~:text=supports%20Podcasting%202.0%20chapters"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://shuttlepodcasts.app/press#:~:text=reads%20podcast%3Aguid"
+      }
+    ]
+  },
+  {
     "appName": "Alarmcast",
     "appType": [
       "app",
