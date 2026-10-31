@@ -5154,5 +5154,46 @@
         "elementName": "Search"
       }
     ]
+  },
+  {
+    "appName": "Seenr",
+    "appType": [
+      "app",
+      "website",
+      "podcast player"
+    ],
+    "tagLine": "Social culture tracker: follow your podcasts episode by episode alongside your series, movies, books and games, with a built-in player, listening history, ratings and reviews.",
+    "appUrl": "https://seenr.app/en/podcast-tracker",
+    "appIconUrl": "seenr.png",
+    "platforms": [
+      "Web",
+      "Mobile",
+      "iOS",
+      "Android"
+    ],
+    "platformLinks": {
+      "Web": "https://seenr.app/en/podcast-tracker",
+      "iOS": "https://apps.apple.com/app/id6788104737",
+      "Android": "https://play.google.com/store/apps/details?id=com.byus.seenr"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://seenr.app/en/podcast-tracker#:~:text=From%20the%20open%20Podcast%20Index%20directory"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://seenr.app/en/podcast-tracker#:~:text=find%20out%20who%20speaks%2C%20from%20the%20host%20to%20the%20guest"
+      },
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Funding"
+      }
+    ]
   }
 ]
