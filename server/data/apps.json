@@ -5230,5 +5230,66 @@
         "elementName": "Funding"
       }
     ]
+  },
+  {
+    "appName": "June",
+    "appType": [
+      "podcast player",
+      "app"
+    ],
+    "appUrl": "https://june.fm",
+    "appIconUrl": "june.png",
+    "tagLine": "Your podcasts, every day. Each morning June lines up today's new episodes from the shows you follow. Free on iPhone and Mac.",
+    "platforms": [
+      "Mobile",
+      "iOS",
+      "macOS"
+    ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/us/app/june-your-podcasts-every-day/id6803277971",
+      "macOS": "https://apps.apple.com/us/app/june-your-podcasts-every-day/id6803277971"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://june.fm/podcasters#transcript"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://june.fm/podcasters#chapters"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://june.fm/podcasters#person"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://june.fm/podcasters#funding"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://june.fm/podcasters#season"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://june.fm/podcasters#episode"
+      },
+      {
+        "elementName": "Trailer",
+        "elementURL": "https://june.fm/podcasters#trailer"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://june.fm/podcasters#medium"
+      },
+      {
+        "elementName": "Block",
+        "elementURL": "https://june.fm/podcasters#block"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://june.fm/podcasters#guid"
+      }
+    ]
   }
 ]
