@@ -5189,5 +5189,25 @@
         "elementName": "Search"
       }
     ]
+  },
+  {
+    "appName": "June",
+    "appType": [
+      "podcast player",
+      "app"
+    ],
+    "appUrl": "https://june.fm",
+    "appIconUrl": "june.png",
+    "tagLine": "Your podcasts, every day. Each morning June lines up today's new episodes from the shows you follow. Free on iPhone and Mac.",
+    "platforms": [
+      "Mobile",
+      "iOS",
+      "macOS"
+    ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/us/app/june-your-podcasts-every-day/id6803277971",
+      "macOS": "https://apps.apple.com/us/app/june-your-podcasts-every-day/id6803277971"
+    },
+    "supportedElements": []
   }
 ]
