@@ -114,6 +114,7 @@ export default class RecentPodcasts extends React.Component<IProps, IState> {
                                     <img
                                         className={imageLoadingClass}
                                         draggable={false}
+                                        referrerPolicy="no-referrer"
                                         src={getImage(selectedPodcast)}
                                         onError={(ev: any) => {
                                             ev.target.src = NoImage
