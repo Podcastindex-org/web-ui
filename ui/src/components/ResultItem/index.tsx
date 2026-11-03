@@ -58,6 +58,7 @@ export default class ResultItem extends React.PureComponent<IProps> {
                         <Link to={`/podcast/${id}`}>
                             <img
                                 draggable={false}
+                                referrerPolicy="no-referrer"
                                 src={image}
                                 onError={(ev: any) => {
                                     ev.target.src = NoImage

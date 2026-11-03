@@ -96,6 +96,7 @@ export default class PodcastHeader extends React.PureComponent<IProps, PodState>
                     <div className="podcast-header-cover-art">
                         <img
                             draggable={false}
+                            referrerPolicy="no-referrer"
                             src={image}
                             onError={(ev: any) => {
                                 ev.target.src = NoImage
