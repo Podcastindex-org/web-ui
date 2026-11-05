@@ -5167,6 +5167,42 @@
       },
       {
         "elementName": "Episode"
+      },
+      {
+        "elementName": "Trailer"
+      },
+      {
+        "elementName": "Location"
+      },
+      {
+        "elementName": "License"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Image"
+      },
+      {
+        "elementName": "Social Interact"
+      },
+      {
+        "elementName": "Update Frequency"
+      },
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Soundbite"
+      },
+      {
+        "elementName": "Content Link"
+      },
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "Block"
       }
     ]
   },
