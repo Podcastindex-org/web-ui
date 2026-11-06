@@ -8,6 +8,9 @@ const {
   updateThreadcap,
   makeRateLimitedFetcher,
 } = require('threadcap')
+const dns = require('dns')
+const https = require('https')
+const net = require('net')
 const fetch = require('node-fetch')
 const packageJson = require('../package.json')
 const ejs = require('ejs')
@@ -18,6 +21,97 @@ require('dotenv').config()
 
 const USER_AGENT = `Podcastindex.org-web/${packageJson.version}`
 const POW_DIFFICULTY = parseInt(process.env.POW_DIFFICULTY, 10) || 0;
+
+// ---------------------------------------------------------
+// --------- Hardening for fetches to untrusted hosts ------
+// ---------------------------------------------------------
+// Responses from remote servers are never decompressed (avoids feeding
+// attacker-controlled Brotli/gzip data to zlib, see CVE-2026-111497), and
+// webfinger lookups may only reach public addresses (no SSRF to localhost
+// or the internal network).
+
+// Fetcher for threadcap: same as node-fetch, but without decompression
+const uncompressedFetch = (url, opts = {}) =>
+  fetch(url, { ...opts, compress: false })
+
+const blockedAddresses = new net.BlockList()
+for (const [prefix, bits] of [
+  ['0.0.0.0', 8],
+  ['10.0.0.0', 8],
+  ['100.64.0.0', 10],
+  ['127.0.0.0', 8],
+  ['169.254.0.0', 16],
+  ['172.16.0.0', 12],
+  ['192.0.0.0', 24],
+  ['192.168.0.0', 16],
+  ['198.18.0.0', 15],
+  ['224.0.0.0', 4],
+  ['240.0.0.0', 4],
+]) {
+  blockedAddresses.addSubnet(prefix, bits, 'ipv4')
+}
+for (const [prefix, bits] of [
+  ['::', 128],
+  ['::1', 128],
+  // No ::ffff:0:0/96 rule: BlockList checks IPv4-mapped IPv6 addresses
+  // against the IPv4 rules above, and that rule would match every IPv4 address
+  ['64:ff9b::', 96],
+  ['fc00::', 7],
+  ['fe80::', 10],
+  ['ff00::', 8],
+]) {
+  blockedAddresses.addSubnet(prefix, bits, 'ipv6')
+}
+
+// dns.lookup wrapper that refuses private/reserved addresses. Checked at
+// connect time, so a hostname can't pass validation and then re-resolve
+// (DNS rebinding) to an internal address.
+function publicOnlyLookup(hostname, options, callback) {
+  dns.lookup(hostname, options, (err, address, family) => {
+    if (err) return callback(err)
+    const addresses = Array.isArray(address) ? address : [{ address, family }]
+    const blocked = addresses.some((a) =>
+      blockedAddresses.check(
+        a.address,
+        a.family === 6 || a.family === 'IPv6' ? 'ipv6' : 'ipv4'
+      )
+    )
+    if (blocked) {
+      return callback(
+        new Error(`Refusing to connect to non-public address for ${hostname}`)
+      )
+    }
+    callback(null, address, family)
+  })
+}
+
+const publicOnlyAgent = new https.Agent({ lookup: publicOnlyLookup })
+
+// A DNS hostname with a dot and an alphabetic TLD: rejects IP literals,
+// ports, "localhost" and anything else that isn't a plain domain name.
+const HOSTNAME_PATTERN =
+  /^(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z](?:[a-z0-9-]{0,61}[a-z0-9])?$/i
+
+// Express 4 doesn't catch errors from async route handlers, and on Node 15+
+// an unhandled rejection crashes the whole server. Wrap async handlers so a
+// failed API call becomes an error response in the API's own shape.
+function asyncHandler(handler) {
+  return (req, res, next) =>
+    Promise.resolve(handler(req, res, next)).catch((error) => {
+      console.error(`Error handling ${req.originalUrl}:`, error)
+      if (res.headersSent) {
+        res.end()
+        return
+      }
+      // podcast-index-api rejects with { message, code } for API errors
+      const isApiError =
+        Number.isInteger(error?.code) && error.code >= 400 && error.code < 600
+      res.status(isApiError ? error.code : 502).json({
+        status: 'false',
+        description: isApiError ? error.message : 'Request failed.',
+      })
+    })
+}
 
 // Utilizing the node repo from comster/podcast-index-api :)
 // NOTE: This server will work as a reverse proxy.
@@ -163,36 +257,36 @@ app.get('/api/auth/config', (req, res) => {
   })
 })
 
-app.use('/api/search/byterm', powMiddleware, async (req, res) => {
+app.use('/api/search/byterm', powMiddleware, asyncHandler(async (req, res) => {
   const response = await api.custom('search/byterm', req.query)
   res.send(response)
-})
+}))
 
-app.use('/api/search/bytitle', powMiddleware, async (req, res) => {
+app.use('/api/search/bytitle', powMiddleware, asyncHandler(async (req, res) => {
   let term = req.query.q
   const response = await api.custom('search/bytitle', { q: term })
   res.send(response)
-})
+}))
 
-app.use('/api/search/music/byterm', powMiddleware, async (req, res) => {
+app.use('/api/search/music/byterm', powMiddleware, asyncHandler(async (req, res) => {
   let term = req.query.q
   const response = await api.custom('search/music/byterm', { q: term })
   res.send(response)
-})
+}))
 
-app.use('/api/search/byperson', powMiddleware, async (req, res) => {
+app.use('/api/search/byperson', powMiddleware, asyncHandler(async (req, res) => {
   let person = req.query.q
   const response = await api.searchEpisodesByPerson(person)
   res.send(response)
-})
+}))
 
-app.use('/api/recent/episodes', powMiddleware, async (req, res) => {
+app.use('/api/recent/episodes', powMiddleware, asyncHandler(async (req, res) => {
   let max = req.query.max
   const response = await api.recentEpisodes(max)
   res.send(response)
-})
+}))
 
-app.use('/api/podcasts/bytag', powMiddleware, async (req, res) => {
+app.use('/api/podcasts/bytag', powMiddleware, asyncHandler(async (req, res) => {
   let max = req.query.max
   let start_at = req.query.start_at
   const response = await api.custom('podcasts/bytag', {
@@ -201,43 +295,43 @@ app.use('/api/podcasts/bytag', powMiddleware, async (req, res) => {
     start_at: start_at,
   })
   res.send(response)
-})
+}))
 
-app.use('/api/podcasts/byfeedid', powMiddleware, async (req, res) => {
+app.use('/api/podcasts/byfeedid', powMiddleware, asyncHandler(async (req, res) => {
   let feedId = req.query.id
   const response = await api.podcastsByFeedId(feedId)
   res.send(response)
-})
+}))
 
-app.use('/api/podcasts/byguid', powMiddleware, async (req, res) => {
+app.use('/api/podcasts/byguid', powMiddleware, asyncHandler(async (req, res) => {
   let guid = req.query.guid
   const response = await api.custom('podcasts/byguid', { guid: guid })
   res.send(response)
-})
+}))
 
-app.use('/api/podcasts/byfeedurl', powMiddleware, async (req, res) => {
+app.use('/api/podcasts/byfeedurl', powMiddleware, asyncHandler(async (req, res) => {
   let feedUrl = req.query.url
   const response = await api.podcastsByFeedUrl(feedUrl)
   res.send(response)
-})
+}))
 
-app.use('/api/episodes/byfeedid', powMiddleware, async (req, res) => {
+app.use('/api/episodes/byfeedid', powMiddleware, asyncHandler(async (req, res) => {
   let feedId = req.query.id
   let max = req.query.max
   const response = await api.episodesByFeedId(feedId, null, max)
   res.send(response)
-})
+}))
 
-app.use('/api/add/byfeedurl', powMiddleware, async (req, res) => {
+app.use('/api/add/byfeedurl', powMiddleware, asyncHandler(async (req, res) => {
   let feedUrl = req.query.url
   const response = await apiAdd.addByFeedUrl(feedUrl)
   res.send(response)
-})
+}))
 
 // ------------------------------------------------
 // ------------ API to get comments for episode ---
 // ------------------------------------------------
-app.use('/api/comments/byepisodeid', powMiddleware, async (req, res) => {
+app.use('/api/comments/byepisodeid', powMiddleware, asyncHandler(async (req, res) => {
   let episodeId = req.query.id
   const response = await api.episodesById(episodeId, false)
 
@@ -258,7 +352,7 @@ app.use('/api/comments/byepisodeid', powMiddleware, async (req, res) => {
 
   const userAgent = USER_AGENT
   const cache = new InMemoryCache()
-  const fetcher = makeRateLimitedFetcher(fetch)
+  const fetcher = makeRateLimitedFetcher(uncompressedFetch)
 
   // Disable buffering in the nginx server so that the delivery of
   // chunks are not delayed
@@ -294,7 +388,7 @@ app.use('/api/comments/byepisodeid', powMiddleware, async (req, res) => {
   }
 
   res.end()
-})
+}))
 
 function writeThreadcapChunk(processedNodeId, threadcap, sentCommenters, res) {
   const threadcapChunk = {}
@@ -325,33 +419,48 @@ function writeThreadcapChunk(processedNodeId, threadcap, sentCommenters, res) {
 // ---------------------------------------------------------
 // --------- API to get remote interact url for comments ---
 // ---------------------------------------------------------
-app.use('/api/comments/remoteInteractUrlPattern', powMiddleware, async (req, res) => {
+app.use('/api/comments/remoteInteractUrlPattern', powMiddleware, asyncHandler(async (req, res) => {
   const interactorAccount = req.query.interactorAccount
 
   console.log('Debug interactorAccount', interactorAccount)
+
+  if (typeof interactorAccount !== 'string') {
+    res.status(400).send('Invalid interactorAccount')
+    return
+  }
 
   let splitIndex = 1
   if (interactorAccount.startsWith('@')) {
     splitIndex = 2
   }
   const interactorInstanceHost = interactorAccount.split('@')[splitIndex]
+  if (!interactorInstanceHost || !HOSTNAME_PATTERN.test(interactorInstanceHost)) {
+    res.status(400).send('Invalid interactorAccount')
+    return
+  }
 
-  const response = await fetch(
-    `https://${interactorInstanceHost}/.well-known/webfinger?` +
-      new URLSearchParams({
-        resource: `acct:${interactorAccount.substring(splitIndex - 1)}`,
-      })
-  )
-  const parsedResponse = await response.json()
+  try {
+    const response = await fetch(
+      `https://${interactorInstanceHost}/.well-known/webfinger?` +
+        new URLSearchParams({
+          resource: `acct:${interactorAccount.substring(splitIndex - 1)}`,
+        }),
+      { agent: publicOnlyAgent, compress: false }
+    )
+    const parsedResponse = await response.json()
 
-  const linkOStatusSubscribe = parsedResponse.links.find(
-    (link) => link.rel === 'http://ostatus.org/schema/1.0/subscribe'
-  )
+    const linkOStatusSubscribe = parsedResponse.links.find(
+      (link) => link.rel === 'http://ostatus.org/schema/1.0/subscribe'
+    )
 
-  res.send({
-    remoteInteractUrlPattern: linkOStatusSubscribe.template,
-  })
-})
+    res.send({
+      remoteInteractUrlPattern: linkOStatusSubscribe.template,
+    })
+  } catch (error) {
+    console.error('Error fetching webfinger for interactor account:', error)
+    res.status(502).send('Unable to look up interactor account')
+  }
+}))
 
 // ------------------------------------------------
 // ---------- Static files for API data -----------
@@ -430,34 +539,40 @@ app.use('/podcast/:podcastid(\\d+)', async (req, res) => {
     path: req.originalUrl,
   }
 
-  if (req.query.episode) {
-    // /podcast/41504?episode=15576217793
-    const response = await api.episodesById(req.query.episode)
+  // If the lookup fails, render the page with the default tags; the UI loads
+  // the podcast itself.
+  try {
+    if (req.query.episode) {
+      // /podcast/41504?episode=15576217793
+      const response = await api.episodesById(req.query.episode)
 
-    if (response?.episode?.id) {
-      const { feedTitle, title, description, image } = response.episode
-      const textDescription = description
-        .replace(new RegExp('</?[^>]+(>|$)', 'gi'), '')
-        .replace(new RegExp('[\r\n]', 'g'), ' ')
+      if (response?.episode?.id) {
+        const { feedTitle, title, description, image } = response.episode
+        const textDescription = description
+          .replace(new RegExp('</?[^>]+(>|$)', 'gi'), '')
+          .replace(new RegExp('[\r\n]', 'g'), ' ')
 
-      params.title = feedTitle + ' | ' + title
-      params.description = textDescription
-      params.image = image
+        params.title = feedTitle + ' | ' + title
+        params.description = textDescription
+        params.image = image
+      }
+    } else if (req.params.podcastid) {
+      // /podcast/41504
+      const response = await api.podcastsByFeedId(req.params.podcastid)
+
+      if (response?.feed?.id) {
+        const { title, description, image } = response.feed
+        const textDescription = description
+          .replace(new RegExp('</?[^>]+(>|$)', 'gi'), '')
+          .replace(new RegExp('[\r\n]', 'g'), ' ')
+
+        params.title = title
+        params.description = textDescription
+        params.image = image
+      }
     }
-  } else if (req.params.podcastid) {
-    // /podcast/41504
-    const response = await api.podcastsByFeedId(req.params.podcastid)
-
-    if (response?.feed?.id) {
-      const { title, description, image } = response.feed
-      const textDescription = description
-        .replace(new RegExp('</?[^>]+(>|$)', 'gi'), '')
-        .replace(new RegExp('[\r\n]', 'g'), ' ')
-
-      params.title = title
-      params.description = textDescription
-      params.image = image
-    }
+  } catch (error) {
+    console.error(`Error looking up page tags for ${req.originalUrl}:`, error)
   }
 
   res.render('index', params)

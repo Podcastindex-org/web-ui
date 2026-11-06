@@ -30,6 +30,88 @@
     ]
   },
   {
+    "appName": "Shuttle Podcasts",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "A podcast player with no ads in the app. Smart Skip jumps past ad breaks; offline downloads, Android Auto, CarPlay and a web player at shuttlepodcasts.app.",
+    "appUrl": "https://shuttlepodcasts.app",
+    "appIconUrl": "shuttlepodcasts.png",
+    "platforms": [
+      "Android",
+      "iOS",
+      "Web",
+      "Mobile"
+    ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.simplecityapps.shuttle.podcasts",
+      "iOS": "https://testflight.apple.com/join/NPweyc2T",
+      "Web": "https://shuttlepodcasts.app"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://shuttlepodcasts.app/press#:~:text=finds%20shows%20through%20the%20Podcast%20Index"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://shuttlepodcasts.app/press#:~:text=supports%20Podcasting%202.0%20chapters"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://shuttlepodcasts.app/press#:~:text=reads%20podcast%3Aguid"
+      }
+    ]
+  },
+  {
+    "appName": "Alarmcast",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "Podcast alarm clock for Android. Wakes you with your podcast instead of a beep, and lets you keep listening once you are up.",
+    "appUrl": "https://alarmcast.app",
+    "appIconUrl": "alarmcast.png",
+    "platforms": [
+      "Android",
+      "Mobile"
+    ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.alarmcast.app"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://alarmcast.app/privacy/#:~:text=Podcast%20search%20%28sent%20to%20Apple%20and%20to%20Podcast%20Index%29"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://alarmcast.app/#:~:text=any%20support%20links%20in%20its%20feed"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://alarmcast.app/#:~:text=the%20transcript%20when%20the%20show%20publishes%20one"
+      },
+      {
+        "elementName": "Podroll",
+        "elementURL": "https://alarmcast.app/#:~:text=lists%20the%20shows%20it%20recommends"
+      },
+      {
+        "elementName": "Trailer",
+        "elementURL": "https://alarmcast.app/#:~:text=can%20play%20its%20trailer%20first"
+      },
+      {
+        "elementName": "Update Frequency",
+        "elementURL": "https://alarmcast.app/#:~:text=shows%20when%20new%20episodes%20come%20out"
+      },
+      {
+        "elementName": "Block",
+        "elementURL": "https://alarmcast.app/#:~:text=leave%20out%20any%20show%20that%20asks%20not%20to%20be%20listed"
+      }
+    ]
+  },
+  {
     "appName": "Graspd",
     "appType": [
       "app",
@@ -2620,6 +2702,9 @@
       {
         "elementName": "Live Item",
         "elementURL": "https://help.podlink.com/article/14-live"
+      },
+      {
+        "elementName": "Block"
       }
     ]
   },
@@ -4365,20 +4450,35 @@
   },
   {
     "appName": "Car Curious",
-    "appType": ["website"],
+    "appType": ["app", "website"],
     "tagLine": "Smart annotations and searchable transcripts for automotive podcasts",
     "appUrl": "https://getcarcurious.com",
     "appIconUrl": "carcurious.png",
-    "platforms": ["Web"],
+    "platforms": ["iOS", "Web"],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/car-curious/id6785778025",
+      "Web": "https://getcarcurious.com"
+    },
     "supportedElements": [
       {
-        "elementName": "Transcript"
+        "elementName": "Transcript",
+        "elementURL": "https://getcarcurious.com/about#podcasting-2-0-transcript"
       },
       {
-        "elementName": "Search"
+        "elementName": "Chapters",
+        "elementURL": "https://getcarcurious.com/about#podcasting-2-0-chapters"
       },
       {
-        "elementName": "Episode"
+        "elementName": "Funding",
+        "elementURL": "https://getcarcurious.com/about#podcasting-2-0-funding"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://getcarcurious.com/about#podcasting-2-0-episode"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://getcarcurious.com/about#podcasting-2-0-search"
       }
     ]
   },
@@ -4573,25 +4673,149 @@
         "elementName": "Boostagrams"
       },
       {
+        "elementName": "Sat Streaming"
+      },
+      {
+        "elementName": "Wallet Switching (VTS)"
+      },
+      {
+        "elementName": "Live Item"
+      },
+      {
+        "elementName": "Live Boosts"
+      },
+      {
         "elementName": "GUID"
       },
       {
         "elementName": "Remote Item"
       },
       {
-        "elementName": "Search"
+        "elementName": "Medium"
       },
       {
-        "elementName": "Image"
+        "elementName": "Publisher"
+      },
+      {
+        "elementName": "Podroll"
+      },
+      {
+        "elementName": "Txt"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Funding"
+      },
+      {
+        "elementName": "Social Interact"
+      },
+      {
+        "elementName": "Video"
+      },
+      {
+        "elementName": "Alternate Enclosure"
+      },
+      {
+        "elementName": "Podping"
+      },
+      {
+        "elementName": "Search"
       },
       {
         "elementName": "Episode"
       },
       {
         "elementName": "Season"
+      }
+    ]
+  },
+  {
+    "appName": "Boost Me Buddy",
+    "appType": [
+      "podcast player",
+      "music player",
+      "app",
+      "website",
+      "open source"
+    ],
+    "appUrl": "https://boostmebuddy.com",
+    "appIconUrl": "boostmebuddy.png",
+    "tagLine": "Search. Listen. Boost. — family-friendly V4V podcast player with Nostr-published boosts",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Value"
+      },
+      {
+        "elementName": "Boostagrams"
+      },
+      {
+        "elementName": "Sat Streaming"
+      },
+      {
+        "elementName": "Wallet Switching (VTS)"
       },
       {
         "elementName": "Live Item"
+      },
+      {
+        "elementName": "Live Boosts"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Remote Item"
+      },
+      {
+        "elementName": "Medium"
+      },
+      {
+        "elementName": "Publisher"
+      },
+      {
+        "elementName": "Podroll"
+      },
+      {
+        "elementName": "Txt"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Funding"
+      },
+      {
+        "elementName": "Social Interact"
+      },
+      {
+        "elementName": "Video"
+      },
+      {
+        "elementName": "Alternate Enclosure"
+      },
+      {
+        "elementName": "Podping"
+      },
+      {
+        "elementName": "Search"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "Season"
       }
     ]
   },
@@ -4955,7 +5179,162 @@
         "elementURL": "https://github.com/ttlequals0/MinusPod/blob/main/docs/podcasting-2.0.md#:~:text=MinusPod%20serves%20its%20own%20chapters%20JSON"
       }
     ]
+  },
+  {
+    "appName": "Spool",
+    "appType": [
+      "podcast player",
+      "app"
+    ],
+    "appUrl": "https://spoolcast.ca",
+    "appIconUrl": "spool.png",
+    "tagLine": "Podcasts on your terms: curate your queue, trim the silences, clip the best moments and add any feed by URL.",
+    "platforms": [
+      "Mobile",
+      "iOS",
+      "iPad OS"
+    ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/id6809485942"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Funding"
+      },
+      {
+        "elementName": "Person"
+      },
+      {
+        "elementName": "Season"
+      },
+      {
+        "elementName": "Episode"
+      }
+    ]
+  },
+  {
+    "appName": "FreeRadio",
+    "appType": [
+      "app",
+      "website",
+      "podcast player"
+    ],
+    "tagLine": "Free radio stations from around the world, plus podcasts and videocasts, in the browser. No account needed; favorites and follows stay on your device.",
+    "appUrl": "https://freeradio.app",
+    "appIconUrl": "freeradio.png",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search"
+      }
+    ]
+  },
+  {
+    "appName": "Seenr",
+    "appType": [
+      "app",
+      "website",
+      "podcast player"
+    ],
+    "tagLine": "Social culture tracker: follow your podcasts episode by episode alongside your series, movies, books and games, with a built-in player, listening history, ratings and reviews.",
+    "appUrl": "https://seenr.app/en/podcast-tracker",
+    "appIconUrl": "seenr.png",
+    "platforms": [
+      "Web",
+      "Mobile",
+      "iOS",
+      "Android"
+    ],
+    "platformLinks": {
+      "Web": "https://seenr.app/en/podcast-tracker",
+      "iOS": "https://apps.apple.com/app/id6788104737",
+      "Android": "https://play.google.com/store/apps/details?id=com.byus.seenr"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://seenr.app/en/podcast-tracker#:~:text=From%20the%20open%20Podcast%20Index%20directory"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://seenr.app/en/podcast-tracker#:~:text=find%20out%20who%20speaks%2C%20from%20the%20host%20to%20the%20guest"
+      },
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Funding"
+      }
+    ]
+  },
+  {
+    "appName": "June",
+    "appType": [
+      "podcast player",
+      "app"
+    ],
+    "appUrl": "https://june.fm",
+    "appIconUrl": "june.png",
+    "tagLine": "Your podcasts, every day. Each morning June lines up today's new episodes from the shows you follow. Free on iPhone and Mac.",
+    "platforms": [
+      "Mobile",
+      "iOS",
+      "macOS"
+    ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/us/app/june-your-podcasts-every-day/id6803277971",
+      "macOS": "https://apps.apple.com/us/app/june-your-podcasts-every-day/id6803277971"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://june.fm/podcasters#transcript"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://june.fm/podcasters#chapters"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://june.fm/podcasters#person"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://june.fm/podcasters#funding"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://june.fm/podcasters#season"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://june.fm/podcasters#episode"
+      },
+      {
+        "elementName": "Trailer",
+        "elementURL": "https://june.fm/podcasters#trailer"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://june.fm/podcasters#medium"
+      },
+      {
+        "elementName": "Block",
+        "elementURL": "https://june.fm/podcasters#block"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://june.fm/podcasters#guid"
+      }
+    ]
   }
-
-
 ]
