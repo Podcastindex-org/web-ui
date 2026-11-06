@@ -164,9 +164,7 @@ export default class Landing extends React.Component<IProps, IState> {
                         <strong>Get API keys</strong> by <a href="https://api.podcastindex.org/signup">signing up for an account</a>
                     </p>
                     <p>
-                        <strong>Download the full podcast index</strong> as <a href="https://public.podcastindex.org/podcastindex_feeds.db.tgz">a sqlite3 file</a>.{' '}
-                        Query the entire database on your desktop using <a href="https://sqlitebrowser.org">DB Browser for SQLite</a> or similar.{' '}
-                        The file is produced Saturdays at 22:00 UTC (and uploaded a few hours later).
+                        <strong>Download data for research, your app, or any other reason:</strong> find <a href="https://podcastindex.org/datasets">all our downloadable datasets</a>. They’re all free to use: consider <a href="#donate">donating</a> to keep the lights on. 
                     </p>
                     <p>
                         <strong>We build in the open.</strong> Get active in the{' '}

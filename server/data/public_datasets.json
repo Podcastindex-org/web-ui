@@ -1,7 +1,7 @@
 {
     "title": "Public Data",
     "tagline": "Open datasets generated and published by the Podcast Index project.",
-    "intro": "Podcast Index produces a number of public data exports - full feed catalogs, recommendation lists, value-block dumps, activity stats, and infrastructure pointers - all served as static files under public.podcastindex.org and a few sibling subdomains. They are free to mirror and use; please don't hammer them in tight loops, and prefer the SQLite/CSV catalog dumps over live API scraping when you need bulk data.",
+    "intro": "Podcast Index produces a number of public data exports - full feed catalogs, recommendation lists, value-block dumps, activity stats, and infrastructure pointers - all served as static files under public.podcastindex.org and a few sibling subdomains. They are free to mirror and use; please don't hammer them in tight loops, send a User-Agent that names your application (requests with generic or default library User-Agents, such as plain curl or python-requests, are refused with a 403), and prefer the SQLite/CSV catalog dumps over live API scraping when you need bulk data.",
     "sections": [
         {
             "id": "catalog",
@@ -13,7 +13,7 @@
                     "url": "https://public.podcastindex.org/podcastindex_feeds.db.tgz",
                     "format": "tar.gz (SQLite)",
                     "cadence": "weekly",
-                    "description": "Every feed currently being polled, with title, URL, owner, iTunes ID, host, language, categories, generator, and lastest-episode timestamps. The most heavily used artifact downstream - most third-party mirrors of the Podcast Index data start here."
+                    "description": "Every podcast feed currently being polled by Podcast Index, with title, URL, owner, iTunes ID, host, language, categories, generator, and lastest-episode timestamps. The most heavily used artifact downstream - most third-party mirrors of our data start here. (Updated weekly, build starting Saturdays 2200 UTC)."
                 },
                 {
                     "name": "Dead feeds - CSV (id only)",
@@ -112,6 +112,55 @@
                     "format": "JSON",
                     "cadence": "daily",
                     "description": "Day-bucketed aggregate counts with a longer retention window than the hourly file - better for long-term trend lines."
+                }
+            ]
+        },
+        {
+            "id": "lookalikes",
+            "name": "Lookalike feeds",
+            "description": "Pairs of live feeds that share episodes: a show copied to another host, a host move, a same-owner mirror, or one feed listed twice. Each pair has a likely label and a 0-1 confidence for you to verify, not a verdict; how it works is explained on the backlog summary page.",
+            "datasets": [
+                {
+                    "name": "Backlog - CSV",
+                    "url": "https://public.podcastindex.org/lookalike_feeds_backlog.csv",
+                    "format": "CSV",
+                    "cadence": "one-time",
+                    "description": "Every pair that already existed when the report started. Published once."
+                },
+                {
+                    "name": "Backlog summary - HTML",
+                    "url": "https://public.podcastindex.org/lookalike_feeds_backlog.html",
+                    "format": "HTML",
+                    "cadence": "one-time",
+                    "description": "Readable overview: counts by label, the most popular shows with a likely copy, and how the matching works."
+                },
+                {
+                    "name": "All known pairs - CSV",
+                    "url": "https://public.podcastindex.org/lookalike_feeds_all.csv",
+                    "format": "CSV",
+                    "cadence": "daily",
+                    "description": "Every pair currently known, with its current label."
+                },
+                {
+                    "name": "Latest day - CSV",
+                    "url": "https://public.podcastindex.org/lookalike_feeds_daily.csv",
+                    "format": "CSV",
+                    "cadence": "daily",
+                    "description": "Pairs that were new or changed on the latest run."
+                },
+                {
+                    "name": "Each day - dated CSV",
+                    "url": "https://public.podcastindex.org/lookalike_feeds_2026-10-30.csv",
+                    "format": "CSV",
+                    "cadence": "daily",
+                    "description": "One file per day, named lookalike_feeds_YYYY-MM-DD.csv (UTC), never changed later. Change the date to walk back."
+                },
+                {
+                    "name": "Latest day - HTML",
+                    "url": "https://public.podcastindex.org/lookalike_feeds_daily.html",
+                    "format": "HTML",
+                    "cadence": "daily",
+                    "description": "The latest day's pairs as a readable page, likely copies first."
                 }
             ]
         },
