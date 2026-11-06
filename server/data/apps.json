@@ -4420,20 +4420,35 @@
   },
   {
     "appName": "Car Curious",
-    "appType": ["website"],
+    "appType": ["app", "website"],
     "tagLine": "Smart annotations and searchable transcripts for automotive podcasts",
     "appUrl": "https://getcarcurious.com",
     "appIconUrl": "carcurious.png",
-    "platforms": ["Web"],
+    "platforms": ["iOS", "Web"],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/us/app/car-curious/id6785778025",
+      "Web": "https://getcarcurious.com"
+    },
     "supportedElements": [
       {
-        "elementName": "Transcript"
+        "elementName": "Transcript",
+        "elementURL": "https://getcarcurious.com/about#podcasting-2-0-transcript"
       },
       {
-        "elementName": "Search"
+        "elementName": "Chapters",
+        "elementURL": "https://getcarcurious.com/about#podcasting-2-0-chapters"
       },
       {
-        "elementName": "Episode"
+        "elementName": "Funding",
+        "elementURL": "https://getcarcurious.com/about#podcasting-2-0-funding"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://getcarcurious.com/about#podcasting-2-0-episode"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://getcarcurious.com/about#podcasting-2-0-search"
       }
     ]
   },
