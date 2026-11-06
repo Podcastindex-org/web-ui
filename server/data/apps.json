@@ -4426,7 +4426,7 @@
     "appIconUrl": "carcurious.png",
     "platforms": ["iOS", "Web"],
     "platformLinks": {
-      "iOS": "https://apps.apple.com/us/app/car-curious/id6785778025",
+      "iOS": "https://apps.apple.com/app/car-curious/id6785778025",
       "Web": "https://getcarcurious.com"
     },
     "supportedElements": [
