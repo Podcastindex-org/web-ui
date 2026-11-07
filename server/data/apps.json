@@ -23,19 +23,19 @@
     "supportedElements": [
       {
         "elementName": "Funding",
-        "elementURL": "https://wolfpawtv.com/watch.html"
+        "elementURL": "https://wolfpawtv.com/podcasting20.html#funding"
       },
       {
         "elementName": "Person",
-        "elementURL": "https://wolfpawtv.com/watch.html"
+        "elementURL": "https://wolfpawtv.com/podcasting20.html#person"
       },
       {
         "elementName": "Season",
-        "elementURL": "https://wolfpawtv.com/watch.html"
+        "elementURL": "https://wolfpawtv.com/podcasting20.html#season"
       },
       {
         "elementName": "Episode",
-        "elementURL": "https://wolfpawtv.com/watch.html"
+        "elementURL": "https://wolfpawtv.com/podcasting20.html#episode"
       }
     ]
   },
