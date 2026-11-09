@@ -208,7 +208,7 @@
   {
     "appName": "RadioShake",
     "appType": ["app", "podcast player"],
-    "tagLine": "Free Android radio + podcast player with built-in song ID. No account, no tracking.",
+    "tagLine": "Free Android radio + podcast player with built-in song ID. No account required, no ads today.",
     "appUrl": "https://radioshake.media",
     "appIconUrl": "radioshake.png",
     "platforms": ["Android", "Mobile"],
