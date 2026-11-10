@@ -1,50 +1,5 @@
 [
   {
-    "appName": "Wolf Paw TV",
-    "appType": [
-      "app",
-      "podcast player",
-      "video"
-    ],
-    "tagLine": "A free TV channel for independent podcasts on Roku, Amazon Fire TV, Google TV and Apple TV, played straight from each show's RSS feed, with a \"Support this podcast\" link for every show.",
-    "appUrl": "https://wolfpawtv.com",
-    "appIconUrl": "wolfpawtv.png",
-    "platforms": [
-      "Android",
-      "Web",
-      "Roku",
-      "Amazon Fire TV",
-      "Google TV",
-      "Apple TV"
-    ],
-    "platformLinks": {
-      "Android": "https://play.google.com/store/apps/details?id=com.wolfpawtv.tv",
-      "Web": "https://wolfpawtv.com/watch.html",
-      "Roku": "https://channelstore.roku.com/details/6773f15036af7bd0a6183e04144ecbdb:04f3564729c18a01b453ed90c3b6d39f/wolf-paw-tv",
-      "Amazon Fire TV": "https://www.amazon.com/dp/B0HM6J6QY4",
-      "Google TV": "https://play.google.com/store/apps/details?id=com.wolfpawtv.tv",
-      "Apple TV": "https://apps.apple.com/us/app/wolf-paw-tv/id6827713097"
-    },
-    "supportedElements": [
-      {
-        "elementName": "Funding",
-        "elementURL": "https://wolfpawtv.com/podcasting20.html#funding"
-      },
-      {
-        "elementName": "Person",
-        "elementURL": "https://wolfpawtv.com/podcasting20.html#person"
-      },
-      {
-        "elementName": "Season",
-        "elementURL": "https://wolfpawtv.com/podcasting20.html#season"
-      },
-      {
-        "elementName": "Episode",
-        "elementURL": "https://wolfpawtv.com/podcasting20.html#episode"
-      }
-    ]
-  },
-  {
     "appName": "Shuttle Podcasts",
     "appType": [
       "app",
@@ -5349,6 +5304,51 @@
       {
         "elementName": "GUID",
         "elementURL": "https://june.fm/podcasters#guid"
+      }
+    ]
+  },
+  {
+    "appName": "Wolf Paw TV",
+    "appType": [
+      "app",
+      "podcast player",
+      "video"
+    ],
+    "tagLine": "A free TV channel for independent podcasts on Roku, Amazon Fire TV, Google TV and Apple TV, played straight from each show's RSS feed, with a \"Support this podcast\" link for every show.",
+    "appUrl": "https://wolfpawtv.com",
+    "appIconUrl": "wolfpawtv.png",
+    "platforms": [
+      "Android",
+      "Web",
+      "Roku",
+      "Amazon Fire TV",
+      "Google TV",
+      "Apple TV"
+    ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.wolfpawtv.tv",
+      "Web": "https://wolfpawtv.com/watch.html",
+      "Roku": "https://channelstore.roku.com/details/6773f15036af7bd0a6183e04144ecbdb:04f3564729c18a01b453ed90c3b6d39f/wolf-paw-tv",
+      "Amazon Fire TV": "https://www.amazon.com/dp/B0HM6J6QY4",
+      "Google TV": "https://play.google.com/store/apps/details?id=com.wolfpawtv.tv",
+      "Apple TV": "https://apps.apple.com/us/app/wolf-paw-tv/id6827713097"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Funding",
+        "elementURL": "https://wolfpawtv.com/podcasting20.html#funding"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://wolfpawtv.com/podcasting20.html#person"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://wolfpawtv.com/podcasting20.html#season"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://wolfpawtv.com/podcasting20.html#episode"
       }
     ]
   }
