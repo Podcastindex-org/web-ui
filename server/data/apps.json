@@ -1,5 +1,55 @@
 [
   {
+    "appName": "Static Radio",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "Community radio for independent podcasts. Nine live stations of hand-picked, human-made shows: everyone tuned in hears the same moment, and every play streams from the show's own feed.",
+    "appUrl": "https://staticradio.app",
+    "appIconUrl": "staticradio.png",
+    "platforms": [
+      "iOS",
+      "iPad OS",
+      "macOS",
+      "Android",
+      "Web",
+      "Mobile"
+    ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/app/id6779338117",
+      "macOS": "https://apps.apple.com/app/id6779338117",
+      "Android": "https://play.google.com/store/apps/details?id=app.staticradio",
+      "Web": "https://staticradio.app/listen"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://staticradio.app/developers#:~:text=finds%20shows%20through%20the%20Podcast%20Index"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://staticradio.app/developers#:~:text=becomes%20the%20Support%20button"
+      },
+      {
+        "elementName": "Podroll",
+        "elementURL": "https://staticradio.app/developers#:~:text=tells%20us%20which%20shows%20you%20recommend"
+      },
+      {
+        "elementName": "Remote Item",
+        "elementURL": "https://staticradio.app/developers#:~:text=entries%20inside%20it"
+      },
+      {
+        "elementName": "Txt",
+        "elementURL": "https://staticradio.app/developers#:~:text=keeps%20a%20feed%20off%20the%20dial"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://staticradio.app/developers#:~:text=match%20your%20show%20across%20feeds"
+      }
+    ]
+  },
+  {
     "appName": "Podcasts Tracker",
     "appType": [
       "app",
