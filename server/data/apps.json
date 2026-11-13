@@ -5154,55 +5154,72 @@
     },
     "supportedElements": [
       {
-        "elementName": "Chapters"
+        "elementName": "Chapters",
+        "elementURL": "https://spoolcast.ca/podcasting20/#chapters"
       },
       {
-        "elementName": "Funding"
+        "elementName": "Funding",
+        "elementURL": "https://spoolcast.ca/podcasting20/#funding"
       },
       {
-        "elementName": "Person"
+        "elementName": "Person",
+        "elementURL": "https://spoolcast.ca/podcasting20/#person"
       },
       {
-        "elementName": "Season"
+        "elementName": "Season",
+        "elementURL": "https://spoolcast.ca/podcasting20/#season"
       },
       {
-        "elementName": "Episode"
+        "elementName": "Episode",
+        "elementURL": "https://spoolcast.ca/podcasting20/#episode"
       },
       {
-        "elementName": "Trailer"
+        "elementName": "Trailer",
+        "elementURL": "https://spoolcast.ca/podcasting20/#trailer"
       },
       {
-        "elementName": "Location"
+        "elementName": "Location",
+        "elementURL": "https://spoolcast.ca/podcasting20/#location"
       },
       {
-        "elementName": "License"
+        "elementName": "License",
+        "elementURL": "https://spoolcast.ca/podcasting20/#license"
       },
       {
-        "elementName": "GUID"
+        "elementName": "GUID",
+        "elementURL": "https://spoolcast.ca/podcasting20/#guid"
       },
       {
-        "elementName": "Image"
+        "elementName": "Image",
+        "elementURL": "https://spoolcast.ca/podcasting20/#image"
       },
       {
-        "elementName": "Social Interact"
+        "elementName": "Social Interact",
+        "elementURL": "https://spoolcast.ca/podcasting20/#social-interact"
       },
       {
-        "elementName": "Update Frequency"
+        "elementName": "Update Frequency",
+        "elementURL": "https://spoolcast.ca/podcasting20/#update-frequency"
       },
       {
-        "elementName": "Transcript"
+        "elementName": "Transcript",
+        "elementURL": "https://spoolcast.ca/podcasting20/#transcript"
       },
       {
-        "elementName": "Soundbite"
+        "elementName": "Soundbite",
+        "elementURL": "https://spoolcast.ca/podcasting20/#soundbite"
       },
       {
-        "elementName": "Content Link"
+        "elementName": "Content Link",
+        "elementURL": "https://spoolcast.ca/podcasting20/#content-link"
       },
       {
-        "elementName": "Medium"
+        "elementName": "Medium",
+        "elementURL": "https://spoolcast.ca/podcasting20/#medium"
       },
       {
-        "elementName": "Block"
+        "elementName": "Block",
+        "elementURL": "https://spoolcast.ca/podcasting20/#block"
       }
     ]
   },
