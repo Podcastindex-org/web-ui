@@ -5431,5 +5431,35 @@
         "elementURL": "https://wolfpawtv.com/podcasting20.html#episode"
       }
     ]
+  },
+  {
+    "appName": "BitePods",
+    "appType": [
+      "website"
+    ],
+    "tagLine": "Clip the best moment of any podcast episode and send it as a link that plays right there. Shows that publish a transcript get searchable, tappable words to mark the clip by.",
+    "appUrl": "https://bitepods.com",
+    "appIconUrl": "bitepods.png",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "platformLinks": {
+      "Web": "https://bitepods.com"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://bitepods.com/help/mark-the-moment#:~:text=About%20one%20podcast%20in%20six%20publishes%20a%20transcript"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://bitepods.com/changelog#:~:text=the%20show's%20own%20support%20link"
+      },
+      {
+        "elementName": "Soundbite",
+        "elementURL": "https://bitepods.com/help/mark-the-moment#:~:text=A%20few%20shows%20mark%20their%20best%20moments%20in%20their%20feed"
+      }
+    ]
   }
 ]
