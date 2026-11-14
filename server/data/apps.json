@@ -5484,5 +5484,59 @@
         "elementURL": "https://wolfpawtv.com/podcasting20.html#episode"
       }
     ]
+  },
+  {
+    "appName": "Shows & Stories",
+    "appType": [
+      "app",
+      "podcast player",
+      "video"
+    ],
+    "appUrl": "https://showsandstories.com/en",
+    "appIconUrl": "shows-and-stories.png",
+    "tagLine": "One library for podcasts, video podcasts and blogs, built to keep hundreds of subscriptions organised. Chapters, transcripts and sync across Windows and web.",
+    "platforms": [
+      "Web",
+      "Windows"
+    ],
+    "platformLinks": {
+      "Web": "https://app.showsandstories.com",
+      "Windows": "https://apps.microsoft.com/detail/9P4S6W88B7LG"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://showsandstories.com/en#funktionen"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://showsandstories.com/en#funktionen"
+      },
+      {
+        "elementName": "Video",
+        "elementURL": "https://showsandstories.com/en#funktionen"
+      },
+      {
+        "elementName": "Person"
+      },
+      {
+        "elementName": "Funding"
+      },
+      {
+        "elementName": "Soundbite"
+      },
+      {
+        "elementName": "Season"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Medium"
+      }
+    ]
   }
 ]
