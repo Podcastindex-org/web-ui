@@ -1,5 +1,24 @@
 [
   {
+    "appName": "ShareAPod",
+    "appType": [
+      "website"
+    ],
+    "tagLine": "Paste a podcast link from any app and get one link that opens in 18 podcast apps.",
+    "appUrl": "https://shareapod.com",
+    "appIconUrl": "shareapod.png",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://shareapod.com/about#:~:text=ask%20the%20Podcast%20Index"
+      }
+    ]
+  },
+  {
     "appName": "Static Radio",
     "appType": [
       "app",
