@@ -2,7 +2,8 @@
   {
     "appName": "ShareAPod",
     "appType": [
-      "website"
+      "website",
+      "directory"
     ],
     "tagLine": "Paste a podcast link from any app and get one link that opens in 18 podcast apps.",
     "appUrl": "https://shareapod.com",
