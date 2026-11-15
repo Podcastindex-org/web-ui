@@ -5540,5 +5540,66 @@
         "elementURL": "https://wolfpawtv.com/podcasting20.html#episode"
       }
     ]
+  },
+  {
+    "appName": "Shows & Stories",
+    "appType": [
+      "app",
+      "podcast player",
+      "video"
+    ],
+    "appUrl": "https://showsandstories.com/en",
+    "appIconUrl": "shows-and-stories.png",
+    "tagLine": "Podcasts, video podcasts and blogs in one app, built to keep hundreds of subscriptions organised. Chapters, transcripts and sync across Windows and web.",
+    "platforms": [
+      "Web",
+      "Windows"
+    ],
+    "platformLinks": {
+      "Web": "https://app.showsandstories.com",
+      "Windows": "https://apps.microsoft.com/detail/9P4S6W88B7LG"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#chapters"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#transcript"
+      },
+      {
+        "elementName": "Video",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#video"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#person"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#funding"
+      },
+      {
+        "elementName": "Soundbite",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#soundbite"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#season"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#episode"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#guid"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#medium"
+      }
+    ]
   }
 ]
