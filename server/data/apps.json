@@ -2506,6 +2506,42 @@
     ]
   },
   {
+    "appName": "podtunes",
+    "appType": [
+      "music player",
+      "app",
+      "website",
+      "directory"
+    ],
+    "tagLine": "Modern music discovery and streaming platform for Podcasting 2.0 & Value4Value.",
+    "appUrl": "https://podtunes.app",
+    "appIconUrl": "podtunes.png",
+    "platforms": [
+      "Web",
+      "Mobile",
+      "Android"
+    ],
+    "platformLinks": {
+      "Web": "https://podtunes.app",
+      "Android": "https://zapstore.dev/apps/app.podtunes"
+    },
+    "supportedElements": [
+      { "elementName": "Value", "elementURL": "https://podtunes.app/podcasting-2-0#value" },
+      { "elementName": "Boostagrams", "elementURL": "https://podtunes.app/podcasting-2-0#boostagrams" },
+      { "elementName": "Funding", "elementURL": "https://podtunes.app/podcasting-2-0#funding" },
+      { "elementName": "GUID", "elementURL": "https://podtunes.app/podcasting-2-0#guid" },
+      { "elementName": "Medium", "elementURL": "https://podtunes.app/podcasting-2-0#medium" },
+      { "elementName": "Person", "elementURL": "https://podtunes.app/podcasting-2-0#person" },
+      { "elementName": "Publisher", "elementURL": "https://podtunes.app/podcasting-2-0#publisher" },
+      { "elementName": "Episode", "elementURL": "https://podtunes.app/podcasting-2-0#episode" },
+      { "elementName": "Search", "elementURL": "https://podtunes.app/podcasting-2-0#search" },
+      { "elementName": "Podping", "elementURL": "https://podtunes.app/podcasting-2-0#podping" },
+      { "elementName": "OP3", "elementURL": "https://podtunes.app/podcasting-2-0#op3" },
+      { "elementName": "Remote Item", "elementURL": "https://podtunes.app/podcasting-2-0#remote-item" },
+      { "elementName": "Txt", "elementURL": "https://podtunes.app/podcasting-2-0#txt" }
+    ]
+  },
+  {
     "appName": "RSS Blue",
     "appType": ["hosting"],
     "appUrl": "https://rssblue.com",
