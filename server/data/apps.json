@@ -5506,36 +5506,43 @@
     "supportedElements": [
       {
         "elementName": "Chapters",
-        "elementURL": "https://showsandstories.com/en#funktionen"
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#chapters"
       },
       {
         "elementName": "Transcript",
-        "elementURL": "https://showsandstories.com/en#funktionen"
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#transcript"
       },
       {
         "elementName": "Video",
-        "elementURL": "https://showsandstories.com/en#funktionen"
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#video"
       },
       {
-        "elementName": "Person"
+        "elementName": "Person",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#person"
       },
       {
-        "elementName": "Funding"
+        "elementName": "Funding",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#funding"
       },
       {
-        "elementName": "Soundbite"
+        "elementName": "Soundbite",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#soundbite"
       },
       {
-        "elementName": "Season"
+        "elementName": "Season",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#season"
       },
       {
-        "elementName": "Episode"
+        "elementName": "Episode",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#episode"
       },
       {
-        "elementName": "GUID"
+        "elementName": "GUID",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#guid"
       },
       {
-        "elementName": "Medium"
+        "elementName": "Medium",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#medium"
       }
     ]
   }
