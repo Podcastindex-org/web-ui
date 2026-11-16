@@ -5601,5 +5601,22 @@
         "elementURL": "https://showsandstories.com/en/podcasting-2-0#medium"
       }
     ]
-  }
-]
+  },
+  {
+    "appName": "AmigoFish",
+    "appType": [
+      "directory",
+      "website"
+    ],
+    "tagLine": "Find podcasts and video channels by taste, not popularity.",
+    "appUrl": "https://amigo.fish",
+    "appIconUrl": "amigofish.png",
+    "platforms": [
+      "Web"
+    ],
+    "platformLinks": {
+      "Web": "https://amigo.fish"
+    },
+    "supportedElements": [
+      {
+        "el
