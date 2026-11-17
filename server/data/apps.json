@@ -1,5 +1,25 @@
 [
   {
+    "appName": "ShareAPod",
+    "appType": [
+      "website",
+      "directory"
+    ],
+    "tagLine": "Paste a podcast link from any app and get one link that opens in 18 podcast apps.",
+    "appUrl": "https://shareapod.com",
+    "appIconUrl": "shareapod.png",
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Search",
+        "elementURL": "https://shareapod.com/about#:~:text=ask%20the%20Podcast%20Index"
+      }
+    ]
+  },
+  {
     "appName": "Static Radio",
     "appType": [
       "app",
@@ -2503,6 +2523,42 @@
       {
         "elementName": "Sat Streaming"
       }
+    ]
+  },
+  {
+    "appName": "podtunes",
+    "appType": [
+      "music player",
+      "app",
+      "website",
+      "directory"
+    ],
+    "tagLine": "Modern music discovery and streaming platform for Podcasting 2.0 & Value4Value.",
+    "appUrl": "https://podtunes.app",
+    "appIconUrl": "podtunes.png",
+    "platforms": [
+      "Web",
+      "Mobile",
+      "Android"
+    ],
+    "platformLinks": {
+      "Web": "https://podtunes.app",
+      "Android": "https://zapstore.dev/apps/app.podtunes"
+    },
+    "supportedElements": [
+      { "elementName": "Value", "elementURL": "https://podtunes.app/podcasting-2-0#value" },
+      { "elementName": "Boostagrams", "elementURL": "https://podtunes.app/podcasting-2-0#boostagrams" },
+      { "elementName": "Funding", "elementURL": "https://podtunes.app/podcasting-2-0#funding" },
+      { "elementName": "GUID", "elementURL": "https://podtunes.app/podcasting-2-0#guid" },
+      { "elementName": "Medium", "elementURL": "https://podtunes.app/podcasting-2-0#medium" },
+      { "elementName": "Person", "elementURL": "https://podtunes.app/podcasting-2-0#person" },
+      { "elementName": "Publisher", "elementURL": "https://podtunes.app/podcasting-2-0#publisher" },
+      { "elementName": "Episode", "elementURL": "https://podtunes.app/podcasting-2-0#episode" },
+      { "elementName": "Search", "elementURL": "https://podtunes.app/podcasting-2-0#search" },
+      { "elementName": "Podping", "elementURL": "https://podtunes.app/podcasting-2-0#podping" },
+      { "elementName": "OP3", "elementURL": "https://podtunes.app/podcasting-2-0#op3" },
+      { "elementName": "Remote Item", "elementURL": "https://podtunes.app/podcasting-2-0#remote-item" },
+      { "elementName": "Txt", "elementURL": "https://podtunes.app/podcasting-2-0#txt" }
     ]
   },
   {
@@ -5249,19 +5305,72 @@
     },
     "supportedElements": [
       {
-        "elementName": "Chapters"
+        "elementName": "Chapters",
+        "elementURL": "https://spoolcast.ca/podcasting20/#chapters"
       },
       {
-        "elementName": "Funding"
+        "elementName": "Funding",
+        "elementURL": "https://spoolcast.ca/podcasting20/#funding"
       },
       {
-        "elementName": "Person"
+        "elementName": "Person",
+        "elementURL": "https://spoolcast.ca/podcasting20/#person"
       },
       {
-        "elementName": "Season"
+        "elementName": "Season",
+        "elementURL": "https://spoolcast.ca/podcasting20/#season"
       },
       {
-        "elementName": "Episode"
+        "elementName": "Episode",
+        "elementURL": "https://spoolcast.ca/podcasting20/#episode"
+      },
+      {
+        "elementName": "Trailer",
+        "elementURL": "https://spoolcast.ca/podcasting20/#trailer"
+      },
+      {
+        "elementName": "Location",
+        "elementURL": "https://spoolcast.ca/podcasting20/#location"
+      },
+      {
+        "elementName": "License",
+        "elementURL": "https://spoolcast.ca/podcasting20/#license"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://spoolcast.ca/podcasting20/#guid"
+      },
+      {
+        "elementName": "Image",
+        "elementURL": "https://spoolcast.ca/podcasting20/#image"
+      },
+      {
+        "elementName": "Social Interact",
+        "elementURL": "https://spoolcast.ca/podcasting20/#social-interact"
+      },
+      {
+        "elementName": "Update Frequency",
+        "elementURL": "https://spoolcast.ca/podcasting20/#update-frequency"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://spoolcast.ca/podcasting20/#transcript"
+      },
+      {
+        "elementName": "Soundbite",
+        "elementURL": "https://spoolcast.ca/podcasting20/#soundbite"
+      },
+      {
+        "elementName": "Content Link",
+        "elementURL": "https://spoolcast.ca/podcasting20/#content-link"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://spoolcast.ca/podcasting20/#medium"
+      },
+      {
+        "elementName": "Block",
+        "elementURL": "https://spoolcast.ca/podcasting20/#block"
       }
     ]
   },
@@ -5429,6 +5538,67 @@
       {
         "elementName": "Episode",
         "elementURL": "https://wolfpawtv.com/podcasting20.html#episode"
+      }
+    ]
+  },
+  {
+    "appName": "Shows & Stories",
+    "appType": [
+      "app",
+      "podcast player",
+      "video"
+    ],
+    "appUrl": "https://showsandstories.com/en",
+    "appIconUrl": "shows-and-stories.png",
+    "tagLine": "Podcasts, video podcasts and blogs in one app, built to keep hundreds of subscriptions organised. Chapters, transcripts and sync across Windows and web.",
+    "platforms": [
+      "Web",
+      "Windows"
+    ],
+    "platformLinks": {
+      "Web": "https://app.showsandstories.com",
+      "Windows": "https://apps.microsoft.com/detail/9P4S6W88B7LG"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#chapters"
+      },
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#transcript"
+      },
+      {
+        "elementName": "Video",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#video"
+      },
+      {
+        "elementName": "Person",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#person"
+      },
+      {
+        "elementName": "Funding",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#funding"
+      },
+      {
+        "elementName": "Soundbite",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#soundbite"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#season"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#episode"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#guid"
+      },
+      {
+        "elementName": "Medium",
+        "elementURL": "https://showsandstories.com/en/podcasting-2-0#medium"
       }
     ]
   },
