@@ -5371,6 +5371,10 @@
       {
         "elementName": "Block",
         "elementURL": "https://spoolcast.ca/podcasting20/#block"
+      },
+      {
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://spoolcast.ca/podcasting20/#alternate-enclosure"
       }
     ]
   },
