@@ -5631,5 +5631,45 @@
         "elementURL": "https://bitepods.com/help/mark-the-moment#:~:text=A%20few%20shows%20mark%20their%20best%20moments%20in%20their%20feed"
       }
     ]
+  },
+  {
+    "appName": "Yarn",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "appUrl": "https://yarnpodcast.app",
+    "appIconUrl": "yarn.png",
+    "tagLine": "A podcast player for iPhone and iPad. New episodes wait in an Inbox, the ones you pick line up in a Queue, and both sync through your iCloud account.",
+    "platforms": [
+      "Mobile",
+      "iOS",
+      "iPad OS"
+    ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/us/app/yarn-podcast-player/id6815815830"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://yarnpodcast.app/support#podcast-transcript"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://yarnpodcast.app/support#podcast-chapters"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://yarnpodcast.app/support#podcast-season"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://yarnpodcast.app/support#podcast-episode"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://yarnpodcast.app/support#podcast-guid"
+      }
+    ]
   }
 ]
