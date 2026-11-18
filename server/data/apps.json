@@ -5651,19 +5651,24 @@
     },
     "supportedElements": [
       {
-        "elementName": "Transcript"
+        "elementName": "Transcript",
+        "elementURL": "https://yarnpodcast.app/support#podcast-transcript"
       },
       {
-        "elementName": "Chapters"
+        "elementName": "Chapters",
+        "elementURL": "https://yarnpodcast.app/support#podcast-chapters"
       },
       {
-        "elementName": "Season"
+        "elementName": "Season",
+        "elementURL": "https://yarnpodcast.app/support#podcast-season"
       },
       {
-        "elementName": "Episode"
+        "elementName": "Episode",
+        "elementURL": "https://yarnpodcast.app/support#podcast-episode"
       },
       {
-        "elementName": "GUID"
+        "elementName": "GUID",
+        "elementURL": "https://yarnpodcast.app/support#podcast-guid"
       }
     ]
   }
