@@ -5525,19 +5525,19 @@
     "supportedElements": [
       {
         "elementName": "Search",
-        "elementURL": "https://wolfpawtv.com/"
+        "elementURL": "https://wolfpawtv.com/podcasting20.html#search"
       },
       {
         "elementName": "Person",
-        "elementURL": "https://wolfpawtv.com/"
+        "elementURL": "https://wolfpawtv.com/podcasting20.html#person"
       },
       {
         "elementName": "Season",
-        "elementURL": "https://wolfpawtv.com/"
+        "elementURL": "https://wolfpawtv.com/podcasting20.html#season"
       },
       {
         "elementName": "Episode",
-        "elementURL": "https://wolfpawtv.com/"
+        "elementURL": "https://wolfpawtv.com/podcasting20.html#episode"
       }
     ]
   },
