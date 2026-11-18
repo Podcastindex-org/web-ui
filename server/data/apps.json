@@ -1,44 +1,5 @@
 [
   {
-    "appName": "Wolf Paw TV",
-    "appType": [
-      "app",
-      "podcast player",
-      "video"
-    ],
-    "tagLine": "Free podcasts on your TV: Roku, Amazon Fire TV, Google TV, Apple TV and the web.",
-    "appUrl": "https://wolfpawtv.com",
-    "appIconUrl": "wolfpawtv.png",
-    "platforms": [
-      "Roku",
-      "Amazon Fire TV",
-      "Google TV",
-      "Apple TV",
-      "Web"
-    ],
-    "platformLinks": {
-      "Roku": "https://channelstore.roku.com/details/6773f15036af7bd0a6183e04144ecbdb:04f3564729c18a01b453ed90c3b6d39f/wolf-paw-tv",
-      "Amazon Fire TV": "https://www.amazon.com/dp/B0HM6J6QY4",
-      "Google TV": "https://play.google.com/store/apps/details?id=com.wolfpawtv.tv",
-      "Apple TV": "https://apps.apple.com/us/app/wolf-paw-tv/id6827713097",
-      "Web": "https://wolfpawtv.com/"
-    },
-    "supportedElements": [
-      {
-        "elementName": "Search",
-        "elementURL": "https://wolfpawtv.com/"
-      },
-      {
-        "elementName": "Season",
-        "elementURL": "https://wolfpawtv.com/"
-      },
-      {
-        "elementName": "Episode",
-        "elementURL": "https://wolfpawtv.com/"
-      }
-    ]
-  },
-  {
     "appName": "ShareAPod",
     "appType": [
       "website",
@@ -5542,7 +5503,7 @@
       "podcast player",
       "video"
     ],
-    "tagLine": "A free TV channel for independent podcasts on Roku, Amazon Fire TV, Google TV and Apple TV, played straight from each show's RSS feed, with a \"Support this podcast\" link for every show.",
+    "tagLine": "Free podcasts on your TV: Roku, Amazon Fire TV, Google TV, Apple TV and the web.",
     "appUrl": "https://wolfpawtv.com",
     "appIconUrl": "wolfpawtv.png",
     "platforms": [
@@ -5555,7 +5516,7 @@
     ],
     "platformLinks": {
       "Android": "https://play.google.com/store/apps/details?id=com.wolfpawtv.tv",
-      "Web": "https://wolfpawtv.com/watch.html",
+      "Web": "https://wolfpawtv.com/",
       "Roku": "https://channelstore.roku.com/details/6773f15036af7bd0a6183e04144ecbdb:04f3564729c18a01b453ed90c3b6d39f/wolf-paw-tv",
       "Amazon Fire TV": "https://www.amazon.com/dp/B0HM6J6QY4",
       "Google TV": "https://play.google.com/store/apps/details?id=com.wolfpawtv.tv",
@@ -5563,20 +5524,16 @@
     },
     "supportedElements": [
       {
-        "elementName": "Funding",
-        "elementURL": "https://wolfpawtv.com/podcasting20.html#funding"
-      },
-      {
-        "elementName": "Person",
-        "elementURL": "https://wolfpawtv.com/podcasting20.html#person"
+        "elementName": "Search",
+        "elementURL": "https://wolfpawtv.com/"
       },
       {
         "elementName": "Season",
-        "elementURL": "https://wolfpawtv.com/podcasting20.html#season"
+        "elementURL": "https://wolfpawtv.com/"
       },
       {
         "elementName": "Episode",
-        "elementURL": "https://wolfpawtv.com/podcasting20.html#episode"
+        "elementURL": "https://wolfpawtv.com/"
       }
     ]
   },
