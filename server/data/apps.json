@@ -1,5 +1,22 @@
 [
   {
+    "appName": "Podcast Transcript Scraper (Apify)",
+    "appType": [
+      "other"
+    ],
+    "tagLine": "Turns the podcast:transcript files shows publish in their RSS feeds (SRT, VTT, JSON, HTML) into clean text and timestamped speaker segments. Paid per transcript on Apify; first 25 per run free.",
+    "appUrl": "https://apify.com/ahmed.fouaad82/podcast-published-transcripts",
+    "appIconUrl": "podcast-transcript-scraper.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript"
+      }
+    ]
+  },
+  {
     "appName": "ShareAPod",
     "appType": [
       "website",
