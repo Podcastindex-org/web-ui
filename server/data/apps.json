@@ -5703,5 +5703,30 @@
         "elementURL": "https://podcast.utilarium.app/submit/#podcast-locked"
       }
     ]
+  },
+  {
+    "appName": "Yak",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "Local-first podcast player for Android. Subscriptions and downloads stay on the phone. The player shows chapters and transcripts when the feed has them.",
+    "appUrl": "https://yakplayer.com",
+    "appIconUrl": "yak.png",
+    "platforms": [
+      "Android"
+    ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.tgcnetwork.yak"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://yakplayer.com/changelog"
+      },
+      {
+        "elementName": "Transcript"
+      }
+    ]
   }
 ]
