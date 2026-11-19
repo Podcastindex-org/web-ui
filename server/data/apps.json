@@ -4990,7 +4990,7 @@
       "app",
       "website"
     ],
-    "tagLine": "Podcast growth platform for independent podcasters: free bio-link page and OP3-powered analytics, plus AI show notes and transcripts.",
+    "tagLine": "Podcast growth platform for independent podcasters: free bio-link page and independent, uncapped download analytics, plus AI show notes and transcripts.",
     "appUrl": "https://podlink.ai",
     "appIconUrl": "podlink-ai.png",
     "platforms": [
@@ -4999,10 +4999,6 @@
     "platformLinks": {
       "Web": "https://podlink.ai"
     },
-    "supportedElements": [
-      {
-        "elementName": "OP3"
-      }
-    ]
+    "supportedElements": []
   }
 ]
