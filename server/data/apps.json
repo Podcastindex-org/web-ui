@@ -5685,16 +5685,20 @@
     ],
     "supportedElements": [
       {
-        "elementName": "Transcript"
+        "elementName": "Transcript",
+        "elementURL": "https://podcast.utilarium.app/submit/#podcast-transcript"
       },
       {
-        "elementName": "Chapters"
+        "elementName": "Chapters",
+        "elementURL": "https://podcast.utilarium.app/submit/#podcast-chapters"
       },
       {
-        "elementName": "GUID"
+        "elementName": "GUID",
+        "elementURL": "https://podcast.utilarium.app/submit/#podcast-guid"
       },
       {
-        "elementName": "Locked"
+        "elementName": "Locked",
+        "elementURL": "https://podcast.utilarium.app/submit/#podcast-locked"
       }
     ]
   }
