@@ -5671,5 +5671,31 @@
         "elementURL": "https://yarnpodcast.app/support#podcast-guid"
       }
     ]
+  },
+  {
+    "appName": "Podcast Host by utilarium",
+    "appType": [
+      "hosting"
+    ],
+    "tagLine": "Free podcast hosting for small shows. No ads, no paid plan.",
+    "appUrl": "https://podcast.utilarium.app",
+    "appIconUrl": "podcasthostbyutilarium.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Locked"
+      }
+    ]
   }
 ]
