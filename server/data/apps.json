@@ -5550,12 +5550,14 @@
     ],
     "appUrl": "https://showsandstories.com/en",
     "appIconUrl": "shows-and-stories.png",
-    "tagLine": "Podcasts, video podcasts and blogs in one app, built to keep hundreds of subscriptions organised. Chapters, transcripts and sync across Windows and web.",
+    "tagLine": "Podcasts, video podcasts and blogs in one app, built to keep hundreds of subscriptions organised. Chapters, transcripts and sync across Windows, Android and web.",
     "platforms": [
+      "Android",
       "Web",
       "Windows"
     ],
     "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.showsandstories.app",
       "Web": "https://app.showsandstories.com",
       "Windows": "https://apps.microsoft.com/detail/9P4S6W88B7LG"
     },
