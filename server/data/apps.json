@@ -4944,7 +4944,7 @@
   },
   {
     "appName": "boxlore",
-    "appType": ["app", "podcast player", "open source"],
+    "appType": ["app", "podcast player"],
     "appUrl": "https://github.com/boxcreate/boxlore",
     "appIconUrl": "boxlore.png",
     "tagLine": "Experience podcasts with boxlore, a fluid and distraction-free player built for those who value clean design and absolute transparency.",
