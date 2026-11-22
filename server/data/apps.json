@@ -122,7 +122,7 @@
       "app",
       "podcast player"
     ],
-    "tagLine": "A podcast player with no ads in the app. Smart Skip jumps past ad breaks; offline downloads, Android Auto, CarPlay and a web player at shuttlepodcasts.app.",
+    "tagLine": "A podcast player with no ads in the app. Smart Skip jumps past ad aks; offline downloads, Android Auto, CarPlay and a web player at shuttlepodcasts.app.",
     "appUrl": "https://shuttlepodcasts.app",
     "appIconUrl": "shuttlepodcasts.png",
     "platforms": [
@@ -976,39 +976,6 @@
       },
       {
         "elementName": "Search"
-      }
-    ]
-  },
-  {
-    "appName": "Breez",
-    "appType": ["app", "podcast player", "open source"],
-    "appUrl": "https://breez.technology/",
-    "appIconUrl": "breez.png",
-    "platforms": ["Mobile", "Android", "iOS"],
-    "platformLinks": {
-      "Android": "https://play.google.com/store/apps/details?id=com.breez.client",
-      "iOS": "https://apps.apple.com/app/breez-lightning-client-pos/id1463604142"
-    },
-    "supportedElements": [
-      {
-        "elementName": "Chapters",
-        "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
-      },
-      {
-        "elementName": "Search",
-        "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
-      },
-      {
-        "elementName": "Value",
-        "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
-      },
-      {
-        "elementName": "Sat Streaming",
-        "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
-      },
-      {
-        "elementName": "Boostagrams",
-        "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.12.lnaddrees"
       }
     ]
   },
