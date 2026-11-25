@@ -5410,6 +5410,14 @@
       {
         "elementName": "Search",
         "elementURL": "https://spoolcast.ca/podcasting20/#search"
+      },
+      {
+        "elementName": "Podroll",
+        "elementURL": "https://spoolcast.ca/podcasting20/#podroll"
+      },
+      {
+        "elementName": "Remote Item",
+        "elementURL": "https://spoolcast.ca/podcasting20/#remote-item"
       }
     ]
   },
