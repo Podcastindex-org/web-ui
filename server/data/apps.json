@@ -1,5 +1,22 @@
 [
   {
+    "appName": "Podcast Transcript Scraper (Apify)",
+    "appType": [
+      "other"
+    ],
+    "tagLine": "Turns the podcast:transcript files shows publish in their RSS feeds (SRT, VTT, JSON, HTML) into clean text and timestamped speaker segments. Paid per transcript on Apify; first 25 per run free.",
+    "appUrl": "https://apify.com/ahmed.fouaad82/podcast-published-transcripts",
+    "appIconUrl": "podcast-transcript-scraper.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript"
+      }
+    ]
+  },
+  {
     "appName": "ShareAPod",
     "appType": [
       "website",
@@ -105,7 +122,7 @@
       "app",
       "podcast player"
     ],
-    "tagLine": "A podcast player with no ads in the app. Smart Skip jumps past ad breaks; offline downloads, Android Auto, CarPlay and a web player at shuttlepodcasts.app.",
+    "tagLine": "A podcast player with no ads in the app. Smart Skip jumps past ad aks; offline downloads, Android Auto, CarPlay and a web player at shuttlepodcasts.app.",
     "appUrl": "https://shuttlepodcasts.app",
     "appIconUrl": "shuttlepodcasts.png",
     "platforms": [
@@ -959,39 +976,6 @@
       },
       {
         "elementName": "Search"
-      }
-    ]
-  },
-  {
-    "appName": "Breez",
-    "appType": ["app", "podcast player", "open source"],
-    "appUrl": "https://breez.technology/",
-    "appIconUrl": "breez.png",
-    "platforms": ["Mobile", "Android", "iOS"],
-    "platformLinks": {
-      "Android": "https://play.google.com/store/apps/details?id=com.breez.client",
-      "iOS": "https://apps.apple.com/app/breez-lightning-client-pos/id1463604142"
-    },
-    "supportedElements": [
-      {
-        "elementName": "Chapters",
-        "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
-      },
-      {
-        "elementName": "Search",
-        "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
-      },
-      {
-        "elementName": "Value",
-        "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
-      },
-      {
-        "elementName": "Sat Streaming",
-        "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.11.podcasts"
-      },
-      {
-        "elementName": "Boostagrams",
-        "elementURL": "https://github.com/breez/breezmobile/releases/tag/0.12.lnaddrees"
       }
     ]
   },
@@ -4927,7 +4911,7 @@
   },
   {
     "appName": "boxlore",
-    "appType": ["app", "podcast player", "open source"],
+    "appType": ["app", "podcast player"],
     "appUrl": "https://github.com/boxcreate/boxlore",
     "appIconUrl": "boxlore.png",
     "tagLine": "Experience podcasts with boxlore, a fluid and distraction-free player built for those who value clean design and absolute transparency.",
@@ -4986,6 +4970,49 @@
       },
       {
         "elementName": "Search"
+      }
+    ]
+  },
+  {
+    "appName": "BowlAfterBowl",
+    "appType": ["app", "podcast player", "open source"],
+    "tagLine": "May Your Bowls Burn Ever Brighter",
+    "appUrl": "https://bowlafterbowl.com",
+    "appIconUrl": "bowlafterbowl.png",
+    "platforms": ["Web", "Mobile"],
+    "supportedElements": [
+      {
+        "elementName": "Alternate Enclosure"
+      },
+      {
+        "elementName": "Chapters"
+      },
+      {
+        "elementName": "Chat"
+      },
+      {
+        "elementName": "Episode"
+      },
+      {
+        "elementName": "GUID"
+      },
+      {
+        "elementName": "Live Item"
+      },
+      {
+        "elementName": "Person"
+      },
+      {
+        "elementName": "Podroll"
+      },
+      {
+        "elementName": "Remote Item"
+      },
+      {
+        "elementName": "Value"
+      },
+      {
+        "elementName": "Wallet Switching (VTS)"
       }
     ]
   },
@@ -5554,12 +5581,14 @@
     ],
     "appUrl": "https://showsandstories.com/en",
     "appIconUrl": "shows-and-stories.png",
-    "tagLine": "Podcasts, video podcasts and blogs in one app, built to keep hundreds of subscriptions organised. Chapters, transcripts and sync across Windows and web.",
+    "tagLine": "Podcasts, video podcasts and blogs in one app, built to keep hundreds of subscriptions organised. Chapters, transcripts and sync across Windows, Android and web.",
     "platforms": [
+      "Android",
       "Web",
       "Windows"
     ],
     "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.showsandstories.app",
       "Web": "https://app.showsandstories.com",
       "Windows": "https://apps.microsoft.com/detail/9P4S6W88B7LG"
     },
@@ -5633,6 +5662,101 @@
       {
         "elementName": "Soundbite",
         "elementURL": "https://bitepods.com/help/mark-the-moment#:~:text=A%20few%20shows%20mark%20their%20best%20moments%20in%20their%20feed"
+      }
+    ]
+  },
+  {
+    "appName": "Yarn",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "appUrl": "https://yarnpodcast.app",
+    "appIconUrl": "yarn.png",
+    "tagLine": "A podcast player for iPhone and iPad. New episodes wait in an Inbox, the ones you pick line up in a Queue, and both sync through your iCloud account.",
+    "platforms": [
+      "Mobile",
+      "iOS",
+      "iPad OS"
+    ],
+    "platformLinks": {
+      "iOS": "https://apps.apple.com/us/app/yarn-podcast-player/id6815815830"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://yarnpodcast.app/support#podcast-transcript"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://yarnpodcast.app/support#podcast-chapters"
+      },
+      {
+        "elementName": "Season",
+        "elementURL": "https://yarnpodcast.app/support#podcast-season"
+      },
+      {
+        "elementName": "Episode",
+        "elementURL": "https://yarnpodcast.app/support#podcast-episode"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://yarnpodcast.app/support#podcast-guid"
+      }
+    ]
+  },
+  {
+    "appName": "Podcast Host by utilarium",
+    "appType": [
+      "hosting"
+    ],
+    "tagLine": "Free podcast hosting for small shows. No ads, no paid plan.",
+    "appUrl": "https://podcast.utilarium.app",
+    "appIconUrl": "podcasthostbyutilarium.png",
+    "platforms": [
+      "Web"
+    ],
+    "supportedElements": [
+      {
+        "elementName": "Transcript",
+        "elementURL": "https://podcast.utilarium.app/submit/#podcast-transcript"
+      },
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://podcast.utilarium.app/submit/#podcast-chapters"
+      },
+      {
+        "elementName": "GUID",
+        "elementURL": "https://podcast.utilarium.app/submit/#podcast-guid"
+      },
+      {
+        "elementName": "Locked",
+        "elementURL": "https://podcast.utilarium.app/submit/#podcast-locked"
+      }
+    ]
+  },
+  {
+    "appName": "Yak",
+    "appType": [
+      "app",
+      "podcast player"
+    ],
+    "tagLine": "Local-first podcast player for Android. Subscriptions and downloads stay on the phone. The player shows chapters and transcripts when the feed has them.",
+    "appUrl": "https://yakplayer.com",
+    "appIconUrl": "yak.png",
+    "platforms": [
+      "Android"
+    ],
+    "platformLinks": {
+      "Android": "https://play.google.com/store/apps/details?id=com.tgcnetwork.yak"
+    },
+    "supportedElements": [
+      {
+        "elementName": "Chapters",
+        "elementURL": "https://yakplayer.com/changelog"
+      },
+      {
+        "elementName": "Transcript"
       }
     ]
   }
