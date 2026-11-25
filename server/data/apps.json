@@ -5418,6 +5418,14 @@
       {
         "elementName": "Remote Item",
         "elementURL": "https://spoolcast.ca/podcasting20/#remote-item"
+      },
+      {
+        "elementName": "Publisher",
+        "elementURL": "https://spoolcast.ca/podcasting20/#publisher"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://spoolcast.ca/podcasting20/#podping"
       }
     ]
   },
