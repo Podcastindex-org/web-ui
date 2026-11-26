@@ -5325,7 +5325,8 @@
     "platforms": [
       "Mobile",
       "iOS",
-      "iPad OS"
+      "iPad OS",
+      "Apple TV"
     ],
     "platformLinks": {
       "iOS": "https://apps.apple.com/app/id6809485942"
@@ -5398,6 +5399,34 @@
       {
         "elementName": "Block",
         "elementURL": "https://spoolcast.ca/podcasting20/#block"
+      },
+      {
+        "elementName": "Alternate Enclosure",
+        "elementURL": "https://spoolcast.ca/podcasting20/#alternate-enclosure"
+      },
+      {
+        "elementName": "Video",
+        "elementURL": "https://spoolcast.ca/podcasting20/#alternate-enclosure"
+      },
+      {
+        "elementName": "Search",
+        "elementURL": "https://spoolcast.ca/podcasting20/#search"
+      },
+      {
+        "elementName": "Podroll",
+        "elementURL": "https://spoolcast.ca/podcasting20/#podroll"
+      },
+      {
+        "elementName": "Remote Item",
+        "elementURL": "https://spoolcast.ca/podcasting20/#remote-item"
+      },
+      {
+        "elementName": "Publisher",
+        "elementURL": "https://spoolcast.ca/podcasting20/#publisher"
+      },
+      {
+        "elementName": "Podping",
+        "elementURL": "https://spoolcast.ca/podcasting20/#podping"
       }
     ]
   },
