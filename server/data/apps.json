@@ -5325,7 +5325,8 @@
     "platforms": [
       "Mobile",
       "iOS",
-      "iPad OS"
+      "iPad OS",
+      "Apple TV"
     ],
     "platformLinks": {
       "iOS": "https://apps.apple.com/app/id6809485942"
