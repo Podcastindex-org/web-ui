@@ -811,36 +811,6 @@
     ]
   },
   {
-    "appName": "podStation",
-    "appType": ["browser extension", "podcast player", "open source"],
-    "appUrl": "https://chromewebstore.google.com/detail/podstation-podcast-player/bpcagekijmfcocgjlnnhpdogbplajjfn",
-    "appIconUrl": "podstation.jpg",
-    "tagLine": "Web podcast aggregator for Chrome.",
-    "platforms": ["Chrome"],
-    "supportedElements": [
-      {
-        "elementName": "Funding",
-        "elementURL": "https://github.com/podStation/podStation/blob/master/docs/release_notes/v1.27.0.md"
-      },
-      {
-        "elementName": "Search",
-        "elementURL": "https://github.com/podStation/podStation/blob/master/docs/release_notes/v1.24.0.md"
-      },
-      {
-        "elementName": "Value",
-        "elementURL": "https://github.com/podStation/podStation/blob/master/docs/release_notes/v1.33.0.md"
-      },
-      {
-        "elementName": "Sat Streaming",
-        "elementURL": "https://github.com/podStation/podStation/blob/master/docs/release_notes/v1.33.0.md"
-      },
-      {
-        "elementName": "Boostagrams",
-        "elementURL": "https://github.com/podStation/podStation/blob/master/CHANGELOG.md#1470"
-      }
-    ]
-  },
-  {
     "appName": "Podcast Guru",
     "appType": ["app", "podcast player"],
     "appUrl": "https://podcastguru.io",
